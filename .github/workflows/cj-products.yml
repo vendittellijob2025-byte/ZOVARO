@@ -1,0 +1,37 @@
+name: ZOVARO - Sync CJ Products
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */12 * * *"
+  push:
+    paths:
+      - "scripts/fetch-cj-products.mjs"
+      - ".github/workflows/cj-products.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-cj:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch CJ product feed
+        env:
+          CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
+        run: node scripts/fetch-cj-products.mjs
+
+      - name: Commit updated catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog.json
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+          else
+            git commit -m "chore: sync CJ product catalog"
+            git push
+          fi
