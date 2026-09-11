@@ -32,7 +32,7 @@ const query = `
 const response = await fetch(API_URL, {
   method: "POST",
   headers: {
-    "Authorization": `Bearer ${token}`,
+    "Authorization": \`Bearer \${token}\`,
     "Content-Type": "application/json"
   },
   body: JSON.stringify({ query })
@@ -41,7 +41,7 @@ const response = await fetch(API_URL, {
 const text = await response.text();
 
 if (!response.ok) {
-  throw new Error(`CJ API HTTP ${response.status}: ${text}`);
+  throw new Error(\`CJ API HTTP \${response.status}: \${text}\`);
 }
 
 let data;
@@ -49,7 +49,7 @@ let data;
 try {
   data = JSON.parse(text);
 } catch {
-  throw new Error(`CJ API returned invalid JSON: ${text}`);
+  throw new Error(\`CJ API returned invalid JSON: \${text}\`);
 }
 
 if (data.errors?.length) {
@@ -59,13 +59,42 @@ if (data.errors?.length) {
 
 const products = data?.data?.products?.resultList ?? [];
 
+const monetizableProducts = products.filter(
+  (product) =>
+    typeof product.linkCode?.clickUrl === "string" &&
+    product.linkCode.clickUrl.trim().length > 0
+);
+
+const advertiserIds = [
+  ...new Set(
+    monetizableProducts
+      .map((product) => product.advertiserId)
+      .filter(Boolean)
+  )
+];
+
+const catalogIds = [
+  ...new Set(
+    monetizableProducts
+      .map((product) => product.catalogId)
+      .filter(Boolean)
+  )
+];
+
+console.log(`CJ rows received: ${products.length}`);
+console.log(`Products with affiliate clickUrl: ${monetizableProducts.length}`);
+console.log(`Unique advertisers: ${advertiserIds.length}`);
+console.log(`Advertiser IDs: ${advertiserIds.join(", ")}`);
+console.log(`Catalog IDs: ${catalogIds.join(", ")}`);
+
 const catalog = {
   source: "CJ Affiliate",
   generatedAt: new Date().toISOString(),
   companyId: COMPANY_ID,
   promotionalPropertyId: PID,
-  productCount: products.length,
-  products: products.map((product) => ({
+  rowsReceived: products.length,
+  productCount: monetizableProducts.length,
+  products: monetizableProducts.map((product) => ({
     id: product.id ?? null,
     advertiserId: product.advertiserId ?? null,
     catalogId: product.catalogId ?? null,
@@ -73,7 +102,7 @@ const catalog = {
     description: product.description ?? "",
     price: product.price?.amount ?? null,
     currency: product.price?.currency ?? null,
-    clickUrl: product.linkCode?.clickUrl ?? null
+    clickUrl: product.linkCode.clickUrl
   }))
 };
 
@@ -87,4 +116,6 @@ await fs.writeFile(
   "utf8"
 );
 
-console.log(`CJ sync completed: ${products.length} products imported.`);
+console.log(
+  `CJ sync completed: ${monetizableProducts.length} monetizable products imported.`
+);
