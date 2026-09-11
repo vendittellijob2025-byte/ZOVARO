@@ -1,22 +1,22 @@
-# ZOVARO MVP
+# ZOVARO V2 — Frontend Preview
 
-Static, zero-cost MVP for the ZOVARO product-discovery platform.
+This is the upgraded ZOVARO frontend preview.
 
-## Files
-- `index.html` — complete responsive frontend
-- `styles.css` — visual system
-- `products.js` — demo catalog data
-- `app.js` — search, categories and product modal
+Included:
+- premium responsive homepage
+- mobile navigation
+- product search
+- category filtering
+- all-products view
+- product detail modal
+- demo catalog badge/disclosure
+- improved SEO/social metadata
+- responsive mobile layout
 
-## Important
-The products in this MVP are explicitly demo data. Before launch, replace them with products from approved CJ advertiser feeds and insert the correct CJ tracking/deep links.
+IMPORTANT:
+The catalog is still demo data. Before launch, replace demo products/prices/images with approved CJ Affiliate feed data and replace the placeholder VIEW DEAL links with real CJ deep links.
 
-## Deployment
-Recommended first deployment: GitHub Pages. It can publish static HTML/CSS/JS directly from a GitHub repository at no separate hosting cost.
+GitHub Pages:
+Publish from `main` branch, root folder `/`.
 
-## Next integration
-1. CJ Publisher API / Product Feed access
-2. Normalize product fields into `products.js` or a generated JSON catalog
-3. Store real CJ deep links
-4. Generate product detail pages
-5. Add automated feed refresh
+The live site updates automatically after files are committed to the publishing branch.

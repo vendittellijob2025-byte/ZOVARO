@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ZOVARO — discover products, compare options and shop from trusted stores.">
+  <meta name="description" content="ZOVARO — curated product discovery from trusted stores around the world.">
+  <meta name="theme-color" content="#f6f6f3">
+  <meta property="og:title" content="ZOVARO — Discover Better. Shop Smarter.">
+  <meta property="og:description" content="Curated product discovery from trusted stores around the world.">
   <title>ZOVARO — Discover Better. Shop Smarter.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +14,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="preview-bar"><span>PREVIEW CATALOG</span> Demo products are shown while ZOVARO is connected to approved merchant feeds.</div>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="ZOVARO home">ZOVARO</a>
-    <nav class="desktop-nav" aria-label="Primary">
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#deals">Deals</a>
-      <a href="#new">New Arrivals</a>
-      <a href="#about">About</a>
+    <a class="brand" href="#home" aria-label="ZOVARO home">ZOVARO</a>
+    <nav class="desktop-nav" id="mainNav" aria-label="Primary">
+      <a href="#home">Home</a><a href="#categories">Categories</a><a href="#deals">Deals</a><a href="#new">New Arrivals</a><a href="#about">About</a>
     </nav>
-    <button class="icon-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+    <button class="icon-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
   </header>
 
   <main id="home">
@@ -29,16 +29,10 @@
         <span class="eyebrow">CURATED PRODUCT DISCOVERY</span>
         <h1>Discover Better.<br><span>Shop Smarter.</span></h1>
         <p>Explore products from trusted stores around the world — all in one place.</p>
-        <form class="search-wrap" id="searchForm">
-          <span>⌕</span>
-          <input id="searchInput" type="search" placeholder="Search products..." autocomplete="off">
-          <button type="submit">Search</button>
+        <form class="search-wrap" id="searchForm" role="search">
+          <span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search products, categories or stores..." autocomplete="off"><button type="submit">Search</button>
         </form>
-        <div class="hero-meta">
-          <span>✓ Curated finds</span>
-          <span>✓ Multiple categories</span>
-          <span>✓ Shop with trusted merchants</span>
-        </div>
+        <div class="hero-meta"><span>✓ Curated finds</span><span>✓ Multiple categories</span><span>✓ Trusted merchants</span></div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="orb orb-a"></div><div class="orb orb-b"></div>
@@ -49,72 +43,45 @@
     </section>
 
     <section class="section" id="categories">
-      <div class="section-head">
-        <div><span class="eyebrow">EXPLORE</span><h2>Shop by category</h2></div>
-      </div>
+      <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>Shop by category</h2></div></div>
       <div class="category-grid" id="categoryGrid"></div>
     </section>
 
     <section class="section tinted" id="trending">
-      <div class="section-head">
-        <div><span class="eyebrow">CURATED NOW</span><h2>Trending Products</h2></div>
-        <button class="text-btn" data-filter="all">View all →</button>
-      </div>
+      <div class="section-head"><div><span class="eyebrow">CURATED NOW</span><h2 id="resultsTitle">Trending Products</h2></div><button class="text-btn" id="viewAllBtn">View all →</button></div>
+      <div class="results-meta" id="resultsMeta"></div>
       <div class="product-grid" id="trendingGrid"></div>
     </section>
 
     <section class="section" id="deals">
-      <div class="section-head">
-        <div><span class="eyebrow">REAL DEALS ONLY</span><h2>Best Deals</h2></div>
-      </div>
+      <div class="section-head"><div><span class="eyebrow">REAL DEALS ONLY</span><h2>Best Deals</h2></div></div>
       <div class="product-grid" id="dealGrid"></div>
     </section>
 
     <section class="section tinted" id="new">
-      <div class="section-head">
-        <div><span class="eyebrow">JUST IN</span><h2>New Arrivals</h2></div>
-      </div>
+      <div class="section-head"><div><span class="eyebrow">JUST IN</span><h2>New Arrivals</h2></div></div>
       <div class="product-grid" id="newGrid"></div>
     </section>
 
     <section class="about" id="about">
-      <div>
-        <span class="eyebrow">WHY ZOVARO</span>
-        <h2>A smarter way to discover what’s worth your attention.</h2>
-      </div>
+      <div><span class="eyebrow">WHY ZOVARO</span><h2>A smarter way to discover what’s worth your attention.</h2></div>
       <p>ZOVARO brings products from participating stores into a simple discovery experience. When you choose to shop, you continue to the merchant’s website.</p>
     </section>
 
-    <section class="disclosure">
-      <strong>Affiliate disclosure</strong>
-      <p>ZOVARO may earn a commission when you purchase through certain links on our website. This does not affect the price you pay.</p>
-    </section>
+    <section class="disclosure"><strong>Affiliate disclosure</strong><p>ZOVARO may earn a commission when you purchase through certain links on our website. This does not affect the price you pay.</p></section>
   </main>
 
-  <footer>
-    <div class="footer-brand">ZOVARO</div>
-    <span>Discover. Compare. Shop.</span>
-    <span>© <span id="year"></span> ZOVARO</span>
-  </footer>
+  <footer><div class="footer-brand">ZOVARO</div><span>Discover. Compare. Shop.</span><span>© <span id="year"></span> ZOVARO</span></footer>
 
   <div class="modal" id="productModal" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
-    <article class="modal-card">
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalName">
       <button class="modal-close" data-close aria-label="Close">×</button>
       <img id="modalImage" alt="">
-      <div class="modal-body">
-        <span class="eyebrow" id="modalCategory"></span>
-        <h2 id="modalName"></h2>
-        <p class="merchant" id="modalMerchant"></p>
-        <div class="price-row"><strong id="modalPrice"></strong><del id="modalOldPrice"></del><span id="modalDiscount"></span></div>
-        <p id="modalDescription"></p>
-        <a class="deal-btn" id="modalLink" href="#" target="_blank" rel="sponsored noopener">VIEW DEAL ↗</a>
-        <small class="demo-note">Demo product — replace with approved CJ feed data before launch.</small>
-      </div>
+      <div class="modal-body"><span class="eyebrow" id="modalCategory"></span><h2 id="modalName"></h2><p class="merchant" id="modalMerchant"></p><div class="price-row"><strong id="modalPrice"></strong><del id="modalOldPrice"></del><span id="modalDiscount"></span></div><p id="modalDescription"></p><a class="deal-btn" id="modalLink" href="#">VIEW DEAL ↗</a><small class="demo-note">Demo product — real CJ merchant links will replace this placeholder before launch.</small></div>
     </article>
   </div>
 
-  <script src="products.js"></script>
-  <script src="app.js"></script>
+  <script src="products.js"></script><script src="app.js"></script>
 </body>
 </html>
