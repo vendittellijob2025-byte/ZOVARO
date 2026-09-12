@@ -32,7 +32,7 @@ const query = `
 const response = await fetch(API_URL, {
   method: "POST",
   headers: {
-    
+    "Authorization": "Bearer " + token,
     "Content-Type": "application/json"
   },
   body: JSON.stringify({ query })
@@ -41,7 +41,7 @@ const response = await fetch(API_URL, {
 const text = await response.text();
 
 if (!response.ok) {
-  throw new Error(`CJ API HTTP ${response.status}: ${text}`);
+  throw new Error("CJ API HTTP " + response.status + ": " + text);
 }
 
 let data;
@@ -49,7 +49,7 @@ let data;
 try {
   data = JSON.parse(text);
 } catch {
-  throw new Error(`CJ API returned invalid JSON: ${text}`);
+  throw new Error("CJ API returned invalid JSON: " + text);
 }
 
 if (data.errors?.length) {
@@ -81,11 +81,13 @@ const catalogIds = [
   )
 ];
 
-console.log(`CJ rows received: ${products.length}`);
-console.log(`Products with affiliate clickUrl: ${monetizableProducts.length}`);
-console.log(`Unique advertisers: ${advertiserIds.length}`);
-console.log(`Advertiser IDs: ${advertiserIds.join(", ")}`);
-console.log(`Catalog IDs: ${catalogIds.join(", ")}`);
+console.log("CJ rows received: " + products.length);
+console.log(
+  "Products with affiliate clickUrl: " + monetizableProducts.length
+);
+console.log("Unique advertisers: " + advertiserIds.length);
+console.log("Advertiser IDs: " + advertiserIds.join(", "));
+console.log("Catalog IDs: " + catalogIds.join(", "));
 
 const catalog = {
   source: "CJ Affiliate",
@@ -117,5 +119,7 @@ await fs.writeFile(
 );
 
 console.log(
-  `CJ sync completed: ${monetizableProducts.length} monetizable products imported.`
+  "CJ sync completed: " +
+    monetizableProducts.length +
+    " monetizable products imported."
 );
