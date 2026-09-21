@@ -25,8 +25,7 @@ console.log(url);
 const response = await fetch(url, {
   method: "GET",
   headers: {
-    "Authorization": "Bearer " + token,
-    "Accept": "application/json"
+    "Authorization": "Bearer " + token
   }
 });
 
