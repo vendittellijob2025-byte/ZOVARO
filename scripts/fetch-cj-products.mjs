@@ -58,6 +58,9 @@ if (data.errors?.length) {
 }
 
 const products = data?.data?.products?.resultList ?? [];
+console.log(
+  JSON.stringify(products.slice(0, 3), null, 2)
+);
 
 const monetizableProducts = products.filter(
   (product) =>
