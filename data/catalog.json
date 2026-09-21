@@ -1,9 +1,140 @@
 {
   "source": "CJ Affiliate",
-  "generatedAt": "2026-09-21T04:57:22.094Z",
+  "generatedAt": "2026-09-21T20:06:57.126Z",
   "companyId": "8068799",
   "promotionalPropertyId": "101881140",
-  "rowsReceived": 1000,
-  "productCount": 0,
-  "products": []
+  "advertisers": [
+    {
+      "id": "8022425",
+      "name": "Kaiya Baby"
+    },
+    {
+      "id": "7969352",
+      "name": "Padel Iberico ES"
+    }
+  ],
+  "rowsReceived": 10,
+  "productCount": 10,
+  "products": [
+    {
+      "id": 17342328,
+      "title": "Organic Cotton & Camel Wool Sleep Sack",
+      "description": "Kaiya Baby sleep sacks made with organic cotton and camel wool, thoughtfully designed for comfortable sleep.",
+      "advertiserId": "8022425",
+      "advertiserName": "Kaiya Baby",
+      "category": "Babies",
+      "destination": "https://kaiyababy.com/",
+      "clickUrl": "https://www.anrdoezrs.net/click-101881140-17342328-1787841669000",
+      "saleCommission": "12.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17342322,
+      "title": "Made for Little Nights - Kaiya Baby",
+      "description": "Kaiya Baby baby sleepwear designed for comfortable nights and everyday bedtime routines.",
+      "advertiserId": "8022425",
+      "advertiserName": "Kaiya Baby",
+      "category": "Babies",
+      "destination": "https://kaiyababy.com/",
+      "clickUrl": "https://www.kqzyfj.com/click-101881140-17342322-1787841671000",
+      "saleCommission": "12.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17342333,
+      "title": "Thoughtfully Designed Sleep Sacks - Kaiya Baby",
+      "description": "Kaiya Baby sleep sacks thoughtfully designed for gentle bedtimes and better sleep.",
+      "advertiserId": "8022425",
+      "advertiserName": "Kaiya Baby",
+      "category": "Babies",
+      "destination": "https://kaiyababy.com/",
+      "clickUrl": "https://www.dpbolvw.net/click-101881140-17342333-1787841667000",
+      "saleCommission": "12.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17342336,
+      "title": "Comfort That Grows With Them - Kaiya Baby",
+      "description": "Kaiya Baby sleep sacks designed for comfort, temperature regulation, and everyday bedtime routines.",
+      "advertiserId": "8022425",
+      "advertiserName": "Kaiya Baby",
+      "category": "Babies",
+      "destination": "https://kaiyababy.com/",
+      "clickUrl": "https://www.tkqlhce.com/click-101881140-17342336-1787841666000",
+      "saleCommission": "12.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17342339,
+      "title": "Gentle Sleep Thoughtfully Designed - Kaiya Baby",
+      "description": "Kaiya Baby sleep sacks thoughtfully designed for gentle, comfortable nights.",
+      "advertiserId": "8022425",
+      "advertiserName": "Kaiya Baby",
+      "category": "Babies",
+      "destination": "https://kaiyababy.com/",
+      "clickUrl": "https://www.anrdoezrs.net/click-101881140-17342339-1787841664000",
+      "saleCommission": "12.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17333621,
+      "title": "ENG - 150x40",
+      "description": "ENG - 150x40",
+      "advertiserId": "7969352",
+      "advertiserName": "Padel Iberico ES",
+      "category": "Sports",
+      "destination": "https://www.padeliberico.es/en/",
+      "clickUrl": "https://www.tkqlhce.com/click-101881140-17333621-1788209504000",
+      "saleCommission": "7.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17333614,
+      "title": "ES - 150x40",
+      "description": "ES - 150x40",
+      "advertiserId": "7969352",
+      "advertiserName": "Padel Iberico ES",
+      "category": "Sports",
+      "destination": "https://www.padeliberico.es/",
+      "clickUrl": "https://www.tkqlhce.com/click-101881140-17333614-1788209507000",
+      "saleCommission": "7.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17333615,
+      "title": "ES - banner-3",
+      "description": "ES - banner-3",
+      "advertiserId": "7969352",
+      "advertiserName": "Padel Iberico ES",
+      "category": "Sports",
+      "destination": "https://www.padeliberico.es/",
+      "clickUrl": "https://www.kqzyfj.com/click-101881140-17333615-1788209506000",
+      "saleCommission": "7.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17333620,
+      "title": "ES - banner-1",
+      "description": "ES - banner-1",
+      "advertiserId": "7969352",
+      "advertiserName": "Padel Iberico ES",
+      "category": "Sports",
+      "destination": "https://www.padeliberico.es/",
+      "clickUrl": "https://www.anrdoezrs.net/click-101881140-17333620-1788209504000",
+      "saleCommission": "7.00%",
+      "allowDeepLinking": true
+    },
+    {
+      "id": 17333617,
+      "title": "ES - banner-2",
+      "description": "ES - banner-2",
+      "advertiserId": "7969352",
+      "advertiserName": "Padel Iberico ES",
+      "category": "Sports",
+      "destination": "https://www.padeliberico.es/",
+      "clickUrl": "https://www.tkqlhce.com/click-101881140-17333617-1788209505000",
+      "saleCommission": "7.00%",
+      "allowDeepLinking": true
+    }
+  ]
 }
