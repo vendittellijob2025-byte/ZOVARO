@@ -1,6 +1,8 @@
-const API_URL = "https://ads.api.cj.com/query";
-const COMPANY_ID = "8068799";
-const PID = "101881140";
+const API_URL = "https://link-search.api.cj.com/v2/link-search";
+const WEBSITE_ID = "101881140";
+
+// I due advertiser con relazione attiva verificati in CJ
+const ADVERTISER_IDS = ["8022425", "7969352"];
 
 const token = process.env.CJ_API_TOKEN;
 
@@ -8,40 +10,32 @@ if (!token) {
   throw new Error("CJ_API_TOKEN is missing.");
 }
 
-const query = `
-{
-  products(companyId: "${COMPANY_ID}") {
-    resultList {
-      advertiserId
-      catalogId
-      id
-      title
-      description
-      price {
-        amount
-        currency
-      }
-      linkCode(pid: "${PID}") {
-        clickUrl
-      }
-    }
-  }
-}
-`;
+const params = new URLSearchParams({
+  "website-id": WEBSITE_ID,
+  "advertiser-ids": ADVERTISER_IDS.join(","),
+  "link-type": "Content Link",
+  "records-per-page": "100"
+});
 
-const response = await fetch(API_URL, {
-  method: "POST",
+const url = `${API_URL}?${params.toString()}`;
+
+console.log("CJ Link Search URL:");
+console.log(url);
+
+const response = await fetch(url, {
+  method: "GET",
   headers: {
     "Authorization": "Bearer " + token,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({ query })
+    "Accept": "application/json"
+  }
 });
 
 const text = await response.text();
 
+console.log("CJ HTTP status:", response.status);
+
 if (!response.ok) {
-  throw new Error("CJ API HTTP " + response.status + ": " + text);
+  throw new Error("CJ Link Search HTTP " + response.status + ": " + text);
 }
 
 let data;
@@ -49,80 +43,13 @@ let data;
 try {
   data = JSON.parse(text);
 } catch {
-  throw new Error("CJ API returned invalid JSON: " + text);
+  throw new Error("CJ Link Search returned invalid JSON: " + text);
 }
 
-if (data.errors?.length) {
-  console.error(JSON.stringify(data.errors, null, 2));
-  throw new Error("CJ Product Feed API returned GraphQL errors.");
-}
-
-const products = data?.data?.products?.resultList ?? [];
 console.log(
-  JSON.stringify(products.slice(0, 3), null, 2)
-);
-
-const monetizableProducts = products.filter(
-  (product) =>
-    typeof product.linkCode?.clickUrl === "string" &&
-    product.linkCode.clickUrl.trim().length > 0
-);
-
-const advertiserIds = [
-  ...new Set(
-    monetizableProducts
-      .map((product) => product.advertiserId)
-      .filter(Boolean)
-  )
-];
-
-const catalogIds = [
-  ...new Set(
-    monetizableProducts
-      .map((product) => product.catalogId)
-      .filter(Boolean)
-  )
-];
-
-console.log("CJ rows received: " + products.length);
-console.log(
-  "Products with affiliate clickUrl: " + monetizableProducts.length
-);
-console.log("Unique advertisers: " + advertiserIds.length);
-console.log("Advertiser IDs: " + advertiserIds.join(", "));
-console.log("Catalog IDs: " + catalogIds.join(", "));
-
-const catalog = {
-  source: "CJ Affiliate",
-  generatedAt: new Date().toISOString(),
-  companyId: COMPANY_ID,
-  promotionalPropertyId: PID,
-  rowsReceived: products.length,
-  productCount: monetizableProducts.length,
-  products: monetizableProducts.map((product) => ({
-    id: product.id ?? null,
-    advertiserId: product.advertiserId ?? null,
-    catalogId: product.catalogId ?? null,
-    title: product.title ?? "",
-    description: product.description ?? "",
-    price: product.price?.amount ?? null,
-    currency: product.price?.currency ?? null,
-    clickUrl: product.linkCode.clickUrl
-  }))
-};
-
-const fs = await import("node:fs/promises");
-
-await fs.mkdir("data", { recursive: true });
-
-await fs.writeFile(
-  "data/catalog.json",
-  JSON.stringify(catalog, null, 2) + "\n",
-  "utf8"
+  "CJ Link Search response:"
 );
 
 console.log(
-  "CJ sync completed: " +
-    monetizableProducts.length +
-    " monetizable products imported."
+  JSON.stringify(data, null, 2)
 );
