@@ -8,20 +8,9 @@ if (!token) {
 
 const query = `
 query {
-  __type(name: "Query") {
+  __type(name: "Products") {
     fields {
       name
-      args {
-        name
-        type {
-          kind
-          name
-          ofType {
-            kind
-            name
-          }
-        }
-      }
       type {
         kind
         name
@@ -35,7 +24,7 @@ query {
 }
 `;
 
-console.log("Inspecting CJ GraphQL schema...");
+console.log("Inspecting CJ Products fields...");
 console.log("Endpoint:", API_URL);
 
 const response = await fetch(API_URL, {
