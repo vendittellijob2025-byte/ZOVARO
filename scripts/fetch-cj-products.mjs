@@ -8,7 +8,7 @@ if (!token) {
 
 const query = `
 query {
-  __type(name: "Products") {
+  productsType: __type(name: "Products") {
     fields {
       name
       type {
@@ -22,7 +22,7 @@ query {
     }
   }
 
-  __type(name: "Product") {
+  productType: __type(name: "Product") {
     fields {
       name
       type {
@@ -37,7 +37,6 @@ query {
   }
 }
 `;
-
 console.log("Inspecting CJ Product fields...");
 console.log("Endpoint:", API_URL);
 
