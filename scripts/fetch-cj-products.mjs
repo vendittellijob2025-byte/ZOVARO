@@ -171,7 +171,11 @@ const normalizedProducts = products
 
       destination: cleanUrl(product.link),
 
-      mobileLink: cleanUrl(product.mobileLink),
+clickUrl:
+  cleanUrl(product?.linkCode?.clickUrl) ||
+  cleanUrl(product.link),
+
+mobileLink: cleanUrl(product.mobileLink),
 
       price: regularPrice,
 
