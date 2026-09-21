@@ -52,6 +52,9 @@ query {
       }
       discountPercentage
       joinedStatus
+      linkCode {
+  clickUrl
+}
     }
     totalCount
     count
