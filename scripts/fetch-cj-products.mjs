@@ -8,37 +8,42 @@ if (!token) {
 
 const query = `
 query {
-  productsType: __type(name: "Products") {
-    fields {
-      name
-      type {
-        kind
-        name
-        ofType {
-          kind
-          name
-        }
+  products(
+    companyId: "8068799"
+    partnerIds: ["8022425", "7969352"]
+    partnerStatus: JOINED
+    limit: 100
+  ) {
+    resultList {
+      id
+      adId
+      advertiserId
+      advertiserName
+      title
+      description
+      brand
+      imageLink
+      additionalImageLink
+      link
+      mobileLink
+      price {
+        amount
+        currency
       }
-    }
-  }
-
-  productType: __type(name: "Product") {
-    fields {
-      name
-      type {
-        kind
-        name
-        ofType {
-          kind
-          name
-        }
+      salePrice {
+        amount
+        currency
       }
+      discountPercentage
+      joinedStatus
     }
+    totalCount
+    count
   }
 }
 `;
-console.log("Inspecting CJ Product fields...");
-console.log("Endpoint:", API_URL);
+
+console.log("Fetching real CJ products...");
 
 const response = await fetch(API_URL, {
   method: "POST",
@@ -54,3 +59,7 @@ const text = await response.text();
 console.log("CJ HTTP status:", response.status);
 console.log("CJ response:");
 console.log(text);
+
+if (!response.ok) {
+  throw new Error(`CJ API failed with HTTP ${response.status}`);
+}
