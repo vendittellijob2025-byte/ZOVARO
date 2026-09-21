@@ -52,7 +52,7 @@ query {
       }
       discountPercentage
       joinedStatus
-      linkCode {
+      linkCode(pid: "101881140") {
   clickUrl
 }
     }
