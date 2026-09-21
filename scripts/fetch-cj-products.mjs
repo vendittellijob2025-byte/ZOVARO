@@ -8,27 +8,34 @@ if (!token) {
 
 const query = `
 query {
-  products(
-    companyId: "8068799"
-    publisherId: "101881140"
-    limit: 10
-  ) {
-    id
-    title
-    description
-    price
-    currency
-    imageUrl
-    buyUrl
-    advertiser {
-      id
+  __type(name: "Query") {
+    fields {
       name
+      args {
+        name
+        type {
+          kind
+          name
+          ofType {
+            kind
+            name
+          }
+        }
+      }
+      type {
+        kind
+        name
+        ofType {
+          kind
+          name
+        }
+      }
     }
   }
 }
 `;
 
-console.log("Testing CJ Product Feed API...");
+console.log("Inspecting CJ GraphQL schema...");
 console.log("Endpoint:", API_URL);
 
 const response = await fetch(API_URL, {
