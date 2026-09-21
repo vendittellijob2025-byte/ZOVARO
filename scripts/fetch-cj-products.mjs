@@ -21,10 +21,24 @@ query {
       }
     }
   }
+
+  __type(name: "Product") {
+    fields {
+      name
+      type {
+        kind
+        name
+        ofType {
+          kind
+          name
+        }
+      }
+    }
+  }
 }
 `;
 
-console.log("Inspecting CJ Products fields...");
+console.log("Inspecting CJ Product fields...");
 console.log("Endpoint:", API_URL);
 
 const response = await fetch(API_URL, {
