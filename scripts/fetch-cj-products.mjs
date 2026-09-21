@@ -10,7 +10,7 @@ if (!token) {
 const params = new URLSearchParams({
   "website-id": WEBSITE_ID,
   "advertiser-ids": "7969352",
-  "link-type": "Content Link",
+  "link-type": "Banner",
   "records-per-page": "100"
 });
 
