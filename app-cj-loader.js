@@ -1,30 +1,28 @@
 (function () {
   const CATALOG_URL = "./data/catalog.json";
 
-  const DEFAULT_IMAGE =
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80";
-
   function normalizeProduct(product, index) {
-    const numericId = Number(product.id);
+    const regularPrice =
+      typeof product.price === "number"
+        ? product.price
+        : null;
 
-    const isKaiya = product.advertiserId === "8022425";
-    const isPadel = product.advertiserId === "7969352";
+    const salePrice =
+      typeof product.salePrice === "number"
+        ? product.salePrice
+        : null;
 
-    let category = product.category || "Featured";
-
-    if (isKaiya) {
-      category = "Babies";
-    }
-
-    if (isPadel) {
-      category = "Sports";
-    }
+    const hasSale =
+      salePrice !== null &&
+      regularPrice !== null &&
+      salePrice < regularPrice;
 
     return {
-      id: Number.isFinite(numericId) ? numericId : 100000 + index,
+      id: Number(product.id) || 100000 + index,
 
       name:
         product.title ||
+        product.brand ||
         product.advertiserName ||
         "ZOVARO Offer",
 
@@ -32,31 +30,66 @@
         product.advertiserName ||
         "CJ Affiliate",
 
-      category,
+      category:
+        product.category ||
+        "Featured",
 
-      price: null,
+      price:
+        hasSale
+          ? salePrice
+          : regularPrice,
 
-      oldPrice: null,
+      oldPrice:
+        hasSale
+          ? regularPrice
+          : null,
 
-      discount: null,
+      discount:
+        product.discountPercentage != null
+          ? `${Number(product.discountPercentage).toFixed(0)}%`
+          : null,
 
-      image: DEFAULT_IMAGE,
+      currency:
+        product.currency ||
+        "USD",
+
+      image:
+        product.imageLink ||
+        (
+          Array.isArray(product.additionalImageLinks) &&
+          product.additionalImageLinks.length
+            ? product.additionalImageLinks[0]
+            : ""
+        ),
 
       description:
         product.description ||
-        `Featured offer from ${product.advertiserName || "a CJ merchant"}.`,
+        `${product.brand ? product.brand + " — " : ""}${product.title || ""}`,
 
-      type: "trending",
+      type: "cj",
 
-      clickUrl: product.clickUrl || "",
+      clickUrl:
+        product.destination ||
+        "",
 
-      destination: product.destination || "",
+      destination:
+        product.destination ||
+        "",
 
-      saleCommission:
-        product.saleCommission || "",
+      brand:
+        product.brand ||
+        "",
 
-      allowDeepLinking:
-        product.allowDeepLinking === true
+      advertiserId:
+        product.advertiserId ||
+        "",
+
+      adId:
+        product.adId ||
+        "",
+
+      joinedStatus:
+        product.joinedStatus === true
     };
   }
 
@@ -83,23 +116,27 @@
         catalog.products.length === 0
       ) {
         console.info(
-          "ZOVARO CJ loader: no monetizable CJ offers available yet."
+          "ZOVARO CJ loader: no products available."
         );
         return;
       }
 
       const cjProducts = catalog.products
-        .filter(
-          product =>
-            product &&
-            typeof product.clickUrl === "string" &&
-            product.clickUrl.trim() !== ""
+        .filter(product =>
+          product &&
+          product.joinedStatus === true &&
+          typeof product.destination === "string" &&
+          product.destination.trim() !== ""
         )
-        .map(normalizeProduct);
+        .map(normalizeProduct)
+        .filter(product =>
+          product.image &&
+          product.name
+        );
 
       if (!cjProducts.length) {
         console.info(
-          "ZOVARO CJ loader: catalog contains no usable affiliate clickUrl."
+          "ZOVARO CJ loader: no usable products."
         );
         return;
       }
@@ -111,12 +148,13 @@
       );
 
       console.info(
-        `ZOVARO CJ loader: ${cjProducts.length} monetizable offers loaded.`
+        `ZOVARO CJ loader: ${cjProducts.length} real products loaded.`
       );
 
       if (typeof render === "function") {
         render();
       }
+
     } catch (error) {
       console.warn(
         "ZOVARO CJ loader:",
