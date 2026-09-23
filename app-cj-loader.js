@@ -69,8 +69,9 @@
       type: "cj",
 
       clickUrl:
-        product.destination ||
-        "",
+  product.clickUrl ||
+  product.destination ||
+  "",
 
       destination:
         product.destination ||
