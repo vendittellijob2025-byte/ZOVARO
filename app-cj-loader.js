@@ -68,6 +68,9 @@
 
       type: "cj",
 
+      source: "CJ",
+network: "CJ Affiliate",
+      
       clickUrl:
   product.clickUrl ||
   product.destination ||
