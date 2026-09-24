@@ -66,10 +66,15 @@
         product.description ||
         `${product.brand ? product.brand + " — " : ""}${product.title || ""}`,
 
-      type: "cj",
+      type: "affiliate",
 
-      source: "CJ",
-network: "CJ Affiliate",
+source:
+  product.source ||
+  "CJ",
+
+network:
+  product.network ||
+  "CJ Affiliate",
       
       clickUrl:
   product.clickUrl ||
