@@ -198,10 +198,15 @@ mobileLink: cleanUrl(product.mobileLink),
   });
 
 const catalog = {
-  source: "CJ Affiliate",
+  sources: [
+    {
+      source: "CJ",
+      network: "CJ Affiliate",
+      status: "active"
+    }
+  ],
 
   generatedAt: new Date().toISOString(),
-
   companyId: COMPANY_ID,
 
   promotionalPropertyId: PUBLISHER_ID,
