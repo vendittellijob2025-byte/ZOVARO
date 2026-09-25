@@ -11,6 +11,8 @@ if (!token) {
 const COMPANY_ID = "8068799";
 const PUBLISHER_ID = "101881140";
 
+const CJ_NETWORK = NETWORKS.CJ;
+
 const ADVERTISERS = [
   {
     id: "8022425",
