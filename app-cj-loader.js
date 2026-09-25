@@ -131,35 +131,35 @@ network:
       }
 
      const affiliateProducts = catalog.products
-        .filter(product =>
-          product &&
-          (product.network === "CJ Affiliate" || product.source === "CJ") &&    
-          product.joinedStatus === true &&
-          typeof product.destination === "string" &&
-          product.destination.trim() !== ""
-        )
-        .map(normalizeProduct)
-        .filter(product =>
-          product.image &&
-          product.name
-        );
+  .filter(product =>
+    product &&
+    (product.network === "CJ Affiliate" || product.source === "CJ") &&
+    product.joinedStatus === true &&
+    typeof product.destination === "string" &&
+    product.destination.trim() !== ""
+  )
+  .map(normalizeProduct)
+  .filter(product =>
+    product.image &&
+    product.name
+  );
 
-      if (!cjProducts.length) {
-        console.info(
-          "ZOVARO CJ loader: no usable products."
-        );
-        return;
-      }
+if (!affiliateProducts.length) {
+  console.info(
+    "ZOVARO CJ loader: no usable products."
+  );
+  return;
+}
 
-      PRODUCTS.splice(
-        0,
-        PRODUCTS.length,
-        ...affiliateProducts
-      );
+PRODUCTS.splice(
+  0,
+  PRODUCTS.length,
+  ...affiliateProducts
+);
 
-      console.info(
-        `ZOVARO CJ loader: ${cjProducts.length} real products loaded.`
-      );
+console.info(
+  `ZOVARO affiliate loader: ${affiliateProducts.length} real products loaded.`
+);
 
       if (typeof render === "function") {
         render();
