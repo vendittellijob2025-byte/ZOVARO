@@ -172,5 +172,5 @@ network:
     }
   }
 
-  loadCJCatalog();
+  loadProductCatalog();
 })();
