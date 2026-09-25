@@ -6,8 +6,9 @@ export const NETWORKS = {
   },
 
   AWIN: {
-    source: "AWIN",
-    network: "Awin",
-    status: "planned"
-  }
+  source: "AWIN",
+  network: "Awin",
+  status: "planned",
+  enabled: false
+}
 };
