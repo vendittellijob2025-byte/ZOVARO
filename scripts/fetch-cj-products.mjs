@@ -144,8 +144,8 @@ const normalizedProducts = products
     const salePrice = amount(product.salePrice);
 
     return {
-      source: "CJ",
-network: "CJ Affiliate",
+      source: CJ_NETWORK.source,
+network: CJ_NETWORK.network,
       
       id: String(product.id),
 
