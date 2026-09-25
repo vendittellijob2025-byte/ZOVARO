@@ -102,7 +102,7 @@ network:
     };
   }
 
-  async function loadCJCatalog() {
+  async function loadAffiliateCatalog() {
     try {
       const response = await fetch(
         `${CATALOG_URL}?v=${Date.now()}`,
@@ -173,5 +173,5 @@ console.info(
     }
   }
 
-  loadCJCatalog();
+  loadAffiliateCatalog();
 })();
