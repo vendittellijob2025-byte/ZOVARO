@@ -1,3 +1,5 @@
+import { NETWORKS } from "./network-config.mjs";
+
 const API_URL = "https://ads.api.cj.com/query";
 
 const token = process.env.CJ_API_TOKEN;
