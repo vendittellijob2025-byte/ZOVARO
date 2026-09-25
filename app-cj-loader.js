@@ -133,8 +133,7 @@ network:
      const cjProducts = catalog.products
         .filter(product =>
           product &&
-          (product.network === "CJ Affiliate" || product.source === "CJ") &&
-          product &&
+          (product.network === "CJ Affiliate" || product.source === "CJ") &&    
           product.joinedStatus === true &&
           typeof product.destination === "string" &&
           product.destination.trim() !== ""
