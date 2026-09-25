@@ -1,11 +1,6 @@
-import { NETWORKS } from "./scripts/network-config.mjs";
-
 (function () {
   const CATALOG_URL = "./data/catalog.json";
-
-  const ENABLED_NETWORKS = Object.values(NETWORKS)
-    .filter(network => network.enabled === true)
-    .map(network => network.network);
+  const ENABLED_NETWORKS = ["CJ Affiliate"];
   function normalizeProduct(product, index) {
     const regularPrice =
       typeof product.price === "number"
