@@ -130,7 +130,7 @@ network:
         return;
       }
 
-     const cjProducts = catalog.products
+     const affiliateProducts = catalog.products
         .filter(product =>
           product &&
           (product.network === "CJ Affiliate" || product.source === "CJ") &&    
@@ -154,7 +154,7 @@ network:
       PRODUCTS.splice(
         0,
         PRODUCTS.length,
-        ...cjProducts
+        ...affiliateProducts
       );
 
       console.info(
