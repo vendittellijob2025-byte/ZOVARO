@@ -1,5 +1,6 @@
 (function () {
   const CATALOG_URL = "./data/catalog.json";
+  const ENABLED_NETWORKS = ["CJ Affiliate"];
 
   function normalizeProduct(product, index) {
     const regularPrice =
@@ -132,12 +133,12 @@ network:
 
      const affiliateProducts = catalog.products
   .filter(product =>
-    product &&
-    (product.network === "CJ Affiliate" || product.source === "CJ") &&
-    product.joinedStatus === true &&
-    typeof product.destination === "string" &&
-    product.destination.trim() !== ""
-  )
+  product &&
+  ENABLED_NETWORKS.includes(product.network) &&
+  product.joinedStatus === true &&
+  typeof product.destination === "string" &&
+  product.destination.trim() !== ""
+)
   .map(normalizeProduct)
   .filter(product =>
     product.image &&
