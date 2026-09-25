@@ -2,7 +2,8 @@ export const NETWORKS = {
   CJ: {
     source: "CJ",
     network: "CJ Affiliate",
-    status: "active"
+    status: "active",
+enabled: true
   },
 
   AWIN: {
