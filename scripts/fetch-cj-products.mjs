@@ -204,8 +204,8 @@ mobileLink: cleanUrl(product.mobileLink),
 const catalog = {
   sources: [
     {
-      source: "CJ",
-      network: "CJ Affiliate",
+      source: CJ_NETWORK.source,
+network: CJ_NETWORK.network,
       status: "active"
     }
   ],
