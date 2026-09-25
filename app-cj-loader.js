@@ -164,7 +164,7 @@ network:
         render();
       }
 
-    } catch (error) {
+        } catch (error) {
       console.warn(
         "ZOVARO CJ loader:",
         error
@@ -172,5 +172,5 @@ network:
     }
   }
 
-  loadProductCatalog();
+  loadCJCatalog();
 })();
