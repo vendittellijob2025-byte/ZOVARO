@@ -1,10 +1,11 @@
-export const NETWORKS = {
-  CJ: {
-    source: "CJ",
-    network: "CJ Affiliate",
-    status: "active",
-enabled: true
-  },
+CJ: {
+  source: "CJ",
+  network: "CJ Affiliate",
+  status: "active",
+  enabled: true,
+  productFeed: true,
+  tracking: true
+},
 
   AWIN: {
   source: "AWIN",
