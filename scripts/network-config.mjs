@@ -9,6 +9,8 @@ export const NETWORKS = {
   source: "AWIN",
   network: "Awin",
   status: "planned",
-  enabled: false
+  enabled: false,
+  productFeed: false,
+  tracking: false
 }
 };
