@@ -27,10 +27,16 @@ function showResults(items,title='Trending Products',meta='',sort='default'){
   if(sort==='price-asc'){
     items.sort((a,b)=>a.price-b.price);
   }
+if(sort==='price-desc'){
+  items.sort((a,b)=>b.price-a.price);
+}
 
-  if(sort==='price-desc'){
-    items.sort((a,b)=>b.price-a.price);
-  }
+if(sort==='discount-desc'){
+  items.sort((a,b)=>
+    (Number(b.discount)||0)-(Number(a.discount)||0)
+  );
+}
+  
   $('#resultsTitle').textContent=title;$('#resultsMeta').textContent=meta || `${items.length} product${items.length===1?'':'s'} in this preview catalog`;
   $('#trendingGrid').innerHTML=items.length?items.map(card).join(''):`<div class="empty-state"><strong>No matching products</strong><span>Try another search or category.</span></div>`;
   $('#dealGrid').innerHTML='';$('#newGrid').innerHTML='';bindProducts();
