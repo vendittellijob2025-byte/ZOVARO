@@ -1,0 +1,39 @@
+name: ZOVARO - Daily Promotion
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  daily-promotion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Select product
+        run: node scripts/select-product.mjs
+
+      - name: Create promotion package
+        run: node scripts/create-promotion.mjs
+
+      - name: Create social image
+        run: node scripts/create-social-image.mjs
+
+      - name: Save daily promotion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/selected-product.json data/promotion.json data/social-image.svg
+          git diff --cached --quiet || git commit -m "Update daily promotion"
+          git push
