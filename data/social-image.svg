@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1080"
+     height="1920"
+     viewBox="0 0 1080 1920">
+
+  <rect width="1080" height="1920" fill="#ffffff"/>
+
+  <text x="540" y="110"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="42"
+        font-weight="700"
+        fill="#111111">
+    ZOVARO
+  </text>
+
+  <text x="540" y="165"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        fill="#666666">
+    Sports
+  </text>
+
+  <image
+    href="https://www.padeliberico.es/12510-large_default/pack-de-3-botes-de-pelotas-wilson-x3.jpg"
+    x="90"
+    y="250"
+    width="900"
+    height="900"
+    preserveAspectRatio="xMidYMid meet"/>
+
+  <text x="540" y="1280"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="42"
+        font-weight="700"
+        fill="#111111">
+    Wilson
+  </text>
+
+  <text x="540" y="1360"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="34"
+        fill="#222222">
+    Pack De 3 Botes De Pelotas Wilson X3 - Wilson
+  </text>
+
+  <text x="540" y="1500"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="72"
+        font-weight="700"
+        fill="#111111">
+    14.9 EUR
+  </text>
+
+  <rect x="190" y="1610"
+        width="700"
+        height="130"
+        rx="65"
+        fill="#111111"/>
+
+  <text x="540" y="1695"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="38"
+        font-weight="700"
+        fill="#ffffff">
+    VIEW DEAL
+  </text>
+
+  <text x="540" y="1815"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        fill="#666666">
+    Shop through ZOVARO
+  </text>
+
+</svg>
