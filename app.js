@@ -4,7 +4,7 @@ const esc = s => String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&
 
 function card(p){
   const old = p.oldPrice ? `<del class="old">$${p.oldPrice.toFixed(2)}</del>` : "";
-  const disc = p.discount ? `<span class="discount">-${p.discount}%</span>` : "";
+  const disc = p.discount ? `<span class="discount">-${p.discount}</span>` : "";
   return `<article class="product" data-id="${p.id}" tabindex="0" role="button" aria-label="View ${esc(p.name)}">
     <div class="product-media"><img class="product-img" src="${p.image}" alt="${esc(p.name)}" loading="lazy"><span class="media-badge">AFFILIATE</span></div>
     <div class="product-info"><span class="product-tag">${esc(p.category)}</span><h3>${esc(p.name)}</h3><p class="merchant">${esc(p.merchant)}</p><div class="price-row"><span class="price">$${p.price.toFixed(2)}</span>${old}${disc}</div></div>
@@ -33,7 +33,7 @@ if(sort==='price-desc'){
 
 if(sort==='discount-desc'){
   items.sort((a,b)=>
-    (Number(b.discount)||0)-(Number(a.discount)||0)
+    (parseFloat(b.discount)||0)-(parseFloat(a.discount)||0)
   );
 }
   
