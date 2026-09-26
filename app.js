@@ -18,8 +18,16 @@ function renderCategories(){
   $('#categoryGrid').innerHTML=cats.map((c,i)=>`<button class="category" data-cat="${esc(c)}"><span class="symbol">${['◈','◌','✦','⌂','◒','◇','○','△'][i%8]}</span><strong>${esc(c)}</strong><span>Explore ${esc(c.toLowerCase())}</span></button>`).join('');
   $$('.category').forEach(el=>el.addEventListener('click',()=>showResults(PRODUCTS.filter(p=>p.category===el.dataset.cat),`${el.dataset.cat} picks`)));
 }
-function showResults(items,title='Trending Products',meta=''){
+function showResults(items,title='Trending Products',meta='',sort='default'){
   items = [...items];
+
+  if(sort==='price-asc'){
+    items.sort((a,b)=>a.price-b.price);
+  }
+
+  if(sort==='price-desc'){
+    items.sort((a,b)=>b.price-a.price);
+  }
   $('#resultsTitle').textContent=title;$('#resultsMeta').textContent=meta || `${items.length} product${items.length===1?'':'s'} in this preview catalog`;
   $('#trendingGrid').innerHTML=items.length?items.map(card).join(''):`<div class="empty-state"><strong>No matching products</strong><span>Try another search or category.</span></div>`;
   $('#dealGrid').innerHTML='';$('#newGrid').innerHTML='';bindProducts();
