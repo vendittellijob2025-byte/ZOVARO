@@ -18,8 +18,11 @@ function renderCategories(){
   $('#categoryGrid').innerHTML=cats.map((c,i)=>`<button class="category" data-cat="${esc(c)}"><span class="symbol">${['◈','◌','✦','⌂','◒','◇','○','△'][i%8]}</span><strong>${esc(c)}</strong><span>Explore ${esc(c.toLowerCase())}</span></button>`).join('');
   $$('.category').forEach(el=>el.addEventListener('click',()=>showResults(PRODUCTS.filter(p=>p.category===el.dataset.cat),`${el.dataset.cat} picks`)));
 }
+let currentResults = [];
+
 function showResults(items,title='Trending Products',meta='',sort='default'){
-  items = [...items];
+  currentResults = [...items];
+  items = [...currentResults];
 
   if(sort==='price-asc'){
     items.sort((a,b)=>a.price-b.price);
@@ -48,6 +51,11 @@ function openProduct(id){
 function closeModal(){$('#productModal').classList.remove('open');$('#productModal').setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
 $('#searchForm').addEventListener('submit',e=>{e.preventDefault();const q=$('#searchInput').value.trim().toLowerCase();if(!q){showResults(PRODUCTS.filter(p=>p.type==='trending'),'Trending Products');return;}const found=PRODUCTS.filter(p=>`${p.name} ${p.category} ${p.merchant} ${p.description}`.toLowerCase().includes(q));showResults(found,`Search results`, `Showing ${found.length} match${found.length===1?'':'es'} for “${esc(q)}”`);});
 $('#viewAllBtn').addEventListener('click',()=>showResults(PRODUCTS,'All Products'));
+$('#sortSelect').addEventListener('change',e=>{
+  const sort=e.target.value;
+  const title=$('#resultsTitle').textContent;
+showResults(currentResults,title,'',sort);
+});
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal();if(e.target.closest('#mainNav a'))$('#mainNav').classList.remove('open');});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 $('#mobileMenuBtn').addEventListener('click',()=>{const open=$('#mainNav').classList.toggle('open');$('#mobileMenuBtn').setAttribute('aria-expanded',open?'true':'false');});
