@@ -19,6 +19,7 @@ function renderCategories(){
   $$('.category').forEach(el=>el.addEventListener('click',()=>showResults(PRODUCTS.filter(p=>p.category===el.dataset.cat),`${el.dataset.cat} picks`)));
 }
 function showResults(items,title='Trending Products',meta=''){
+  items = [...items];
   $('#resultsTitle').textContent=title;$('#resultsMeta').textContent=meta || `${items.length} product${items.length===1?'':'s'} in this preview catalog`;
   $('#trendingGrid').innerHTML=items.length?items.map(card).join(''):`<div class="empty-state"><strong>No matching products</strong><span>Try another search or category.</span></div>`;
   $('#dealGrid').innerHTML='';$('#newGrid').innerHTML='';bindProducts();
