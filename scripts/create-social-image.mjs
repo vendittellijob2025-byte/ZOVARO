@@ -10,6 +10,20 @@ if (!promotion.imageUrl || !promotion.title) {
   throw new Error("Promotion data is missing image or title.");
 }
 
+const imageResponse = await fetch(promotion.imageUrl);
+
+if (!imageResponse.ok) {
+  throw new Error(
+    `Unable to download product image: ${imageResponse.status}`
+  );
+}
+
+const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+const contentType =
+  imageResponse.headers.get("content-type") || "image/jpeg";
+
+const imageData = `data:${contentType};base64,${imageBuffer.toString("base64")}`;
+
 const escapeXml = value =>
   String(value)
     .replace(/&/g, "&amp;")
@@ -22,7 +36,6 @@ const title = escapeXml(promotion.title);
 const price = escapeXml(promotion.priceText || "");
 const brand = escapeXml(promotion.brand || "ZOVARO");
 const category = escapeXml(promotion.category || "");
-const imageUrl = escapeXml(promotion.imageUrl);
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +63,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   </text>
 
   <image
-    href="${imageUrl}"
+    href="${imageData}"
     x="90"
     y="250"
     width="900"
@@ -114,6 +127,6 @@ await fs.writeFile(
   "utf8"
 );
 
-console.log("ZOVARO social image created.");
+console.log("ZOVARO social image created with embedded product image.");
 console.log(`Product: ${promotion.title}`);
 console.log(`Saved to: ${OUTPUT_PATH}`);
