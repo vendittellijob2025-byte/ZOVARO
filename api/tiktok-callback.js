@@ -1,4 +1,5 @@
 import crypto from "node:crypto";
+import { put } from "@vercel/blob";
 
 export default async function handler(req, res) {
   res.setHeader(
@@ -84,25 +85,50 @@ export default async function handler(req, res) {
     redirect_uri: redirectUri
   });
 
-  const response = await fetch(
-    "https://open.tiktokapis.com/v2/oauth/token/",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body
+  try {
+    const response = await fetch(
+      "https://open.tiktokapis.com/v2/oauth/token/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      return res.status(response.status).json(data);
     }
-  );
 
-  const data = await response.json();
+    await put(
+      "tiktok/tokens.json",
+      JSON.stringify({
+        access_token: data.access_token,
+        refresh_token: data.refresh_token,
+        expires_in: data.expires_in,
+        open_id: data.open_id,
+        scope: data.scope,
+        saved_at: Date.now()
+      }),
+      {
+        access: "private",
+        addRandomSuffix: false,
+        allowOverwrite: true
+      }
+    );
 
-  if (!response.ok) {
-    return res.status(response.status).json(data);
+    return res.status(200).json({
+      success: true,
+      message: "Autorizzazione TikTok completata"
+    });
+  } catch (error) {
+    console.error("TikTok callback error:", error);
+
+    return res.status(500).json({
+      error: "Errore durante l'autorizzazione TikTok"
+    });
   }
-
-  return res.status(200).json({
-    success: true,
-    message: "Autorizzazione TikTok completata"
-  });
 }
