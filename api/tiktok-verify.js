@@ -1,11 +1,10 @@
-```javascript
 import { get } from "@vercel/blob";
 
 export default async function handler(req, res) {
   const cronSecret = process.env.CRON_SECRET;
   const authorization = req.headers.authorization;
 
-  if (!cronSecret || authorization !== `Bearer ${cronSecret}`) {
+  if (!cronSecret || authorization !== "Bearer " + cronSecret) {
     return res.status(401).json({
       error: "Non autorizzato"
     });
@@ -46,7 +45,7 @@ export default async function handler(req, res) {
       {
         method: "GET",
         headers: {
-          Authorization: `Bearer ${tokens.access_token}`,
+          Authorization: "Bearer " + tokens.access_token,
           "Cache-Control": "no-cache"
         }
       }
@@ -81,4 +80,3 @@ export default async function handler(req, res) {
     });
   }
 }
-```
