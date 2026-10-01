@@ -1,6 +1,15 @@
 import { get, put } from "@vercel/blob";
 
 export default async function handler(req, res) {
+  const cronSecret = process.env.CRON_SECRET;
+  const authorization = req.headers.authorization;
+
+  if (!cronSecret || authorization !== `Bearer ${cronSecret}`) {
+    return res.status(401).json({
+      error: "Non autorizzato"
+    });
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({
       error: "Metodo non consentito"
@@ -60,6 +69,12 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       return res.status(response.status).json(data);
+    }
+
+    if (!data.access_token || !data.refresh_token) {
+      return res.status(502).json({
+        error: "Risposta TikTok incompleta"
+      });
     }
 
     await put(
