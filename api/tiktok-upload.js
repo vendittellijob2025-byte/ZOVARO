@@ -55,7 +55,8 @@ export default async function handler(req, res) {
       total_chunk_count <= 0
     ) {
       return res.status(400).json({
-        error: "video_size, chunk_size e total_chunk_count devono essere interi positivi"
+        error:
+          "video_size, chunk_size e total_chunk_count devono essere interi positivi"
       });
     }
 
@@ -105,10 +106,14 @@ export default async function handler(req, res) {
       upload_url: data.data.upload_url
     });
   } catch (error) {
-    console.error("TikTok upload initialization error:", error);
+    console.error(
+      "TikTok upload initialization error:",
+      error
+    );
 
     return res.status(500).json({
-      error: "Errore interno durante l'inizializzazione dell'upload TikTok"
+      error:
+        "Errore interno durante l'inizializzazione dell'upload TikTok"
     });
   }
 }
