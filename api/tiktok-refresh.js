@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     });
   }
 
-  if (req.method !== "POST") {
+  if (req.method !== "GET" && req.method !== "POST") {
     return res.status(405).json({
       error: "Metodo non consentito"
     });
@@ -38,7 +38,9 @@ export default async function handler(req, res) {
     }
 
     const buffer = await new Response(result.stream).arrayBuffer();
-    const tokens = JSON.parse(Buffer.from(buffer).toString("utf8"));
+    const tokens = JSON.parse(
+      Buffer.from(buffer).toString("utf8")
+    );
 
     if (!tokens.refresh_token) {
       return res.status(400).json({
@@ -86,7 +88,10 @@ export default async function handler(req, res) {
         refresh_expires_in: data.refresh_expires_in,
         open_id: data.open_id || tokens.open_id,
         scope: data.scope || tokens.scope,
-        token_type: data.token_type || tokens.token_type || "Bearer",
+        token_type:
+          data.token_type ||
+          tokens.token_type ||
+          "Bearer",
         saved_at: Date.now()
       }),
       {
