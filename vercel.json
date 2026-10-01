@@ -3,6 +3,10 @@
     {
       "path": "/api/tiktok-refresh",
       "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/tiktok-verify",
+      "schedule": "0 4 * * *"
     }
   ]
 }
