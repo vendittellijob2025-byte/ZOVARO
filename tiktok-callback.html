@@ -14,27 +14,52 @@
     const code = params.get("code");
     const state = params.get("state");
 
+    const status = document.getElementById("status");
+
     if (!code || !state) {
-      document.getElementById("status").textContent =
+      status.textContent =
         "TikTok authorization data missing.";
     } else {
       fetch(
         "https://zovaro.vercel.app/api/tiktok-callback?" +
         new URLSearchParams({ code, state })
       )
-        .then(response => response.json())
+        .then(async response => {
+          const data = await response.json();
+
+          if (!response.ok) {
+            throw new Error(
+              data.error || "TikTok authorization failed."
+            );
+          }
+
+          return data;
+        })
         .then(data => {
-          if (data.success) {
-            document.getElementById("status").textContent =
+          if (
+            data.success &&
+            data.session_token
+          ) {
+            sessionStorage.setItem(
+              "zovaro_tiktok_session",
+              data.session_token
+            );
+
+            sessionStorage.setItem(
+              "zovaro_tiktok_session_expires",
+              String(data.expires_at || "")
+            );
+
+            status.textContent =
               "TikTok authorization completed successfully.";
           } else {
-            document.getElementById("status").textContent =
+            status.textContent =
               "TikTok authorization failed.";
             console.error(data);
           }
         })
         .catch(error => {
-          document.getElementById("status").textContent =
+          status.textContent =
             "Connection error.";
           console.error(error);
         });
