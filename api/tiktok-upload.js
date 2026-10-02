@@ -2,9 +2,12 @@ import crypto from "node:crypto";
 import { get } from "@vercel/blob";
 
 export default async function handler(req, res) {
+  const allowedOrigin =
+    "https://vendittellijob2025-byte.github.io";
+
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://vendittellijob2025-byte.github.io"
+    allowedOrigin
   );
 
   res.setHeader(
@@ -77,7 +80,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const result = await get(
+    const tokenResult = await get(
       "tiktok/tokens.json",
       {
         access: "private",
@@ -85,19 +88,19 @@ export default async function handler(req, res) {
       }
     );
 
-    if (!result) {
+    if (!tokenResult) {
       return res.status(404).json({
         error: "Token TikTok non trovato"
       });
     }
 
-    const buffer =
+    const tokenBuffer =
       await new Response(
-        result.stream
+        tokenResult.stream
       ).arrayBuffer();
 
     const tokens = JSON.parse(
-      Buffer.from(buffer).toString("utf8")
+      Buffer.from(tokenBuffer).toString("utf8")
     );
 
     if (!tokens.access_token) {
@@ -106,103 +109,28 @@ export default async function handler(req, res) {
       });
     }
 
-    const body = req.body || {};
-
-    const videoSize = Number(
-      body.video_size
-    );
-
-    const chunkSize = Number(
-      body.chunk_size
-    );
-
-    const totalChunkCount = Number(
-      body.total_chunk_count
-    );
-
-    const privacyLevel =
-      typeof body.privacy_level === "string"
-        ? body.privacy_level
-        : "SELF_ONLY";
-
-    const title =
-      typeof body.title === "string"
-        ? body.title
-        : "";
-
-    const isAigc =
-      body.is_aigc === true;
-
-    const allowedPrivacyLevels = [
-      "PUBLIC_TO_EVERYONE",
-      "MUTUAL_FOLLOW_FRIENDS",
-      "FOLLOWER_OF_CREATOR",
-      "SELF_ONLY"
-    ];
+    const {
+      video_size,
+      chunk_size,
+      total_chunk_count
+    } = req.body || {};
 
     if (
-      !Number.isInteger(videoSize) ||
-      videoSize <= 0
+      !Number.isInteger(video_size) ||
+      video_size <= 0 ||
+      !Number.isInteger(chunk_size) ||
+      chunk_size <= 0 ||
+      !Number.isInteger(total_chunk_count) ||
+      total_chunk_count <= 0
     ) {
       return res.status(400).json({
         error:
-          "video_size deve essere un intero positivo"
-      });
-    }
-
-    if (
-      !Number.isInteger(chunkSize) ||
-      chunkSize <= 0
-    ) {
-      return res.status(400).json({
-        error:
-          "chunk_size deve essere un intero positivo"
-      });
-    }
-
-    if (
-      !Number.isInteger(totalChunkCount) ||
-      totalChunkCount <= 0
-    ) {
-      return res.status(400).json({
-        error:
-          "total_chunk_count deve essere un intero positivo"
-      });
-    }
-
-    if (
-      !allowedPrivacyLevels.includes(
-        privacyLevel
-      )
-    ) {
-      return res.status(400).json({
-        error:
-          "privacy_level non valido"
-      });
-    }
-
-    if (title.length > 2200) {
-      return res.status(400).json({
-        error:
-          "Il titolo supera il limite TikTok di 2200 caratteri"
-      });
-    }
-
-    const calculatedChunkCount =
-      Math.ceil(videoSize / chunkSize);
-
-    if (
-      calculatedChunkCount !==
-      totalChunkCount
-    ) {
-      return res.status(400).json({
-        error:
-          "total_chunk_count non corrisponde a video_size e chunk_size"
+          "video_size, chunk_size e total_chunk_count devono essere interi positivi"
       });
     }
 
     const response = await fetch(
-      "https://open.tiktokapis.com/v2/post/publish/video/init/",
+      "https://open.tiktokapis.com/v2/post/publish/inbox/video/init/",
       {
         method: "POST",
         headers: {
@@ -212,32 +140,25 @@ export default async function handler(req, res) {
             "application/json; charset=UTF-8"
         },
         body: JSON.stringify({
-          post_info: {
-            privacy_level: privacyLevel,
-            ...(title
-              ? { title }
-              : {}),
-            is_aigc: isAigc
-          },
           source_info: {
             source: "FILE_UPLOAD",
-            video_size: videoSize,
-            chunk_size: chunkSize,
-            total_chunk_count:
-              totalChunkCount
+            video_size,
+            chunk_size,
+            total_chunk_count
           }
         })
       }
     );
 
-    const data =
-      await response.json();
+    const data = await response.json();
 
     if (!response.ok) {
       return res.status(response.status).json({
-        success: false,
-        tiktok_error:
-          data.error || data
+        error:
+          data.error || {
+            code: "tiktok_error",
+            message: "Errore TikTok"
+          }
       });
     }
 
@@ -247,29 +168,24 @@ export default async function handler(req, res) {
       !data.data.upload_url
     ) {
       return res.status(502).json({
-        success: false,
-        error:
-          "Risposta TikTok incompleta"
+        error: "Risposta TikTok incompleta"
       });
     }
 
     return res.status(200).json({
       success: true,
-      publish_id:
-        data.data.publish_id,
-      upload_url:
-        data.data.upload_url
+      publish_id: data.data.publish_id,
+      upload_url: data.data.upload_url
     });
   } catch (error) {
     console.error(
-      "TikTok Direct Post FILE_UPLOAD initialization error:",
+      "TikTok upload initialization error:",
       error
     );
 
     return res.status(500).json({
-      success: false,
       error:
-        "Errore durante l'inizializzazione del Direct Post TikTok"
+        "Errore interno durante l'inizializzazione dell'upload TikTok"
     });
   }
 }
