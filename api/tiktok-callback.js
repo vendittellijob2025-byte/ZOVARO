@@ -8,10 +8,19 @@ export default async function handler(req, res) {
   );
 
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type"
+  );
 
   if (req.method === "OPTIONS") {
     return res.status(204).end();
+  }
+
+  if (req.method !== "GET") {
+    return res.status(405).json({
+      error: "Metodo non consentito"
+    });
   }
 
   const { code, state } = req.query;
@@ -68,7 +77,10 @@ export default async function handler(req, res) {
     });
   }
 
-  if (!stateData.t || Date.now() - stateData.t > 10 * 60 * 1000) {
+  if (
+    !stateData.t ||
+    Date.now() - stateData.t > 10 * 60 * 1000
+  ) {
     return res.status(400).json({
       error: "State scaduto"
     });
@@ -103,14 +115,22 @@ export default async function handler(req, res) {
       return res.status(response.status).json(data);
     }
 
+    if (!data.access_token || !data.refresh_token) {
+      return res.status(502).json({
+        error: "Risposta TikTok incompleta"
+      });
+    }
+
     await put(
       "tiktok/tokens.json",
       JSON.stringify({
         access_token: data.access_token,
         refresh_token: data.refresh_token,
         expires_in: data.expires_in,
+        refresh_expires_in: data.refresh_expires_in,
         open_id: data.open_id,
         scope: data.scope,
+        token_type: data.token_type || "Bearer",
         saved_at: Date.now()
       }),
       {
@@ -120,9 +140,43 @@ export default async function handler(req, res) {
       }
     );
 
+    /*
+     * Create a short-lived ZOVARO session token.
+     *
+     * This token is NOT the TikTok access token.
+     * It only authorizes the browser session to use
+     * the future ZOVARO Direct Post endpoints.
+     */
+
+    const sessionToken = crypto.randomBytes(32).toString("hex");
+
+    const sessionHash = crypto
+      .createHash("sha256")
+      .update(sessionToken)
+      .digest("hex");
+
+    const sessionExpiresAt =
+      Date.now() + 15 * 60 * 1000;
+
+    await put(
+      `tiktok/sessions/${sessionHash}.json`,
+      JSON.stringify({
+        open_id: data.open_id || null,
+        created_at: Date.now(),
+        expires_at: sessionExpiresAt
+      }),
+      {
+        access: "private",
+        addRandomSuffix: false,
+        allowOverwrite: false
+      }
+    );
+
     return res.status(200).json({
       success: true,
-      message: "Autorizzazione TikTok completata"
+      message: "Autorizzazione TikTok completata",
+      session_token: sessionToken,
+      expires_at: sessionExpiresAt
     });
   } catch (error) {
     console.error("TikTok callback error:", error);
