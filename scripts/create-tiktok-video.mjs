@@ -59,10 +59,14 @@ const BACKGROUND_WHITE_OVERLAY = 0.10;
   TEXT MINI PANELS
 
   Each text element gets its own independent
-  translucent white rounded-style box.
+  WHITE MINI-PANEL.
+
+  The panels are intentionally LESS TRANSPARENT
+  so the text remains clearly separated from the
+  futuristic ZOVARO shop background.
 */
 
-const TEXT_BOX_COLOR = "white@0.58";
+const TEXT_BOX_COLOR = "white@0.82";
 const TEXT_BOX_BORDER = 18;
 
 async function run(command, args) {
@@ -289,8 +293,7 @@ productCount =
   );
 
 if (
-  productCount <
-  MIN_PRODUCTS
+  productCount < MIN_PRODUCTS
 ) {
   throw new Error(
     `Not enough selected products to build the automatic video. Required: ${MIN_PRODUCTS}. Available: ${allProducts.length}.`
@@ -647,8 +650,12 @@ for (
     preserving its white background while
     allowing the ZOVARO shop to remain visible.
 
-    Every text line has its OWN translucent
-    white mini-panel using drawtext box=1.
+    Every text line has its OWN white mini-panel.
+
+    IMPORTANT:
+    The mini-panels are now MORE OPAQUE
+    (white@0.82) so they clearly separate
+    the text from the futuristic shop background.
   */
 
   const filterParts = [
@@ -694,7 +701,7 @@ for (
     /*
       CATEGORY
 
-      Individual translucent white mini-panel.
+      Individual MORE OPAQUE white mini-panel.
     */
 
     `[scene1]` +
@@ -715,7 +722,7 @@ for (
     /*
       PRODUCT TITLE
 
-      Individual translucent white mini-panel.
+      Individual MORE OPAQUE white mini-panel.
     */
 
     `[text1]` +
@@ -736,7 +743,7 @@ for (
     /*
       MERCHANT / AFFILIATE
 
-      Individual translucent white mini-panel.
+      Individual MORE OPAQUE white mini-panel.
     */
 
     `[text2]` +
@@ -757,7 +764,7 @@ for (
     /*
       CURRENT PRICE
 
-      Larger individual mini-panel.
+      Larger individual MORE OPAQUE mini-panel.
     */
 
     `[text3]` +
@@ -1267,6 +1274,10 @@ console.log(
 
 console.log(
   `Background white overlay: ${BACKGROUND_WHITE_OVERLAY}`
+);
+
+console.log(
+  `Text panel opacity: 0.82`
 );
 
 console.log(
