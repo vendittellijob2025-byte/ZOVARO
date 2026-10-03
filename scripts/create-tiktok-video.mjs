@@ -27,33 +27,23 @@ const FINAL_DURATION = 6;
 const MIN_PRODUCTS = 6;
 const MAX_PRODUCTS = 20;
 
-/*
-  TRANSITION SETTINGS
-
-  Each product keeps the ZOVARO shop visible.
-  The product/text layer fades between products,
-  allowing the background to remain visible.
-*/
-
 const TRANSITION_DURATION = 0.75;
 
 /*
   PRODUCT IMAGE OPACITY
 
-  The white background of the product image
-  is now MORE OPAQUE.
+  The product image must remain FULLY OPAQUE.
 
-  This matches the visual quality of the
-  white text mini-panels.
+  This keeps the original white background of
+  the product image clearly visible and prevents
+  the product from blending into the futuristic
+  ZOVARO shop background.
 */
 
-const PRODUCT_OPACITY = 0.82;
+const PRODUCT_OPACITY = 1.00;
 
 /*
   BACKGROUND VISIBILITY
-
-  Higher opacity means the futuristic ZOVARO
-  shop remains much more visible.
 */
 
 const BACKGROUND_WHITE_OVERLAY = 0.10;
@@ -61,12 +51,8 @@ const BACKGROUND_WHITE_OVERLAY = 0.10;
 /*
   TEXT MINI PANELS
 
-  Each text element gets its own independent
-  WHITE MINI-PANEL.
-
-  The panels are intentionally LESS TRANSPARENT
-  so the text remains clearly separated from the
-  futuristic ZOVARO shop background.
+  These remain at 0.82 because this level was
+  already visually correct.
 */
 
 const TEXT_BOX_COLOR = "white@0.82";
@@ -414,10 +400,6 @@ for (
     }
   );
 
-  /*
-    ALL PRODUCT TEXT MUST BE ENGLISH.
-  */
-
   const category =
     String(
       product.englishCategory ||
@@ -460,16 +442,6 @@ for (
     product.imageLink,
     imagePath
   );
-
-  /*
-    SALE PRICE LOGIC
-
-    A sale exists only when:
-
-    regular price > 0
-    sale price > 0
-    sale price < regular price
-  */
 
   const regularPrice =
     Number(product.price);
@@ -545,10 +517,6 @@ for (
     displayedDiscount > 0
       ? `-${displayedDiscount}%`
       : "";
-
-  /*
-    TEXT FILES
-  */
 
   const categoryFile =
     `${textDirectory}/category.txt`;
@@ -643,26 +611,7 @@ for (
       discountFile
     );
 
-  /*
-    PRODUCT VIDEO SCENE
-
-    The futuristic ZOVARO shop remains
-    strongly visible.
-
-    The product image now uses the same
-    opacity level as the text mini-panels.
-
-    This makes the white product background
-    clearly separated from the shop background.
-
-    Every text line has its OWN white mini-panel.
-  */
-
   const filterParts = [
-    /*
-      ZOVARO BACKGROUND
-    */
-
     `[1:v]` +
       `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
       `crop=${WIDTH}:${HEIGHT}` +
@@ -681,8 +630,13 @@ for (
     /*
       PRODUCT IMAGE
 
-      Product image opacity is now 0.82,
-      matching the white text panels.
+      FULL OPACITY.
+
+      The original white background of the product
+      image remains clearly visible.
+
+      The product therefore stays completely
+      separated from the futuristic shop background.
     */
 
     `[0:v]` +
@@ -694,10 +648,6 @@ for (
     `[softbackground][product]` +
       `overlay=(W-w)/2:55:format=auto` +
       `[scene1]`,
-
-    /*
-      CATEGORY
-    */
 
     `[scene1]` +
       `drawtext=` +
@@ -714,10 +664,6 @@ for (
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text1]`,
 
-    /*
-      PRODUCT TITLE
-    */
-
     `[text1]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
@@ -732,10 +678,6 @@ for (
       `boxcolor=${TEXT_BOX_COLOR}:` +
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text2]`,
-
-    /*
-      MERCHANT / AFFILIATE
-    */
 
     `[text2]` +
       `drawtext=` +
@@ -752,10 +694,6 @@ for (
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text3]`,
 
-    /*
-      CURRENT PRICE
-    */
-
     `[text3]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
@@ -770,10 +708,6 @@ for (
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text4]`
   ];
-
-  /*
-    OLD PRICE
-  */
 
   if (oldPriceText) {
     filterParts.push(
@@ -797,10 +731,6 @@ for (
     );
   }
 
-  /*
-    DISCOUNT
-  */
-
   if (discountText) {
     filterParts.push(
       `[text5]` +
@@ -822,14 +752,6 @@ for (
       `[text5]null[text6]`
     );
   }
-
-  /*
-    PRODUCT SCENE FADE
-
-    Only the product/text layer fades.
-
-    The ZOVARO shop background remains visible.
-  */
 
   filterParts.push(
     `[text6]` +
@@ -897,20 +819,6 @@ for (
   );
 }
 
-/*
-  FINAL ZOVARO SCREEN
-
-  The futuristic shop starts visible.
-
-  The logo and white text remain visible.
-
-  The shop background then rapidly fades
-  toward BLACK.
-
-  The final screen is rendered at a fixed
-  30 FPS so there are no frozen frames.
-*/
-
 const finalScreenPath =
   `${TEMP_DIR}/final-screen.png`;
 
@@ -931,18 +839,10 @@ await run(
     "-filter_complex",
 
     [
-      /*
-        Background.
-      */
-
       `[0:v]` +
         `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
         `crop=${WIDTH}:${HEIGHT}` +
         `[finalbg]`,
-
-      /*
-        Slightly stronger shop visibility.
-      */
 
       `[finalbg]` +
         `drawbox=` +
@@ -954,10 +854,6 @@ await run(
         `t=fill` +
         `[finalsoft]`,
 
-      /*
-        Logo.
-      */
-
       `[1:v]` +
         `scale=720:720:force_original_aspect_ratio=decrease` +
         `[logo]`,
@@ -965,10 +861,6 @@ await run(
       `[finalsoft][logo]` +
         `overlay=(W-w)/2:420:format=auto` +
         `[finalscene]`,
-
-      /*
-        FINAL TEXT — WHITE
-      */
 
       `[finalscene]` +
         `drawtext=` +
@@ -1007,20 +899,6 @@ await run(
 const finalVideoPath =
   `${TEMP_DIR}/final-screen-video.mp4`;
 
-/*
-  FINAL ANIMATION
-
-  The background fades toward BLACK.
-
-  The logo and white text are rendered over
-  the background AFTER the fade operation,
-  so they remain visible throughout the ending.
-
-  The logo input is looped as well, preventing
-  the last frame from freezing because of a
-  single-frame input.
-*/
-
 await run(
   "ffmpeg",
   [
@@ -1041,12 +919,6 @@ await run(
     "-filter_complex",
 
     [
-      /*
-        BACKGROUND
-
-        Shop fades smoothly to black.
-      */
-
       `[0:v]` +
         `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
         `crop=${WIDTH}:${HEIGHT},` +
@@ -1060,13 +932,6 @@ await run(
         `fade=t=out:st=1.0:d=1.4:color=black` +
         `[endingbg]`,
 
-      /*
-        LOGO
-
-        Looping the logo input guarantees that
-        the logo is available for every frame.
-      */
-
       `[1:v]` +
         `scale=720:720:force_original_aspect_ratio=decrease` +
         `[endinglogo]`,
@@ -1074,10 +939,6 @@ await run(
       `[endingbg][endinglogo]` +
         `overlay=(W-w)/2:420:format=auto` +
         `[endingscene]`,
-
-      /*
-        WHITE FINAL TEXT
-      */
 
       `[endingscene]` +
         `drawtext=` +
@@ -1166,21 +1027,6 @@ console.log(
 const silentVideoPath =
   `${TEMP_DIR}/silent-video.mp4`;
 
-/*
-  IMPORTANT FINAL CONCAT FIX
-
-  The previous version used:
-
-    -c copy
-
-  That can preserve incompatible timestamps/timebases
-  between separately generated segments and can cause
-  the final section to appear frozen.
-
-  The complete video is now re-encoded at a fixed
-  30 FPS during concatenation.
-*/
-
 await run(
   "ffmpeg",
   [
@@ -1215,10 +1061,6 @@ await run(
     silentVideoPath
   ]
 );
-
-/*
-  ADD THE FIXED ZOVARO AFFILIATE MUSIC
-*/
 
 await run(
   "ffmpeg",
