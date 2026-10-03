@@ -1,13 +1,18 @@
 (function () {
-  const CATALOG_URL = "./data/catalog.json";  
+  const CATALOG_URL = "./data/catalog.json";
+
   function normalizeProduct(product, index) {
     const regularPrice =
-      typeof product.price === "number"
+      typeof product.price === "number" &&
+      Number.isFinite(product.price) &&
+      product.price > 0
         ? product.price
         : null;
 
     const salePrice =
-      typeof product.salePrice === "number"
+      typeof product.salePrice === "number" &&
+      Number.isFinite(product.salePrice) &&
+      product.salePrice > 0
         ? product.salePrice
         : null;
 
@@ -16,22 +21,35 @@
       regularPrice !== null &&
       salePrice < regularPrice;
 
+    const englishTitle =
+      typeof product.englishTitle === "string"
+        ? product.englishTitle.trim()
+        : "";
+
+    const englishDescription =
+      typeof product.englishDescription === "string"
+        ? product.englishDescription.trim()
+        : "";
+
+    const englishCategory =
+      typeof product.englishCategory === "string"
+        ? product.englishCategory.trim()
+        : "";
+
     return {
-      id: Number(product.id) || 100000 + index,
+      id:
+        Number(product.id) ||
+        100000 + index,
 
       name:
-        product.title ||
-        product.brand ||
-        product.advertiserName ||
-        "ZOVARO Offer",
+        englishTitle,
 
       merchant:
         product.advertiserName ||
         "CJ Affiliate",
 
       category:
-        product.category ||
-        "Featured",
+        englishCategory,
 
       price:
         hasSale
@@ -44,7 +62,12 @@
           : null,
 
       discount:
-        product.discountPercentage != null
+        hasSale &&
+        product.discountPercentage != null &&
+        Number.isFinite(
+          Number(product.discountPercentage)
+        ) &&
+        Number(product.discountPercentage) > 0
           ? `${Number(product.discountPercentage).toFixed(0)}%`
           : null,
 
@@ -62,23 +85,23 @@
         ),
 
       description:
-        product.description ||
-        `${product.brand ? product.brand + " — " : ""}${product.title || ""}`,
+        englishDescription,
 
-      type: "affiliate",
+      type:
+        "affiliate",
 
-source:
-  product.source ||
-  "CJ",
+      source:
+        product.source ||
+        "CJ",
 
-network:
-  product.network ||
-  "CJ Affiliate",
-      
+      network:
+        product.network ||
+        "CJ Affiliate",
+
       clickUrl:
-  product.clickUrl ||
-  product.destination ||
-  "",
+        product.clickUrl ||
+        product.destination ||
+        "",
 
       destination:
         product.destination ||
@@ -116,7 +139,8 @@ network:
         );
       }
 
-      const catalog = await response.json();
+      const catalog =
+        await response.json();
 
       if (
         !catalog ||
@@ -129,48 +153,82 @@ network:
         return;
       }
 
-      const ENABLED_NETWORKS = Array.isArray(catalog.sources)
-  ? catalog.sources
-      .filter(source => source.status === "active")
-      .map(source => source.network)
-  : [];
-      
-     const affiliateProducts = catalog.products
-  .filter(product =>
-  product &&
-  ENABLED_NETWORKS.includes(product.network) &&
-  product.joinedStatus === true &&
-  typeof product.destination === "string" &&
-  product.destination.trim() !== ""
-)
-  .map(normalizeProduct)
-  .filter(product =>
-    product.image &&
-    product.name
-  );
+      const ENABLED_NETWORKS =
+        Array.isArray(catalog.sources)
+          ? catalog.sources
+              .filter(
+                source =>
+                  source.status === "active"
+              )
+              .map(
+                source =>
+                  source.network
+              )
+          : [];
 
-if (!affiliateProducts.length) {
-  console.info(
-    "ZOVARO CJ loader: no usable products."
-  );
-  return;
-}
+      const affiliateProducts =
+        catalog.products
+          .filter(product => {
+            if (
+              !product ||
+              !ENABLED_NETWORKS.includes(
+                product.network
+              ) ||
+              product.joinedStatus !== true ||
+              typeof product.destination !== "string" ||
+              product.destination.trim() === ""
+            ) {
+              return false;
+            }
 
-PRODUCTS.splice(
-  0,
-  PRODUCTS.length,
-  ...affiliateProducts
-);
+            const hasEnglishTitle =
+              typeof product.englishTitle === "string" &&
+              product.englishTitle.trim() !== "";
 
-console.info(
-  `ZOVARO affiliate loader: ${affiliateProducts.length} real products loaded.`
-);
+            const hasEnglishDescription =
+              typeof product.englishDescription === "string" &&
+              product.englishDescription.trim() !== "";
+
+            const hasEnglishCategory =
+              typeof product.englishCategory === "string" &&
+              product.englishCategory.trim() !== "";
+
+            return (
+              hasEnglishTitle &&
+              hasEnglishDescription &&
+              hasEnglishCategory
+            );
+          })
+          .map(normalizeProduct)
+          .filter(product =>
+            product.image &&
+            product.name &&
+            product.category &&
+            product.description
+          );
+
+      if (!affiliateProducts.length) {
+        console.info(
+          "ZOVARO CJ loader: no usable English products."
+        );
+        return;
+      }
+
+      PRODUCTS.splice(
+        0,
+        PRODUCTS.length,
+        ...affiliateProducts
+      );
+
+      console.info(
+        `ZOVARO affiliate loader: ${affiliateProducts.length} real English products loaded.`
+      );
 
       if (typeof render === "function") {
         render();
       }
 
-        } catch (error) {
+    } catch (error) {
       console.warn(
         "ZOVARO CJ loader:",
         error
