@@ -15,6 +15,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: zovaro-cj-products-sync
+  cancel-in-progress: false
+
 jobs:
   sync-cj:
 
@@ -24,6 +28,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Fetch CJ product feed
         env:
@@ -44,7 +50,12 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No catalog or translation changes."
-          else
-            git commit -m "chore: sync CJ catalog and English translations"
-            git push
+            exit 0
           fi
+
+          git commit -m "chore: sync CJ catalog and English translations"
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
