@@ -384,8 +384,75 @@ for (
     }
   );
 
+  /*
+    IMPORTANT:
+
+    The ZOVARO catalog is translated to English
+    before products enter the video pipeline.
+
+    The video therefore uses:
+
+    englishCategory
+    englishTitle
+    englishDescription
+
+    Original fields are used only as fallback
+    in case an older catalog entry does not yet
+    contain the English translation.
+  */
+
+  const category =
+    String(
+      product.englishCategory ||
+      product.category ||
+      "Featured"
+    );
+
+  const name =
+    String(
+      product.englishTitle ||
+      product.title ||
+      product.brand ||
+      product.advertiserName ||
+      "ZOVARO Offer"
+    );
+
+  const merchant =
+    String(
+      product.advertiserName ||
+      "CJ Affiliate"
+    );
+
+  const description =
+    String(
+      product.englishDescription ||
+      product.description ||
+      (
+        product.brand
+          ? `${product.brand} — `
+          : ""
+      ) +
+      (
+        product.englishTitle ||
+        product.title ||
+        ""
+      )
+    );
+
   console.log(
-    `Downloading product ${index + 1}: ${product.title}`
+    `Preparing product ${index + 1} in English: ${name}`
+  );
+
+  console.log(
+    `English category: ${category}`
+  );
+
+  console.log(
+    `English description: ${description}`
+  );
+
+  console.log(
+    `Downloading product image ${index + 1}`
   );
 
   await downloadFile(
@@ -394,8 +461,12 @@ for (
   );
 
   /*
-    Match the same product logic used
-    by the ZOVARO web catalog.
+    Match the same product pricing logic
+    used by the ZOVARO web catalog.
+
+    Sale prices must be positive.
+    A zero sale price is never treated
+    as a real discount.
   */
 
   const regularPrice =
@@ -408,9 +479,11 @@ for (
     Number.isFinite(
       regularPrice
     ) &&
+    regularPrice > 0 &&
     Number.isFinite(
       salePrice
     ) &&
+    salePrice > 0 &&
     salePrice <
       regularPrice;
 
@@ -452,40 +525,6 @@ for (
               )
             : 0
         );
-
-  const category =
-    String(
-      product.category ||
-      "Featured"
-    );
-
-  const name =
-    String(
-      product.title ||
-      product.brand ||
-      product.advertiserName ||
-      "ZOVARO Offer"
-    );
-
-  const merchant =
-    String(
-      product.advertiserName ||
-      "CJ Affiliate"
-    );
-
-  const description =
-    String(
-      product.description ||
-      (
-        product.brand
-          ? `${product.brand} — `
-          : ""
-      ) +
-      (
-        product.title ||
-        ""
-      )
-    );
 
   const priceText =
     formatMoney(
@@ -587,19 +626,11 @@ for (
   );
 
   /*
-    IMPORTANT FIX:
+    Complete 1080x1920 scene.
 
-    The previous version created only a
-    1080x1120 video frame and then placed
-    all text below y=1120.
-
-    Therefore the text existed but was
-    outside the visible frame.
-
-    Now the complete scene is 1080x1920.
-    The product image occupies the upper
-    part and the product information is
-    placed below it.
+    Product image occupies the upper part.
+    English product information is placed
+    below the image.
   */
 
   const filters = [
