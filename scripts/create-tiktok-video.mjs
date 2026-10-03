@@ -32,15 +32,13 @@ async function run(command, args) {
     `Running: ${command} ${args.join(" ")}`
   );
 
-  const result =
-    await execFileAsync(
-      command,
-      args,
-      {
-        maxBuffer:
-          20 * 1024 * 1024
-      }
-    );
+  const result = await execFileAsync(
+    command,
+    args,
+    {
+      maxBuffer: 20 * 1024 * 1024
+    }
+  );
 
   if (result.stdout) {
     console.log(result.stdout);
@@ -62,12 +60,8 @@ async function fileExists(path) {
   }
 }
 
-async function downloadFile(
-  url,
-  outputPath
-) {
-  const response =
-    await fetch(url);
+async function downloadFile(url, outputPath) {
+  const response = await fetch(url);
 
   if (!response.ok) {
     throw new Error(
@@ -75,10 +69,9 @@ async function downloadFile(
     );
   }
 
-  const buffer =
-    Buffer.from(
-      await response.arrayBuffer()
-    );
+  const buffer = Buffer.from(
+    await response.arrayBuffer()
+  );
 
   await fs.writeFile(
     outputPath,
@@ -86,37 +79,22 @@ async function downloadFile(
   );
 }
 
-function escapeDrawtext(value) {
-  return String(value ?? "")
-    .replace(/\\/g, "\\\\")
-    .replace(/:/g, "\\:")
-    .replace(/'/g, "\\'")
-    .replace(/\[/g, "\\[")
-    .replace(/\]/g, "\\]")
-    .replace(/%/g, "\\%");
-}
-
 function escapeFilterPath(value) {
   return String(value ?? "")
     .replace(/\\/g, "\\\\")
-    .replace(/:/g, "\\:")
-    .replace(/'/g, "\\'");
+    .replace(/:/g, "\\:");
 }
 
-function formatMoney(
-  value,
-  currency
-) {
-  const number =
-    Number(value);
+function formatMoney(value, currency) {
+  const number = Number(value);
 
   if (!Number.isFinite(number)) {
     return "";
   }
 
-  const code =
-    String(currency || "USD")
-      .toUpperCase();
+  const code = String(
+    currency || "USD"
+  ).toUpperCase();
 
   const symbols = {
     USD: "$",
@@ -132,31 +110,22 @@ function formatMoney(
   return `${symbol}${number.toFixed(2)}`;
 }
 
-function wrapText(
-  value,
-  maxCharacters
-) {
-  const text =
-    String(value ?? "")
-      .replace(/\r/g, "")
-      .trim();
+function wrapText(value, maxCharacters) {
+  const text = String(value ?? "")
+    .replace(/\r/g, "")
+    .trim();
 
   if (!text) {
     return "";
   }
 
-  const paragraphs =
-    text.split("\n");
-
+  const paragraphs = text.split("\n");
   const lines = [];
 
-  for (
-    const paragraph of paragraphs
-  ) {
-    const words =
-      paragraph
-        .split(/\s+/)
-        .filter(Boolean);
+  for (const paragraph of paragraphs) {
+    const words = paragraph
+      .split(/\s+/)
+      .filter(Boolean);
 
     if (!words.length) {
       lines.push("");
@@ -165,13 +134,10 @@ function wrapText(
 
     let current = "";
 
-    for (
-      const word of words
-    ) {
-      const candidate =
-        current
-          ? `${current} ${word}`
-          : word;
+    for (const word of words) {
+      const candidate = current
+        ? `${current} ${word}`
+        : word;
 
       if (
         candidate.length <=
@@ -205,9 +171,7 @@ const selectedData =
   JSON.parse(selectedText);
 
 const allProducts =
-  Array.isArray(
-    selectedData.products
-  )
+  Array.isArray(selectedData.products)
     ? selectedData.products
     : [];
 
@@ -221,7 +185,7 @@ if (
 }
 
 if (
-  !await fileExists(MUSIC_PATH)
+  !(await fileExists(MUSIC_PATH))
 ) {
   throw new Error(
     `ZOVARO Affiliate music not found: ${MUSIC_PATH}`
@@ -229,7 +193,7 @@ if (
 }
 
 if (
-  !await fileExists(BACKGROUND_PATH)
+  !(await fileExists(BACKGROUND_PATH))
 ) {
   throw new Error(
     `ZOVARO background not found: ${BACKGROUND_PATH}`
@@ -287,7 +251,8 @@ productCount =
   );
 
 if (
-  productCount < MIN_PRODUCTS
+  productCount <
+  MIN_PRODUCTS
 ) {
   throw new Error(
     `Not enough selected products to build the automatic video. Required: ${MIN_PRODUCTS}. Available: ${allProducts.length}.`
@@ -382,8 +347,7 @@ for (
 
   if (
     !product.imageLink ||
-    typeof product.imageLink !==
-      "string"
+    typeof product.imageLink !== "string"
   ) {
     throw new Error(
       `Product ${index + 1} is missing imageLink.`
@@ -409,12 +373,13 @@ for (
   /*
     ALL PRODUCT TEXT MUST BE ENGLISH.
 
-    Translation is performed earlier in the
-    catalog pipeline.
+    The translation pipeline already creates:
 
-    The video uses the translated fields first
-    and only falls back to the original fields
-    for older catalog entries.
+    englishCategory
+    englishTitle
+    englishDescription
+
+    The video uses the English fields first.
   */
 
   const category =
@@ -439,20 +404,16 @@ for (
       "CJ Affiliate"
     );
 
-  /*
-    DESCRIPTION IS INTENTIONALLY NOT USED
-    IN THE VIDEO.
-
-    This gives more visual space to the
-    product title, merchant and pricing.
-  */
-
   console.log(
     `Preparing product ${index + 1}: ${name}`
   );
 
   console.log(
     `English category: ${category}`
+  );
+
+  console.log(
+    `Merchant: ${merchant}`
   );
 
   console.log(
@@ -465,11 +426,15 @@ for (
   );
 
   /*
-    Pricing logic.
+    SALE PRICE LOGIC
 
-    A sale price must be positive.
-    Zero is never considered a valid
-    sale price.
+    Zero or negative sale prices are invalid.
+
+    A sale exists only when:
+
+    regular price > 0
+    sale price > 0
+    sale price < regular price
   */
 
   const regularPrice =
@@ -487,8 +452,7 @@ for (
       salePrice
     ) &&
     salePrice > 0 &&
-    salePrice <
-      regularPrice;
+    salePrice < regularPrice;
 
   const displayedPrice =
     hasSale
@@ -549,8 +513,11 @@ for (
       : "";
 
   /*
-    Text files prevent FFmpeg from
-    breaking on long product text.
+    TEXT FILES
+
+    Descriptions are intentionally NOT created
+    because descriptions are no longer displayed
+    in the TikTok video.
   */
 
   const categoryFile =
@@ -584,7 +551,7 @@ for (
     nameFile,
     wrapText(
       name,
-      36
+      34
     ),
     "utf8"
   );
@@ -616,32 +583,6 @@ for (
     "utf8"
   );
 
-  /*
-    COMPLETE 1080x1920 SCENE
-
-    Background:
-    ZOVARO Shop image at low opacity.
-
-    Product:
-    Large and centered in the upper area.
-
-    Text:
-    Category
-    Title
-    Merchant
-    Price
-    Old price
-    Discount
-
-    Description:
-    REMOVED.
-  */
-
-  const backgroundInput =
-    escapeFilterPath(
-      BACKGROUND_PATH
-    );
-
   const categoryText =
     escapeFilterPath(
       categoryFile
@@ -672,170 +613,208 @@ for (
       discountFile
     );
 
-  const filterParts = [
+  /*
+    VIDEO SCENE
 
+    1080x1920
+
+    Background:
+    ZOVARO futuristic shop,
+    intentionally softened with a white
+    transparent layer.
+
+    Product:
+    large and centered.
+
+    Information panel:
+    category
+    title
+    affiliate merchant
+    price
+    old price
+    discount
+
+    Description:
+    REMOVED.
+  */
+
+  const filterParts = [
     /*
       Background image.
-
-      It fills the entire 1080x1920 frame.
-      Opacity is intentionally low so it
-      behaves like a premium visual backdrop
-      rather than competing with the product.
     */
 
-    `[1:v]`
-      + `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,`
-      + `crop=${WIDTH}:${HEIGHT},`
-      + "format=rgba,"
-      + "colorchannelmixer=aa=0.18"
-      + `[background]`,
+    `[1:v]` +
+      `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
+      `crop=${WIDTH}:${HEIGHT}` +
+      `[background]`,
+
+    /*
+      Soft white layer over the background.
+
+      This keeps the ZOVARO Shop image visible
+      but reduces its visual intensity.
+    */
+
+    `[background]` +
+      `drawbox=` +
+      `x=0:` +
+      `y=0:` +
+      `w=${WIDTH}:` +
+      `h=${HEIGHT}:` +
+      `color=white@0.78:` +
+      `t=fill` +
+      `[softbackground]`,
 
     /*
       Product image.
 
-      The product is kept large while preserving
-      its original proportions.
+      Large but contained so that the product
+      remains completely visible.
     */
 
-    `[0:v]`
-      + `scale=980:900:force_original_aspect_ratio=decrease,`
-      + "format=rgba"
-      + `[product]`,
+    `[0:v]` +
+      `scale=900:880:force_original_aspect_ratio=decrease,` +
+      `pad=900:880:(ow-iw)/2:(oh-ih)/2:white` +
+      `[product]`,
 
     /*
-      Product centered near the top.
+      Place product near the top.
     */
 
-    `[background][product]`
-      + "overlay=(W-w)/2:70:format=auto"
-      + "[scene1]",
+    `[softbackground][product]` +
+      `overlay=(W-w)/2:45:format=auto` +
+      `[scene1]`,
 
     /*
-      Semi-transparent white information panel.
-
-      This keeps the text readable while the
-      ZOVARO Shop background remains visible.
+      Information panel.
     */
 
-    "color=c=white@0.84:s=1080x820:d=1"
-      + "[panel]",
-
-    `[scene1][panel]`
-      + "overlay=0:1040:format=auto"
-      + "[scene2]`,
+    `[scene1]` +
+      `drawbox=` +
+      `x=35:` +
+      `y=975:` +
+      `w=1010:` +
+      `h=900:` +
+      `color=white@0.90:` +
+      `t=fill` +
+      `[scene2]`,
 
     /*
-      Category.
+      CATEGORY
     */
 
-    "[scene2]"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + `textfile='${categoryText}':`
-      + "fontcolor=555555:"
-      + "fontsize=28:"
-      + "x=(w-text_w)/2:"
-      + "y=1080:"
-      + "line_spacing=4:"
-      + "expansion=none"
-      + "[text1]",
+    `[scene2]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
+      `textfile='${categoryText}':` +
+      `fontcolor=555555:` +
+      `fontsize=30:` +
+      `x=(w-text_w)/2:` +
+      `y=1015:` +
+      `line_spacing=5:` +
+      `expansion=none` +
+      `[text1]`,
 
     /*
-      Large English product title.
+      LARGE PRODUCT TITLE
     */
 
-    "[text1]"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-      + `textfile='${nameText}':`
-      + "fontcolor=111111:"
-      + "fontsize=48:"
-      + "x=(w-text_w)/2:"
-      + "y=1135:"
-      + "line_spacing=6:"
-      + "expansion=none"
-      + "[text2]",
+    `[text1]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+      `textfile='${nameText}':` +
+      `fontcolor=111111:` +
+      `fontsize=50:` +
+      `x=(w-text_w)/2:` +
+      `y=1080:` +
+      `line_spacing=8:` +
+      `expansion=none` +
+      `[text2]`,
 
     /*
-      Merchant / affiliate.
+      AFFILIATE / MERCHANT
     */
 
-    "[text2]"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + `textfile='${merchantText}':`
-      + "fontcolor=666666:"
-      + "fontsize=28:"
-      + "x=(w-text_w)/2:"
-      + "y=1270:"
-      + "line_spacing=4:"
-      + "expansion=none"
-      + "[text3]",
+    `[text2]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
+      `textfile='${merchantText}':` +
+      `fontcolor=666666:` +
+      `fontsize=28:` +
+      `x=(w-text_w)/2:` +
+      `y=1245:` +
+      `line_spacing=5:` +
+      `expansion=none` +
+      `[text3]`,
 
     /*
-      Large current price.
+      CURRENT PRICE
     */
 
-    "[text3]"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-      + `textfile='${priceTextFile}':`
-      + "fontcolor=111111:"
-      + "fontsize=70:"
-      + "x=(w-text_w)/2:"
-      + "y=1330:"
-      + "expansion=none"
-      + "[text4]"
+    `[text3]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+      `textfile='${priceTextFile}':` +
+      `fontcolor=111111:` +
+      `fontsize=72:` +
+      `x=(w-text_w)/2:` +
+      `y=1310:` +
+      `expansion=none` +
+      `[text4]`
   ];
 
   /*
-    Old price.
+    OLD PRICE
   */
 
   if (oldPriceText) {
     filterParts.push(
-      "[text4]"
-        + "drawtext="
-        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-        + `textfile='${oldPriceTextFile}':`
-        + "fontcolor=888888:"
-        + "fontsize=36:"
-        + "x=(w-text_w)/2-100:"
-        + "y=1435:"
-        + "expansion=none"
-        + "[text5]"
+      `[text4]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
+        `textfile='${oldPriceTextFile}':` +
+        `fontcolor=888888:` +
+        `fontsize=36:` +
+        `x=(w-text_w)/2-105:` +
+        `y=1420:` +
+        `expansion=none` +
+        `[text5]`
     );
   } else {
     filterParts.push(
-      "[text4]null[text5]"
+      `[text4]null[text5]`
     );
   }
 
   /*
-    Discount.
+    DISCOUNT
   */
 
   if (discountText) {
     filterParts.push(
-      "[text5]"
-        + "drawtext="
-        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-        + `textfile='${discountTextFile}':`
-        + "fontcolor=111111:"
-        + "fontsize=38:"
-        + "x=(w-text_w)/2+100:"
-        + "y=1435:"
-        + "expansion=none"
-        + "[text6]"
+      `[text5]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+        `textfile='${discountTextFile}':` +
+        `fontcolor=111111:` +
+        `fontsize=40:` +
+        `x=(w-text_w)/2+105:` +
+        `y=1417:` +
+        `expansion=none` +
+        `[text6]`
     );
   } else {
     filterParts.push(
-      "[text5]null[text6]"
+      `[text5]null[text6]`
     );
   }
 
+  /*
+    FINAL VIDEO FORMAT
+  */
+
   filterParts.push(
-    "[text6]format=yuv420p[output]"
+    `[text6]format=yuv420p[output]`
   );
 
   await run(
@@ -888,12 +867,12 @@ for (
 }
 
 /*
-  Create final ZOVARO screen.
+  FINAL ZOVARO SCREEN
 
-  The approved logo already contains
-  the copyright notice.
+  The selected logo already contains the
+  approved branding.
 
-  No second copyright is added.
+  No additional copyright is added.
 */
 
 const finalScreenPath =
@@ -917,21 +896,21 @@ await run(
 
       "pad=1080:1920:(ow-iw)/2:420:white",
 
-      "drawtext="
-        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-        + "text='DISCOVER. SHARE. SHOP.':"
-        + "fontcolor=111111:"
-        + "fontsize=52:"
-        + "x=(w-text_w)/2:"
-        + "y=1210",
+      "drawtext=" +
+        "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:" +
+        "text='DISCOVER. SHARE. SHOP.':" +
+        "fontcolor=111111:" +
+        "fontsize=52:" +
+        "x=(w-text_w)/2:" +
+        "y=1210",
 
-      "drawtext="
-        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-        + "text='Products and deals through ZOVARO':"
-        + "fontcolor=555555:"
-        + "fontsize=32:"
-        + "x=(w-text_w)/2:"
-        + "y=1290"
+      "drawtext=" +
+        "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:" +
+        "text='Products and deals through ZOVARO':" +
+        "fontcolor=555555:" +
+        "fontsize=32:" +
+        "x=(w-text_w)/2:" +
+        "y=1290"
     ].join(","),
 
     "-frames:v",
@@ -1040,10 +1019,7 @@ await run(
 );
 
 /*
-  Add the real Suno music.
-
-  The same fixed ZOVARO Affiliate
-  soundtrack is used automatically.
+  ADD THE FIXED ZOVARO AFFILIATE MUSIC
 */
 
 await run(
