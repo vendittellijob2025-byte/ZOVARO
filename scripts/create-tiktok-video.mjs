@@ -198,6 +198,14 @@ console.log(
 const finalScreenPath =
   `${TEMP_DIR}/final-screen.png`;
 
+/*
+  Create the final ZOVARO screen using
+  a single FFmpeg input.
+
+  This avoids the previous filter graph
+  parsing problem.
+*/
+
 await run(
   "ffmpeg",
   [
@@ -209,18 +217,12 @@ await run(
     "-i",
     logoPath,
 
-    "-f",
-    "lavfi",
-
-    "-i",
-    "color=c=white:s=1080x1920:r=30",
-
-    "-filter_complex",
+    "-vf",
 
     [
-      "[0:v]scale=720:720:force_original_aspect_ratio=decrease[logo];",
+      "scale=720:720:force_original_aspect_ratio=decrease",
 
-      "[1:v][logo]overlay=(W-w)/2:420:shortest=1",
+      "pad=1080:1920:(ow-iw)/2:420:white",
 
       "drawtext="
         + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
@@ -311,6 +313,13 @@ for (
     ]
   );
 
+  /*
+    IMPORTANT:
+    concat.txt is inside TEMP_DIR,
+    therefore it must contain only the
+    filenames relative to that directory.
+  */
+
   productVideoPaths.push(
     `product-video-${index + 1}.mp4`
   );
@@ -379,6 +388,14 @@ await fs.writeFile(
   "utf8"
 );
 
+console.log(
+  "Created concat list:"
+);
+
+console.log(
+  concatContent
+);
+
 const silentVideoPath =
   `${TEMP_DIR}/silent-video.mp4`;
 
@@ -435,7 +452,10 @@ await run(
     `sine=frequency=392.00:sample_rate=44100:duration=${totalDuration}`,
 
     "-filter_complex",
-    "[0:a][1:a][2:a]amix=inputs=3:duration=longest:weights=0.18 0.12 0.10,volume=1.5",
+
+    "[0:a][1:a][2:a]"
+      + "amix=inputs=3:duration=longest:weights=0.18 0.12 0.10,"
+      + "volume=1.5",
 
     "-c:a",
     "pcm_s16le",
