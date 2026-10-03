@@ -4,8 +4,6 @@ const CATALOG_PATH = "data/catalog.json";
 const SELECTED_PATH = "data/selected-product.json";
 const SELECTED_PRODUCTS_PATH = "data/selected-products.json";
 
-const MAX_PRODUCTS = 20;
-
 const catalogText =
   await fs.readFile(
     CATALOG_PATH,
@@ -20,17 +18,20 @@ const products =
     ? catalog.products
     : [];
 
+
 const validProducts =
   products.filter(product => {
+
     return (
       product &&
       product.id &&
-      product.title &&
       product.imageLink &&
       product.clickUrl &&
       product.joinedStatus === true
     );
+
   });
+
 
 if (!validProducts.length) {
   throw new Error(
@@ -38,22 +39,34 @@ if (!validProducts.length) {
   );
 }
 
+
+/* =========================================================
+   DISCOUNT DETECTION
+   ========================================================= */
+
 const hasDiscount = product => {
+
   const discountPercentage =
-    Number(product.discountPercentage);
+    Number(
+      product.discountPercentage
+    );
 
   if (
-    Number.isFinite(discountPercentage) &&
+    Number.isFinite(
+      discountPercentage
+    ) &&
     discountPercentage > 0
   ) {
     return true;
   }
+
 
   const price =
     Number(product.price);
 
   const salePrice =
     Number(product.salePrice);
+
 
   return (
     Number.isFinite(price) &&
@@ -62,7 +75,13 @@ const hasDiscount = product => {
     salePrice > 0 &&
     salePrice < price
   );
+
 };
+
+
+/* =========================================================
+   DAILY DETERMINISTIC SEED
+   ========================================================= */
 
 const today =
   new Date()
@@ -74,12 +93,61 @@ let hash = 0;
 for (
   const character of today
 ) {
+
   hash =
     (
       hash * 31 +
       character.charCodeAt(0)
     ) >>> 0;
+
 }
+
+
+/* =========================================================
+   SHUFFLE
+   ========================================================= */
+
+function shuffle(items) {
+
+  const result =
+    [...items];
+
+  let seed =
+    hash;
+
+  for (
+    let i = result.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    seed =
+      (
+        seed * 1664525 +
+        1013904223
+      ) >>> 0;
+
+    const j =
+      seed % (i + 1);
+
+    [
+      result[i],
+      result[j]
+    ] = [
+      result[j],
+      result[i]
+    ];
+
+  }
+
+  return result;
+
+}
+
+
+/* =========================================================
+   PRIORITY POOLS
+   ========================================================= */
 
 const discountedProducts =
   validProducts.filter(
@@ -92,84 +160,67 @@ const regularProducts =
       !hasDiscount(product)
   );
 
+
 /*
-  Prefer discounted products,
-  while keeping advertiser/category
-  variety whenever possible.
+  Prefer discounted products.
+
+  SalePrice must be > 0,
+  therefore products with
+  salePrice = 0 are never
+  treated as real deals.
 */
 
-const preferredPool = [
-  ...discountedProducts,
-  ...regularProducts
-];
+const preferredPool =
+  discountedProducts.length >= 8
+    ? discountedProducts
+    : [
+        ...discountedProducts,
+        ...regularProducts
+      ];
 
-const shuffled =
-  [...preferredPool];
 
-let seed = hash;
+/* =========================================================
+   ADVERTISER DIVERSITY
+   ========================================================= */
 
-for (
-  let i = shuffled.length - 1;
-  i > 0;
-  i--
-) {
-  seed =
-    (
-      seed * 1664525 +
-      1013904223
-    ) >>> 0;
+const shuffledPool =
+  shuffle(
+    preferredPool
+  );
 
-  const j =
-    seed % (i + 1);
-
-  [
-    shuffled[i],
-    shuffled[j]
-  ] = [
-    shuffled[j],
-    shuffled[i]
-  ];
-}
 
 const selectedProducts = [];
 
 const usedAdvertisers =
   new Set();
 
-const usedCategories =
-  new Set();
 
 /*
   First pass:
-  prioritize different advertisers
-  and different categories.
+  try to select different
+  advertisers.
 */
 
 for (
-  const product of shuffled
+  const product of shuffledPool
 ) {
-  if (
-    selectedProducts.length >=
-    MAX_PRODUCTS
-  ) {
-    break;
-  }
 
   const advertiser =
-    product.advertiserId ||
-    product.advertiserName ||
-    "";
+    String(
+      product.advertiserId ||
+      product.advertiserName ||
+      "unknown"
+    );
 
-  const category =
-    product.category ||
-    "";
 
   if (
-    usedAdvertisers.has(advertiser) &&
-    usedCategories.has(category)
+    usedAdvertisers.has(
+      advertiser
+    )
   ) {
     continue;
   }
+
 
   selectedProducts.push(
     product
@@ -179,111 +230,171 @@ for (
     advertiser
   );
 
-  usedCategories.add(
-    category
-  );
-}
 
-/*
-  Second pass:
-  fill remaining positions
-  if the catalog does not contain
-  enough advertiser/category combinations.
-*/
-
-for (
-  const product of shuffled
-) {
   if (
-    selectedProducts.length >=
-    MAX_PRODUCTS
+    selectedProducts.length >= 8
   ) {
     break;
   }
 
-  if (
-    selectedProducts.some(
-      selected =>
-        String(selected.id) ===
-        String(product.id)
-    )
-  ) {
-    continue;
-  }
-
-  selectedProducts.push(
-    product
-  );
 }
 
-if (!selectedProducts.length) {
+
+/*
+  Second pass:
+  if fewer than 8 advertisers
+  are available, fill the
+  remaining positions with
+  other valid products.
+*/
+
+if (
+  selectedProducts.length < 8
+) {
+
+  for (
+    const product of shuffledPool
+  ) {
+
+    if (
+      selectedProducts.includes(
+        product
+      )
+    ) {
+      continue;
+    }
+
+
+    selectedProducts.push(
+      product
+    );
+
+
+    if (
+      selectedProducts.length >= 8
+    ) {
+      break;
+    }
+
+  }
+
+}
+
+
+if (
+  !selectedProducts.length
+) {
+
   throw new Error(
     "Unable to select products for promotion."
   );
+
 }
+
+
+/* =========================================================
+   ENGLISH CONTENT
+   ========================================================= */
 
 const selectedData =
   selectedProducts.map(
-    product => ({
-      selectedAt:
-        new Date().toISOString(),
+    product => {
 
-      date:
-        today,
+      const englishTitle =
+        product.englishTitle ||
+        product.title ||
+        product.brand ||
+        product.advertiserName ||
+        "ZOVARO Offer";
 
-      source:
-        product.source,
 
-      network:
-        product.network,
+      const englishDescription =
+        product.englishDescription ||
+        product.description ||
+        `${product.brand ? product.brand + " — " : ""}${englishTitle}`;
 
-      productId:
-        product.id,
 
-      title:
-        product.title,
+      const englishCategory =
+        product.englishCategory ||
+        product.category ||
+        "Featured";
 
-      description:
-        product.description,
 
-      brand:
-        product.brand,
+      return {
 
-      advertiserId:
-        product.advertiserId,
+        selectedAt:
+          new Date().toISOString(),
 
-      advertiserName:
-        product.advertiserName,
+        date:
+          today,
 
-      category:
-        product.category,
+        source:
+          product.source,
 
-      imageLink:
-        product.imageLink,
+        network:
+          product.network,
 
-      price:
-        product.price,
+        productId:
+          product.id,
 
-      salePrice:
-        product.salePrice,
+        title:
+          englishTitle,
 
-      currency:
-        product.currency,
+        description:
+          englishDescription,
 
-      discountPercentage:
-        product.discountPercentage,
+        brand:
+          product.brand,
 
-      destination:
-        product.destination,
+        advertiserId:
+          product.advertiserId,
 
-      clickUrl:
-        product.clickUrl
-    })
+        advertiserName:
+          product.advertiserName,
+
+        category:
+          englishCategory,
+
+        imageLink:
+          product.imageLink,
+
+        additionalImageLinks:
+          product.additionalImageLinks,
+
+        price:
+          product.price,
+
+        salePrice:
+          product.salePrice,
+
+        currency:
+          product.currency,
+
+        discountPercentage:
+          product.discountPercentage,
+
+        destination:
+          product.destination,
+
+        clickUrl:
+          product.clickUrl
+
+      };
+
+    }
   );
 
+
+/* =========================================================
+   SAVE MULTI-PRODUCT PACKAGE
+   ========================================================= */
+
 await fs.writeFile(
+
   SELECTED_PRODUCTS_PATH,
+
   JSON.stringify(
+
     {
       date:
         today,
@@ -294,55 +405,87 @@ await fs.writeFile(
       products:
         selectedData
     },
+
     null,
     2
+
   ),
+
   "utf8"
+
 );
 
-/*
-  Keep the first selected product
-  for compatibility with the existing
-  promotion workflow.
-*/
+
+/* =========================================================
+   COMPATIBILITY FILE
+   ========================================================= */
 
 await fs.writeFile(
+
   SELECTED_PATH,
+
   JSON.stringify(
+
     selectedData[0],
+
     null,
     2
+
   ),
+
   "utf8"
+
 );
+
+
+/* =========================================================
+   LOG
+   ========================================================= */
 
 console.log(
   "ZOVARO automatic selection completed."
 );
 
 console.log(
-  `Selected ${selectedData.length} products for the automatic TikTok video.`
+  `Selected ${selectedData.length} products for the daily TikTok video.`
 );
+
+console.log(
+  `Different advertisers used: ${new Set(
+    selectedData.map(
+      product =>
+        product.advertiserId ||
+        product.advertiserName ||
+        "unknown"
+    )
+  ).size}`
+);
+
 
 selectedData.forEach(
   (product, index) => {
+
     console.log(
       `${index + 1}. ${product.title}`
     );
 
     console.log(
-      `   Advertiser: ${product.advertiserName || "N/A"}`
+      `   Advertiser: ${
+        product.advertiserName ||
+        "N/A"
+      }`
     );
 
     console.log(
-      `   Category: ${product.category || "N/A"}`
+      `   Discount: ${
+        product.discountPercentage ||
+        0
+      }%`
     );
 
-    console.log(
-      `   Discount: ${product.discountPercentage || 0}%`
-    );
   }
 );
+
 
 console.log(
   `Saved to: ${SELECTED_PRODUCTS_PATH}`
