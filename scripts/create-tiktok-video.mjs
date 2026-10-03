@@ -22,15 +22,19 @@ const FINAL_DURATION = 6;
 const TOTAL_PRODUCTS = 6;
 
 async function run(command, args) {
-  console.log(`Running: ${command} ${args.join(" ")}`);
-
-  const result = await execFileAsync(
-    command,
-    args,
-    {
-      maxBuffer: 10 * 1024 * 1024
-    }
+  console.log(
+    `Running: ${command} ${args.join(" ")}`
   );
+
+  const result =
+    await execFileAsync(
+      command,
+      args,
+      {
+        maxBuffer:
+          10 * 1024 * 1024
+      }
+    );
 
   if (result.stdout) {
     console.log(result.stdout);
@@ -43,8 +47,12 @@ async function run(command, args) {
   return result;
 }
 
-async function downloadFile(url, outputPath) {
-  const response = await fetch(url);
+async function downloadFile(
+  url,
+  outputPath
+) {
+  const response =
+    await fetch(url);
 
   if (!response.ok) {
     throw new Error(
@@ -82,11 +90,16 @@ const selectedData =
   JSON.parse(selectedText);
 
 const products =
-  Array.isArray(selectedData.products)
+  Array.isArray(
+    selectedData.products
+  )
     ? selectedData.products
     : [];
 
-if (products.length < TOTAL_PRODUCTS) {
+if (
+  products.length <
+  TOTAL_PRODUCTS
+) {
   throw new Error(
     `ZOVARO requires ${TOTAL_PRODUCTS} products for the automatic TikTok video, but only ${products.length} were selected.`
   );
@@ -129,7 +142,8 @@ for (
 
   if (
     !product.imageLink ||
-    typeof product.imageLink !== "string"
+    typeof product.imageLink !==
+      "string"
   ) {
     throw new Error(
       `Product ${index + 1} is missing imageLink.`
@@ -184,9 +198,6 @@ console.log(
 const finalScreenPath =
   `${TEMP_DIR}/final-screen.png`;
 
-const logoInput =
-  logoPath;
-
 await run(
   "ffmpeg",
   [
@@ -196,7 +207,7 @@ await run(
     "1",
 
     "-i",
-    logoInput,
+    logoPath,
 
     "-f",
     "lavfi",
@@ -208,29 +219,34 @@ await run(
 
     [
       "[0:v]scale=720:720:force_original_aspect_ratio=decrease[logo];",
-      "[1:v][logo]overlay=(W-w)/2:420:shortest=1,"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-      + "text='DISCOVER. SHARE. SHOP.':"
-      + "fontcolor=111111:"
-      + "fontsize=52:"
-      + "x=(w-text_w)/2:"
-      + "y=1210,"
-      + "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + "text='Products and deals through ZOVARO':"
-      + "fontcolor=555555:"
-      + "fontsize=32:"
-      + "x=(w-text_w)/2:"
-      + "y=1290"
-      + "[final]"
-    ].join(""),
 
-    "-map",
-    "[final]",
+      "[1:v][logo]overlay=(W-w)/2:420:shortest=1",
 
-    "-frames:v",
-    "1",
+      "drawtext="
+        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+        + "text='DISCOVER. SHARE. SHOP.':"
+        + "fontcolor=111111:"
+        + "fontsize=52:"
+        + "x=(w-text_w)/2:"
+        + "y=1210",
+
+      "drawtext="
+        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+        + "text='Products and deals through ZOVARO':"
+        + "fontcolor=555555:"
+        + "fontsize=32:"
+        + "x=(w-text_w)/2:"
+        + "y=1290",
+
+      "drawtext="
+        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+        + "text='Copyright 2026 ZOVARO. All rights reserved.':"
+        + "fontcolor=777777:"
+        + "fontsize=24:"
+        + "x=(w-text_w)/2:"
+        + "y=1810"
+
+    ].join(","),
 
     "-frames:v",
     "1",
@@ -272,8 +288,8 @@ for (
       "-vf",
 
       [
-        "scale=1080:1920:force_original_aspect_ratio=decrease",
-        "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:white",
+        `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=decrease`,
+        `pad=${WIDTH}:${HEIGHT}:(ow-iw)/2:(oh-ih)/2:white`,
         "format=yuv420p"
       ].join(","),
 
@@ -296,7 +312,7 @@ for (
   );
 
   productVideoPaths.push(
-    outputPath
+    `product-video-${index + 1}.mp4`
   );
 }
 
@@ -343,14 +359,17 @@ const concatListPath =
 
 const concatFiles = [
   ...productVideoPaths,
-  finalVideoPath
+  "final-screen-video.mp4"
 ];
 
 const concatContent =
   concatFiles
     .map(
       file =>
-        `file '${file.replace(/'/g, "'\\''")}'`
+        `file '${file.replace(
+          /'/g,
+          "'\\''"
+        )}'`
     )
     .join("\n");
 
