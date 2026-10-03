@@ -251,8 +251,7 @@ productCount =
   );
 
 if (
-  productCount <
-  MIN_PRODUCTS
+  productCount < MIN_PRODUCTS
 ) {
   throw new Error(
     `Not enough selected products to build the automatic video. Required: ${MIN_PRODUCTS}. Available: ${allProducts.length}.`
@@ -636,6 +635,12 @@ for (
 
     Description:
     REMOVED.
+
+    WHITE BACKGROUNDS:
+    Both the product backing area and the
+    information panel use 78% opacity so that
+    the futuristic ZOVARO background remains
+    visibly present.
   */
 
   const filterParts = [
@@ -668,13 +673,14 @@ for (
     /*
       Product image.
 
-      Large but contained so that the product
-      remains completely visible.
+      The white area behind the product is now
+      slightly transparent so the ZOVARO Shop
+      background remains visible.
     */
 
     `[0:v]` +
       `scale=900:880:force_original_aspect_ratio=decrease,` +
-      `pad=900:880:(ow-iw)/2:(oh-ih)/2:white` +
+      `pad=900:880:(ow-iw)/2:(oh-ih)/2:color=white@0.78` +
       `[product]`,
 
     /*
@@ -687,6 +693,8 @@ for (
 
     /*
       Information panel.
+
+      78% white opacity instead of solid white.
     */
 
     `[scene1]` +
@@ -695,7 +703,7 @@ for (
       `y=975:` +
       `w=1010:` +
       `h=900:` +
-      `color=white@0.90:` +
+      `color=white@0.78:` +
       `t=fill` +
       `[scene2]`,
 
