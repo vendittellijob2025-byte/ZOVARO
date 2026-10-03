@@ -46,20 +46,25 @@ query {
       additionalImageLink
       link
       mobileLink
+
       price {
         amount
         currency
       }
+
       salePrice {
         amount
         currency
       }
+
       discountPercentage
       joinedStatus
-      linkCode(pid: "101881140") {
-  clickUrl
-}
+
+      linkCode(pid: "${PUBLISHER_ID}") {
+        clickUrl
+      }
     }
+
     totalCount
     count
   }
@@ -100,137 +105,280 @@ if (data.errors) {
   throw new Error("CJ GraphQL returned errors.");
 }
 
-const products = data?.data?.products?.resultList || [];
+const products =
+  data?.data?.products?.resultList || [];
 
-console.log(`CJ products received: ${products.length}`);
+console.log(
+  `CJ products received: ${products.length}`
+);
 
 function cleanUrl(value) {
-  if (!value || typeof value !== "string") return "";
+  if (!value || typeof value !== "string") {
+    return "";
+  }
 
-  const match = value.match(/https?:\/\/[^\s\])]+/);
+  const match =
+    value.match(/https?:\/\/[^\s\])]+/);
 
   return match ? match[0] : value;
 }
 
 function amount(value) {
-  if (!value || value.amount == null) return null;
+  if (!value || value.amount == null) {
+    return null;
+  }
 
-  const number = Number(value.amount);
+  const number =
+    Number(value.amount);
 
-  return Number.isFinite(number) ? number : null;
+  return Number.isFinite(number)
+    ? number
+    : null;
 }
 
 function currency(value) {
   return value?.currency || null;
 }
 
-const normalizedProducts = products
-  .filter(product => {
-    return (
-      product &&
-      product.joinedStatus === true &&
-      product.id &&
-      product.title &&
-      product.imageLink &&
-      product.link
-    );
-  })
-  .map(product => {
-    const advertiser = ADVERTISERS.find(
-      item => item.id === String(product.advertiserId)
-    );
+function calculateDiscount(
+  regularPrice,
+  salePrice
+) {
+  if (
+    !Number.isFinite(regularPrice) ||
+    !Number.isFinite(salePrice) ||
+    regularPrice <= 0 ||
+    salePrice <= 0 ||
+    salePrice >= regularPrice
+  ) {
+    return null;
+  }
 
-    const regularPrice = amount(product.price);
-    const salePrice = amount(product.salePrice);
+  const discount =
+    ((regularPrice - salePrice) /
+      regularPrice) *
+    100;
 
-    return {
-      source: CJ_NETWORK.source,
-network: CJ_NETWORK.network,
-      
-      id: String(product.id),
+  if (!Number.isFinite(discount)) {
+    return null;
+  }
 
-      adId: String(product.adId || ""),
+  return Math.round(discount);
+}
 
-      title: product.title,
+const normalizedProducts =
+  products
+    .filter(product => {
+      return (
+        product &&
+        product.joinedStatus === true &&
+        product.id &&
+        product.title &&
+        product.imageLink &&
+        product.link
+      );
+    })
+    .map(product => {
+      const advertiser =
+        ADVERTISERS.find(
+          item =>
+            item.id ===
+            String(product.advertiserId)
+        );
 
-      description: product.description || "",
+      const regularPrice =
+        amount(product.price);
 
-      brand: product.brand || "",
+      const rawSalePrice =
+        amount(product.salePrice);
 
-      advertiserId: String(product.advertiserId || ""),
+      /*
+       * IMPORTANT PRICE VALIDATION
+       *
+       * CJ can sometimes return salePrice = 0
+       * even when the product is NOT actually free.
+       *
+       * A sale price is considered valid ONLY when:
+       *
+       *   - regular price exists
+       *   - sale price exists
+       *   - sale price is greater than 0
+       *   - sale price is lower than regular price
+       *
+       * Otherwise there is NO sale.
+       */
 
-      advertiserName:
-        product.advertiserName ||
-        advertiser?.name ||
-        "CJ Affiliate",
+      const validSalePrice =
+        regularPrice !== null &&
+        rawSalePrice !== null &&
+        rawSalePrice > 0 &&
+        rawSalePrice < regularPrice
+          ? rawSalePrice
+          : null;
 
-      category:
-        advertiser?.category ||
-        "Featured",
-
-      imageLink: cleanUrl(product.imageLink),
-
-      additionalImageLinks: Array.isArray(product.additionalImageLink)
-        ? product.additionalImageLink
-            .map(cleanUrl)
-            .filter(Boolean)
-        : [],
-
-      destination: cleanUrl(product.link),
-
-clickUrl:
-  cleanUrl(product?.linkCode?.clickUrl) ||
-  cleanUrl(product.link),
-
-mobileLink: cleanUrl(product.mobileLink),
-
-      price: regularPrice,
-
-      salePrice: salePrice,
-
-      currency:
-        currency(product.salePrice) ||
-        currency(product.price),
-
-      discountPercentage:
+      const sourceDiscount =
         product.discountPercentage != null
-          ? Number(product.discountPercentage)
-          : null,
+          ? Number(
+              product.discountPercentage
+            )
+          : null;
 
-      joinedStatus: true
-    };
-  });
+      const calculatedDiscount =
+        calculateDiscount(
+          regularPrice,
+          validSalePrice
+        );
+
+      const validDiscount =
+        validSalePrice !== null
+          ? (
+              Number.isFinite(
+                sourceDiscount
+              ) &&
+              sourceDiscount > 0 &&
+              sourceDiscount < 100
+                ? Math.round(
+                    sourceDiscount
+                  )
+                : calculatedDiscount
+            )
+          : null;
+
+      return {
+        source:
+          CJ_NETWORK.source,
+
+        network:
+          CJ_NETWORK.network,
+
+        id:
+          String(product.id),
+
+        adId:
+          String(product.adId || ""),
+
+        title:
+          product.title,
+
+        description:
+          product.description || "",
+
+        brand:
+          product.brand || "",
+
+        advertiserId:
+          String(
+            product.advertiserId || ""
+          ),
+
+        advertiserName:
+          product.advertiserName ||
+          advertiser?.name ||
+          "CJ Affiliate",
+
+        category:
+          advertiser?.category ||
+          "Featured",
+
+        imageLink:
+          cleanUrl(
+            product.imageLink
+          ),
+
+        additionalImageLinks:
+          Array.isArray(
+            product.additionalImageLink
+          )
+            ? product.additionalImageLink
+                .map(cleanUrl)
+                .filter(Boolean)
+            : [],
+
+        destination:
+          cleanUrl(product.link),
+
+        clickUrl:
+          cleanUrl(
+            product?.linkCode?.clickUrl
+          ) ||
+          cleanUrl(product.link),
+
+        mobileLink:
+          cleanUrl(
+            product.mobileLink
+          ),
+
+        price:
+          regularPrice,
+
+        salePrice:
+          validSalePrice,
+
+        currency:
+          currency(product.salePrice) ||
+          currency(product.price),
+
+        discountPercentage:
+          validDiscount,
+
+        joinedStatus:
+          true
+      };
+    });
 
 const catalog = {
   sources: [
     {
-      source: CJ_NETWORK.source,
-network: CJ_NETWORK.network,
-      status: "active"
+      source:
+        CJ_NETWORK.source,
+
+      network:
+        CJ_NETWORK.network,
+
+      status:
+        "active"
     }
   ],
 
-  generatedAt: new Date().toISOString(),
-  companyId: COMPANY_ID,
+  generatedAt:
+    new Date().toISOString(),
 
-  promotionalPropertyId: PUBLISHER_ID,
+  companyId:
+    COMPANY_ID,
 
-  advertisers: ADVERTISERS,
+  promotionalPropertyId:
+    PUBLISHER_ID,
 
-  rowsReceived: products.length,
+  advertisers:
+    ADVERTISERS,
 
-  productCount: normalizedProducts.length,
+  rowsReceived:
+    products.length,
 
-  products: normalizedProducts
+  productCount:
+    normalizedProducts.length,
+
+  products:
+    normalizedProducts
 };
 
-const fs = await import("node:fs/promises");
+const fs =
+  await import(
+    "node:fs/promises"
+  );
 
-await fs.mkdir("data", { recursive: true });
+await fs.mkdir(
+  "data",
+  { recursive: true }
+);
 
 await fs.writeFile(
   "data/catalog.json",
-  JSON.stringify(catalog, null, 2),
+  JSON.stringify(
+    catalog,
+    null,
+    2
+  ),
   "utf8"
 );
 
@@ -238,4 +386,14 @@ console.log(
   `ZOVARO catalog generated: ${normalizedProducts.length} real products.`
 );
 
-console.log("Saved to: data/catalog.json");
+console.log(
+  "Price validation completed."
+);
+
+console.log(
+  "Invalid zero/negative/non-sale prices are no longer treated as discounts."
+);
+
+console.log(
+  "Saved to: data/catalog.json"
+);
