@@ -129,17 +129,7 @@ function openProductFromElement(element) {
 /*
   Event delegation:
   qualsiasi click effettuato dentro una scheda prodotto
-  viene intercettato, compresi:
-
-  - immagine
-  - testo
-  - titolo
-  - categoria
-  - merchant
-  - prezzo
-  - sconto
-  - badge
-  - qualsiasi altro elemento interno
+  viene intercettato.
 */
 
 document.addEventListener("click", event => {
@@ -210,16 +200,18 @@ function renderCategories() {
             data-cat="${esc(c)}"
           >
             <span class="symbol">
-              ${[
-                "◈",
-                "◌",
-                "✦",
-                "⌂",
-                "◒",
-                "◇",
-                "○",
-                "△"
-              ][i % 8]}
+              ${
+                [
+                  "◈",
+                  "◌",
+                  "✦",
+                  "⌂",
+                  "◒",
+                  "◇",
+                  "○",
+                  "△"
+                ][i % 8]
+              }
             </span>
 
             <strong>
@@ -541,7 +533,458 @@ $("#year").textContent =
 
 
 /* =========================================================
+   TIKTOK DIRECT POST
+   ========================================================= */
+
+const TIKTOK_API =
+  "https://zovaro.vercel.app/api/tiktok-direct-post";
+
+const TIKTOK_STATUS_API =
+  "https://zovaro.vercel.app/api/tiktok-status";
+
+const ZOVARO_VIDEO_URL =
+  "https://vendittellijob2025-byte.github.io/ZOVARO/data/tiktok-video.mp4";
+
+const ZOVARO_PROMOTION_URL =
+  "https://vendittellijob2025-byte.github.io/ZOVARO/data/promotion.json";
+
+
+async function loadTikTokPromotion() {
+
+  const response =
+    await fetch(
+      ZOVARO_PROMOTION_URL,
+      {
+        cache: "no-store"
+      }
+    );
+
+  if (!response.ok) {
+    throw new Error(
+      "Impossibile leggere promotion.json."
+    );
+  }
+
+  return response.json();
+}
+
+
+function getTikTokSession() {
+
+  return sessionStorage.getItem(
+    "zovaro_tiktok_session"
+  );
+}
+
+
+function createTikTokButton() {
+
+  const copy =
+    document.querySelector(
+      ".tiktok-copy"
+    );
+
+  if (!copy) {
+    return;
+  }
+
+  if (
+    document.getElementById(
+      "zovaroTikTokShareBtn"
+    )
+  ) {
+    return;
+  }
+
+  const button =
+    document.createElement(
+      "button"
+    );
+
+  button.id =
+    "zovaroTikTokShareBtn";
+
+  button.type =
+    "button";
+
+  button.className =
+    "tiktok-connect-btn";
+
+  button.style.border =
+    "0";
+
+  button.style.cursor =
+    "pointer";
+
+  button.textContent =
+    "SHARE VIDEO TO TIKTOK";
+
+  const status =
+    document.createElement(
+      "p"
+    );
+
+  status.id =
+    "zovaroTikTokStatus";
+
+  status.style.marginTop =
+    "14px";
+
+  status.style.fontSize =
+    "12px";
+
+  status.style.color =
+    "#aaa";
+
+  status.textContent =
+    "Ready to share the latest ZOVARO video.";
+
+  const connectButton =
+    document.querySelector(
+      ".tiktok-connect-btn"
+    );
+
+  if (connectButton) {
+    connectButton.after(
+      button
+    );
+    button.after(
+      status
+    );
+  } else {
+    copy.appendChild(
+      button
+    );
+
+    copy.appendChild(
+      status
+    );
+  }
+
+  button.addEventListener(
+    "click",
+    shareLatestTikTokVideo
+  );
+}
+
+
+async function shareLatestTikTokVideo() {
+
+  const button =
+    document.getElementById(
+      "zovaroTikTokShareBtn"
+    );
+
+  const status =
+    document.getElementById(
+      "zovaroTikTokStatus"
+    );
+
+  const setStatus =
+    message => {
+      if (status) {
+        status.textContent =
+          message;
+      }
+    };
+
+  const sessionToken =
+    getTikTokSession();
+
+  if (!sessionToken) {
+
+    setStatus(
+      "Connect TikTok first, then try again."
+    );
+
+    return;
+  }
+
+  const confirmed =
+    window.confirm(
+      "Authorize ZOVARO to send the current promotional video and its prepared caption to your TikTok account?"
+    );
+
+  if (!confirmed) {
+
+    setStatus(
+      "TikTok sharing cancelled."
+    );
+
+    return;
+  }
+
+  try {
+
+    if (button) {
+      button.disabled =
+        true;
+
+      button.style.opacity =
+        "0.6";
+
+      button.textContent =
+        "PREPARING TIKTOK POST...";
+    }
+
+    setStatus(
+      "Loading the current ZOVARO promotion..."
+    );
+
+    const promotion =
+      await loadTikTokPromotion();
+
+    const caption =
+      promotion?.tiktok?.caption ||
+      promotion?.content?.caption ||
+      promotion?.title ||
+      "ZOVARO";
+
+    if (!caption.trim()) {
+      throw new Error(
+        "TikTok caption is empty."
+      );
+    }
+
+    if (caption.length > 2200) {
+      throw new Error(
+        "TikTok caption exceeds the 2200-character limit."
+      );
+    }
+
+    setStatus(
+      "Initializing the TikTok Direct Post..."
+    );
+
+    const initResponse =
+      await fetch(
+        TIKTOK_API,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+            "X-ZOVARO-SESSION":
+              sessionToken
+          },
+          body: JSON.stringify({
+            consent: true,
+
+            privacy_level:
+              "SELF_ONLY",
+
+            title:
+              caption,
+
+            video_url:
+              ZOVARO_VIDEO_URL,
+
+            disable_comment:
+              false,
+
+            disable_duet:
+              false,
+
+            disable_stitch:
+              false,
+
+            brand_content_toggle:
+              false,
+
+            brand_organic_toggle:
+              false,
+
+            is_aigc:
+              false
+          })
+        }
+      );
+
+    const initData =
+      await initResponse.json();
+
+    if (!initResponse.ok) {
+
+      throw new Error(
+        initData?.error?.message ||
+        initData?.error ||
+        "TikTok Direct Post initialization failed."
+      );
+    }
+
+    const publishId =
+      initData?.publish_id;
+
+    if (!publishId) {
+      throw new Error(
+        "TikTok did not return a publish_id."
+      );
+    }
+
+    setStatus(
+      "TikTok is processing the video..."
+    );
+
+    await monitorTikTokPublish(
+      sessionToken,
+      publishId,
+      setStatus
+    );
+
+  } catch (error) {
+
+    console.error(
+      "ZOVARO TikTok share error:",
+      error
+    );
+
+    setStatus(
+      error.message ||
+      "TikTok sharing failed."
+    );
+
+  } finally {
+
+    if (button) {
+      button.disabled =
+        false;
+
+      button.style.opacity =
+        "1";
+
+      button.textContent =
+        "SHARE VIDEO TO TIKTOK";
+    }
+  }
+}
+
+
+async function monitorTikTokPublish(
+  sessionToken,
+  publishId,
+  setStatus
+) {
+
+  const maxAttempts =
+    18;
+
+  for (
+    let attempt = 1;
+    attempt <= maxAttempts;
+    attempt++
+  ) {
+
+    await new Promise(
+      resolve =>
+        setTimeout(
+          resolve,
+          10000
+        )
+    );
+
+    const response =
+      await fetch(
+        TIKTOK_STATUS_API,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+            "X-ZOVARO-SESSION":
+              sessionToken
+          },
+          body: JSON.stringify({
+            publish_id:
+              publishId
+          })
+        }
+      );
+
+    const data =
+      await response.json();
+
+    if (!response.ok) {
+
+      throw new Error(
+        data?.error?.message ||
+        data?.error ||
+        "TikTok status check failed."
+      );
+    }
+
+    const status =
+      data?.status || "";
+
+    if (
+      status ===
+      "PUBLISH_COMPLETE"
+    ) {
+
+      setStatus(
+        "TikTok post completed successfully."
+      );
+
+      return;
+    }
+
+    if (
+      status ===
+      "FAILED"
+    ) {
+
+      throw new Error(
+        data.fail_reason ||
+        "TikTok processing failed."
+      );
+    }
+
+    if (
+      status ===
+      "PROCESSING_UPLOAD"
+    ) {
+
+      setStatus(
+        "TikTok is processing the video upload..."
+      );
+
+    } else if (
+      status ===
+      "PROCESSING_DOWNLOAD"
+    ) {
+
+      setStatus(
+        "TikTok is downloading the ZOVARO video..."
+      );
+
+    } else if (
+      status ===
+      "SEND_TO_USER_INBOX"
+    ) {
+
+      setStatus(
+        "TikTok has sent the video to the creator inbox..."
+      );
+
+    } else {
+
+      setStatus(
+        `TikTok status: ${
+          status || "PROCESSING"
+        }`
+      );
+    }
+  }
+
+  setStatus(
+    "TikTok is still processing the video. Check TikTok again shortly."
+  );
+}
+
+
+/* =========================================================
    INITIAL RENDER
    ========================================================= */
 
 render();
+
+createTikTokButton();
