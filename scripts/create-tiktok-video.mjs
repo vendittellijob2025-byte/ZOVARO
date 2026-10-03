@@ -393,6 +393,11 @@ for (
     imagePath
   );
 
+  /*
+    Match the same product logic used
+    by the ZOVARO web catalog.
+  */
+
   const regularPrice =
     Number(product.price);
 
@@ -501,6 +506,11 @@ for (
       ? `-${displayedDiscount}%`
       : "";
 
+  /*
+    Text files prevent FFmpeg from
+    breaking on long product text.
+  */
+
   const categoryFile =
     `${textDirectory}/category.txt`;
 
@@ -576,10 +586,26 @@ for (
     "utf8"
   );
 
-  const filters = [
-    `scale=${WIDTH}:1120:force_original_aspect_ratio=decrease`,
+  /*
+    IMPORTANT FIX:
 
-    `pad=${WIDTH}:1120:(ow-iw)/2:(oh-ih)/2:white`,
+    The previous version created only a
+    1080x1120 video frame and then placed
+    all text below y=1120.
+
+    Therefore the text existed but was
+    outside the visible frame.
+
+    Now the complete scene is 1080x1920.
+    The product image occupies the upper
+    part and the product information is
+    placed below it.
+  */
+
+  const filters = [
+    `scale=${WIDTH}:980:force_original_aspect_ratio=decrease`,
+
+    `pad=${WIDTH}:${HEIGHT}:(ow-iw)/2:40:white`,
 
     "drawtext="
       + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
@@ -587,7 +613,8 @@ for (
       + "fontcolor=666666:"
       + "fontsize=30:"
       + "x=(w-text_w)/2:"
-      + "y=1160:"
+      + "y=1060:"
+      + "line_spacing=4:"
       + "expansion=none",
 
     "drawtext="
@@ -596,7 +623,7 @@ for (
       + "fontcolor=111111:"
       + "fontsize=40:"
       + "x=(w-text_w)/2:"
-      + "y=1215:"
+      + "y=1110:"
       + "line_spacing=5:"
       + "expansion=none",
 
@@ -606,7 +633,7 @@ for (
       + "fontcolor=666666:"
       + "fontsize=27:"
       + "x=(w-text_w)/2:"
-      + "y=1280:"
+      + "y=1195:"
       + "line_spacing=4:"
       + "expansion=none",
 
@@ -616,7 +643,7 @@ for (
       + "fontcolor=111111:"
       + "fontsize=58:"
       + "x=(w-text_w)/2:"
-      + "y=1360:"
+      + "y=1260:"
       + "expansion=none"
   ];
 
@@ -628,7 +655,7 @@ for (
         + "fontcolor=888888:"
         + "fontsize=32:"
         + "x=(w-text_w)/2-70:"
-        + "y=1425:"
+        + "y=1335:"
         + "expansion=none"
     );
   }
@@ -641,7 +668,7 @@ for (
         + "fontcolor=111111:"
         + "fontsize=32:"
         + "x=(w-text_w)/2+70:"
-        + "y=1425:"
+        + "y=1335:"
         + "expansion=none"
     );
   }
@@ -654,7 +681,7 @@ for (
       + "fontsize=25:"
       + "line_spacing=8:"
       + "x=100:"
-      + "y=1490:"
+      + "y=1410:"
       + "expansion=none"
   );
 
@@ -706,8 +733,9 @@ for (
   Create final ZOVARO screen.
 
   The approved logo already contains
-  the copyright notice, therefore no
-  second copyright line is added.
+  the copyright notice.
+
+  No second copyright is added.
 */
 
 const finalScreenPath =
@@ -856,8 +884,8 @@ await run(
 /*
   Add the real Suno music.
 
-  The music is used as the fixed
-  ZOVARO Affiliate soundtrack.
+  The same fixed ZOVARO Affiliate
+  soundtrack is used automatically.
 */
 
 await run(
