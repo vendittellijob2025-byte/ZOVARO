@@ -251,7 +251,8 @@ productCount =
   );
 
 if (
-  productCount < MIN_PRODUCTS
+  productCount <
+  MIN_PRODUCTS
 ) {
   throw new Error(
     `Not enough selected products to build the automatic video. Required: ${MIN_PRODUCTS}. Available: ${allProducts.length}.`
@@ -371,14 +372,6 @@ for (
 
   /*
     ALL PRODUCT TEXT MUST BE ENGLISH.
-
-    The translation pipeline already creates:
-
-    englishCategory
-    englishTitle
-    englishDescription
-
-    The video uses the English fields first.
   */
 
   const category =
@@ -426,8 +419,6 @@ for (
 
   /*
     SALE PRICE LOGIC
-
-    Zero or negative sale prices are invalid.
 
     A sale exists only when:
 
@@ -514,9 +505,7 @@ for (
   /*
     TEXT FILES
 
-    Descriptions are intentionally NOT created
-    because descriptions are no longer displayed
-    in the TikTok video.
+    Descriptions are intentionally removed.
   */
 
   const categoryFile =
@@ -541,7 +530,7 @@ for (
     categoryFile,
     wrapText(
       category,
-      45
+      36
     ),
     "utf8"
   );
@@ -550,7 +539,7 @@ for (
     nameFile,
     wrapText(
       name,
-      34
+      27
     ),
     "utf8"
   );
@@ -559,7 +548,7 @@ for (
     merchantFile,
     wrapText(
       merchant,
-      45
+      36
     ),
     "utf8"
   );
@@ -615,37 +604,26 @@ for (
   /*
     VIDEO SCENE
 
-    1080x1920
+    NO WHITE PANELS.
 
-    Background:
-    ZOVARO futuristic shop,
-    intentionally softened with a white
-    transparent layer.
+    The ZOVARO futuristic shop remains
+    visible throughout the scene.
 
-    Product:
-    large and centered.
+    Product is positioned in the upper
+    portion.
 
-    Information panel:
-    category
-    title
-    affiliate merchant
-    price
-    old price
-    discount
-
-    Description:
-    REMOVED.
-
-    WHITE BACKGROUNDS:
-    Both the product backing area and the
-    information panel use 78% opacity so that
-    the futuristic ZOVARO background remains
-    visibly present.
+    Text is distributed vertically
+    through the lower portion with safe
+    margins for smartphone viewing.
   */
 
   const filterParts = [
     /*
-      Background image.
+      BACKGROUND
+
+      The futuristic ZOVARO shop is kept
+      visible but softened with a light
+      transparent white layer.
     */
 
     `[1:v]` +
@@ -653,78 +631,53 @@ for (
       `crop=${WIDTH}:${HEIGHT}` +
       `[background]`,
 
-    /*
-      Soft white layer over the background.
-
-      This keeps the ZOVARO Shop image visible
-      but reduces its visual intensity.
-    */
-
     `[background]` +
       `drawbox=` +
       `x=0:` +
       `y=0:` +
       `w=${WIDTH}:` +
       `h=${HEIGHT}:` +
-      `color=white@0.78:` +
+      `color=white@0.32:` +
       `t=fill` +
       `[softbackground]`,
 
     /*
-      Product image.
+      PRODUCT
 
-      The white area behind the product is now
-      slightly transparent so the ZOVARO Shop
-      background remains visible.
+      No white panel and no white pad.
     */
 
     `[0:v]` +
-      `scale=900:880:force_original_aspect_ratio=decrease,` +
-      `pad=900:880:(ow-iw)/2:(oh-ih)/2:color=white@0.78` +
+      `scale=900:880:force_original_aspect_ratio=decrease` +
       `[product]`,
 
-    /*
-      Place product near the top.
-    */
-
     `[softbackground][product]` +
-      `overlay=(W-w)/2:45:format=auto` +
+      `overlay=(W-w)/2:55:format=auto` +
       `[scene1]`,
 
     /*
-      Information panel.
+      CATEGORY
 
-      78% white opacity instead of solid white.
+      Safe upper text position.
     */
 
     `[scene1]` +
-      `drawbox=` +
-      `x=35:` +
-      `y=975:` +
-      `w=1010:` +
-      `h=900:` +
-      `color=white@0.78:` +
-      `t=fill` +
-      `[scene2]`,
-
-    /*
-      CATEGORY
-    */
-
-    `[scene2]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${categoryText}':` +
-      `fontcolor=555555:` +
-      `fontsize=30:` +
+      `fontcolor=444444:` +
+      `fontsize=28:` +
       `x=(w-text_w)/2:` +
-      `y=1015:` +
-      `line_spacing=5:` +
+      `y=1030:` +
+      `line_spacing=8:` +
       `expansion=none` +
       `[text1]`,
 
     /*
-      LARGE PRODUCT TITLE
+      PRODUCT TITLE
+
+      Smaller width and larger vertical
+      separation to avoid phone-edge crowding.
     */
 
     `[text1]` +
@@ -732,10 +685,10 @@ for (
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
       `textfile='${nameText}':` +
       `fontcolor=111111:` +
-      `fontsize=50:` +
+      `fontsize=46:` +
       `x=(w-text_w)/2:` +
-      `y=1080:` +
-      `line_spacing=8:` +
+      `y=1095:` +
+      `line_spacing=12:` +
       `expansion=none` +
       `[text2]`,
 
@@ -748,15 +701,17 @@ for (
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${merchantText}':` +
       `fontcolor=666666:` +
-      `fontsize=28:` +
+      `fontsize=26:` +
       `x=(w-text_w)/2:` +
-      `y=1245:` +
-      `line_spacing=5:` +
+      `y=1280:` +
+      `line_spacing=8:` +
       `expansion=none` +
       `[text3]`,
 
     /*
       CURRENT PRICE
+
+      Strong visual separation.
     */
 
     `[text3]` +
@@ -764,15 +719,17 @@ for (
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
       `textfile='${priceTextFile}':` +
       `fontcolor=111111:` +
-      `fontsize=72:` +
+      `fontsize=70:` +
       `x=(w-text_w)/2:` +
-      `y=1310:` +
+      `y=1360:` +
       `expansion=none` +
       `[text4]`
   ];
 
   /*
     OLD PRICE
+
+    Positioned safely below the main price.
   */
 
   if (oldPriceText) {
@@ -782,9 +739,9 @@ for (
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
         `textfile='${oldPriceTextFile}':` +
         `fontcolor=888888:` +
-        `fontsize=36:` +
-        `x=(w-text_w)/2-105:` +
-        `y=1420:` +
+        `fontsize=34:` +
+        `x=(w-text_w)/2-95:` +
+        `y=1480:` +
         `expansion=none` +
         `[text5]`
     );
@@ -796,6 +753,9 @@ for (
 
   /*
     DISCOUNT
+
+    Kept beside the old price but with
+    sufficient space from the screen edges.
   */
 
   if (discountText) {
@@ -805,9 +765,9 @@ for (
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
         `textfile='${discountTextFile}':` +
         `fontcolor=111111:` +
-        `fontsize=40:` +
-        `x=(w-text_w)/2+105:` +
-        `y=1417:` +
+        `fontsize=38:` +
+        `x=(w-text_w)/2+95:` +
+        `y=1477:` +
         `expansion=none` +
         `[text6]`
     );
@@ -877,10 +837,11 @@ for (
 /*
   FINAL ZOVARO SCREEN
 
-  The selected logo already contains the
-  approved branding.
+  The ZOVARO Shop background replaces
+  the previous white background.
 
-  No additional copyright is added.
+  The background remains softly visible
+  and the logo is placed above it.
 */
 
 const finalScreenPath =
@@ -895,31 +856,76 @@ await run(
     "1",
 
     "-i",
+    BACKGROUND_PATH,
+
+    "-i",
     logoPath,
 
-    "-vf",
+    "-filter_complex",
 
     [
-      "scale=720:720:force_original_aspect_ratio=decrease",
+      /*
+        Background.
+      */
 
-      "pad=1080:1920:(ow-iw)/2:420:white",
+      `[0:v]` +
+        `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
+        `crop=${WIDTH}:${HEIGHT}` +
+        `[finalbg]`,
 
-      "drawtext=" +
-        "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:" +
-        "text='DISCOVER. SHARE. SHOP.':" +
-        "fontcolor=111111:" +
-        "fontsize=52:" +
-        "x=(w-text_w)/2:" +
-        "y=1210",
+      /*
+        Soft transparent white layer.
+      */
 
-      "drawtext=" +
-        "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:" +
-        "text='Products and deals through ZOVARO':" +
-        "fontcolor=555555:" +
-        "fontsize=32:" +
-        "x=(w-text_w)/2:" +
-        "y=1290"
-    ].join(","),
+      `[finalbg]` +
+        `drawbox=` +
+        `x=0:` +
+        `y=0:` +
+        `w=${WIDTH}:` +
+        `h=${HEIGHT}:` +
+        `color=white@0.32:` +
+        `t=fill` +
+        `[finalsoft]`,
+
+      /*
+        Logo.
+      */
+
+      `[1:v]` +
+        `scale=720:720:force_original_aspect_ratio=decrease` +
+        `[logo]`,
+
+      `[finalsoft][logo]` +
+        `overlay=(W-w)/2:420:format=auto` +
+        `[finalscene]`,
+
+      /*
+        Final text.
+      */
+
+      `[finalscene]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+        `text='DISCOVER. SHARE. SHOP.':` +
+        `fontcolor=111111:` +
+        `fontsize=52:` +
+        `x=(w-text_w)/2:` +
+        `y=1240` +
+        `[finaltext1]`,
+
+      `[finaltext1]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
+        `text='Products and deals through ZOVARO':` +
+        `fontcolor=555555:` +
+        `fontsize=32:` +
+        `x=(w-text_w)/2:` +
+        `y=1325` +
+        `[finaloutput]`
+    ].join(";"),
+
+    "-map",
+    "[finaloutput]",
 
     "-frames:v",
     "1",
