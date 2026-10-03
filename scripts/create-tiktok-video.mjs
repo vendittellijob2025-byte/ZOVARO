@@ -122,6 +122,69 @@ function formatMoney(
   return `${symbol}${number.toFixed(2)}`;
 }
 
+function wrapText(
+  value,
+  maxCharacters
+) {
+  const text =
+    String(value ?? "")
+      .replace(/\r/g, "")
+      .trim();
+
+  if (!text) {
+    return "";
+  }
+
+  const paragraphs =
+    text.split("\n");
+
+  const lines = [];
+
+  for (
+    const paragraph of paragraphs
+  ) {
+    const words =
+      paragraph
+        .split(/\s+/)
+        .filter(Boolean);
+
+    if (!words.length) {
+      lines.push("");
+      continue;
+    }
+
+    let current = "";
+
+    for (
+      const word of words
+    ) {
+      const candidate =
+        current
+          ? `${current} ${word}`
+          : word;
+
+      if (
+        candidate.length <=
+        maxCharacters
+      ) {
+        current = candidate;
+      } else {
+        if (current) {
+          lines.push(current);
+        }
+
+        current = word;
+      }
+    }
+
+    if (current) {
+      lines.push(current);
+    }
+  }
+
+  return lines.join("\n");
+}
+
 const selectedText =
   await fs.readFile(
     SELECTED_PRODUCTS_PATH,
@@ -186,18 +249,6 @@ if (
 console.log(
   `Detected ZOVARO Affiliate music duration: ${musicDuration.toFixed(3)} seconds`
 );
-
-/*
-  Select the number of products automatically.
-
-  We aim for approximately 4 seconds
-  per product while keeping the final
-  ZOVARO screen at the end.
-
-  The exact duration of each product
-  is calculated afterward so that the
-  entire video matches the music exactly.
-*/
 
 let productCount =
   Math.floor(
@@ -271,7 +322,7 @@ console.log(
 
 const logoCandidates = [
   "assets/zovaro-logo.png",
-  "Logo ZOVARO con globo orbitante al neon.png"
+  "Logo ZOVARO con globo orbitante al neon (1).png"
 ];
 
 let logoPath = null;
@@ -378,7 +429,9 @@ for (
       discountNumber
     ) &&
     discountNumber > 0
-      ? discountNumber
+      ? Math.round(
+          discountNumber
+        )
       : (
           hasSale &&
           regularPrice > 0
@@ -448,13 +501,6 @@ for (
       ? `-${displayedDiscount}%`
       : "";
 
-  /*
-    FFmpeg textfile is used here so
-    product descriptions and titles
-    containing punctuation do not
-    break the filter parser.
-  */
-
   const categoryFile =
     `${textDirectory}/category.txt`;
 
@@ -478,19 +524,28 @@ for (
 
   await fs.writeFile(
     categoryFile,
-    category,
+    wrapText(
+      category,
+      45
+    ),
     "utf8"
   );
 
   await fs.writeFile(
     nameFile,
-    name,
+    wrapText(
+      name,
+      42
+    ),
     "utf8"
   );
 
   await fs.writeFile(
     merchantFile,
-    merchant,
+    wrapText(
+      merchant,
+      50
+    ),
     "utf8"
   );
 
@@ -514,27 +569,12 @@ for (
 
   await fs.writeFile(
     descriptionFile,
-    description,
+    wrapText(
+      description,
+      62
+    ),
     "utf8"
   );
-
-  /*
-    The product scene follows the same
-    information hierarchy used by the
-    ZOVARO product cards:
-
-    category
-    product name
-    merchant
-    current price
-    old price
-    discount
-
-    The description is added underneath
-    because it is part of the product
-    information displayed by the ZOVARO
-    product modal.
-  */
 
   const filters = [
     `scale=${WIDTH}:1120:force_original_aspect_ratio=decrease`,
@@ -547,7 +587,8 @@ for (
       + "fontcolor=666666:"
       + "fontsize=30:"
       + "x=(w-text_w)/2:"
-      + "y=1160",
+      + "y=1160:"
+      + "expansion=none",
 
     "drawtext="
       + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
@@ -556,6 +597,7 @@ for (
       + "fontsize=40:"
       + "x=(w-text_w)/2:"
       + "y=1215:"
+      + "line_spacing=5:"
       + "expansion=none",
 
     "drawtext="
@@ -565,6 +607,7 @@ for (
       + "fontsize=27:"
       + "x=(w-text_w)/2:"
       + "y=1280:"
+      + "line_spacing=4:"
       + "expansion=none",
 
     "drawtext="
@@ -612,8 +655,6 @@ for (
       + "line_spacing=8:"
       + "x=100:"
       + "y=1490:"
-      + "text_w=880:"
-      + "text_h=260:"
       + "expansion=none"
   );
 
@@ -815,11 +856,8 @@ await run(
 /*
   Add the real Suno music.
 
-  The music is trimmed exactly to the
-  video duration. This means the video
-  always finishes at the end of the
-  selected song rather than leaving
-  silence or generating a synthetic tone.
+  The music is used as the fixed
+  ZOVARO Affiliate soundtrack.
 */
 
 await run(
