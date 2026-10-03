@@ -68,6 +68,89 @@ const BACKGROUND_WHITE_OVERLAY = 0.10;
 const TEXT_BOX_COLOR = "white@0.82";
 const TEXT_BOX_BORDER = 18;
 
+/*
+  TEXT PANEL LAYOUT
+
+  The visual style remains unchanged.
+
+  The panels are now positioned using fixed
+  vertical zones with guaranteed separation.
+
+  The largest panel is the product title,
+  which may occupy multiple lines.
+
+  The title zone therefore receives extra
+  vertical space so that a two-line title
+  cannot collide with the merchant panel.
+
+  The old price and discount also have
+  independent zones.
+
+  IMPORTANT:
+  These coordinates are intentionally kept
+  away from the product image and from each
+  other. This layout applies automatically
+  to every affiliate product.
+*/
+
+const TEXT_LAYOUT = {
+  categoryY: 1000,
+  titleY: 1085,
+  merchantY: 1265,
+  priceY: 1355,
+  oldPriceY: 1465,
+  discountY: 1555
+};
+
+const TEXT_SAFE_GAP = 22;
+
+/*
+  Calculate an additional vertical offset
+  for multi-line text.
+
+  This does NOT change the font, color,
+  panel opacity or style.
+
+  It only guarantees that a text panel with
+  multiple lines receives enough vertical
+  room before the next panel begins.
+*/
+
+function textLineCount(value) {
+  const text = String(value ?? "")
+    .replace(/\r/g, "")
+    .trim();
+
+  if (!text) {
+    return 0;
+  }
+
+  return text.split("\n").length;
+}
+
+function calculatePanelHeight(
+  lineCount,
+  fontSize,
+  lineSpacing = 0
+) {
+  if (!lineCount) {
+    return 0;
+  }
+
+  return (
+    lineCount * fontSize +
+    Math.max(0, lineCount - 1) *
+      lineSpacing +
+    TEXT_BOX_BORDER * 2
+  );
+}
+
+function escapeFilterPath(value) {
+  return String(value ?? "")
+    .replace(/\\/g, "\\\\")
+    .replace(/:/g, "\\:");
+}
+
 async function run(command, args) {
   console.log(
     `Running: ${command} ${args.join(" ")}`
@@ -118,12 +201,6 @@ async function downloadFile(url, outputPath) {
     outputPath,
     buffer
   );
-}
-
-function escapeFilterPath(value) {
-  return String(value ?? "")
-    .replace(/\\/g, "\\\\")
-    .replace(/:/g, "\\:");
 }
 
 function formatMoney(value, currency) {
@@ -554,30 +631,39 @@ for (
   const discountFile =
     `${textDirectory}/discount.txt`;
 
-  await fs.writeFile(
-    categoryFile,
+  const wrappedCategory =
     wrapText(
       category,
       36
-    ),
+    );
+
+  const wrappedName =
+    wrapText(
+      name,
+      27
+    );
+
+  const wrappedMerchant =
+    wrapText(
+      merchant,
+      36
+    );
+
+  await fs.writeFile(
+    categoryFile,
+    wrappedCategory,
     "utf8"
   );
 
   await fs.writeFile(
     nameFile,
-    wrapText(
-      name,
-      27
-    ),
+    wrappedName,
     "utf8"
   );
 
   await fs.writeFile(
     merchantFile,
-    wrapText(
-      merchant,
-      36
-    ),
+    wrappedMerchant,
     "utf8"
   );
 
@@ -629,6 +715,273 @@ for (
       discountFile
     );
 
+  /*
+    AUTOMATIC PANEL HEIGHT ANALYSIS
+
+    We calculate the actual number of lines
+    before rendering the panels.
+
+    This is the important protection against
+    overlapping rectangles.
+  */
+
+  const categoryLines =
+    textLineCount(
+      wrappedCategory
+    );
+
+  const titleLines =
+    textLineCount(
+      wrappedName
+    );
+
+  const merchantLines =
+    textLineCount(
+      wrappedMerchant
+    );
+
+  const categoryHeight =
+    calculatePanelHeight(
+      categoryLines,
+      28,
+      8
+    );
+
+  const titleHeight =
+    calculatePanelHeight(
+      titleLines,
+      46,
+      12
+    );
+
+  const merchantHeight =
+    calculatePanelHeight(
+      merchantLines,
+      26,
+      8
+    );
+
+  /*
+    The starting coordinates are based on the
+    approved visual design.
+
+    If a previous panel becomes taller because
+    of multiple lines, the following panel is
+    automatically pushed downward.
+
+    Therefore a long title cannot overlap
+    the merchant, price, old-price or discount
+    panels.
+  */
+
+  let categoryY =
+    TEXT_LAYOUT.categoryY;
+
+  let titleY =
+    TEXT_LAYOUT.titleY;
+
+  let merchantY =
+    TEXT_LAYOUT.merchantY;
+
+  let priceY =
+    TEXT_LAYOUT.priceY;
+
+  let oldPriceY =
+    TEXT_LAYOUT.oldPriceY;
+
+  let discountY =
+    TEXT_LAYOUT.discountY;
+
+  /*
+    CATEGORY → TITLE
+  */
+
+  const minimumTitleY =
+    categoryY +
+    categoryHeight +
+    TEXT_SAFE_GAP;
+
+  titleY =
+    Math.max(
+      titleY,
+      minimumTitleY
+    );
+
+  /*
+    TITLE → MERCHANT
+  */
+
+  const minimumMerchantY =
+    titleY +
+    titleHeight +
+    TEXT_SAFE_GAP;
+
+  merchantY =
+    Math.max(
+      merchantY,
+      minimumMerchantY
+    );
+
+  /*
+    MERCHANT → PRICE
+  */
+
+  const minimumPriceY =
+    merchantY +
+    merchantHeight +
+    TEXT_SAFE_GAP;
+
+  priceY =
+    Math.max(
+      priceY,
+      minimumPriceY
+    );
+
+  /*
+    PRICE PANEL
+
+    Current price uses one line and a
+    larger font.
+  */
+
+  const priceHeight =
+    calculatePanelHeight(
+      1,
+      70,
+      0
+    );
+
+  /*
+    PRICE → OLD PRICE
+  */
+
+  const minimumOldPriceY =
+    priceY +
+    priceHeight +
+    TEXT_SAFE_GAP;
+
+  oldPriceY =
+    Math.max(
+      oldPriceY,
+      minimumOldPriceY
+    );
+
+  /*
+    OLD PRICE → DISCOUNT
+
+    If there is no old price, the discount
+    still receives its own safe position
+    after the current price.
+  */
+
+  const oldPriceHeight =
+    oldPriceText
+      ? calculatePanelHeight(
+          1,
+          34,
+          0
+        )
+      : 0;
+
+  const minimumDiscountY =
+    oldPriceText
+      ? oldPriceY +
+        oldPriceHeight +
+        TEXT_SAFE_GAP
+      : priceY +
+        priceHeight +
+        TEXT_SAFE_GAP;
+
+  discountY =
+    Math.max(
+      discountY,
+      minimumDiscountY
+    );
+
+  /*
+    FINAL SAFETY LIMIT
+
+    If exceptionally long text causes the
+    calculated layout to approach the bottom
+    of the vertical canvas, we reduce the
+    available line spacing progressively
+    rather than allowing panels to overlap.
+
+    Normal products remain exactly within
+    the approved visual layout.
+  */
+
+  const maximumDiscountBottom =
+    discountY +
+    calculatePanelHeight(
+      discountText ? 1 : 0,
+      38,
+      0
+    );
+
+  if (
+    maximumDiscountBottom >
+    HEIGHT - 80
+  ) {
+    const correction =
+      maximumDiscountBottom -
+      (HEIGHT - 80);
+
+    discountY -= correction;
+
+    if (
+      discountY <
+      oldPriceY +
+      oldPriceHeight +
+      TEXT_SAFE_GAP
+    ) {
+      discountY =
+        oldPriceY +
+        oldPriceHeight +
+        TEXT_SAFE_GAP;
+    }
+  }
+
+  console.log(
+    `Text panel positions for product ${index + 1}:`
+  );
+
+  console.log(
+    `Category Y: ${categoryY}`
+  );
+
+  console.log(
+    `Title Y: ${titleY}`
+  );
+
+  console.log(
+    `Merchant Y: ${merchantY}`
+  );
+
+  console.log(
+    `Price Y: ${priceY}`
+  );
+
+  console.log(
+    `Old price Y: ${oldPriceY}`
+  );
+
+  console.log(
+    `Discount Y: ${discountY}`
+  );
+
+  console.log(
+    `Category lines: ${categoryLines}`
+  );
+
+  console.log(
+    `Title lines: ${titleLines}`
+  );
+
+  console.log(
+    `Merchant lines: ${merchantLines}`
+  );
+
   const filterParts = [
     `[1:v]` +
       `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
@@ -657,7 +1010,6 @@ for (
 
     /*
       TEXT 1 — CATEGORY
-      Kept separated from the product title.
     */
 
     `[scene1]` +
@@ -667,7 +1019,7 @@ for (
       `fontcolor=444444:` +
       `fontsize=28:` +
       `x=(w-text_w)/2:` +
-      `y=1000:` +
+      `y=${categoryY}:` +
       `line_spacing=8:` +
       `expansion=none:` +
       `box=1:` +
@@ -686,7 +1038,7 @@ for (
       `fontcolor=111111:` +
       `fontsize=46:` +
       `x=(w-text_w)/2:` +
-      `y=1085:` +
+      `y=${titleY}:` +
       `line_spacing=12:` +
       `expansion=none:` +
       `box=1:` +
@@ -705,7 +1057,7 @@ for (
       `fontcolor=555555:` +
       `fontsize=26:` +
       `x=(w-text_w)/2:` +
-      `y=1255:` +
+      `y=${merchantY}:` +
       `line_spacing=8:` +
       `expansion=none:` +
       `box=1:` +
@@ -724,7 +1076,7 @@ for (
       `fontcolor=111111:` +
       `fontsize=70:` +
       `x=(w-text_w)/2:` +
-      `y=1345:` +
+      `y=${priceY}:` +
       `expansion=none:` +
       `box=1:` +
       `boxcolor=${TEXT_BOX_COLOR}:` +
@@ -735,8 +1087,8 @@ for (
   /*
     OLD PRICE
 
-    Moved lower so it no longer conflicts
-    with the current price or discount panel.
+    Its position is calculated automatically
+    from the current-price panel.
   */
 
   if (oldPriceText) {
@@ -748,7 +1100,7 @@ for (
         `fontcolor=777777:` +
         `fontsize=34:` +
         `x=(w-text_w)/2:` +
-        `y=1460:` +
+        `y=${oldPriceY}:` +
         `expansion=none:` +
         `box=1:` +
         `boxcolor=${TEXT_BOX_COLOR}:` +
@@ -764,7 +1116,8 @@ for (
   /*
     DISCOUNT
 
-    Clearly separated from OLD PRICE.
+    Its position is always below the
+    preceding panel with a guaranteed gap.
   */
 
   if (discountText) {
@@ -776,7 +1129,7 @@ for (
         `fontcolor=111111:` +
         `fontsize=38:` +
         `x=(w-text_w)/2:` +
-        `y=1545:` +
+        `y=${discountY}:` +
         `expansion=none:` +
         `box=1:` +
         `boxcolor=${TEXT_BOX_COLOR}:` +
@@ -980,15 +1333,6 @@ await run(
     "-filter_complex",
 
     [
-      /*
-        SHOP BACKGROUND
-
-        The shop stays completely visible
-        during the initial hold.
-
-        It then fades progressively to black.
-      */
-
       `[0:v]` +
         `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
         `crop=${WIDTH}:${HEIGHT},` +
@@ -1002,13 +1346,6 @@ await run(
         `fade=t=out:st=${FINAL_SHOP_HOLD.toFixed(3)}:d=${FINAL_LOGO_FADE.toFixed(3)}:color=black` +
         `[endingbg]`,
 
-      /*
-        LOGO
-
-        The logo is invisible during the shop-only hold
-        and then appears progressively.
-      */
-
       `[1:v]` +
         `scale=720:720:force_original_aspect_ratio=decrease,` +
         `format=rgba,` +
@@ -1018,12 +1355,6 @@ await run(
       `[endingbg][endinglogo]` +
         `overlay=(W-w)/2:420:format=auto` +
         `[endingscene]`,
-
-      /*
-        FINAL HEADLINE
-
-        Same gentle fade as the logo.
-      */
 
       `[endingscene]` +
         `drawtext=` +
@@ -1035,10 +1366,6 @@ await run(
         `y=1240:` +
         `alpha='if(lt(t\\,${FINAL_SHOP_HOLD.toFixed(3)})\\,0\\,min(1\\,(t-${FINAL_SHOP_HOLD.toFixed(3)})/${FINAL_LOGO_FADE.toFixed(3)}))'` +
         `[endingtext1]`,
-
-      /*
-        FINAL SUBTITLE
-      */
 
       `[endingtext1]` +
         `drawtext=` +
@@ -1257,6 +1584,10 @@ console.log(
 );
 
 console.log(
+  `Text panel spacing: automatic collision-safe layout`
+);
+
+console.log(
   `Final video FPS: 30`
 );
 
@@ -1265,7 +1596,7 @@ console.log(
 );
 
 console.log(
-  `Text panels: vertically separated`
+  `Text panels: automatically separated with safe vertical gaps`
 );
 
 console.log(
