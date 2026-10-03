@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-03T21:33:13.556Z",
+  "createdAt": "2026-10-03T22:20:20.014Z",
   "productId": "112995618823",
   "advertiser": "Kaiya Baby",
   "brand": "Kaiya Baby",
@@ -14,11 +14,32 @@
   "imageUrl": "https://cdn.shopify.com/s/files/1/0256/5580/3990/files/ClimaCuddle-Baby-Romper-Wool-Rayon-Bamboo-Flint-Stone.jpg?v=1775009561",
   "destinationUrl": "https://kaiyababy.com/products/climacuddle-zipped-baby-romper-merino-wool-rayon-bamboo-misty-blue",
   "trackingUrl": "https://www.tkqlhce.com/click-101881140-17338565?url=https%3A%2F%2Fkaiyababy.com%2Fproducts%2Fclimacuddle-zipped-baby-romper-merino-wool-rayon-bamboo-misty-blue&cjsku=112995618823",
+  "zovaro": {
+    "name": "ZOVARO",
+    "websiteUrl": "https://zovaro.vercel.app/",
+    "description": "Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market."
+  },
   "content": {
-    "hook": "Discover this Kaiya Baby product.",
+    "hook": "Discover this featured Kaiya Baby product on ZOVARO.",
     "headline": "ClimaCuddle® Zipped Baby Romper - Merino Wool & Rayon From Bamboo - Misty Blue - 9-12M",
     "callToAction": "VIEW DEAL",
-    "caption": "ClimaCuddle® Zipped Baby Romper - Merino Wool & Rayon From Bamboo - Misty Blue - 9-12M — available now. Check the deal through ZOVARO.",
+    "caption": "ClimaCuddle® Zipped Baby Romper - Merino Wool & Rayon From Bamboo - Misty Blue - 9-12M — 45 USD. Made from our climate-smart ClimaCuddle® fabric, this infant long sleeve romper blends breathable bamboo with temperature-regulating Merino wool to keep your baby cozy in every season. Soft on sensitive skin and designed with a stretchy fit that won’t ride up during tummy time, it keeps your little one comfy all day. ClimaCuddle® climate-smart fabric : 50.8% rayon from bamboo | 49.2% Merino wool Curved double zipper Fold-over cuffs for warmth and scratch protection Flatlock seams for a smooth feel against the skin Breathable underarm gusset Temperature-sensing sticker to guide comfort decisions A personalized embroidered romper adds a unique touch to your baby's moments. Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Babies",
+    "productDescription": "Made from our climate-smart ClimaCuddle® fabric, this infant long sleeve romper blends breathable bamboo with temperature-regulating Merino wool to keep your baby cozy in every season. Soft on sensitive skin and designed with a stretchy fit that won’t ride up during tummy time, it keeps your little one comfy all day. ClimaCuddle® climate-smart fabric : 50.8% rayon from bamboo | 49.2% Merino wool Curved double zipper Fold-over cuffs for warmth and scratch protection Flatlock seams for a smooth feel against the skin Breathable underarm gusset Temperature-sensing sticker to guide comfort decisions A personalized embroidered romper adds a unique touch to your baby's moments.",
+    "zovaroDescription": "Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market.",
+    "websiteUrl": "https://zovaro.vercel.app/",
+    "hashtags": [
+      "#ZOVARO",
+      "#Shopping",
+      "#Deals",
+      "#Babies"
+    ]
+  },
+  "tiktok": {
+    "caption": "ClimaCuddle® Zipped Baby Romper - Merino Wool & Rayon From Bamboo - Misty Blue - 9-12M — 45 USD. Made from our climate-smart ClimaCuddle® fabric, this infant long sleeve romper blends breathable bamboo with temperature-regulating Merino wool to keep your baby cozy in every season. Soft on sensitive skin and designed with a stretchy fit that won’t ride up during tummy time, it keeps your little one comfy all day. ClimaCuddle® climate-smart fabric : 50.8% rayon from bamboo | 49.2% Merino wool Curved double zipper Fold-over cuffs for warmth and scratch protection Flatlock seams for a smooth feel against the skin Breathable underarm gusset Temperature-sensing sticker to guide comfort decisions A personalized embroidered romper adds a unique touch to your baby's moments. Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Babies",
+    "productDescription": "Made from our climate-smart ClimaCuddle® fabric, this infant long sleeve romper blends breathable bamboo with temperature-regulating Merino wool to keep your baby cozy in every season. Soft on sensitive skin and designed with a stretchy fit that won’t ride up during tummy time, it keeps your little one comfy all day. ClimaCuddle® climate-smart fabric : 50.8% rayon from bamboo | 49.2% Merino wool Curved double zipper Fold-over cuffs for warmth and scratch protection Flatlock seams for a smooth feel against the skin Breathable underarm gusset Temperature-sensing sticker to guide comfort decisions A personalized embroidered romper adds a unique touch to your baby's moments.",
+    "zovaroDescription": "Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market.",
+    "websiteUrl": "https://zovaro.vercel.app/",
+    "callToAction": "Discover more on ZOVARO",
     "hashtags": [
       "#ZOVARO",
       "#Shopping",
