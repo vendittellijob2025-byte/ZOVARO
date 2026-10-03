@@ -41,10 +41,13 @@ const TRANSITION_DURATION = 0.75;
   PRODUCT IMAGE OPACITY
 
   The white background of the product image
-  remains visible but becomes softer.
+  is now MORE OPAQUE.
+
+  This matches the visual quality of the
+  white text mini-panels.
 */
 
-const PRODUCT_OPACITY = 0.72;
+const PRODUCT_OPACITY = 0.82;
 
 /*
   BACKGROUND VISIBILITY
@@ -646,24 +649,18 @@ for (
     The futuristic ZOVARO shop remains
     strongly visible.
 
-    The product image is softened slightly,
-    preserving its white background while
-    allowing the ZOVARO shop to remain visible.
+    The product image now uses the same
+    opacity level as the text mini-panels.
+
+    This makes the white product background
+    clearly separated from the shop background.
 
     Every text line has its OWN white mini-panel.
-
-    IMPORTANT:
-    The mini-panels are now MORE OPAQUE
-    (white@0.82) so they clearly separate
-    the text from the futuristic shop background.
   */
 
   const filterParts = [
     /*
       ZOVARO BACKGROUND
-
-      Only a very light white layer is used.
-      This keeps the shop much more visible.
     */
 
     `[1:v]` +
@@ -684,8 +681,8 @@ for (
     /*
       PRODUCT IMAGE
 
-      Slight transparency so the white image
-      background does not dominate the scene.
+      Product image opacity is now 0.82,
+      matching the white text panels.
     */
 
     `[0:v]` +
@@ -700,8 +697,6 @@ for (
 
     /*
       CATEGORY
-
-      Individual MORE OPAQUE white mini-panel.
     */
 
     `[scene1]` +
@@ -721,8 +716,6 @@ for (
 
     /*
       PRODUCT TITLE
-
-      Individual MORE OPAQUE white mini-panel.
     */
 
     `[text1]` +
@@ -742,8 +735,6 @@ for (
 
     /*
       MERCHANT / AFFILIATE
-
-      Individual MORE OPAQUE white mini-panel.
     */
 
     `[text2]` +
@@ -763,8 +754,6 @@ for (
 
     /*
       CURRENT PRICE
-
-      Larger individual MORE OPAQUE mini-panel.
     */
 
     `[text3]` +
@@ -837,13 +826,9 @@ for (
   /*
     PRODUCT SCENE FADE
 
-    The final part of every product scene
-    fades the PRODUCT/TEXT CONTENT to
-    transparency while the ZOVARO background
-    remains visible.
+    Only the product/text layer fades.
 
-    This makes the shop naturally appear between
-    products.
+    The ZOVARO shop background remains visible.
   */
 
   filterParts.push(
@@ -900,6 +885,9 @@ for (
       "-crf",
       "23",
 
+      "-pix_fmt",
+      "yuv420p",
+
       videoPath
     ]
   );
@@ -914,12 +902,13 @@ for (
 
   The futuristic shop starts visible.
 
-  During the first part of the final screen,
-  the logo and white text remain visible.
+  The logo and white text remain visible.
 
-  The SHOP BACKGROUND then rapidly fades
-  to BLACK while the logo and white text
-  remain visible.
+  The shop background then rapidly fades
+  toward BLACK.
+
+  The final screen is rendered at a fixed
+  30 FPS so there are no frozen frames.
 */
 
 const finalScreenPath =
@@ -1021,12 +1010,15 @@ const finalVideoPath =
 /*
   FINAL ANIMATION
 
-  The shop background fades quickly toward
-  black during the final screen.
+  The background fades toward BLACK.
 
-  Logo and white text remain visible because
-  the fade is applied to the background BEFORE
-  the logo/text overlays.
+  The logo and white text are rendered over
+  the background AFTER the fade operation,
+  so they remain visible throughout the ending.
+
+  The logo input is looped as well, preventing
+  the last frame from freezing because of a
+  single-frame input.
 */
 
 await run(
@@ -1040,6 +1032,9 @@ await run(
     "-i",
     BACKGROUND_PATH,
 
+    "-loop",
+    "1",
+
     "-i",
     logoPath,
 
@@ -1047,7 +1042,9 @@ await run(
 
     [
       /*
-        Background.
+        BACKGROUND
+
+        Shop fades smoothly to black.
       */
 
       `[0:v]` +
@@ -1064,7 +1061,10 @@ await run(
         `[endingbg]`,
 
       /*
-        Logo.
+        LOGO
+
+        Looping the logo input guarantees that
+        the logo is available for every frame.
       */
 
       `[1:v]` +
@@ -1120,6 +1120,12 @@ await run(
     "-crf",
     "23",
 
+    "-pix_fmt",
+    "yuv420p",
+
+    "-movflags",
+    "+faststart",
+
     finalVideoPath
   ]
 );
@@ -1160,6 +1166,21 @@ console.log(
 const silentVideoPath =
   `${TEMP_DIR}/silent-video.mp4`;
 
+/*
+  IMPORTANT FINAL CONCAT FIX
+
+  The previous version used:
+
+    -c copy
+
+  That can preserve incompatible timestamps/timebases
+  between separately generated segments and can cause
+  the final section to appear frozen.
+
+  The complete video is now re-encoded at a fixed
+  30 FPS during concatenation.
+*/
+
 await run(
   "ffmpeg",
   [
@@ -1174,8 +1195,22 @@ await run(
     "-i",
     concatListPath,
 
-    "-c",
-    "copy",
+    "-c:v",
+    "libx264",
+
+    "-preset",
+    "veryfast",
+
+    "-crf",
+    "23",
+
+    "-pix_fmt",
+    "yuv420p",
+
+    "-r",
+    "30",
+
+    "-an",
 
     silentVideoPath
   ]
@@ -1278,6 +1313,14 @@ console.log(
 
 console.log(
   `Text panel opacity: 0.82`
+);
+
+console.log(
+  `Final video FPS: 30`
+);
+
+console.log(
+  `Final concat: re-encoded to prevent frozen ending`
 );
 
 console.log(
