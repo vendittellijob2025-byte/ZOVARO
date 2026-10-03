@@ -1,6 +1,9 @@
 import crypto from "node:crypto";
 import { get } from "@vercel/blob";
 
+const VERIFIED_VIDEO_PREFIX =
+  "https://vendittellijob2025-byte.github.io/ZOVARO/";
+
 export default async function handler(req, res) {
   const allowedOrigin =
     "https://vendittellijob2025-byte.github.io";
@@ -126,6 +129,7 @@ export default async function handler(req, res) {
     const {
       privacy_level,
       title,
+      video_url,
       video_size,
       chunk_size,
       total_chunk_count,
@@ -165,107 +169,169 @@ export default async function handler(req, res) {
     }
 
     /*
-     * 6. Verifica i dati del video
+     * 6. Determina il metodo di trasferimento
+     *
+     * Se il video è già presente su un server ZOVARO
+     * verificato, viene utilizzato PULL_FROM_URL.
+     *
+     * FILE_UPLOAD rimane supportato come compatibilità
+     * per eventuali utilizzi futuri.
      */
 
-    if (
-      !Number.isInteger(video_size) ||
-      video_size <= 0
-    ) {
-      return res.status(400).json({
-        error:
-          "video_size deve essere un intero positivo"
-      });
-    }
+    let sourceInfo;
 
     if (
-      !Number.isInteger(chunk_size) ||
-      chunk_size <= 0
+      typeof video_url === "string" &&
+      video_url.trim()
     ) {
-      return res.status(400).json({
-        error:
-          "chunk_size deve essere un intero positivo"
-      });
-    }
+      const cleanVideoUrl =
+        video_url.trim();
 
-    if (
-      !Number.isInteger(total_chunk_count) ||
-      total_chunk_count <= 0
-    ) {
-      return res.status(400).json({
-        error:
-          "total_chunk_count deve essere un intero positivo"
-      });
-    }
+      if (cleanVideoUrl.length > 2048) {
+        return res.status(400).json({
+          error:
+            "video_url supera il limite consentito"
+        });
+      }
 
-    /*
-     * Limite massimo TikTok: 4 GB
-     */
+      let parsedVideoUrl;
 
-    const MAX_VIDEO_SIZE =
-      4 * 1024 * 1024 * 1024;
+      try {
+        parsedVideoUrl =
+          new URL(cleanVideoUrl);
+      } catch {
+        return res.status(400).json({
+          error:
+            "video_url non è un URL valido"
+        });
+      }
 
-    if (video_size > MAX_VIDEO_SIZE) {
-      return res.status(400).json({
-        error:
-          "Il video supera il limite massimo di 4 GB"
-      });
-    }
-
-    /*
-     * Regole chunk TikTok:
-     * - sotto 5 MB: un unico chunk
-     * - sopra 5 MB: chunk da almeno 5 MB
-     * - massimo 64 MB per chunk
-     * - massimo 1000 chunk
-     */
-
-    const MIN_CHUNK_SIZE =
-      5 * 1024 * 1024;
-
-    const MAX_CHUNK_SIZE =
-      64 * 1024 * 1024;
-
-    if (video_size < MIN_CHUNK_SIZE) {
       if (
-        total_chunk_count !== 1 ||
-        chunk_size !== video_size
+        parsedVideoUrl.protocol !==
+        "https:"
       ) {
         return res.status(400).json({
           error:
-            "Per video inferiori a 5 MB è richiesto un unico chunk uguale alla dimensione del video"
+            "video_url deve utilizzare HTTPS"
         });
       }
+
+      if (
+        !cleanVideoUrl.startsWith(
+          VERIFIED_VIDEO_PREFIX
+        )
+      ) {
+        return res.status(400).json({
+          error:
+            "video_url deve appartenere al percorso ZOVARO verificato da TikTok"
+        });
+      }
+
+      sourceInfo = {
+        source: "PULL_FROM_URL",
+        video_url: cleanVideoUrl
+      };
     } else {
+      /*
+       * FILE_UPLOAD fallback
+       */
+
       if (
-        chunk_size < MIN_CHUNK_SIZE ||
-        chunk_size > MAX_CHUNK_SIZE
+        !Number.isInteger(video_size) ||
+        video_size <= 0
       ) {
         return res.status(400).json({
           error:
-            "chunk_size deve essere compreso tra 5 MB e 64 MB"
+            "video_size deve essere un intero positivo"
         });
       }
-
-      if (total_chunk_count > 1000) {
-        return res.status(400).json({
-          error:
-            "Il numero massimo di chunk è 1000"
-        });
-      }
-
-      const expectedChunkCount =
-        Math.ceil(video_size / chunk_size);
 
       if (
-        total_chunk_count !==
-        expectedChunkCount
+        !Number.isInteger(chunk_size) ||
+        chunk_size <= 0
       ) {
         return res.status(400).json({
           error:
-            "total_chunk_count non corrisponde alla dimensione del video e al chunk_size"
+            "chunk_size deve essere un intero positivo"
         });
       }
+
+      if (
+        !Number.isInteger(total_chunk_count) ||
+        total_chunk_count <= 0
+      ) {
+        return res.status(400).json({
+          error:
+            "total_chunk_count deve essere un intero positivo"
+        });
+      }
+
+      const MAX_VIDEO_SIZE =
+        4 * 1024 * 1024 * 1024;
+
+      if (video_size > MAX_VIDEO_SIZE) {
+        return res.status(400).json({
+          error:
+            "Il video supera il limite massimo di 4 GB"
+        });
+      }
+
+      const MIN_CHUNK_SIZE =
+        5 * 1024 * 1024;
+
+      const MAX_CHUNK_SIZE =
+        64 * 1024 * 1024;
+
+      if (video_size < MIN_CHUNK_SIZE) {
+        if (
+          total_chunk_count !== 1 ||
+          chunk_size !== video_size
+        ) {
+          return res.status(400).json({
+            error:
+              "Per video inferiori a 5 MB è richiesto un unico chunk uguale alla dimensione del video"
+          });
+        }
+      } else {
+        if (
+          chunk_size < MIN_CHUNK_SIZE ||
+          chunk_size > MAX_CHUNK_SIZE
+        ) {
+          return res.status(400).json({
+            error:
+              "chunk_size deve essere compreso tra 5 MB e 64 MB"
+          });
+        }
+
+        if (total_chunk_count > 1000) {
+          return res.status(400).json({
+            error:
+              "Il numero massimo di chunk è 1000"
+          });
+        }
+
+        const expectedChunkCount =
+          Math.ceil(
+            video_size / chunk_size
+          );
+
+        if (
+          total_chunk_count !==
+          expectedChunkCount
+        ) {
+          return res.status(400).json({
+            error:
+              "total_chunk_count non corrisponde alla dimensione del video e al chunk_size"
+          });
+        }
+      }
+
+      sourceInfo = {
+        source: "FILE_UPLOAD",
+        video_size,
+        chunk_size,
+        total_chunk_count
+      };
     }
 
     /*
@@ -274,8 +340,13 @@ export default async function handler(req, res) {
 
     let safeTitle = "";
 
-    if (title !== undefined && title !== null) {
-      if (typeof title !== "string") {
+    if (
+      title !== undefined &&
+      title !== null
+    ) {
+      if (
+        typeof title !== "string"
+      ) {
         return res.status(400).json({
           error:
             "title deve essere una stringa"
@@ -297,20 +368,23 @@ export default async function handler(req, res) {
      *    del creator TikTok
      */
 
-    const creatorResponse = await fetch(
-      "https://open.tiktokapis.com/v2/post/publish/creator_info/query/",
-      {
-        method: "POST",
-        headers: {
-          Authorization:
-            "Bearer " + tokens.access_token,
-          "Content-Type":
-            "application/json; charset=UTF-8",
-          "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify({})
-      }
-    );
+    const creatorResponse =
+      await fetch(
+        "https://open.tiktokapis.com/v2/post/publish/creator_info/query/",
+        {
+          method: "POST",
+          headers: {
+            Authorization:
+              "Bearer " +
+              tokens.access_token,
+            "Content-Type":
+              "application/json; charset=UTF-8",
+            "Cache-Control":
+              "no-cache"
+          },
+          body: JSON.stringify({})
+        }
+      );
 
     const creatorData =
       await creatorResponse.json();
@@ -321,7 +395,8 @@ export default async function handler(req, res) {
       ).json({
         error:
           creatorData.error || {
-            code: "creator_info_error",
+            code:
+              "creator_info_error",
             message:
               "Impossibile recuperare le informazioni del creator TikTok"
           }
@@ -331,7 +406,8 @@ export default async function handler(req, res) {
     if (
       !creatorData.data ||
       !Array.isArray(
-        creatorData.data.privacy_level_options
+        creatorData.data
+          .privacy_level_options
       )
     ) {
       return res.status(502).json({
@@ -341,11 +417,11 @@ export default async function handler(req, res) {
     }
 
     const privacyOptions =
-      creatorData.data.privacy_level_options;
+      creatorData.data
+        .privacy_level_options;
 
     /*
-     * 9. La privacy scelta deve essere una
-     *    delle opzioni attualmente disponibili
+     * 9. La privacy scelta deve essere disponibile
      */
 
     if (
@@ -368,15 +444,18 @@ export default async function handler(req, res) {
 
     const finalDisableComment =
       disable_comment === true ||
-      creatorData.data.comment_disabled === true;
+      creatorData.data
+        .comment_disabled === true;
 
     const finalDisableDuet =
       disable_duet === true ||
-      creatorData.data.duet_disabled === true;
+      creatorData.data
+        .duet_disabled === true;
 
     const finalDisableStitch =
       disable_stitch === true ||
-      creatorData.data.stitch_disabled === true;
+      creatorData.data
+        .stitch_disabled === true;
 
     /*
      * 11. Costruisce post_info
@@ -384,22 +463,29 @@ export default async function handler(req, res) {
 
     const postInfo = {
       privacy_level,
+
       disable_comment:
         finalDisableComment,
+
       disable_duet:
         finalDisableDuet,
+
       disable_stitch:
         finalDisableStitch,
+
       brand_content_toggle:
         brand_content_toggle === true,
+
       brand_organic_toggle:
         brand_organic_toggle === true,
+
       is_aigc:
         is_aigc === true
     };
 
     if (safeTitle) {
-      postInfo.title = safeTitle;
+      postInfo.title =
+        safeTitle;
     }
 
     if (
@@ -416,29 +502,29 @@ export default async function handler(req, res) {
      * 12. Inizializza il Direct Post TikTok
      */
 
-    const response = await fetch(
-      "https://open.tiktokapis.com/v2/post/publish/video/init/",
-      {
-        method: "POST",
-        headers: {
-          Authorization:
-            "Bearer " + tokens.access_token,
-          "Content-Type":
-            "application/json; charset=UTF-8"
-        },
-        body: JSON.stringify({
-          post_info: postInfo,
-          source_info: {
-            source: "FILE_UPLOAD",
-            video_size,
-            chunk_size,
-            total_chunk_count
-          }
-        })
-      }
-    );
+    const response =
+      await fetch(
+        "https://open.tiktokapis.com/v2/post/publish/video/init/",
+        {
+          method: "POST",
+          headers: {
+            Authorization:
+              "Bearer " +
+              tokens.access_token,
 
-    const data = await response.json();
+            "Content-Type":
+              "application/json; charset=UTF-8"
+          },
+
+          body: JSON.stringify({
+            post_info: postInfo,
+            source_info: sourceInfo
+          })
+        }
+      );
+
+    const data =
+      await response.json();
 
     if (!response.ok) {
       return res.status(
@@ -446,7 +532,8 @@ export default async function handler(req, res) {
       ).json({
         error:
           data.error || {
-            code: "tiktok_error",
+            code:
+              "tiktok_error",
             message:
               "Errore TikTok durante l'inizializzazione del Direct Post"
           }
@@ -455,8 +542,7 @@ export default async function handler(req, res) {
 
     if (
       !data.data ||
-      !data.data.publish_id ||
-      !data.data.upload_url
+      !data.data.publish_id
     ) {
       return res.status(502).json({
         error:
@@ -465,24 +551,41 @@ export default async function handler(req, res) {
     }
 
     /*
-     * 13. Restituisce solo i dati necessari
-     *     al frontend.
+     * 13. Restituisce il risultato
      */
 
     return res.status(200).json({
       success: true,
+
       publish_id:
         data.data.publish_id,
+
       upload_url:
-        data.data.upload_url,
+        data.data.upload_url ||
+        null,
+
+      transfer_method:
+        sourceInfo.source,
+
       privacy_level,
+
       creator_username:
-        creatorData.data.creator_username ||
+        creatorData.data
+          .creator_username ||
         "",
+
+      creator_nickname:
+        creatorData.data
+          .creator_nickname ||
+        "",
+
       max_video_post_duration_sec:
         creatorData.data
           .max_video_post_duration_sec ||
-        null
+        null,
+
+      status:
+        "initialized"
     });
   } catch (error) {
     console.error(
