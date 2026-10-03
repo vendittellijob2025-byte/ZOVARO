@@ -22,7 +22,20 @@ const BACKGROUND_PATH =
 const WIDTH = 1080;
 const HEIGHT = 1920;
 
+/*
+  FINAL SCREEN
+
+  After the last product, ZOVARO shows the shop
+  background alone for a short moment.
+
+  Then the ZOVARO logo and final text appear
+  gradually while the shop fades to black.
+*/
+
 const FINAL_DURATION = 6;
+
+const FINAL_SHOP_HOLD = 2.5;
+const FINAL_LOGO_FADE = 2.0;
 
 const MIN_PRODUCTS = 6;
 const MAX_PRODUCTS = 20;
@@ -32,12 +45,10 @@ const TRANSITION_DURATION = 0.75;
 /*
   PRODUCT IMAGE OPACITY
 
-  The product image must remain FULLY OPAQUE.
+  FULL OPACITY.
 
-  This keeps the original white background of
-  the product image clearly visible and prevents
-  the product from blending into the futuristic
-  ZOVARO shop background.
+  The original white background of the product
+  image remains clearly visible.
 */
 
 const PRODUCT_OPACITY = 1.00;
@@ -51,8 +62,7 @@ const BACKGROUND_WHITE_OVERLAY = 0.10;
 /*
   TEXT MINI PANELS
 
-  These remain at 0.82 because this level was
-  already visually correct.
+  This opacity was visually approved.
 */
 
 const TEXT_BOX_COLOR = "white@0.82";
@@ -306,6 +316,14 @@ console.log(
 
 console.log(
   `Final ZOVARO screen: ${FINAL_DURATION} seconds`
+);
+
+console.log(
+  `Final shop-only hold: ${FINAL_SHOP_HOLD} seconds`
+);
+
+console.log(
+  `Final logo fade: ${FINAL_LOGO_FADE} seconds`
 );
 
 const selectedProducts =
@@ -627,18 +645,6 @@ for (
       `t=fill` +
       `[softbackground]`,
 
-    /*
-      PRODUCT IMAGE
-
-      FULL OPACITY.
-
-      The original white background of the product
-      image remains clearly visible.
-
-      The product therefore stays completely
-      separated from the futuristic shop background.
-    */
-
     `[0:v]` +
       `scale=900:880:force_original_aspect_ratio=decrease,` +
       `format=rgba,` +
@@ -649,6 +655,11 @@ for (
       `overlay=(W-w)/2:55:format=auto` +
       `[scene1]`,
 
+    /*
+      TEXT 1 — CATEGORY
+      Kept separated from the product title.
+    */
+
     `[scene1]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
@@ -656,13 +667,17 @@ for (
       `fontcolor=444444:` +
       `fontsize=28:` +
       `x=(w-text_w)/2:` +
-      `y=1015:` +
+      `y=1000:` +
       `line_spacing=8:` +
       `expansion=none:` +
       `box=1:` +
       `boxcolor=${TEXT_BOX_COLOR}:` +
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text1]`,
+
+    /*
+      TEXT 2 — PRODUCT TITLE
+    */
 
     `[text1]` +
       `drawtext=` +
@@ -671,13 +686,17 @@ for (
       `fontcolor=111111:` +
       `fontsize=46:` +
       `x=(w-text_w)/2:` +
-      `y=1090:` +
+      `y=1085:` +
       `line_spacing=12:` +
       `expansion=none:` +
       `box=1:` +
       `boxcolor=${TEXT_BOX_COLOR}:` +
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text2]`,
+
+    /*
+      TEXT 3 — MERCHANT
+    */
 
     `[text2]` +
       `drawtext=` +
@@ -686,13 +705,17 @@ for (
       `fontcolor=555555:` +
       `fontsize=26:` +
       `x=(w-text_w)/2:` +
-      `y=1270:` +
+      `y=1255:` +
       `line_spacing=8:` +
       `expansion=none:` +
       `box=1:` +
       `boxcolor=${TEXT_BOX_COLOR}:` +
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text3]`,
+
+    /*
+      TEXT 4 — CURRENT PRICE
+    */
 
     `[text3]` +
       `drawtext=` +
@@ -701,13 +724,20 @@ for (
       `fontcolor=111111:` +
       `fontsize=70:` +
       `x=(w-text_w)/2:` +
-      `y=1350:` +
+      `y=1345:` +
       `expansion=none:` +
       `box=1:` +
       `boxcolor=${TEXT_BOX_COLOR}:` +
       `boxborderw=${TEXT_BOX_BORDER}` +
       `[text4]`
   ];
+
+  /*
+    OLD PRICE
+
+    Moved lower so it no longer conflicts
+    with the current price or discount panel.
+  */
 
   if (oldPriceText) {
     filterParts.push(
@@ -717,8 +747,8 @@ for (
         `textfile='${oldPriceTextFile}':` +
         `fontcolor=777777:` +
         `fontsize=34:` +
-        `x=(w-text_w)/2-105:` +
-        `y=1470:` +
+        `x=(w-text_w)/2:` +
+        `y=1460:` +
         `expansion=none:` +
         `box=1:` +
         `boxcolor=${TEXT_BOX_COLOR}:` +
@@ -731,6 +761,12 @@ for (
     );
   }
 
+  /*
+    DISCOUNT
+
+    Clearly separated from OLD PRICE.
+  */
+
   if (discountText) {
     filterParts.push(
       `[text5]` +
@@ -739,8 +775,8 @@ for (
         `textfile='${discountTextFile}':` +
         `fontcolor=111111:` +
         `fontsize=38:` +
-        `x=(w-text_w)/2+105:` +
-        `y=1467:` +
+        `x=(w-text_w)/2:` +
+        `y=1545:` +
         `expansion=none:` +
         `box=1:` +
         `boxcolor=${TEXT_BOX_COLOR}:` +
@@ -818,6 +854,12 @@ for (
     `product-video-${index + 1}.mp4`
   );
 }
+
+/*
+  FINAL STATIC SCREEN
+
+  Used as the visual reference frame.
+*/
 
 const finalScreenPath =
   `${TEMP_DIR}/final-screen.png`;
@@ -899,6 +941,25 @@ await run(
 const finalVideoPath =
   `${TEMP_DIR}/final-screen-video.mp4`;
 
+/*
+  FINAL VIDEO
+
+  PHASE 1:
+  0 → 2.5 sec
+  Only the ZOVARO shop remains visible.
+
+  PHASE 2:
+  2.5 → 4.5 sec
+  The logo and final text fade in gently.
+  At the same time the shop background
+  dissolves progressively into black.
+
+  PHASE 3:
+  4.5 → 6 sec
+  Full black background with the
+  ZOVARO logo and white final text.
+*/
+
 await run(
   "ffmpeg",
   [
@@ -919,6 +980,15 @@ await run(
     "-filter_complex",
 
     [
+      /*
+        SHOP BACKGROUND
+
+        The shop stays completely visible
+        during the initial hold.
+
+        It then fades progressively to black.
+      */
+
       `[0:v]` +
         `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
         `crop=${WIDTH}:${HEIGHT},` +
@@ -929,16 +999,31 @@ await run(
         `h=${HEIGHT}:` +
         `color=white@0.10:` +
         `t=fill,` +
-        `fade=t=out:st=1.0:d=1.4:color=black` +
+        `fade=t=out:st=${FINAL_SHOP_HOLD.toFixed(3)}:d=${FINAL_LOGO_FADE.toFixed(3)}:color=black` +
         `[endingbg]`,
 
+      /*
+        LOGO
+
+        The logo is invisible during the shop-only hold
+        and then appears progressively.
+      */
+
       `[1:v]` +
-        `scale=720:720:force_original_aspect_ratio=decrease` +
+        `scale=720:720:force_original_aspect_ratio=decrease,` +
+        `format=rgba,` +
+        `fade=t=in:st=${FINAL_SHOP_HOLD.toFixed(3)}:d=${FINAL_LOGO_FADE.toFixed(3)}:alpha=1` +
         `[endinglogo]`,
 
       `[endingbg][endinglogo]` +
         `overlay=(W-w)/2:420:format=auto` +
         `[endingscene]`,
+
+      /*
+        FINAL HEADLINE
+
+        Same gentle fade as the logo.
+      */
 
       `[endingscene]` +
         `drawtext=` +
@@ -947,8 +1032,13 @@ await run(
         `fontcolor=white:` +
         `fontsize=52:` +
         `x=(w-text_w)/2:` +
-        `y=1240` +
+        `y=1240:` +
+        `alpha='if(lt(t\\,${FINAL_SHOP_HOLD.toFixed(3)})\\,0\\,min(1\\,(t-${FINAL_SHOP_HOLD.toFixed(3)})/${FINAL_LOGO_FADE.toFixed(3)}))'` +
         `[endingtext1]`,
+
+      /*
+        FINAL SUBTITLE
+      */
 
       `[endingtext1]` +
         `drawtext=` +
@@ -957,7 +1047,8 @@ await run(
         `fontcolor=white:` +
         `fontsize=32:` +
         `x=(w-text_w)/2:` +
-        `y=1325` +
+        `y=1325:` +
+        `alpha='if(lt(t\\,${FINAL_SHOP_HOLD.toFixed(3)})\\,0\\,min(1\\,(t-${FINAL_SHOP_HOLD.toFixed(3)})/${FINAL_LOGO_FADE.toFixed(3)}))'` +
         `[endingoutput]`
     ].join(";"),
 
@@ -1142,6 +1233,14 @@ console.log(
 );
 
 console.log(
+  `Final shop-only hold: ${FINAL_SHOP_HOLD}s`
+);
+
+console.log(
+  `Final logo fade: ${FINAL_LOGO_FADE}s`
+);
+
+console.log(
   `Transition duration: ${TRANSITION_DURATION.toFixed(2)}s`
 );
 
@@ -1163,6 +1262,10 @@ console.log(
 
 console.log(
   `Final concat: re-encoded to prevent frozen ending`
+);
+
+console.log(
+  `Text panels: vertically separated`
 );
 
 console.log(
