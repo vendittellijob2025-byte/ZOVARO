@@ -19,6 +19,10 @@ const products =
     : [];
 
 
+/* =========================================================
+   VALID PRODUCTS
+   ========================================================= */
+
 const validProducts =
   products.filter(product => {
 
@@ -146,63 +150,36 @@ function shuffle(items) {
 
 
 /* =========================================================
-   PRIORITY POOLS
+   PRODUCT POOLS
    ========================================================= */
 
 const discountedProducts =
-  validProducts.filter(
-    hasDiscount
+  shuffle(
+    validProducts.filter(
+      hasDiscount
+    )
   );
+
 
 const regularProducts =
-  validProducts.filter(
-    product =>
-      !hasDiscount(product)
+  shuffle(
+    validProducts.filter(
+      product =>
+        !hasDiscount(product)
+    )
   );
-
-
-/*
-  Prefer discounted products.
-
-  SalePrice must be > 0,
-  therefore products with
-  salePrice = 0 are never
-  treated as real deals.
-*/
-
-const preferredPool =
-  discountedProducts.length >= 8
-    ? discountedProducts
-    : [
-        ...discountedProducts,
-        ...regularProducts
-      ];
 
 
 /* =========================================================
-   ADVERTISER DIVERSITY
+   ADVERTISER GROUPS
    ========================================================= */
 
-const shuffledPool =
-  shuffle(
-    preferredPool
-  );
+const advertisers =
+  new Map();
 
-
-const selectedProducts = [];
-
-const usedAdvertisers =
-  new Set();
-
-
-/*
-  First pass:
-  try to select different
-  advertisers.
-*/
 
 for (
-  const product of shuffledPool
+  const product of validProducts
 ) {
 
   const advertiser =
@@ -214,20 +191,78 @@ for (
 
 
   if (
-    usedAdvertisers.has(
+    !advertisers.has(
       advertiser
     )
   ) {
+
+    advertisers.set(
+      advertiser,
+      []
+    );
+
+  }
+
+
+  advertisers
+    .get(advertiser)
+    .push(product);
+
+}
+
+
+/* =========================================================
+   SELECT ONE PRODUCT PER ADVERTISER
+   PRIORITIZING DISCOUNTS
+   ========================================================= */
+
+const selectedProducts = [];
+
+const usedProductIds =
+  new Set();
+
+
+for (
+  const [
+    advertiser,
+    advertiserProducts
+  ]
+  of advertisers
+) {
+
+  const discounted =
+    shuffle(
+      advertiserProducts.filter(
+        hasDiscount
+      )
+    );
+
+
+  const regular =
+    shuffle(
+      advertiserProducts.filter(
+        product =>
+          !hasDiscount(product)
+      )
+    );
+
+
+  const candidate =
+    discounted[0] ||
+    regular[0];
+
+
+  if (!candidate) {
     continue;
   }
 
 
   selectedProducts.push(
-    product
+    candidate
   );
 
-  usedAdvertisers.add(
-    advertiser
+  usedProductIds.add(
+    String(candidate.id)
   );
 
 
@@ -240,25 +275,68 @@ for (
 }
 
 
-/*
-  Second pass:
-  if fewer than 8 advertisers
-  are available, fill the
-  remaining positions with
-  other valid products.
-*/
+/* =========================================================
+   FILL REMAINING POSITIONS
+   PRIORITY:
+   1. DISCOUNTED PRODUCTS
+   2. REGULAR PRODUCTS
+   ========================================================= */
+
+const remainingDiscounted =
+  discountedProducts.filter(
+    product =>
+      !usedProductIds.has(
+        String(product.id)
+      )
+  );
+
+
+for (
+  const product
+  of remainingDiscounted
+) {
+
+  if (
+    selectedProducts.length >= 8
+  ) {
+    break;
+  }
+
+
+  selectedProducts.push(
+    product
+  );
+
+  usedProductIds.add(
+    String(product.id)
+  );
+
+}
+
+
+/* =========================================================
+   FILL WITH REGULAR PRODUCTS IF NECESSARY
+   ========================================================= */
 
 if (
   selectedProducts.length < 8
 ) {
 
   for (
-    const product of shuffledPool
+    const product
+    of regularProducts
   ) {
 
     if (
-      selectedProducts.includes(
-        product
+      selectedProducts.length >= 8
+    ) {
+      break;
+    }
+
+
+    if (
+      usedProductIds.has(
+        String(product.id)
       )
     ) {
       continue;
@@ -269,12 +347,9 @@ if (
       product
     );
 
-
-    if (
-      selectedProducts.length >= 8
-    ) {
-      break;
-    }
+    usedProductIds.add(
+      String(product.id)
+    );
 
   }
 
@@ -442,6 +517,17 @@ await fs.writeFile(
    LOG
    ========================================================= */
 
+const advertiserCount =
+  new Set(
+    selectedData.map(
+      product =>
+        product.advertiserId ||
+        product.advertiserName ||
+        "unknown"
+    )
+  ).size;
+
+
 console.log(
   "ZOVARO automatic selection completed."
 );
@@ -451,14 +537,7 @@ console.log(
 );
 
 console.log(
-  `Different advertisers used: ${new Set(
-    selectedData.map(
-      product =>
-        product.advertiserId ||
-        product.advertiserName ||
-        "unknown"
-    )
-  ).size}`
+  `Different advertisers used: ${advertiserCount}`
 );
 
 
