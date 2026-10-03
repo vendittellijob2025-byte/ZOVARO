@@ -13,13 +13,16 @@ const VIDEO_OUTPUT_PATH =
 const TEMP_DIR =
   ".zovaro-video-temp";
 
+const MUSIC_PATH =
+  "assets/ZOVARO_AFFILIATE.MP3";
+
 const WIDTH = 1080;
 const HEIGHT = 1920;
 
-const PRODUCT_DURATION = 4;
 const FINAL_DURATION = 6;
 
-const TOTAL_PRODUCTS = 6;
+const MIN_PRODUCTS = 6;
+const MAX_PRODUCTS = 20;
 
 async function run(command, args) {
   console.log(
@@ -32,7 +35,7 @@ async function run(command, args) {
       args,
       {
         maxBuffer:
-          10 * 1024 * 1024
+          20 * 1024 * 1024
       }
     );
 
@@ -45,6 +48,15 @@ async function run(command, args) {
   }
 
   return result;
+}
+
+async function fileExists(path) {
+  try {
+    await fs.access(path);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function downloadFile(
@@ -71,13 +83,43 @@ async function downloadFile(
   );
 }
 
-async function fileExists(path) {
-  try {
-    await fs.access(path);
-    return true;
-  } catch {
-    return false;
+function escapeDrawtext(value) {
+  return String(value ?? "")
+    .replace(/\\/g, "\\\\")
+    .replace(/:/g, "\\:")
+    .replace(/'/g, "\\'")
+    .replace(/\[/g, "\\[")
+    .replace(/\]/g, "\\]")
+    .replace(/%/g, "\\%");
+}
+
+function formatMoney(
+  value,
+  currency
+) {
+  const number =
+    Number(value);
+
+  if (!Number.isFinite(number)) {
+    return "";
   }
+
+  const code =
+    String(currency || "USD")
+      .toUpperCase();
+
+  const symbols = {
+    USD: "$",
+    EUR: "€",
+    GBP: "£",
+    CAD: "C$",
+    AUD: "A$"
+  };
+
+  const symbol =
+    symbols[code] || `${code} `;
+
+  return `${symbol}${number.toFixed(2)}`;
 }
 
 const selectedText =
@@ -89,7 +131,7 @@ const selectedText =
 const selectedData =
   JSON.parse(selectedText);
 
-const products =
+const allProducts =
   Array.isArray(
     selectedData.products
   )
@@ -97,18 +139,115 @@ const products =
     : [];
 
 if (
-  products.length <
-  TOTAL_PRODUCTS
+  allProducts.length <
+  MIN_PRODUCTS
 ) {
   throw new Error(
-    `ZOVARO requires ${TOTAL_PRODUCTS} products for the automatic TikTok video, but only ${products.length} were selected.`
+    `ZOVARO requires at least ${MIN_PRODUCTS} products for the automatic TikTok video, but only ${allProducts.length} were selected.`
   );
 }
 
+if (
+  !await fileExists(MUSIC_PATH)
+) {
+  throw new Error(
+    `ZOVARO Affiliate music not found: ${MUSIC_PATH}`
+  );
+}
+
+const musicProbe =
+  await run(
+    "ffprobe",
+    [
+      "-v",
+      "error",
+      "-show_entries",
+      "format=duration",
+      "-of",
+      "default=noprint_wrappers=1:nokey=1",
+      MUSIC_PATH
+    ]
+  );
+
+const musicDuration =
+  Number(
+    musicProbe.stdout.trim()
+  );
+
+if (
+  !Number.isFinite(musicDuration) ||
+  musicDuration <= FINAL_DURATION
+) {
+  throw new Error(
+    "Unable to determine a valid music duration."
+  );
+}
+
+console.log(
+  `Detected ZOVARO Affiliate music duration: ${musicDuration.toFixed(3)} seconds`
+);
+
+/*
+  Select the number of products automatically.
+
+  We aim for approximately 4 seconds
+  per product while keeping the final
+  ZOVARO screen at the end.
+
+  The exact duration of each product
+  is calculated afterward so that the
+  entire video matches the music exactly.
+*/
+
+let productCount =
+  Math.floor(
+    (musicDuration - FINAL_DURATION) / 4
+  );
+
+productCount =
+  Math.max(
+    MIN_PRODUCTS,
+    productCount
+  );
+
+productCount =
+  Math.min(
+    MAX_PRODUCTS,
+    productCount,
+    allProducts.length
+  );
+
+if (
+  productCount < MIN_PRODUCTS
+) {
+  throw new Error(
+    `Not enough selected products to build the automatic video. Required: ${MIN_PRODUCTS}. Available: ${allProducts.length}.`
+  );
+}
+
+const productDuration =
+  (
+    musicDuration -
+    FINAL_DURATION
+  ) /
+  productCount;
+
+console.log(
+  `Automatic product count: ${productCount}`
+);
+
+console.log(
+  `Automatic product duration: ${productDuration.toFixed(3)} seconds`
+);
+
+console.log(
+  `Final ZOVARO screen: ${FINAL_DURATION} seconds`
+);
+
 const selectedProducts =
-  products.slice(
+  allProducts.slice(
     0,
-    TOTAL_PRODUCTS
+    productCount
   );
 
 await fs.rm(
@@ -129,43 +268,6 @@ await fs.mkdir(
 console.log(
   `Preparing automatic TikTok video with ${selectedProducts.length} products.`
 );
-
-const productImages = [];
-
-for (
-  let index = 0;
-  index < selectedProducts.length;
-  index++
-) {
-  const product =
-    selectedProducts[index];
-
-  if (
-    !product.imageLink ||
-    typeof product.imageLink !==
-      "string"
-  ) {
-    throw new Error(
-      `Product ${index + 1} is missing imageLink.`
-    );
-  }
-
-  const outputPath =
-    `${TEMP_DIR}/product-${index + 1}.jpg`;
-
-  console.log(
-    `Downloading product ${index + 1}: ${product.title}`
-  );
-
-  await downloadFile(
-    product.imageLink,
-    outputPath
-  );
-
-  productImages.push(
-    outputPath
-  );
-}
 
 const logoCandidates = [
   "assets/zovaro-logo.png",
@@ -195,16 +297,380 @@ console.log(
   `Using ZOVARO logo: ${logoPath}`
 );
 
-const finalScreenPath =
-  `${TEMP_DIR}/final-screen.png`;
+const productVideoPaths = [];
+
+for (
+  let index = 0;
+  index < selectedProducts.length;
+  index++
+) {
+  const product =
+    selectedProducts[index];
+
+  if (
+    !product.imageLink ||
+    typeof product.imageLink !==
+      "string"
+  ) {
+    throw new Error(
+      `Product ${index + 1} is missing imageLink.`
+    );
+  }
+
+  const imagePath =
+    `${TEMP_DIR}/product-${index + 1}.jpg`;
+
+  const videoPath =
+    `${TEMP_DIR}/product-video-${index + 1}.mp4`;
+
+  const textDirectory =
+    `${TEMP_DIR}/text-${index + 1}`;
+
+  await fs.mkdir(
+    textDirectory,
+    {
+      recursive: true
+    }
+  );
+
+  console.log(
+    `Downloading product ${index + 1}: ${product.title}`
+  );
+
+  await downloadFile(
+    product.imageLink,
+    imagePath
+  );
+
+  const regularPrice =
+    Number(product.price);
+
+  const salePrice =
+    Number(product.salePrice);
+
+  const hasSale =
+    Number.isFinite(
+      regularPrice
+    ) &&
+    Number.isFinite(
+      salePrice
+    ) &&
+    salePrice <
+      regularPrice;
+
+  const displayedPrice =
+    hasSale
+      ? salePrice
+      : regularPrice;
+
+  const displayedOldPrice =
+    hasSale
+      ? regularPrice
+      : null;
+
+  const discountNumber =
+    Number(
+      product.discountPercentage
+    );
+
+  const displayedDiscount =
+    Number.isFinite(
+      discountNumber
+    ) &&
+    discountNumber > 0
+      ? discountNumber
+      : (
+          hasSale &&
+          regularPrice > 0
+            ? Math.round(
+                (
+                  (
+                    regularPrice -
+                    salePrice
+                  ) /
+                  regularPrice
+                ) *
+                100
+              )
+            : 0
+        );
+
+  const category =
+    String(
+      product.category ||
+      "Featured"
+    );
+
+  const name =
+    String(
+      product.title ||
+      product.brand ||
+      product.advertiserName ||
+      "ZOVARO Offer"
+    );
+
+  const merchant =
+    String(
+      product.advertiserName ||
+      "CJ Affiliate"
+    );
+
+  const description =
+    String(
+      product.description ||
+      (
+        product.brand
+          ? `${product.brand} — `
+          : ""
+      ) +
+      (
+        product.title ||
+        ""
+      )
+    );
+
+  const priceText =
+    formatMoney(
+      displayedPrice,
+      product.currency
+    );
+
+  const oldPriceText =
+    displayedOldPrice !== null
+      ? formatMoney(
+          displayedOldPrice,
+          product.currency
+        )
+      : "";
+
+  const discountText =
+    displayedDiscount > 0
+      ? `-${displayedDiscount}%`
+      : "";
+
+  /*
+    FFmpeg textfile is used here so
+    product descriptions and titles
+    containing punctuation do not
+    break the filter parser.
+  */
+
+  const categoryFile =
+    `${textDirectory}/category.txt`;
+
+  const nameFile =
+    `${textDirectory}/name.txt`;
+
+  const merchantFile =
+    `${textDirectory}/merchant.txt`;
+
+  const priceFile =
+    `${textDirectory}/price.txt`;
+
+  const oldPriceFile =
+    `${textDirectory}/old-price.txt`;
+
+  const discountFile =
+    `${textDirectory}/discount.txt`;
+
+  const descriptionFile =
+    `${textDirectory}/description.txt`;
+
+  await fs.writeFile(
+    categoryFile,
+    category,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    nameFile,
+    name,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    merchantFile,
+    merchant,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    priceFile,
+    priceText,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    oldPriceFile,
+    oldPriceText,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    discountFile,
+    discountText,
+    "utf8"
+  );
+
+  await fs.writeFile(
+    descriptionFile,
+    description,
+    "utf8"
+  );
+
+  /*
+    The product scene follows the same
+    information hierarchy used by the
+    ZOVARO product cards:
+
+    category
+    product name
+    merchant
+    current price
+    old price
+    discount
+
+    The description is added underneath
+    because it is part of the product
+    information displayed by the ZOVARO
+    product modal.
+  */
+
+  const filters = [
+    `scale=${WIDTH}:1120:force_original_aspect_ratio=decrease`,
+
+    `pad=${WIDTH}:1120:(ow-iw)/2:(oh-ih)/2:white`,
+
+    "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+      + `textfile='${escapeDrawtext(categoryFile)}':`
+      + "fontcolor=666666:"
+      + "fontsize=30:"
+      + "x=(w-text_w)/2:"
+      + "y=1160",
+
+    "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+      + `textfile='${escapeDrawtext(nameFile)}':`
+      + "fontcolor=111111:"
+      + "fontsize=40:"
+      + "x=(w-text_w)/2:"
+      + "y=1215:"
+      + "expansion=none",
+
+    "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+      + `textfile='${escapeDrawtext(merchantFile)}':`
+      + "fontcolor=666666:"
+      + "fontsize=27:"
+      + "x=(w-text_w)/2:"
+      + "y=1280:"
+      + "expansion=none",
+
+    "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+      + `textfile='${escapeDrawtext(priceFile)}':`
+      + "fontcolor=111111:"
+      + "fontsize=58:"
+      + "x=(w-text_w)/2:"
+      + "y=1360:"
+      + "expansion=none"
+  ];
+
+  if (oldPriceText) {
+    filters.push(
+      "drawtext="
+        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+        + `textfile='${escapeDrawtext(oldPriceFile)}':`
+        + "fontcolor=888888:"
+        + "fontsize=32:"
+        + "x=(w-text_w)/2-70:"
+        + "y=1425:"
+        + "expansion=none"
+    );
+  }
+
+  if (discountText) {
+    filters.push(
+      "drawtext="
+        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+        + `textfile='${escapeDrawtext(discountFile)}':`
+        + "fontcolor=111111:"
+        + "fontsize=32:"
+        + "x=(w-text_w)/2+70:"
+        + "y=1425:"
+        + "expansion=none"
+    );
+  }
+
+  filters.push(
+    "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+      + `textfile='${escapeDrawtext(descriptionFile)}':`
+      + "fontcolor=444444:"
+      + "fontsize=25:"
+      + "line_spacing=8:"
+      + "x=100:"
+      + "y=1490:"
+      + "text_w=880:"
+      + "text_h=260:"
+      + "expansion=none"
+  );
+
+  filters.push(
+    "format=yuv420p"
+  );
+
+  await run(
+    "ffmpeg",
+    [
+      "-y",
+
+      "-loop",
+      "1",
+
+      "-i",
+      imagePath,
+
+      "-t",
+      productDuration.toFixed(3),
+
+      "-vf",
+      filters.join(","),
+
+      "-r",
+      "30",
+
+      "-an",
+
+      "-c:v",
+      "libx264",
+
+      "-preset",
+      "veryfast",
+
+      "-crf",
+      "23",
+
+      videoPath
+    ]
+  );
+
+  productVideoPaths.push(
+    `product-video-${index + 1}.mp4`
+  );
+}
 
 /*
-  Create the final ZOVARO screen using
-  a single FFmpeg input.
+  Create final ZOVARO screen.
 
-  This avoids the previous filter graph
-  parsing problem.
+  The approved logo already contains
+  the copyright notice, therefore no
+  second copyright line is added.
 */
+
+const finalScreenPath =
+  `${TEMP_DIR}/final-screen.png`;
 
 await run(
   "ffmpeg",
@@ -238,16 +704,7 @@ await run(
         + "fontcolor=555555:"
         + "fontsize=32:"
         + "x=(w-text_w)/2:"
-        + "y=1290",
-
-      "drawtext="
-        + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-        + "text='Copyright 2026 ZOVARO. All rights reserved.':"
-        + "fontcolor=777777:"
-        + "fontsize=24:"
-        + "x=(w-text_w)/2:"
-        + "y=1810"
-
+        + "y=1290"
     ].join(","),
 
     "-frames:v",
@@ -259,71 +716,6 @@ await run(
     finalScreenPath
   ]
 );
-
-const productVideoPaths = [];
-
-for (
-  let index = 0;
-  index < productImages.length;
-  index++
-) {
-  const imagePath =
-    productImages[index];
-
-  const outputPath =
-    `${TEMP_DIR}/product-video-${index + 1}.mp4`;
-
-  await run(
-    "ffmpeg",
-    [
-      "-y",
-
-      "-loop",
-      "1",
-
-      "-i",
-      imagePath,
-
-      "-t",
-      String(PRODUCT_DURATION),
-
-      "-vf",
-
-      [
-        `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=decrease`,
-        `pad=${WIDTH}:${HEIGHT}:(ow-iw)/2:(oh-ih)/2:white`,
-        "format=yuv420p"
-      ].join(","),
-
-      "-r",
-      "30",
-
-      "-an",
-
-      "-c:v",
-      "libx264",
-
-      "-preset",
-      "veryfast",
-
-      "-crf",
-      "23",
-
-      outputPath
-    ]
-  );
-
-  /*
-    IMPORTANT:
-    concat.txt is inside TEMP_DIR,
-    therefore it must contain only the
-    filenames relative to that directory.
-  */
-
-  productVideoPaths.push(
-    `product-video-${index + 1}.mp4`
-  );
-}
 
 const finalVideoPath =
   `${TEMP_DIR}/final-screen-video.mp4`;
@@ -340,7 +732,7 @@ await run(
     finalScreenPath,
 
     "-t",
-    String(FINAL_DURATION),
+    FINAL_DURATION.toFixed(3),
 
     "-vf",
     "format=yuv420p",
@@ -420,49 +812,15 @@ await run(
   ]
 );
 
-const musicPath =
-  `${TEMP_DIR}/zovaro-music.wav`;
+/*
+  Add the real Suno music.
 
-const totalDuration =
-  TOTAL_PRODUCTS *
-    PRODUCT_DURATION +
-  FINAL_DURATION;
-
-await run(
-  "ffmpeg",
-  [
-    "-y",
-
-    "-f",
-    "lavfi",
-
-    "-i",
-    `sine=frequency=261.63:sample_rate=44100:duration=${totalDuration}`,
-
-    "-f",
-    "lavfi",
-
-    "-i",
-    `sine=frequency=329.63:sample_rate=44100:duration=${totalDuration}`,
-
-    "-f",
-    "lavfi",
-
-    "-i",
-    `sine=frequency=392.00:sample_rate=44100:duration=${totalDuration}`,
-
-    "-filter_complex",
-
-    "[0:a][1:a][2:a]"
-      + "amix=inputs=3:duration=longest:weights=0.18 0.12 0.10,"
-      + "volume=1.5",
-
-    "-c:a",
-    "pcm_s16le",
-
-    musicPath
-  ]
-);
+  The music is trimmed exactly to the
+  video duration. This means the video
+  always finishes at the end of the
+  selected song rather than leaving
+  silence or generating a synthetic tone.
+*/
 
 await run(
   "ffmpeg",
@@ -472,8 +830,11 @@ await run(
     "-i",
     silentVideoPath,
 
+    "-stream_loop",
+    "-1",
+
     "-i",
-    musicPath,
+    MUSIC_PATH,
 
     "-map",
     "0:v:0",
@@ -488,7 +849,10 @@ await run(
     "aac",
 
     "-b:a",
-    "128k",
+    "192k",
+
+    "-t",
+    musicDuration.toFixed(3),
 
     "-shortest",
 
@@ -497,6 +861,14 @@ await run(
 
     VIDEO_OUTPUT_PATH
   ]
+);
+
+await fs.rm(
+  TEMP_DIR,
+  {
+    recursive: true,
+    force: true
+  }
 );
 
 console.log("");
@@ -513,11 +885,15 @@ console.log(
 );
 
 console.log(
-  `Products: ${TOTAL_PRODUCTS}`
+  `Music duration: ${musicDuration.toFixed(3)}s`
 );
 
 console.log(
-  `Product duration: ${PRODUCT_DURATION}s`
+  `Products: ${productCount}`
+);
+
+console.log(
+  `Product duration: ${productDuration.toFixed(3)}s`
 );
 
 console.log(
@@ -525,7 +901,11 @@ console.log(
 );
 
 console.log(
-  `Total duration: ${totalDuration}s`
+  `Total video duration: ${musicDuration.toFixed(3)}s`
+);
+
+console.log(
+  `Music: ${MUSIC_PATH}`
 );
 
 console.log(
