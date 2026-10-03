@@ -27,6 +27,44 @@ const FINAL_DURATION = 6;
 const MIN_PRODUCTS = 6;
 const MAX_PRODUCTS = 20;
 
+/*
+  TRANSITION SETTINGS
+
+  Each product keeps the ZOVARO shop visible.
+  The product/text layer fades between products,
+  allowing the background to remain visible.
+*/
+
+const TRANSITION_DURATION = 0.75;
+
+/*
+  PRODUCT IMAGE OPACITY
+
+  The white background of the product image
+  remains visible but becomes softer.
+*/
+
+const PRODUCT_OPACITY = 0.72;
+
+/*
+  BACKGROUND VISIBILITY
+
+  Higher opacity means the futuristic ZOVARO
+  shop remains much more visible.
+*/
+
+const BACKGROUND_WHITE_OVERLAY = 0.10;
+
+/*
+  TEXT MINI PANELS
+
+  Each text element gets its own independent
+  translucent white rounded-style box.
+*/
+
+const TEXT_BOX_COLOR = "white@0.58";
+const TEXT_BOX_BORDER = 18;
+
 async function run(command, args) {
   console.log(
     `Running: ${command} ${args.join(" ")}`
@@ -504,8 +542,6 @@ for (
 
   /*
     TEXT FILES
-
-    Descriptions are intentionally removed.
   */
 
   const categoryFile =
@@ -602,28 +638,25 @@ for (
     );
 
   /*
-    VIDEO SCENE
+    PRODUCT VIDEO SCENE
 
-    NO WHITE PANELS.
+    The futuristic ZOVARO shop remains
+    strongly visible.
 
-    The ZOVARO futuristic shop remains
-    visible throughout the scene.
+    The product image is softened slightly,
+    preserving its white background while
+    allowing the ZOVARO shop to remain visible.
 
-    Product is positioned in the upper
-    portion.
-
-    Text is distributed vertically
-    through the lower portion with safe
-    margins for smartphone viewing.
+    Every text line has its OWN translucent
+    white mini-panel using drawtext box=1.
   */
 
   const filterParts = [
     /*
-      BACKGROUND
+      ZOVARO BACKGROUND
 
-      The futuristic ZOVARO shop is kept
-      visible but softened with a light
-      transparent white layer.
+      Only a very light white layer is used.
+      This keeps the shop much more visible.
     */
 
     `[1:v]` +
@@ -637,18 +670,21 @@ for (
       `y=0:` +
       `w=${WIDTH}:` +
       `h=${HEIGHT}:` +
-      `color=white@0.32:` +
+      `color=white@${BACKGROUND_WHITE_OVERLAY}:` +
       `t=fill` +
       `[softbackground]`,
 
     /*
-      PRODUCT
+      PRODUCT IMAGE
 
-      No white panel and no white pad.
+      Slight transparency so the white image
+      background does not dominate the scene.
     */
 
     `[0:v]` +
-      `scale=900:880:force_original_aspect_ratio=decrease` +
+      `scale=900:880:force_original_aspect_ratio=decrease,` +
+      `format=rgba,` +
+      `colorchannelmixer=aa=${PRODUCT_OPACITY}` +
       `[product]`,
 
     `[softbackground][product]` +
@@ -658,7 +694,7 @@ for (
     /*
       CATEGORY
 
-      Safe upper text position.
+      Individual translucent white mini-panel.
     */
 
     `[scene1]` +
@@ -668,16 +704,18 @@ for (
       `fontcolor=444444:` +
       `fontsize=28:` +
       `x=(w-text_w)/2:` +
-      `y=1030:` +
+      `y=1015:` +
       `line_spacing=8:` +
-      `expansion=none` +
+      `expansion=none:` +
+      `box=1:` +
+      `boxcolor=${TEXT_BOX_COLOR}:` +
+      `boxborderw=${TEXT_BOX_BORDER}` +
       `[text1]`,
 
     /*
       PRODUCT TITLE
 
-      Smaller width and larger vertical
-      separation to avoid phone-edge crowding.
+      Individual translucent white mini-panel.
     */
 
     `[text1]` +
@@ -687,31 +725,39 @@ for (
       `fontcolor=111111:` +
       `fontsize=46:` +
       `x=(w-text_w)/2:` +
-      `y=1095:` +
+      `y=1090:` +
       `line_spacing=12:` +
-      `expansion=none` +
+      `expansion=none:` +
+      `box=1:` +
+      `boxcolor=${TEXT_BOX_COLOR}:` +
+      `boxborderw=${TEXT_BOX_BORDER}` +
       `[text2]`,
 
     /*
-      AFFILIATE / MERCHANT
+      MERCHANT / AFFILIATE
+
+      Individual translucent white mini-panel.
     */
 
     `[text2]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${merchantText}':` +
-      `fontcolor=666666:` +
+      `fontcolor=555555:` +
       `fontsize=26:` +
       `x=(w-text_w)/2:` +
-      `y=1280:` +
+      `y=1270:` +
       `line_spacing=8:` +
-      `expansion=none` +
+      `expansion=none:` +
+      `box=1:` +
+      `boxcolor=${TEXT_BOX_COLOR}:` +
+      `boxborderw=${TEXT_BOX_BORDER}` +
       `[text3]`,
 
     /*
       CURRENT PRICE
 
-      Strong visual separation.
+      Larger individual mini-panel.
     */
 
     `[text3]` +
@@ -721,15 +767,16 @@ for (
       `fontcolor=111111:` +
       `fontsize=70:` +
       `x=(w-text_w)/2:` +
-      `y=1360:` +
-      `expansion=none` +
+      `y=1350:` +
+      `expansion=none:` +
+      `box=1:` +
+      `boxcolor=${TEXT_BOX_COLOR}:` +
+      `boxborderw=${TEXT_BOX_BORDER}` +
       `[text4]`
   ];
 
   /*
     OLD PRICE
-
-    Positioned safely below the main price.
   */
 
   if (oldPriceText) {
@@ -738,11 +785,14 @@ for (
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
         `textfile='${oldPriceTextFile}':` +
-        `fontcolor=888888:` +
+        `fontcolor=777777:` +
         `fontsize=34:` +
-        `x=(w-text_w)/2-95:` +
-        `y=1480:` +
-        `expansion=none` +
+        `x=(w-text_w)/2-105:` +
+        `y=1470:` +
+        `expansion=none:` +
+        `box=1:` +
+        `boxcolor=${TEXT_BOX_COLOR}:` +
+        `boxborderw=${TEXT_BOX_BORDER}` +
         `[text5]`
     );
   } else {
@@ -753,9 +803,6 @@ for (
 
   /*
     DISCOUNT
-
-    Kept beside the old price but with
-    sufficient space from the screen edges.
   */
 
   if (discountText) {
@@ -766,9 +813,12 @@ for (
         `textfile='${discountTextFile}':` +
         `fontcolor=111111:` +
         `fontsize=38:` +
-        `x=(w-text_w)/2+95:` +
-        `y=1477:` +
-        `expansion=none` +
+        `x=(w-text_w)/2+105:` +
+        `y=1467:` +
+        `expansion=none:` +
+        `box=1:` +
+        `boxcolor=${TEXT_BOX_COLOR}:` +
+        `boxborderw=${TEXT_BOX_BORDER}` +
         `[text6]`
     );
   } else {
@@ -778,11 +828,29 @@ for (
   }
 
   /*
-    FINAL VIDEO FORMAT
+    PRODUCT SCENE FADE
+
+    The final part of every product scene
+    fades the PRODUCT/TEXT CONTENT to
+    transparency while the ZOVARO background
+    remains visible.
+
+    This makes the shop naturally appear between
+    products.
   */
 
   filterParts.push(
-    `[text6]format=yuv420p[output]`
+    `[text6]` +
+      `format=rgba,` +
+      `fade=t=out:st=${Math.max(
+        0,
+        productDuration - TRANSITION_DURATION
+      ).toFixed(3)}:d=${TRANSITION_DURATION}:alpha=1` +
+      `[outputrgba]`
+  );
+
+  filterParts.push(
+    `[outputrgba]format=yuv420p[output]`
   );
 
   await run(
@@ -837,11 +905,14 @@ for (
 /*
   FINAL ZOVARO SCREEN
 
-  The ZOVARO Shop background replaces
-  the previous white background.
+  The futuristic shop starts visible.
 
-  The background remains softly visible
-  and the logo is placed above it.
+  During the first part of the final screen,
+  the logo and white text remain visible.
+
+  The SHOP BACKGROUND then rapidly fades
+  to BLACK while the logo and white text
+  remain visible.
 */
 
 const finalScreenPath =
@@ -874,7 +945,7 @@ await run(
         `[finalbg]`,
 
       /*
-        Soft transparent white layer.
+        Slightly stronger shop visibility.
       */
 
       `[finalbg]` +
@@ -883,7 +954,7 @@ await run(
         `y=0:` +
         `w=${WIDTH}:` +
         `h=${HEIGHT}:` +
-        `color=white@0.32:` +
+        `color=white@0.10:` +
         `t=fill` +
         `[finalsoft]`,
 
@@ -900,14 +971,14 @@ await run(
         `[finalscene]`,
 
       /*
-        Final text.
+        FINAL TEXT — WHITE
       */
 
       `[finalscene]` +
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
         `text='DISCOVER. SHARE. SHOP.':` +
-        `fontcolor=111111:` +
+        `fontcolor=white:` +
         `fontsize=52:` +
         `x=(w-text_w)/2:` +
         `y=1240` +
@@ -917,7 +988,7 @@ await run(
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
         `text='Products and deals through ZOVARO':` +
-        `fontcolor=555555:` +
+        `fontcolor=white:` +
         `fontsize=32:` +
         `x=(w-text_w)/2:` +
         `y=1325` +
@@ -940,6 +1011,17 @@ await run(
 const finalVideoPath =
   `${TEMP_DIR}/final-screen-video.mp4`;
 
+/*
+  FINAL ANIMATION
+
+  The shop background fades quickly toward
+  black during the final screen.
+
+  Logo and white text remain visible because
+  the fade is applied to the background BEFORE
+  the logo/text overlays.
+*/
+
 await run(
   "ffmpeg",
   [
@@ -949,13 +1031,73 @@ await run(
     "1",
 
     "-i",
-    finalScreenPath,
+    BACKGROUND_PATH,
+
+    "-i",
+    logoPath,
+
+    "-filter_complex",
+
+    [
+      /*
+        Background.
+      */
+
+      `[0:v]` +
+        `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,` +
+        `crop=${WIDTH}:${HEIGHT},` +
+        `drawbox=` +
+        `x=0:` +
+        `y=0:` +
+        `w=${WIDTH}:` +
+        `h=${HEIGHT}:` +
+        `color=white@0.10:` +
+        `t=fill,` +
+        `fade=t=out:st=1.0:d=1.4:color=black` +
+        `[endingbg]`,
+
+      /*
+        Logo.
+      */
+
+      `[1:v]` +
+        `scale=720:720:force_original_aspect_ratio=decrease` +
+        `[endinglogo]`,
+
+      `[endingbg][endinglogo]` +
+        `overlay=(W-w)/2:420:format=auto` +
+        `[endingscene]`,
+
+      /*
+        WHITE FINAL TEXT
+      */
+
+      `[endingscene]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+        `text='DISCOVER. SHARE. SHOP.':` +
+        `fontcolor=white:` +
+        `fontsize=52:` +
+        `x=(w-text_w)/2:` +
+        `y=1240` +
+        `[endingtext1]`,
+
+      `[endingtext1]` +
+        `drawtext=` +
+        `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
+        `text='Products and deals through ZOVARO':` +
+        `fontcolor=white:` +
+        `fontsize=32:` +
+        `x=(w-text_w)/2:` +
+        `y=1325` +
+        `[endingoutput]`
+    ].join(";"),
+
+    "-map",
+    "[endingoutput]",
 
     "-t",
     FINAL_DURATION.toFixed(3),
-
-    "-vf",
-    "format=yuv420p",
 
     "-r",
     "30",
@@ -1113,6 +1255,18 @@ console.log(
 
 console.log(
   `Final screen duration: ${FINAL_DURATION}s`
+);
+
+console.log(
+  `Transition duration: ${TRANSITION_DURATION.toFixed(2)}s`
+);
+
+console.log(
+  `Product image opacity: ${PRODUCT_OPACITY}`
+);
+
+console.log(
+  `Background white overlay: ${BACKGROUND_WHITE_OVERLAY}`
 );
 
 console.log(
