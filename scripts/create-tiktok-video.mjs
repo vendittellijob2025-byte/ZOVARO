@@ -16,6 +16,9 @@ const TEMP_DIR =
 const MUSIC_PATH =
   "assets/ZOVARO_AFFILIATE.MP3";
 
+const BACKGROUND_PATH =
+  "assets/Negozio futuristico ZOVARO Shop.png";
+
 const WIDTH = 1080;
 const HEIGHT = 1920;
 
@@ -91,6 +94,13 @@ function escapeDrawtext(value) {
     .replace(/\[/g, "\\[")
     .replace(/\]/g, "\\]")
     .replace(/%/g, "\\%");
+}
+
+function escapeFilterPath(value) {
+  return String(value ?? "")
+    .replace(/\\/g, "\\\\")
+    .replace(/:/g, "\\:")
+    .replace(/'/g, "\\'");
 }
 
 function formatMoney(
@@ -215,6 +225,14 @@ if (
 ) {
   throw new Error(
     `ZOVARO Affiliate music not found: ${MUSIC_PATH}`
+  );
+}
+
+if (
+  !await fileExists(BACKGROUND_PATH)
+) {
+  throw new Error(
+    `ZOVARO background not found: ${BACKGROUND_PATH}`
   );
 }
 
@@ -348,6 +366,10 @@ console.log(
   `Using ZOVARO logo: ${logoPath}`
 );
 
+console.log(
+  `Using ZOVARO background: ${BACKGROUND_PATH}`
+);
+
 const productVideoPaths = [];
 
 for (
@@ -385,20 +407,14 @@ for (
   );
 
   /*
-    IMPORTANT:
+    ALL PRODUCT TEXT MUST BE ENGLISH.
 
-    The ZOVARO catalog is translated to English
-    before products enter the video pipeline.
+    Translation is performed earlier in the
+    catalog pipeline.
 
-    The video therefore uses:
-
-    englishCategory
-    englishTitle
-    englishDescription
-
-    Original fields are used only as fallback
-    in case an older catalog entry does not yet
-    contain the English translation.
+    The video uses the translated fields first
+    and only falls back to the original fields
+    for older catalog entries.
   */
 
   const category =
@@ -423,32 +439,20 @@ for (
       "CJ Affiliate"
     );
 
-  const description =
-    String(
-      product.englishDescription ||
-      product.description ||
-      (
-        product.brand
-          ? `${product.brand} — `
-          : ""
-      ) +
-      (
-        product.englishTitle ||
-        product.title ||
-        ""
-      )
-    );
+  /*
+    DESCRIPTION IS INTENTIONALLY NOT USED
+    IN THE VIDEO.
+
+    This gives more visual space to the
+    product title, merchant and pricing.
+  */
 
   console.log(
-    `Preparing product ${index + 1} in English: ${name}`
+    `Preparing product ${index + 1}: ${name}`
   );
 
   console.log(
     `English category: ${category}`
-  );
-
-  console.log(
-    `English description: ${description}`
   );
 
   console.log(
@@ -461,12 +465,11 @@ for (
   );
 
   /*
-    Match the same product pricing logic
-    used by the ZOVARO web catalog.
+    Pricing logic.
 
-    Sale prices must be positive.
-    A zero sale price is never treated
-    as a real discount.
+    A sale price must be positive.
+    Zero is never considered a valid
+    sale price.
   */
 
   const regularPrice =
@@ -568,9 +571,6 @@ for (
   const discountFile =
     `${textDirectory}/discount.txt`;
 
-  const descriptionFile =
-    `${textDirectory}/description.txt`;
-
   await fs.writeFile(
     categoryFile,
     wrapText(
@@ -584,7 +584,7 @@ for (
     nameFile,
     wrapText(
       name,
-      42
+      36
     ),
     "utf8"
   );
@@ -593,7 +593,7 @@ for (
     merchantFile,
     wrapText(
       merchant,
-      50
+      45
     ),
     "utf8"
   );
@@ -616,108 +616,226 @@ for (
     "utf8"
   );
 
-  await fs.writeFile(
-    descriptionFile,
-    wrapText(
-      description,
-      62
-    ),
-    "utf8"
-  );
-
   /*
-    Complete 1080x1920 scene.
+    COMPLETE 1080x1920 SCENE
 
-    Product image occupies the upper part.
-    English product information is placed
-    below the image.
+    Background:
+    ZOVARO Shop image at low opacity.
+
+    Product:
+    Large and centered in the upper area.
+
+    Text:
+    Category
+    Title
+    Merchant
+    Price
+    Old price
+    Discount
+
+    Description:
+    REMOVED.
   */
 
-  const filters = [
-    `scale=${WIDTH}:980:force_original_aspect_ratio=decrease`,
+  const backgroundInput =
+    escapeFilterPath(
+      BACKGROUND_PATH
+    );
 
-    `pad=${WIDTH}:${HEIGHT}:(ow-iw)/2:40:white`,
+  const categoryText =
+    escapeFilterPath(
+      categoryFile
+    );
 
-    "drawtext="
+  const nameText =
+    escapeFilterPath(
+      nameFile
+    );
+
+  const merchantText =
+    escapeFilterPath(
+      merchantFile
+    );
+
+  const priceTextFile =
+    escapeFilterPath(
+      priceFile
+    );
+
+  const oldPriceTextFile =
+    escapeFilterPath(
+      oldPriceFile
+    );
+
+  const discountTextFile =
+    escapeFilterPath(
+      discountFile
+    );
+
+  const filterParts = [
+
+    /*
+      Background image.
+
+      It fills the entire 1080x1920 frame.
+      Opacity is intentionally low so it
+      behaves like a premium visual backdrop
+      rather than competing with the product.
+    */
+
+    `[1:v]`
+      + `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,`
+      + `crop=${WIDTH}:${HEIGHT},`
+      + "format=rgba,"
+      + "colorchannelmixer=aa=0.18"
+      + `[background]`,
+
+    /*
+      Product image.
+
+      The product is kept large while preserving
+      its original proportions.
+    */
+
+    `[0:v]`
+      + `scale=980:900:force_original_aspect_ratio=decrease,`
+      + "format=rgba"
+      + `[product]`,
+
+    /*
+      Product centered near the top.
+    */
+
+    `[background][product]`
+      + "overlay=(W-w)/2:70:format=auto"
+      + "[scene1]",
+
+    /*
+      Semi-transparent white information panel.
+
+      This keeps the text readable while the
+      ZOVARO Shop background remains visible.
+    */
+
+    "color=c=white@0.84:s=1080x820:d=1"
+      + "[panel]",
+
+    `[scene1][panel]`
+      + "overlay=0:1040:format=auto"
+      + "[scene2]`,
+
+    /*
+      Category.
+    */
+
+    "[scene2]"
+      + "drawtext="
       + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + `textfile='${escapeDrawtext(categoryFile)}':`
-      + "fontcolor=666666:"
-      + "fontsize=30:"
+      + `textfile='${categoryText}':`
+      + "fontcolor=555555:"
+      + "fontsize=28:"
       + "x=(w-text_w)/2:"
-      + "y=1060:"
+      + "y=1080:"
       + "line_spacing=4:"
-      + "expansion=none",
-
-    "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-      + `textfile='${escapeDrawtext(nameFile)}':`
-      + "fontcolor=111111:"
-      + "fontsize=40:"
-      + "x=(w-text_w)/2:"
-      + "y=1110:"
-      + "line_spacing=5:"
-      + "expansion=none",
-
-    "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + `textfile='${escapeDrawtext(merchantFile)}':`
-      + "fontcolor=666666:"
-      + "fontsize=27:"
-      + "x=(w-text_w)/2:"
-      + "y=1195:"
-      + "line_spacing=4:"
-      + "expansion=none",
-
-    "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-      + `textfile='${escapeDrawtext(priceFile)}':`
-      + "fontcolor=111111:"
-      + "fontsize=58:"
-      + "x=(w-text_w)/2:"
-      + "y=1260:"
       + "expansion=none"
+      + "[text1]",
+
+    /*
+      Large English product title.
+    */
+
+    "[text1]"
+      + "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+      + `textfile='${nameText}':`
+      + "fontcolor=111111:"
+      + "fontsize=48:"
+      + "x=(w-text_w)/2:"
+      + "y=1135:"
+      + "line_spacing=6:"
+      + "expansion=none"
+      + "[text2]",
+
+    /*
+      Merchant / affiliate.
+    */
+
+    "[text2]"
+      + "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+      + `textfile='${merchantText}':`
+      + "fontcolor=666666:"
+      + "fontsize=28:"
+      + "x=(w-text_w)/2:"
+      + "y=1270:"
+      + "line_spacing=4:"
+      + "expansion=none"
+      + "[text3]",
+
+    /*
+      Large current price.
+    */
+
+    "[text3]"
+      + "drawtext="
+      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
+      + `textfile='${priceTextFile}':`
+      + "fontcolor=111111:"
+      + "fontsize=70:"
+      + "x=(w-text_w)/2:"
+      + "y=1330:"
+      + "expansion=none"
+      + "[text4]"
   ];
 
+  /*
+    Old price.
+  */
+
   if (oldPriceText) {
-    filters.push(
-      "drawtext="
+    filterParts.push(
+      "[text4]"
+        + "drawtext="
         + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-        + `textfile='${escapeDrawtext(oldPriceFile)}':`
+        + `textfile='${oldPriceTextFile}':`
         + "fontcolor=888888:"
-        + "fontsize=32:"
-        + "x=(w-text_w)/2-70:"
-        + "y=1335:"
+        + "fontsize=36:"
+        + "x=(w-text_w)/2-100:"
+        + "y=1435:"
         + "expansion=none"
+        + "[text5]"
+    );
+  } else {
+    filterParts.push(
+      "[text4]null[text5]"
     );
   }
+
+  /*
+    Discount.
+  */
 
   if (discountText) {
-    filters.push(
-      "drawtext="
+    filterParts.push(
+      "[text5]"
+        + "drawtext="
         + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:"
-        + `textfile='${escapeDrawtext(discountFile)}':`
+        + `textfile='${discountTextFile}':`
         + "fontcolor=111111:"
-        + "fontsize=32:"
-        + "x=(w-text_w)/2+70:"
-        + "y=1335:"
+        + "fontsize=38:"
+        + "x=(w-text_w)/2+100:"
+        + "y=1435:"
         + "expansion=none"
+        + "[text6]"
+    );
+  } else {
+    filterParts.push(
+      "[text5]null[text6]"
     );
   }
 
-  filters.push(
-    "drawtext="
-      + "fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-      + `textfile='${escapeDrawtext(descriptionFile)}':`
-      + "fontcolor=444444:"
-      + "fontsize=25:"
-      + "line_spacing=8:"
-      + "x=100:"
-      + "y=1410:"
-      + "expansion=none"
-  );
-
-  filters.push(
-    "format=yuv420p"
+  filterParts.push(
+    "[text6]format=yuv420p[output]"
   );
 
   await run(
@@ -731,11 +849,20 @@ for (
       "-i",
       imagePath,
 
+      "-loop",
+      "1",
+
+      "-i",
+      BACKGROUND_PATH,
+
       "-t",
       productDuration.toFixed(3),
 
-      "-vf",
-      filters.join(","),
+      "-filter_complex",
+      filterParts.join(";"),
+
+      "-map",
+      "[output]",
 
       "-r",
       "30",
@@ -969,6 +1096,7 @@ await fs.rm(
 );
 
 console.log("");
+
 console.log(
   "========================================"
 );
@@ -1003,6 +1131,10 @@ console.log(
 
 console.log(
   `Music: ${MUSIC_PATH}`
+);
+
+console.log(
+  `Background: ${BACKGROUND_PATH}`
 );
 
 console.log(
