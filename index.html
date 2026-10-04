@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -975,80 +974,6 @@ footer{
 
 
 /* =========================
-   LANGUAGE SELECTOR
-   ========================= */
-
-.language-control{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  margin:0 auto 18px;
-  width:max-content;
-  padding:7px 9px;
-  border:1px solid rgba(55,201,255,.35);
-  border-radius:10px;
-  background:rgba(2,12,29,.72);
-  box-shadow:0 0 18px rgba(0,120,255,.08)
-}
-
-.language-control label{
-  color:#7fcfff;
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:.12em
-}
-
-.language-control select{
-  min-width:135px;
-  padding:6px 9px;
-  border:1px solid rgba(65,169,235,.35);
-  border-radius:7px;
-  background:#061124;
-  color:#e8f6ff;
-  outline:none;
-  cursor:pointer;
-  font-size:11px;
-  font-weight:700
-}
-
-.language-control select:focus{
-  border-color:#35d8ff;
-  box-shadow:0 0 0 3px rgba(53,216,255,.08)
-}
-
-body[dir="rtl"] .language-control{
-  direction:rtl
-}
-
-body[dir="rtl"] .main-card-content,
-body[dir="rtl"] .wish-card-content,
-body[dir="rtl"] .modal-body,
-body[dir="rtl"] .form-panel{
-  text-align:right
-}
-
-body[dir="rtl"] .section-head{
-  direction:rtl
-}
-
-body[dir="rtl"] .price-row{
-  direction:rtl
-}
-
-@media(max-width:480px){
-  .language-control{
-    width:100%;
-    max-width:260px;
-  }
-
-  .language-control select{
-    min-width:120px;
-  }
-}
-
-
-/* =========================
    RESPONSIVE
    ========================= */
 
@@ -1180,59 +1105,106 @@ body[dir="rtl"] .price-row{
 
 }
 
-</style>
 
+/* ZOVARO LANGUAGE SELECTOR — fixed, no layout impact */
+#zovaroLanguageWrap{
+  position:fixed;
+  top:16px;
+  right:18px;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+}
+#zovaroLanguage{
+  appearance:none;
+  -webkit-appearance:none;
+  min-width:128px;
+  padding:8px 30px 8px 11px;
+  border:1px solid rgba(53,216,255,.55);
+  border-radius:9px;
+  background:rgba(2,8,22,.92);
+  color:#e8f8ff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.02em;
+  cursor:pointer;
+  outline:none;
+  box-shadow:0 6px 24px rgba(0,0,0,.28);
+}
+#zovaroLanguage:focus{border-color:#35d8ff;box-shadow:0 0 0 2px rgba(53,216,255,.14),0 6px 24px rgba(0,0,0,.28)}
+#zovaroLanguageWrap:after{
+  content:"⌄";
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-53%);
+  pointer-events:none;
+  color:#8fe9ff;
+  font-size:13px;
+}
+html[dir="rtl"] #zovaroLanguageWrap{right:auto;left:18px}
+html[dir="rtl"] #zovaroLanguage{padding:8px 11px 8px 30px;direction:rtl}
+html[dir="rtl"] #zovaroLanguageWrap:after{right:auto;left:10px}
+@media(max-width:600px){
+  #zovaroLanguageWrap{top:10px;right:10px}
+  #zovaroLanguage{min-width:112px;padding:7px 27px 7px 9px;font-size:10px}
+  html[dir="rtl"] #zovaroLanguageWrap{right:auto;left:10px}
+}
+
+</style>
 </head>
+
 
 <body>
 
+
+
+<div id="zovaroLanguageWrap" data-zovaro-no-translate="1" aria-label="Language selector">
+  <select id="zovaroLanguage" aria-label="Language">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="pt">Português</option>
+    <option value="nl">Nederlands</option>
+    <option value="pl">Polski</option>
+    <option value="tr">Türkçe</option>
+    <option value="ru">Русский</option>
+    <option value="uk">Українська</option>
+    <option value="ar">العربية</option>
+    <option value="he">עברית</option>
+    <option value="fa">فارسی</option>
+    <option value="ur">اردو</option>
+    <option value="hi">हिन्दी</option>
+    <option value="bn">বাংলা</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="zh">中文</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="th">ไทย</option>
+    <option value="sv">Svenska</option>
+    <option value="da">Dansk</option>
+    <option value="no">Norsk</option>
+    <option value="fi">Suomi</option>
+    <option value="cs">Čeština</option>
+    <option value="ro">Română</option>
+    <option value="hu">Magyar</option>
+    <option value="el">Ελληνικά</option>
+  </select>
+</div>
+
 <main class="page" id="home">
+
 
 <section class="brand-area">
 
-  <div class="language-control" data-zovaro-no-translate>
-    <label for="zovaroLanguage">LANGUAGE</label>
-    <select id="zovaroLanguage" aria-label="Select language">
-      <option value="en">English</option>
-      <option value="es">Español</option>
-      <option value="it">Italiano</option>
-      <option value="fr">Français</option>
-      <option value="de">Deutsch</option>
-      <option value="pt">Português</option>
-      <option value="nl">Nederlands</option>
-      <option value="pl">Polski</option>
-      <option value="tr">Türkçe</option>
-      <option value="ru">Русский</option>
-      <option value="uk">Українська</option>
-      <option value="ar">العربية</option>
-      <option value="he">עברית</option>
-      <option value="fa">فارسی</option>
-      <option value="ur">اردو</option>
-      <option value="hi">हिन्दी</option>
-      <option value="bn">বাংলা</option>
-      <option value="ja">日本語</option>
-      <option value="ko">한국어</option>
-      <option value="zh">中文</option>
-      <option value="vi">Tiếng Việt</option>
-      <option value="id">Bahasa Indonesia</option>
-      <option value="th">ไทย</option>
-      <option value="sv">Svenska</option>
-      <option value="da">Dansk</option>
-      <option value="no">Norsk</option>
-      <option value="fi">Suomi</option>
-      <option value="cs">Čeština</option>
-      <option value="ro">Română</option>
-      <option value="hu">Magyar</option>
-      <option value="el">Ελληνικά</option>
-    </select>
-  </div>
-
-<img
-class="brand-logo"
-src="assets/zovaro-logo.png"
-alt="ZOVARO"
-
->
+  <img
+    class="brand-logo"
+    src="assets/zovaro-logo.png"
+    alt="ZOVARO"
+  >
 
   <h1 class="brand-name">
     ZOVARO
@@ -1244,6 +1216,7 @@ alt="ZOVARO"
 
 </section>
 
+
 <section
   id="homeView"
   class="view"
@@ -1251,274 +1224,269 @@ alt="ZOVARO"
 
   <div class="home-grid">
 
-```
-<a
-  href="#"
-  class="main-card shop-card"
-  id="openShop"
->
 
-  <div class="main-card-content">
+    <a
+      href="#"
+      class="main-card shop-card"
+      id="openShop"
+    >
 
-    <div class="main-card-copy">
+      <div class="main-card-content">
 
-      <p class="main-card-brand">
-        ZOVARO
-      </p>
+        <div class="main-card-copy">
 
-      <h2 class="main-card-title">
-        SHOP
-      </h2>
+          <p class="main-card-brand">
+            ZOVARO
+          </p>
 
-      <p class="main-card-subtitle">
-        New &amp; Used
-      </p>
+          <h2 class="main-card-title">
+            SHOP
+          </h2>
 
-      <p class="main-card-description">
-        Buy what you need from around the world —
-        electronics, fashion, beauty, perfumes,
-        cosmetics, automotive, sports and more.
-        Discover products for every need,
-        all in one place.
-      </p>
+          <p class="main-card-subtitle">
+            New &amp; Used
+          </p>
 
-    </div>
+          <p class="main-card-description">
+            Buy what you need from around the world —
+            electronics, fashion, beauty, perfumes,
+            cosmetics, automotive, sports and more.
+            Discover products for every need,
+            all in one place.
+          </p>
 
-  </div>
-
-  <span class="main-card-arrow">
-    →
-  </span>
-
-</a>
-
-
-<a
-  href="#"
-  class="main-card job-card"
-  id="openJobs"
->
-
-  <div class="main-card-content">
-
-    <div class="main-card-copy">
-
-      <p class="main-card-brand">
-        ZOVARO
-      </p>
-
-      <h2 class="main-card-title">
-        JOB
-      </h2>
-
-      <p class="main-card-subtitle">
-        Urgent Jobs &amp; Workers
-      </p>
-
-      <p class="main-card-description">
-        Find the opportunity that matches
-        your skills — or find the right person
-        for your business. Connect with jobs,
-        workers and new opportunities
-        on ZOVARO.
-      </p>
-
-    </div>
-
-  </div>
-
-  <span class="main-card-arrow">
-    →
-  </span>
-
-</a>
-
-
-<section
-  class="main-card wish-card"
-  aria-labelledby="wishTitle"
->
-
-  <div class="wish-card-content">
-
-    <div class="wish-card-copy">
-
-      <span class="wish-kicker">
-        ZOVARO SMART REQUEST
-      </span>
-
-      <h2
-        class="wish-title"
-        id="wishTitle"
-      >
-        MAKE A WISH
-      </h2>
-
-      <p class="wish-description">
-        Tell ZOVARO exactly what you are looking for —
-        a product to buy, a job to find, a job to offer,
-        or something you want to sell.
-      </p>
-
-
-      <form
-        class="wish-form"
-        id="wishForm"
-      >
-
-        <input
-          class="wish-input"
-          id="wishInput"
-          type="text"
-          autocomplete="off"
-          maxlength="300"
-          placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
-        >
-
-        <button
-          class="wish-submit"
-          type="submit"
-        >
-          SEND WISH
-        </button>
-
-      </form>
-
-
-      <div class="wish-foot">
-
-        <svg
-          class="wish-lamp"
-          viewBox="0 0 64 64"
-          role="img"
-          aria-label="Wish lamp"
-        >
-
-          <defs>
-
-            <linearGradient
-              id="wishLampGradient"
-              x1="0"
-              y1="0"
-              x2="1"
-              y2="1"
-            >
-
-              <stop
-                offset="0%"
-                stop-color="#FFD86A"
-              />
-
-              <stop
-                offset="48%"
-                stop-color="#35D6FF"
-              />
-
-              <stop
-                offset="100%"
-                stop-color="#087CFF"
-              />
-
-            </linearGradient>
-
-
-            <filter
-              id="wishGlow"
-              x="-50%"
-              y="-50%"
-              width="200%"
-              height="200%"
-            >
-
-              <feGaussianBlur
-                stdDeviation="2"
-                result="blur"
-              />
-
-              <feMerge>
-
-                <feMergeNode
-                  in="blur"
-                />
-
-                <feMergeNode
-                  in="SourceGraphic"
-                />
-
-              </feMerge>
-
-            </filter>
-
-          </defs>
-
-
-          <path
-            d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
-            fill="rgba(255,216,106,.12)"
-            stroke="url(#wishLampGradient)"
-            stroke-width="2.4"
-            filter="url(#wishGlow)"
-          />
-
-          <path
-            d="M27 48h10M28.5 53h7M31 58h2"
-            stroke="#FFD86A"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-
-          <path
-            d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
-            stroke="#FFD86A"
-            stroke-width="1.8"
-            stroke-linecap="round"
-          />
-
-        </svg>
-
-
-        <p class="wish-help">
-          One sentence is enough.
-          ZOVARO's smart matching system
-          will be connected next.
-        </p>
+        </div>
 
       </div>
 
+      <span class="main-card-arrow">
+        →
+      </span>
 
-      <p
-        class="wish-status"
-        id="wishStatus"
-        aria-live="polite"
-      ></p>
+    </a>
 
-    </div>
+
+    <a
+      href="#"
+      class="main-card job-card"
+      id="openJobs"
+    >
+
+      <div class="main-card-content">
+
+        <div class="main-card-copy">
+
+          <p class="main-card-brand">
+            ZOVARO
+          </p>
+
+          <h2 class="main-card-title">
+            JOB
+          </h2>
+
+          <p class="main-card-subtitle">
+            Urgent Jobs &amp; Workers
+          </p>
+
+          <p class="main-card-description">
+            Find the opportunity that matches
+            your skills — or find the right person
+            for your business. Connect with jobs,
+            workers and new opportunities
+            on ZOVARO.
+          </p>
+
+        </div>
+
+      </div>
+
+      <span class="main-card-arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <section
+      class="main-card wish-card"
+      aria-labelledby="wishTitle"
+    >
+
+      <div class="wish-card-content">
+
+        <div class="wish-card-copy">
+
+          <span class="wish-kicker">
+            ZOVARO SMART REQUEST
+          </span>
+
+          <h2
+            class="wish-title"
+            id="wishTitle"
+          >
+            MAKE A WISH
+          </h2>
+
+          <p class="wish-description">
+            Tell ZOVARO exactly what you are looking for —
+            a product to buy, a job to find, a job to offer,
+            or something you want to sell.
+          </p>
+
+
+          <form
+            class="wish-form"
+            id="wishForm"
+          >
+
+            <input
+              class="wish-input"
+              id="wishInput"
+              type="text"
+              autocomplete="off"
+              maxlength="300"
+              placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
+            >
+
+            <button
+              class="wish-submit"
+              type="submit"
+            >
+              SEND WISH
+            </button>
+
+          </form>
+
+
+          <div class="wish-foot">
+
+            <svg
+              class="wish-lamp"
+              viewBox="0 0 64 64"
+              role="img"
+              aria-label="Wish lamp"
+            >
+
+              <defs>
+
+                <linearGradient
+                  id="wishLampGradient"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="1"
+                >
+
+                  <stop
+                    offset="0%"
+                    stop-color="#FFD86A"
+                  />
+
+                  <stop
+                    offset="48%"
+                    stop-color="#35D6FF"
+                  />
+
+                  <stop
+                    offset="100%"
+                    stop-color="#087CFF"
+                  />
+
+                </linearGradient>
+
+
+                <filter
+                  id="wishGlow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
+
+                  <feGaussianBlur
+                    stdDeviation="2"
+                    result="blur"
+                  />
+
+                  <feMerge>
+
+                    <feMergeNode
+                      in="blur"
+                    />
+
+                    <feMergeNode
+                      in="SourceGraphic"
+                    />
+
+                  </feMerge>
+
+                </filter>
+
+              </defs>
+
+
+              <path
+                d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
+                fill="rgba(255,216,106,.12)"
+                stroke="url(#wishLampGradient)"
+                stroke-width="2.4"
+                filter="url(#wishGlow)"
+              />
+
+              <path
+                d="M27 48h10M28.5 53h7M31 58h2"
+                stroke="#FFD86A"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
+                stroke="#FFD86A"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+
+            </svg>
+
+
+            <p class="wish-help">
+              One sentence is enough.
+              ZOVARO's smart matching system
+              will be connected next.
+            </p>
+
+          </div>
+
+
+          <p
+            class="wish-status"
+            id="wishStatus"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </div>
 
 </section>
-```
 
-  </div>
-
-</section>
 
 <section
   id="shopChoiceView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromShopChoice"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromShopChoice"
+  >
+    ← Back
   </button>
 
   <h2 class="choice-title">
@@ -1531,75 +1499,69 @@ id="backFromShopChoice"
 
   <div class="choice-grid">
 
-```
-<a
-  href="#"
-  class="choice-card"
-  id="openBuyProducts"
->
+    <a
+      href="#"
+      class="choice-card"
+      id="openBuyProducts"
+    >
 
-  <img
-    class="choice-card-logo"
-    src="assets/zovaro-logo.png"
-    alt=""
-  >
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
 
-  <h2>
-    BUY PRODUCTS
-  </h2>
+      <h2>
+        BUY PRODUCTS
+      </h2>
 
-  <p>
-    Discover new products and offers
-    from participating merchants.
-  </p>
+      <p>
+        Discover new products and offers
+        from participating merchants.
+      </p>
 
-</a>
+    </a>
 
 
-<a
-  href="#"
-  class="choice-card"
-  id="openSellProducts"
->
+    <a
+      href="#"
+      class="choice-card"
+      id="openSellProducts"
+    >
 
-  <img
-    class="choice-card-logo"
-    src="assets/zovaro-logo.png"
-    alt=""
-  >
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
 
-  <h2>
-    SELL PRODUCTS
-  </h2>
+      <h2>
+        SELL PRODUCTS
+      </h2>
 
-  <p>
-    List your used products and connect
-    with people looking to buy.
-  </p>
+      <p>
+        List your used products and connect
+        with people looking to buy.
+      </p>
 
-</a>
-```
+    </a>
 
   </div>
 
 </section>
+
 
 <section
   id="jobChoiceView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromJobChoice"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromJobChoice"
+  >
+    ← Back
   </button>
 
   <h2 class="choice-title">
@@ -1612,90 +1574,88 @@ id="backFromJobChoice"
 
   <div class="choice-grid">
 
-```
-<a
-  href="#"
-  class="choice-card"
-  id="openLookingJob"
->
+    <a
+      href="#"
+      class="choice-card"
+      id="openLookingJob"
+    >
 
-  <img
-    class="choice-card-logo"
-    src="assets/zovaro-logo.png"
-    alt=""
-  >
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
 
-  <h2>
-    LOOKING FOR A JOB
-  </h2>
+      <h2>
+        LOOKING FOR A JOB
+      </h2>
 
-  <p>
-    Find work opportunities and connect
-    with employers.
-  </p>
+      <p>
+        Find work opportunities and connect
+        with employers.
+      </p>
 
-</a>
+    </a>
 
 
-<a
-  href="#"
-  class="choice-card"
-  id="openOfferJob"
->
+    <a
+      href="#"
+      class="choice-card"
+      id="openOfferJob"
+    >
 
-  <img
-    class="choice-card-logo"
-    src="assets/zovaro-logo.png"
-    alt=""
-  >
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
 
-  <h2>
-    OFFER A JOB
-  </h2>
+      <h2>
+        OFFER A JOB
+      </h2>
 
-  <p>
-    Tell people you are hiring
-    and find the right worker.
-  </p>
+      <p>
+        Tell people you are hiring
+        and find the right worker.
+      </p>
 
-</a>
-```
+    </a>
 
   </div>
 
 </section>
+
 
 <section
   id="buyProductsView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromBuy"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromBuy"
+  >
+    ← Back
   </button>
+
 
   <p class="eyebrow">
     ZOVARO SHOP
   </p>
 
+
   <h2 class="catalog-title">
     BUY PRODUCTS
   </h2>
+
 
   <p class="catalog-subtitle">
     Discover new products and offers
     from participating merchants around
     the world.
   </p>
+
 
   <!-- SHOP SEARCH -->
 
@@ -1706,25 +1666,24 @@ id="backFromBuy"
     aria-label="Search ZOVARO products"
   >
 
-```
-<input
-  id="searchInput"
-  class="shop-search-input"
-  type="search"
-  autocomplete="off"
-  placeholder="What are you looking for? e.g. Versace perfume, padel racket, children's clothes"
->
+    <input
+      id="searchInput"
+      class="shop-search-input"
+      type="search"
+      autocomplete="off"
+      placeholder="What are you looking for? e.g. Versace perfume, padel racket, children's clothes"
+    >
 
-<button
-  class="shop-search-button"
-  type="submit"
-  aria-label="Search"
->
-  ⌕
-</button>
-```
+    <button
+      class="shop-search-button"
+      type="submit"
+      aria-label="Search"
+    >
+      ⌕
+    </button>
 
   </form>
+
 
   <!-- CATEGORIES -->
 
@@ -1733,323 +1692,315 @@ id="backFromBuy"
     id="categoryGrid"
   ></div>
 
+
   <section
     class="section"
     id="trending"
   >
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <span class="eyebrow">
-      ZOVARO SHOP
-    </span>
+        <span class="eyebrow">
+          ZOVARO SHOP
+        </span>
 
-    <h2 id="resultsTitle">
-      Trending Products
-    </h2>
+        <h2 id="resultsTitle">
+          Trending Products
+        </h2>
 
-  </div>
-
-
-  <button
-    type="button"
-    id="viewAllBtn"
-    class="text-btn"
-  >
-    View all →
-  </button>
-
-</div>
+      </div>
 
 
-<div
-  id="resultsMeta"
-  class="results-meta"
-></div>
+      <button
+        type="button"
+        id="viewAllBtn"
+        class="text-btn"
+      >
+        View all →
+      </button>
+
+    </div>
 
 
-<select
-  id="sortSelect"
-  aria-label="Sort products"
->
-
-  <option value="default">
-    Sort by
-  </option>
-
-  <option value="price-asc">
-    Price: Low to High
-  </option>
-
-  <option value="price-desc">
-    Price: High to Low
-  </option>
-
-  <option value="discount-desc">
-    Biggest Discount
-  </option>
-
-</select>
+    <div
+      id="resultsMeta"
+      class="results-meta"
+    ></div>
 
 
-<div
-  id="trendingGrid"
-  class="product-grid"
-></div>
-```
+    <select
+      id="sortSelect"
+      aria-label="Sort products"
+    >
+
+      <option value="default">
+        Sort by
+      </option>
+
+      <option value="price-asc">
+        Price: Low to High
+      </option>
+
+      <option value="price-desc">
+        Price: High to Low
+      </option>
+
+      <option value="discount-desc">
+        Biggest Discount
+      </option>
+
+    </select>
+
+
+    <div
+      id="trendingGrid"
+      class="product-grid"
+    ></div>
 
   </section>
+
 
   <section
     class="section"
     id="deals"
   >
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <span class="eyebrow">
-      BEST OFFERS
-    </span>
+        <span class="eyebrow">
+          BEST OFFERS
+        </span>
 
-    <h2>
-      Best Deals
-    </h2>
+        <h2>
+          Best Deals
+        </h2>
 
-  </div>
+      </div>
 
-</div>
+    </div>
 
 
-<div
-  id="dealGrid"
-  class="product-grid"
-></div>
-```
+    <div
+      id="dealGrid"
+      class="product-grid"
+    ></div>
 
   </section>
+
 
   <section
     class="section"
     id="new"
   >
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <span class="eyebrow">
-      JUST IN
-    </span>
+        <span class="eyebrow">
+          JUST IN
+        </span>
 
-    <h2>
-      New Arrivals
-    </h2>
+        <h2>
+          New Arrivals
+        </h2>
 
-  </div>
+      </div>
 
-</div>
+    </div>
 
 
-<div
-  id="newGrid"
-  class="product-grid"
-></div>
-```
+    <div
+      id="newGrid"
+      class="product-grid"
+    ></div>
 
   </section>
 
 </section>
+
 
 <section
   id="sellProductsView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromSell"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromSell"
+  >
+    ← Back
   </button>
+
 
   <h2 class="choice-title">
     SELL PRODUCTS
   </h2>
+
 
   <p class="choice-subtitle">
     List your used product for free.
     ZOVARO charges 0% commission on the sale.
   </p>
 
+
   <div class="form-panel">
 
-```
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="sellTitle">
-    Product title
-  </label>
+      <label for="sellTitle">
+        Product title
+      </label>
 
-  <input
-    id="sellTitle"
-    type="text"
-    placeholder="What are you selling?"
-  >
+      <input
+        id="sellTitle"
+        type="text"
+        placeholder="What are you selling?"
+      >
 
-</div>
-
-
-<div class="form-group">
-
-  <label for="sellCategory">
-    Category
-  </label>
-
-  <select
-    id="sellCategory"
-  >
-
-    <option>
-      Electronics
-    </option>
-
-    <option>
-      Sports
-    </option>
-
-    <option>
-      Fashion
-    </option>
-
-    <option>
-      Home
-    </option>
-
-    <option>
-      Beauty
-    </option>
-
-    <option>
-      Kids
-    </option>
-
-    <option>
-      Other
-    </option>
-
-  </select>
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="sellPrice">
-    Price
-  </label>
+      <label for="sellCategory">
+        Category
+      </label>
 
-  <input
-    id="sellPrice"
-    type="number"
-    min="0"
-    step="0.01"
-    placeholder="Price"
-  >
+      <select
+        id="sellCategory"
+      >
 
-</div>
+        <option>
+          Electronics
+        </option>
 
+        <option>
+          Sports
+        </option>
 
-<div class="form-group">
+        <option>
+          Fashion
+        </option>
 
-  <label for="sellLocation">
-    Location
-  </label>
+        <option>
+          Home
+        </option>
 
-  <input
-    id="sellLocation"
-    type="text"
-    placeholder="City / Country"
-  >
+        <option>
+          Beauty
+        </option>
 
-</div>
+        <option>
+          Kids
+        </option>
 
+        <option>
+          Other
+        </option>
 
-<div class="form-group">
+      </select>
 
-  <label for="sellDescription">
-    Description
-  </label>
-
-  <textarea
-    id="sellDescription"
-    placeholder="Describe your product..."
-  ></textarea>
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="sellContact">
-    Contact
-  </label>
+      <label for="sellPrice">
+        Price
+      </label>
 
-  <input
-    id="sellContact"
-    type="text"
-    placeholder="How can buyers contact you?"
-  >
+      <input
+        id="sellPrice"
+        type="number"
+        min="0"
+        step="0.01"
+        placeholder="Price"
+      >
 
-</div>
+    </div>
 
 
-<button
-  type="button"
-  class="form-submit"
-  id="sellSubmit"
->
-  SUBMIT PRODUCT
-</button>
-```
+    <div class="form-group">
+
+      <label for="sellLocation">
+        Location
+      </label>
+
+      <input
+        id="sellLocation"
+        type="text"
+        placeholder="City / Country"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="sellDescription">
+        Description
+      </label>
+
+      <textarea
+        id="sellDescription"
+        placeholder="Describe your product..."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="sellContact">
+        Contact
+      </label>
+
+      <input
+        id="sellContact"
+        type="text"
+        placeholder="How can buyers contact you?"
+      >
+
+    </div>
+
+
+    <button
+      type="button"
+      class="form-submit"
+      id="sellSubmit"
+    >
+      SUBMIT PRODUCT
+    </button>
 
   </div>
 
 </section>
+
 
 <section
   id="lookingJobView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromLookingJob"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromLookingJob"
+  >
+    ← Back
   </button>
+
 
   <h2 class="choice-title">
     LOOKING FOR A JOB
   </h2>
+
 
   <p class="choice-subtitle">
     This section will contain the ZOVARO
@@ -2058,157 +2009,155 @@ id="backFromLookingJob"
 
 </section>
 
+
 <section
   id="offerJobView"
   class="view hidden"
 >
 
-<button
-type="button"
-class="back-button"
-id="backFromOfferJob"
-
->
-
-```
-← Back
-```
-
+  <button
+    type="button"
+    class="back-button"
+    id="backFromOfferJob"
+  >
+    ← Back
   </button>
+
 
   <h2 class="choice-title">
     OFFER A JOB
   </h2>
+
 
   <p class="choice-subtitle">
     Publish your opportunity and find
     the right worker.
   </p>
 
+
   <div class="form-panel">
 
-```
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="jobTitle">
-    Job title
-  </label>
+      <label for="jobTitle">
+        Job title
+      </label>
 
-  <input
-    id="jobTitle"
-    type="text"
-    placeholder="What position are you offering?"
-  >
+      <input
+        id="jobTitle"
+        type="text"
+        placeholder="What position are you offering?"
+      >
 
-</div>
-
-
-<div class="form-group">
-
-  <label for="jobCompany">
-    Company / Employer
-  </label>
-
-  <input
-    id="jobCompany"
-    type="text"
-    placeholder="Company or employer name"
-  >
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="jobType">
-    Job type
-  </label>
+      <label for="jobCompany">
+        Company / Employer
+      </label>
 
-  <select
-    id="jobType"
-  >
+      <input
+        id="jobCompany"
+        type="text"
+        placeholder="Company or employer name"
+      >
 
-    <option>
-      Full-time
-    </option>
-
-    <option>
-      Part-time
-    </option>
-
-    <option>
-      Freelance
-    </option>
-
-    <option>
-      Remote
-    </option>
-
-    <option>
-      Temporary
-    </option>
-
-  </select>
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-  <label for="jobLocation">
-    Location
-  </label>
+      <label for="jobType">
+        Job type
+      </label>
 
-  <input
-    id="jobLocation"
-    type="text"
-    placeholder="City / Country / Remote"
-  >
+      <select
+        id="jobType"
+      >
 
-</div>
+        <option>
+          Full-time
+        </option>
 
+        <option>
+          Part-time
+        </option>
 
-<div class="form-group">
+        <option>
+          Freelance
+        </option>
 
-  <label for="jobDescription">
-    Job description
-  </label>
+        <option>
+          Remote
+        </option>
 
-  <textarea
-    id="jobDescription"
-    placeholder="Describe the job..."
-  ></textarea>
+        <option>
+          Temporary
+        </option>
 
-</div>
+      </select>
 
-
-<div class="form-group">
-
-  <label for="jobContact">
-    Contact
-  </label>
-
-  <input
-    id="jobContact"
-    type="text"
-    placeholder="How can applicants contact you?"
-  >
-
-</div>
+    </div>
 
 
-<button
-  type="button"
-  class="form-submit"
-  id="jobSubmit"
->
-  SUBMIT JOB
-</button>
-```
+    <div class="form-group">
+
+      <label for="jobLocation">
+        Location
+      </label>
+
+      <input
+        id="jobLocation"
+        type="text"
+        placeholder="City / Country / Remote"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobDescription">
+        Job description
+      </label>
+
+      <textarea
+        id="jobDescription"
+        placeholder="Describe the job..."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobContact">
+        Contact
+      </label>
+
+      <input
+        id="jobContact"
+        type="text"
+        placeholder="How can applicants contact you?"
+      >
+
+    </div>
+
+
+    <button
+      type="button"
+      class="form-submit"
+      id="jobSubmit"
+    >
+      SUBMIT JOB
+    </button>
 
   </div>
 
 </section>
+
 
 <section
   id="tiktok"
@@ -2217,66 +2166,65 @@ id="backFromOfferJob"
 
   <div class="tiktok-card">
 
-```
-<div class="tiktok-copy">
+    <div class="tiktok-copy">
 
-  <span class="tiktok-label">
-    TIKTOK
-  </span>
+      <span class="tiktok-label">
+        TIKTOK
+      </span>
 
-  <h3>
-    Connect TikTok to ZOVARO
-  </h3>
+      <h3>
+        Connect TikTok to ZOVARO
+      </h3>
 
-  <p>
-    Connect your TikTok account to allow
-    ZOVARO to prepare and share
-    promotional content.
-  </p>
+      <p>
+        Connect your TikTok account to allow
+        ZOVARO to prepare and share
+        promotional content.
+      </p>
 
-  <p class="tiktok-consent">
-    By continuing, you authorize ZOVARO
-    to access the permissions requested
-    during TikTok authorization.
-  </p>
+      <p class="tiktok-consent">
+        By continuing, you authorize ZOVARO
+        to access the permissions requested
+        during TikTok authorization.
+      </p>
 
-  <a
-    class="tiktok-connect-btn"
-    href="https://zovaro.vercel.app/api/tiktok-auth"
-  >
-    CONNECT TIKTOK
-  </a>
+      <a
+        class="tiktok-connect-btn"
+        href="https://zovaro.vercel.app/api/tiktok-auth"
+      >
+        CONNECT TIKTOK
+      </a>
 
-</div>
+    </div>
 
 
-<div
-  class="tiktok-visual"
-  aria-hidden="true"
->
+    <div
+      class="tiktok-visual"
+      aria-hidden="true"
+    >
 
-  <div class="tiktok-circle">
-    ♪
-  </div>
+      <div class="tiktok-circle">
+        ♪
+      </div>
 
-  <div class="tiktok-visual-card">
+      <div class="tiktok-visual-card">
 
-    <strong>
-      ZOVARO → TikTok
-    </strong>
+        <strong>
+          ZOVARO → TikTok
+        </strong>
 
-    <small>
-      Authorized content sharing
-    </small>
+        <small>
+          Authorized content sharing
+        </small>
 
-  </div>
+      </div>
 
-</div>
-```
+    </div>
 
   </div>
 
 </section>
+
 
 <div
   class="modal"
@@ -2289,6 +2237,7 @@ id="backFromOfferJob"
     data-close
   ></div>
 
+
   <article
     class="modal-card"
     role="dialog"
@@ -2296,77 +2245,77 @@ id="backFromOfferJob"
     aria-labelledby="modalName"
   >
 
-```
-<button
-  class="modal-close"
-  data-close
-  type="button"
-  aria-label="Close"
->
-  ×
-</button>
+    <button
+      class="modal-close"
+      data-close
+      type="button"
+      aria-label="Close"
+    >
+      ×
+    </button>
 
 
-<img
-  id="modalImage"
-  alt=""
->
+    <img
+      id="modalImage"
+      alt=""
+    >
 
 
-<div class="modal-body">
+    <div class="modal-body">
 
-  <span
-    class="eyebrow"
-    id="modalCategory"
-  ></span>
-
-
-  <h2 id="modalName"></h2>
+      <span
+        class="eyebrow"
+        id="modalCategory"
+      ></span>
 
 
-  <p
-    class="merchant"
-    id="modalMerchant"
-  ></p>
+      <h2 id="modalName"></h2>
 
 
-  <div class="price-row">
-
-    <strong id="modalPrice"></strong>
-
-    <del id="modalOldPrice"></del>
-
-    <span id="modalDiscount"></span>
-
-  </div>
+      <p
+        class="merchant"
+        id="modalMerchant"
+      ></p>
 
 
-  <p id="modalDescription"></p>
+      <div class="price-row">
+
+        <strong id="modalPrice"></strong>
+
+        <del id="modalOldPrice"></del>
+
+        <span id="modalDiscount"></span>
+
+      </div>
 
 
-  <a
-    class="deal-btn"
-    id="modalLink"
-    href="#"
-  >
-    VIEW DEAL ↗
-  </a>
+      <p id="modalDescription"></p>
 
 
-  <small class="demo-note">
-    Affiliate link — you will continue
-    to the merchant's website to complete
-    your purchase.
-  </small>
+      <a
+        class="deal-btn"
+        id="modalLink"
+        href="#"
+      >
+        VIEW DEAL ↗
+      </a>
 
-</div>
-```
+
+      <small class="demo-note">
+        Affiliate link — you will continue
+        to the merchant's website to complete
+        your purchase.
+      </small>
+
+    </div>
 
   </article>
 
 </div>
 
+
 </main>
+
 
 <footer>
 
@@ -2380,22 +2329,22 @@ id="backFromOfferJob"
 
   <div style="margin-top:8px;">
 
-```
-©
-<span id="year"></span>
+    ©
+    <span id="year"></span>
 
-ZOVARO. All rights reserved.
-```
+    ZOVARO. All rights reserved.
 
   </div>
 
 </footer>
+
 
 <script src="products.js"></script>
 
 <script src="app.js"></script>
 
 <script src="app-cj-loader.js"></script>
+
 
 <script>
 
@@ -2657,54 +2606,28 @@ if(
 
 
 /* =====================================================
-   CATEGORY DISPLAY RULE — PERMANENT
-   CATEGORIES MUST NEVER CONTAIN "Explore".
-   This also applies to dynamically added categories.
+   CATEGORY DISPLAY RULE
+   PERMANENT RULE: category names NEVER contain "Explore".
+   This also applies to categories added dynamically later.
    ===================================================== */
-
 function normalizeCategoryLabels(){
-
-  const grid = document.getElementById("categoryGrid");
-
-  if(!grid){
-    return;
-  }
-
-  grid.querySelectorAll("button").forEach(button => {
-
-    const original = button.textContent.trim();
-
-    const clean = original
+  const grid=document.getElementById("categoryGrid");
+  if(!grid)return;
+  grid.querySelectorAll("button").forEach(button=>{
+    const clean=(button.textContent||"")
       .replace(/\bExplore\b/gi,"")
       .replace(/\s{2,}/g," ")
       .trim();
-
-    if(clean && clean !== original){
-      button.textContent = clean;
-    }
-
-    button.setAttribute("data-zovaro-category-clean","true");
-
+    if(clean)button.textContent=clean;
   });
 }
 
-const categoryGrid = document.getElementById("categoryGrid");
-
+const categoryGrid=document.getElementById("categoryGrid");
 if(categoryGrid){
-
   normalizeCategoryLabels();
-
-  const categoryObserver = new MutationObserver(() => {
-    normalizeCategoryLabels();
-  });
-
-  categoryObserver.observe(categoryGrid,{
-    childList:true,
-    subtree:true,
-    characterData:true
-  });
+  const categoryObserver=new MutationObserver(normalizeCategoryLabels);
+  categoryObserver.observe(categoryGrid,{childList:true,subtree:true,characterData:true});
 }
-
 
 document
   .getElementById("year")
@@ -2713,609 +2636,239 @@ document
 
 </script>
 
-<!-- ZOVARO LOCAL MULTILINGUAL SYSTEM
-     Transformers.js + M2M100 — browser-side translation
-     English remains the original language. -->
 
-<script type="module">
-
+\n<script>\nconst ZOVARO_TRANSLATIONS={
+en:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Discover Better. Shop Smarter. Discover Job Opportunities.","New & Used":"New & Used","Urgent Jobs & Workers":"Urgent Jobs & Workers","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.","ZOVARO SMART REQUEST":"ZOVARO SMART REQUEST","MAKE A WISH":"MAKE A WISH","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.","SEND WISH":"SEND WISH","One sentence is enough. ZOVARO's smart matching system will be connected next.":"One sentence is enough. ZOVARO's smart matching system will be connected next.","Back":"Back","Choose what you want to do.":"Choose what you want to do.","BUY PRODUCTS":"BUY PRODUCTS","SELL PRODUCTS":"SELL PRODUCTS","Discover new products and offers from participating merchants.":"Discover new products and offers from participating merchants.","List your used products and connect with people looking to buy.":"List your used products and connect with people looking to buy.","ZOVARO JOB":"ZOVARO JOB","LOOKING FOR A JOB":"LOOKING FOR A JOB","OFFER A JOB":"OFFER A JOB","Find work opportunities and connect with employers.":"Find work opportunities and connect with employers.","Tell people you are hiring and find the right worker.":"Tell people you are hiring and find the right worker.","Discover new products and offers from participating merchants around the world.":"Discover new products and offers from participating merchants around the world.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"What are you looking for? e.g. Versace perfume, padel racket, children's clothes","Trending Products":"Trending Products","View all →":"View all →","Sort by":"Sort by","Price: Low to High":"Price: Low to High","Price: High to Low":"Price: High to Low","Biggest Discount":"Biggest Discount","BEST OFFERS":"BEST OFFERS","Best Deals":"Best Deals","JUST IN":"JUST IN","New Arrivals":"New Arrivals","List your used product for free. ZOVARO charges 0% commission on the sale.":"List your used product for free. ZOVARO charges 0% commission on the sale.","Product title":"Product title","What are you selling?":"What are you selling?","Category":"Category","Price":"Price","Location":"Location","City / Country":"City / Country","Description":"Description","Describe your product...":"Describe your product...","Contact":"Contact","How can buyers contact you?":"How can buyers contact you?","SUBMIT PRODUCT":"SUBMIT PRODUCT","This section will contain the ZOVARO job search system.":"This section will contain the ZOVARO job search system.","Publish your opportunity and find the right worker.":"Publish your opportunity and find the right worker.","Job title":"Job title","What position are you offering?":"What position are you offering?","Company / Employer":"Company / Employer","Company or employer name":"Company or employer name","Job type":"Job type","Full-time":"Full-time","Part-time":"Part-time","Freelance":"Freelance","Remote":"Remote","Temporary":"Temporary","City / Country / Remote":"City / Country / Remote","Job description":"Job description","Describe the job...":"Describe the job...","How can applicants contact you?":"How can applicants contact you?","SUBMIT JOB":"SUBMIT JOB","Connect TikTok to ZOVARO":"Connect TikTok to ZOVARO","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Connect your TikTok account to allow ZOVARO to prepare and share promotional content.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.","CONNECT TIKTOK":"CONNECT TIKTOK","Authorized content sharing":"Authorized content sharing","VIEW DEAL ↗":"VIEW DEAL ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Affiliate link — you will continue to the merchant's website to complete your purchase.","Discover. Compare. Connect.":"Discover. Compare. Connect.","ZOVARO. All rights reserved.":"ZOVARO. All rights reserved.","Please describe your wish first.":"Please describe your wish first.","Wish saved. The ZOVARO smart matching system will be connected next.":"Wish saved. The ZOVARO smart matching system will be connected next.","The ZOVARO seller system will be connected next.":"The ZOVARO seller system will be connected next.","The ZOVARO job publishing system will be connected next.":"The ZOVARO job publishing system will be connected next.","No matching products":"No matching products","Try another search or category.":"Try another search or category.","products in this preview catalog":"products in this preview catalog"
+},
+it:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Scopri meglio. Compra in modo intelligente. Scopri opportunità di lavoro.","New & Used":"Nuovo e Usato","Urgent Jobs & Workers":"Lavori urgenti e lavoratori","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Compra ciò di cui hai bisogno da tutto il mondo — elettronica, moda, bellezza, profumi, cosmetici, automotive, sport e molto altro. Scopri prodotti per ogni esigenza, tutto in un unico posto.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Trova l'opportunità che corrisponde alle tue competenze — oppure trova la persona giusta per la tua attività. Scopri lavori, lavoratori e nuove opportunità su ZOVARO.","ZOVARO SMART REQUEST":"RICHIESTA INTELLIGENTE ZOVARO","MAKE A WISH":"ESPRIMI UN DESIDERIO","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Di' a ZOVARO esattamente cosa stai cercando — un prodotto da comprare, un lavoro da trovare, un lavoro da offrire o qualcosa che vuoi vendere.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Esempio: cerco un lavoro da remoto nell'assistenza clienti, una racchetta da padel, vestiti per bambini oppure voglio offrire un lavoro da panettiere in Germania.","SEND WISH":"INVIA DESIDERIO","One sentence is enough. ZOVARO's smart matching system will be connected next.":"Basta una frase. Il sistema intelligente di ZOVARO per trovare ciò che cerchi sarà collegato prossimamente.","Back":"Indietro","Choose what you want to do.":"Scegli cosa vuoi fare.","BUY PRODUCTS":"ACQUISTA PRODOTTI","SELL PRODUCTS":"VENDI PRODOTTI","Discover new products and offers from participating merchants.":"Scopri nuovi prodotti e offerte dei merchant partecipanti.","List your used products and connect with people looking to buy.":"Pubblica i tuoi prodotti usati e mettiti in contatto con chi vuole acquistare.","ZOVARO JOB":"ZOVARO LAVORO","LOOKING FOR A JOB":"PROCURO EMPREGO","OFFER A JOB":"OFFRO UN LAVORO","Find work opportunities and connect with employers.":"Trova opportunità di lavoro e mettiti in contatto con i datori di lavoro.","Tell people you are hiring and find the right worker.":"Comunica che stai assumendo e trova il lavoratore giusto.","Discover new products and offers from participating merchants around the world.":"Scopri nuovi prodotti e offerte dei merchant partecipanti da tutto il mondo.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"Cosa stai cercando? Es. profumo Versace, racchetta da padel, vestiti per bambini","Trending Products":"Prodotti di tendenza","View all →":"Vedi tutto →","Sort by":"Ordina per","Price: Low to High":"Prezzo: dal più basso","Price: High to Low":"Prezzo: dal più alto","Biggest Discount":"Sconto maggiore","BEST OFFERS":"MIGLIORI OFFERTE","Best Deals":"Migliori offerte","JUST IN":"APPENA ARRIVATI","New Arrivals":"Nuovi arrivi","List your used product for free. ZOVARO charges 0% commission on the sale.":"Pubblica gratuitamente il tuo prodotto usato. ZOVARO applica lo 0% di commissione sulla vendita.","Product title":"Titolo del prodotto","What are you selling?":"Cosa stai vendendo?","Category":"Categoria","Price":"Prezzo","Location":"Località","City / Country":"Città / Paese","Description":"Descrizione","Describe your product...":"Descrivi il tuo prodotto...","Contact":"Contatto","How can buyers contact you?":"Come possono contattarti gli acquirenti?","SUBMIT PRODUCT":"PUBBLICA PRODOTTO","This section will contain the ZOVARO job search system.":"Questa sezione conterrà il sistema di ricerca lavoro di ZOVARO.","Publish your opportunity and find the right worker.":"Pubblica la tua opportunità e trova il lavoratore giusto.","Job title":"Titolo del lavoro","What position are you offering?":"Quale posizione stai offrendo?","Company / Employer":"Azienda / Datore di lavoro","Company or employer name":"Nome dell'azienda o del datore di lavoro","Job type":"Tipo di lavoro","Full-time":"Tempo pieno","Part-time":"Part-time","Freelance":"Freelance","Remote":"Da remoto","Temporary":"Temporaneo","City / Country / Remote":"Città / Paese / Da remoto","Job description":"Descrizione del lavoro","Describe the job...":"Descrivi il lavoro...","How can applicants contact you?":"Come possono contattarti i candidati?","SUBMIT JOB":"PUBBLICA LAVORO","Connect TikTok to ZOVARO":"Collega TikTok a ZOVARO","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Collega il tuo account TikTok per permettere a ZOVARO di preparare e condividere contenuti promozionali.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"Continuando, autorizzi ZOVARO ad accedere ai permessi richiesti durante l'autorizzazione TikTok.","CONNECT TIKTOK":"COLLEGA TIKTOK","Authorized content sharing":"Condivisione dei contenuti autorizzata","VIEW DEAL ↗":"VEDI OFFERTA ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Link affiliato — verrai reindirizzato al sito del merchant per completare l'acquisto.","Discover. Compare. Connect.":"Scopri. Confronta. Connettiti.","ZOVARO. All rights reserved.":"ZOVARO. Tutti i diritti riservati.","Please describe your wish first.":"Descrivi prima il tuo desiderio.","Wish saved. The ZOVARO smart matching system will be connected next.":"Desiderio salvato. Il sistema intelligente di ZOVARO sarà collegato prossimamente.","The ZOVARO seller system will be connected next.":"Il sistema venditori di ZOVARO sarà collegato prossimamente.","The ZOVARO job publishing system will be connected next.":"Il sistema di pubblicazione lavori di ZOVARO sarà collegato prossimamente.","No matching products":"Nessun prodotto corrispondente","Try another search or category.":"Prova un'altra ricerca o categoria.","products in this preview catalog":"prodotti in questo catalogo di anteprima"
+},
+fr:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Découvrez mieux. Achetez plus intelligemment. Découvrez des opportunités professionnelles.","New & Used":"Neuf et occasion","Urgent Jobs & Workers":"Emplois urgents et travailleurs","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Achetez ce dont vous avez besoin dans le monde entier — électronique, mode, beauté, parfums, cosmétiques, automobile, sport et plus encore. Découvrez des produits pour tous les besoins, au même endroit.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Trouvez l'opportunité qui correspond à vos compétences — ou la bonne personne pour votre entreprise. Découvrez des emplois, des travailleurs et de nouvelles opportunités sur ZOVARO.","ZOVARO SMART REQUEST":"DEMANDE INTELLIGENTE ZOVARO","MAKE A WISH":"FAITES UN VŒU","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Dites à ZOVARO exactement ce que vous cherchez — un produit à acheter, un emploi à trouver, un emploi à proposer ou quelque chose à vendre.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Exemple : je cherche un emploi à distance dans le service client, une raquette de padel, des vêtements pour enfants ou je souhaite proposer un emploi de boulanger en Allemagne.","SEND WISH":"ENVOYER","One sentence is enough. ZOVARO's smart matching system will be connected next.":"Une seule phrase suffit. Le système intelligent de correspondance de ZOVARO sera bientôt connecté.","Back":"Retour","Choose what you want to do.":"Choisissez ce que vous voulez faire.","BUY PRODUCTS":"ACHETER DES PRODUITS","SELL PRODUCTS":"VENDRE DES PRODUITS","Discover new products and offers from participating merchants.":"Découvrez de nouveaux produits et offres de marchands participants.","List your used products and connect with people looking to buy.":"Publiez vos produits d'occasion et mettez-vous en contact avec des acheteurs.","ZOVARO JOB":"ZOVARO EMPLOI","LOOKING FOR A JOB":"CHERCHER UN EMPLOI","OFFER A JOB":"PROPOSER UN EMPLOI","Find work opportunities and connect with employers.":"Trouvez des opportunités et contactez des employeurs.","Tell people you are hiring and find the right worker.":"Faites savoir que vous recrutez et trouvez le bon travailleur.","Discover new products and offers from participating merchants around the world.":"Découvrez de nouveaux produits et offres de marchands participants du monde entier.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"Que recherchez-vous ? Ex. parfum Versace, raquette de padel, vêtements pour enfants","Trending Products":"Produits tendance","View all →":"Tout voir →","Sort by":"Trier par","Price: Low to High":"Prix : du moins cher au plus cher","Price: High to Low":"Prix : du plus cher au moins cher","Biggest Discount":"Meilleure remise","BEST OFFERS":"MEILLEURES OFFRES","Best Deals":"Meilleures offres","JUST IN":"NOUVEAUTÉS","New Arrivals":"Nouveautés","List your used product for free. ZOVARO charges 0% commission on the sale.":"Publiez gratuitement votre produit d'occasion. ZOVARO applique 0 % de commission sur la vente.","Product title":"Titre du produit","What are you selling?":"Que vendez-vous ?","Category":"Catégorie","Price":"Prix","Location":"Lieu","City / Country":"Ville / Pays","Description":"Description","Describe your product...":"Décrivez votre produit...","Contact":"Contact","How can buyers contact you?":"Comment les acheteurs peuvent-ils vous contacter ?","SUBMIT PRODUCT":"PUBLIER LE PRODUIT","This section will contain the ZOVARO job search system.":"Cette section contiendra le système de recherche d'emploi de ZOVARO.","Publish your opportunity and find the right worker.":"Publiez votre offre et trouvez le bon travailleur.","Job title":"Intitulé du poste","What position are you offering?":"Quel poste proposez-vous ?","Company / Employer":"Entreprise / Employeur","Company or employer name":"Nom de l'entreprise ou de l'employeur","Job type":"Type d'emploi","Full-time":"Temps plein","Part-time":"Temps partiel","Freelance":"Freelance","Remote":"À distance","Temporary":"Temporaire","City / Country / Remote":"Ville / Pays / À distance","Job description":"Description du poste","Describe the job...":"Décrivez le poste...","How can applicants contact you?":"Comment les candidats peuvent-ils vous contacter ?","SUBMIT JOB":"PUBLIER L'EMPLOI","Connect TikTok to ZOVARO":"Connecter TikTok à ZOVARO","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Connectez votre compte TikTok pour permettre à ZOVARO de préparer et de partager du contenu promotionnel.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"En continuant, vous autorisez ZOVARO à accéder aux autorisations demandées lors de l'autorisation TikTok.","CONNECT TIKTOK":"CONNECTER TIKTOK","Authorized content sharing":"Partage de contenu autorisé","VIEW DEAL ↗":"VOIR L'OFFRE ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Lien affilié — vous serez redirigé vers le site du marchand pour finaliser votre achat.","Discover. Compare. Connect.":"Découvrez. Comparez. Connectez-vous.","ZOVARO. All rights reserved.":"ZOVARO. Tous droits réservés.","Please describe your wish first.":"Veuillez d'abord décrire votre souhait.","Wish saved. The ZOVARO smart matching system will be connected next.":"Souhait enregistré. Le système intelligent de ZOVARO sera bientôt connecté.","The ZOVARO seller system will be connected next.":"Le système vendeur de ZOVARO sera bientôt connecté.","The ZOVARO job publishing system will be connected next.":"Le système de publication d'emplois de ZOVARO sera bientôt connecté.","No matching products":"Aucun produit correspondant","Try another search or category.":"Essayez une autre recherche ou catégorie.","products in this preview catalog":"produits dans ce catalogue d'aperçu"
+},
+de:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Besser entdecken. Intelligenter einkaufen. Jobchancen entdecken.","New & Used":"Neu & gebraucht","Urgent Jobs & Workers":"Dringende Jobs & Arbeitskräfte","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Kaufen Sie, was Sie brauchen, aus aller Welt — Elektronik, Mode, Beauty, Parfums, Kosmetik, Auto, Sport und mehr. Entdecken Sie Produkte für jeden Bedarf an einem Ort.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Finden Sie die passende Chance für Ihre Fähigkeiten — oder die richtige Person für Ihr Unternehmen. Entdecken Sie Jobs, Arbeitskräfte und neue Möglichkeiten auf ZOVARO.","ZOVARO SMART REQUEST":"ZOVARO INTELLIGENTE ANFRAGE","MAKE A WISH":"WÜNSCHEN","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Sagen Sie ZOVARO genau, wonach Sie suchen — ein Produkt zum Kaufen, einen Job, den Sie suchen, einen Job, den Sie anbieten, oder etwas, das Sie verkaufen möchten.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Beispiel: Ich suche einen Remote-Job im Kundensupport, einen Padel-Schläger, Kinderkleidung oder möchte eine Stelle als Bäcker in Deutschland anbieten.","SEND WISH":"WUNSCH SENDEN","One sentence is enough. ZOVARO's smart matching system will be connected next.":"Ein Satz genügt. Das intelligente ZOVARO-Matching-System wird später verbunden.","Back":"Zurück","Choose what you want to do.":"Wählen Sie, was Sie tun möchten.","BUY PRODUCTS":"PRODUKTE KAUFEN","SELL PRODUCTS":"PRODUKTE VERKAUFEN","Discover new products and offers from participating merchants.":"Entdecken Sie neue Produkte und Angebote teilnehmender Händler.","List your used products and connect with people looking to buy.":"Stellen Sie Ihre gebrauchten Produkte ein und erreichen Sie interessierte Käufer.","ZOVARO JOB":"ZOVARO JOB","LOOKING FOR A JOB":"JOB SUCHEN","OFFER A JOB":"JOB ANBIETEN","Find work opportunities and connect with employers.":"Finden Sie Arbeitsmöglichkeiten und treten Sie mit Arbeitgebern in Kontakt.","Tell people you are hiring and find the right worker.":"Teilen Sie mit, dass Sie einstellen, und finden Sie die richtige Arbeitskraft.","Discover new products and offers from participating merchants around the world.":"Entdecken Sie neue Produkte und Angebote teilnehmender Händler aus aller Welt.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"Wonach suchen Sie? Z. B. Versace-Parfum, Padel-Schläger, Kinderkleidung","Trending Products":"Beliebte Produkte","View all →":"Alle anzeigen →","Sort by":"Sortieren nach","Price: Low to High":"Preis: aufsteigend","Price: High to Low":"Preis: absteigend","Biggest Discount":"Größter Rabatt","BEST OFFERS":"BESTE ANGEBOTE","Best Deals":"Top-Angebote","JUST IN":"NEU EINGETROFFEN","New Arrivals":"Neuheiten","List your used product for free. ZOVARO charges 0% commission on the sale.":"Stellen Sie Ihr gebrauchtes Produkt kostenlos ein. ZOVARO berechnet 0 % Verkaufsprovision.","Product title":"Produkttitel","What are you selling?":"Was verkaufen Sie?","Category":"Kategorie","Price":"Preis","Location":"Ort","City / Country":"Stadt / Land","Description":"Beschreibung","Describe your product...":"Beschreiben Sie Ihr Produkt...","Contact":"Kontakt","How can buyers contact you?":"Wie können Käufer Sie kontaktieren?","SUBMIT PRODUCT":"PRODUKT EINSTELLEN","This section will contain the ZOVARO job search system.":"Dieser Bereich wird das Jobsuchsystem von ZOVARO enthalten.","Publish your opportunity and find the right worker.":"Veröffentlichen Sie Ihre Stelle und finden Sie die richtige Arbeitskraft.","Job title":"Stellenbezeichnung","What position are you offering?":"Welche Position bieten Sie an?","Company / Employer":"Unternehmen / Arbeitgeber","Company or employer name":"Name des Unternehmens oder Arbeitgebers","Job type":"Beschäftigungsart","Full-time":"Vollzeit","Part-time":"Teilzeit","Freelance":"Freelance","Remote":"Remote","Temporary":"Befristet","City / Country / Remote":"Stadt / Land / Remote","Job description":"Stellenbeschreibung","Describe the job...":"Beschreiben Sie die Stelle...","How can applicants contact you?":"Wie können Bewerber Sie kontaktieren?","SUBMIT JOB":"JOB VERÖFFENTLICHEN","Connect TikTok to ZOVARO":"TikTok mit ZOVARO verbinden","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Verbinden Sie Ihr TikTok-Konto, damit ZOVARO Werbeinhalte vorbereiten und teilen kann.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"Durch die Fortsetzung autorisieren Sie ZOVARO, auf die während der TikTok-Autorisierung angeforderten Berechtigungen zuzugreifen.","CONNECT TIKTOK":"TIKTOK VERBINDEN","Authorized content sharing":"Autorisierte Inhaltsfreigabe","VIEW DEAL ↗":"ANGEBOT ANSEHEN ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Affiliate-Link — Sie werden zur Website des Händlers weitergeleitet, um den Kauf abzuschließen.","Discover. Compare. Connect.":"Entdecken. Vergleichen. Verbinden.","ZOVARO. All rights reserved.":"ZOVARO. Alle Rechte vorbehalten.","Please describe your wish first.":"Bitte beschreiben Sie zuerst Ihren Wunsch.","Wish saved. The ZOVARO smart matching system will be connected next.":"Wunsch gespeichert. Das intelligente ZOVARO-Matching-System wird später verbunden.","The ZOVARO seller system will be connected next.":"Das ZOVARO-Verkäufersystem wird später verbunden.","The ZOVARO job publishing system will be connected next.":"Das ZOVARO-System zur Veröffentlichung von Jobs wird später verbunden.","No matching products":"Keine passenden Produkte","Try another search or category.":"Versuchen Sie eine andere Suche oder Kategorie.","products in this preview catalog":"Produkte in diesem Vorschau-Katalog"
+},
+es:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Descubre mejor. Compra de forma inteligente. Descubre oportunidades laborales.","New & Used":"Nuevo y usado","Urgent Jobs & Workers":"Empleos urgentes y trabajadores","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Compra lo que necesites de todo el mundo — electrónica, moda, belleza, perfumes, cosmética, automoción, deporte y mucho más. Descubre productos para cada necesidad, todo en un solo lugar.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Encuentra la oportunidad que encaja con tus habilidades — o a la persona adecuada para tu negocio. Conecta con empleos, trabajadores y nuevas oportunidades en ZOVARO.","ZOVARO SMART REQUEST":"SOLICITUD INTELIGENTE ZOVARO","MAKE A WISH":"PIDE UN DESEO","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Dile a ZOVARO exactamente qué buscas — un producto que comprar, un trabajo que encontrar, un trabajo que ofrecer o algo que quieras vender.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Ejemplo: busco un trabajo remoto de atención al cliente, una pala de pádel, ropa infantil o quiero ofrecer un trabajo de panadero en Alemania.","SEND WISH":"ENVIAR DESEO","One sentence is enough. ZOVARO's smart matching system will be connected next.":"Una sola frase es suficiente. El sistema inteligente de ZOVARO se conectará próximamente.","Back":"Volver","Choose what you want to do.":"Elige lo que quieres hacer.","BUY PRODUCTS":"COMPRAR PRODUCTOS","SELL PRODUCTS":"VENDER PRODUCTOS","Discover new products and offers from participating merchants.":"Descubre nuevos productos y ofertas de comercios participantes.","List your used products and connect with people looking to buy.":"Publica tus productos usados y conecta con personas que quieren comprar.","ZOVARO JOB":"ZOVARO EMPLEO","LOOKING FOR A JOB":"BUSCO TRABAJO","OFFER A JOB":"OFREZCO UN TRABAJO","Find work opportunities and connect with employers.":"Encuentra oportunidades laborales y conecta con empleadores.","Tell people you are hiring and find the right worker.":"Haz saber que estás contratando y encuentra al trabajador adecuado.","Discover new products and offers from participating merchants around the world.":"Descubre nuevos productos y ofertas de comercios participantes de todo el mundo.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"¿Qué estás buscando? Ej. perfume Versace, pala de pádel, ropa infantil","Trending Products":"Productos destacados","View all →":"Ver todo →","Sort by":"Ordenar por","Price: Low to High":"Precio: de menor a mayor","Price: High to Low":"Precio: de mayor a menor","Biggest Discount":"Mayor descuento","BEST OFFERS":"MEJORES OFERTAS","Best Deals":"Mejores ofertas","JUST IN":"RECIÉN LLEGADOS","New Arrivals":"Novedades","List your used product for free. ZOVARO charges 0% commission on the sale.":"Publica gratis tu producto usado. ZOVARO cobra 0 % de comisión por la venta.","Product title":"Título del producto","What are you selling?":"¿Qué estás vendiendo?","Category":"Categoría","Price":"Precio","Location":"Ubicación","City / Country":"Ciudad / País","Description":"Descripción","Describe your product...":"Describe tu producto...","Contact":"Contacto","How can buyers contact you?":"¿Cómo pueden contactarte los compradores?","SUBMIT PRODUCT":"PUBLICAR PRODUCTO","This section will contain the ZOVARO job search system.":"Esta sección contendrá el sistema de búsqueda de empleo de ZOVARO.","Publish your opportunity and find the right worker.":"Publica tu oportunidad y encuentra al trabajador adecuado.","Job title":"Puesto de trabajo","What position are you offering?":"¿Qué puesto estás ofreciendo?","Company / Employer":"Empresa / Empleador","Company or employer name":"Nombre de la empresa o empleador","Job type":"Tipo de trabajo","Full-time":"Tiempo completo","Part-time":"Media jornada","Freelance":"Freelance","Remote":"Remoto","Temporary":"Temporal","City / Country / Remote":"Ciudad / País / Remoto","Job description":"Descripción del trabajo","Describe the job...":"Describe el trabajo...","How can applicants contact you?":"¿Cómo pueden contactarte los candidatos?","SUBMIT JOB":"PUBLICAR EMPLEO","Connect TikTok to ZOVARO":"Conectar TikTok con ZOVARO","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Conecta tu cuenta de TikTok para permitir que ZOVARO prepare y comparta contenido promocional.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"Al continuar, autorizas a ZOVARO a acceder a los permisos solicitados durante la autorización de TikTok.","CONNECT TIKTOK":"CONECTAR TIKTOK","Authorized content sharing":"Compartición de contenido autorizada","VIEW DEAL ↗":"VER OFERTA ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Enlace de afiliado — continuarás al sitio del comercio para completar tu compra.","Discover. Compare. Connect.":"Descubre. Compara. Conecta.","ZOVARO. All rights reserved.":"ZOVARO. Todos los derechos reservados.","Please describe your wish first.":"Primero describe tu deseo.","Wish saved. The ZOVARO smart matching system will be connected next.":"Deseo guardado. El sistema inteligente de ZOVARO se conectará próximamente.","The ZOVARO seller system will be connected next.":"El sistema de vendedores de ZOVARO se conectará próximamente.","The ZOVARO job publishing system will be connected next.":"El sistema de publicación de empleos de ZOVARO se conectará próximamente.","No matching products":"No hay productos que coincidan","Try another search or category.":"Prueba otra búsqueda o categoría.","products in this preview catalog":"productos en este catálogo de vista previa"
+},
+pt:{
+"Discover Better. Shop Smarter. Discover Job Opportunities.":"Descubra melhor. Compre de forma inteligente. Descubra oportunidades de trabalho.","New & Used":"Novos e usados","Urgent Jobs & Workers":"Empregos urgentes e trabalhadores","Buy what you need from around the world — electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and more. Discover products for every need, all in one place.":"Compre o que precisa de todo o mundo — eletrónica, moda, beleza, perfumes, cosmética, automóvel, desporto e muito mais. Descubra produtos para todas as necessidades, num só lugar.","Find the opportunity that matches your skills — or find the right person for your business. Connect with jobs, workers and new opportunities on ZOVARO.":"Encontre a oportunidade que corresponde às suas competências — ou a pessoa certa para o seu negócio. Ligue-se a empregos, trabalhadores e novas oportunidades no ZOVARO.","ZOVARO SMART REQUEST":"PEDIDO INTELIGENTE ZOVARO","MAKE A WISH":"FAÇA UM DESEJO","Tell ZOVARO exactly what you are looking for — a product to buy, a job to find, a job to offer, or something you want to sell.":"Diga ao ZOVARO exatamente o que procura — um produto para comprar, um emprego para encontrar, uma vaga para oferecer ou algo que queira vender.","Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany.":"Exemplo: procuro um emprego remoto em apoio ao cliente, uma raquete de padel, roupa infantil ou quero oferecer um emprego de padeiro na Alemanha.","SEND WISH":"ENVIAR DESEJO","One sentence is enough. ZOVARO's smart matching system will be connected next.":"Uma frase é suficiente. O sistema inteligente de correspondência do ZOVARO será ligado em breve.","Back":"Voltar","Choose what you want to do.":"Escolha o que deseja fazer.","BUY PRODUCTS":"COMPRAR PRODUTOS","SELL PRODUCTS":"VENDER PRODUTOS","Discover new products and offers from participating merchants.":"Descubra novos produtos e ofertas de comerciantes participantes.","List your used products and connect with people looking to buy.":"Publique os seus produtos usados e entre em contacto com quem quer comprar.","ZOVARO JOB":"ZOVARO EMPREGO","LOOKING FOR A JOB":"PROCURAR EMPREGO","OFFER A JOB":"OFERECER UM EMPREGO","Find work opportunities and connect with employers.":"Encontre oportunidades de trabalho e entre em contacto com empregadores.","Tell people you are hiring and find the right worker.":"Diga às pessoas que está a contratar e encontre o trabalhador certo.","Discover new products and offers from participating merchants around the world.":"Descubra novos produtos e ofertas de comerciantes participantes de todo o mundo.","What are you looking for? e.g. Versace perfume, padel racket, children's clothes":"O que procura? Ex. perfume Versace, raquete de padel, roupa infantil","Trending Products":"Produtos em destaque","View all →":"Ver tudo →","Sort by":"Ordenar por","Price: Low to High":"Preço: mais baixo primeiro","Price: High to Low":"Preço: mais alto primeiro","Biggest Discount":"Maior desconto","BEST OFFERS":"MELHORES OFERTAS","Best Deals":"Melhores ofertas","JUST IN":"RECÉM-CHEGADOS","New Arrivals":"Novidades","List your used product for free. ZOVARO charges 0% commission on the sale.":"Publique o seu produto usado gratuitamente. O ZOVARO cobra 0% de comissão sobre a venda.","Product title":"Título do produto","What are you selling?":"O que está a vender?","Category":"Categoria","Price":"Preço","Location":"Localização","City / Country":"Cidade / País","Description":"Descrição","Describe your product...":"Descreva o seu produto...","Contact":"Contacto","How can buyers contact you?":"Como podem os compradores contactá-lo?","SUBMIT PRODUCT":"PUBLICAR PRODUTO","This section will contain the ZOVARO job search system.":"Esta secção conterá o sistema de pesquisa de empregos do ZOVARO.","Publish your opportunity and find the right worker.":"Publique a sua oportunidade e encontre o trabalhador certo.","Job title":"Título do emprego","What position are you offering?":"Que posição está a oferecer?","Company / Employer":"Empresa / Empregador","Company or employer name":"Nome da empresa ou empregador","Job type":"Tipo de emprego","Full-time":"Tempo inteiro","Part-time":"Tempo parcial","Freelance":"Freelance","Remote":"Remoto","Temporary":"Temporário","City / Country / Remote":"Cidade / País / Remoto","Job description":"Descrição do emprego","Describe the job...":"Descreva o emprego...","How can applicants contact you?":"Como podem os candidatos contactá-lo?","SUBMIT JOB":"PUBLICAR EMPREGO","Connect TikTok to ZOVARO":"Ligar TikTok ao ZOVARO","Connect your TikTok account to allow ZOVARO to prepare and share promotional content.":"Ligue a sua conta TikTok para permitir que o ZOVARO prepare e partilhe conteúdo promocional.","By continuing, you authorize ZOVARO to access the permissions requested during TikTok authorization.":"Ao continuar, autoriza o ZOVARO a aceder às permissões pedidas durante a autorização do TikTok.","CONNECT TIKTOK":"LIGAR TIKTOK","Authorized content sharing":"Partilha de conteúdo autorizada","VIEW DEAL ↗":"VER OFERTA ↗","Affiliate link — you will continue to the merchant's website to complete your purchase.":"Link de afiliado — será encaminhado para o site do comerciante para concluir a compra.","Discover. Compare. Connect.":"Descubra. Compare. Ligue-se.","ZOVARO. All rights reserved.":"ZOVARO. Todos os direitos reservados.","Please describe your wish first.":"Descreva primeiro o seu desejo.","Wish saved. The ZOVARO smart matching system will be connected next.":"Desejo guardado. O sistema inteligente do ZOVARO será ligado em breve.","The ZOVARO seller system will be connected next.":"O sistema de vendedores do ZOVARO será ligado em breve.","The ZOVARO job publishing system will be connected next.":"O sistema de publicação de empregos do ZOVARO será ligado em breve.","No matching products":"Nenhum produto correspondente","Try another search or category.":"Tente outra pesquisa ou categoria.","products in this preview catalog":"produtos neste catálogo de pré-visualização"
+}};\n</script>\n<script type="module">
 import { pipeline, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.0";
+env.allowLocalModels=false;
+env.allowRemoteModels=true;
 
-env.allowLocalModels = false;
-env.allowRemoteModels = true;
+const LANGS={
+  en:"English",es:"Español",it:"Italiano",fr:"Français",de:"Deutsch",pt:"Português",nl:"Nederlands",pl:"Polski",tr:"Türkçe",ru:"Русский",uk:"Українська",ar:"العربية",he:"עברית",fa:"فارسی",ur:"اردو",hi:"हिन्दी",bn:"বাংলা",ja:"日本語",ko:"한국어",zh:"中文",vi:"Tiếng Việt",id:"Bahasa Indonesia",th:"ไทย",sv:"Svenska",da:"Dansk",no:"Norsk",fi:"Suomi",cs:"Čeština",ro:"Română",hu:"Magyar",el:"Ελληνικά"
+};
+const RTL_LANGS=new Set(["ar","he","fa","ur"]);
+const NATIVE_LANGS=new Set(["en","es","it","fr","de","pt"]);
+const MODEL_ID="Xenova/m2m100_418M";
+let lang="en";
+let translatorPromise=null;
+let translating=false;
+let queued=false;
+const originalText=new WeakMap();
+const translatedCache=new Map();
 
-const ZOVARO_TRANSLATION_MODEL = "Xenova/m2m100_418M";
-
-const RTL_LANGUAGES = new Set(["ar","he","fa","ur"]);
-
-const SUPPORTED_LANGUAGES = new Set([
-  "af","am","ar","ast","az","ba","be","bg","bn","br","bs","ca","ceb","cs","cy","da","de","el","en","es","et","fa","ff","fi","fr","fy","ga","gd","gl","gu","ha","he","hi","hr","ht","hu","hy","id","ig","ilo","is","it","ja","jv","ka","kk","km","kn","ko","lb","lg","ln","lo","lt","lv","mg","mk","ml","mn","mr","ms","my","ne","nl","no","ns","oc","or","pa","pl","ps","pt","ro","ru","sd","si","sk","sl","so","sq","sr","ss","su","sv","sw","ta","th","tl","tn","tr","uk","ur","uz","vi","wo","xh","yi","yo","zh","zu"
-]);
-
-const PROTECTED_TERMS = [
-  "ZOVARO",
-  "Versace",
-  "Nike",
-  "Apple",
-  "iPhone",
-  "padel"
-];
-
-const PROTECTED_PATTERN = new RegExp(
-  "(" + PROTECTED_TERMS.map(term => term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|") + ")",
-  "gi"
-);
-
-const languageSelect = document.getElementById("zovaroLanguage");
-let translatorPromise = null;
-let activeLanguage = "en";
-const translatedNodes = new WeakSet();
-
-function getBrowserLanguage(){
-
-  const candidates =
-    Array.isArray(navigator.languages) && navigator.languages.length
-      ? navigator.languages
-      : [navigator.language || "en"];
-
-  for(const value){
-
-    const base =
-      String(value)
-        .toLowerCase()
-        .split("-")[0];
-
-    if(SUPPORTED_LANGUAGES.has(base)){
-      return base;
-    }
-
+function detectLanguage(){
+  const saved=localStorage.getItem("zovaroLanguage");
+  if(saved&&LANGS[saved])return saved;
+  const list=navigator.languages?.length?navigator.languages:[navigator.language||"en"];
+  for(const value of list){
+    const code=String(value).toLowerCase().split("-")[0];
+    if(LANGS[code])return code;
   }
-
   return "en";
 }
 
-function getSavedLanguage(){
-
-  try{
-
-    const saved =
-      localStorage.getItem("zovaroLanguage");
-
-    return saved && SUPPORTED_LANGUAGES.has(saved)
-      ? saved
-      : null;
-
-  }catch(error){
-
-    return null;
-
-  }
-
-}
-
-function setDirection(language){
-
-  const rtl =
-    RTL_LANGUAGES.has(language);
-
-  document.documentElement.lang =
-    language;
-
-  document.documentElement.dir =
-    rtl ? "rtl" : "ltr";
-
-  document.body.dir =
-    rtl ? "rtl" : "ltr";
-
+function setDirection(){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=RTL_LANGS.has(lang)?"rtl":"ltr";
 }
 
 function protectTerms(text){
-
-  const tokens = [];
-
-  const protectedText =
-    text.replace(
-      PROTECTED_PATTERN,
-      match => {
-
-        const token =
-          "ZXZOVARO" + tokens.length + "QX";
-
-        tokens.push(match);
-
-        return token;
-
-      }
-    );
-
-  return {
-    protectedText,
-    tokens
-  };
-
+  const terms=[];
+  const patterns=[
+    /https?:\\/\\/[^\\s<]+/gi,
+    /[\\w.+-]+@[\\w.-]+\\.[A-Za-z]{2,}/g,
+    /\\b(?:ZOVARO|Versace|Nike|Apple|iPhone|padel)\\b/gi
+  ];
+  let output=text;
+  for(const pattern of patterns){
+    output=output.replace(pattern,match=>{
+      const token=`ZXTERM${terms.length}ZX`;
+      terms.push(match);
+      return token;
+    });
+  }
+  return {text:output,terms};
 }
 
-function restoreTerms(text,tokens){
-
-  let restored = text;
-
-  tokens.forEach((term,index) => {
-
-    const token =
-      "ZXZOVARO" + index + "QX";
-
-    restored =
-      restored
-        .split(token)
-        .join(term);
-
+function restoreTerms(text,terms){
+  let output=text;
+  terms.forEach((term,index)=>{
+    output=output.replace(new RegExp(`ZXTERM${index}ZX`,`gi`),term);
   });
-
-  return restored;
-
+  return output;
 }
 
-function shouldTranslateElement(element){
-
-  if(!element || !(element instanceof Element)){
-    return false;
-  }
-
-  if(element.closest("[data-zovaro-no-translate]")){
-    return false;
-  }
-
-  const tag =
-    element.tagName.toLowerCase();
-
-  return ![
-    "script",
-    "style",
-    "noscript",
-    "svg",
-    "option"
-  ].includes(tag);
-
+function nativeTranslate(source){
+  const dict=ZOVARO_TRANSLATIONS[lang];
+  if(dict&&Object.prototype.hasOwnProperty.call(dict,source))return dict[source];
+  return null;
 }
 
-function getTranslatableTextNodes(root=document.body){
+function normalizeCategories(){
+  const grid=document.getElementById("categoryGrid");
+  if(!grid)return;
+  grid.querySelectorAll("button").forEach(button=>{
+    const value=(button.textContent||"").replace(/\\bExplore\\b/gi,"").replace(/\\s{2,}/g," ").trim();
+    if(value)button.textContent=value;
+  });
+}
 
-  const walker =
-    document.createTreeWalker(
-      root,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode(node){
-
-          const parent =
-            node.parentElement;
-
-          if(
-            !parent ||
-            !shouldTranslateElement(parent)
-          ){
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          const value =
-            node.nodeValue || "";
-
-          if(
-            !value.trim() ||
-            value.trim().length < 2
-          ){
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          return NodeFilter.FILTER_ACCEPT;
-
-        }
-      }
-    );
-
-  const nodes = [];
-
-  let node;
-
-  while((node = walker.nextNode())){
-    nodes.push(node);
-  }
-
+function collectNodes(){
+  normalizeCategories();
+  const nodes=[];
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const parent=node.parentElement;
+      if(!parent)return NodeFilter.FILTER_REJECT;
+      if(["SCRIPT","STYLE","NOSCRIPT"].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
+      if(parent.closest("#zovaroLanguageWrap"))return NodeFilter.FILTER_REJECT;
+      const source=(node.nodeValue||"").replace(/\\s+/g," ").trim();
+      if(!source)return NodeFilter.FILTER_REJECT;
+      if(!originalText.has(node))originalText.set(node,source);
+      nodes.push({node,source:originalText.get(node)});
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  while(walker.nextNode()){}
   return nodes;
+}
 
+function applyNative(nodes){
+  for(const item of nodes){
+    const translated=nativeTranslate(item.source);
+    if(!translated)continue;
+    const leading=(item.node.nodeValue.match(/^\\s*/)||[""])[0];
+    const trailing=(item.node.nodeValue.match(/\\s*$/)||[""])[0];
+    item.node.nodeValue=leading+translated+trailing;
+  }
+}
+
+function translateKnownAttributes(){
+  document.querySelectorAll("input[placeholder],textarea[placeholder],[aria-label]").forEach(el=>{
+    if(el.closest("#zovaroLanguageWrap"))return;
+    for(const attr of ["placeholder","aria-label"]){
+      if(!el.hasAttribute(attr))continue;
+      const key=`data-zovaro-${attr.replace("-","")}-source`;
+      if(!el.hasAttribute(key))el.setAttribute(key,el.getAttribute(attr)||"");
+      const source=el.getAttribute(key)||"";
+      const translated=nativeTranslate(source);
+      if(translated)el.setAttribute(attr,translated);
+    }
+  });
 }
 
 async function getTranslator(){
-
-  if(!translatorPromise){
-
-    translatorPromise =
-      pipeline(
-        "translation",
-        ZOVARO_TRANSLATION_MODEL,
-        { dtype:"q8" }
-      );
-
-  }
-
+  if(translatorPromise)return translatorPromise;
+  translatorPromise=pipeline("translation",MODEL_ID,{dtype:"q8"});
   return translatorPromise;
-
 }
 
-async function translateText(text,language){
-
-  if(
-    language === "en" ||
-    !text.trim()
-  ){
-    return text;
+async function modelTranslate(nodes){
+  if(lang==="en"||NATIVE_LANGS.has(lang))return;
+  const unique=[];
+  const seen=new Set();
+  for(const item of nodes){
+    if(nativeTranslate(item.source))continue;
+    if(seen.has(item.source)||translatedCache.has(item.source))continue;
+    seen.add(item.source);
+    unique.push(item.source);
   }
-
-  const {
-    protectedText,
-    tokens
-  } =
-    protectTerms(text);
-
-  const translator =
-    await getTranslator();
-
-  const result =
-    await translator(
-      protectedText,
-      {
-        src_lang:"en",
-        tgt_lang:language
-      }
-    );
-
-  const translated =
-    result?.[0]?.translation_text || text;
-
-  return restoreTerms(
-    translated,
-    tokens
-  );
-
+  if(!unique.length)return;
+  const translator=await getTranslator();
+  for(let i=0;i<unique.length;i+=6){
+    const batch=unique.slice(i,i+6);
+    const prepared=batch.map(protectTerms);
+    const outputs=await translator(prepared.map(x=>x.text),{src_lang:"en",tgt_lang:lang});
+    outputs.forEach((result,index)=>{
+      const value=result.translation_text||batch[index];
+      translatedCache.set(batch[index],restoreTerms(value,prepared[index].terms));
+    });
+  }
+  for(const item of nodes){
+    const translated=translatedCache.get(item.source);
+    if(!translated)continue;
+    const leading=(item.node.nodeValue.match(/^\\s*/)||[""])[0];
+    const trailing=(item.node.nodeValue.match(/\\s*$/)||[""])[0];
+    item.node.nodeValue=leading+translated+trailing;
+  }
 }
 
-async function translateNode(node,language){
+function updateTitle(){
+  const titles={
+    en:"ZOVARO — Discover Better. Shop Smarter. Discover Job Opportunities.",
+    it:"ZOVARO — Scopri meglio. Compra in modo intelligente. Scopri opportunità di lavoro.",
+    fr:"ZOVARO — Découvrez mieux. Achetez plus intelligemment. Découvrez des opportunités professionnelles.",
+    de:"ZOVARO — Besser entdecken. Intelligenter einkaufen. Jobchancen entdecken.",
+    es:"ZOVARO — Descubre mejor. Compra de forma inteligente. Descubre oportunidades laborales.",
+    pt:"ZOVARO — Descubra melhor. Compre de forma inteligente. Descubra oportunidades de trabalho."
+  };
+  if(titles[lang])document.title=titles[lang];
+}
 
-  if(
-    !node ||
-    translatedNodes.has(node) ||
-    language === "en"
-  ){
-    return;
-  }
-
-  const original =
-    node.nodeValue || "";
-
-  const trimmed =
-    original.trim();
-
-  if(!trimmed || trimmed.length < 2){
-
-    translatedNodes.add(node);
-
-    return;
-
-  }
-
+async function translatePage(){
+  if(translating)return;
+  translating=true;
   try{
-
-    const translated =
-      await translateText(
-        trimmed,
-        language
-      );
-
-    const leading =
-      original.match(/^\s*/)?.[0] || "";
-
-    const trailing =
-      original.match(/\s*$/)?.[0] || "";
-
-    node.nodeValue =
-      leading +
-      translated.trim() +
-      trailing;
-
+    setDirection();
+    const select=document.getElementById("zovaroLanguage");
+    if(select)select.value=lang;
+    const nodes=collectNodes();
+    applyNative(nodes);
+    translateKnownAttributes();
+    updateTitle();
+    await modelTranslate(nodes);
+    normalizeCategories();
   }catch(error){
-
-    console.warn(
-      "ZOVARO translation skipped:",
-      error
-    );
-
-  }
-
-  translatedNodes.add(node);
-
-}
-
-async function translateAttributes(language){
-
-  if(language === "en"){
-    return;
-  }
-
-  const elements =
-    document.querySelectorAll(
-      "input[placeholder],textarea[placeholder],[aria-label]:not([data-zovaro-no-translate])"
-    );
-
-  for(const element of elements){
-
-    if(
-      element.closest(
-        "[data-zovaro-no-translate]"
-      )
-    ){
-      continue;
-    }
-
-    if(
-      element.dataset.zovaroAttrsTranslated === language
-    ){
-      continue;
-    }
-
-    if(element.placeholder){
-
-      element.placeholder =
-        await translateText(
-          element.placeholder,
-          language
-        );
-
-    }
-
-    if(element.hasAttribute("aria-label")){
-
-      element.setAttribute(
-        "aria-label",
-        await translateText(
-          element.getAttribute("aria-label"),
-          language
-        )
-      );
-
-    }
-
-    element.dataset.zovaroAttrsTranslated =
-      language;
-
-  }
-
-}
-
-async function translatePage(language){
-
-  activeLanguage =
-    language;
-
-  setDirection(language);
-
-  if(language === "en"){
-    return;
-  }
-
-  document.body.classList.add(
-    "zovaro-translating"
-  );
-
-  try{
-
-    const nodes =
-      getTranslatableTextNodes(
-        document.body
-      );
-
-    for(const node of nodes){
-
-      await translateNode(
-        node,
-        language
-      );
-
-    }
-
-    await translateAttributes(
-      language
-    );
-
-    normalizeCategoryLabels();
-
+    console.warn("ZOVARO translation error",error);
   }finally{
-
-    document.body.classList.remove(
-      "zovaro-translating"
-    );
-
+    translating=false;
   }
-
 }
 
-function observeDynamicContent(){
-
-  let timer = null;
-
-  const observer =
-    new MutationObserver(
-      mutations => {
-
-        if(activeLanguage === "en"){
-          return;
-        }
-
-        const added = [];
-
-        for(const mutation of mutations){
-
-          mutation.addedNodes.forEach(node => {
-
-            if(
-              node.nodeType === Node.ELEMENT_NODE ||
-              node.nodeType === Node.TEXT_NODE
-            ){
-              added.push(node);
-            }
-
-          });
-
-        }
-
-        if(!added.length){
-          return;
-        }
-
-        clearTimeout(timer);
-
-        timer =
-          setTimeout(
-            async () => {
-
-              normalizeCategoryLabels();
-
-              for(const node of added){
-
-                if(
-                  node.nodeType ===
-                  Node.TEXT_NODE
-                ){
-
-                  await translateNode(
-                    node,
-                    activeLanguage
-                  );
-
-                }else if(
-                  node.nodeType ===
-                  Node.ELEMENT_NODE &&
-                  !node.closest(
-                    "[data-zovaro-no-translate]"
-                  )
-                ){
-
-                  const nodes =
-                    getTranslatableTextNodes(
-                      node
-                    );
-
-                  for(const child of nodes){
-
-                    await translateNode(
-                      child,
-                      activeLanguage
-                    );
-
-                  }
-
-                }
-
-              }
-
-              await translateAttributes(
-                activeLanguage
-              );
-
-              normalizeCategoryLabels();
-
-            },
-            250
-          );
-
-      }
-    );
-
-  observer.observe(
-    document.body,
-    {
-      childList:true,
-      subtree:true
-    }
-  );
-
+function queueTranslation(){
+  if(lang==="en"||NATIVE_LANGS.has(lang)||queued)return;
+  queued=true;
+  setTimeout(()=>{queued=false;translatePage();},250);
 }
 
-async function initializeLanguage(){
-
-  const saved =
-    getSavedLanguage();
-
-  const initial =
-    saved || getBrowserLanguage();
-
-  activeLanguage =
-    initial;
-
-  setDirection(
-    initial
-  );
-
-  if(languageSelect){
-
-    languageSelect.value =
-      initial;
-
-    languageSelect.addEventListener(
-      "change",
-      event => {
-
-        const language =
-          event.target.value;
-
-        try{
-
-          localStorage.setItem(
-            "zovaroLanguage",
-            language
-          );
-
-        }catch(error){}
-
-        // Reloading guarantees that English originals
-        // are restored exactly before the new translation.
-        window.location.reload();
-
-      }
-    );
-
+function initLanguage(){
+  lang=detectLanguage();
+  setDirection();
+  const select=document.getElementById("zovaroLanguage");
+  if(select){
+    select.value=lang;
+    select.addEventListener("change",()=>{
+      localStorage.setItem("zovaroLanguage",select.value);
+      window.location.reload();
+    });
   }
-
-  observeDynamicContent();
-
-  if(initial !== "en"){
-
-    // Give the existing ZOVARO scripts time
-    // to render the catalog first.
-    setTimeout(
-      () => {
-
-        translatePage(
-          initial
-        ).catch(error => {
-
-          console.error(
-            "ZOVARO translation system error:",
-            error
-          );
-
-        });
-
-      },
-      700
-    );
-
-  }
-
+  translatePage();
+  const observer=new MutationObserver(()=>{
+    normalizeCategories();
+    queueTranslation();
+  });
+  observer.observe(document.body,{subtree:true,childList:true,characterData:true});
 }
 
-initializeLanguage();
-
-</script>
-
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initLanguage,{once:true});
+else initLanguage();
+</script>\n
 </body>
 </html>
