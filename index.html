@@ -2525,10 +2525,11 @@ if(
 /* =====================================================
    CATEGORY DISPLAY RULE
    ALWAYS:
-   SHOW ONLY THE CATEGORY NAME.
-   "Explore" IS ALWAYS REMOVED.
-   REPEATED CATEGORY NAMES ARE REDUCED TO ONE.
-   THIS ALSO APPLIES TO CATEGORIES ADDED DYNAMICALLY.
+   "Babies Explore"
+   "Sports Explore"
+   "Electronics Explore"
+   etc.
+   Remove repeated category text automatically.
    ===================================================== */
 
 function normalizeCategoryLabels(){
@@ -2549,47 +2550,34 @@ function normalizeCategoryLabels(){
     .forEach(
       button => {
 
-        let label =
-          button.textContent
-            .replace(/\s+/g," ")
-            .trim();
+        const original =
+          button.textContent.trim();
 
 
-        /* REMOVE "EXPLORE" FROM EVERY CATEGORY */
-
-        label =
-          label
+        const clean =
+          original
             .replace(
-              /\bExplore\b/gi,
-              " "
-            )
-            .replace(
-              /\s+/g,
-              " "
+              /^[^\p{L}\p{N}&]+/u,
+              ""
             )
             .trim();
 
 
-        /* REMOVE AN EXACT REPEATED CATEGORY NAME */
-
-        const duplicateMatch =
-          label.match(
-            /^(.+?)\s+\1$/i
+        const match =
+          clean.match(
+            /^(.*?)\s+Explore\s+.+$/i
           );
 
 
-        if(duplicateMatch){
-
-          label =
-            duplicateMatch[1].trim();
-
-        }
-
-
-        if(label){
+        if(
+          match &&
+          match[1].trim()
+        ){
 
           button.textContent =
-            label;
+            match[1].trim()
+            +
+            " Explore";
 
         }
 
