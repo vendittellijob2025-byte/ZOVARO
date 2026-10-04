@@ -2525,11 +2525,9 @@ if(
 /* =====================================================
    CATEGORY DISPLAY RULE
    ALWAYS:
-   "Babies Explore"
-   "Sports Explore"
-   "Electronics Explore"
-   etc.
-   Remove repeated category text automatically.
+   SHOW ONLY THE CATEGORY NAME.
+   "Explore" IS ALWAYS REMOVED.
+   This also applies to categories added dynamically.
    ===================================================== */
 
 function normalizeCategoryLabels(){
@@ -2560,24 +2558,24 @@ function normalizeCategoryLabels(){
               /^[^\p{L}\p{N}&]+/u,
               ""
             )
+            .replace(
+              /\bExplore\b/gi,
+              ""
+            )
+            .replace(
+              /\s+/g,
+              " "
+            )
             .trim();
 
 
-        const match =
-          clean.match(
-            /^(.*?)\s+Explore\s+.+$/i
-          );
-
-
         if(
-          match &&
-          match[1].trim()
+          clean &&
+          clean !== original
         ){
 
           button.textContent =
-            match[1].trim()
-            +
-            " Explore";
+            clean;
 
         }
 
