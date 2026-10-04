@@ -1,3518 +1,2836 @@
 <!doctype html>
 <html lang="en">
-
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ZOVARO — Discover Better. Shop Smarter. Discover Job Opportunities.">
+<meta name="theme-color" content="#020817">
+<title>ZOVARO — Discover Better. Shop Smarter. Discover Job Opportunities.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"DM Sans",Arial,sans-serif;
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 50% 5%,
+      rgba(0,170,255,.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #020817,
+      #01040d
+    );
+
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.012) 1px,
+      transparent 1px
+    );
+
+  background-size:46px 46px;
+  opacity:.65;
+}
+
+a{
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+.page{
+  max-width:1180px;
+  margin:auto;
+  padding:24px 18px 50px;
+  position:relative;
+  z-index:1;
+}
+
+.hidden{
+  display:none!important;
+}
+
+.view{
+  width:100%;
+}
+
+.back-button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  margin-bottom:22px;
+  padding:10px 15px;
+
+  border:1px solid rgba(45,205,255,.45);
+  border-radius:10px;
+
+  background:rgba(0,120,255,.07);
+  color:#dff5ff;
 
-  <meta charset="utf-8">
+  cursor:pointer;
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  font-size:12px;
+  font-weight:700;
+}
 
-  <meta
-    name="description"
-    content="ZOVARO — Discover Better. Shop Smarter. Discover Job Opportunities."
-  >
 
-  <meta
-    name="theme-color"
-    content="#020817"
-  >
+/* =========================
+   BRAND
+   ========================= */
 
-  <title>
-    ZOVARO — Discover Better. Shop Smarter. Discover Job Opportunities.
-  </title>
+.brand-area{
+  text-align:center;
+  padding:24px 10px 30px;
+}
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+.brand-logo{
+  width:min(175px,42vw);
+  display:block;
+  margin:0 auto 15px;
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-    crossorigin
-  >
+  filter:
+    drop-shadow(
+      0 0 22px
+      rgba(0,175,255,.65)
+    );
+}
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+.brand-name{
+  margin:0;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-  <style>
+  font-size:
+    clamp(42px,8vw,76px);
 
-    * {
-      box-sizing: border-box;
-    }
+  line-height:.95;
+  letter-spacing:.12em;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.brand-tagline{
+  margin:14px 0 0;
 
-    body {
-      margin: 0;
-      min-height: 100vh;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
+  font-size:
+    clamp(16px,3vw,23px);
 
-      color: #ffffff;
+  color:#d9ecff;
+}
 
-      background:
-        radial-gradient(
-          circle at 50% 5%,
-          rgba(0,170,255,.18),
-          transparent 28%
-        ),
-        linear-gradient(
-          180deg,
-          #020817 0%,
-          #01040d 100%
-        );
 
-      overflow-x: hidden;
-    }
+/* =========================
+   HOME
+   ========================= */
 
+.home-grid{
+  display:grid;
 
-    body::before {
-      content: "";
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
 
-      position: fixed;
+  gap:22px;
+  margin-top:15px;
+}
 
-      inset: 0;
+.main-card{
+  position:relative;
 
-      pointer-events: none;
+  min-height:255px;
 
-      background:
-        linear-gradient(
-          rgba(255,255,255,.012) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.012) 1px,
-          transparent 1px
-        );
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-      background-size: 46px 46px;
+  padding:26px 30px;
 
-      opacity: .65;
-    }
+  text-decoration:none;
+  overflow:hidden;
 
+  border:
+    1px solid
+    rgba(30,202,255,.85);
 
-    a {
-      color: inherit;
-    }
+  border-radius:28px;
 
+  background:
+    #061124
+    center/cover no-repeat;
 
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
+  box-shadow:
+    inset 0 0 35px
+    rgba(0,150,255,.07),
 
+    0 0 35px
+    rgba(0,120,255,.18);
 
-    /* =====================================================
-       GLOBAL
-       ===================================================== */
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease;
+}
 
-    .page {
-      width: 100%;
+.main-card:hover{
+  transform:translateY(-4px);
 
-      max-width: 1180px;
+  box-shadow:
+    inset 0 0 40px
+    rgba(0,170,255,.11),
 
-      margin: 0 auto;
+    0 0 45px
+    rgba(0,150,255,.28);
+}
 
-      padding:
-        24px 18px 50px;
 
-      position: relative;
+/* SHOP IMAGE */
 
-      z-index: 1;
-    }
+.shop-card{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(2,8,22,.98) 0%,
+      rgba(2,8,22,.91) 28%,
+      rgba(2,8,22,.56) 49%,
+      rgba(2,8,22,.16) 74%,
+      rgba(2,8,22,.04)
+    ),
+    url("assets/shop-visual.png");
+}
 
 
-    .hidden {
-      display: none !important;
-    }
+/* JOB IMAGE */
 
+.job-card{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(2,8,22,.98) 0%,
+      rgba(2,8,22,.91) 28%,
+      rgba(2,8,22,.56) 49%,
+      rgba(2,8,22,.16) 74%,
+      rgba(2,8,22,.04)
+    ),
+    url("assets/job-visual.png");
+}
 
-    .view {
-      width: 100%;
-    }
 
+/* MAKE A WISH */
 
-    .back-button {
-      display: inline-flex;
+.wish-card{
+  grid-column:1 / -1;
 
-      align-items: center;
+  min-height:235px;
 
-      gap: 8px;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(2,8,22,.99) 0%,
+      rgba(2,8,22,.94) 24%,
+      rgba(2,8,22,.72) 44%,
+      rgba(2,8,22,.34) 65%,
+      rgba(2,8,22,.08)
+    ),
+    url("assets/wish-visual.png");
+}
 
-      margin-bottom: 22px;
+.main-card-content,
+.wish-card-content{
+  width:100%;
+  position:relative;
+  z-index:2;
+  text-align:left;
+}
 
-      padding:
-        10px 15px;
+.main-card-copy{
+  width:min(62%,470px);
+}
 
-      border:
-        1px solid
-        rgba(45,205,255,.45);
+.wish-card-copy{
+  width:min(64%,700px);
+}
 
-      border-radius: 10px;
+.main-card-logo-wrap{
+  display:none;
+}
 
-      background:
-        rgba(0,120,255,.07);
+.main-card-brand{
+  margin:0 0 5px;
 
-      color:
-        #dff5ff;
+  color:#a8dfff;
 
-      cursor: pointer;
+  font-size:12px;
+  letter-spacing:.15em;
+  font-weight:700;
+}
 
-      font-size: 12px;
+.main-card-title{
+  margin:0;
 
-      font-weight: 700;
-    }
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
+  font-size:
+    clamp(52px,8vw,82px);
 
-    /* =====================================================
-       BRAND
-       ===================================================== */
+  line-height:.86;
+}
 
-    .brand-area {
-      text-align: center;
+.main-card-subtitle{
+  margin:11px 0 0;
 
-      padding:
-        24px 10px 30px;
-    }
+  color:#dcecff;
+  font-size:14px;
+}
 
+.main-card-description{
+  margin:14px 0 0;
 
-    .brand-logo {
-      width:
-        min(175px, 42vw);
+  color:#b7cbe0;
+  font-size:15px;
+  line-height:1.5;
+}
 
-      display: block;
+.main-card-arrow{
+  position:absolute;
 
-      margin:
-        0 auto 15px;
+  right:24px;
+  bottom:22px;
 
-      filter:
-        drop-shadow(
-          0 0 22px
-          rgba(0,175,255,.65)
-        );
-    }
+  width:45px;
+  height:45px;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    .brand-name {
-      margin: 0;
+  border:
+    1px solid
+    rgba(35,215,255,.7);
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  border-radius:50%;
 
-      font-size:
-        clamp(42px,8vw,76px);
+  color:#36d7ff;
+  font-size:24px;
+}
 
-      line-height: .95;
 
-      letter-spacing: .12em;
+/* =========================
+   MAKE A WISH
+   ========================= */
 
-      color:
-        #ffffff;
-    }
+.wish-kicker{
+  display:block;
 
+  margin-bottom:5px;
 
-    .brand-tagline {
-      margin:
-        14px 0 0;
+  color:#4fddff;
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
 
-      font-size:
-        clamp(16px,3vw,23px);
+.wish-title{
+  margin:0;
 
-      color:
-        #d9ecff;
-    }
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
+  font-size:
+    clamp(34px,5vw,54px);
 
-    /* =====================================================
-       HOME
-       ===================================================== */
+  line-height:.9;
+}
 
-    .home-grid {
-      display:
-        grid;
+.wish-description{
+  margin:10px 0 0;
 
-      grid-template-columns:
-        repeat(2,minmax(0,1fr));
+  color:#b7cbe0;
 
-      gap:
-        22px;
+  font-size:12px;
+  line-height:1.45;
+}
 
-      margin-top:
-        15px;
-    }
+.wish-form{
+  display:grid;
 
+  grid-template-columns:
+    minmax(0,1fr)
+    auto;
 
-    .main-card {
-      position: relative;
+  gap:10px;
 
-      min-height:
-        255px;
+  margin-top:13px;
 
-      display:
-        flex;
+  max-width:700px;
+}
 
-      align-items:
-        center;
+.wish-input{
+  width:100%;
+  min-height:45px;
 
-      justify-content:
-        center;
+  padding:12px 15px;
 
-      padding:
-        26px 30px;
+  border:
+    1px solid
+    rgba(91,185,233,.38);
 
-      text-decoration:
-        none;
+  border-radius:11px;
 
-      overflow:
-        hidden;
+  background:
+    rgba(1,9,22,.78);
 
-      border:
-        1px solid
-        rgba(30,202,255,.85);
+  color:#fff;
 
-      border-radius:
-        28px;
+  outline:none;
 
-      background-color:
-        #061124;
+  font-size:13px;
+}
 
-      background-repeat:
-        no-repeat;
+.wish-input::placeholder{
+  color:#7590ad;
+}
 
-      background-size:
-        cover;
+.wish-submit{
+  min-width:118px;
+  min-height:45px;
 
-      background-position:
-        center;
+  padding:0 18px;
 
-      box-shadow:
-        inset 0 0 35px
-        rgba(0,150,255,.07),
+  border:
+    1px solid
+    rgba(255,203,76,.7);
 
-        0 0 35px
-        rgba(0,120,255,.18);
+  border-radius:11px;
 
-      transition:
-        transform .22s ease,
-        box-shadow .22s ease;
-    }
+  background:
+    linear-gradient(
+      135deg,
+      #ffcc54,
+      #1fbfff
+    );
 
+  color:#071120;
 
-    .shop-card {
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(2,8,22,.98) 0%,
-          rgba(2,8,22,.91) 28%,
-          rgba(2,8,22,.56) 49%,
-          rgba(2,8,22,.16) 74%,
-          rgba(2,8,22,.04) 100%
-        ),
-        url('assets/shop-visual.png');
-    }
+  cursor:pointer;
 
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
 
-    .job-card {
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(2,8,22,.98) 0%,
-          rgba(2,8,22,.91) 28%,
-          rgba(2,8,22,.56) 49%,
-          rgba(2,8,22,.16) 74%,
-          rgba(2,8,22,.04) 100%
-        ),
-        url('assets/job-visual.png');
-    }
+.wish-foot{
+  display:flex;
+  align-items:center;
+  gap:9px;
 
+  margin-top:9px;
+}
 
-    .shop-card {
-      background-position:
-        center center;
-    }
+.wish-lamp{
+  width:29px;
+  height:29px;
 
+  flex:
+    0 0 29px;
 
-    .job-card {
-      background-position:
-        center center;
-    }
+  filter:
+    drop-shadow(
+      0 0 9px
+      rgba(255,205,78,.28)
+    );
+}
 
+.wish-help{
+  margin:0;
 
-    .main-card:hover {
-      transform:
-        translateY(-4px);
+  color:#91a8c2;
 
-      box-shadow:
-        inset 0 0 40px
-        rgba(0,170,255,.11),
+  font-size:10px;
+  line-height:1.4;
+}
 
-        0 0 45px
-        rgba(0,150,255,.28);
-    }
+.wish-status{
+  min-height:15px;
 
+  margin:7px 0 0;
 
-    .main-card-content {
-      width: 100%;
+  color:#57ddff;
 
-      position:
-        relative;
+  font-size:10px;
+}
 
-      z-index:
-        2;
 
-      text-align:
-        left;
-    }
+/* =========================
+   CHOICE MENUS
+   ========================= */
 
+.choice-title{
+  margin:5px 0 8px;
 
-    .main-card-copy {
-      width:
-        min(62%, 470px);
+  text-align:center;
 
-      min-width:
-        0;
-    }
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
+  font-size:
+    clamp(30px,5vw,46px);
+}
 
-    .main-card-logo-wrap {
-      display: none;
-    }
+.choice-subtitle{
+  margin:
+    0 auto 28px;
 
+  max-width:650px;
 
-    .main-card-brand {
-      margin:
-        0 0 5px;
+  text-align:center;
 
-      color:
-        #a8dfff;
+  color:#93a9c5;
 
-      font-size:
-        12px;
+  line-height:1.6;
+  font-size:14px;
+}
 
-      letter-spacing:
-        .15em;
+.choice-grid{
+  display:grid;
 
-      font-weight:
-        700;
-    }
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    );
 
+  gap:22px;
+}
 
-    .main-card-title {
-      margin:
-        0;
+.choice-card{
+  min-height:245px;
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  display:flex;
+  flex-direction:column;
 
-      font-size:
-        clamp(52px,8vw,82px);
+  align-items:center;
+  justify-content:center;
 
-      line-height:
-        .86;
-    }
+  padding:30px;
 
+  text-align:center;
+  text-decoration:none;
 
-    .main-card-subtitle {
-      margin:
-        11px 0 0;
+  border:
+    1px solid
+    rgba(35,197,255,.72);
 
-      color:
-        #dcecff;
+  border-radius:25px;
 
-      font-size:
-        14px;
-    }
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8,35,72,.86),
+      rgba(2,8,21,.98)
+    );
 
+  box-shadow:
+    0 0 26px
+    rgba(0,130,255,.15);
 
-    .main-card-description {
-      max-width:
-        100%;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
 
-      margin:
-        14px 0 0;
+.choice-card:hover{
+  transform:translateY(-4px);
 
-      color:
-        #b7cbe0;
+  box-shadow:
+    0 0 40px
+    rgba(0,155,255,.27);
+}
 
-      font-size:
-        15px;
+.choice-card-logo{
+  width:65px;
+  margin-bottom:17px;
+}
 
-      line-height:
-        1.5;
-    }
+.choice-card h2{
+  margin:0;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-    /* =====================================================
-       MAKE A WISH
-       ===================================================== */
+  font-size:
+    clamp(28px,5vw,42px);
+}
 
-    .wish-panel {
-      width:
-        100%;
+.choice-card p{
+  margin:10px 0 0;
 
-      margin:
-        24px 0 0;
+  color:#a6bdd7;
 
-      padding:
-        19px 22px 16px;
+  font-size:13px;
+  line-height:1.6;
+}
 
-      border:
-        1px solid
-        rgba(43,208,255,.72);
 
-      border-radius:
-        20px;
+/* =========================
+   SHOP
+   ========================= */
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(8,34,66,.9),
-          rgba(3,10,27,.97)
-        );
+.catalog-title{
+  margin:0 0 5px;
 
-      box-shadow:
-        inset 0 0 28px
-        rgba(0,169,255,.055),
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-        0 0 28px
-        rgba(0,120,255,.12);
-    }
+  font-size:
+    clamp(30px,5vw,44px);
+}
 
+.catalog-subtitle{
+  margin:0 0 25px;
 
-    .wish-heading {
-      display:
-        flex;
+  color:#8da5c2;
 
-      align-items:
-        center;
+  font-size:13px;
+  line-height:1.6;
+}
 
-      justify-content:
-        space-between;
+.shop-categories{
+  display:grid;
 
-      gap:
-        14px;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0,1fr)
+    );
 
-      margin-bottom:
-        11px;
-    }
+  gap:12px;
 
+  margin-bottom:35px;
+}
 
-    .wish-title {
-      margin:
-        0;
+.category-grid button{
+  min-height:90px;
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  border:
+    1px solid
+    rgba(60,161,232,.35);
 
-      font-size:
-        clamp(20px,3vw,28px);
+  border-radius:16px;
 
-      letter-spacing:
-        .02em;
-    }
+  background:
+    rgba(255,255,255,.03);
 
+  color:#e7f4ff;
 
-    .wish-kicker {
-      color:
-        #4fddff;
+  cursor:pointer;
 
-      font-size:
-        10px;
+  font-weight:600;
+}
 
-      font-weight:
-        800;
+.section{
+  margin-top:50px;
+}
 
-      letter-spacing:
-        .18em;
-    }
+.section-head{
+  display:flex;
 
+  align-items:end;
+  justify-content:space-between;
 
-    .wish-form {
-      display:
-        grid;
+  gap:15px;
 
-      grid-template-columns:
-        minmax(0,1fr) auto;
+  margin-bottom:16px;
+}
 
-      gap:
-        10px;
+.section-head h2{
+  margin:0;
 
-      align-items:
-        stretch;
-    }
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
+  font-size:
+    clamp(24px,4vw,35px);
+}
 
-    .wish-input {
-      width:
-        100%;
+.eyebrow{
+  display:block;
 
-      min-height:
-        48px;
+  margin-bottom:6px;
 
-      padding:
-        12px 15px;
+  color:#43d5ff;
 
-      border:
-        1px solid
-        rgba(91,185,233,.38);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
 
-      border-radius:
-        11px;
+.results-meta{
+  margin-bottom:12px;
 
-      outline:
-        none;
+  color:#829ab6;
 
-      background:
-        rgba(1,9,22,.78);
+  font-size:12px;
+}
 
-      color:
-        #ffffff;
+#sortSelect{
+  margin-bottom:15px;
 
-      font-size:
-        13px;
-    }
+  padding:9px 12px;
 
+  border:
+    1px solid
+    rgba(65,169,235,.35);
 
-    .wish-input::placeholder {
-      color:
-        #7590ad;
-    }
+  border-radius:9px;
 
+  background:#061124;
 
-    .wish-input:focus {
-      border-color:
-        rgba(52,215,255,.9);
+  color:#dcecff;
+}
 
-      box-shadow:
-        0 0 0 3px
-        rgba(0,183,255,.08);
-    }
+.product-grid{
+  display:grid;
 
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        210px,
+        1fr
+      )
+    );
 
-    .wish-submit {
-      min-width:
-        118px;
+  gap:16px;
+}
 
-      padding:
-        0 18px;
+.product{
+  position:relative;
 
-      border:
-        1px solid
-        rgba(255,203,76,.7);
+  overflow:hidden;
 
-      border-radius:
-        11px;
+  border:
+    1px solid
+    rgba(65,170,240,.2);
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,204,84,.96),
-          rgba(31,191,255,.92)
-        );
+  border-radius:18px;
 
-      color:
-        #071120;
+  background:
+    rgba(6,18,37,.86);
 
-      cursor:
-        pointer;
+  cursor:pointer;
+}
 
-      font-size:
-        11px;
+.product-media{
+  position:relative;
 
-      font-weight:
-        900;
+  aspect-ratio:1;
 
-      letter-spacing:
-        .08em;
-    }
+  background:#fff;
+}
 
+.product-img{
+  display:block;
 
-    .wish-submit:hover {
-      filter:
-        brightness(1.07);
-    }
+  width:100%;
+  height:100%;
 
+  object-fit:contain;
+}
 
-    .wish-foot {
-      display:
-        flex;
+.media-badge{
+  position:absolute;
 
-      align-items:
-        center;
+  left:10px;
+  top:10px;
 
-      gap:
-        10px;
+  padding:5px 8px;
 
-      margin-top:
-        11px;
-    }
+  border-radius:999px;
 
+  background:
+    rgba(0,0,0,.78);
 
-    .wish-lamp {
-      width:
-        34px;
+  color:#fff;
 
-      height:
-        34px;
+  font-size:9px;
+  font-weight:800;
+}
 
-      flex:
-        0 0 34px;
+.product-info{
+  padding:14px;
+}
 
-      filter:
-        drop-shadow(
-          0 0 9px
-          rgba(255,205,78,.28)
-        );
-    }
+.product-tag{
+  color:#55d8ff;
 
+  font-size:10px;
+  font-weight:800;
 
-    .wish-description {
-      margin:
-        0;
+  letter-spacing:.12em;
 
-      color:
-        #93a9c1;
+  text-transform:uppercase;
+}
 
-      font-size:
-        11px;
+.product-info h3{
+  margin:7px 0;
 
-      line-height:
-        1.5;
-    }
+  font-size:14px;
+  line-height:1.35;
+}
 
+.merchant{
+  margin:0;
 
-    .wish-status {
-      min-height:
-        15px;
+  color:#8ca3bf;
 
-      margin:
-        7px 0 0;
+  font-size:11px;
+}
 
-      color:
-        #57ddff;
+.price-row{
+  display:flex;
+  flex-wrap:wrap;
 
-      font-size:
-        10px;
-    }
+  gap:7px;
 
+  align-items:center;
 
-    .main-card-arrow {
-      position:
-        absolute;
+  margin-top:10px;
+}
 
-      right:
-        24px;
+.price{
+  font-weight:800;
+}
 
-      bottom:
-        22px;
+.old{
+  color:#72849c;
+  font-size:12px;
+}
 
-      width:
-        45px;
+.discount{
+  color:#44d8ff;
 
-      height:
-        45px;
+  font-weight:800;
 
-      display:
-        flex;
+  font-size:11px;
+}
 
-      align-items:
-        center;
+.text-btn{
+  padding:9px 13px;
 
-      justify-content:
-        center;
+  border:
+    1px solid
+    rgba(55,201,255,.45);
 
-      border:
-        1px solid
-        rgba(35,215,255,.7);
+  border-radius:9px;
 
-      border-radius:
-        50%;
+  background:
+    rgba(0,125,255,.07);
 
-      color:
-        #36d7ff;
+  color:#dff5ff;
 
-      font-size:
-        24px;
-    }
+  cursor:pointer;
 
+  font-size:12px;
+}
 
-    /* =====================================================
-       SECOND LEVEL
-       ===================================================== */
 
-    .choice-title {
-      margin:
-        5px 0 8px;
+/* =========================
+   FORMS
+   ========================= */
 
-      text-align:
-        center;
+.form-panel{
+  max-width:800px;
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  margin:0 auto;
 
-      font-size:
-        clamp(30px,5vw,46px);
-    }
+  padding:28px;
 
+  border:
+    1px solid
+    rgba(40,195,255,.45);
 
-    .choice-subtitle {
-      margin:
-        0 auto 28px;
+  border-radius:24px;
 
-      max-width:
-        650px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(9,35,68,.86),
+      rgba(2,8,22,.97)
+    );
 
-      text-align:
-        center;
+  box-shadow:
+    0 0 30px
+    rgba(0,120,255,.12);
+}
 
-      color:
-        #93a9c5;
+.form-group{
+  margin-bottom:17px;
+}
 
-      line-height:
-        1.6;
+.form-group label{
+  display:block;
 
-      font-size:
-        14px;
-    }
+  margin-bottom:7px;
 
+  color:#d8eaff;
 
-    .choice-grid {
-      display:
-        grid;
+  font-size:12px;
+  font-weight:700;
+}
 
-      grid-template-columns:
-        repeat(2,minmax(0,1fr));
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
 
-      gap:
-        22px;
-    }
+  padding:12px 13px;
 
+  border:
+    1px solid
+    rgba(72,160,225,.3);
 
-    .choice-card {
-      min-height:
-        245px;
+  border-radius:10px;
 
-      display:
-        flex;
+  background:#041022;
 
-      flex-direction:
-        column;
+  color:#fff;
 
-      align-items:
-        center;
+  outline:none;
+}
 
-      justify-content:
-        center;
+.form-group textarea{
+  min-height:130px;
+  resize:vertical;
+}
 
-      padding:
-        30px;
+.form-submit{
+  width:100%;
 
-      text-align:
-        center;
+  padding:13px;
 
-      text-decoration:
-        none;
+  border:0;
+  border-radius:10px;
 
-      border:
-        1px solid
-        rgba(35,197,255,.72);
+  background:
+    linear-gradient(
+      135deg,
+      #0caaff,
+      #176dff
+    );
 
-      border-radius:
-        25px;
+  color:#fff;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(8,35,72,.86),
-          rgba(2,8,21,.98)
-        );
+  font-weight:800;
+  cursor:pointer;
+}
 
-      box-shadow:
-        0 0 26px
-        rgba(0,130,255,.15);
 
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-    }
+/* =========================
+   TIKTOK - HIDDEN FOR NOW
+   ========================= */
 
+#tiktok{
+  display:none;
+}
 
-    .choice-card:hover {
-      transform:
-        translateY(-4px);
+.tiktok-section{
+  margin-top:60px;
+}
 
-      box-shadow:
-        0 0 40px
-        rgba(0,155,255,.27);
-    }
+.tiktok-card{
+  display:grid;
 
+  grid-template-columns:
+    1.1fr .9fr;
 
-    .choice-card-logo {
-      width:
-        65px;
+  gap:35px;
 
-      margin-bottom:
-        17px;
+  padding:35px;
 
-      filter:
-        drop-shadow(
-          0 0 14px
-          rgba(0,195,255,.45)
-        );
-    }
+  border:
+    1px solid
+    rgba(50,195,255,.3);
 
+  border-radius:24px;
 
-    .choice-card h2 {
-      margin:
-        0;
+  background:#071124;
+}
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+.tiktok-copy{
+  max-width:650px;
+}
 
-      font-size:
-        clamp(28px,5vw,42px);
-    }
+.tiktok-label{
+  display:inline-block;
 
+  color:#50d9ff;
 
-    .choice-card p {
-      margin:
-        10px 0 0;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.15em;
+}
 
-      color:
-        #a6bdd7;
+.tiktok-copy h3{
+  margin:10px 0 15px;
 
-      font-size:
-        13px;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-      line-height:
-        1.6;
-    }
+  font-size:38px;
+}
 
+.tiktok-copy p{
+  color:#9db3cd;
 
-    /* =====================================================
-       CATALOG
-       ===================================================== */
+  line-height:1.7;
 
-    .catalog-title {
-      margin:
-        0 0 5px;
+  font-size:14px;
+}
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+.tiktok-consent{
+  font-size:11px!important;
+  color:#71859f!important;
+}
 
-      font-size:
-        clamp(30px,5vw,44px);
-    }
+.tiktok-connect-btn{
+  display:inline-flex;
 
+  align-items:center;
+  justify-content:center;
 
-    .catalog-subtitle {
-      margin:
-        0 0 25px;
+  margin-top:12px;
 
-      color:
-        #8da5c2;
+  padding:13px 18px;
 
-      font-size:
-        13px;
+  border-radius:9px;
 
-      line-height:
-        1.6;
-    }
+  background:#fff;
 
+  color:#081124;
 
-    .shop-categories {
-      display:
-        grid;
+  font-size:11px;
+  font-weight:800;
 
-      grid-template-columns:
-        repeat(4,minmax(0,1fr));
+  text-decoration:none;
+}
 
-      gap:
-        12px;
+.tiktok-visual{
+  min-height:220px;
 
-      margin-bottom:
-        35px;
-    }
+  display:flex;
 
+  align-items:center;
+  justify-content:center;
 
-    .category-grid button {
-      min-height:
-        90px;
+  position:relative;
+}
 
-      border:
-        1px solid
-        rgba(60,161,232,.35);
+.tiktok-circle{
+  width:150px;
+  height:150px;
 
-      border-radius:
-        16px;
+  display:flex;
 
-      background:
-        rgba(255,255,255,.03);
+  align-items:center;
+  justify-content:center;
 
-      color:
-        #e7f4ff;
+  border-radius:50%;
 
-      cursor:
-        pointer;
+  background:#fff;
+  color:#091124;
 
-      font-weight:
-        600;
+  font-size:65px;
+}
 
-      transition:
-        border-color .2s ease,
-        background .2s ease;
-    }
+.tiktok-visual-card{
+  position:absolute;
 
+  right:0;
+  bottom:5px;
 
-    .category-grid button:hover {
-      border-color:
-        #31d4ff;
+  padding:12px;
 
-      background:
-        rgba(0,125,255,.1);
-    }
+  border:
+    1px solid
+    rgba(255,255,255,.12);
 
+  border-radius:12px;
 
-    .section {
-      margin-top:
-        50px;
-    }
+  background:
+    rgba(255,255,255,.07);
+}
 
+.tiktok-visual-card strong,
+.tiktok-visual-card small{
+  display:block;
+}
 
-    .section-head {
-      display:
-        flex;
+.tiktok-visual-card strong{
+  font-size:13px;
+}
 
-      align-items:
-        end;
+.tiktok-visual-card small{
+  color:#859ab4;
 
-      justify-content:
-        space-between;
+  margin-top:4px;
 
-      gap:
-        15px;
+  font-size:10px;
+}
 
-      margin-bottom:
-        16px;
-    }
 
+/* =========================
+   MODAL
+   ========================= */
 
-    .section-head h2 {
-      margin:
-        0;
+.modal{
+  position:fixed;
 
-      font-family:
-        "Space Grotesk",
-        sans-serif;
+  inset:0;
 
-      font-size:
-        clamp(24px,4vw,35px);
-    }
+  z-index:100;
 
+  display:none;
 
-    .eyebrow {
-      display:
-        block;
+  align-items:center;
+  justify-content:center;
 
-      margin-bottom:
-        6px;
+  padding:18px;
+}
 
-      color:
-        #43d5ff;
+.modal.open{
+  display:flex;
+}
 
-      font-size:
-        10px;
+.modal-backdrop{
+  position:absolute;
 
-      font-weight:
-        800;
+  inset:0;
 
-      letter-spacing:
-        .18em;
-    }
+  background:
+    rgba(0,0,0,.78);
 
+  backdrop-filter:blur(8px);
+}
 
-    .results-meta {
-      margin-bottom:
-        12px;
+.modal-card{
+  position:relative;
+  z-index:2;
 
-      color:
-        #829ab6;
+  width:min(
+    900px,
+    100%
+  );
 
-      font-size:
-        12px;
-    }
+  max-height:90vh;
 
+  overflow:auto;
 
-    #sortSelect {
-      margin-bottom:
-        15px;
+  display:grid;
 
-      padding:
-        9px 12px;
+  grid-template-columns:
+    .9fr
+    1.1fr;
 
-      border:
-        1px solid
-        rgba(65,169,235,.35);
+  border:
+    1px solid
+    rgba(50,195,255,.3);
 
-      border-radius:
-        9px;
+  border-radius:22px;
 
-      background:
-        #061124;
+  background:#061124;
+}
 
-      color:
-        #dcecff;
-    }
+.modal-close{
+  position:absolute;
 
+  top:12px;
+  right:12px;
 
-    .product-grid {
-      display:
-        grid;
+  z-index:4;
 
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(
-            210px,
-            1fr
-          )
-        );
+  width:37px;
+  height:37px;
 
-      gap:
-        16px;
-    }
+  border-radius:50%;
 
+  border:
+    1px solid
+    rgba(255,255,255,.18);
 
-    .product {
-      position:
-        relative;
+  background:
+    rgba(0,0,0,.5);
 
-      overflow:
-        hidden;
+  color:#fff;
 
-      border:
-        1px solid
-        rgba(65,170,240,.2);
+  cursor:pointer;
 
-      border-radius:
-        18px;
+  font-size:22px;
+}
 
-      background:
-        rgba(6,18,37,.86);
+#modalImage{
+  width:100%;
+  height:100%;
 
-      cursor:
-        pointer;
+  min-height:350px;
 
-      transition:
-        transform .2s ease,
-        border-color .2s ease;
-    }
+  object-fit:contain;
 
+  background:#fff;
+}
 
-    .product:hover {
-      transform:
-        translateY(-3px);
+.modal-body{
+  padding:30px;
+}
 
-      border-color:
-        rgba(48,203,255,.62);
-    }
+.modal-body h2{
+  margin:5px 0 10px;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+}
 
-    .product-media {
-      position:
-        relative;
+.modal-body>p{
+  color:#9db3cc;
 
-      aspect-ratio:
-        1 / 1;
+  line-height:1.7;
 
-      background:
-        #ffffff;
-    }
+  font-size:13px;
+}
 
+.deal-btn{
+  display:inline-flex;
 
-    .product-img {
-      display:
-        block;
+  margin-top:12px;
 
-      width:
-        100%;
+  padding:12px 18px;
 
-      height:
-        100%;
+  border-radius:9px;
 
-      object-fit:
-        contain;
-    }
+  background:
+    linear-gradient(
+      135deg,
+      #0caaff,
+      #176dff
+    );
 
+  color:#fff;
 
-    .media-badge {
-      position:
-        absolute;
+  text-decoration:none;
 
-      left:
-        10px;
+  font-size:12px;
+  font-weight:800;
+}
 
-      top:
-        10px;
+.demo-note{
+  display:block;
 
-      padding:
-        5px 8px;
+  margin-top:10px;
 
-      border-radius:
-        999px;
+  color:#6f849d;
 
-      background:
-        rgba(0,0,0,.78);
+  font-size:10px;
 
-      color:
-        #ffffff;
+  line-height:1.5;
+}
 
-      font-size:
-        9px;
+body.modal-open{
+  overflow:hidden;
+}
 
-      font-weight:
-        800;
-    }
 
+/* =========================
+   FOOTER
+   ========================= */
 
-    .product-info {
-      padding:
-        14px;
-    }
+footer{
+  text-align:center;
 
+  padding:
+    28px 12px 18px;
 
-    .product-tag {
-      color:
-        #55d8ff;
+  color:#667f9e;
 
-      font-size:
-        10px;
+  font-size:11px;
+}
 
-      font-weight:
-        800;
+.footer-brand{
+  color:#d9ebff;
 
-      letter-spacing:
-        .12em;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-      text-transform:
-        uppercase;
-    }
+  letter-spacing:.16em;
 
+  font-weight:700;
 
-    .product-info h3 {
-      margin:
-        7px 0;
+  margin-bottom:7px;
+}
 
-      font-size:
-        14px;
 
-      line-height:
-        1.35;
-    }
+/* =========================
+   RESPONSIVE
+   ========================= */
 
+@media(max-width:820px){
 
-    .merchant {
-      margin:
-        0;
+  .home-grid,
+  .choice-grid{
+    grid-template-columns:1fr;
+  }
 
-      color:
-        #8ca3bf;
+  .main-card{
+    min-height:245px;
+  }
 
-      font-size:
-        11px;
-    }
+  .main-card-copy{
+    width:68%;
+  }
 
+  .main-card-title{
+    font-size:
+      clamp(
+        46px,
+        10vw,
+        70px
+      );
+  }
 
-    .price-row {
-      display:
-        flex;
+  .main-card-description{
+    font-size:14px;
+  }
 
-      flex-wrap:
-        wrap;
+  .wish-card{
+    min-height:270px;
+  }
 
-      gap:
-        7px;
+  .wish-card-copy{
+    width:70%;
+  }
 
-      align-items:
-        center;
+  .wish-form{
+    grid-template-columns:1fr;
+  }
 
-      margin-top:
-        10px;
-    }
+  .wish-submit{
+    min-height:45px;
+  }
 
+  .shop-categories{
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+  }
 
-    .price {
-      font-weight:
-        800;
-    }
+  .tiktok-card{
+    grid-template-columns:1fr;
+  }
 
+  .modal-card{
+    grid-template-columns:1fr;
+  }
 
-    .old {
-      color:
-        #72849c;
+  #modalImage{
+    min-height:250px;
+    max-height:330px;
+  }
+}
 
-      font-size:
-        12px;
-    }
+@media(max-width:480px){
 
+  .brand-name{
+    font-size:39px;
+  }
 
-    .discount {
-      color:
-        #44d8ff;
+  .brand-tagline{
+    font-size:16px;
+  }
 
-      font-weight:
-        800;
+  .main-card{
+    padding:22px;
+  }
 
-      font-size:
-        11px;
-    }
+  .main-card-copy{
+    width:72%;
+  }
 
+  .main-card-title{
+    font-size:43px;
+  }
 
-    .text-btn {
-      padding:
-        9px 13px;
+  .main-card-description{
+    font-size:13px;
+  }
 
-      border:
-        1px solid
-        rgba(55,201,255,.45);
+  .wish-card{
+    min-height:320px;
+  }
 
-      border-radius:
-        9px;
+  .wish-card-copy{
+    width:80%;
+  }
 
-      background:
-        rgba(0,125,255,.07);
+  .wish-form{
+    grid-template-columns:1fr;
+  }
 
-      color:
-        #dff5ff;
+  .wish-submit{
+    min-height:45px;
+  }
 
-      cursor:
-        pointer;
+  .shop-categories{
+    gap:9px;
+  }
 
-      font-size:
-        12px;
-    }
+  .category-grid button{
+    min-height:78px;
+    font-size:12px;
+  }
+}
 
-
-    /* =====================================================
-       FORM
-       ===================================================== */
-
-    .form-panel {
-      max-width:
-        800px;
-
-      margin:
-        0 auto;
-
-      padding:
-        28px;
-
-      border:
-        1px solid
-        rgba(40,195,255,.45);
-
-      border-radius:
-        24px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(9,35,68,.86),
-          rgba(2,8,22,.97)
-        );
-
-      box-shadow:
-        0 0 30px
-        rgba(0,120,255,.12);
-    }
-
-
-    .form-group {
-      margin-bottom:
-        17px;
-    }
-
-
-    .form-group label {
-      display:
-        block;
-
-      margin-bottom:
-        7px;
-
-      color:
-        #d8eaff;
-
-      font-size:
-        12px;
-
-      font-weight:
-        700;
-    }
-
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width:
-        100%;
-
-      padding:
-        12px 13px;
-
-      border:
-        1px solid
-        rgba(72,160,225,.3);
-
-      border-radius:
-        10px;
-
-      background:
-        #041022;
-
-      color:
-        #ffffff;
-
-      outline:
-        none;
-    }
-
-
-    .form-group textarea {
-      min-height:
-        130px;
-
-      resize:
-        vertical;
-    }
-
-
-    .form-submit {
-      width:
-        100%;
-
-      padding:
-        13px;
-
-      border:
-        0;
-
-      border-radius:
-        10px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #0caaff,
-          #176dff
-        );
-
-      color:
-        #ffffff;
-
-      font-weight:
-        800;
-
-      cursor:
-        pointer;
-    }
-
-
-    /* =====================================================
-       TIKTOK / EXISTING SYSTEM
-       ===================================================== */
-
-    #tiktok {
-      display:
-        none;
-    }
-
-
-    .tiktok-section {
-      margin-top:
-        60px;
-    }
-
-
-    .tiktok-card {
-      display:
-        grid;
-
-      grid-template-columns:
-        1.1fr .9fr;
-
-      gap:
-        35px;
-
-      padding:
-        35px;
-
-      border:
-        1px solid
-        rgba(50,195,255,.3);
-
-      border-radius:
-        24px;
-
-      background:
-        #071124;
-    }
-
-
-    .tiktok-copy {
-      max-width:
-        650px;
-    }
-
-
-    .tiktok-label {
-      display:
-        inline-block;
-
-      color:
-        #50d9ff;
-
-      font-size:
-        10px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        .15em;
-    }
-
-
-    .tiktok-copy h3 {
-      margin:
-        10px 0 15px;
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-
-      font-size:
-        38px;
-    }
-
-
-    .tiktok-copy p {
-      color:
-        #9db3cd;
-
-      line-height:
-        1.7;
-
-      font-size:
-        14px;
-    }
-
-
-    .tiktok-consent {
-      font-size:
-        11px !important;
-
-      color:
-        #71859f !important;
-    }
-
-
-    .tiktok-connect-btn {
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      margin-top:
-        12px;
-
-      padding:
-        13px 18px;
-
-      border-radius:
-        9px;
-
-      background:
-        #ffffff;
-
-      color:
-        #081124;
-
-      font-size:
-        11px;
-
-      font-weight:
-        800;
-
-      text-decoration:
-        none;
-
-      cursor:
-        pointer;
-    }
-
-
-    .tiktok-visual {
-      min-height:
-        220px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      position:
-        relative;
-    }
-
-
-    .tiktok-circle {
-      width:
-        150px;
-
-      height:
-        150px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      border-radius:
-        50%;
-
-      background:
-        #ffffff;
-
-      color:
-        #091124;
-
-      font-size:
-        65px;
-    }
-
-
-    .tiktok-visual-card {
-      position:
-        absolute;
-
-      right:
-        0;
-
-      bottom:
-        5px;
-
-      padding:
-        12px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.12);
-
-      border-radius:
-        12px;
-
-      background:
-        rgba(255,255,255,.07);
-    }
-
-
-    .tiktok-visual-card strong,
-    .tiktok-visual-card small {
-      display:
-        block;
-    }
-
-
-    .tiktok-visual-card strong {
-      font-size:
-        13px;
-    }
-
-
-    .tiktok-visual-card small {
-      color:
-        #859ab4;
-
-      margin-top:
-        4px;
-
-      font-size:
-        10px;
-    }
-
-
-    /* =====================================================
-       MODAL
-       ===================================================== */
-
-    .modal {
-      position:
-        fixed;
-
-      inset:
-        0;
-
-      z-index:
-        100;
-
-      display:
-        none;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      padding:
-        18px;
-    }
-
-
-    .modal.open {
-      display:
-        flex;
-    }
-
-
-    .modal-backdrop {
-      position:
-        absolute;
-
-      inset:
-        0;
-
-      background:
-        rgba(0,0,0,.78);
-
-      backdrop-filter:
-        blur(8px);
-    }
-
-
-    .modal-card {
-      position:
-        relative;
-
-      z-index:
-        2;
-
-      width:
-        min(
-          900px,
-          100%
-        );
-
-      max-height:
-        90vh;
-
-      overflow:
-        auto;
-
-      display:
-        grid;
-
-      grid-template-columns:
-        .9fr 1.1fr;
-
-      border:
-        1px solid
-        rgba(50,195,255,.3);
-
-      border-radius:
-        22px;
-
-      background:
-        #061124;
-    }
-
-
-    .modal-close {
-      position:
-        absolute;
-
-      top:
-        12px;
-
-      right:
-        12px;
-
-      z-index:
-        4;
-
-      width:
-        37px;
-
-      height:
-        37px;
-
-      border-radius:
-        50%;
-
-      border:
-        1px solid
-        rgba(255,255,255,.18);
-
-      background:
-        rgba(0,0,0,.5);
-
-      color:
-        #ffffff;
-
-      cursor:
-        pointer;
-
-      font-size:
-        22px;
-    }
-
-
-    #modalImage {
-      width:
-        100%;
-
-      height:
-        100%;
-
-      min-height:
-        350px;
-
-      object-fit:
-        contain;
-
-      background:
-        #ffffff;
-    }
-
-
-    .modal-body {
-      padding:
-        30px;
-    }
-
-
-    .modal-body h2 {
-      margin:
-        5px 0 10px;
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-    }
-
-
-    .modal-body > p {
-      color:
-        #9db3cc;
-
-      line-height:
-        1.7;
-
-      font-size:
-        13px;
-    }
-
-
-    .deal-btn {
-      display:
-        inline-flex;
-
-      margin-top:
-        12px;
-
-      padding:
-        12px 18px;
-
-      border-radius:
-        9px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #0caaff,
-          #176dff
-        );
-
-      color:
-        #ffffff;
-
-      text-decoration:
-        none;
-
-      font-size:
-        12px;
-
-      font-weight:
-        800;
-    }
-
-
-    .demo-note {
-      display:
-        block;
-
-      margin-top:
-        10px;
-
-      color:
-        #6f849d;
-
-      font-size:
-        10px;
-
-      line-height:
-        1.5;
-    }
-
-
-    body.modal-open {
-      overflow:
-        hidden;
-    }
-
-
-    /* =====================================================
-       FOOTER
-       ===================================================== */
-
-    footer {
-      position:
-        relative;
-
-      z-index:
-        1;
-
-      text-align:
-        center;
-
-      padding:
-        28px 12px 18px;
-
-      color:
-        #667f9e;
-
-      font-size:
-        11px;
-    }
-
-
-    .footer-brand {
-      color:
-        #d9ebff;
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-
-      letter-spacing:
-        .16em;
-
-      font-weight:
-        700;
-
-      margin-bottom:
-        7px;
-    }
-
-
-    /* =====================================================
-       MOBILE
-       ===================================================== */
-
-    @media (max-width: 820px) {
-
-      .home-grid,
-      .choice-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .main-card {
-        min-height:
-          245px;
-      }
-
-
-      .main-card-content {
-        width: 100%;
-      }
-
-
-      .main-card-copy {
-        width:
-          68%;
-      }
-
-
-      .main-card-title {
-        font-size:
-          clamp(46px,10vw,70px);
-      }
-
-
-      .main-card-description {
-        font-size:
-          14px;
-      }
-
-
-      .wish-form {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .wish-submit {
-        min-height:
-          45px;
-      }
-
-
-      .shop-categories {
-        grid-template-columns:
-          repeat(2,minmax(0,1fr));
-      }
-
-
-      .tiktok-card {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .modal-card {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      #modalImage {
-        min-height:
-          250px;
-
-        max-height:
-          330px;
-      }
-
-    }
-
-
-    @media (max-width: 480px) {
-
-      .brand-name {
-        font-size:
-          39px;
-      }
-
-
-      .brand-tagline {
-        font-size:
-          16px;
-      }
-
-
-      .main-card {
-        padding:
-          22px;
-      }
-
-
-      .main-card-copy {
-        width:
-          72%;
-      }
-
-
-      .main-card-title {
-        font-size:
-          43px;
-      }
-
-
-      .main-card-description {
-        font-size:
-          13px;
-      }
-
-
-      .wish-panel {
-        padding:
-          17px 16px 14px;
-      }
-
-
-      .wish-foot {
-        align-items:
-          flex-start;
-      }
-
-
-      .shop-categories {
-        gap:
-          9px;
-      }
-
-
-      .category-grid button {
-        min-height:
-          78px;
-
-        font-size:
-          12px;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
-
 
 <body>
 
+<main class="page" id="home">
 
-  <!-- =====================================================
-       ZOVARO MAIN
-       ===================================================== -->
 
-  <main
-    class="page"
-    id="home"
+<section class="brand-area">
+
+  <img
+    class="brand-logo"
+    src="assets/zovaro-logo.png"
+    alt="ZOVARO"
   >
 
+  <h1 class="brand-name">
+    ZOVARO
+  </h1>
 
-    <!-- BRAND -->
+  <p class="brand-tagline">
+    Discover Better. Shop Smarter. Discover Job Opportunities.
+  </p>
 
-    <section class="brand-area">
-
-      <img
-        class="brand-logo"
-        src="assets/zovaro-logo.png"
-        alt="ZOVARO"
-      >
-
-      <h1 class="brand-name">
-        ZOVARO
-      </h1>
-
-      <p class="brand-tagline">
-        Discover Better. Shop Smarter. Discover Job Opportunities.
-      </p>
-
-    </section>
+</section>
 
 
-    <!-- ===================================================
-         HOME VIEW
-         =================================================== -->
+<section
+  id="homeView"
+  class="view"
+>
 
-    <section
-      id="homeView"
-      class="view"
+  <div class="home-grid">
+
+
+    <a
+      href="#"
+      class="main-card shop-card"
+      id="openShop"
     >
 
-      <div class="home-grid">
+      <div class="main-card-content">
 
+        <div class="main-card-copy">
 
-        <!-- SHOP -->
+          <p class="main-card-brand">
+            ZOVARO
+          </p>
 
-        <a
-          href="#"
-          class="main-card shop-card"
-          id="openShop"
-        >
+          <h2 class="main-card-title">
+            SHOP
+          </h2>
 
-          <div class="main-card-content">
+          <p class="main-card-subtitle">
+            New &amp; Used
+          </p>
 
-            <div class="main-card-copy">
-
-              <p class="main-card-brand">
-                ZOVARO
-              </p>
-
-              <h2 class="main-card-title">
-                SHOP
-              </h2>
-
-              <p class="main-card-subtitle">
-                New &amp; Used
-              </p>
-
-              <p class="main-card-description">
-                Buy what you need from around the world —
-                electronics, fashion, beauty, perfumes,
-                cosmetics, automotive, sports and more.
-                Discover products for every need,
-                all in one place.
-              </p>
-
-            </div>
-
-          </div>
-
-          <span class="main-card-arrow">
-            →
-          </span>
-
-        </a>
-
-
-        <!-- JOB -->
-
-        <a
-          href="#"
-          class="main-card job-card"
-          id="openJobs"
-        >
-
-          <div class="main-card-content">
-
-            <div class="main-card-copy">
-
-              <p class="main-card-brand">
-                ZOVARO
-              </p>
-
-              <h2 class="main-card-title">
-                JOB
-              </h2>
-
-              <p class="main-card-subtitle">
-                Urgent Jobs &amp; Workers
-              </p>
-
-              <p class="main-card-description">
-                Find the opportunity that matches
-                your skills — or find the right person
-                for your business. Connect with jobs,
-                workers and new opportunities
-                on ZOVARO.
-              </p>
-
-            </div>
-
-          </div>
-
-          <span class="main-card-arrow">
-            →
-          </span>
-
-        </a>
-
-      </div>
-
-
-      <!-- =================================================
-           MAKE A WISH
-           ================================================= -->
-
-      <section
-        class="wish-panel"
-        aria-labelledby="wishTitle"
-      >
-
-        <div class="wish-heading">
-
-          <div>
-
-            <span class="wish-kicker">
-              ZOVARO SMART REQUEST
-            </span>
-
-            <h2
-              class="wish-title"
-              id="wishTitle"
-            >
-              MAKE A WISH
-            </h2>
-
-          </div>
+          <p class="main-card-description">
+            Buy what you need from around the world —
+            electronics, fashion, beauty, perfumes,
+            cosmetics, automotive, sports and more.
+            Discover products for every need,
+            all in one place.
+          </p>
 
         </div>
 
+      </div>
 
-        <form
-          class="wish-form"
-          id="wishForm"
-        >
+      <span class="main-card-arrow">
+        →
+      </span>
 
-          <input
-            class="wish-input"
-            id="wishInput"
-            type="text"
-            autocomplete="off"
-            maxlength="300"
-            placeholder="Tell ZOVARO what you are looking for — e.g. a Versace latest collection perfume, a padel racket, children's clothes, or a used item to sell."
+    </a>
+
+
+    <a
+      href="#"
+      class="main-card job-card"
+      id="openJobs"
+    >
+
+      <div class="main-card-content">
+
+        <div class="main-card-copy">
+
+          <p class="main-card-brand">
+            ZOVARO
+          </p>
+
+          <h2 class="main-card-title">
+            JOB
+          </h2>
+
+          <p class="main-card-subtitle">
+            Urgent Jobs &amp; Workers
+          </p>
+
+          <p class="main-card-description">
+            Find the opportunity that matches
+            your skills — or find the right person
+            for your business. Connect with jobs,
+            workers and new opportunities
+            on ZOVARO.
+          </p>
+
+        </div>
+
+      </div>
+
+      <span class="main-card-arrow">
+        →
+      </span>
+
+    </a>
+
+
+    <section
+      class="main-card wish-card"
+      aria-labelledby="wishTitle"
+    >
+
+      <div class="wish-card-content">
+
+        <div class="wish-card-copy">
+
+          <span class="wish-kicker">
+            ZOVARO SMART REQUEST
+          </span>
+
+          <h2
+            class="wish-title"
+            id="wishTitle"
           >
-
-          <button
-            class="wish-submit"
-            type="submit"
-          >
-            SEND WISH
-          </button>
-
-        </form>
-
-
-        <div class="wish-foot">
-
-          <svg
-            class="wish-lamp"
-            viewBox="0 0 64 64"
-            role="img"
-            aria-label="Wish lamp"
-          >
-
-            <defs>
-
-              <linearGradient
-                id="wishLampGradient"
-                x1="0"
-                y1="0"
-                x2="1"
-                y2="1"
-              >
-                <stop
-                  offset="0%"
-                  stop-color="#FFD86A"
-                />
-                <stop
-                  offset="48%"
-                  stop-color="#35D6FF"
-                />
-                <stop
-                  offset="100%"
-                  stop-color="#087CFF"
-                />
-              </linearGradient>
-
-              <filter
-                id="wishGlow"
-                x="-50%"
-                y="-50%"
-                width="200%"
-                height="200%"
-              >
-                <feGaussianBlur
-                  stdDeviation="2"
-                  result="blur"
-                />
-                <feMerge>
-                  <feMergeNode
-                    in="blur"
-                  />
-                  <feMergeNode
-                    in="SourceGraphic"
-                  />
-                </feMerge>
-              </filter>
-
-            </defs>
-
-            <path
-              d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
-              fill="rgba(255,216,106,.12)"
-              stroke="url(#wishLampGradient)"
-              stroke-width="2.4"
-              filter="url(#wishGlow)"
-            />
-
-            <path
-              d="M27 48h10M28.5 53h7M31 58h2"
-              stroke="#FFD86A"
-              stroke-width="2.4"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
-              stroke="#FFD86A"
-              stroke-width="1.8"
-              stroke-linecap="round"
-            />
-
-          </svg>
+            MAKE A WISH
+          </h2>
 
           <p class="wish-description">
-            Your wish tells ZOVARO what you need. Use it to describe a product you want to find, a category you are searching for, or something you want to sell. The smart matching system can be connected next to turn your request into a personalized search.
+            Tell ZOVARO exactly what you are looking for —
+            a product to buy, a job to find, a job to offer,
+            or something you want to sell.
           </p>
 
-        </div>
-
-
-        <p
-          class="wish-status"
-          id="wishStatus"
-          aria-live="polite"
-        ></p>
-
-      </section>
-
-    </section>
-
-
-    <!-- ===================================================
-         SHOP CHOICE
-         =================================================== -->
-
-    <section
-      id="shopChoiceView"
-      class="view hidden"
-    >
-
-      <button
-        type="button"
-        class="back-button"
-        id="backFromShopChoice"
-      >
-        ← Back
-      </button>
-
-
-      <h2 class="choice-title">
-        ZOVARO SHOP
-      </h2>
-
-      <p class="choice-subtitle">
-        Choose what you want to do.
-      </p>
-
-
-      <div class="choice-grid">
-
-
-        <a
-          href="#"
-          class="choice-card"
-          id="openBuyProducts"
-        >
-
-          <img
-            class="choice-card-logo"
-            src="assets/zovaro-logo.png"
-            alt=""
+          <form
+            class="wish-form"
+            id="wishForm"
           >
 
-          <h2>
-            BUY PRODUCTS
-          </h2>
+            <input
+              class="wish-input"
+              id="wishInput"
+              type="text"
+              autocomplete="off"
+              maxlength="300"
+              placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
+            >
 
-          <p>
-            Discover new products and offers
-            from participating merchants.
-          </p>
+            <button
+              class="wish-submit"
+              type="submit"
+            >
+              SEND WISH
+            </button>
 
-        </a>
-
-
-        <a
-          href="#"
-          class="choice-card"
-          id="openSellProducts"
-        >
-
-          <img
-            class="choice-card-logo"
-            src="assets/zovaro-logo.png"
-            alt=""
-          >
-
-          <h2>
-            SELL PRODUCTS
-          </h2>
-
-          <p>
-            List your used products and connect
-            with people looking to buy.
-          </p>
-
-        </a>
-
-      </div>
-
-    </section>
+          </form>
 
 
-    <!-- ===================================================
-         JOB CHOICE
-         =================================================== -->
+          <div class="wish-foot">
 
-    <section
-      id="jobChoiceView"
-      class="view hidden"
-    >
+            <svg
+              class="wish-lamp"
+              viewBox="0 0 64 64"
+              role="img"
+              aria-label="Wish lamp"
+            >
 
-      <button
-        type="button"
-        class="back-button"
-        id="backFromJobChoice"
-      >
-        ← Back
-      </button>
+              <defs>
 
+                <linearGradient
+                  id="wishLampGradient"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="1"
+                >
 
-      <h2 class="choice-title">
-        ZOVARO JOB
-      </h2>
+                  <stop
+                    offset="0%"
+                    stop-color="#FFD86A"
+                  >
 
-      <p class="choice-subtitle">
-        Choose what you want to do.
-      </p>
+                  </stop>
 
+                  <stop
+                    offset="48%"
+                    stop-color="#35D6FF"
+                  >
 
-      <div class="choice-grid">
+                  </stop>
 
+                  <stop
+                    offset="100%"
+                    stop-color="#087CFF"
+                  >
 
-        <a
-          href="#"
-          class="choice-card"
-          id="openLookingJob"
-        >
+                  </stop>
 
-          <img
-            class="choice-card-logo"
-            src="assets/zovaro-logo.png"
-            alt=""
-          >
-
-          <h2>
-            LOOKING FOR A JOB
-          </h2>
-
-          <p>
-            Find work opportunities and
-            connect with employers.
-          </p>
-
-        </a>
+                </linearGradient>
 
 
-        <a
-          href="#"
-          class="choice-card"
-          id="openOfferJob"
-        >
+                <filter
+                  id="wishGlow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
 
-          <img
-            class="choice-card-logo"
-            src="assets/zovaro-logo.png"
-            alt=""
-          >
+                  <feGaussianBlur
+                    stdDeviation="2"
+                    result="blur"
+                  ></feGaussianBlur>
 
-          <h2>
-            OFFER A JOB
-          </h2>
+                  <feMerge>
 
-          <p>
-            Tell people you are hiring
-            and find the right worker.
-          </p>
+                    <feMergeNode
+                      in="blur"
+                    ></feMergeNode>
 
-        </a>
+                    <feMergeNode
+                      in="SourceGraphic"
+                    ></feMergeNode>
 
-      </div>
+                  </feMerge>
 
-    </section>
+                </filter>
 
-
-    <!-- ===================================================
-         BUY PRODUCTS
-         =================================================== -->
-
-    <section
-      id="buyProductsView"
-      class="view hidden"
-    >
-
-      <button
-        type="button"
-        class="back-button"
-        id="backFromBuy"
-      >
-        ← Back
-      </button>
+              </defs>
 
 
-      <p class="eyebrow">
-        ZOVARO SHOP
-      </p>
+              <path
+                d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
+                fill="rgba(255,216,106,.12)"
+                stroke="url(#wishLampGradient)"
+                stroke-width="2.4"
+                filter="url(#wishGlow)"
+              ></path>
 
-      <h2 class="catalog-title">
-        BUY PRODUCTS
-      </h2>
+              <path
+                d="M27 48h10M28.5 53h7M31 58h2"
+                stroke="#FFD86A"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              ></path>
 
-      <p class="catalog-subtitle">
-        Discover new products and offers
-        from participating merchants around
-        the world.
-      </p>
+              <path
+                d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
+                stroke="#FFD86A"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              ></path>
 
-
-      <div
-        class="shop-categories category-grid"
-        id="categoryGrid"
-      ></div>
-
-
-      <form
-        id="searchForm"
-        class="hidden"
-      >
-
-        <input
-          id="searchInput"
-          type="search"
-        >
-
-      </form>
+            </svg>
 
 
-      <section
-        class="section"
-        id="trending"
-      >
-
-        <div class="section-head">
-
-          <div>
-
-            <span class="eyebrow">
-              ZOVARO SHOP
-            </span>
-
-            <h2 id="resultsTitle">
-              Trending Products
-            </h2>
+            <p class="wish-help">
+              One sentence is enough.
+              ZOVARO's smart matching system
+              will be connected next.
+            </p>
 
           </div>
-
-
-          <button
-            type="button"
-            id="viewAllBtn"
-            class="text-btn"
-          >
-            View all →
-          </button>
-
-        </div>
-
-
-        <div
-          id="resultsMeta"
-          class="results-meta"
-        ></div>
-
-
-        <select
-          id="sortSelect"
-          aria-label="Sort products"
-        >
-
-          <option value="default">
-            Sort by
-          </option>
-
-          <option value="price-asc">
-            Price: Low to High
-          </option>
-
-          <option value="price-desc">
-            Price: High to Low
-          </option>
-
-          <option value="discount-desc">
-            Biggest Discount
-          </option>
-
-        </select>
-
-
-        <div
-          id="trendingGrid"
-          class="product-grid"
-        ></div>
-
-      </section>
-
-
-      <section
-        class="section"
-        id="deals"
-      >
-
-        <div class="section-head">
-
-          <div>
-
-            <span class="eyebrow">
-              BEST OFFERS
-            </span>
-
-            <h2>
-              Best Deals
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div
-          id="dealGrid"
-          class="product-grid"
-        ></div>
-
-      </section>
-
-
-      <section
-        class="section"
-        id="new"
-      >
-
-        <div class="section-head">
-
-          <div>
-
-            <span class="eyebrow">
-              JUST IN
-            </span>
-
-            <h2>
-              New Arrivals
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div
-          id="newGrid"
-          class="product-grid"
-        ></div>
-
-      </section>
-
-    </section>
-
-
-    <!-- ===================================================
-         SELL PRODUCTS
-         =================================================== -->
-
-    <section
-      id="sellProductsView"
-      class="view hidden"
-    >
-
-      <button
-        type="button"
-        class="back-button"
-        id="backFromSell"
-      >
-        ← Back
-      </button>
-
-
-      <h2 class="choice-title">
-        SELL PRODUCTS
-      </h2>
-
-      <p class="choice-subtitle">
-        List your used product for free.
-        ZOVARO charges 0% commission on the sale.
-      </p>
-
-
-      <div class="form-panel">
-
-        <div class="form-group">
-
-          <label for="sellTitle">
-            Product title
-          </label>
-
-          <input
-            id="sellTitle"
-            type="text"
-            placeholder="What are you selling?"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="sellCategory">
-            Category
-          </label>
-
-          <select
-            id="sellCategory"
-          >
-
-            <option>
-              Electronics
-            </option>
-
-            <option>
-              Sports
-            </option>
-
-            <option>
-              Fashion
-            </option>
-
-            <option>
-              Home
-            </option>
-
-            <option>
-              Beauty
-            </option>
-
-            <option>
-              Kids
-            </option>
-
-            <option>
-              Other
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="sellPrice">
-            Price
-          </label>
-
-          <input
-            id="sellPrice"
-            type="number"
-            min="0"
-            step="0.01"
-            placeholder="Price"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="sellLocation">
-            Location
-          </label>
-
-          <input
-            id="sellLocation"
-            type="text"
-            placeholder="City / Country"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="sellDescription">
-            Description
-          </label>
-
-          <textarea
-            id="sellDescription"
-            placeholder="Describe your product..."
-          ></textarea>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="sellContact">
-            Contact
-          </label>
-
-          <input
-            id="sellContact"
-            type="text"
-            placeholder="How can buyers contact you?"
-          >
-
-        </div>
-
-
-        <button
-          type="button"
-          class="form-submit"
-          id="sellSubmit"
-        >
-          SUBMIT PRODUCT
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         LOOKING FOR JOB
-         =================================================== -->
-
-    <section
-      id="lookingJobView"
-      class="view hidden"
-    >
-
-      <button
-        type="button"
-        class="back-button"
-        id="backFromLookingJob"
-      >
-        ← Back
-      </button>
-
-
-      <h2 class="choice-title">
-        LOOKING FOR A JOB
-      </h2>
-
-      <p class="choice-subtitle">
-        This section will contain the ZOVARO
-        job search system.
-      </p>
-
-
-    </section>
-
-
-    <!-- ===================================================
-         OFFER A JOB
-         =================================================== -->
-
-    <section
-      id="offerJobView"
-      class="view hidden"
-    >
-
-      <button
-        type="button"
-        class="back-button"
-        id="backFromOfferJob"
-      >
-        ← Back
-      </button>
-
-
-      <h2 class="choice-title">
-        OFFER A JOB
-      </h2>
-
-      <p class="choice-subtitle">
-        Publish your opportunity and find
-        the right worker.
-      </p>
-
-
-      <div class="form-panel">
-
-        <div class="form-group">
-
-          <label for="jobTitle">
-            Job title
-          </label>
-
-          <input
-            id="jobTitle"
-            type="text"
-            placeholder="What position are you offering?"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="jobCompany">
-            Company / Employer
-          </label>
-
-          <input
-            id="jobCompany"
-            type="text"
-            placeholder="Company or employer name"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="jobType">
-            Job type
-          </label>
-
-          <select
-            id="jobType"
-          >
-
-            <option>
-              Full-time
-            </option>
-
-            <option>
-              Part-time
-            </option>
-
-            <option>
-              Freelance
-            </option>
-
-            <option>
-              Remote
-            </option>
-
-            <option>
-              Temporary
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="jobLocation">
-            Location
-          </label>
-
-          <input
-            id="jobLocation"
-            type="text"
-            placeholder="City / Country / Remote"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="jobDescription">
-            Job description
-          </label>
-
-          <textarea
-            id="jobDescription"
-            placeholder="Describe the job..."
-          ></textarea>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="jobContact">
-            Contact
-          </label>
-
-          <input
-            id="jobContact"
-            type="text"
-            placeholder="How can applicants contact you?"
-          >
-
-        </div>
-
-
-        <button
-          type="button"
-          class="form-submit"
-          id="jobSubmit"
-        >
-          SUBMIT JOB
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         TIKTOK
-         Hidden from main navigation for now.
-         Existing app.js still needs this structure.
-         =================================================== -->
-
-    <section
-      id="tiktok"
-      class="tiktok-section"
-    >
-
-      <div class="tiktok-card">
-
-        <div class="tiktok-copy">
-
-          <span class="tiktok-label">
-            TIKTOK
-          </span>
-
-          <h3>
-            Connect TikTok to ZOVARO
-          </h3>
-
-          <p>
-            Connect your TikTok account to allow
-            ZOVARO to prepare and share
-            promotional content.
-          </p>
-
-          <p class="tiktok-consent">
-            By continuing, you authorize ZOVARO
-            to access the permissions requested
-            during TikTok authorization.
-          </p>
-
-          <a
-            class="tiktok-connect-btn"
-            href="https://zovaro.vercel.app/api/tiktok-auth"
-          >
-            CONNECT TIKTOK
-          </a>
-
-        </div>
-
-
-        <div
-          class="tiktok-visual"
-          aria-hidden="true"
-        >
-
-          <div class="tiktok-circle">
-            ♪
-          </div>
-
-          <div class="tiktok-visual-card">
-
-            <strong>
-              ZOVARO → TikTok
-            </strong>
-
-            <small>
-              Authorized content sharing
-            </small>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         PRODUCT MODAL
-         =================================================== -->
-
-    <div
-      class="modal"
-      id="productModal"
-      aria-hidden="true"
-    >
-
-      <div
-        class="modal-backdrop"
-        data-close
-      ></div>
-
-
-      <article
-        class="modal-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalName"
-      >
-
-        <button
-          class="modal-close"
-          data-close
-          type="button"
-          aria-label="Close"
-        >
-          ×
-        </button>
-
-
-        <img
-          id="modalImage"
-          alt=""
-        >
-
-
-        <div class="modal-body">
-
-          <span
-            class="eyebrow"
-            id="modalCategory"
-          ></span>
-
-          <h2 id="modalName"></h2>
 
 
           <p
-            class="merchant"
-            id="modalMerchant"
+            class="wish-status"
+            id="wishStatus"
+            aria-live="polite"
           ></p>
-
-
-          <div class="price-row">
-
-            <strong id="modalPrice"></strong>
-
-            <del id="modalOldPrice"></del>
-
-            <span id="modalDiscount"></span>
-
-          </div>
-
-
-          <p id="modalDescription"></p>
-
-
-          <a
-            class="deal-btn"
-            id="modalLink"
-            href="#"
-          >
-            VIEW DEAL ↗
-          </a>
-
-
-          <small class="demo-note">
-            Affiliate link — you will continue
-            to the merchant's website to complete
-            your purchase.
-          </small>
 
         </div>
 
-      </article>
+      </div>
+
+    </section>
+
+  </div>
+
+</section>
+
+
+<section
+  id="shopChoiceView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromShopChoice"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    ZOVARO SHOP
+  </h2>
+
+  <p class="choice-subtitle">
+    Choose what you want to do.
+  </p>
+
+  <div class="choice-grid">
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openBuyProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        BUY PRODUCTS
+      </h2>
+
+      <p>
+        Discover new products and offers
+        from participating merchants.
+      </p>
+
+    </a>
+
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openSellProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        SELL PRODUCTS
+      </h2>
+
+      <p>
+        List your used products and connect
+        with people looking to buy.
+      </p>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<section
+  id="jobChoiceView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromJobChoice"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    ZOVARO JOB
+  </h2>
+
+  <p class="choice-subtitle">
+    Choose what you want to do.
+  </p>
+
+  <div class="choice-grid">
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openLookingJob"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        LOOKING FOR A JOB
+      </h2>
+
+      <p>
+        Find work opportunities and connect
+        with employers.
+      </p>
+
+    </a>
+
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openOfferJob"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        OFFER A JOB
+      </h2>
+
+      <p>
+        Tell people you are hiring
+        and find the right worker.
+      </p>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<section
+  id="buyProductsView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromBuy"
+  >
+    ← Back
+  </button>
+
+  <p class="eyebrow">
+    ZOVARO SHOP
+  </p>
+
+  <h2 class="catalog-title">
+    BUY PRODUCTS
+  </h2>
+
+  <p class="catalog-subtitle">
+    Discover new products and offers
+    from participating merchants around
+    the world.
+  </p>
+
+
+  <div
+    class="shop-categories category-grid"
+    id="categoryGrid"
+  ></div>
+
+
+  <form
+    id="searchForm"
+    class="hidden"
+  >
+
+    <input
+      id="searchInput"
+      type="search"
+    >
+
+  </form>
+
+
+  <section
+    class="section"
+    id="trending"
+  >
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          ZOVARO SHOP
+        </span>
+
+        <h2 id="resultsTitle">
+          Trending Products
+        </h2>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="viewAllBtn"
+        class="text-btn"
+      >
+        View all →
+      </button>
 
     </div>
 
 
-  </main>
+    <div
+      id="resultsMeta"
+      class="results-meta"
+    ></div>
 
 
-  <!-- =====================================================
-       FOOTER
-       ===================================================== -->
+    <select
+      id="sortSelect"
+      aria-label="Sort products"
+    >
 
-  <footer>
+      <option value="default">
+        Sort by
+      </option>
 
-    <div class="footer-brand">
-      ZOVARO
+      <option value="price-asc">
+        Price: Low to High
+      </option>
+
+      <option value="price-desc">
+        Price: High to Low
+      </option>
+
+      <option value="discount-desc">
+        Biggest Discount
+      </option>
+
+    </select>
+
+
+    <div
+      id="trendingGrid"
+      class="product-grid"
+    ></div>
+
+  </section>
+
+
+  <section
+    class="section"
+    id="deals"
+  >
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          BEST OFFERS
+        </span>
+
+        <h2>
+          Best Deals
+        </h2>
+
+      </div>
+
     </div>
 
-    <div>
-      Discover. Compare. Connect.
+
+    <div
+      id="dealGrid"
+      class="product-grid"
+    ></div>
+
+  </section>
+
+
+  <section
+    class="section"
+    id="new"
+  >
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          JUST IN
+        </span>
+
+        <h2>
+          New Arrivals
+        </h2>
+
+      </div>
+
     </div>
 
-    <div style="margin-top:8px;">
-      ©
-      <span id="year"></span>
-      ZOVARO. All rights reserved.
+
+    <div
+      id="newGrid"
+      class="product-grid"
+    ></div>
+
+  </section>
+
+</section>
+
+
+<section
+  id="sellProductsView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromSell"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    SELL PRODUCTS
+  </h2>
+
+  <p class="choice-subtitle">
+    List your used product for free.
+    ZOVARO charges 0% commission on the sale.
+  </p>
+
+
+  <div class="form-panel">
+
+    <div class="form-group">
+
+      <label for="sellTitle">
+        Product title
+      </label>
+
+      <input
+        id="sellTitle"
+        type="text"
+        placeholder="What are you selling?"
+      >
+
     </div>
 
-  </footer>
+
+    <div class="form-group">
+
+      <label for="sellCategory">
+        Category
+      </label>
+
+      <select
+        id="sellCategory"
+      >
+
+        <option>
+          Electronics
+        </option>
+
+        <option>
+          Sports
+        </option>
+
+        <option>
+          Fashion
+        </option>
+
+        <option>
+          Home
+        </option>
+
+        <option>
+          Beauty
+        </option>
+
+        <option>
+          Kids
+        </option>
+
+        <option>
+          Other
+        </option>
+
+      </select>
+
+    </div>
 
 
-  <!-- =====================================================
-       EXISTING ENGINE — DO NOT REMOVE
-       ===================================================== -->
+    <div class="form-group">
 
-  <script src="products.js"></script>
+      <label for="sellPrice">
+        Price
+      </label>
 
-  <script src="app.js"></script>
+      <input
+        id="sellPrice"
+        type="number"
+        min="0"
+        step="0.01"
+        placeholder="Price"
+      >
 
-  <script src="app-cj-loader.js"></script>
-
-
-  <script>
-
-    const views = [
-      "homeView",
-      "shopChoiceView",
-      "jobChoiceView",
-      "buyProductsView",
-      "sellProductsView",
-      "lookingJobView",
-      "offerJobView"
-    ];
+    </div>
 
 
-    function showView(viewId) {
+    <div class="form-group">
 
-      views.forEach(id => {
+      <label for="sellLocation">
+        Location
+      </label>
 
-        const element =
-          document.getElementById(id);
+      <input
+        id="sellLocation"
+        type="text"
+        placeholder="City / Country"
+      >
 
-        if (element) {
-          element.classList.toggle(
-            "hidden",
-            id !== viewId
-          );
-        }
+    </div>
 
-      });
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    <div class="form-group">
+
+      <label for="sellDescription">
+        Description
+      </label>
+
+      <textarea
+        id="sellDescription"
+        placeholder="Describe your product..."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="sellContact">
+        Contact
+      </label>
+
+      <input
+        id="sellContact"
+        type="text"
+        placeholder="How can buyers contact you?"
+      >
+
+    </div>
+
+
+    <button
+      type="button"
+      class="form-submit"
+      id="sellSubmit"
+    >
+      SUBMIT PRODUCT
+    </button>
+
+  </div>
+
+</section>
+
+
+<section
+  id="lookingJobView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromLookingJob"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    LOOKING FOR A JOB
+  </h2>
+
+  <p class="choice-subtitle">
+    This section will contain the ZOVARO
+    job search system.
+  </p>
+
+</section>
+
+
+<section
+  id="offerJobView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromOfferJob"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    OFFER A JOB
+  </h2>
+
+  <p class="choice-subtitle">
+    Publish your opportunity and find
+    the right worker.
+  </p>
+
+
+  <div class="form-panel">
+
+    <div class="form-group">
+
+      <label for="jobTitle">
+        Job title
+      </label>
+
+      <input
+        id="jobTitle"
+        type="text"
+        placeholder="What position are you offering?"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobCompany">
+        Company / Employer
+      </label>
+
+      <input
+        id="jobCompany"
+        type="text"
+        placeholder="Company or employer name"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobType">
+        Job type
+      </label>
+
+      <select
+        id="jobType"
+      >
+
+        <option>
+          Full-time
+        </option>
+
+        <option>
+          Part-time
+        </option>
+
+        <option>
+          Freelance
+        </option>
+
+        <option>
+          Remote
+        </option>
+
+        <option>
+          Temporary
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobLocation">
+        Location
+      </label>
+
+      <input
+        id="jobLocation"
+        type="text"
+        placeholder="City / Country / Remote"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobDescription">
+        Job description
+      </label>
+
+      <textarea
+        id="jobDescription"
+        placeholder="Describe the job..."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="jobContact">
+        Contact
+      </label>
+
+      <input
+        id="jobContact"
+        type="text"
+        placeholder="How can applicants contact you?"
+      >
+
+    </div>
+
+
+    <button
+      type="button"
+      class="form-submit"
+      id="jobSubmit"
+    >
+      SUBMIT JOB
+    </button>
+
+  </div>
+
+</section>
+
+
+<section
+  id="tiktok"
+  class="tiktok-section"
+>
+
+  <div class="tiktok-card">
+
+    <div class="tiktok-copy">
+
+      <span class="tiktok-label">
+        TIKTOK
+      </span>
+
+      <h3>
+        Connect TikTok to ZOVARO
+      </h3>
+
+      <p>
+        Connect your TikTok account to allow
+        ZOVARO to prepare and share
+        promotional content.
+      </p>
+
+      <p class="tiktok-consent">
+        By continuing, you authorize ZOVARO
+        to access the permissions requested
+        during TikTok authorization.
+      </p>
+
+      <a
+        class="tiktok-connect-btn"
+        href="https://zovaro.vercel.app/api/tiktok-auth"
+      >
+        CONNECT TIKTOK
+      </a>
+
+    </div>
+
+
+    <div
+      class="tiktok-visual"
+      aria-hidden="true"
+    >
+
+      <div class="tiktok-circle">
+        ♪
+      </div>
+
+      <div class="tiktok-visual-card">
+
+        <strong>
+          ZOVARO → TikTok
+        </strong>
+
+        <small>
+          Authorized content sharing
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div
+  class="modal"
+  id="productModal"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-backdrop"
+    data-close
+  ></div>
+
+
+  <article
+    class="modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalName"
+  >
+
+    <button
+      class="modal-close"
+      data-close
+      type="button"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+
+    <img
+      id="modalImage"
+      alt=""
+    >
+
+
+    <div class="modal-body">
+
+      <span
+        class="eyebrow"
+        id="modalCategory"
+      ></span>
+
+      <h2 id="modalName"></h2>
+
+      <p
+        class="merchant"
+        id="modalMerchant"
+      ></p>
+
+
+      <div class="price-row">
+
+        <strong id="modalPrice"></strong>
+
+        <del id="modalOldPrice"></del>
+
+        <span id="modalDiscount"></span>
+
+      </div>
+
+
+      <p id="modalDescription"></p>
+
+
+      <a
+        class="deal-btn"
+        id="modalLink"
+        href="#"
+      >
+        VIEW DEAL ↗
+      </a>
+
+
+      <small class="demo-note">
+        Affiliate link — you will continue
+        to the merchant's website to complete
+        your purchase.
+      </small>
+
+    </div>
+
+  </article>
+
+</div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
+    ZOVARO
+  </div>
+
+  <div>
+    Discover. Compare. Connect.
+  </div>
+
+  <div style="margin-top:8px;">
+
+    ©
+    <span id="year"></span>
+
+    ZOVARO. All rights reserved.
+
+  </div>
+
+</footer>
+
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+<script src="app-cj-loader.js"></script>
+
+
+<script>
+
+const views = [
+  "homeView",
+  "shopChoiceView",
+  "jobChoiceView",
+  "buyProductsView",
+  "sellProductsView",
+  "lookingJobView",
+  "offerJobView"
+];
+
+
+function showView(viewId){
+
+  views.forEach(id => {
+
+    const el =
+      document.getElementById(id);
+
+    if(el){
+
+      el.classList.toggle(
+        "hidden",
+        id !== viewId
+      );
+
     }
 
+  });
 
-    function go(id) {
 
-      return event => {
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
-        event.preventDefault();
+}
 
-        showView(id);
-      };
+
+function go(id){
+
+  return e => {
+
+    e.preventDefault();
+
+    showView(id);
+
+  };
+
+}
+
+
+document
+  .getElementById("openShop")
+  .addEventListener(
+    "click",
+    go("shopChoiceView")
+  );
+
+
+document
+  .getElementById("openJobs")
+  .addEventListener(
+    "click",
+    go("jobChoiceView")
+  );
+
+
+document
+  .getElementById("backFromShopChoice")
+  .addEventListener(
+    "click",
+    () => showView("homeView")
+  );
+
+
+document
+  .getElementById("backFromJobChoice")
+  .addEventListener(
+    "click",
+    () => showView("homeView")
+  );
+
+
+document
+  .getElementById("openBuyProducts")
+  .addEventListener(
+    "click",
+    go("buyProductsView")
+  );
+
+
+document
+  .getElementById("openSellProducts")
+  .addEventListener(
+    "click",
+    go("sellProductsView")
+  );
+
+
+document
+  .getElementById("openLookingJob")
+  .addEventListener(
+    "click",
+    go("lookingJobView")
+  );
+
+
+document
+  .getElementById("openOfferJob")
+  .addEventListener(
+    "click",
+    go("offerJobView")
+  );
+
+
+document
+  .getElementById("backFromBuy")
+  .addEventListener(
+    "click",
+    () => showView("shopChoiceView")
+  );
+
+
+document
+  .getElementById("backFromSell")
+  .addEventListener(
+    "click",
+    () => showView("shopChoiceView")
+  );
+
+
+document
+  .getElementById("backFromLookingJob")
+  .addEventListener(
+    "click",
+    () => showView("jobChoiceView")
+  );
+
+
+document
+  .getElementById("backFromOfferJob")
+  .addEventListener(
+    "click",
+    () => showView("jobChoiceView")
+  );
+
+
+document
+  .getElementById("sellSubmit")
+  .addEventListener(
+    "click",
+    () => {
+
+      alert(
+        "The ZOVARO seller system will be connected next."
+      );
+
     }
+  );
 
 
-    document
-      .getElementById("openShop")
-      .addEventListener(
-        "click",
-        go("shopChoiceView")
+document
+  .getElementById("jobSubmit")
+  .addEventListener(
+    "click",
+    () => {
+
+      alert(
+        "The ZOVARO job publishing system will be connected next."
       );
 
-
-    document
-      .getElementById("openJobs")
-      .addEventListener(
-        "click",
-        go("jobChoiceView")
-      );
+    }
+  );
 
 
-    document
-      .getElementById("backFromShopChoice")
-      .addEventListener(
-        "click",
-        () => showView("homeView")
-      );
+const wishForm =
+  document.getElementById(
+    "wishForm"
+  );
 
 
-    document
-      .getElementById("backFromJobChoice")
-      .addEventListener(
-        "click",
-        () => showView("homeView")
-      );
+const wishInput =
+  document.getElementById(
+    "wishInput"
+  );
 
 
-    document
-      .getElementById("openBuyProducts")
-      .addEventListener(
-        "click",
-        go("buyProductsView")
-      );
+const wishStatus =
+  document.getElementById(
+    "wishStatus"
+  );
 
 
-    document
-      .getElementById("openSellProducts")
-      .addEventListener(
-        "click",
-        go("sellProductsView")
-      );
+if(
+  wishForm &&
+  wishInput &&
+  wishStatus
+){
+
+  const savedWish =
+    localStorage.getItem(
+      "zovaroWish"
+    );
 
 
-    document
-      .getElementById("openLookingJob")
-      .addEventListener(
-        "click",
-        go("lookingJobView")
-      );
+  if(savedWish){
+
+    wishInput.value =
+      savedWish;
+
+  }
 
 
-    document
-      .getElementById("openOfferJob")
-      .addEventListener(
-        "click",
-        go("offerJobView")
-      );
+  wishForm.addEventListener(
+    "submit",
+    event => {
+
+      event.preventDefault();
 
 
-    document
-      .getElementById("backFromBuy")
-      .addEventListener(
-        "click",
-        () => showView("shopChoiceView")
-      );
+      const wish =
+        wishInput.value.trim();
 
 
-    document
-      .getElementById("backFromSell")
-      .addEventListener(
-        "click",
-        () => showView("shopChoiceView")
-      );
+      if(!wish){
 
+        wishStatus.textContent =
+          "Please describe your wish first.";
 
-    document
-      .getElementById("backFromLookingJob")
-      .addEventListener(
-        "click",
-        () => showView("jobChoiceView")
-      );
+        wishInput.focus();
 
+        return;
 
-    document
-      .getElementById("backFromOfferJob")
-      .addEventListener(
-        "click",
-        () => showView("jobChoiceView")
-      );
-
-
-    document
-      .getElementById("sellSubmit")
-      .addEventListener(
-        "click",
-        () => {
-
-          alert(
-            "The ZOVARO seller system will be connected next."
-          );
-
-        }
-      );
-
-
-    document
-      .getElementById("jobSubmit")
-      .addEventListener(
-        "click",
-        () => {
-
-          alert(
-            "The ZOVARO job publishing system will be connected next."
-          );
-
-        }
-      );
-
-
-    const wishForm =
-      document.getElementById("wishForm");
-
-    const wishInput =
-      document.getElementById("wishInput");
-
-    const wishStatus =
-      document.getElementById("wishStatus");
-
-
-    if (wishForm && wishInput && wishStatus) {
-
-      const savedWish =
-        localStorage.getItem("zovaroWish");
-
-      if (savedWish) {
-        wishInput.value = savedWish;
       }
 
 
-      wishForm.addEventListener(
-        "submit",
-        event => {
-
-          event.preventDefault();
-
-          const wish =
-            wishInput.value.trim();
-
-          if (!wish) {
-            wishStatus.textContent =
-              "Please describe your wish first.";
-
-            wishInput.focus();
-
-            return;
-          }
-
-          localStorage.setItem(
-            "zovaroWish",
-            wish
-          );
-
-          wishStatus.textContent =
-            "Wish saved. The ZOVARO smart matching system will be connected next.";
-        }
+      localStorage.setItem(
+        "zovaroWish",
+        wish
       );
 
+
+      wishStatus.textContent =
+        "Wish saved. The ZOVARO smart matching system will be connected next.";
+
     }
+  );
+
+}
 
 
-    document
-      .getElementById("year")
-      .textContent =
-        new Date().getFullYear();
+document
+  .getElementById("year")
+  .textContent =
+    new Date().getFullYear();
 
-  </script>
+</script>
 
 </body>
-
 </html>
