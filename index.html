@@ -2554,6 +2554,19 @@ function normalizeCategoryLabels(){
             .trim();
 
 
+        /* Remove symbols/icons before the category name */
+
+        label =
+          label
+            .replace(
+              /^[^\p{L}\p{N}&]+/u,
+              ""
+            )
+            .trim();
+
+
+        /* Remove Explore in every form */
+
         label =
           label
             .replace(
@@ -2566,6 +2579,8 @@ function normalizeCategoryLabels(){
             )
             .trim();
 
+
+        /* Remove an exact repeated category name */
 
         const duplicateMatch =
           label.match(
@@ -2580,6 +2595,12 @@ function normalizeCategoryLabels(){
 
         }
 
+
+        /*
+           Safety check:
+           only modify the button when the final
+           label is actually different.
+        */
 
         if(
           label &&
