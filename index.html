@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -974,6 +975,80 @@ footer{
 
 
 /* =========================
+   LANGUAGE SELECTOR
+   ========================= */
+
+.language-control{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin:0 auto 18px;
+  width:max-content;
+  padding:7px 9px;
+  border:1px solid rgba(55,201,255,.35);
+  border-radius:10px;
+  background:rgba(2,12,29,.72);
+  box-shadow:0 0 18px rgba(0,120,255,.08)
+}
+
+.language-control label{
+  color:#7fcfff;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.12em
+}
+
+.language-control select{
+  min-width:135px;
+  padding:6px 9px;
+  border:1px solid rgba(65,169,235,.35);
+  border-radius:7px;
+  background:#061124;
+  color:#e8f6ff;
+  outline:none;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:700
+}
+
+.language-control select:focus{
+  border-color:#35d8ff;
+  box-shadow:0 0 0 3px rgba(53,216,255,.08)
+}
+
+body[dir="rtl"] .language-control{
+  direction:rtl
+}
+
+body[dir="rtl"] .main-card-content,
+body[dir="rtl"] .wish-card-content,
+body[dir="rtl"] .modal-body,
+body[dir="rtl"] .form-panel{
+  text-align:right
+}
+
+body[dir="rtl"] .section-head{
+  direction:rtl
+}
+
+body[dir="rtl"] .price-row{
+  direction:rtl
+}
+
+@media(max-width:480px){
+  .language-control{
+    width:100%;
+    max-width:260px;
+  }
+
+  .language-control select{
+    min-width:120px;
+  }
+}
+
+
+/* =========================
    RESPONSIVE
    ========================= */
 
@@ -1106,22 +1181,58 @@ footer{
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
-
 <main class="page" id="home">
-
 
 <section class="brand-area">
 
-  <img
-    class="brand-logo"
-    src="assets/zovaro-logo.png"
-    alt="ZOVARO"
-  >
+  <div class="language-control" data-zovaro-no-translate>
+    <label for="zovaroLanguage">LANGUAGE</label>
+    <select id="zovaroLanguage" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="it">Italiano</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+      <option value="nl">Nederlands</option>
+      <option value="pl">Polski</option>
+      <option value="tr">Türkçe</option>
+      <option value="ru">Русский</option>
+      <option value="uk">Українська</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+      <option value="fa">فارسی</option>
+      <option value="ur">اردو</option>
+      <option value="hi">हिन्दी</option>
+      <option value="bn">বাংলা</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="zh">中文</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="id">Bahasa Indonesia</option>
+      <option value="th">ไทย</option>
+      <option value="sv">Svenska</option>
+      <option value="da">Dansk</option>
+      <option value="no">Norsk</option>
+      <option value="fi">Suomi</option>
+      <option value="cs">Čeština</option>
+      <option value="ro">Română</option>
+      <option value="hu">Magyar</option>
+      <option value="el">Ελληνικά</option>
+    </select>
+  </div>
+
+<img
+class="brand-logo"
+src="assets/zovaro-logo.png"
+alt="ZOVARO"
+
+>
 
   <h1 class="brand-name">
     ZOVARO
@@ -1133,7 +1244,6 @@ footer{
 
 </section>
 
-
 <section
   id="homeView"
   class="view"
@@ -1141,269 +1251,274 @@ footer{
 
   <div class="home-grid">
 
+```
+<a
+  href="#"
+  class="main-card shop-card"
+  id="openShop"
+>
 
-    <a
-      href="#"
-      class="main-card shop-card"
-      id="openShop"
-    >
+  <div class="main-card-content">
 
-      <div class="main-card-content">
+    <div class="main-card-copy">
 
-        <div class="main-card-copy">
+      <p class="main-card-brand">
+        ZOVARO
+      </p>
 
-          <p class="main-card-brand">
-            ZOVARO
-          </p>
+      <h2 class="main-card-title">
+        SHOP
+      </h2>
 
-          <h2 class="main-card-title">
-            SHOP
-          </h2>
+      <p class="main-card-subtitle">
+        New &amp; Used
+      </p>
 
-          <p class="main-card-subtitle">
-            New &amp; Used
-          </p>
+      <p class="main-card-description">
+        Buy what you need from around the world —
+        electronics, fashion, beauty, perfumes,
+        cosmetics, automotive, sports and more.
+        Discover products for every need,
+        all in one place.
+      </p>
 
-          <p class="main-card-description">
-            Buy what you need from around the world —
-            electronics, fashion, beauty, perfumes,
-            cosmetics, automotive, sports and more.
-            Discover products for every need,
-            all in one place.
-          </p>
+    </div>
 
-        </div>
+  </div>
 
-      </div>
+  <span class="main-card-arrow">
+    →
+  </span>
 
-      <span class="main-card-arrow">
-        →
+</a>
+
+
+<a
+  href="#"
+  class="main-card job-card"
+  id="openJobs"
+>
+
+  <div class="main-card-content">
+
+    <div class="main-card-copy">
+
+      <p class="main-card-brand">
+        ZOVARO
+      </p>
+
+      <h2 class="main-card-title">
+        JOB
+      </h2>
+
+      <p class="main-card-subtitle">
+        Urgent Jobs &amp; Workers
+      </p>
+
+      <p class="main-card-description">
+        Find the opportunity that matches
+        your skills — or find the right person
+        for your business. Connect with jobs,
+        workers and new opportunities
+        on ZOVARO.
+      </p>
+
+    </div>
+
+  </div>
+
+  <span class="main-card-arrow">
+    →
+  </span>
+
+</a>
+
+
+<section
+  class="main-card wish-card"
+  aria-labelledby="wishTitle"
+>
+
+  <div class="wish-card-content">
+
+    <div class="wish-card-copy">
+
+      <span class="wish-kicker">
+        ZOVARO SMART REQUEST
       </span>
 
-    </a>
+      <h2
+        class="wish-title"
+        id="wishTitle"
+      >
+        MAKE A WISH
+      </h2>
+
+      <p class="wish-description">
+        Tell ZOVARO exactly what you are looking for —
+        a product to buy, a job to find, a job to offer,
+        or something you want to sell.
+      </p>
 
 
-    <a
-      href="#"
-      class="main-card job-card"
-      id="openJobs"
-    >
+      <form
+        class="wish-form"
+        id="wishForm"
+      >
 
-      <div class="main-card-content">
+        <input
+          class="wish-input"
+          id="wishInput"
+          type="text"
+          autocomplete="off"
+          maxlength="300"
+          placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
+        >
 
-        <div class="main-card-copy">
+        <button
+          class="wish-submit"
+          type="submit"
+        >
+          SEND WISH
+        </button>
 
-          <p class="main-card-brand">
-            ZOVARO
-          </p>
+      </form>
 
-          <h2 class="main-card-title">
-            JOB
-          </h2>
 
-          <p class="main-card-subtitle">
-            Urgent Jobs &amp; Workers
-          </p>
+      <div class="wish-foot">
 
-          <p class="main-card-description">
-            Find the opportunity that matches
-            your skills — or find the right person
-            for your business. Connect with jobs,
-            workers and new opportunities
-            on ZOVARO.
-          </p>
+        <svg
+          class="wish-lamp"
+          viewBox="0 0 64 64"
+          role="img"
+          aria-label="Wish lamp"
+        >
 
-        </div>
+          <defs>
+
+            <linearGradient
+              id="wishLampGradient"
+              x1="0"
+              y1="0"
+              x2="1"
+              y2="1"
+            >
+
+              <stop
+                offset="0%"
+                stop-color="#FFD86A"
+              />
+
+              <stop
+                offset="48%"
+                stop-color="#35D6FF"
+              />
+
+              <stop
+                offset="100%"
+                stop-color="#087CFF"
+              />
+
+            </linearGradient>
+
+
+            <filter
+              id="wishGlow"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%"
+            >
+
+              <feGaussianBlur
+                stdDeviation="2"
+                result="blur"
+              />
+
+              <feMerge>
+
+                <feMergeNode
+                  in="blur"
+                />
+
+                <feMergeNode
+                  in="SourceGraphic"
+                />
+
+              </feMerge>
+
+            </filter>
+
+          </defs>
+
+
+          <path
+            d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
+            fill="rgba(255,216,106,.12)"
+            stroke="url(#wishLampGradient)"
+            stroke-width="2.4"
+            filter="url(#wishGlow)"
+          />
+
+          <path
+            d="M27 48h10M28.5 53h7M31 58h2"
+            stroke="#FFD86A"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
+            stroke="#FFD86A"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+
+        <p class="wish-help">
+          One sentence is enough.
+          ZOVARO's smart matching system
+          will be connected next.
+        </p>
 
       </div>
 
-      <span class="main-card-arrow">
-        →
-      </span>
 
-    </a>
+      <p
+        class="wish-status"
+        id="wishStatus"
+        aria-live="polite"
+      ></p>
 
-
-    <section
-      class="main-card wish-card"
-      aria-labelledby="wishTitle"
-    >
-
-      <div class="wish-card-content">
-
-        <div class="wish-card-copy">
-
-          <span class="wish-kicker">
-            ZOVARO SMART REQUEST
-          </span>
-
-          <h2
-            class="wish-title"
-            id="wishTitle"
-          >
-            MAKE A WISH
-          </h2>
-
-          <p class="wish-description">
-            Tell ZOVARO exactly what you are looking for —
-            a product to buy, a job to find, a job to offer,
-            or something you want to sell.
-          </p>
-
-
-          <form
-            class="wish-form"
-            id="wishForm"
-          >
-
-            <input
-              class="wish-input"
-              id="wishInput"
-              type="text"
-              autocomplete="off"
-              maxlength="300"
-              placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
-            >
-
-            <button
-              class="wish-submit"
-              type="submit"
-            >
-              SEND WISH
-            </button>
-
-          </form>
-
-
-          <div class="wish-foot">
-
-            <svg
-              class="wish-lamp"
-              viewBox="0 0 64 64"
-              role="img"
-              aria-label="Wish lamp"
-            >
-
-              <defs>
-
-                <linearGradient
-                  id="wishLampGradient"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-
-                  <stop
-                    offset="0%"
-                    stop-color="#FFD86A"
-                  />
-
-                  <stop
-                    offset="48%"
-                    stop-color="#35D6FF"
-                  />
-
-                  <stop
-                    offset="100%"
-                    stop-color="#087CFF"
-                  />
-
-                </linearGradient>
-
-
-                <filter
-                  id="wishGlow"
-                  x="-50%"
-                  y="-50%"
-                  width="200%"
-                  height="200%"
-                >
-
-                  <feGaussianBlur
-                    stdDeviation="2"
-                    result="blur"
-                  />
-
-                  <feMerge>
-
-                    <feMergeNode
-                      in="blur"
-                    />
-
-                    <feMergeNode
-                      in="SourceGraphic"
-                    />
-
-                  </feMerge>
-
-                </filter>
-
-              </defs>
-
-
-              <path
-                d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
-                fill="rgba(255,216,106,.12)"
-                stroke="url(#wishLampGradient)"
-                stroke-width="2.4"
-                filter="url(#wishGlow)"
-              />
-
-              <path
-                d="M27 48h10M28.5 53h7M31 58h2"
-                stroke="#FFD86A"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
-                stroke="#FFD86A"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              />
-
-            </svg>
-
-
-            <p class="wish-help">
-              One sentence is enough.
-              ZOVARO's smart matching system
-              will be connected next.
-            </p>
-
-          </div>
-
-
-          <p
-            class="wish-status"
-            id="wishStatus"
-            aria-live="polite"
-          ></p>
-
-        </div>
-
-      </div>
-
-    </section>
+    </div>
 
   </div>
 
 </section>
+```
 
+  </div>
+
+</section>
 
 <section
   id="shopChoiceView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromShopChoice"
-  >
-    ← Back
+<button
+type="button"
+class="back-button"
+id="backFromShopChoice"
+
+>
+
+```
+← Back
+```
+
   </button>
 
   <h2 class="choice-title">
@@ -1416,69 +1531,75 @@ footer{
 
   <div class="choice-grid">
 
-    <a
-      href="#"
-      class="choice-card"
-      id="openBuyProducts"
-    >
+```
+<a
+  href="#"
+  class="choice-card"
+  id="openBuyProducts"
+>
 
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
+  <img
+    class="choice-card-logo"
+    src="assets/zovaro-logo.png"
+    alt=""
+  >
 
-      <h2>
-        BUY PRODUCTS
-      </h2>
+  <h2>
+    BUY PRODUCTS
+  </h2>
 
-      <p>
-        Discover new products and offers
-        from participating merchants.
-      </p>
+  <p>
+    Discover new products and offers
+    from participating merchants.
+  </p>
 
-    </a>
+</a>
 
 
-    <a
-      href="#"
-      class="choice-card"
-      id="openSellProducts"
-    >
+<a
+  href="#"
+  class="choice-card"
+  id="openSellProducts"
+>
 
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
+  <img
+    class="choice-card-logo"
+    src="assets/zovaro-logo.png"
+    alt=""
+  >
 
-      <h2>
-        SELL PRODUCTS
-      </h2>
+  <h2>
+    SELL PRODUCTS
+  </h2>
 
-      <p>
-        List your used products and connect
-        with people looking to buy.
-      </p>
+  <p>
+    List your used products and connect
+    with people looking to buy.
+  </p>
 
-    </a>
+</a>
+```
 
   </div>
 
 </section>
-
 
 <section
   id="jobChoiceView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromJobChoice"
-  >
-    ← Back
+<button
+type="button"
+class="back-button"
+id="backFromJobChoice"
+
+>
+
+```
+← Back
+```
+
   </button>
 
   <h2 class="choice-title">
@@ -1491,88 +1612,90 @@ footer{
 
   <div class="choice-grid">
 
-    <a
-      href="#"
-      class="choice-card"
-      id="openLookingJob"
-    >
+```
+<a
+  href="#"
+  class="choice-card"
+  id="openLookingJob"
+>
 
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
+  <img
+    class="choice-card-logo"
+    src="assets/zovaro-logo.png"
+    alt=""
+  >
 
-      <h2>
-        LOOKING FOR A JOB
-      </h2>
+  <h2>
+    LOOKING FOR A JOB
+  </h2>
 
-      <p>
-        Find work opportunities and connect
-        with employers.
-      </p>
+  <p>
+    Find work opportunities and connect
+    with employers.
+  </p>
 
-    </a>
+</a>
 
 
-    <a
-      href="#"
-      class="choice-card"
-      id="openOfferJob"
-    >
+<a
+  href="#"
+  class="choice-card"
+  id="openOfferJob"
+>
 
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
+  <img
+    class="choice-card-logo"
+    src="assets/zovaro-logo.png"
+    alt=""
+  >
 
-      <h2>
-        OFFER A JOB
-      </h2>
+  <h2>
+    OFFER A JOB
+  </h2>
 
-      <p>
-        Tell people you are hiring
-        and find the right worker.
-      </p>
+  <p>
+    Tell people you are hiring
+    and find the right worker.
+  </p>
 
-    </a>
+</a>
+```
 
   </div>
 
 </section>
-
 
 <section
   id="buyProductsView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromBuy"
-  >
-    ← Back
-  </button>
+<button
+type="button"
+class="back-button"
+id="backFromBuy"
 
+>
+
+```
+← Back
+```
+
+  </button>
 
   <p class="eyebrow">
     ZOVARO SHOP
   </p>
 
-
   <h2 class="catalog-title">
     BUY PRODUCTS
   </h2>
-
 
   <p class="catalog-subtitle">
     Discover new products and offers
     from participating merchants around
     the world.
   </p>
-
 
   <!-- SHOP SEARCH -->
 
@@ -1583,24 +1706,25 @@ footer{
     aria-label="Search ZOVARO products"
   >
 
-    <input
-      id="searchInput"
-      class="shop-search-input"
-      type="search"
-      autocomplete="off"
-      placeholder="What are you looking for? e.g. Versace perfume, padel racket, children's clothes"
-    >
+```
+<input
+  id="searchInput"
+  class="shop-search-input"
+  type="search"
+  autocomplete="off"
+  placeholder="What are you looking for? e.g. Versace perfume, padel racket, children's clothes"
+>
 
-    <button
-      class="shop-search-button"
-      type="submit"
-      aria-label="Search"
-    >
-      ⌕
-    </button>
+<button
+  class="shop-search-button"
+  type="submit"
+  aria-label="Search"
+>
+  ⌕
+</button>
+```
 
   </form>
-
 
   <!-- CATEGORIES -->
 
@@ -1609,315 +1733,323 @@ footer{
     id="categoryGrid"
   ></div>
 
-
   <section
     class="section"
     id="trending"
   >
 
-    <div class="section-head">
+```
+<div class="section-head">
 
-      <div>
+  <div>
 
-        <span class="eyebrow">
-          ZOVARO SHOP
-        </span>
+    <span class="eyebrow">
+      ZOVARO SHOP
+    </span>
 
-        <h2 id="resultsTitle">
-          Trending Products
-        </h2>
+    <h2 id="resultsTitle">
+      Trending Products
+    </h2>
 
-      </div>
-
-
-      <button
-        type="button"
-        id="viewAllBtn"
-        class="text-btn"
-      >
-        View all →
-      </button>
-
-    </div>
+  </div>
 
 
-    <div
-      id="resultsMeta"
-      class="results-meta"
-    ></div>
+  <button
+    type="button"
+    id="viewAllBtn"
+    class="text-btn"
+  >
+    View all →
+  </button>
+
+</div>
 
 
-    <select
-      id="sortSelect"
-      aria-label="Sort products"
-    >
-
-      <option value="default">
-        Sort by
-      </option>
-
-      <option value="price-asc">
-        Price: Low to High
-      </option>
-
-      <option value="price-desc">
-        Price: High to Low
-      </option>
-
-      <option value="discount-desc">
-        Biggest Discount
-      </option>
-
-    </select>
+<div
+  id="resultsMeta"
+  class="results-meta"
+></div>
 
 
-    <div
-      id="trendingGrid"
-      class="product-grid"
-    ></div>
+<select
+  id="sortSelect"
+  aria-label="Sort products"
+>
+
+  <option value="default">
+    Sort by
+  </option>
+
+  <option value="price-asc">
+    Price: Low to High
+  </option>
+
+  <option value="price-desc">
+    Price: High to Low
+  </option>
+
+  <option value="discount-desc">
+    Biggest Discount
+  </option>
+
+</select>
+
+
+<div
+  id="trendingGrid"
+  class="product-grid"
+></div>
+```
 
   </section>
-
 
   <section
     class="section"
     id="deals"
   >
 
-    <div class="section-head">
+```
+<div class="section-head">
 
-      <div>
+  <div>
 
-        <span class="eyebrow">
-          BEST OFFERS
-        </span>
+    <span class="eyebrow">
+      BEST OFFERS
+    </span>
 
-        <h2>
-          Best Deals
-        </h2>
+    <h2>
+      Best Deals
+    </h2>
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
 
-    <div
-      id="dealGrid"
-      class="product-grid"
-    ></div>
+<div
+  id="dealGrid"
+  class="product-grid"
+></div>
+```
 
   </section>
-
 
   <section
     class="section"
     id="new"
   >
 
-    <div class="section-head">
+```
+<div class="section-head">
 
-      <div>
+  <div>
 
-        <span class="eyebrow">
-          JUST IN
-        </span>
+    <span class="eyebrow">
+      JUST IN
+    </span>
 
-        <h2>
-          New Arrivals
-        </h2>
+    <h2>
+      New Arrivals
+    </h2>
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
 
-    <div
-      id="newGrid"
-      class="product-grid"
-    ></div>
+<div
+  id="newGrid"
+  class="product-grid"
+></div>
+```
 
   </section>
 
 </section>
-
 
 <section
   id="sellProductsView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromSell"
-  >
-    ← Back
-  </button>
+<button
+type="button"
+class="back-button"
+id="backFromSell"
 
+>
+
+```
+← Back
+```
+
+  </button>
 
   <h2 class="choice-title">
     SELL PRODUCTS
   </h2>
-
 
   <p class="choice-subtitle">
     List your used product for free.
     ZOVARO charges 0% commission on the sale.
   </p>
 
-
   <div class="form-panel">
 
-    <div class="form-group">
+```
+<div class="form-group">
 
-      <label for="sellTitle">
-        Product title
-      </label>
+  <label for="sellTitle">
+    Product title
+  </label>
 
-      <input
-        id="sellTitle"
-        type="text"
-        placeholder="What are you selling?"
-      >
+  <input
+    id="sellTitle"
+    type="text"
+    placeholder="What are you selling?"
+  >
 
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellCategory">
-        Category
-      </label>
-
-      <select
-        id="sellCategory"
-      >
-
-        <option>
-          Electronics
-        </option>
-
-        <option>
-          Sports
-        </option>
-
-        <option>
-          Fashion
-        </option>
-
-        <option>
-          Home
-        </option>
-
-        <option>
-          Beauty
-        </option>
-
-        <option>
-          Kids
-        </option>
-
-        <option>
-          Other
-        </option>
-
-      </select>
-
-    </div>
+</div>
 
 
-    <div class="form-group">
+<div class="form-group">
 
-      <label for="sellPrice">
-        Price
-      </label>
+  <label for="sellCategory">
+    Category
+  </label>
 
-      <input
-        id="sellPrice"
-        type="number"
-        min="0"
-        step="0.01"
-        placeholder="Price"
-      >
+  <select
+    id="sellCategory"
+  >
 
-    </div>
+    <option>
+      Electronics
+    </option>
 
+    <option>
+      Sports
+    </option>
 
-    <div class="form-group">
+    <option>
+      Fashion
+    </option>
 
-      <label for="sellLocation">
-        Location
-      </label>
+    <option>
+      Home
+    </option>
 
-      <input
-        id="sellLocation"
-        type="text"
-        placeholder="City / Country"
-      >
+    <option>
+      Beauty
+    </option>
 
-    </div>
+    <option>
+      Kids
+    </option>
 
+    <option>
+      Other
+    </option>
 
-    <div class="form-group">
+  </select>
 
-      <label for="sellDescription">
-        Description
-      </label>
-
-      <textarea
-        id="sellDescription"
-        placeholder="Describe your product..."
-      ></textarea>
-
-    </div>
+</div>
 
 
-    <div class="form-group">
+<div class="form-group">
 
-      <label for="sellContact">
-        Contact
-      </label>
+  <label for="sellPrice">
+    Price
+  </label>
 
-      <input
-        id="sellContact"
-        type="text"
-        placeholder="How can buyers contact you?"
-      >
+  <input
+    id="sellPrice"
+    type="number"
+    min="0"
+    step="0.01"
+    placeholder="Price"
+  >
 
-    </div>
+</div>
 
 
-    <button
-      type="button"
-      class="form-submit"
-      id="sellSubmit"
-    >
-      SUBMIT PRODUCT
-    </button>
+<div class="form-group">
+
+  <label for="sellLocation">
+    Location
+  </label>
+
+  <input
+    id="sellLocation"
+    type="text"
+    placeholder="City / Country"
+  >
+
+</div>
+
+
+<div class="form-group">
+
+  <label for="sellDescription">
+    Description
+  </label>
+
+  <textarea
+    id="sellDescription"
+    placeholder="Describe your product..."
+  ></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+  <label for="sellContact">
+    Contact
+  </label>
+
+  <input
+    id="sellContact"
+    type="text"
+    placeholder="How can buyers contact you?"
+  >
+
+</div>
+
+
+<button
+  type="button"
+  class="form-submit"
+  id="sellSubmit"
+>
+  SUBMIT PRODUCT
+</button>
+```
 
   </div>
 
 </section>
-
 
 <section
   id="lookingJobView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromLookingJob"
-  >
-    ← Back
-  </button>
+<button
+type="button"
+class="back-button"
+id="backFromLookingJob"
 
+>
+
+```
+← Back
+```
+
+  </button>
 
   <h2 class="choice-title">
     LOOKING FOR A JOB
   </h2>
-
 
   <p class="choice-subtitle">
     This section will contain the ZOVARO
@@ -1926,155 +2058,157 @@ footer{
 
 </section>
 
-
 <section
   id="offerJobView"
   class="view hidden"
 >
 
-  <button
-    type="button"
-    class="back-button"
-    id="backFromOfferJob"
-  >
-    ← Back
-  </button>
+<button
+type="button"
+class="back-button"
+id="backFromOfferJob"
 
+>
+
+```
+← Back
+```
+
+  </button>
 
   <h2 class="choice-title">
     OFFER A JOB
   </h2>
-
 
   <p class="choice-subtitle">
     Publish your opportunity and find
     the right worker.
   </p>
 
-
   <div class="form-panel">
 
-    <div class="form-group">
+```
+<div class="form-group">
 
-      <label for="jobTitle">
-        Job title
-      </label>
+  <label for="jobTitle">
+    Job title
+  </label>
 
-      <input
-        id="jobTitle"
-        type="text"
-        placeholder="What position are you offering?"
-      >
+  <input
+    id="jobTitle"
+    type="text"
+    placeholder="What position are you offering?"
+  >
 
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="jobCompany">
-        Company / Employer
-      </label>
-
-      <input
-        id="jobCompany"
-        type="text"
-        placeholder="Company or employer name"
-      >
-
-    </div>
+</div>
 
 
-    <div class="form-group">
+<div class="form-group">
 
-      <label for="jobType">
-        Job type
-      </label>
+  <label for="jobCompany">
+    Company / Employer
+  </label>
 
-      <select
-        id="jobType"
-      >
+  <input
+    id="jobCompany"
+    type="text"
+    placeholder="Company or employer name"
+  >
 
-        <option>
-          Full-time
-        </option>
-
-        <option>
-          Part-time
-        </option>
-
-        <option>
-          Freelance
-        </option>
-
-        <option>
-          Remote
-        </option>
-
-        <option>
-          Temporary
-        </option>
-
-      </select>
-
-    </div>
+</div>
 
 
-    <div class="form-group">
+<div class="form-group">
 
-      <label for="jobLocation">
-        Location
-      </label>
+  <label for="jobType">
+    Job type
+  </label>
 
-      <input
-        id="jobLocation"
-        type="text"
-        placeholder="City / Country / Remote"
-      >
+  <select
+    id="jobType"
+  >
 
-    </div>
+    <option>
+      Full-time
+    </option>
 
+    <option>
+      Part-time
+    </option>
 
-    <div class="form-group">
+    <option>
+      Freelance
+    </option>
 
-      <label for="jobDescription">
-        Job description
-      </label>
+    <option>
+      Remote
+    </option>
 
-      <textarea
-        id="jobDescription"
-        placeholder="Describe the job..."
-      ></textarea>
+    <option>
+      Temporary
+    </option>
 
-    </div>
+  </select>
 
-
-    <div class="form-group">
-
-      <label for="jobContact">
-        Contact
-      </label>
-
-      <input
-        id="jobContact"
-        type="text"
-        placeholder="How can applicants contact you?"
-      >
-
-    </div>
+</div>
 
 
-    <button
-      type="button"
-      class="form-submit"
-      id="jobSubmit"
-    >
-      SUBMIT JOB
-    </button>
+<div class="form-group">
+
+  <label for="jobLocation">
+    Location
+  </label>
+
+  <input
+    id="jobLocation"
+    type="text"
+    placeholder="City / Country / Remote"
+  >
+
+</div>
+
+
+<div class="form-group">
+
+  <label for="jobDescription">
+    Job description
+  </label>
+
+  <textarea
+    id="jobDescription"
+    placeholder="Describe the job..."
+  ></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+  <label for="jobContact">
+    Contact
+  </label>
+
+  <input
+    id="jobContact"
+    type="text"
+    placeholder="How can applicants contact you?"
+  >
+
+</div>
+
+
+<button
+  type="button"
+  class="form-submit"
+  id="jobSubmit"
+>
+  SUBMIT JOB
+</button>
+```
 
   </div>
 
 </section>
-
 
 <section
   id="tiktok"
@@ -2083,65 +2217,66 @@ footer{
 
   <div class="tiktok-card">
 
-    <div class="tiktok-copy">
+```
+<div class="tiktok-copy">
 
-      <span class="tiktok-label">
-        TIKTOK
-      </span>
+  <span class="tiktok-label">
+    TIKTOK
+  </span>
 
-      <h3>
-        Connect TikTok to ZOVARO
-      </h3>
+  <h3>
+    Connect TikTok to ZOVARO
+  </h3>
 
-      <p>
-        Connect your TikTok account to allow
-        ZOVARO to prepare and share
-        promotional content.
-      </p>
+  <p>
+    Connect your TikTok account to allow
+    ZOVARO to prepare and share
+    promotional content.
+  </p>
 
-      <p class="tiktok-consent">
-        By continuing, you authorize ZOVARO
-        to access the permissions requested
-        during TikTok authorization.
-      </p>
+  <p class="tiktok-consent">
+    By continuing, you authorize ZOVARO
+    to access the permissions requested
+    during TikTok authorization.
+  </p>
 
-      <a
-        class="tiktok-connect-btn"
-        href="https://zovaro.vercel.app/api/tiktok-auth"
-      >
-        CONNECT TIKTOK
-      </a>
+  <a
+    class="tiktok-connect-btn"
+    href="https://zovaro.vercel.app/api/tiktok-auth"
+  >
+    CONNECT TIKTOK
+  </a>
 
-    </div>
+</div>
 
 
-    <div
-      class="tiktok-visual"
-      aria-hidden="true"
-    >
+<div
+  class="tiktok-visual"
+  aria-hidden="true"
+>
 
-      <div class="tiktok-circle">
-        ♪
-      </div>
+  <div class="tiktok-circle">
+    ♪
+  </div>
 
-      <div class="tiktok-visual-card">
+  <div class="tiktok-visual-card">
 
-        <strong>
-          ZOVARO → TikTok
-        </strong>
+    <strong>
+      ZOVARO → TikTok
+    </strong>
 
-        <small>
-          Authorized content sharing
-        </small>
+    <small>
+      Authorized content sharing
+    </small>
 
-      </div>
+  </div>
 
-    </div>
+</div>
+```
 
   </div>
 
 </section>
-
 
 <div
   class="modal"
@@ -2154,7 +2289,6 @@ footer{
     data-close
   ></div>
 
-
   <article
     class="modal-card"
     role="dialog"
@@ -2162,77 +2296,77 @@ footer{
     aria-labelledby="modalName"
   >
 
-    <button
-      class="modal-close"
-      data-close
-      type="button"
-      aria-label="Close"
-    >
-      ×
-    </button>
+```
+<button
+  class="modal-close"
+  data-close
+  type="button"
+  aria-label="Close"
+>
+  ×
+</button>
 
 
-    <img
-      id="modalImage"
-      alt=""
-    >
+<img
+  id="modalImage"
+  alt=""
+>
 
 
-    <div class="modal-body">
+<div class="modal-body">
 
-      <span
-        class="eyebrow"
-        id="modalCategory"
-      ></span>
-
-
-      <h2 id="modalName"></h2>
+  <span
+    class="eyebrow"
+    id="modalCategory"
+  ></span>
 
 
-      <p
-        class="merchant"
-        id="modalMerchant"
-      ></p>
+  <h2 id="modalName"></h2>
 
 
-      <div class="price-row">
-
-        <strong id="modalPrice"></strong>
-
-        <del id="modalOldPrice"></del>
-
-        <span id="modalDiscount"></span>
-
-      </div>
+  <p
+    class="merchant"
+    id="modalMerchant"
+  ></p>
 
 
-      <p id="modalDescription"></p>
+  <div class="price-row">
+
+    <strong id="modalPrice"></strong>
+
+    <del id="modalOldPrice"></del>
+
+    <span id="modalDiscount"></span>
+
+  </div>
 
 
-      <a
-        class="deal-btn"
-        id="modalLink"
-        href="#"
-      >
-        VIEW DEAL ↗
-      </a>
+  <p id="modalDescription"></p>
 
 
-      <small class="demo-note">
-        Affiliate link — you will continue
-        to the merchant's website to complete
-        your purchase.
-      </small>
+  <a
+    class="deal-btn"
+    id="modalLink"
+    href="#"
+  >
+    VIEW DEAL ↗
+  </a>
 
-    </div>
+
+  <small class="demo-note">
+    Affiliate link — you will continue
+    to the merchant's website to complete
+    your purchase.
+  </small>
+
+</div>
+```
 
   </article>
 
 </div>
 
-
 </main>
-
 
 <footer>
 
@@ -2246,22 +2380,22 @@ footer{
 
   <div style="margin-top:8px;">
 
-    ©
-    <span id="year"></span>
+```
+©
+<span id="year"></span>
 
-    ZOVARO. All rights reserved.
+ZOVARO. All rights reserved.
+```
 
   </div>
 
 </footer>
-
 
 <script src="products.js"></script>
 
 <script src="app.js"></script>
 
 <script src="app-cj-loader.js"></script>
-
 
 <script>
 
@@ -2523,96 +2657,52 @@ if(
 
 
 /* =====================================================
-   CATEGORY DISPLAY RULE
-   ALWAYS:
-   "Babies Explore"
-   "Sports Explore"
-   "Electronics Explore"
-   etc.
-   Remove repeated category text automatically.
+   CATEGORY DISPLAY RULE — PERMANENT
+   CATEGORIES MUST NEVER CONTAIN "Explore".
+   This also applies to dynamically added categories.
    ===================================================== */
 
 function normalizeCategoryLabels(){
 
-  const grid =
-    document.getElementById(
-      "categoryGrid"
-    );
-
+  const grid = document.getElementById("categoryGrid");
 
   if(!grid){
     return;
   }
 
+  grid.querySelectorAll("button").forEach(button => {
 
-  grid
-    .querySelectorAll("button")
-    .forEach(
-      button => {
+    const original = button.textContent.trim();
 
-        const original =
-          button.textContent.trim();
+    const clean = original
+      .replace(/\bExplore\b/gi,"")
+      .replace(/\s{2,}/g," ")
+      .trim();
 
+    if(clean && clean !== original){
+      button.textContent = clean;
+    }
 
-        const clean =
-          original
-            .replace(
-              /^[^\p{L}\p{N}&]+/u,
-              ""
-            )
-            .trim();
+    button.setAttribute("data-zovaro-category-clean","true");
 
-
-        const match =
-          clean.match(
-            /^(.*?)\s+Explore\s+.+$/i
-          );
-
-
-        if(
-          match &&
-          match[1].trim()
-        ){
-
-          button.textContent =
-            match[1].trim()
-            +
-            " Explore";
-
-        }
-
-      }
-    );
-
+  });
 }
 
-
-const categoryGrid =
-  document.getElementById(
-    "categoryGrid"
-  );
-
+const categoryGrid = document.getElementById("categoryGrid");
 
 if(categoryGrid){
 
   normalizeCategoryLabels();
 
+  const categoryObserver = new MutationObserver(() => {
+    normalizeCategoryLabels();
+  });
 
-  const categoryObserver =
-    new MutationObserver(
-      normalizeCategoryLabels
-    );
-
-
-  categoryObserver.observe(
-    categoryGrid,
-    {
-      childList:true,
-      subtree:true,
-      characterData:true
-    }
-  );
-
+  categoryObserver.observe(categoryGrid,{
+    childList:true,
+    subtree:true,
+    characterData:true
+  });
 }
 
 
@@ -2623,6 +2713,609 @@ document
 
 </script>
 
+<!-- ZOVARO LOCAL MULTILINGUAL SYSTEM
+     Transformers.js + M2M100 — browser-side translation
+     English remains the original language. -->
+
+<script type="module">
+
+import { pipeline, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.0";
+
+env.allowLocalModels = false;
+env.allowRemoteModels = true;
+
+const ZOVARO_TRANSLATION_MODEL = "Xenova/m2m100_418M";
+
+const RTL_LANGUAGES = new Set(["ar","he","fa","ur"]);
+
+const SUPPORTED_LANGUAGES = new Set([
+  "af","am","ar","ast","az","ba","be","bg","bn","br","bs","ca","ceb","cs","cy","da","de","el","en","es","et","fa","ff","fi","fr","fy","ga","gd","gl","gu","ha","he","hi","hr","ht","hu","hy","id","ig","ilo","is","it","ja","jv","ka","kk","km","kn","ko","lb","lg","ln","lo","lt","lv","mg","mk","ml","mn","mr","ms","my","ne","nl","no","ns","oc","or","pa","pl","ps","pt","ro","ru","sd","si","sk","sl","so","sq","sr","ss","su","sv","sw","ta","th","tl","tn","tr","uk","ur","uz","vi","wo","xh","yi","yo","zh","zu"
+]);
+
+const PROTECTED_TERMS = [
+  "ZOVARO",
+  "Versace",
+  "Nike",
+  "Apple",
+  "iPhone",
+  "padel"
+];
+
+const PROTECTED_PATTERN = new RegExp(
+  "(" + PROTECTED_TERMS.map(term => term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|") + ")",
+  "gi"
+);
+
+const languageSelect = document.getElementById("zovaroLanguage");
+let translatorPromise = null;
+let activeLanguage = "en";
+const translatedNodes = new WeakSet();
+
+function getBrowserLanguage(){
+
+  const candidates =
+    Array.isArray(navigator.languages) && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language || "en"];
+
+  for(const value){
+
+    const base =
+      String(value)
+        .toLowerCase()
+        .split("-")[0];
+
+    if(SUPPORTED_LANGUAGES.has(base)){
+      return base;
+    }
+
+  }
+
+  return "en";
+}
+
+function getSavedLanguage(){
+
+  try{
+
+    const saved =
+      localStorage.getItem("zovaroLanguage");
+
+    return saved && SUPPORTED_LANGUAGES.has(saved)
+      ? saved
+      : null;
+
+  }catch(error){
+
+    return null;
+
+  }
+
+}
+
+function setDirection(language){
+
+  const rtl =
+    RTL_LANGUAGES.has(language);
+
+  document.documentElement.lang =
+    language;
+
+  document.documentElement.dir =
+    rtl ? "rtl" : "ltr";
+
+  document.body.dir =
+    rtl ? "rtl" : "ltr";
+
+}
+
+function protectTerms(text){
+
+  const tokens = [];
+
+  const protectedText =
+    text.replace(
+      PROTECTED_PATTERN,
+      match => {
+
+        const token =
+          "ZXZOVARO" + tokens.length + "QX";
+
+        tokens.push(match);
+
+        return token;
+
+      }
+    );
+
+  return {
+    protectedText,
+    tokens
+  };
+
+}
+
+function restoreTerms(text,tokens){
+
+  let restored = text;
+
+  tokens.forEach((term,index) => {
+
+    const token =
+      "ZXZOVARO" + index + "QX";
+
+    restored =
+      restored
+        .split(token)
+        .join(term);
+
+  });
+
+  return restored;
+
+}
+
+function shouldTranslateElement(element){
+
+  if(!element || !(element instanceof Element)){
+    return false;
+  }
+
+  if(element.closest("[data-zovaro-no-translate]")){
+    return false;
+  }
+
+  const tag =
+    element.tagName.toLowerCase();
+
+  return ![
+    "script",
+    "style",
+    "noscript",
+    "svg",
+    "option"
+  ].includes(tag);
+
+}
+
+function getTranslatableTextNodes(root=document.body){
+
+  const walker =
+    document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node){
+
+          const parent =
+            node.parentElement;
+
+          if(
+            !parent ||
+            !shouldTranslateElement(parent)
+          ){
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          const value =
+            node.nodeValue || "";
+
+          if(
+            !value.trim() ||
+            value.trim().length < 2
+          ){
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          return NodeFilter.FILTER_ACCEPT;
+
+        }
+      }
+    );
+
+  const nodes = [];
+
+  let node;
+
+  while((node = walker.nextNode())){
+    nodes.push(node);
+  }
+
+  return nodes;
+
+}
+
+async function getTranslator(){
+
+  if(!translatorPromise){
+
+    translatorPromise =
+      pipeline(
+        "translation",
+        ZOVARO_TRANSLATION_MODEL,
+        { dtype:"q8" }
+      );
+
+  }
+
+  return translatorPromise;
+
+}
+
+async function translateText(text,language){
+
+  if(
+    language === "en" ||
+    !text.trim()
+  ){
+    return text;
+  }
+
+  const {
+    protectedText,
+    tokens
+  } =
+    protectTerms(text);
+
+  const translator =
+    await getTranslator();
+
+  const result =
+    await translator(
+      protectedText,
+      {
+        src_lang:"en",
+        tgt_lang:language
+      }
+    );
+
+  const translated =
+    result?.[0]?.translation_text || text;
+
+  return restoreTerms(
+    translated,
+    tokens
+  );
+
+}
+
+async function translateNode(node,language){
+
+  if(
+    !node ||
+    translatedNodes.has(node) ||
+    language === "en"
+  ){
+    return;
+  }
+
+  const original =
+    node.nodeValue || "";
+
+  const trimmed =
+    original.trim();
+
+  if(!trimmed || trimmed.length < 2){
+
+    translatedNodes.add(node);
+
+    return;
+
+  }
+
+  try{
+
+    const translated =
+      await translateText(
+        trimmed,
+        language
+      );
+
+    const leading =
+      original.match(/^\s*/)?.[0] || "";
+
+    const trailing =
+      original.match(/\s*$/)?.[0] || "";
+
+    node.nodeValue =
+      leading +
+      translated.trim() +
+      trailing;
+
+  }catch(error){
+
+    console.warn(
+      "ZOVARO translation skipped:",
+      error
+    );
+
+  }
+
+  translatedNodes.add(node);
+
+}
+
+async function translateAttributes(language){
+
+  if(language === "en"){
+    return;
+  }
+
+  const elements =
+    document.querySelectorAll(
+      "input[placeholder],textarea[placeholder],[aria-label]:not([data-zovaro-no-translate])"
+    );
+
+  for(const element of elements){
+
+    if(
+      element.closest(
+        "[data-zovaro-no-translate]"
+      )
+    ){
+      continue;
+    }
+
+    if(
+      element.dataset.zovaroAttrsTranslated === language
+    ){
+      continue;
+    }
+
+    if(element.placeholder){
+
+      element.placeholder =
+        await translateText(
+          element.placeholder,
+          language
+        );
+
+    }
+
+    if(element.hasAttribute("aria-label")){
+
+      element.setAttribute(
+        "aria-label",
+        await translateText(
+          element.getAttribute("aria-label"),
+          language
+        )
+      );
+
+    }
+
+    element.dataset.zovaroAttrsTranslated =
+      language;
+
+  }
+
+}
+
+async function translatePage(language){
+
+  activeLanguage =
+    language;
+
+  setDirection(language);
+
+  if(language === "en"){
+    return;
+  }
+
+  document.body.classList.add(
+    "zovaro-translating"
+  );
+
+  try{
+
+    const nodes =
+      getTranslatableTextNodes(
+        document.body
+      );
+
+    for(const node of nodes){
+
+      await translateNode(
+        node,
+        language
+      );
+
+    }
+
+    await translateAttributes(
+      language
+    );
+
+    normalizeCategoryLabels();
+
+  }finally{
+
+    document.body.classList.remove(
+      "zovaro-translating"
+    );
+
+  }
+
+}
+
+function observeDynamicContent(){
+
+  let timer = null;
+
+  const observer =
+    new MutationObserver(
+      mutations => {
+
+        if(activeLanguage === "en"){
+          return;
+        }
+
+        const added = [];
+
+        for(const mutation of mutations){
+
+          mutation.addedNodes.forEach(node => {
+
+            if(
+              node.nodeType === Node.ELEMENT_NODE ||
+              node.nodeType === Node.TEXT_NODE
+            ){
+              added.push(node);
+            }
+
+          });
+
+        }
+
+        if(!added.length){
+          return;
+        }
+
+        clearTimeout(timer);
+
+        timer =
+          setTimeout(
+            async () => {
+
+              normalizeCategoryLabels();
+
+              for(const node of added){
+
+                if(
+                  node.nodeType ===
+                  Node.TEXT_NODE
+                ){
+
+                  await translateNode(
+                    node,
+                    activeLanguage
+                  );
+
+                }else if(
+                  node.nodeType ===
+                  Node.ELEMENT_NODE &&
+                  !node.closest(
+                    "[data-zovaro-no-translate]"
+                  )
+                ){
+
+                  const nodes =
+                    getTranslatableTextNodes(
+                      node
+                    );
+
+                  for(const child of nodes){
+
+                    await translateNode(
+                      child,
+                      activeLanguage
+                    );
+
+                  }
+
+                }
+
+              }
+
+              await translateAttributes(
+                activeLanguage
+              );
+
+              normalizeCategoryLabels();
+
+            },
+            250
+          );
+
+      }
+    );
+
+  observer.observe(
+    document.body,
+    {
+      childList:true,
+      subtree:true
+    }
+  );
+
+}
+
+async function initializeLanguage(){
+
+  const saved =
+    getSavedLanguage();
+
+  const initial =
+    saved || getBrowserLanguage();
+
+  activeLanguage =
+    initial;
+
+  setDirection(
+    initial
+  );
+
+  if(languageSelect){
+
+    languageSelect.value =
+      initial;
+
+    languageSelect.addEventListener(
+      "change",
+      event => {
+
+        const language =
+          event.target.value;
+
+        try{
+
+          localStorage.setItem(
+            "zovaroLanguage",
+            language
+          );
+
+        }catch(error){}
+
+        // Reloading guarantees that English originals
+        // are restored exactly before the new translation.
+        window.location.reload();
+
+      }
+    );
+
+  }
+
+  observeDynamicContent();
+
+  if(initial !== "en"){
+
+    // Give the existing ZOVARO scripts time
+    // to render the catalog first.
+    setTimeout(
+      () => {
+
+        translatePage(
+          initial
+        ).catch(error => {
+
+          console.error(
+            "ZOVARO translation system error:",
+            error
+          );
+
+        });
+
+      },
+      700
+    );
+
+  }
+
+}
+
+initializeLanguage();
+
+</script>
 
 </body>
 </html>
