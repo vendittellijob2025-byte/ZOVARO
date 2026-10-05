@@ -172,9 +172,6 @@ textarea{
     0 0 45px rgba(0,150,255,.28)
 }
 
-
-/* SHOP */
-
 .shop-card{
   background-image:
     linear-gradient(
@@ -188,9 +185,6 @@ textarea{
     url("assets/shop-visual.png")
 }
 
-
-/* JOB */
-
 .job-card{
   background-image:
     linear-gradient(
@@ -203,9 +197,6 @@ textarea{
     ),
     url("assets/job-visual.png")
 }
-
-
-/* MAKE A WISH */
 
 .wish-card{
   grid-column:1/-1;
@@ -464,9 +455,6 @@ textarea{
   line-height:1.6
 }
 
-
-/* SEARCH */
-
 .shop-search{
   display:grid;
   grid-template-columns:minmax(0,1fr) auto;
@@ -515,9 +503,6 @@ textarea{
 .shop-search-button:hover{
   filter:brightness(1.06)
 }
-
-
-/* CATEGORIES */
 
 .shop-categories{
   display:grid;
@@ -1574,8 +1559,6 @@ footer{
   </p>
 
 
-  <!-- SHOP SEARCH -->
-
   <form
     id="searchForm"
     class="shop-search"
@@ -1601,8 +1584,6 @@ footer{
 
   </form>
 
-
-  <!-- CATEGORIES -->
 
   <div
     class="shop-categories category-grid"
@@ -1915,6 +1896,10 @@ footer{
 </section>
 
 
+<!-- =====================================================
+     SELL PRODUCTS — TEMPORARILY UNDER MAINTENANCE
+     ===================================================== -->
+
 <section
   id="sellProductsView"
   class="view hidden"
@@ -1935,136 +1920,37 @@ footer{
 
 
   <p class="choice-subtitle">
-    List your used product for free.
-    ZOVARO charges 0% commission on the sale.
+    This section is temporarily under maintenance while we make improvements.
+    It will be available again soon.
+    We apologize for the inconvenience and thank you for your understanding.
   </p>
 
 
   <div class="form-panel">
 
-    <div class="form-group">
+    <p
+      style="
+        margin:0;
+        text-align:center;
+        color:#b7cbe0;
+        font-size:14px;
+        line-height:1.8;
+      "
+    >
+      We are currently working on this section
+      to improve the ZOVARO selling experience.
+    </p>
 
-      <label for="sellTitle">
-        Product title
-      </label>
-
-      <input
-        id="sellTitle"
-        type="text"
-        placeholder="What are you selling?"
-      >
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellCategory">
-        Category
-      </label>
-
-      <select
-        id="sellCategory"
-      >
-
-        <option>
-          Electronics
-        </option>
-
-        <option>
-          Sports
-        </option>
-
-        <option>
-          Fashion
-        </option>
-
-        <option>
-          Home
-        </option>
-
-        <option>
-          Beauty
-        </option>
-
-        <option>
-          Kids
-        </option>
-
-        <option>
-          Other
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellPrice">
-        Price
-      </label>
-
-      <input
-        id="sellPrice"
-        type="number"
-        min="0"
-        step="0.01"
-        placeholder="Price"
-      >
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellLocation">
-        Location
-      </label>
-
-      <input
-        id="sellLocation"
-        type="text"
-        placeholder="City / Country"
-      >
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellDescription">
-        Description
-      </label>
-
-      <textarea
-        id="sellDescription"
-        placeholder="Describe your product..."
-      ></textarea>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="sellContact">
-        Contact
-      </label>
-
-      <input
-        id="sellContact"
-        type="text"
-        placeholder="How can buyers contact you?"
-      >
-
-    </div>
-
+    <!--
+      Kept hidden so the existing JavaScript
+      remains compatible and no errors are generated.
+    -->
 
     <button
       type="button"
-      class="form-submit"
       id="sellSubmit"
+      hidden
+      aria-hidden="true"
     >
       SUBMIT PRODUCT
     </button>
