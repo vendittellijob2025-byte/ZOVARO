@@ -1468,89 +1468,6 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     NEW / USED PRODUCT CHOICE
-     ===================================================== -->
-
-<section
-  id="buyTypeView"
-  class="view hidden"
->
-
-  <button
-    type="button"
-    class="back-button"
-    id="backFromBuyType"
-  >
-    ← Back
-  </button>
-
-  <h2 class="choice-title">
-    BUY PRODUCTS
-  </h2>
-
-  <p class="choice-subtitle">
-    Choose whether you want to buy a new or used product.
-  </p>
-
-  <div class="choice-grid">
-
-    <a
-      href="#"
-      class="choice-card"
-      id="openNewProducts"
-    >
-
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
-
-      <h2>
-        NEW
-      </h2>
-
-      <p>
-        Discover new products from participating
-        merchants and affiliate partners.
-      </p>
-
-    </a>
-
-
-    <a
-      href="#"
-      class="choice-card"
-      id="openUsedProducts"
-    >
-
-      <img
-        class="choice-card-logo"
-        src="assets/zovaro-logo.png"
-        alt=""
-      >
-
-      <h2>
-        USED
-      </h2>
-
-      <p>
-        Browse used products listed by people
-        and sellers on ZOVARO.
-      </p>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     JOB CHOICE
-     ===================================================== -->
-
 <section
   id="jobChoiceView"
   class="view hidden"
@@ -1625,10 +1542,6 @@ footer{
 
 </section>
 
-
-<!-- =====================================================
-     BUY PRODUCTS — NEW / AFFILIATES
-     ===================================================== -->
 
 <section
   id="buyProductsView"
@@ -1828,9 +1741,77 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     USED PRODUCTS
-     ===================================================== -->
+<section
+  id="buyConditionView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromBuyCondition"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    NEW OR USED
+  </h2>
+
+  <p class="choice-subtitle">
+    Choose the type of product you want to buy.
+  </p>
+
+  <div class="choice-grid">
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openNewProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        NEW
+      </h2>
+
+      <p>
+        Discover new products and offers from participating merchants.
+      </p>
+
+    </a>
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openUsedProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        USED
+      </h2>
+
+      <p>
+        Discover used products listed by people and sellers on ZOVARO.
+      </p>
+
+    </a>
+
+  </div>
+
+</section>
+
 
 <section
   id="usedProductsView"
@@ -1845,36 +1826,88 @@ footer{
     ← Back
   </button>
 
-
   <p class="eyebrow">
     ZOVARO SHOP
   </p>
-
 
   <h2 class="catalog-title">
     USED PRODUCTS
   </h2>
 
-
   <p class="catalog-subtitle">
-    Discover used products listed by people
-    and sellers on ZOVARO.
+    Search used products and browse listings by category.
   </p>
 
+  <form
+    id="usedSearchForm"
+    class="shop-search"
+    role="search"
+    aria-label="Search ZOVARO used products"
+  >
 
-  <div class="form-panel">
-
-    <h2
-      class="choice-title"
-      style="font-size:clamp(26px,4vw,38px);"
+    <input
+      id="usedSearchInput"
+      class="shop-search-input"
+      type="search"
+      autocomplete="off"
+      placeholder="What are you looking for? e.g. used iPhone, bicycle, sofa, tools"
     >
+
+    <button
+      class="shop-search-button"
+      type="submit"
+      aria-label="Search used products"
+    >
+      ⌕
+    </button>
+
+  </form>
+
+  <div
+    class="shop-categories category-grid"
+    id="usedCategoryGrid"
+  >
+
+    <button type="button" data-used-category="Electronics">Electronics</button>
+    <button type="button" data-used-category="Phones & Tablets">Phones &amp; Tablets</button>
+    <button type="button" data-used-category="Computers">Computers</button>
+    <button type="button" data-used-category="Gaming">Gaming</button>
+    <button type="button" data-used-category="Sports">Sports</button>
+    <button type="button" data-used-category="Fashion">Fashion</button>
+    <button type="button" data-used-category="Kids & Babies">Kids &amp; Babies</button>
+    <button type="button" data-used-category="Home">Home</button>
+    <button type="button" data-used-category="Furniture">Furniture</button>
+    <button type="button" data-used-category="Beauty">Beauty</button>
+    <button type="button" data-used-category="Automotive">Automotive</button>
+    <button type="button" data-used-category="Tools & DIY">Tools &amp; DIY</button>
+    <button type="button" data-used-category="Books & Media">Books &amp; Media</button>
+    <button type="button" data-used-category="Collectibles">Collectibles</button>
+    <button type="button" data-used-category="Appliances">Appliances</button>
+    <button type="button" data-used-category="Other">Other</button>
+
+  </div>
+
+  <div
+    id="usedResultsMeta"
+    class="results-meta"
+  ></div>
+
+  <div
+    id="usedListingGrid"
+    class="product-grid"
+  ></div>
+
+  <div
+    id="usedEmptyState"
+    class="form-panel"
+  >
+
+    <h2 class="section-head" style="justify-content:center;">
       USED PRODUCT LISTINGS
     </h2>
 
-    <p class="choice-subtitle">
-      Used product listings will appear here.
-      The ZOVARO used-product marketplace
-      will be connected next.
+    <p class="choice-subtitle" style="margin-bottom:0;">
+      Used product listings will appear here. The ZOVARO used-product marketplace will be connected next.
     </p>
 
   </div>
@@ -2064,7 +2097,6 @@ footer{
     This section will contain the ZOVARO
     job search system.
   </p>
-
 
 </section>
 
@@ -2410,8 +2442,8 @@ footer{
 const views = [
   "homeView",
   "shopChoiceView",
-  "buyTypeView",
   "jobChoiceView",
+  "buyConditionView",
   "buyProductsView",
   "usedProductsView",
   "sellProductsView",
@@ -2494,61 +2526,13 @@ document
   );
 
 
-/* =====================================================
-   BUY PRODUCTS → NEW / USED
-   ===================================================== */
-
 document
   .getElementById("openBuyProducts")
   .addEventListener(
     "click",
-    go("buyTypeView")
+    go("buyConditionView")
   );
 
-
-document
-  .getElementById("backFromBuyType")
-  .addEventListener(
-    "click",
-    () => showView("shopChoiceView")
-  );
-
-
-/* =====================================================
-   NEW PRODUCTS → EXISTING AFFILIATE CATALOG
-   ===================================================== */
-
-document
-  .getElementById("openNewProducts")
-  .addEventListener(
-    "click",
-    go("buyProductsView")
-  );
-
-
-/* =====================================================
-   USED PRODUCTS
-   ===================================================== */
-
-document
-  .getElementById("openUsedProducts")
-  .addEventListener(
-    "click",
-    go("usedProductsView")
-  );
-
-
-document
-  .getElementById("backFromUsedProducts")
-  .addEventListener(
-    "click",
-    () => showView("buyTypeView")
-  );
-
-
-/* =====================================================
-   EXISTING NAVIGATION
-   ===================================================== */
 
 document
   .getElementById("openSellProducts")
@@ -2578,7 +2562,39 @@ document
   .getElementById("backFromBuy")
   .addEventListener(
     "click",
-    () => showView("buyTypeView")
+    () => showView("buyConditionView")
+  );
+
+
+document
+  .getElementById("backFromBuyCondition")
+  .addEventListener(
+    "click",
+    () => showView("shopChoiceView")
+  );
+
+
+document
+  .getElementById("openNewProducts")
+  .addEventListener(
+    "click",
+    go("buyProductsView")
+  );
+
+
+document
+  .getElementById("openUsedProducts")
+  .addEventListener(
+    "click",
+    go("usedProductsView")
+  );
+
+
+document
+  .getElementById("backFromUsedProducts")
+  .addEventListener(
+    "click",
+    () => showView("buyConditionView")
   );
 
 
@@ -2715,6 +2731,204 @@ if(
 
 
 /* =====================================================
+   USED PRODUCTS SEARCH AND CATEGORIES
+   ===================================================== */
+
+const usedSearchForm =
+  document.getElementById(
+    "usedSearchForm"
+  );
+
+const usedSearchInput =
+  document.getElementById(
+    "usedSearchInput"
+  );
+
+const usedCategoryGrid =
+  document.getElementById(
+    "usedCategoryGrid"
+  );
+
+const usedListingGrid =
+  document.getElementById(
+    "usedListingGrid"
+  );
+
+const usedResultsMeta =
+  document.getElementById(
+    "usedResultsMeta"
+  );
+
+const usedEmptyState =
+  document.getElementById(
+    "usedEmptyState"
+  );
+
+let activeUsedCategory = "";
+
+function filterUsedListings(){
+
+  if(!usedListingGrid){
+    return;
+  }
+
+  const query =
+    (usedSearchInput?.value || "")
+      .trim()
+      .toLowerCase();
+
+  const listings =
+    Array.from(
+      usedListingGrid.querySelectorAll(
+        ".used-listing"
+      )
+    );
+
+  let visibleCount = 0;
+
+  listings.forEach(
+    listing => {
+
+      const text =
+        (listing.textContent || "")
+          .toLowerCase();
+
+      const category =
+        (listing.dataset.category || "")
+          .toLowerCase();
+
+      const matchesQuery =
+        !query || text.includes(query);
+
+      const matchesCategory =
+        !activeUsedCategory ||
+        category === activeUsedCategory.toLowerCase();
+
+      const visible =
+        matchesQuery && matchesCategory;
+
+      listing.classList.toggle(
+        "hidden",
+        !visible
+      );
+
+      if(visible){
+        visibleCount++;
+      }
+
+    }
+  );
+
+  if(usedResultsMeta){
+
+    if(listings.length){
+
+      usedResultsMeta.textContent =
+        visibleCount +
+        " used product listing" +
+        (visibleCount === 1 ? "" : "s") +
+        " found.";
+
+    }else{
+
+      usedResultsMeta.textContent =
+        "No used product listings are available yet.";
+
+    }
+
+  }
+
+  if(usedEmptyState){
+
+    usedEmptyState.classList.toggle(
+      "hidden",
+      visibleCount > 0
+    );
+
+  }
+
+}
+
+if(usedSearchForm){
+
+  usedSearchForm.addEventListener(
+    "submit",
+    event => {
+      event.preventDefault();
+      filterUsedListings();
+    }
+  );
+
+}
+
+if(usedSearchInput){
+
+  usedSearchInput.addEventListener(
+    "input",
+    filterUsedListings
+  );
+
+}
+
+if(usedCategoryGrid){
+
+  usedCategoryGrid
+    .querySelectorAll("button[data-used-category]")
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            const category =
+              button.dataset.usedCategory || "";
+
+            if(
+              activeUsedCategory === category
+            ){
+
+              activeUsedCategory = "";
+
+              button.style.borderColor = "";
+
+              button.style.background = "";
+
+            }else{
+
+              activeUsedCategory = category;
+
+              usedCategoryGrid
+                .querySelectorAll("button[data-used-category]")
+                .forEach(
+                  item => {
+                    item.style.borderColor = "";
+                    item.style.background = "";
+                  }
+                );
+
+              button.style.borderColor =
+                "#31d4ff";
+
+              button.style.background =
+                "rgba(0,125,255,.1)";
+
+            }
+
+            filterUsedListings();
+
+          }
+        );
+
+      }
+    );
+
+}
+
+filterUsedListings();
+
+
+/* =====================================================
    CATEGORY DISPLAY RULE
    SHOW ONLY THE CATEGORY NAME.
    "Explore" is always removed.
@@ -2746,19 +2960,6 @@ function normalizeCategoryLabels(){
             .trim();
 
 
-        /* Remove symbols/icons before the category name */
-
-        label =
-          label
-            .replace(
-              /^[^\p{L}\p{N}&]+/u,
-              ""
-            )
-            .trim();
-
-
-        /* Remove Explore in every form */
-
         label =
           label
             .replace(
@@ -2771,8 +2972,6 @@ function normalizeCategoryLabels(){
             )
             .trim();
 
-
-        /* Remove an exact repeated category name */
 
         const duplicateMatch =
           label.match(
@@ -2788,16 +2987,7 @@ function normalizeCategoryLabels(){
         }
 
 
-        /*
-           Safety check:
-           only modify the button when the final
-           label is actually different.
-        */
-
-        if(
-          label &&
-          label !== button.textContent.trim()
-        ){
+        if(label && label !== button.textContent.trim()){
 
           button.textContent =
             label;
