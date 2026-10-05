@@ -1468,6 +1468,89 @@ footer{
 </section>
 
 
+<!-- =====================================================
+     NEW / USED PRODUCT CHOICE
+     ===================================================== -->
+
+<section
+  id="buyTypeView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromBuyType"
+  >
+    ← Back
+  </button>
+
+  <h2 class="choice-title">
+    BUY PRODUCTS
+  </h2>
+
+  <p class="choice-subtitle">
+    Choose whether you want to buy a new or used product.
+  </p>
+
+  <div class="choice-grid">
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openNewProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        NEW
+      </h2>
+
+      <p>
+        Discover new products from participating
+        merchants and affiliate partners.
+      </p>
+
+    </a>
+
+
+    <a
+      href="#"
+      class="choice-card"
+      id="openUsedProducts"
+    >
+
+      <img
+        class="choice-card-logo"
+        src="assets/zovaro-logo.png"
+        alt=""
+      >
+
+      <h2>
+        USED
+      </h2>
+
+      <p>
+        Browse used products listed by people
+        and sellers on ZOVARO.
+      </p>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     JOB CHOICE
+     ===================================================== -->
+
 <section
   id="jobChoiceView"
   class="view hidden"
@@ -1542,6 +1625,10 @@ footer{
 
 </section>
 
+
+<!-- =====================================================
+     BUY PRODUCTS — NEW / AFFILIATES
+     ===================================================== -->
 
 <section
   id="buyProductsView"
@@ -1741,6 +1828,60 @@ footer{
 </section>
 
 
+<!-- =====================================================
+     USED PRODUCTS
+     ===================================================== -->
+
+<section
+  id="usedProductsView"
+  class="view hidden"
+>
+
+  <button
+    type="button"
+    class="back-button"
+    id="backFromUsedProducts"
+  >
+    ← Back
+  </button>
+
+
+  <p class="eyebrow">
+    ZOVARO SHOP
+  </p>
+
+
+  <h2 class="catalog-title">
+    USED PRODUCTS
+  </h2>
+
+
+  <p class="catalog-subtitle">
+    Discover used products listed by people
+    and sellers on ZOVARO.
+  </p>
+
+
+  <div class="form-panel">
+
+    <h2
+      class="choice-title"
+      style="font-size:clamp(26px,4vw,38px);"
+    >
+      USED PRODUCT LISTINGS
+    </h2>
+
+    <p class="choice-subtitle">
+      Used product listings will appear here.
+      The ZOVARO used-product marketplace
+      will be connected next.
+    </p>
+
+  </div>
+
+</section>
+
+
 <section
   id="sellProductsView"
   class="view hidden"
@@ -1920,44 +2061,10 @@ footer{
 
 
   <p class="choice-subtitle">
-    Search for the type of work you are looking for.
+    This section will contain the ZOVARO
+    job search system.
   </p>
 
-
-  <!-- JOB SEARCH -->
-
-  <form
-    id="jobSearchForm"
-    class="shop-search"
-    role="search"
-    aria-label="Search ZOVARO jobs"
-  >
-
-    <input
-      id="jobSearchInput"
-      class="shop-search-input"
-      type="search"
-      autocomplete="off"
-      maxlength="200"
-      placeholder="Search jobs e.g. graphic designer, butcher, carpenter"
-    >
-
-    <button
-      class="shop-search-button"
-      type="submit"
-      aria-label="Search jobs"
-    >
-      ⌕
-    </button>
-
-  </form>
-
-
-  <div
-    id="jobSearchStatus"
-    class="results-meta"
-    aria-live="polite"
-  ></div>
 
 </section>
 
@@ -2303,8 +2410,10 @@ footer{
 const views = [
   "homeView",
   "shopChoiceView",
+  "buyTypeView",
   "jobChoiceView",
   "buyProductsView",
+  "usedProductsView",
   "sellProductsView",
   "lookingJobView",
   "offerJobView"
@@ -2385,13 +2494,61 @@ document
   );
 
 
+/* =====================================================
+   BUY PRODUCTS → NEW / USED
+   ===================================================== */
+
 document
   .getElementById("openBuyProducts")
+  .addEventListener(
+    "click",
+    go("buyTypeView")
+  );
+
+
+document
+  .getElementById("backFromBuyType")
+  .addEventListener(
+    "click",
+    () => showView("shopChoiceView")
+  );
+
+
+/* =====================================================
+   NEW PRODUCTS → EXISTING AFFILIATE CATALOG
+   ===================================================== */
+
+document
+  .getElementById("openNewProducts")
   .addEventListener(
     "click",
     go("buyProductsView")
   );
 
+
+/* =====================================================
+   USED PRODUCTS
+   ===================================================== */
+
+document
+  .getElementById("openUsedProducts")
+  .addEventListener(
+    "click",
+    go("usedProductsView")
+  );
+
+
+document
+  .getElementById("backFromUsedProducts")
+  .addEventListener(
+    "click",
+    () => showView("buyTypeView")
+  );
+
+
+/* =====================================================
+   EXISTING NAVIGATION
+   ===================================================== */
 
 document
   .getElementById("openSellProducts")
@@ -2421,7 +2578,7 @@ document
   .getElementById("backFromBuy")
   .addEventListener(
     "click",
-    () => showView("shopChoiceView")
+    () => showView("buyTypeView")
   );
 
 
@@ -2550,88 +2707,6 @@ if(
 
       wishStatus.textContent =
         "Wish saved. The ZOVARO smart matching system will be connected next.";
-
-    }
-  );
-
-}
-
-
-/* =====================================================
-   JOB SEARCH
-   ===================================================== */
-
-const jobSearchForm =
-  document.getElementById(
-    "jobSearchForm"
-  );
-
-
-const jobSearchInput =
-  document.getElementById(
-    "jobSearchInput"
-  );
-
-
-const jobSearchStatus =
-  document.getElementById(
-    "jobSearchStatus"
-  );
-
-
-if(
-  jobSearchForm &&
-  jobSearchInput &&
-  jobSearchStatus
-){
-
-  const savedJobSearch =
-    localStorage.getItem(
-      "zovaroJobSearch"
-    );
-
-
-  if(savedJobSearch){
-
-    jobSearchInput.value =
-      savedJobSearch;
-
-  }
-
-
-  jobSearchForm.addEventListener(
-    "submit",
-    event => {
-
-      event.preventDefault();
-
-
-      const jobSearch =
-        jobSearchInput.value.trim();
-
-
-      if(!jobSearch){
-
-        jobSearchStatus.textContent =
-          "Please enter the type of job you are looking for.";
-
-        jobSearchInput.focus();
-
-        return;
-
-      }
-
-
-      localStorage.setItem(
-        "zovaroJobSearch",
-        jobSearch
-      );
-
-
-      jobSearchStatus.textContent =
-        'Job search saved: "' +
-        jobSearch +
-        '". The ZOVARO job matching system will be connected next.';
 
     }
   );
