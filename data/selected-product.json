@@ -1,21 +1,24 @@
 {
-  "selectedAt": "2026-10-22T13:45:07.629Z",
-  "date": "2026-10-22",
+  "selectedAt": "2026-10-23T13:22:53.969Z",
+  "date": "2026-10-23",
   "source": "CJ",
   "network": "CJ Affiliate",
-  "productId": "7738",
-  "title": "Super Pack Mystica Legacy Carbon Hybrid Blue 2024 - Mystica",
-  "description": "SUPER PACK MYSTICA LEGACY CARBON HYBRID BLUE 2024 - One of the packs with the best quality-price ratio on the market. The Mystica racket is without a doubt a complete racket, in an oversize format and in 3K carbon. Take the leap to the track with the SUPER PACK MYSTICA LEGACY CARBON HYBRID BLUE 2024, a perfect combination for those looking for performance and complete equipment. Includes padel backpack, 10 overgrips, 1 can of balls and 1 protector.\n\nThe Mystica Legacy Carbon Hybrid Blue 2024 is a hybrid racket that offers an excellent balance between control and power. Its 3K carbon construction provides great resistance and a solid response to each hit, making it a very versatile option to face any game situation.",
-  "brand": "MYSTICA",
+  "productId": "6503",
+  "title": "Starvie Junior 2025 - Star Vie",
+  "description": "STARVIE JUNIOR 2025 - Starvie's junior racket, for children who are starting out in this sport. INTRODUCTION OF THE SHOVEL\n\nAre you looking for a junior racket? The STARVIE JUNIOR 2025 is one of the alternatives we have for the little ones. Quality alternative, very comfortable and light weight.\n\nPLAYER TYPE\n\nRecommended for a child who is starting to play.\n\nCHARACTERISTICS OF THE PADDLE\n\nThe STARVIE JUNIOR 2025 has the following characteristics:\n\n- Round shape. It ensures low balance and good mobility.\n\n- Low weight. Its weight is around 330 grams.\n\n- Made of fiberglass.\n\n- Xtreme Spot technology that increases the sweet spot.\n\nPLAY STYLE\n\nIt is a wing with a lot of control, ideal for learning correctly in the first steps in this wonderful sport.",
+  "brand": "Star Vie",
   "advertiserId": "7969352",
   "advertiserName": "Padel Iberico ES",
   "category": "Sports",
-  "imageLink": "https://www.padeliberico.es/16496-large_default/super-pack-mystica-legacy-carbon-hybrid-blue-2024.jpg",
-  "additionalImageLinks": [],
-  "price": 250,
-  "salePrice": 117.95,
+  "imageLink": "https://www.padeliberico.es/13208-large_default/starvie-junior-2025.jpg",
+  "additionalImageLinks": [
+    "https://www.padeliberico.es/13209-large_default/starvie-junior-2025.jpg",
+    "https://www.padeliberico.es/13210-large_default/starvie-junior-2025.jpg"
+  ],
+  "price": 109.95,
+  "salePrice": 99.9,
   "currency": "EUR",
-  "discountPercentage": 53,
-  "destination": "https://www.padeliberico.es/super-pack-mystica-legacy-carbon-hybrid-blue-2024.html",
-  "clickUrl": "https://www.tkqlhce.com/click-101881140-17352429?url=https%3A%2F%2Fwww.padeliberico.es%2Fsuper-pack-mystica-legacy-carbon-hybrid-blue-2024.html&cjsku=7738"
+  "discountPercentage": 9,
+  "destination": "https://www.padeliberico.es/starvie-junior-2025.html",
+  "clickUrl": "https://www.tkqlhce.com/click-101881140-17352429?url=https%3A%2F%2Fwww.padeliberico.es%2Fstarvie-junior-2025.html&cjsku=6503"
 }
