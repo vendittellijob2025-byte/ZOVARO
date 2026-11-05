@@ -1,3 +1,4 @@
+
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 
@@ -502,26 +503,33 @@ $("#viewAllBtn").addEventListener(
 
 
 /* =========================================================
-   MOBILE MENU
+   MOBILE MENU - SAFE INITIALIZATION
    ========================================================= */
 
-$("#mobileMenuBtn").addEventListener(
-  "click",
-  () => {
+const mobileMenuButton =
+  $("#mobileMenuBtn");
 
-    const open =
-      $("#mainNav").classList.toggle(
-        "open"
+const mainNav =
+  $("#mainNav");
+
+if (mobileMenuButton && mainNav) {
+
+  mobileMenuButton.addEventListener(
+    "click",
+    () => {
+
+      const open =
+        mainNav.classList.toggle("open");
+
+      mobileMenuButton.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
       );
 
-    $("#mobileMenuBtn").setAttribute(
-      "aria-expanded",
-      open
-        ? "true"
-        : "false"
-    );
-  }
-);
+    }
+  );
+
+}
 
 
 /* =========================================================
