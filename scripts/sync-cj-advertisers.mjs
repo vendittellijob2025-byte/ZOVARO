@@ -224,6 +224,36 @@ async function getProductsForAdvertiser(advertiser) {
   return all;
 }
 
+function productRejectionReasons(product) {
+  const reasons = [];
+  const id = String(product.id || "").trim();
+  const title = String(product.title || "").trim();
+  const rawImage = product.imageLink;
+  const rawClickUrl = product.linkCode?.clickUrl;
+  const imageLink = cleanUrl(rawImage);
+  const clickUrl = cleanUrl(rawClickUrl);
+  const destination = cleanUrl(product.link);
+  const regularPrice = amount(product.price);
+
+  if (!id) reasons.push("missing_product_id");
+  if (!title) reasons.push("missing_title");
+  if (!rawImage) reasons.push("missing_image_url");
+  else if (!imageLink) reasons.push("invalid_image_url");
+  if (!rawClickUrl) reasons.push("missing_cj_click_url");
+  else if (!clickUrl) reasons.push("invalid_cj_click_url");
+  if (regularPrice === null) reasons.push("missing_or_invalid_price");
+
+  if (clickUrl && destination) {
+    const parsedClick = new URL(clickUrl);
+    const parsedDestination = new URL(destination);
+    if (parsedClick.hostname === parsedDestination.hostname && parsedClick.pathname === parsedDestination.pathname) {
+      reasons.push("click_url_matches_destination");
+    }
+  }
+
+  return reasons;
+}
+
 function makeCatalogProduct(product, advertiser) {
   const id = String(product.id || "").trim();
   const title = String(product.title || "").trim();
@@ -285,6 +315,12 @@ const joinedAdvertisers = await getJoinedAdvertisers();
 if (!joinedAdvertisers.length) throw new Error("CJ returned no active joined advertisers; existing catalog was left untouched.");
 
 console.log("Active joined CJ advertisers found: " + joinedAdvertisers.length);
+console.log("CJ joined advertiser list: " + JSON.stringify(joinedAdvertisers.map(item => ({
+  advertiserId: item.id,
+  advertiserName: item.name,
+  accountStatus: item.accountStatus || "not-provided",
+  relationshipStatus: item.relationshipStatus
+}))));
 
 const joinedIds = new Set(joinedAdvertisers.map(item => item.id));
 const feeds = await getProductFeeds([...joinedIds]);
@@ -293,26 +329,86 @@ const eligibleFeedAdvertisers = new Set(
     .map(feed => String(feed.advertiserId))
 );
 
+console.log("CJ feed summary: " + JSON.stringify(feeds.map(feed => ({
+  advertiserId: String(feed.advertiserId),
+  advertiserName: feed.advertiserName,
+  adId: feed.adId,
+  feedName: feed.feedName,
+  productCount: Number(feed.productCount) || 0,
+  country: feed.advertiserCountry || "",
+  language: feed.language || "",
+  currency: feed.currency || ""
+}))));
+const advertisersWithoutProductFeeds = joinedAdvertisers.filter(item => !eligibleFeedAdvertisers.has(item.id));
+console.log("CJ joined advertisers without a positive product feed: " + JSON.stringify(advertisersWithoutProductFeeds.map(item => ({
+  advertiserId: item.id,
+  advertiserName: item.name
+}))));
+
 console.log("Joined advertisers with product feeds: " + eligibleFeedAdvertisers.size);
 if (!feeds.length) throw new Error("CJ returned no product feed summaries; existing catalog was left untouched.");
 
 const advertiserMap = new Map(joinedAdvertisers.map(item => [item.id, item]));
 const importedByKey = new Map();
+const advertiserDiagnostics = new Map();
 let received = 0;
+let advertiserMismatchCount = 0;
 
 for (const advertiserId of eligibleFeedAdvertisers) {
   const advertiser = advertiserMap.get(advertiserId);
   if (!advertiser) continue;
 
+  const diagnostic = {
+    advertiserId,
+    advertiserName: advertiser.name,
+    productsReceived: 0,
+    advertiserIdMismatch: 0,
+    productsPassingValidation: 0,
+    duplicateProductKeys: 0,
+    rejectedByReason: {}
+  };
+  advertiserDiagnostics.set(advertiserId, diagnostic);
+
   const products = await getProductsForAdvertiser(advertiser);
   received += products.length;
+  diagnostic.productsReceived = products.length;
 
   for (const product of products) {
-    if (String(product.advertiserId || advertiserId) !== advertiserId) continue;
+    if (String(product.advertiserId || advertiserId) !== advertiserId) {
+      diagnostic.advertiserIdMismatch += 1;
+      advertiserMismatchCount += 1;
+      continue;
+    }
+
+    const reasons = productRejectionReasons(product);
+    if (reasons.length) {
+      for (const reason of reasons) {
+        diagnostic.rejectedByReason[reason] = (diagnostic.rejectedByReason[reason] || 0) + 1;
+      }
+      continue;
+    }
+
     const normalized = makeCatalogProduct(product, advertiser);
-    if (normalized) importedByKey.set(productKey(normalized), normalized);
+    if (!normalized) {
+      diagnostic.rejectedByReason.unclassified_validation_rejection =
+        (diagnostic.rejectedByReason.unclassified_validation_rejection || 0) + 1;
+      continue;
+    }
+
+    diagnostic.productsPassingValidation += 1;
+    const key = productKey(normalized);
+    if (importedByKey.has(key)) diagnostic.duplicateProductKeys += 1;
+    importedByKey.set(key, normalized);
   }
 }
+
+console.log("CJ product import diagnostics: " + JSON.stringify({
+  productsReceived: received,
+  productsPassingValidationBeforeDeduplication: [...advertiserDiagnostics.values()].reduce((sum, item) => sum + item.productsPassingValidation, 0),
+  uniqueProductsPassingValidation: importedByKey.size,
+  advertiserIdMismatchCount,
+  advertisers: [...advertiserDiagnostics.values()]
+}));
 
 const imported = [...importedByKey.values()];
 if (!imported.length) {
