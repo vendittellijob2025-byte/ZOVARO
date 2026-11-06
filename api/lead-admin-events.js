@@ -26,9 +26,12 @@ async function readJson(pathname) {
   return JSON.parse(Buffer.from(buffer).toString("utf8"));
 }
 
-async function collect(prefix, limit) {
-  const page = await list({ prefix, limit, access: "private" });
-  const entries = await Promise.all(page.blobs.map(async blob => {
+async function collectLatest(prefix, limit) {
+  const page = await list({ prefix, limit: 1000 });
+  const latest = [...page.blobs]
+    .sort((a, b) => Date.parse(b.uploadedAt || 0) - Date.parse(a.uploadedAt || 0))
+    .slice(0, limit);
+  const entries = await Promise.all(latest.map(async blob => {
     try { return await readJson(blob.pathname); }
     catch (error) {
       console.error("ZOVARO admin event read error:", error);
@@ -56,17 +59,23 @@ export default async function handler(req, res) {
 
   try {
     const [clicks, updates] = await Promise.all([
-      collect("lead-sales/events/clicks/", 100),
-      collect("lead-sales/events/partner-updates/", 100)
+      collectLatest("lead-sales/events/clicks/", 100),
+      collectLatest("lead-sales/events/partner-updates/", 100)
     ]);
     const events = [...clicks, ...updates]
       .sort((a, b) => Date.parse(b.received_at || b.occurred_at || 0) - Date.parse(a.received_at || a.occurred_at || 0))
       .slice(0, 200);
 
-    const closed = updates.filter(event => event.status === "closed_won");
-    const totalRevenue = closed.reduce((sum, event) => sum + (Number(event.amount) > 0 ? Number(event.amount) : 0), 0);
+    const closed = updates.filter(event => event.status === "closed_won" && Number(event.amount) >= 0 && event.amount !== null);
+    const revenueByCurrency = {};
+    for (const event of closed) {
+      const currency = String(event.currency || "UNSPECIFIED").toUpperCase();
+      revenueByCurrency[currency] = Number(((revenueByCurrency[currency] || 0) + Number(event.amount || 0)).toFixed(2));
+    }
+
     return res.status(200).json({
       generated_at: new Date().toISOString(),
+      sample_limit_per_type: 100,
       counts: {
         clicks: clicks.length,
         partner_updates: updates.length,
@@ -74,7 +83,7 @@ export default async function handler(req, res) {
         appointments: updates.filter(event => event.status === "appointment").length,
         closed_won: closed.length
       },
-      reported_revenue: Number(totalRevenue.toFixed(2)),
+      reported_revenue_by_currency: revenueByCurrency,
       events
     });
   } catch (error) {
