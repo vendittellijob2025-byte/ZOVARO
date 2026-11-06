@@ -406,7 +406,7 @@ console.log("CJ product import diagnostics: " + JSON.stringify({
   productsReceived: received,
   productsPassingValidationBeforeDeduplication: [...advertiserDiagnostics.values()].reduce((sum, item) => sum + item.productsPassingValidation, 0),
   uniqueProductsPassingValidation: importedByKey.size,
-  advertiserIdMismatchCount,
+  advertiserMismatchCount,
   advertisers: [...advertiserDiagnostics.values()]
 }));
 
