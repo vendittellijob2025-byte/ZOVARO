@@ -200,16 +200,13 @@ function renderCategories() {
             class="category"
             data-cat="${esc(c)}"
           >
-            <img
-              class="category-image"
-              src="${/bab(y|ies)|kids/i.test(c)
-                ? "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85"
+            ${
+              /bab(y|ies)|kids/i.test(c)
+                ? '<img class="category-image" src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85" alt="" loading="lazy">'
                 : /sport/i.test(c)
-                  ? "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85"
-                  : ""}"
-              alt=""
-              loading="lazy"
-            >
+                  ? '<img class="category-image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="" loading="lazy">'
+                  : ""
+            }
             <span class="category-shade" aria-hidden="true"></span>
             <strong>${esc(c)}</strong>
           </button>
