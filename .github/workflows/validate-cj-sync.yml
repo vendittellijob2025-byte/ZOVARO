@@ -1,0 +1,45 @@
+name: Validate ZOVARO CJ catalog sync
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "scripts/sync-cj-advertisers.mjs"
+      - "scripts/translate-to-english.mjs"
+      - "app-cj-loader.js"
+      - "data/catalog.json"
+      - ".github/workflows/cj-products.yml"
+      - ".github/workflows/validate-cj-sync.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/sync-cj-advertisers.mjs
+          node --check scripts/translate-to-english.mjs
+          node --check app-cj-loader.js
+
+      - name: Validate existing catalog integrity
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
+            if (!Array.isArray(catalog.products) || catalog.products.length === 0) throw new Error("Catalog products array is empty.");
+            const invalid = catalog.products.filter(p => !p || p.joinedStatus !== true || !/^https?:\/\//i.test(p.clickUrl || ""));
+            if (invalid.length) throw new Error("Existing catalog contains " + invalid.length + " products without a valid joined status and click URL.");
+            console.log("Existing catalog valid: " + catalog.products.length + " products.");
+          '
