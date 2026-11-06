@@ -248,6 +248,6 @@
   }
 
 
-  loadAffiliateCatalog();
+  window.ZOVARO_CJ_READY = loadAffiliateCatalog();
 
 })();
