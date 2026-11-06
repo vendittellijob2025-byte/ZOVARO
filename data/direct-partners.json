@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": null,
+  "updatedAt": "2026-11-06",
   "partners": [],
   "products": [],
   "notes": [
@@ -8,5 +8,173 @@
     "Every published product must have a verified partner-issued tracking URL.",
     "Use only product assets the partner authorized ZOVARO to display.",
     "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately."
+  ],
+  "prospects": [
+    {
+      "id": "edel-stark",
+      "name": "Edel & Stark",
+      "status": "prospect",
+      "programType": "luxury-car-rental-affiliate",
+      "territories": [
+        "Europe",
+        "United Arab Emirates"
+      ],
+      "publicCommission": "Up to 15% (published claim; contract terms to verify)",
+      "contact": {
+        "email": "info@edelstark.com",
+        "sourceUrl": "https://www.edelstark.com/en/about/affiliate/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request affiliate onboarding, tracked request widget, approved vehicle feed/API and payout terms.",
+      "sourceChecked": "2026-11-06"
+    },
+    {
+      "id": "carbirds",
+      "name": "Carbirds",
+      "status": "prospect",
+      "programType": "vehicle-sales-referral",
+      "territories": [
+        "Germany",
+        "Nordics",
+        "market eligibility to confirm"
+      ],
+      "publicCommission": "No universal reward; market-specific terms confirmed by Carbirds",
+      "contact": {
+        "email": "sales@carbirds.com",
+        "sourceUrl": "https://www.carbirds.com/referral"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm ZOVARO market eligibility, partner referral reward, personal tracking link and vehicle inventory feed/API.",
+      "sourceChecked": "2026-11-06"
+    },
+    {
+      "id": "cornette-automotive",
+      "name": "Cornette Automotive",
+      "status": "prospect",
+      "programType": "vehicle-sales-commission",
+      "territories": [
+        "Belgium",
+        "eligibility to confirm"
+      ],
+      "publicCommission": "Fixed commission per sold car (amount not published)",
+      "contact": {
+        "applicationUrl": "https://cornette.be/en/partner",
+        "publicPhone": "+32 51 25 27 10",
+        "sourceUrl": "https://cornette.be/en/partner"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Apply as Ambassador; ask fixed commission, partner link, export/international buyer eligibility and inventory data permissions.",
+      "sourceChecked": "2026-11-06"
+    },
+    {
+      "id": "asr-luxury",
+      "name": "ASR Luxury",
+      "status": "prospect",
+      "programType": "luxury-car-rental-referral",
+      "territories": [
+        "Los Angeles",
+        "international affiliates subject to approval"
+      ],
+      "publicCommission": "Competitive commission; monthly payouts stated, rate to be agreed",
+      "contact": {
+        "email": "clients@asrexotics.com",
+        "sourceUrl": "https://www.asrluxury.com/partners"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Ask for global affiliate eligibility, tracked referral links, approved fleet content/feed and conversion/payout reporting.",
+      "sourceChecked": "2026-11-06"
+    },
+    {
+      "id": "alaneli",
+      "name": "ALANELI",
+      "status": "prospect",
+      "programType": "luxury-car-rental-referral",
+      "territories": [
+        "Worldwide"
+      ],
+      "publicCommission": "5% luxury car rentals (published programme; conditions apply)",
+      "contact": {
+        "website": "https://alaneli.com/en/refer-earn/",
+        "publicPhone": "+34 661 884 679",
+        "sourceUrl": "https://alaneli.com/en/refer-earn/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Apply to referral programme; request API/catalog access and tracked booking links suitable for website integration.",
+      "sourceChecked": "2026-11-06"
+    },
+    {
+      "id": "vortexa",
+      "name": "Vortexa Carriere",
+      "status": "prospect",
+      "programType": "luxury-car-rental-referral",
+      "territories": [
+        "New Jersey",
+        "New York",
+        "Philadelphia",
+        "Miami"
+      ],
+      "publicCommission": "10% per completed rental booking (published claim)",
+      "contact": {
+        "email": "booking@vortexacarriere.com",
+        "sourceUrl": "https://www.vortexacarriere.com/vortexa-brokers-join-us"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Assess regional relevance; request partner terms, unique tracking link and permitted vehicle content.",
+      "sourceChecked": "2026-11-06",
+      "priority": "low"
+    },
+    {
+      "id": "driverra",
+      "name": "Driverra",
+      "status": "prospect",
+      "programType": "exotic-car-sales-referral",
+      "territories": [
+        "United States focus; applicant eligibility to confirm"
+      ],
+      "publicCommission": "Not published in the reviewed programme page",
+      "contact": {
+        "applicationUrl": "https://www.driverra.com/car-affiliate-program/",
+        "sourceUrl": "https://www.driverra.com/car-affiliate-program/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Check applicant-country eligibility and commission terms before applying.",
+      "sourceChecked": "2026-11-06",
+      "priority": "low"
+    }
   ]
 }
