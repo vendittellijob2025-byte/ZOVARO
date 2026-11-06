@@ -177,23 +177,50 @@ async function getProductsForAdvertiser(advertiser) {
   const all = [];
   let offset = 1;
   let totalCount = null;
+  let pageNumber = 0;
 
   while (true) {
+    pageNumber += 1;
     const result = (await graphql(productQuery(advertiser.id, offset))).products;
-    if (!result || !Array.isArray(result.resultList)) throw new Error("CJ returned an invalid products response for advertiser " + advertiser.id);
-
-    if (totalCount === null) totalCount = Number(result.totalCount || 0);
-    if (totalCount > MAX_OFFSET_RESULTS) {
-      throw new Error("Advertiser " + advertiser.id + " has more than 10,000 products; pagination token support is required before importing it safely.");
+    if (!result || !Array.isArray(result.resultList)) {
+      throw new Error("CJ returned an invalid products response for advertiser " + advertiser.id);
     }
 
-    all.push(...result.resultList);
-    const count = Number(result.count ?? result.resultList.length);
-    if (count === 0 || all.length >= totalCount || count < PAGE_SIZE) break;
-    offset += count;
+    if (totalCount === null) {
+      totalCount = Number(result.totalCount);
+      if (!Number.isFinite(totalCount) || totalCount < 0) {
+        throw new Error("CJ returned an invalid totalCount for advertiser " + advertiser.id);
+      }
+      if (totalCount > MAX_OFFSET_RESULTS) {
+        throw new Error("Advertiser " + advertiser.id + " has more than 10,000 products; pagination-token support is required before importing it safely.");
+      }
+    }
+
+    const pageProducts = result.resultList;
+    const pageCount = pageProducts.length;
+    console.log("CJ advertiser " + advertiser.id + ": page " + pageNumber + ", received " + pageCount + " of " + totalCount + " products.");
+
+    if (pageCount === 0) {
+      break;
+    }
+
+    all.push(...pageProducts);
+
+    if (all.length >= totalCount) {
+      break;
+    }
+
+    offset += pageCount;
+
+    if (pageNumber > MAX_OFFSET_RESULTS) {
+      throw new Error("CJ pagination exceeded the safety limit for advertiser " + advertiser.id);
+    }
   }
 
-  if (all.length < totalCount) throw new Error("CJ product pagination was incomplete for advertiser " + advertiser.id + "; existing catalog left untouched.");
+  if (all.length !== totalCount) {
+    throw new Error("CJ product pagination incomplete for advertiser " + advertiser.id + ": received " + all.length + " of " + totalCount + "; existing catalog left untouched.");
+  }
+
   return all;
 }
 
