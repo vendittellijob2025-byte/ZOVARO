@@ -42,13 +42,13 @@
           brand: String(product.brand || ""),
           partnerId: String(product.partnerId)
         }));
-        if (!Array.isArray(window.PRODUCTS)) {
+        if (typeof PRODUCTS === "undefined" || !Array.isArray(PRODUCTS)) {
           console.warn("ZOVARO Direct Partners: PRODUCTS array not available.");
           return;
         }
-        const existingIds = new Set(window.PRODUCTS.map(product => String(product.id)));
+        const existingIds = new Set(PRODUCTS.map(product => String(product.id)));
         const freshProducts = products.filter(product => !existingIds.has(String(product.id)));
-        window.PRODUCTS.push(...freshProducts);
+        PRODUCTS.push(...freshProducts);
         if (freshProducts.length && typeof window.render === "function") window.render();
         console.info("ZOVARO Direct Partners: " + freshProducts.length + " approved, tracked products loaded.");
       })
