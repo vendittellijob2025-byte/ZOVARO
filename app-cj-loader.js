@@ -100,7 +100,7 @@
         translatedDescription,
 
       type:
-        "affiliate",
+        "trending",
 
       source:
         product.source ||
@@ -112,7 +112,6 @@
 
       clickUrl:
         product.clickUrl ||
-        product.destination ||
         "",
 
       destination:
@@ -196,9 +195,9 @@
               product.network
             ) &&
             product.joinedStatus === true &&
-            typeof product.destination ===
+            typeof product.clickUrl ===
               "string" &&
-            product.destination.trim() !== ""
+            /^https?:\\/\\//i.test(product.clickUrl.trim())
           )
           .map(normalizeProduct)
           .filter(product =>
