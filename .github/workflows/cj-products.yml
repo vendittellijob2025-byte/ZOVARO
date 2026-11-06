@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "17 */12 * * *"
+    # Recheck CJ advertiser approvals and product-link availability every hour.
+    - cron: "17 * * * *"
 
   push:
     branches:
