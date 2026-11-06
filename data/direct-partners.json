@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "partners": [],
+  "products": [],
+  "notes": [
+    "Publish only after written partner approval.",
+    "Every published product must have a verified partner-issued tracking URL.",
+    "Use only product assets the partner authorized ZOVARO to display.",
+    "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately."
+  ]
+}
