@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Recheck CJ advertiser approvals and product-link availability every hour.
-    - cron: "17 * * * *"
+    # Recheck CJ advertiser approvals and valid affiliate product links every 10 minutes.
+    - cron: "*/10 * * * *"
 
   push:
     branches:
