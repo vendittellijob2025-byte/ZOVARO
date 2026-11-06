@@ -197,7 +197,7 @@
             product.joinedStatus === true &&
             typeof product.clickUrl ===
               "string" &&
-            /^https?:\\/\\//i.test(product.clickUrl.trim())
+            (product.clickUrl.trim().startsWith("https://") || product.clickUrl.trim().startsWith("http://"))
           )
           .map(normalizeProduct)
           .filter(product =>
