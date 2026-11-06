@@ -232,6 +232,44 @@ async function getProductsForAdvertiser(advertiser) {
   return all;
 }
 
+async function diagnoseShoppingProducts(advertiser) {
+  const query = [
+    "query {",
+    "  shoppingProducts(companyId: \"" + COMPANY_ID + "\", partnerIds: [\"" + advertiser.id + "\"], limit: 3) {",
+    "    resultList { id adId advertiserId title imageLink link price { amount currency } linkCode(pid: \"" + PUBLISHER_ID + "\") { clickUrl } }",
+    "    totalCount count",
+    "  }",
+    "}"
+  ].join("\n");
+
+  try {
+    const result = (await graphql(query)).shoppingProducts;
+    const samples = Array.isArray(result?.resultList) ? result.resultList : [];
+    console.log("CJ shoppingProducts diagnostic: " + JSON.stringify({
+      advertiserId: advertiser.id,
+      advertiserName: advertiser.name,
+      totalCount: result?.totalCount ?? null,
+      count: result?.count ?? samples.length,
+      samples: samples.map(product => ({
+        id: product.id || "",
+        adId: product.adId || "",
+        title: String(product.title || "").slice(0, 100),
+        hasImage: Boolean(product.imageLink),
+        hasDestination: Boolean(product.link),
+        hasPrice: amount(product.price) !== null,
+        hasLinkCode: product.linkCode !== null && product.linkCode !== undefined,
+        hasClickUrl: Boolean(cleanUrl(product.linkCode?.clickUrl))
+      }))
+    }));
+  } catch (error) {
+    console.log("CJ shoppingProducts diagnostic failed: " + JSON.stringify({
+      advertiserId: advertiser.id,
+      advertiserName: advertiser.name,
+      error: String(error.message || error).slice(0, 500)
+    }));
+  }
+}
+
 function productRejectionReasons(product) {
   const reasons = [];
   const id = String(product.id || "").trim();
@@ -378,6 +416,9 @@ for (const advertiserId of eligibleFeedAdvertisers) {
   advertiserDiagnostics.set(advertiserId, diagnostic);
 
   const products = await getProductsForAdvertiser(advertiser);
+  if (products.length && products.every(product => !cleanUrl(product.linkCode?.clickUrl))) {
+    await diagnoseShoppingProducts(advertiser);
+  }
   received += products.length;
   diagnostic.productsReceived = products.length;
 
