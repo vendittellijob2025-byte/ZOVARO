@@ -7,39 +7,38 @@ on:
     - cron: "17 */12 * * *"
 
   push:
+    branches:
+      - main
     paths:
-      - "scripts/fetch-cj-products.mjs"
+      - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
+      - "app-cj-loader.js"
       - ".github/workflows/cj-products.yml"
 
 permissions:
   contents: write
 
 concurrency:
-  group: zovaro-cj-products-sync
+  group: zovaro-cj-products-sync-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   sync-cj:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Fetch CJ product feed
+      - name: Discover joined advertisers and merge CJ products
         env:
           CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
-        run: |
-          node scripts/fetch-cj-products.mjs
+        run: node scripts/sync-cj-advertisers.mjs
 
       - name: Translate catalog to English
-        run: |
-          node scripts/translate-to-english.mjs
+        run: node scripts/translate-to-english.mjs
 
       - name: Commit updated catalog and translations
         run: |
@@ -55,7 +54,6 @@ jobs:
 
           git commit -m "chore: sync CJ catalog and English translations"
 
-          git fetch origin main
-          git rebase origin/main
-
-          git push origin HEAD:main
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
