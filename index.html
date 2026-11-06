@@ -1088,6 +1088,74 @@ footer{
 
 }
 
+
+/* Compact, clean category cards: image behind a readable category name */
+#categoryGrid.shop-categories{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+#categoryGrid button.category{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  isolation:isolate;
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  min-height:112px;
+  height:112px;
+  padding:12px 14px;
+  overflow:hidden;
+  border:1px solid rgba(60,161,232,.28);
+  border-radius:14px;
+  background:linear-gradient(135deg,#10243a,#174b78);
+  color:#fff;
+  text-align:left;
+}
+#categoryGrid button.category::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(3,15,30,.04) 5%,rgba(3,15,30,.76) 100%);
+  pointer-events:none;
+}
+#categoryGrid .category-image{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+#categoryGrid button.category strong{
+  position:relative;
+  z-index:2;
+  display:block;
+  margin:0;
+  padding:0;
+  color:#fff;
+  font-size:16px;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:.01em;
+  text-shadow:0 1px 5px rgba(0,0,0,.65);
+}
+#categoryGrid button.category:hover .category-image{transform:scale(1.025);}
+@media(max-width:760px){
+  #categoryGrid.shop-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  #categoryGrid button.category{height:104px;min-height:104px;padding:11px 12px;}
+  #categoryGrid button.category strong{font-size:15px;}
+}
+@media(max-width:380px){
+  #categoryGrid button.category{height:96px;min-height:96px;}
+}
+
 </style>
 </head>
 
