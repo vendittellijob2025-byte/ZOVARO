@@ -1,21 +1,67 @@
 # ZOVARO Lead & Sales Tracking
 
-Initial implementation notes and operational requirements.
+## Implemented foundation
 
-## Outbound click tracking
-The API endpoint `/api/lead-track` records a privacy-minimized outbound click event in private Vercel Blob storage before redirecting the visitor to an allowlisted HTTPS partner domain. If storage is unavailable, the redirect is cancelled so attribution is not silently lost.
+Two serverless endpoints have been added under `/api`. Vercel serves files in this directory as API routes; no extra route declaration is needed for these endpoints.
 
-## Partner conversion events
-The API endpoint `/api/partner-postback` accepts partner-reported status updates signed with an HMAC-SHA256 signature. Accepted statuses: lead, contacted, appointment, visited, offer, closed_won, closed_lost, cancelled.
+### 1. Outbound click recorder
 
-A valid signature proves possession of the partner secret; it does not independently prove a sale. Reported conversions must not be represented as independently verified sales.
+`GET /api/lead-track?partner=PARTNER_ID&ref=REFERRAL_ID&item=ITEM_ID&source=website&campaign=CAMPAIGN&to=ENCODED_HTTPS_URL`
 
-## Required Vercel environment variables
-- `BLOB_READ_WRITE_TOKEN`: private Blob storage access.
-- `ZOVARO_PARTNER_DOMAINS`: comma-separated exact HTTPS destination hostnames.
-- `ZOVARO_PARTNER_SECRETS`: JSON object mapping partner IDs to unique random secrets of at least 32 characters.
+- Accepts only HTTPS destinations whose exact hostname is listed in `ZOVARO_PARTNER_DOMAINS`.
+- Writes a private event record before redirecting.
+- Cancels the redirect if event storage fails.
+- Stores partner ID, referral ID, item ID, source, campaign, destination hostname and timestamp; it does not store visitor names, email addresses, phone numbers or IP addresses in the event.
+- The referral ID is an attribution reference. It only connects a later sale if the partner preserves and returns it in a postback or report.
 
-Never store secrets in Git. Redeploy after configuring environment variables.
+Example (replace values with real partner-approved data):
+```
+/api/lead-track?partner=dealer_one&ref=zv-ref-00001&item=vehicle-123&source=tiktok&campaign=video-001&to=https%3A%2F%2Fdealer.example%2Fvehicle
+```
 
-## Production requirements
-This initial module is not yet a complete commission ledger. It needs transactional idempotency, reconciliation, a protected admin dashboard, retention/deletion controls, and privacy notices before collecting personal lead data. A transactional database is recommended for concurrent updates and auditable commission accounting. Partner participation and written attribution terms are required to record offline sales.
+### 2. Signed partner conversion intake
+
+`POST /api/partner-postback`
+
+Headers:
+- `Content-Type: application/json`
+- `X-ZOVARO-Signature: sha256=<64 lowercase hex characters>`
+
+The signature is HMAC-SHA256 of the canonical JSON request body. Canonicalization recursively sorts object keys and uses compact JSON serialization. Partner and ZOVARO must implement the same algorithm and UTF-8 encoding.
+
+Example body:
+```json
+{
+  "partner_id": "dealer_one",
+  "event_id": "dealer-event-000001",
+  "referral_id": "zv-ref-00001",
+  "status": "appointment",
+  "amount": null,
+  "currency": null,
+  "order_reference": "dealer-case-123",
+  "occurred_at": "2026-11-06T12:00:00Z"
+}
+```
+
+Accepted statuses: `lead`, `contacted`, `appointment`, `visited`, `offer`, `closed_won`, `closed_lost`, `cancelled`.
+
+A valid signature authenticates the partner source; it does not independently prove the underlying sale. The endpoint currently appends each accepted event as a private Blob object. It does not yet enforce event-ID uniqueness or prevent duplicate business events.
+
+## Vercel configuration required
+
+Set these variables in the Vercel project settings, then redeploy:
+
+- `BLOB_READ_WRITE_TOKEN`: private Blob storage access. Confirm that the existing Vercel Blob store is connected to this deployment.
+- `ZOVARO_PARTNER_DOMAINS`: comma-separated exact hostnames for the actual outbound tracking destinations. Include the affiliate-network tracking hostname if the stored click URL uses one, not merely the final merchant hostname.
+- `ZOVARO_PARTNER_SECRETS`: JSON object mapping each partner ID to a unique random secret of at least 32 characters, e.g. `{"dealer_one":"GENERATE_A_UNIQUE_RANDOM_SECRET_OF_AT_LEAST_32_CHARACTERS"}`. Never put real values in Git.
+
+Do not configure a partner until its identity, destination hostname, attribution method and written participation are confirmed.
+
+## Not yet complete / production blockers
+
+- The existing product modal still uses the product's affiliate click URL directly. Automatic routing through `/api/lead-track` is intentionally not enabled until the real partner-ID mapping, affiliate tracking hostnames and referral/sub-ID rules are confirmed. Redirecting blindly could break affiliate attribution or send visitors to an unapproved domain.
+- No dealer is yet configured to send signed conversion postbacks.
+- No protected admin dashboard, transactional database, idempotency/reconciliation layer, commission ledger, export/reporting interface, retention/deletion controls or privacy notice has been implemented.
+- Blob event files are an intake log, not a transactional accounting database. Use a database with unique constraints and audit history before calculating amounts payable.
+- Do not collect personal lead details until an appropriate privacy notice, lawful basis/consent, access controls, retention/deletion process and data-processing terms are in place.
+- Offline sales can only be attributed if the partner preserves the referral ID and reports the conversion or provides an agreed reconciliation feed. A signed partner report authenticates its sender but is not independent evidence of the sale.
