@@ -139,7 +139,7 @@ async function getProductFeeds(advertiserIds) {
     const batch = advertiserIds.slice(index, index + 40);
     const query = [
       "query {",
-      "  productFeeds(companyId: \"" + COMPANY_ID + "\", partnerIds: " + JSON.stringify(batch) + ") {",
+      "  productFeeds(companyId: \"" + COMPANY_ID + "\", partnerIds: " + JSON.stringify(batch) + ", limit: 1000, offset: 1) {",
       "    totalCount count",
       "    resultList { adId feedName advertiserId advertiserName productCount advertiserCountry language currency lastUpdated }",
       "  }",
@@ -149,7 +149,7 @@ async function getProductFeeds(advertiserIds) {
     const result = (await graphql(query)).productFeeds;
     if (!result || !Array.isArray(result.resultList)) throw new Error("CJ returned an invalid product feed summary.");
     if (Number(result.count) < Number(result.totalCount)) {
-      throw new Error("CJ product feed summary was incomplete; catalog update cancelled for safety.");
+      throw new Error("CJ product feed summary exceeded the safe page; catalog update cancelled.");
     }
     feeds.push(...result.resultList);
   }
