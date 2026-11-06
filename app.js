@@ -207,7 +207,6 @@ function renderCategories() {
                   ? '<img class="category-image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="" loading="lazy">'
                   : ""
             }
-            <span class="category-shade" aria-hidden="true"></span>
             <strong>${esc(c)}</strong>
           </button>
           `
