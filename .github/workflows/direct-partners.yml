@@ -1,0 +1,23 @@
+name: ZOVARO - Validate Direct Partners
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/direct-partners.json"
+      - "scripts/validate-direct-partners.mjs"
+      - ".github/workflows/direct-partners.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate partner approvals and tracking requirements
+        run: node scripts/validate-direct-partners.mjs
