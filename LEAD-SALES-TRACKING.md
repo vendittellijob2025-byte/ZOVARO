@@ -47,7 +47,7 @@ Accepted statuses: `lead`, `contacted`, `appointment`, `visited`, `offer`, `clos
 
 A valid signature authenticates the partner source; it does not independently prove the underlying sale. The endpoint currently appends each accepted event as a private Blob object. It does not yet enforce event-ID uniqueness or prevent duplicate business events.
 
-## Vercel configuration required
+## Protected admin dashboard\n\nA password-protected page is available at `/lead-sales-dashboard.html` on the Vercel deployment. It uses an HttpOnly, Secure, SameSite=Lax cookie with an eight-hour expiry. The dashboard reads only private event files and shows the latest 100 click records and latest 100 partner updates. Counts therefore describe the displayed recent sample, not lifetime totals. Declared amounts are grouped by currency and are not a payable commission ledger.\n\nSet these additional Vercel environment variables before using it:\n\n- `ZOVARO_ADMIN_PASSWORD`: a unique password of at least 16 characters.\n- `ZOVARO_ADMIN_SESSION_SECRET`: a unique random secret of at least 32 characters.\n\nThe login endpoint has a best-effort per-instance attempt limit; serverless memory limits mean this is not a substitute for an edge/WAF rate limit. Do not reuse this password elsewhere.\n\n## Vercel configuration required
 
 Set these variables in the Vercel project settings, then redeploy:
 
@@ -62,6 +62,6 @@ Do not configure a partner until its identity, destination hostname, attribution
 - The existing product modal still uses the product's affiliate click URL directly. Automatic routing through `/api/lead-track` is intentionally not enabled until the real partner-ID mapping, affiliate tracking hostnames and referral/sub-ID rules are confirmed. Redirecting blindly could break affiliate attribution or send visitors to an unapproved domain.
 - No dealer is yet configured to send signed conversion postbacks.
 - No protected admin dashboard, transactional database, idempotency/reconciliation layer, commission ledger, export/reporting interface, retention/deletion controls or privacy notice has been implemented.
-- Blob event files are an intake log, not a transactional accounting database. Use a database with unique constraints and audit history before calculating amounts payable.
+- Blob event files are an intake log, not a transactional accounting database. The dashboard reads at most the latest 100 records of each type; do not treat these sample counts as lifetime totals. Use a database with unique constraints and audit history before calculating amounts payable.
 - Do not collect personal lead details until an appropriate privacy notice, lawful basis/consent, access controls, retention/deletion process and data-processing terms are in place.
 - Offline sales can only be attributed if the partner preserves the referral ID and reports the conversion or provides an agreed reconciliation feed. A signed partner report authenticates its sender but is not independent evidence of the sale.
