@@ -13,7 +13,7 @@
     {
       "id": "edel-stark",
       "name": "Edel & Stark",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "luxury-car-rental-affiliate",
       "territories": [
         "Europe",
@@ -31,12 +31,14 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Request affiliate onboarding, tracked request widget, approved vehicle feed/API and payout terms.",
-      "sourceChecked": "2026-11-06"
+      "sourceChecked": "2026-11-06",
+      "contactedAt": "2026-11-06T08:51:57Z",
+      "contactEvidence": "Gmail sent thread 1a1b00e5da7ecd17"
     },
     {
       "id": "carbirds",
       "name": "Carbirds",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "vehicle-sales-referral",
       "territories": [
         "Germany",
@@ -55,7 +57,9 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Confirm ZOVARO market eligibility, partner referral reward, personal tracking link and vehicle inventory feed/API.",
-      "sourceChecked": "2026-11-06"
+      "sourceChecked": "2026-11-06",
+      "contactedAt": "2026-11-06T08:52:00Z",
+      "contactEvidence": "Gmail sent thread 1a1b00e665803201"
     },
     {
       "id": "cornette-automotive",
@@ -66,7 +70,7 @@
         "Belgium",
         "eligibility to confirm"
       ],
-      "publicCommission": "Fixed commission per sold car (amount not published)",
+      "publicCommission": "Fixed commission per car sold (amount not published); personal link promised by programme",
       "contact": {
         "applicationUrl": "https://cornette.be/en/partner",
         "publicPhone": "+32 51 25 27 10",
@@ -78,19 +82,19 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Apply as Ambassador; ask fixed commission, partner link, export/international buyer eligibility and inventory data permissions.",
+      "nextAction": "Submit Ambassador application; request ZOVARO eligibility, fixed fee, personal referral link, vehicle feed/download and image permissions.",
       "sourceChecked": "2026-11-06"
     },
     {
       "id": "asr-luxury",
       "name": "ASR Luxury",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "luxury-car-rental-referral",
       "territories": [
         "Los Angeles",
         "international affiliates subject to approval"
       ],
-      "publicCommission": "Competitive commission; monthly payouts stated, rate to be agreed",
+      "publicCommission": "Competitive commission per referred booking; rate negotiated; monthly payouts stated on official page",
       "contact": {
         "email": "clients@asrexotics.com",
         "sourceUrl": "https://www.asrluxury.com/partners"
@@ -101,8 +105,10 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Ask for global affiliate eligibility, tracked referral links, approved fleet content/feed and conversion/payout reporting.",
-      "sourceChecked": "2026-11-06"
+      "nextAction": "Apply to Global Affiliates; request international eligibility, rate card, tracked booking links, fleet catalogue/feed and conversion reporting.",
+      "sourceChecked": "2026-11-06",
+      "contactedAt": "2026-11-06T08:52:03Z",
+      "contactEvidence": "Gmail sent thread 1a1b00e708498769"
     },
     {
       "id": "alaneli",
