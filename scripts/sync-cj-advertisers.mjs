@@ -193,6 +193,7 @@ async function getProductsForAdvertiser(advertiser) {
     offset += count;
   }
 
+  if (all.length < totalCount) throw new Error("CJ product pagination was incomplete for advertiser " + advertiser.id + "; existing catalog left untouched.");
   return all;
 }
 
