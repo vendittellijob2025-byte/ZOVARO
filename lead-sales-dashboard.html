@@ -35,13 +35,13 @@ h1{font-size:clamp(27px,4vw,38px);margin:30px 0 5px;letter-spacing:-1px}.sub{col
 <h1>Lead & Sales Dashboard</h1><p class="sub">Controllo dei click in uscita e degli aggiornamenti inviati dai partner autorizzati.</p>
 <div class="toolbar"><span id="lastUpdate" class="muted">In attesa dei dati…</span><div><button id="refresh" type="button">Aggiorna dati</button> <button id="logout2" class="secondary" type="button">Esci</button></div></div>
 <div class="grid">
-<div class="metric"><span>Click registrati</span><strong id="mClicks">—</strong></div>
-<div class="metric"><span>Aggiornamenti partner</span><strong id="mUpdates">—</strong></div>
-<div class="metric"><span>Lead comunicati</span><strong id="mLeads">—</strong></div>
-<div class="metric"><span>Appuntamenti</span><strong id="mAppointments">—</strong></div>
-<div class="metric"><span>Vendite dichiarate</span><strong id="mWon">—</strong></div>
+<div class="metric"><span>Ultimi click caricati (max 100)</span><strong id="mClicks">—</strong></div>
+<div class="metric"><span>Ultimi aggiornamenti caricati (max 100)</span><strong id="mUpdates">—</strong></div>
+<div class="metric"><span>Lead negli ultimi aggiornamenti</span><strong id="mLeads">—</strong></div>
+<div class="metric"><span>Appuntamenti negli ultimi aggiornamenti</span><strong id="mAppointments">—</strong></div>
+<div class="metric"><span>Vendite dichiarate negli ultimi aggiornamenti</span><strong id="mWon">—</strong></div>
 </div>
-<div class="metric" style="margin-bottom:22px"><span>Valore vendite dichiarate (solo importi comunicati dal partner)</span><strong id="mRevenue">—</strong></div>
+<div class="metric" style="margin-bottom:22px"><span>Valore vendite dichiarate per valuta (solo importi comunicati dal partner)</span><strong id="mRevenue">—</strong></div>
 <h2 class="section-title">Registro attività</h2>
 <div class="table-wrap"><table><thead><tr><th>Data</th><th>Evento</th><th>Partner</th><th>Referral</th><th>Prodotto / ID</th><th>Importo</th><th>Verifica</th></tr></thead><tbody id="eventRows"><tr><td colspan="7" class="empty">Nessun dato caricato.</td></tr></tbody></table></div>
 <div class="notice"><strong>Nota importante:</strong> i click sono registrati da ZOVARO. Lead, appuntamenti e vendite compaiono solo quando un partner abilitato invia un aggiornamento firmato. La firma autentica il mittente, ma non costituisce una prova indipendente della vendita. Il valore economico mostrato non è ancora un saldo commissioni da pagare.</div>
@@ -49,7 +49,7 @@ h1{font-size:clamp(27px,4vw,38px);margin:30px 0 5px;letter-spacing:-1px}.sub{col
 </div>
 <script>
 const $ = id => document.getElementById(id);
-function money(amount,currency){if(amount==null||amount==="")return "—";const n=Number(amount);return Number.isFinite(n)?new Intl.NumberFormat("it-IT",{style:"currency",currency:currency||"USD"}).format(n):"—"}
+function money(amount,currency){if(amount==null||amount==="")return "—";const n=Number(amount);try{return Number.isFinite(n)?new Intl.NumberFormat("it-IT",{style:"currency",currency:currency||"USD"}).format(n):"—"}catch{return String(n.toFixed(2))+" "+String(currency||"")}}
 function safe(value){return String(value??"—").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 async function loadDashboard(){const response=await fetch("/api/lead-admin-events",{credentials:"same-origin",cache:"no-store"});const data=await response.json();if(response.status===401){showLogin();return}if(!response.ok)throw new Error(data.error||"Errore nel caricamento");$("mClicks").textContent=data.counts.clicks;$("mUpdates").textContent=data.counts.partner_updates;$("mLeads").textContent=data.counts.leads;$("mAppointments").textContent=data.counts.appointments;$("mWon").textContent=data.counts.closed_won;$("mRevenue").textContent=money(data.reported_revenue,"USD");$("lastUpdate").textContent="Ultimo aggiornamento: "+new Date(data.generated_at).toLocaleString("it-IT");$("eventRows").innerHTML=data.events.length?data.events.map(e=>{const date=e.received_at||e.occurred_at;const event=e.event_type==="outbound_click"?"Click in uscita":String(e.status||"Aggiornamento partner").replaceAll("_"," ");return "<tr><td>"+safe(date?new Date(date).toLocaleString("it-IT"):"—")+"</td><td><span class='pill'>"+safe(event)+"</span></td><td>"+safe(e.partner_id)+"</td><td>"+safe(e.referral_id)+"</td><td>"+safe(e.item_id||e.partner_order_reference||"—")+"</td><td>"+safe(money(e.amount,e.currency))+"</td><td>"+safe(e.verification||"registrato")+"</td></tr>"}).join(""):"<tr><td colspan='7' class='empty'>Nessuna attività registrata ancora.</td></tr>"}
 function showLogin(){$("loginPanel").classList.remove("hidden");$("dashboard").classList.add("hidden");$("logout").classList.add("hidden")}
