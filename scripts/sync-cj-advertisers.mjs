@@ -139,7 +139,7 @@ async function getProductFeeds(advertiserIds) {
     const batch = advertiserIds.slice(index, index + 40);
     const query = [
       "query {",
-      "  productFeeds(companyId: \"" + COMPANY_ID + "\", partnerIds: " + JSON.stringify(batch) + ", limit: 1000, offset: 1) {",
+      "  productFeeds(companyId: \"" + COMPANY_ID + "\", partnerIds: " + JSON.stringify(batch) + ", limit: 1000) {",
       "    totalCount count",
       "    resultList { adId feedName advertiserId advertiserName productCount advertiserCountry language currency lastUpdated }",
       "  }",
