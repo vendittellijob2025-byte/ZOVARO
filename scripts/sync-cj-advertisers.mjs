@@ -175,7 +175,7 @@ function productQuery(advertiserId, offset) {
 
 async function getProductsForAdvertiser(advertiser) {
   const all = [];
-  let offset = 1;
+  let offset = 0;
   let totalCount = null;
   let pageNumber = 0;
 
