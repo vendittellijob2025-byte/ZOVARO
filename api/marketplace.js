@@ -179,7 +179,7 @@ function validateSubmission(body) {
     record.salaryText=clean(body.salaryText,100);
     const validTypes=["Full-time","Part-time","Contract","Freelance","Temporary","Internship"];
     const validWorkplaces=["On-site","Hybrid","Remote"];
-    if (record.company.length<2 || new URL(record.companyWebsite).protocol!=="https:" || !validTypes.includes(record.jobType) || !validWorkplaces.includes(record.workplace)) return { error:"Please provide a company website, valid employer, employment type and workplace details." };
+    if (record.company.length<2 || !websiteDomain(record.companyWebsite) || !validTypes.includes(record.jobType) || !validWorkplaces.includes(record.workplace)) return { error:"Please provide a company website, valid employer, employment type and workplace details." };
     record.salaryText=clean(body.salaryText,100);\n    record.employerDeclaration=body.employerDeclaration===true;
     if (!record.employerDeclaration) return { error:"Please confirm that you are authorized to publish this genuine job opportunity." };
   } else {
