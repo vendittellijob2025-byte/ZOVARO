@@ -108,7 +108,7 @@ function moderationDecision(record) {
     "forged document","human organ","ivory","endangered species","wildlife trafficking","child sexual","revenge porn",
     "sex toy","pornographic","vape","e-cigarette","cigarette","tobacco","alcohol","beer for sale","wine for sale",
     "prescription drug","opioid","anabolic steroid","dnp supplement","get rich quick","money mule","receive money transfer",
-    "pay to apply","application fee","recruitment fee","training fee required","deposit to get the job","buy our starter kit"
+    "pay to apply","pay an application fee","pay recruitment fee","upfront recruitment fee","training fee required","deposit to get the job","buy our starter kit"
   ];
   const hit = includesAny(combined, prohibited);
   if (hit) return { status:"rejected", action:"auto_rejected", reasons:["Potentially prohibited or unsafe content: " + hit], score:100 };
