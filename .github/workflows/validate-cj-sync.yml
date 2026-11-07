@@ -21,6 +21,7 @@ on:
       - "lib/marketplace-moderation.js"
       - "lib/product-category.js"
       - "scripts/test-product-category.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
       - "scripts/test-marketplace-moderation.mjs"
       - "lib/marketplace-moderation.js"
       - "scripts/test-marketplace-moderation.mjs"
@@ -86,6 +87,7 @@ jobs:
           node --check lib/product-category.js
           node --check scripts/test-marketplace-moderation.mjs
           node --check scripts/test-product-category.mjs
+          node --check scripts/reclassify-catalog-categories.mjs
           node scripts/test-marketplace-moderation.mjs
           node scripts/test-product-category.mjs
           node --check marketplace.js
