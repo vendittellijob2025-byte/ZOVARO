@@ -7,10 +7,6 @@
     {
       "path": "/api/tiktok-verify",
       "schedule": "0 4 * * *"
-    },
-    {
-      "path": "/api/cj-commission-sync",
-      "schedule": "15 5 * * *"
     }
   ]
 }
