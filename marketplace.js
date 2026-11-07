@@ -75,6 +75,15 @@
       card.className = type === "product" ? "marketplace-listing used-listing" : "marketplace-listing";
       if (type === "product") card.dataset.category = item.category || "Other";
       addText(card, "span", "marketplace-kicker", type === "job" ? [item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
+      if (item.imageUrl) {
+        const image = document.createElement("img");
+        image.src = item.imageUrl;
+        image.alt = item.title || "Product listing image";
+        image.loading = "lazy";
+        image.referrerPolicy = "no-referrer";
+        image.className = "marketplace-product-image";
+        card.appendChild(image);
+      }
       addText(card, "h3", "", item.title);
       if (item.company) addText(card, "p", "marketplace-company", item.company);
       if (item.price != null) addText(card, "p", "marketplace-price", new Intl.NumberFormat(undefined, { style: "currency", currency: item.currency || "USD" }).format(Number(item.price)));
