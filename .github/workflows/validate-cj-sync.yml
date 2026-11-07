@@ -18,6 +18,10 @@ on:
       - "lead-sales-dashboard.html"
       - "api/lead-admin-events.js"
       - "api/marketplace.js"
+      - "lib/marketplace-moderation.js"
+      - "scripts/test-marketplace-moderation.mjs"
+      - "lib/marketplace-moderation.js"
+      - "scripts/test-marketplace-moderation.mjs"
       - "api/marketplace-admin.js"
       - "marketplace.js"
       - "marketplace.css"
@@ -76,6 +80,9 @@ jobs:
           node --check api/cj-commission-sync.js
           node --check api/lead-admin-events.js
           node --check api/marketplace.js
+          node --check lib/marketplace-moderation.js
+          node --check scripts/test-marketplace-moderation.mjs
+          node scripts/test-marketplace-moderation.mjs
           node --check marketplace.js
           node --check api/tiktok-direct-post.js
           node --input-type=module -e '
