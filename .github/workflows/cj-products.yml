@@ -56,6 +56,34 @@ jobs:
 
           git commit -m "chore: sync CJ catalog and English translations"
 
-          git fetch origin "${GITHUB_REF_NAME}"
-          git rebase "origin/${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          # Other repository updates can land while the large CJ feeds are
+          # downloading. If catalog.json conflicts during rebase, rebuild the
+          # catalog on top of the newest main instead of losing the feed sync.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+
+            if git rebase "origin/${GITHUB_REF_NAME}"; then
+              if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+                exit 0
+              fi
+              git rebase --abort || true
+            else
+              git rebase --abort || true
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              echo "Push conflict on attempt $attempt; rebuilding catalog on latest branch."
+              git fetch origin "${GITHUB_REF_NAME}"
+              git reset --hard "origin/${GITHUB_REF_NAME}"
+              node scripts/sync-cj-advertisers.mjs
+              git add data/catalog.json data/translation-cache.json
+              if git diff --cached --quiet; then
+                echo "Latest branch already contains the current catalog."
+                exit 0
+              fi
+              git commit -m "chore: sync CJ catalog and English translations"
+            fi
+          done
+
+          echo "Unable to push CJ catalog after three attempts."
+          exit 1
