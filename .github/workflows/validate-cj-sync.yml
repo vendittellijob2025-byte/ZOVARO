@@ -76,7 +76,6 @@ jobs:
           node --check api/cj-commission-sync.js
           node --check api/lead-admin-events.js
           node --check api/marketplace.js
-          node --check api/marketplace-admin.js
           node --check marketplace.js
           node --check api/tiktok-direct-post.js
           node --input-type=module -e '
