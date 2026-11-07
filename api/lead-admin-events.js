@@ -62,13 +62,33 @@ export default async function handler(req, res) {
   }
 
   try {
-    const [clicks, updates] = await Promise.all([
+    const [clicks, updates, cjCommissions, cjState] = await Promise.all([
       collectLatest("lead-sales/events/clicks/", 100),
-      collectLatest("lead-sales/events/partner-updates/", 100)
+      collectLatest("lead-sales/events/partner-updates/", 100),
+      collectLatest("cj-commissions/records/", 100),
+      readJson("cj-commissions/state.json").catch(() => null)
     ]);
-    const events = [...clicks, ...updates]
+
+    const cjEvents = cjCommissions.map(record => ({
+      schema: record.schema,
+      event_id: record.event_id,
+      event_type: record.event_type,
+      partner_id: record.partner_id,
+      partner_name: record.partner_name,
+      referral_id: record.referral_id,
+      item_id: record.order_id || record.commission_id,
+      amount: record.sale_amount_usd,
+      commission_amount_usd: record.commission_amount_usd,
+      currency: "USD",
+      status: record.action_status,
+      validation_status: record.validation_status,
+      occurred_at: record.posting_date || record.event_date,
+      verification: record.verification
+    }));
+
+    const events = [...clicks, ...updates, ...cjEvents]
       .sort((a, b) => Date.parse(b.received_at || b.occurred_at || 0) - Date.parse(a.received_at || a.occurred_at || 0))
-      .slice(0, 200);
+      .slice(0, 300);
 
     const closed = updates.filter(event => event.status === "closed_won" && Number(event.amount) >= 0 && event.amount !== null);
     const revenueByCurrency = {};
@@ -76,6 +96,13 @@ export default async function handler(req, res) {
       const currency = String(event.currency || "UNSPECIFIED").toUpperCase();
       revenueByCurrency[currency] = Number(((revenueByCurrency[currency] || 0) + Number(event.amount || 0)).toFixed(2));
     }
+
+    const sumUsd = (records, field) => Number(records.reduce(
+      (sum, record) => sum + (Number.isFinite(Number(record[field])) ? Number(record[field]) : 0),
+      0
+    ).toFixed(2));
+    const cjSales = cjCommissions.filter(record => record.event_type === "cj_sale");
+    const cjSaleOrders = new Set(cjSales.map(record => record.order_id || record.commission_id));
 
     return res.status(200).json({
       generated_at: new Date().toISOString(),
@@ -85,9 +112,26 @@ export default async function handler(req, res) {
         partner_updates: updates.length,
         leads: updates.filter(event => event.status === "lead").length,
         appointments: updates.filter(event => event.status === "appointment").length,
-        closed_won: closed.length
+        closed_won: closed.length,
+        cj_commission_records: cjCommissions.length,
+        cj_sale_orders: cjSaleOrders.size,
+        cj_lead_records: cjCommissions.filter(record => record.event_type === "cj_lead").length
       },
       reported_revenue_by_currency: revenueByCurrency,
+      cj_summary: {
+        last_synced_at: cjState?.last_synced_at || null,
+        sale_amount_usd: sumUsd(cjCommissions, "sale_amount_usd"),
+        commission_amount_usd: sumUsd(cjCommissions, "commission_amount_usd"),
+        pending_commission_amount_usd: sumUsd(
+          cjCommissions.filter(record =>
+            String(record.validation_status || "").toUpperCase() === "PENDING" ||
+            String(record.action_status || "").toLowerCase() === "new"
+          ),
+          "commission_amount_usd"
+        ),
+        records_with_referral_id: cjCommissions.filter(record => Boolean(record.referral_id)).length,
+        records_without_referral_id: cjCommissions.filter(record => !record.referral_id).length
+      },
       events
     });
   } catch (error) {
