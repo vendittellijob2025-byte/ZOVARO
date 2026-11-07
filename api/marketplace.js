@@ -210,7 +210,8 @@ async function handleSubmit(req,res,body) {
   const record=checked.record;
   const decision=moderationDecision(record);
   record.status=decision.status;
-  record.moderation={...decision,policyVersion:POLICY_VERSION,decidedAt:new Date().toISOString(),mode:"automated"};\n  record.moderationHistory=[{action:decision.action,mode:"automated",reasons:decision.reasons,policyVersion:POLICY_VERSION,decidedAt:record.moderation.decidedAt}];
+  record.moderation={...decision,policyVersion:POLICY_VERSION,decidedAt:new Date().toISOString(),mode:"automated"};
+  record.moderationHistory=[{action:decision.action,mode:"automated",reasons:decision.reasons,policyVersion:POLICY_VERSION,decidedAt:record.moderation.decidedAt}];
   if (record.status==="approved") record.reviewedAt=record.moderation.decidedAt;
   try {
     await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
