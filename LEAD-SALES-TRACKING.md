@@ -37,7 +37,7 @@ Products from other advertisers, networks, and direct partners continue to use t
 
 ### 2. CJ commission reconciliation
 
-`GET /api/cj-commission-sync` is protected by the Vercel `CRON_SECRET` and runs daily through Vercel Cron.
+`POST /api/cj-commission-sync` is called daily by the GitHub Actions workflow `.github/workflows/cj-commission-sync.yml`. The existing `CJ_API_TOKEN` GitHub Actions Secret is sent to the Vercel endpoint over HTTPS in the Authorization header; the endpoint does not store or log the token.
 
 - Uses the CJ Publisher Commission Detail GraphQL API at `https://commissions.api.cj.com/query`.
 - The first run imports the most recent 30 days; later runs continue incrementally using CJ's `maxCommissionId` / `sinceCommissionId` cursor.
@@ -45,7 +45,7 @@ Products from other advertisers, networks, and direct partners continue to use t
 - Imports sale and lead action types, advertiser, order, posting/event dates, CJ action/validation statuses, USD sale and commission amounts, line-item summaries and the publisher-only `shopperId` field.
 - The dashboard shows recent CJ sale orders, net commission amounts, pending amounts and how many CJ records contain a matching referral SID.
 
-The sync requires `CJ_API_TOKEN` as a Vercel Production Secret. The product-feed workflow already uses a GitHub Actions secret with that name, but Vercel Functions need the token in their own Production environment. Until it is added, the endpoint returns HTTP 503 and no CJ commission data is imported.
+The sync reuses the existing GitHub Actions Secret `CJ_API_TOKEN` already used by the CJ product-feed workflow. No second copy of the CJ token is required in Vercel. The Vercel Function uses the connected private Blob Store through OIDC and the existing Production `BLOB_STORE_ID`.
 
 The initial import is limited to 30 days because CJ allows no more than 31 days per date-range query. CJ corrections are delta records: negative amounts must be combined with their original records. The dashboard is a recent sample viewer, not a final accounting or payout ledger.
 
@@ -104,7 +104,7 @@ The admin events endpoint uses the connected store's OIDC authentication and che
 
 - `ZOVARO_PARTNER_DOMAINS`: comma-separated exact hostnames for the actual outbound tracking destinations. Include the affiliate-network tracking hostname if the stored click URL uses one, not merely the final merchant hostname.
 - `ZOVARO_PARTNER_SECRETS`: JSON object mapping each direct-partner ID to a unique random secret of at least 32 characters. Never put real values in Git.
-- `CJ_API_TOKEN`: the CJ Personal Access Token as a Vercel Production Secret, required by the scheduled Commission Detail sync.
+- `CJ_API_TOKEN`: the CJ Personal Access Token as a GitHub Actions Secret, shared by the product-feed and commission-reconciliation workflows.
 
 Do not configure a partner until its identity, destination hostname, attribution method and written participation are confirmed.
 
