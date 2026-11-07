@@ -127,7 +127,7 @@ export default async function handler(req, res) {
     const body = req.body || {};
 
     const {
-      privacy_level,
+      privacy_level: requestedPrivacyLevel,
       title,
       video_url,
       video_size,
@@ -142,6 +142,10 @@ export default async function handler(req, res) {
       is_aigc,
       consent
     } = body;
+
+    // Safety: this endpoint is currently restricted to private test posts.
+    // Public publishing remains disabled until TikTok app approval is complete.
+    const privacy_level = "SELF_ONLY";
 
     /*
      * 4. Richiede consenso esplicito
