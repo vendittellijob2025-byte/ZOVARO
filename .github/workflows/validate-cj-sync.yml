@@ -83,6 +83,44 @@ jobs:
             console.log("Dashboard JavaScript and Vercel configuration are valid.");
           '
 
+      - name: Production read-only smoke tests
+        run: |
+          set -euo pipefail
+          BASE_URL="https://zovaro.vercel.app"
+
+          HOME_STATUS=""
+          for attempt in $(seq 1 30); do
+            HOME_STATUS="$(curl --silent --show-error --output /tmp/zovaro-home.html --write-out '%{http_code}' --max-time 15 "$BASE_URL/")"
+            if [ "$HOME_STATUS" = "200" ]; then
+              break
+            fi
+            sleep 10
+          done
+          test "$HOME_STATUS" = "200"
+          grep -qi "ZOVARO" /tmp/zovaro-home.html
+
+          curl --fail --silent --show-error --max-time 30 "$BASE_URL/data/catalog.json" -o /tmp/zovaro-catalog.json
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const catalog = JSON.parse(fs.readFileSync("/tmp/zovaro-catalog.json", "utf8"));
+            if (!Array.isArray(catalog.products) || catalog.products.length === 0) throw new Error("Production catalog is empty.");
+            const usable = catalog.products.filter(p =>
+              p && p.joinedStatus === true &&
+              /^https:\/\//i.test(p.clickUrl || "") &&
+              typeof p.englishTitle === "string" && p.englishTitle.trim() &&
+              typeof p.englishCategory === "string" && p.englishCategory.trim()
+            );
+            if (!usable.length) throw new Error("Production catalog has no translated, tracked products.");
+            console.log("Production catalog smoke test: " + catalog.products.length + " records; " + usable.length + " translated and tracked products.");
+          '
+
+          TRACK_STATUS="$(curl --silent --show-error --output /tmp/zovaro-track-response.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/lead-track")"
+          test "$TRACK_STATUS" = "400"
+
+          COMMISSION_STATUS="$(curl --silent --show-error --output /tmp/zovaro-commission-response.json --write-out '%{http_code}' --max-time 15 -X POST -H "Content-Type: application/json" --data '{}' "$BASE_URL/api/cj-commission-sync")"
+          test "$COMMISSION_STATUS" = "401"
+
+          echo "Production read-only smoke tests passed."
       - name: Validate existing catalog integrity
         run: |
           node --input-type=module -e '
