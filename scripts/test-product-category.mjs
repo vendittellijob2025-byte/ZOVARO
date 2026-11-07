@@ -50,5 +50,9 @@ assert.equal(categoryFor({ name: "Beauty Store" }, {
   title: "Ceramic Coffee Mug",
   category: "Beauty"
 }), "Home & Living");
+assert.equal(categoryFor({ name: "General Retailer" }, {
+  title: "Unbranded Item 123",
+  category: "Beauty & Personal Care"
+}), "Beauty");
 
 console.log("Product primary-category tests passed (" + (cases.length + 2) + " checks).");
