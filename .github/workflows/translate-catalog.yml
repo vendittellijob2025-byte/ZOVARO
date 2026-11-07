@@ -7,6 +7,12 @@ on:
     # Resume small translation batches every six hours without blocking CJ imports.
     - cron: "43 */6 * * *"
 
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/translate-catalog.yml"
+
 permissions:
   contents: write
 
