@@ -150,7 +150,7 @@ jobs:
             console.log("Marketplace public read test passed: " + listings.length + " approved jobs.");
           '
 
-          MARKETPLACE_ADMIN_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace-admin.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/marketplace-admin")"
+          MARKETPLACE_ADMIN_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace-admin.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/marketplace?admin=1")"
           test "$MARKETPLACE_ADMIN_STATUS" = "401"
 
           COMMISSION_STATUS="$(curl --silent --show-error --output /tmp/zovaro-commission-response.json --write-out '%{http_code}' --max-time 15 -X POST -H "Content-Type: application/json" --data '{}' "$BASE_URL/api/cj-commission-sync")"
