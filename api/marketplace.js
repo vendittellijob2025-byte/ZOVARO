@@ -311,7 +311,7 @@ async function handlePublicCase(req,res,body,kind) {
   const record=job || await readRecord("marketplace/product/"+id+".json");
   if (!record) return res.status(404).json({error:"Listing not found."});
   if (kind==="appeals" && !["rejected","pending"].includes(record.status)) return res.status(409).json({error:"Only pending or rejected listings can be appealed."});
-  const item={schema:"zovaro.marketplace.case.v1",id:crypto.randomUUID(),listingId:id,kind,email,reason,details,status:"open",createdAt:new Date().toISOString()};
+  const item={schema:"zovaro.marketplace.case.v1",id:crypto.randomUUID(),listingId:id,listingType:record.type,kind,email,reason,details,status:"open",createdAt:new Date().toISOString()};
   await put("marketplace/"+kind+"/"+item.id+".json",JSON.stringify(item),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
   return res.status(201).json({received:true,message:kind==="reports"?"Thank you. Your report has been sent for review.":"Your appeal has been received for review."});
 }
