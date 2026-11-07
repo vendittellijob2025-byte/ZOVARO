@@ -183,24 +183,22 @@ function productQuery(advertiserId, offset) {
 
 function productTokenQuery(advertiserId, pageToken = null) {
   const pageArgument = pageToken
-    ? ", page: " + JSON.stringify(pageToken)
+    ? `, page: ${JSON.stringify(pageToken)}`
     : "";
 
-  return [
-    "query {",
-    "  products(companyId: \\"" + COMPANY_ID + "\\", partnerIds: [\\"" + advertiserId + "\\"], limit: 10000" + pageArgument + ") {",
-    "    nextPage",
-    "    resultList {",
-    "      id adId advertiserId advertiserName title description brand imageLink additionalImageLink link mobileLink",
-    "      price { amount currency }",
-    "      salePrice { amount currency }",
-    "      discountPercentage",
-    "      linkCode(pid: \\"" + PUBLISHER_ID + "\\") { clickUrl }",
-    "    }",
-    "    totalCount count",
-    "  }",
-    "}"
-  ].join("\\n");
+  return `query {
+    products(companyId: "${COMPANY_ID}", partnerIds: ["${advertiserId}"], limit: 10000${pageArgument}) {
+      nextPage
+      resultList {
+        id adId advertiserId advertiserName title description brand imageLink additionalImageLink link mobileLink
+        price { amount currency }
+        salePrice { amount currency }
+        discountPercentage
+        linkCode(pid: "${PUBLISHER_ID}") { clickUrl }
+      }
+      totalCount count
+    }
+  }`;
 }
 
 async function getProductsBeyondTenThousand(advertiser, expectedTotal) {
