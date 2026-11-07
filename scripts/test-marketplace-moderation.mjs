@@ -29,4 +29,4 @@ assert.equal(moderationDecision(job({salaryText:"Guaranteed $9000 per day"})).ac
 assert.equal(moderationDecision(job({description:"Pay a deposit to get this job."})).action,"auto_rejected");
 assert.equal(moderationDecision(job({description:"Applicants never pay a fee to apply."})).action,"auto_approved");
 
-console.log("Marketplace moderation policy tests passed (12 checks).");
+console.log("Marketplace moderation policy tests passed (13 checks).");
