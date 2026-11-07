@@ -252,7 +252,7 @@
     {
       "id": "timeflys",
       "name": "TimeFlys",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "private-jet-charter-affiliate",
       "territories": [
         "International eligibility to confirm"
@@ -269,8 +269,10 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Confirm Italy-based publisher eligibility, tracking and attribution, payout thresholds, booking data, approved aircraft media and whether a searchable feed or widget is available.",
-      "sourceChecked": "2026-11-07"
+      "nextAction": "Await partner reply on international eligibility, commission and payout terms, tracking, data feed/widget and approved media permissions.",
+      "sourceChecked": "2026-11-07",
+      "contactedAt": "2026-11-07T09:27:00Z",
+      "contactEvidence": "Gmail sent thread 1a1b55499f867f5f"
     },
     {
       "id": "the-yacht-charter",
@@ -298,7 +300,7 @@
     {
       "id": "skippercity",
       "name": "SkipperCity",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "yacht-charter-affiliate",
       "territories": [
         "International publishers accepted; charter inventory focuses on Croatian marinas"
@@ -315,9 +317,11 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Request boat feed/API or widget, approved listing photos/descriptions, attribution/reporting and confirmation that ZOVARO may display curated Croatian yacht offers.",
+      "nextAction": "Await partner reply on international eligibility, commission and payout terms, tracking, data feed/widget and approved media permissions.",
       "sourceChecked": "2026-11-07",
-      "notes": "Free to join; monthly bank transfer from €50 after the charter starts and is fully paid. Website content and photos require separate permission."
+      "notes": "Free to join; monthly bank transfer from €50 after the charter starts and is fully paid. Website content and photos require separate permission.",
+      "contactedAt": "2026-11-07T09:27:00Z",
+      "contactEvidence": "Gmail sent thread 1a1b554a183f6e96"
     }
   ]
 }
