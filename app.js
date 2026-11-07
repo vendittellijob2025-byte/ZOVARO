@@ -51,6 +51,15 @@ const CJ_TRACKED_ADVERTISERS = Object.freeze({
   "5384937": "cj-ecosmetics"
 });
 
+// Match the server-side allowlist. If CJ returns a different tracking host,
+// keep the original affiliate URL working rather than sending a broken redirect.
+const CJ_TRACKING_HOSTS = new Set([
+  "www.dpbolvw.net",
+  "www.tkqlhce.com",
+  "www.anrdoezrs.net",
+  "www.jdoqocy.com"
+]);
+
 function getProductClickUrl(product) {
   const originalUrl = String(product.clickUrl || product.destination || "").trim();
   if (!originalUrl) return "#";
@@ -65,6 +74,7 @@ function getProductClickUrl(product) {
   try {
     const destination = new URL(originalUrl);
     if (destination.protocol !== "https:") return originalUrl;
+    if (!CJ_TRACKING_HOSTS.has(destination.hostname.toLowerCase())) return originalUrl;
 
     const trackingUrl = new URL(ZOVARO_TRACKING_API);
     trackingUrl.searchParams.set("partner", partnerId);
