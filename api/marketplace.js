@@ -96,7 +96,9 @@ function publicRecord(record) {
     imageUrl: record.imageUrl || null,
     contactEmail: record.publicContact === true ? record.contactEmail : null,
     sellerDisplayName: record.sellerDisplayName || null,
+    sellerCountry: record.sellerCountry || null,
     traderType: record.traderType || null,
+    companyWebsite: record.companyWebsite || null,
     approvedAt: record.reviewedAt || record.createdAt,
     independentlyVerified: false
   };
