@@ -77,6 +77,8 @@ async function addPendingPointer(record) {
 async function publishPublicRecord(record) {
   const pathname = "marketplace/public/" + record.type + "/" + reverseTimestamp() + "_" + record.id + ".json";
   await put(pathname,JSON.stringify(publicRecord(record)),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+  record.publicPath=pathname;
+  return pathname;
 }
 async function listPublicRecords(type,cursor) {
   const options={prefix:"marketplace/public/"+type+"/",limit:40};
@@ -213,7 +215,10 @@ async function handleSubmit(req,res,body) {
   try {
     await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
     if(record.status==="pending") await addPendingPointer(record);
-    if(record.status==="approved") await publishPublicRecord(record);
+    if(record.status==="approved") {
+      await publishPublicRecord(record);
+      await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    }
     const messages={
       auto_approved:"Your listing passed ZOVARO's automated checks and is now published. Automated screening is not a guarantee of legality, authenticity or seller identity.",
       auto_rejected:"Your listing was not published because it triggered a prohibited-content or safety rule. You may appeal if you believe this was a mistake.",
@@ -266,8 +271,24 @@ async function handleAdminPost(req,res,body) {
     const pointers=await Promise.all(queuePage.blobs.map(async blob=>({blob,record:await readRecord(blob.pathname).catch(()=>null)})));
     const found=pointers.find(item=>item.record?.id===id);
     if(found) await del(found.blob.pathname);
-    if(record.status==="approved") await publishPublicRecord(record);
+    if(record.status==="approved") {
+      await publishPublicRecord(record);
+      await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    }
     return res.status(200).json({id,status:record.status});
+  }
+  if (action==="unpublish") {
+    const type=clean(body.type,20),id=clean(body.id,50);
+    if(!["job","product"].includes(type)||!/^[0-9a-f-]{36}$/i.test(id)) return res.status(400).json({error:"Invalid listing."});
+    const pathname="marketplace/"+type+"/"+id+".json";
+    const record=await readRecord(pathname);
+    if(!record) return res.status(404).json({error:"Listing not found."});
+    if(record.publicPath) await del(record.publicPath);
+    record.status="rejected";
+    record.reviewedAt=new Date().toISOString();
+    record.moderation={...(record.moderation||{}),action:"manual_unpublished",mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
+    await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    return res.status(200).json({id,status:"rejected"});
   }
   if (action==="close_case") {
     const kind=clean(body.kind,20),id=clean(body.id,50);
