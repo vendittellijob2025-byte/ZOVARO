@@ -36,7 +36,7 @@ function emailDomain(email) { return String(email || "").split("@")[1]?.toLowerC
 function websiteDomain(value) {
   try {
     const url = new URL(value);
-    if (!["https:","http:"].includes(url.protocol) || url.username || url.password) return "";
+    if (url.protocol !== "https:" || url.username || url.password) return "";
     return url.hostname.toLowerCase().replace(/^www\\./, "");
   } catch { return ""; }
 }
@@ -280,15 +280,12 @@ async function handlePublicCase(req,res,body,kind) {
   if (!rateLimit(req,kind,3,60*60*1000)) return res.status(429).json({error:"Too many requests. Please try later."});
   const id=clean(body.id,50),email=clean(body.email,254).toLowerCase(),reason=clean(body.reason,80),details=clean(body.details,1500);
   if (!/^[0-9a-f-]{36}$/i.test(id)||!EMAIL_RE.test(email)||details.length<15) return res.status(400).json({error:"Please provide a valid listing ID, contact email and details."});
-  const record=await readRecord(`marketplace/${kind==="appeals"?"job":"product"}/${id}.json`);
-  if (!record) {
-    const job=await readRecord(`marketplace/job/${id}.json`);
-    const product=job?null:await readRecord(`marketplace/product/${id}.json`);
-    if (!job&&!product) return res.status(404).json({error:"Listing not found."});
-    if (kind==="appeals" && !["rejected","pending"].includes((job||product).status)) return res.status(409).json({error:"Only pending or rejected listings can be appealed."});
-  } else if (kind==="appeals" && !["rejected","pending"].includes(record.status)) return res.status(409).json({error:"Only pending or rejected listings can be appealed."});
+  const job=await readRecord("marketplace/job/"+id+".json");
+  const record=job || await readRecord("marketplace/product/"+id+".json");
+  if (!record) return res.status(404).json({error:"Listing not found."});
+  if (kind==="appeals" && !["rejected","pending"].includes(record.status)) return res.status(409).json({error:"Only pending or rejected listings can be appealed."});
   const item={schema:"zovaro.marketplace.case.v1",id:crypto.randomUUID(),listingId:id,kind,email,reason,details,status:"open",createdAt:new Date().toISOString()};
-  await put(`marketplace/${kind}/${item.id}.json`,JSON.stringify(item),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+  await put("marketplace/"+kind+"/"+item.id+".json",JSON.stringify(item),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
   return res.status(201).json({received:true,message:kind==="reports"?"Thank you. Your report has been sent for review.":"Your appeal has been received for review."});
 }
 
