@@ -21,6 +21,9 @@ assert.equal(moderationDecision(product({category:"Automotive"})).action,"manual
 assert.equal(moderationDecision(product({traderType:"business"})).action,"manual_review");
 assert.equal(moderationDecision(product({imageUrl:"https://images.example/item.jpg"})).action,"manual_review");
 assert.equal(moderationDecision(product({title:"Handgun for sale"})).action,"auto_rejected");
+assert.equal(moderationDecision(product({title:"Fireworks for private use"})).action,"auto_rejected");
+assert.equal(moderationDecision(product({title:"Spyware keylogger"})).action,"auto_rejected");
+assert.equal(moderationDecision(product({title:"Sex doll"})).action,"auto_rejected");
 
 assert.equal(moderationDecision(job()).action,"auto_approved");
 assert.equal(moderationDecision(job({contactEmail:"recruitment@gmail.com"})).action,"manual_review");
@@ -29,4 +32,4 @@ assert.equal(moderationDecision(job({salaryText:"Guaranteed $9000 per day"})).ac
 assert.equal(moderationDecision(job({description:"Pay a deposit to get this job."})).action,"auto_rejected");
 assert.equal(moderationDecision(job({description:"Applicants never pay a fee to apply."})).action,"auto_approved");
 
-console.log("Marketplace moderation policy tests passed (13 checks).");
+console.log("Marketplace moderation policy tests passed (16 checks).");
