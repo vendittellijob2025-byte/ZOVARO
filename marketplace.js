@@ -13,7 +13,10 @@
     if (!form.reportValidity()) return;
     const payload = formObject(form);
     payload.type = type;
-    payload.publicContact = form.querySelector('input[name="publicContact"]')?.checked === true;
+    for (const name of ["publicContact","sellerDeclaration","ownershipDeclaration","employerDeclaration"]) {
+      const control = form.querySelector('input[name="' + name + '"]');
+      if (control) payload[name] = control.checked;
+    }
     if (payload.price !== undefined) payload.price = Number(payload.price);
     if (button) { button.disabled = true; button.textContent = "SENDING…"; }
     if (status) status.textContent = "Sending your listing securely…";
@@ -42,8 +45,8 @@
     return el;
   }
 
-  function renderListings(container, items, type) {
-    container.replaceChildren();
+  function renderListings(container, items, type, append = false) {
+    if (!append) container.replaceChildren();
     for (const item of items) {
       const card = document.createElement("article");
       card.className = type === "product" ? "marketplace-listing used-listing" : "marketplace-listing";
@@ -61,21 +64,49 @@
         link.textContent = type === "job" ? "CONTACT EMPLOYER" : "CONTACT SELLER";
         card.appendChild(link);
       }
+      const report = document.createElement("button");
+      report.type = "button";
+      report.className = "marketplace-report";
+      report.textContent = "REPORT LISTING";
+      report.addEventListener("click", async () => {
+        const email = window.prompt("Your contact email for the report:");
+        if (!email) return;
+        const reason = window.prompt("Reason (e.g. suspected scam, prohibited item, counterfeit):") || "Safety concern";
+        const details = window.prompt("Please explain the concern (at least 15 characters):");
+        if (!details || details.trim().length < 15) return;
+        report.disabled = true;
+        try {
+          const response = await fetch(API, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"report",id:item.id,email,reason,details})});
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error || "Report failed.");
+          report.textContent = "REPORT SENT";
+        } catch (error) { window.alert(error.message); report.disabled = false; }
+      });
+      card.appendChild(report);
       container.appendChild(card);
     }
   }
 
-  async function loadListings(type) {
+  const cursors = { job: null, product: null };
+  const loadedCounts = { job: 0, product: 0 };
+
+  async function loadListings(type, append = false) {
     const container = type === "job" ? $("jobListings") : $("usedListingGrid");
     const empty = type === "job" ? $("jobListingsEmpty") : $("usedEmptyState");
     if (!container) return [];
     try {
-      const response = await fetch(API + "?type=" + encodeURIComponent(type), { cache: "no-store" });
+      const query = new URLSearchParams({type});
+      if (append && cursors[type]) query.set("cursor", cursors[type]);
+      const response = await fetch(API + "?" + query.toString(), { cache: "no-store" });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Unable to load listings.");
       const items = Array.isArray(data) ? data : [];
-      renderListings(container, items, type);
-      if (empty) empty.classList.toggle("hidden", items.length > 0);
+      renderListings(container, items, type, append);
+      loadedCounts[type] += items.length;
+      cursors[type] = response.headers.get("X-Zovaro-Next-Cursor") || null;
+      const moreButton = $(type === "job" ? "jobLoadMore" : "usedLoadMore");
+      if (moreButton) moreButton.classList.toggle("hidden", !cursors[type]);
+      if (empty) empty.classList.toggle("hidden", loadedCounts[type] > 0);
       if (type === "product" && typeof window.filterUsedListings === "function") window.filterUsedListings();
       return items;
     } catch (error) {
@@ -109,6 +140,8 @@
     submitListing(event.currentTarget, "job", "jobFormStatus", "SUBMIT JOB FOR REVIEW");
   });
   $("jobSearchButton")?.addEventListener("click", filterJobs);
+  $("jobLoadMore")?.addEventListener("click", () => loadListings("job", true));
+  $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
   $("jobSearchInput")?.addEventListener("input", filterJobs);
 
   loadListings("job");
