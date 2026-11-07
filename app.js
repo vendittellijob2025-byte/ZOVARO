@@ -132,6 +132,37 @@ function getProductClickUrl(product) {
   }
 }
 
+// Keep category labels consistent even when older demo/seed records use aliases.
+const CATEGORY_ALIASES = new Map([
+  ["home", "Home & Living"],
+  ["furniture", "Home & Living"],
+  ["kitchen", "Home & Living"],
+  ["kids & babies", "Babies"],
+  ["baby", "Babies"],
+  ["toys", "Toys & Games"],
+  ["games", "Toys & Games"],
+  ["cosmetics", "Beauty"],
+  ["personal care", "Beauty"],
+  ["fragrance", "Beauty"],
+  ["cameras", "Electronics"],
+  ["computers", "Electronics"],
+  ["phones & tablets", "Electronics"],
+  ["technology", "Electronics"],
+  ["office", "Office & Technology"],
+  ["tools", "Tools & DIY"],
+  ["pet supplies", "Pets"],
+  ["health", "Health & Wellness"],
+  ["food", "Food & Grocery"],
+  ["books", "Books & Media"],
+  ["garden & outdoors", "Garden"]
+]);
+
+function categoryLabel(value) {
+  const label = String(value || "").replace(/\\s+/g, " ").trim();
+  if (!label) return "";
+  return CATEGORY_ALIASES.get(label.toLowerCase()) || label;
+}
+
 function card(p) {
   const old =
     p.oldPrice != null
@@ -171,7 +202,7 @@ function card(p) {
       <div class="product-info">
 
         <span class="product-tag">
-          ${esc(p.category)}
+          ${esc(categoryLabel(p.category))}
         </span>
 
         <h3>
@@ -280,11 +311,11 @@ function renderCategories() {
 
   const cats = [
     ...new Set(
-      PRODUCTS.map(
-        p => p.category
-      )
+      PRODUCTS
+        .map(p => categoryLabel(p.category))
+        .filter(Boolean)
     )
-  ];
+  ].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 
   $("#categoryGrid").innerHTML =
     cats
@@ -316,7 +347,7 @@ function renderCategories() {
           showResults(
             PRODUCTS.filter(
               p =>
-                p.category ===
+                categoryLabel(p.category) ===
                 el.dataset.cat
             ),
             `${el.dataset.cat} picks`
