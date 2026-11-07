@@ -126,6 +126,8 @@ console.log(
   `ZOVARO translation system: ${catalog.products.length} products found.`
 );
 
+let translationPaused = false;
+
 for (
   let index = 0;
   index < catalog.products.length;
@@ -144,28 +146,39 @@ for (
     }`
   );
 
-  product.englishTitle =
-    await translateCached(
-      product.title || ""
-    );
+  try {
+    product.englishTitle =
+      await translateCached(
+        product.title || ""
+      );
 
-  product.englishDescription =
-    await translateCached(
-      product.description || ""
-    );
+    product.englishDescription =
+      await translateCached(
+        product.description || ""
+      );
 
-  product.englishCategory =
-    await translateCached(
-      product.category || ""
-    );
+    product.englishCategory =
+      await translateCached(
+        product.category || ""
+      );
 
-  /*
-   * Brand and advertiser names are preserved
-   * exactly as supplied by the affiliate network.
-   *
-   * Prices, currencies, discounts and IDs are
-   * never sent through the translation system.
-   */
+    /*
+     * Brand and advertiser names are preserved
+     * exactly as supplied by the affiliate network.
+     *
+     * Prices, currencies, discounts and IDs are
+     * never sent through the translation system.
+     */
+  } catch (error) {
+    translationPaused = true;
+    console.warn(
+      `Translation paused at product ${index + 1}/${catalog.products.length}: ${error.message}`
+    );
+    console.warn(
+      "Saving all catalog imports and successful translations before exiting."
+    );
+    break;
+  }
 }
 
 await fs.writeFile(
@@ -190,7 +203,9 @@ await fs.writeFile(
 
 console.log("");
 console.log(
-  "ZOVARO automatic English translation completed."
+  translationPaused
+    ? "ZOVARO catalog saved; English translation paused safely and will resume on the next sync."
+    : "ZOVARO automatic English translation completed."
 );
 
 console.log(
