@@ -629,7 +629,41 @@ function selectStorefrontProducts(products, perCategoryLimit = 1200) {
   return selected;
 }
 
-const storefrontProducts = selectStorefrontProducts(finalProducts);
+const activeNonCjNetworks = new Set(
+  (Array.isArray(catalog.sources) ? catalog.sources : [])
+    .filter(source => source.status === "active" && source.network && source.network !== NETWORKS.CJ.network)
+    .map(source => source.network)
+);
+
+const storefrontEligibleProducts = finalProducts.filter(product => {
+  const isCurrentJoinedCjProduct =
+    (product.source === "CJ" || product.network === NETWORKS.CJ.network) &&
+    product.joinedStatus === true &&
+    eligibleFeedAdvertisers.has(String(product.advertiserId));
+
+  const isActiveOtherNetworkProduct =
+    product.source !== "CJ" &&
+    product.network !== NETWORKS.CJ.network &&
+    product.joinedStatus === true &&
+    activeNonCjNetworks.has(product.network);
+
+  const hasValidClickUrl =
+    typeof product.clickUrl === "string" &&
+    product.clickUrl.startsWith("https://");
+
+  const hasValidImage =
+    typeof product.imageLink === "string" &&
+    product.imageLink.startsWith("https://");
+
+  const hasPrice =
+    Number.isFinite(Number(product.price)) &&
+    Number(product.price) > 0;
+
+  return (isCurrentJoinedCjProduct || isActiveOtherNetworkProduct) &&
+    hasValidClickUrl && hasValidImage && hasPrice;
+});
+
+const storefrontProducts = selectStorefrontProducts(storefrontEligibleProducts);
 const compactProducts = storefrontProducts.map(compactCatalogProduct);
 const advertiserRecords = new Map(
   (Array.isArray(catalog.advertisers) ? catalog.advertisers : []).map(item => [String(item.id), item])
@@ -695,5 +729,6 @@ console.log("Products received from CJ: " + received);
 console.log("Products with valid CJ tracking links: " + imported.length);
 console.log("Previous catalog products preserved: " + previousProducts.length);
 console.log("Validated products in full CJ inventory: " + finalProducts.length);
+console.log("Active products eligible for public storefront: " + storefrontEligibleProducts.length);
 console.log("Products selected for public storefront: " + compactProducts.length);
 console.log("Compact catalog product fields saved; descriptions truncated to 180 characters.");
