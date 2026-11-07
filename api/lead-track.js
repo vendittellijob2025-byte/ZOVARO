@@ -32,10 +32,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "HTTPS destination required" });
   }
 
-  const allowedHosts = (process.env.ZOVARO_PARTNER_DOMAINS || "")
-    .split(",").map(value => value.trim().toLowerCase()).filter(Boolean);
+  // CJ returned this verified tracking host in valid joined-publisher
+  // linkCode URLs. Keep it alongside the configurable partner allowlist.
+  const trustedCjHosts = [
+    "www.kqzyfj.com"
+  ];
+  const allowedHosts = new Set([
+    ...trustedCjHosts,
+    ...(process.env.ZOVARO_PARTNER_DOMAINS || "")
+      .split(",").map(value => value.trim().toLowerCase()).filter(Boolean)
+  ]);
 
-  if (!allowedHosts.includes(destination.hostname.toLowerCase())) {
+  if (!allowedHosts.has(destination.hostname.toLowerCase())) {
     return res.status(403).json({ error: "Partner domain is not allowlisted" });
   }
 
