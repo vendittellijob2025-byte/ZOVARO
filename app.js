@@ -357,6 +357,8 @@ function showResults(
 
   $("#dealGrid").innerHTML = "";
   $("#newGrid").innerHTML = "";
+  const staleDealsButton = $("#viewAllDealsButton");
+  if (staleDealsButton) staleDealsButton.remove();
 
   $("#trending").scrollIntoView({
     behavior: "smooth",
@@ -381,6 +383,7 @@ function render() {
 
   if (deals.length > PRODUCT_PAGE_SIZE) {
     const moreDeals = document.createElement("button");
+    moreDeals.id = "viewAllDealsButton";
     moreDeals.type = "button";
     moreDeals.className = "text-btn";
     moreDeals.style.display = "block";
