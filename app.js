@@ -39,11 +39,16 @@ function formatMoney(value, currency = "USD") {
 
 const ZOVARO_TRACKING_API = "https://zovaro.vercel.app/api/lead-track";
 
-// Only advertisers with verified CJ links and known tracking hosts are routed
-// through ZOVARO's click recorder. Other merchants keep their original links.
+// Joined CJ advertisers with valid CJ tracking destinations are routed
+// through ZOVARO's click recorder. The original CJ click URL is preserved.
 const CJ_TRACKED_ADVERTISERS = Object.freeze({
   "8022425": "cj-kaiya-baby",
-  "7969352": "cj-padel-iberico"
+  "7969352": "cj-padel-iberico",
+  "7287203": "cj-fragrance-shop",
+  "5824323": "cj-unice",
+  "6260179": "cj-abelssoft",
+  "5357356": "cj-rexing",
+  "5384937": "cj-ecosmetics"
 });
 
 function getProductClickUrl(product) {
