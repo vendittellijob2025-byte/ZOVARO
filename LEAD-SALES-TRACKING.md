@@ -21,14 +21,19 @@ Example (replace values with real partner-approved data):
 
 #### Frontend integration
 
-The product modal now routes verified CJ products from the following joined advertisers through the ZOVARO click recorder:
+The product modal recognizes the following joined CJ advertisers for ZOVARO click recording:
 
 - Kaiya Baby (CJ advertiser ID `8022425`)
 - Padel Iberico ES (CJ advertiser ID `7969352`)
+- FragranceShop.com (CJ advertiser ID `7287203`)
+- UNice (CJ advertiser ID `5824323`)
+- Abelssoft Int (CJ advertiser ID `6260179`)
+- Rexing (CJ advertiser ID `5357356`)
+- eCosmetics.com (CJ advertiser ID `5384937`)
 
-The recorder stores a unique click event and then redirects to the original CJ tracking URL unchanged. This preserves CJ's normal affiliate redirect and cookie-based click attribution. The ZOVARO referral reference is currently internal to the ZOVARO event log; it is not appended as a CJ sub-ID because a supported advertiser/network sub-ID parameter has not yet been confirmed. Therefore, do not claim per-referral CJ sale matching yet.
+A product is routed through the recorder only when its original CJ URL is HTTPS and its hostname matches the server-side allowlist. Other valid CJ URLs continue directly to CJ rather than being blocked. The recorder stores a unique click event and then redirects to the original CJ tracking URL unchanged. This preserves CJ's normal affiliate redirect and cookie-based click attribution. The ZOVARO referral reference is currently internal to the ZOVARO event log; it is not appended as a CJ sub-ID because a supported advertiser/network sub-ID parameter has not yet been confirmed. Therefore, do not claim per-referral CJ sale matching yet.
 
-Products from other advertisers, networks, and direct partners continue to use their existing destination URLs and are not routed through this allowlist until their partner identity and tracking host are verified.
+Products from other advertisers, networks, and direct partners continue to use their existing destination URLs and are not routed through the CJ mapping until their partner identity and tracking host are verified.
 
 ### 2. Signed partner conversion intake
 
@@ -90,7 +95,7 @@ Do not configure a partner until its identity, destination hostname, attribution
 
 ## Not yet complete / production blockers
 
-- The product modal now routes only the two explicitly mapped CJ advertisers (Kaiya Baby and Padel Iberico ES) through `/api/lead-track`; all other products retain their original links. Their original CJ click URLs are passed through unchanged. ZOVARO records its own referral reference, but CJ sub-ID attribution has not been enabled pending confirmation of a supported parameter. Redirecting blindly could break affiliate attribution or send visitors to an unapproved domain.
+- The product modal maps seven joined CJ advertisers for internal click recording, but a product is recorded only when its HTTPS CJ tracking URL hostname is in the exact Vercel allowlist. Unlisted hosts keep their original CJ link. Original click URLs are passed through unchanged. ZOVARO records its own referral reference, but CJ sub-ID attribution has not been enabled pending confirmation of a supported parameter.
 - No dealer is yet configured to send signed conversion postbacks.
 - No transactional database, idempotency/reconciliation layer, payable commission ledger, export/reporting interface, retention/deletion controls or privacy notice has been implemented. The current dashboard is a recent-event viewer, not an accounting system.
 - Blob event files are an intake log, not a transactional accounting database. The dashboard reads at most the latest 100 records of each type; do not treat these sample counts as lifetime totals. Use a database with unique constraints and audit history before calculating amounts payable.
