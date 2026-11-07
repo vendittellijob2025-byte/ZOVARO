@@ -210,7 +210,7 @@ async function handleSubmit(req,res,body) {
   const record=checked.record;
   const decision=moderationDecision(record);
   record.status=decision.status;
-  record.moderation={...decision,policyVersion:POLICY_VERSION,decidedAt:new Date().toISOString(),mode:"automated"};
+  record.moderation={...decision,policyVersion:POLICY_VERSION,decidedAt:new Date().toISOString(),mode:"automated"};\n  record.moderationHistory=[{action:decision.action,mode:"automated",reasons:decision.reasons,policyVersion:POLICY_VERSION,decidedAt:record.moderation.decidedAt}];
   if (record.status==="approved") record.reviewedAt=record.moderation.decidedAt;
   try {
     await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
@@ -265,7 +265,9 @@ async function handleAdminPost(req,res,body) {
     if (record.status!=="pending"&&record.status!=="rejected") return res.status(409).json({error:"Listing has already been reviewed."});
     record.status=decision==="approve"?"approved":"rejected";
     record.reviewedAt=new Date().toISOString();
-    record.moderation={...(record.moderation||{}),action:"manual_"+decision,mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
+    const event={action:"manual_"+decision,mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
+    record.moderationHistory=[...(record.moderationHistory||[]),event].slice(-20);
+    record.moderation={...(record.moderation||{}),...event};
     await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
     const queuePage=await list({prefix:"marketplace/queue/pending/",limit:1000});
     const pointers=await Promise.all(queuePage.blobs.map(async blob=>({blob,record:await readRecord(blob.pathname).catch(()=>null)})));
@@ -286,7 +288,9 @@ async function handleAdminPost(req,res,body) {
     if(record.publicPath) await del(record.publicPath);
     record.status="rejected";
     record.reviewedAt=new Date().toISOString();
-    record.moderation={...(record.moderation||{}),action:"manual_unpublished",mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
+    const event={action:"manual_unpublished",mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
+    record.moderationHistory=[...(record.moderationHistory||[]),event].slice(-20);
+    record.moderation={...(record.moderation||{}),...event};
     await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
     return res.status(200).json({id,status:"rejected"});
   }
