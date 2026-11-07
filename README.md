@@ -1,89 +1,82 @@
-# ZOVARO V2 — AI Product Discovery
+# ZOVARO — Global Discovery Platform
 
-ZOVARO is an AI-assisted product discovery platform designed to help users discover products from trusted affiliate networks.
+ZOVARO is a global discovery platform for products, offers, jobs and commercial opportunities. The current live commerce integration uses CJ Affiliate; direct luxury partners are managed separately and are never presented as approved until their terms, tracking and media permissions are verified.
 
-## Current status
+## Current operating architecture
 
-The CJ Affiliate integration is active and operational.
+### CJ Affiliate product catalogue
 
-### CJ Affiliate
+- The CJ API integration discovers active, joined advertisers dynamically; it is not limited to a hard-coded list of two merchants.
+- Product feeds are retrieved with pagination, including CJ feeds exceeding 10,000 products.
+- A product is eligible for the public storefront only when it has a joined advertiser relationship, a valid HTTPS CJ click URL, an approved HTTPS image URL and a positive price.
+- Products without a valid CJ tracking URL or image are excluded rather than sent to customers with broken or untracked links.
+- The full validated inventory is retained in the generated catalogue; the public storefront uses a compact, balanced selection capped at 1,200 products per category and distributed across advertisers.
+- CJ synchronization is scheduled every six hours and can also be started manually from GitHub Actions.
+- The catalogue is generated in `data/catalog.json`. Do not edit this generated file manually.
 
-* Real CJ Affiliate product feed
-* 100 real products currently synchronized
-* Active advertisers:
+### English translations
 
-  * Kaiya Baby
-  * Padel Iberico ES
-* Real CJ tracking links
-* Automatic catalog synchronization
-* GitHub Actions workflow
-* Product catalog generated automatically in `data/catalog.json`
+Translation runs separately from CJ ingestion so a translation-service rate limit cannot block a valid product import.
 
-The live ZOVARO frontend loads the synchronized catalog automatically.
+- Up to 300 new text strings are translated per run.
+- Successful translations and the translation cache are saved before the batch pauses.
+- Later scheduled runs resume from the saved catalogue and cache.
+- Brand names, advertiser names, prices, currencies and IDs are not translated.
 
-## Affiliate architecture
+### Click tracking and sales attribution
 
-ZOVARO is structured to support multiple affiliate networks.
+- CJ affiliate click URLs are preserved when a customer leaves ZOVARO for the merchant.
+- ZOVARO's Lead & Sales Control records outbound referrals independently from the merchant's own conversion reporting.
+- A recorded click proves that a referral was sent; it does not prove a sale or commission.
+- Completed sales, reversals, commission validation, payout thresholds, invoicing and payment schedules must be confirmed through the affiliate network or partner.
 
-Current network status:
+### Direct commercial partners
 
-* CJ Affiliate — Active
-* Awin — Planned
-* Additional networks — Future
+The registry at `data/direct-partners.json` separates prospects, contacted companies, replies, approved partners and publishable products.
 
-Only networks explicitly marked as active are loaded into the live product catalog.
+A direct partner product must not be published until all of the following are verified:
 
-## Automatic synchronization
+1. Written partner approval and an agreed commercial arrangement.
+2. Partner status is `active`.
+3. The partner-issued HTTPS tracking URL and conversion/attribution method are verified.
+4. Explicit permission exists for the product images and brand material.
+5. Product title, image, price and currency are complete.
 
-The CJ product catalog is synchronized through GitHub Actions.
+A draft email is not evidence of contact; a sent email or submitted form must be recorded. A reply is not approval. The validation workflow checks the registry and publication gates.
 
-The workflow:
+### Social promotion and TikTok
 
-1. Connects to the CJ Affiliate API.
-2. Retrieves joined advertiser products.
-3. Generates the normalized ZOVARO catalog.
-4. Saves the catalog to `data/catalog.json`.
-5. Commits updated catalog data automatically when changes are detected.
+- GitHub Actions can generate the daily promotion package and vertical video.
+- TikTok Direct Post is currently restricted to `SELF_ONLY` private testing and requires explicit consent for each test submission.
+- Public TikTok publishing is not enabled until the TikTok application and required permissions are approved. The code must not be changed to bypass this restriction.
+- A generated video or successful GitHub Pages deployment does not mean a public TikTok post has been published.
 
-The scheduled synchronization runs every 12 hours.
+## Network status
 
-## Project structure
+| Network / channel | Status |
+|---|---|
+| CJ Affiliate | Active; dynamic joined-advertiser feeds |
+| Awin | Planned; not activated |
+| Direct luxury partners | Prospects and negotiations tracked separately |
+| TikTok public publishing | Disabled pending platform approval |
 
-```text
-ZOVARO/
-├── .github/
-│   └── workflows/
-│       └── cj-products.yml
-├── data/
-│   └── catalog.json
-├── scripts/
-│   ├── fetch-cj-products.mjs
-│   └── network-config.mjs
-├── app-cj-loader.js
-├── app.js
-├── index.html
-├── products.js
-└── styles.css
-```
+## Key files
 
-## Network configuration
+- `data/catalog.json` — generated public product catalogue
+- `data/translation-cache.json` — translation cache
+- `data/direct-partners.json` — direct-partner registry and evidence
+- `scripts/sync-cj-advertisers.mjs` — CJ advertiser discovery, feed import and catalogue merge
+- `scripts/translate-to-english.mjs` — safe translation batches
+- `app-cj-loader.js` — public storefront loader
+- `api/tiktok-direct-post.js` — private TikTok Direct Post endpoint
+- `.github/workflows/cj-products.yml` — six-hour CJ synchronization
+- `.github/workflows/translate-catalog.yml` — scheduled translation batches
+- `.github/workflows/validate-cj-sync.yml` — catalogue validation
+- `.github/workflows/direct-partners.yml` — direct-partner validation
+- `.github/workflows/daily-promotion.yml` — daily promotion-video generation
 
-Affiliate networks are controlled through:
+## Security
 
-`scripts/network-config.mjs`
-
-A network can be marked as active or planned without changing the frontend architecture.
-
-## Important
-
-`data/catalog.json` is generated automatically.
-
-Do not manually edit the generated CJ catalog.
-
-The CJ API token is stored securely as a GitHub Actions secret and is not included in the repository.
-
-## GitHub Pages
-
-The live site is published from the `main` branch.
-
-The live site updates automatically after changes are committed to the publishing branch.
+- API tokens and secrets belong in GitHub Actions Secrets or the relevant hosting provider's encrypted environment variables.
+- Never commit API tokens, access tokens, passwords, session secrets or private customer data.
+- Never publish an unapproved partner listing or a product with an unverified affiliate link.
