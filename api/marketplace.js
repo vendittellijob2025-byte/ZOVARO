@@ -104,6 +104,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed." });
   }
 
+  const contentLength = Number(req.headers["content-length"] || 0);
+  if (contentLength > 12000) return res.status(413).json({ error: "Submission is too large." });
+
   if (!checkRateLimit(req)) {
     return res.status(429).json({ error: "Too many submissions. Please try again later." });
   }
