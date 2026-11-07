@@ -7,12 +7,22 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const partner = String(req.query.partner || "").trim();
-  const referral = String(req.query.ref || "").trim();
-  const item = String(req.query.item || "").trim();
-  const target = String(req.query.to || "").trim();
-  const source = String(req.query.source || "website").slice(0, 80);
-  const campaign = String(req.query.campaign || "").slice(0, 120);
+  // Parse the request URL with the WHATWG URL API. Avoid the legacy
+  // req.query parser so Node.js 24 does not emit DEP0169 on this route.
+  let params;
+  try {
+    const requestUrl = new URL(req.url || "/", "https://zovaro.vercel.app");
+    params = requestUrl.searchParams;
+  } catch {
+    return res.status(400).json({ error: "Invalid request URL" });
+  }
+
+  const partner = String(params.get("partner") || "").trim();
+  const referral = String(params.get("ref") || "").trim();
+  const item = String(params.get("item") || "").trim();
+  const target = String(params.get("to") || "").trim();
+  const source = String(params.get("source") || "website").slice(0, 80);
+  const campaign = String(params.get("campaign") || "").slice(0, 120);
 
   if (!/^[a-z0-9_-]{2,60}$/i.test(partner) ||
       !/^[a-z0-9_-]{4,100}$/i.test(referral) ||
