@@ -415,7 +415,21 @@ for (const advertiserId of eligibleFeedAdvertisers) {
   };
   advertiserDiagnostics.set(advertiserId, diagnostic);
 
-  const products = await getProductsForAdvertiser(advertiser);
+  let products;
+  try {
+    products = await getProductsForAdvertiser(advertiser);
+  } catch (error) {
+    diagnostic.syncStatus = "failed";
+    diagnostic.syncError = String(error.message || error).slice(0, 500);
+    console.error("CJ advertiser sync failed; continuing with other joined advertisers: " + JSON.stringify({
+      advertiserId,
+      advertiserName: advertiser.name,
+      error: diagnostic.syncError
+    }));
+    continue;
+  }
+
+  diagnostic.syncStatus = "completed";
   if (products.length && products.every(product => !cleanUrl(product.linkCode?.clickUrl))) {
     await diagnoseShoppingProducts(advertiser);
   }
@@ -529,7 +543,13 @@ const updatedCatalog = {
     advertisersWithProductFeeds: eligibleFeedAdvertisers.size,
     productsReceived: received,
     productsWithValidTrackingLinks: imported.length,
-    productsPreservedFromPreviousCatalog: previousProducts.length
+    productsPreservedFromPreviousCatalog: previousProducts.length,
+    advertisersFailed: [...advertiserDiagnostics.values()].filter(item => item.syncStatus === "failed").map(item => ({
+      advertiserId: item.advertiserId,
+      advertiserName: item.advertiserName,
+      error: item.syncError
+    })),
+    syncStatus: [...advertiserDiagnostics.values()].some(item => item.syncStatus === "failed") ? "partial" : "complete"
   }
 };
 
