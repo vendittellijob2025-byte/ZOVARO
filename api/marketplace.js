@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { get, list, put } from "@vercel/blob";
+import { del, get, list, put } from "@vercel/blob";
 
 const rateLimits = new Map();
 const EMAIL_RE = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$/i;
@@ -65,10 +65,25 @@ async function readRecord(pathname) {
   return JSON.parse(Buffer.from(bytes).toString("utf8"));
 }
 async function latestRecords(prefix, limit = 200) {
-  const page = await list({ prefix, limit: 1000 });
-  const blobs = [...page.blobs].sort((a,b) => Date.parse(b.uploadedAt || 0)-Date.parse(a.uploadedAt || 0)).slice(0,limit);
-  const records = await Promise.all(blobs.map(blob => readRecord(blob.pathname).catch(() => null)));
+  const page = await list({ prefix, limit });
+  const records = await Promise.all(page.blobs.map(blob => readRecord(blob.pathname).catch(() => null)));
   return records.filter(Boolean);
+}
+function reverseTimestamp() { return String(9999999999999 - Date.now()).padStart(13,"0"); }
+async function addPendingPointer(record) {
+  const pathname = "marketplace/queue/pending/" + reverseTimestamp() + "_" + record.id + ".json";
+  await put(pathname,JSON.stringify({id:record.id,type:record.type,pathname:"marketplace/"+record.type+"/"+record.id+".json"}),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+}
+async function publishPublicRecord(record) {
+  const pathname = "marketplace/public/" + record.type + "/" + reverseTimestamp() + "_" + record.id + ".json";
+  await put(pathname,JSON.stringify(publicRecord(record)),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+}
+async function listPublicRecords(type,cursor) {
+  const options={prefix:"marketplace/public/"+type+"/",limit:40};
+  if(cursor) options.cursor=cursor;
+  const page=await list(options);
+  const records=await Promise.all(page.blobs.map(blob=>readRecord(blob.pathname).catch(()=>null)));
+  return {records:records.filter(Boolean),cursor:page.hasMore?page.cursor:null};
 }
 function publicRecord(record) {
   return {
@@ -195,6 +210,8 @@ async function handleSubmit(req,res,body) {
   if (record.status==="approved") record.reviewedAt=record.moderation.decidedAt;
   try {
     await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+    if(record.status==="pending") await addPendingPointer(record);
+    if(record.status==="approved") await publishPublicRecord(record);
     const messages={
       auto_approved:"Your listing passed ZOVARO's automated checks and is now published. Automated screening is not a guarantee of legality, authenticity or seller identity.",
       auto_rejected:"Your listing was not published because it triggered a prohibited-content or safety rule. You may appeal if you believe this was a mistake.",
@@ -209,15 +226,16 @@ async function handleSubmit(req,res,body) {
 
 async function handleAdminGet(req,res) {
   if (!isAdmin(req)) return res.status(401).json({error:"Admin session missing or expired."});
-  const [jobs,products,reports,appeals]=await Promise.all([
-    latestRecords("marketplace/job/",500),latestRecords("marketplace/product/",500),
-    latestRecords("marketplace/reports/",200),latestRecords("marketplace/appeals/",200)
+  const [queue,reports,appeals]=await Promise.all([
+    list({prefix:"marketplace/queue/pending/",limit:100}),
+    latestRecords("marketplace/reports/",100),
+    latestRecords("marketplace/appeals/",100)
   ]);
-  const all=[...jobs,...products];
+  const pointers=await Promise.all(queue.blobs.map(blob=>readRecord(blob.pathname).catch(()=>null)));
+  const pending=await Promise.all(pointers.filter(Boolean).map(pointer=>readRecord(pointer.pathname).catch(()=>null)));
   return res.status(200).json({
-    pending:all.filter(x=>x.status==="pending"),
-    autoApproved:all.filter(x=>x.moderation?.action==="auto_approved").length,
-    autoRejected:all.filter(x=>x.moderation?.action==="auto_rejected").length,
+    pending:pending.filter(x=>x&&x.status==="pending"),
+    pendingCursor:queue.hasMore?queue.cursor:null,
     reports:reports.filter(x=>x.status==="open"),
     appeals:appeals.filter(x=>x.status==="open")
   });
@@ -238,6 +256,11 @@ async function handleAdminPost(req,res,body) {
     record.reviewedAt=new Date().toISOString();
     record.moderation={...(record.moderation||{}),action:"manual_"+decision,mode:"human",decidedAt:record.reviewedAt,policyVersion:POLICY_VERSION};
     await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    const queuePage=await list({prefix:"marketplace/queue/pending/",limit:1000});
+    const pointers=await Promise.all(queuePage.blobs.map(async blob=>({blob,record:await readRecord(blob.pathname).catch(()=>null)})));
+    const found=pointers.find(item=>item.record?.id===id);
+    if(found) await del(found.blob.pathname);
+    if(record.status==="approved") await publishPublicRecord(record);
     return res.status(200).json({id,status:record.status});
   }
   if (action==="close_case") {
@@ -281,13 +304,11 @@ export default async function handler(req,res) {
     }
     const type=url.searchParams.get("type");
     if (type&&!["job","product"].includes(type)) return res.status(400).json({error:"Invalid listing type."});
+    if (!type) return res.status(400).json({error:"A listing type is required."});
     try {
-      const types=type?[type]:["job","product"];
-      const groups=await Promise.all(types.map(async t=>(await latestRecords(`marketplace/${t}/`,500))
-        .filter(record=>record.status==="approved")
-        .sort((a,b)=>Date.parse(b.reviewedAt||b.createdAt)-Date.parse(a.reviewedAt||a.createdAt))
-        .map(publicRecord)));
-      return res.status(200).json(type?groups[0]:{jobs:groups[0],products:groups[1]});
+      const result=await listPublicRecords(type,url.searchParams.get("cursor")||"");
+      res.setHeader("X-Zovaro-Next-Cursor",result.cursor||"");
+      return res.status(200).json(result.records);
     } catch(error){console.error("ZOVARO marketplace read error:",error);return res.status(503).json({error:"Marketplace listings are temporarily unavailable."});}
   }
   if (req.method!=="POST"){res.setHeader("Allow","GET, POST");return res.status(405).json({error:"Method not allowed."});}
