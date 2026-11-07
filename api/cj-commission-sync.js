@@ -57,8 +57,9 @@ async function writeJsonBlob(path, value) {
 async function fetchWithRetry(query, token) {
   let lastError;
   for (let attempt = 0; attempt < 5; attempt += 1) {
+    let response;
     try {
-      const response = await fetch(CJ_COMMISSION_API, {
+      response = await fetch(CJ_COMMISSION_API, {
         method: "POST",
         headers: {
           Authorization: "Bearer " + token,
@@ -68,46 +69,47 @@ async function fetchWithRetry(query, token) {
         body: JSON.stringify({ query }),
         signal: AbortSignal.timeout(45000)
       });
+    } catch (error) {
+      lastError = error;
+      if (attempt === 4) break;
+      const delay = Math.min(1500 * (2 ** attempt), 20000);
+      console.warn("CJ Commission Detail network retry " + (attempt + 1) + " in " + delay + " ms.");
+      await new Promise(resolve => setTimeout(resolve, delay));
+      continue;
+    }
 
-      const body = await response.text();
-      if (response.ok) {
-        let payload;
-        try {
-          payload = JSON.parse(body);
-        } catch {
-          throw new Error("CJ Commission Detail returned invalid JSON.");
-        }
-        if (payload.errors?.length) {
-          throw new Error(
-            "CJ Commission Detail GraphQL error: " +
-            payload.errors.map(item => item.message || "unknown error").join("; ")
-          );
-        }
-        const result = payload.data?.publisherCommissions;
-        if (!result || !Array.isArray(result.records)) {
-          throw new Error("CJ Commission Detail response is incomplete.");
-        }
-        return result;
-      }
-
+    const body = await response.text();
+    if (!response.ok) {
       const retryable = response.status === 429 || response.status >= 500;
       if (!retryable || attempt === 4) {
         throw new Error("CJ Commission Detail failed with HTTP " + response.status + ".");
       }
-
       const retryAfter = Number(response.headers.get("retry-after"));
       const delay = Number.isFinite(retryAfter) && retryAfter > 0
         ? Math.min(retryAfter * 1000, 60000)
         : Math.min(2000 * (2 ** attempt), 30000);
       console.warn("CJ Commission Detail rate/temporary limit; retrying in " + delay + " ms.");
       await new Promise(resolve => setTimeout(resolve, delay));
-    } catch (error) {
-      lastError = error;
-      if (attempt === 4) break;
-      const delay = Math.min(1500 * (2 ** attempt), 20000);
-      console.warn("CJ Commission Detail request retry " + (attempt + 1) + ": " + String(error.message || error));
-      await new Promise(resolve => setTimeout(resolve, delay));
+      continue;
     }
+
+    let payload;
+    try {
+      payload = JSON.parse(body);
+    } catch {
+      throw new Error("CJ Commission Detail returned invalid JSON.");
+    }
+    if (payload.errors?.length) {
+      throw new Error(
+        "CJ Commission Detail GraphQL error: " +
+        payload.errors.map(item => item.message || "unknown error").join("; ")
+      );
+    }
+    const result = payload.data?.publisherCommissions;
+    if (!result || !Array.isArray(result.records)) {
+      throw new Error("CJ Commission Detail response is incomplete.");
+    }
+    return result;
   }
   throw lastError || new Error("CJ Commission Detail request failed.");
 }
