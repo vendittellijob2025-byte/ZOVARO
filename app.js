@@ -1,6 +1,12 @@
 
 const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
+const $ = s => [...document.querySelectorAll(s)];
+
+const PRODUCT_PAGE_SIZE = 36;
+let activeResults = [];
+let activeResultsPage = 1;
+let activeResultsTitle = "Trending Products";
+let activeResultsMeta = "";
 
 const esc = s =>
   String(s).replace(
@@ -289,37 +295,65 @@ function renderCategories() {
 }
 
 
+function renderResultPage(append = false) {
+  const grid = $("#trendingGrid");
+  const start = (activeResultsPage - 1) * PRODUCT_PAGE_SIZE;
+  const visible = activeResults.slice(start, start + PRODUCT_PAGE_SIZE);
+
+  if (append) {
+    grid.insertAdjacentHTML("beforeend", visible.map(card).join(""));
+  } else {
+    grid.innerHTML = visible.length
+      ? visible.map(card).join("")
+      : `
+        <div class="empty-state">
+          <strong>No matching products</strong>
+          <span>Try another search or category.</span>
+        </div>
+      `;
+  }
+
+  const previousButton = $("#loadMoreProducts");
+  if (previousButton) previousButton.remove();
+
+  const shown = Math.min(activeResultsPage * PRODUCT_PAGE_SIZE, activeResults.length);
+  const countText = activeResults.length > PRODUCT_PAGE_SIZE
+    ? `Showing ${shown.toLocaleString()} of ${activeResults.length.toLocaleString()} products`
+    : `${activeResults.length.toLocaleString()} product${activeResults.length === 1 ? "" : "s"}`;
+
+  $("#resultsMeta").textContent = activeResultsMeta
+    ? `${activeResultsMeta} · ${countText}`
+    : countText;
+
+  if (shown < activeResults.length) {
+    const button = document.createElement("button");
+    button.id = "loadMoreProducts";
+    button.type = "button";
+    button.className = "text-btn";
+    button.style.display = "block";
+    button.style.margin = "28px auto 0";
+    button.textContent = `Load more (${(activeResults.length - shown).toLocaleString()} remaining)`;
+    button.addEventListener("click", () => {
+      activeResultsPage += 1;
+      renderResultPage(true);
+    });
+    grid.after(button);
+  }
+}
+
+
 function showResults(
   items,
   title = "Trending Products",
   meta = ""
 ) {
+  activeResults = Array.isArray(items) ? items : [];
+  activeResultsPage = 1;
+  activeResultsTitle = title;
+  activeResultsMeta = meta;
 
-  $("#resultsTitle").textContent =
-    title;
-
-  $("#resultsMeta").textContent =
-    meta ||
-    `${items.length} product${
-      items.length === 1
-        ? ""
-        : "s"
-    } in this preview catalog`;
-
-  $("#trendingGrid").innerHTML =
-    items.length
-      ? items.map(card).join("")
-      : `
-        <div class="empty-state">
-          <strong>
-            No matching products
-          </strong>
-
-          <span>
-            Try another search or category.
-          </span>
-        </div>
-      `;
+  $("#resultsTitle").textContent = activeResultsTitle;
+  renderResultPage(false);
 
   $("#dealGrid").innerHTML = "";
   $("#newGrid").innerHTML = "";
@@ -332,27 +366,35 @@ function showResults(
 
 
 function render() {
-
   renderCategories();
 
   showResults(
-    PRODUCTS.filter(
-      p => p.type === "trending"
-    ),
+    PRODUCTS.filter(p => p.type === "trending"),
     "Trending Products"
   );
 
-  $("#dealGrid").innerHTML =
-    PRODUCTS
-      .filter(p => p.discount)
-      .map(card)
-      .join("");
+  const deals = PRODUCTS.filter(p => p.discount);
+  $("#dealGrid").innerHTML = deals
+    .slice(0, PRODUCT_PAGE_SIZE)
+    .map(card)
+    .join("");
 
-  $("#newGrid").innerHTML =
-    PRODUCTS
-      .filter(p => p.type === "new")
-      .map(card)
-      .join("");
+  if (deals.length > PRODUCT_PAGE_SIZE) {
+    const moreDeals = document.createElement("button");
+    moreDeals.type = "button";
+    moreDeals.className = "text-btn";
+    moreDeals.style.display = "block";
+    moreDeals.style.margin = "24px auto 0";
+    moreDeals.textContent = `View all ${deals.length.toLocaleString()} deals`;
+    moreDeals.addEventListener("click", () => showResults(deals, "Best Deals"));
+    $("#dealGrid").after(moreDeals);
+  }
+
+  const newArrivals = PRODUCTS.filter(p => p.type === "new");
+  $("#newGrid").innerHTML = newArrivals
+    .slice(0, PRODUCT_PAGE_SIZE)
+    .map(card)
+    .join("");
 }
 
 
