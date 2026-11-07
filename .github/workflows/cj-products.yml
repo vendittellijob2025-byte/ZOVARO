@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Recheck CJ advertiser approvals and valid affiliate product links every 10 minutes.
-    - cron: "*/10 * * * *"
+    # Refresh joined advertisers and product feeds every six hours.
+    - cron: "17 */6 * * *"
 
   push:
     branches:
@@ -14,7 +14,6 @@ on:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
       - "app-cj-loader.js"
-      - ".github/workflows/cj-products.yml"
 
 permissions:
   contents: write
