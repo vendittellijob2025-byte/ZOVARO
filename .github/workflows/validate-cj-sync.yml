@@ -12,6 +12,10 @@ on:
       - "app-cj-loader.js"
       - "api/lead-track.js"
       - "api/tiktok-direct-post.js"
+      - "vercel.json"
+      - "lead-sales-dashboard.html"
+      - "api/lead-admin-events.js"
+      - "api/cj-commission-sync.js"
       - "data/catalog.json"
       - ".github/workflows/cj-products.yml"
       - ".github/workflows/validate-cj-sync.yml"
@@ -53,7 +57,20 @@ jobs:
           node --check app.js
           node --check app-cj-loader.js
           node --check api/lead-track.js
+          node --check api/cj-commission-sync.js
+          node --check api/lead-admin-events.js
           node --check api/tiktok-direct-post.js
+          node --check api/lead-track.js
+          node --input-type=module -e '
+            import fs from "node:fs";
+            import vm from "node:vm";
+            const html = fs.readFileSync("lead-sales-dashboard.html", "utf8");
+            const scripts = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)];
+            if (!scripts.length) throw new Error("Dashboard script not found.");
+            for (const script of scripts) new vm.Script(script[1], { filename: "lead-sales-dashboard.html" });
+            JSON.parse(fs.readFileSync("vercel.json", "utf8"));
+            console.log("Dashboard JavaScript and Vercel configuration are valid.");
+          '
 
       - name: Validate existing catalog integrity
         run: |
