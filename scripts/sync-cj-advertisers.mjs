@@ -181,6 +181,72 @@ function productQuery(advertiserId, offset) {
   ].join("\n");
 }
 
+function productTokenQuery(advertiserId, pageToken = null) {
+  const pageArgument = pageToken
+    ? ", page: " + JSON.stringify(pageToken)
+    : "";
+
+  return [
+    "query {",
+    "  products(companyId: \\"" + COMPANY_ID + "\\", partnerIds: [\\"" + advertiserId + "\\"], limit: 10000" + pageArgument + ") {",
+    "    nextPage",
+    "    resultList {",
+    "      id adId advertiserId advertiserName title description brand imageLink additionalImageLink link mobileLink",
+    "      price { amount currency }",
+    "      salePrice { amount currency }",
+    "      discountPercentage",
+    "      linkCode(pid: \\"" + PUBLISHER_ID + "\\") { clickUrl }",
+    "    }",
+    "    totalCount count",
+    "  }",
+    "}"
+  ].join("\\n");
+}
+
+async function getProductsBeyondTenThousand(advertiser, expectedTotal) {
+  const all = [];
+  let pageToken = null;
+  let pageNumber = 0;
+  const seenTokens = new Set();
+
+  while (true) {
+    pageNumber += 1;
+    const result = (await graphql(productTokenQuery(advertiser.id, pageToken))).products;
+    if (!result || !Array.isArray(result.resultList)) {
+      throw new Error("CJ returned an invalid token-paginated products response for advertiser " + advertiser.id);
+    }
+
+    const pageProducts = result.resultList;
+    if (!pageProducts.length) {
+      throw new Error("CJ returned an empty page before completing advertiser " + advertiser.id);
+    }
+
+    all.push(...pageProducts);
+    console.log("CJ advertiser " + advertiser.id + ": token page " + pageNumber + ", received " + pageProducts.length + "; accumulated " + all.length + " of " + expectedTotal + ".");
+
+    if (all.length > expectedTotal) {
+      throw new Error("CJ token pagination exceeded the advertised total for advertiser " + advertiser.id + "; existing catalog left untouched.");
+    }
+
+    const nextPage = result.nextPage;
+    if (!nextPage) break;
+    if (typeof nextPage !== "string" || seenTokens.has(nextPage)) {
+      throw new Error("CJ returned an invalid or repeated nextPage token for advertiser " + advertiser.id);
+    }
+    seenTokens.add(nextPage);
+    pageToken = nextPage;
+
+    if (pageNumber > 1000) {
+      throw new Error("CJ token pagination exceeded the safety limit for advertiser " + advertiser.id);
+    }
+  }
+
+  if (all.length !== expectedTotal) {
+    throw new Error("CJ token pagination incomplete for advertiser " + advertiser.id + ": received " + all.length + " of " + expectedTotal + "; existing catalog left untouched.");
+  }
+  return all;
+}
+
 async function getProductsForAdvertiser(advertiser) {
   const all = [];
   let offset = 0;
@@ -200,7 +266,8 @@ async function getProductsForAdvertiser(advertiser) {
         throw new Error("CJ returned an invalid totalCount for advertiser " + advertiser.id);
       }
       if (totalCount > MAX_OFFSET_RESULTS) {
-        throw new Error("Advertiser " + advertiser.id + " has more than 10,000 products; pagination-token support is required before importing it safely.");
+        console.log("CJ advertiser " + advertiser.id + " exceeds 10,000 products; switching to CJ nextPage token pagination.");
+        return await getProductsBeyondTenThousand(advertiser, totalCount);
       }
     }
 
@@ -208,16 +275,9 @@ async function getProductsForAdvertiser(advertiser) {
     const pageCount = pageProducts.length;
     console.log("CJ advertiser " + advertiser.id + ": page " + pageNumber + ", received " + pageCount + " of " + totalCount + " products.");
 
-    if (pageCount === 0) {
-      break;
-    }
-
+    if (pageCount === 0) break;
     all.push(...pageProducts);
-
-    if (all.length >= totalCount) {
-      break;
-    }
-
+    if (all.length >= totalCount) break;
     offset += pageCount;
 
     if (pageNumber > MAX_OFFSET_RESULTS) {
