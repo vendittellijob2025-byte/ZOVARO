@@ -1,13 +1,31 @@
 name: Validate ZOVARO CJ catalog sync
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sync-cj-advertisers.mjs"
+      - "scripts/translate-to-english.mjs"
+      - "scripts/create-tiktok-video.mjs"
+      - "app.js"
+      - "app-cj-loader.js"
+      - "api/lead-track.js"
+      - "api/tiktok-direct-post.js"
+      - "data/catalog.json"
+      - ".github/workflows/cj-products.yml"
+      - ".github/workflows/validate-cj-sync.yml"
   pull_request:
     branches:
       - main
     paths:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
+      - "scripts/create-tiktok-video.mjs"
+      - "app.js"
       - "app-cj-loader.js"
+      - "api/lead-track.js"
+      - "api/tiktok-direct-post.js"
       - "data/catalog.json"
       - ".github/workflows/cj-products.yml"
       - ".github/workflows/validate-cj-sync.yml"
@@ -25,13 +43,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Check JavaScript syntax
         run: |
           node --check scripts/sync-cj-advertisers.mjs
           node --check scripts/translate-to-english.mjs
+          node --check scripts/create-tiktok-video.mjs
+          node --check app.js
           node --check app-cj-loader.js
+          node --check api/lead-track.js
+          node --check api/tiktok-direct-post.js
 
       - name: Validate existing catalog integrity
         run: |
@@ -39,7 +61,13 @@ jobs:
             import fs from "node:fs";
             const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
             if (!Array.isArray(catalog.products) || catalog.products.length === 0) throw new Error("Catalog products array is empty.");
-            const invalid = catalog.products.filter(p => !p || p.joinedStatus !== true || !/^https?:\/\//i.test(p.clickUrl || ""));
-            if (invalid.length) throw new Error("Existing catalog contains " + invalid.length + " products without a valid joined status and click URL.");
+            const invalid = catalog.products.filter(p => !p || p.joinedStatus !== true || !/^https:\/\//i.test(p.clickUrl || ""));
+            if (invalid.length) throw new Error("Existing catalog contains " + invalid.length + " products without a valid joined status and HTTPS click URL.");
+            const ids = new Set();
+            for (const p of catalog.products) {
+              const key = [p.source || "", p.advertiserId || "", p.id || ""].join("|");
+              if (ids.has(key)) throw new Error("Duplicate catalog product: " + key);
+              ids.add(key);
+            }
             console.log("Existing catalog valid: " + catalog.products.length + " products.");
           '
