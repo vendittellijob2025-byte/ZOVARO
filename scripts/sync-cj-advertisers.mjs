@@ -559,6 +559,39 @@ for (const product of imported) {
 }
 
 const finalProducts = [...merged.values()];
+
+// Keep the public catalog lean: the storefront only needs these fields.
+// Long descriptions and unused feed metadata otherwise make the 50k+ product
+// JSON unnecessarily large and slow to download on mobile connections.
+function compactCatalogProduct(product) {
+  const compact = {
+    source: product.source || "CJ",
+    network: product.network || NETWORKS.CJ.network,
+    id: String(product.id || ""),
+    title: String(product.title || "").slice(0, 240),
+    description: String(product.englishDescription || product.description || "").slice(0, 320),
+    brand: String(product.brand || "").slice(0, 100),
+    advertiserId: String(product.advertiserId || ""),
+    advertiserName: String(product.advertiserName || "CJ Affiliate").slice(0, 120),
+    category: String(product.category || "Featured").slice(0, 80),
+    imageLink: cleanUrl(product.imageLink),
+    destination: cleanUrl(product.destination),
+    clickUrl: cleanUrl(product.clickUrl),
+    price: product.price ?? null,
+    salePrice: product.salePrice ?? null,
+    currency: String(product.currency || "USD").slice(0, 8),
+    discountPercentage: product.discountPercentage ?? null,
+    joinedStatus: product.joinedStatus === true
+  };
+
+  if (product.englishTitle) compact.englishTitle = String(product.englishTitle).slice(0, 240);
+  if (product.englishCategory) compact.englishCategory = String(product.englishCategory).slice(0, 80);
+  if (product.englishDescription) compact.englishDescription = String(product.englishDescription).slice(0, 320);
+
+  return compact;
+}
+
+const compactProducts = finalProducts.map(compactCatalogProduct);
 const advertiserRecords = new Map(
   (Array.isArray(catalog.advertisers) ? catalog.advertisers : []).map(item => [String(item.id), item])
 );
@@ -592,8 +625,8 @@ const updatedCatalog = {
   promotionalPropertyId: PUBLISHER_ID,
   advertisers: [...advertiserRecords.values()],
   rowsReceived: received,
-  productCount: finalProducts.length,
-  products: finalProducts,
+  productCount: compactProducts.length,
+  products: compactProducts,
   sync: {
     ...(catalog.sync || {}),
     lastSuccessfulSyncAt: now,
@@ -613,11 +646,12 @@ const updatedCatalog = {
 
 await fs.mkdir("data", { recursive: true });
 const tempPath = CATALOG_PATH + ".tmp";
-await fs.writeFile(tempPath, JSON.stringify(updatedCatalog, null, 2), "utf8");
+await fs.writeFile(tempPath, JSON.stringify(updatedCatalog), "utf8");
 await fs.rename(tempPath, CATALOG_PATH);
 
 console.log("ZOVARO CJ catalog merge completed.");
 console.log("Products received from CJ: " + received);
 console.log("Products with valid CJ tracking links: " + imported.length);
 console.log("Previous catalog products preserved: " + previousProducts.length);
-console.log("Total products in merged catalog: " + finalProducts.length);
+console.log("Total products in merged catalog: " + compactProducts.length);
+console.log("Compact catalog product fields saved; long descriptions truncated to 320 characters.");
