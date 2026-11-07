@@ -42,7 +42,7 @@ jobs:
       # The public free translation endpoint is rate-limited and must not block
       # importing valid affiliate products or saving the catalog.
 
-      - name: Commit updated catalog and translations
+      - name: Commit updated compact catalog
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
