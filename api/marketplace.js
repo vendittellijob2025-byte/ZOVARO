@@ -73,6 +73,7 @@ function reverseTimestamp() { return String(9999999999999 - Date.now()).padStart
 async function addPendingPointer(record) {
   const pathname = "marketplace/queue/pending/" + reverseTimestamp() + "_" + record.id + ".json";
   await put(pathname,JSON.stringify({id:record.id,type:record.type,pathname:"marketplace/"+record.type+"/"+record.id+".json"}),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
+  return pathname;
 }
 async function publishPublicRecord(record) {
   const pathname = "marketplace/public/" + record.type + "/" + reverseTimestamp() + "_" + record.id + ".json";
@@ -172,7 +173,6 @@ function validateSubmission(body) {
     publicContact:body.publicContact===true, status:"pending", createdAt:new Date().toISOString()
   };
   if (record.title.length<4 || record.description.length<20 || !record.location || !EMAIL_RE.test(record.contactEmail)) return { error:"Please complete all required fields with valid information." };
-  if (!record.publicContact) return { error:"Explicit consent to display the contact email is required." };
   if (type==="job") {
     record.company=clean(body.company,100);
     record.companyWebsite=clean(body.companyWebsite,200);
@@ -217,7 +217,10 @@ async function handleSubmit(req,res,body) {
   if (record.status==="approved") record.reviewedAt=record.moderation.decidedAt;
   try {
     await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:false,contentType:"application/json"});
-    if(record.status==="pending") await addPendingPointer(record);
+    if(record.status==="pending") {
+      record.queuePath=await addPendingPointer(record);
+      await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    }
     if(record.status==="approved") {
       await publishPublicRecord(record);
       await put(`marketplace/${record.type}/${record.id}.json`,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
@@ -272,10 +275,16 @@ async function handleAdminPost(req,res,body) {
     record.moderationHistory=[...(record.moderationHistory||[]),event].slice(-20);
     record.moderation={...(record.moderation||{}),...event};
     await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
-    const queuePage=await list({prefix:"marketplace/queue/pending/",limit:1000});
-    const pointers=await Promise.all(queuePage.blobs.map(async blob=>({blob,record:await readRecord(blob.pathname).catch(()=>null)})));
-    const found=pointers.find(item=>item.record?.id===id);
-    if(found) await del(found.blob.pathname);
+    if(record.queuePath) {
+      await del(record.queuePath).catch(()=>{});
+      record.queuePath=null;
+      await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
+    } else {
+      const queuePage=await list({prefix:"marketplace/queue/pending/",limit:1000});
+      const pointers=await Promise.all(queuePage.blobs.map(async blob=>({blob,record:await readRecord(blob.pathname).catch(()=>null)})));
+      const found=pointers.find(item=>item.record?.id===id);
+      if(found) await del(found.blob.pathname);
+    }
     if(record.status==="approved") {
       await publishPublicRecord(record);
       await put(pathname,JSON.stringify(record),{access:"private",addRandomSuffix:false,allowOverwrite:true,contentType:"application/json"});
