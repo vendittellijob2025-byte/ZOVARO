@@ -86,6 +86,16 @@
       }
       addText(card, "h3", "", item.title);
       if (item.company) addText(card, "p", "marketplace-company", item.company);
+      if (item.sellerDisplayName) addText(card, "p", "marketplace-company", item.sellerDisplayName + (item.sellerCountry ? " · " + item.sellerCountry : ""));
+      if (item.companyWebsite) {
+        const site = document.createElement("a");
+        site.href = item.companyWebsite;
+        site.target = "_blank";
+        site.rel = "noopener noreferrer";
+        site.className = "marketplace-company";
+        site.textContent = "OFFICIAL COMPANY WEBSITE";
+        card.appendChild(site);
+      }
       if (item.price != null) addText(card, "p", "marketplace-price", new Intl.NumberFormat(undefined, { style: "currency", currency: item.currency || "USD" }).format(Number(item.price)));
       addText(card, "p", "marketplace-location", item.location);
       addText(card, "p", "marketplace-description", item.description);
