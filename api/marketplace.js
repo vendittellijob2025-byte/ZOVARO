@@ -226,8 +226,12 @@ async function handleSubmit(req,res,body) {
 
 async function handleAdminGet(req,res) {
   if (!isAdmin(req)) return res.status(401).json({error:"Admin session missing or expired."});
+  const requestUrl=new URL(req.url||"/","https://zovaro.vercel.app");
+  const queueOptions={prefix:"marketplace/queue/pending/",limit:100};
+  const queueCursor=requestUrl.searchParams.get("cursor");
+  if(queueCursor) queueOptions.cursor=queueCursor;
   const [queue,reports,appeals]=await Promise.all([
-    list({prefix:"marketplace/queue/pending/",limit:100}),
+    list(queueOptions),
     latestRecords("marketplace/reports/",100),
     latestRecords("marketplace/appeals/",100)
   ]);
