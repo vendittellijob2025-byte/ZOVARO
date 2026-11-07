@@ -55,7 +55,9 @@
         "attribution": "Embeddable inquiry tool attributes inquiries to ZOVARO; direct referrals recorded and assigned.",
         "catalogue": "Vehicle descriptions, current prices and locations are available on Edel & Stark website; catalogue feed/API requires technical clarification.",
         "media": "Photos available on request; explicit image and brand-use permission still pending.",
-        "fulfilment": "Customer contracts and pays Edel & Stark; Edel & Stark handles customer verification and fulfilment."
+        "fulfilment": "Customer contracts and pays Edel & Stark; Edel & Stark handles customer verification and fulfilment.",
+        "followUpSentAt": "2026-11-07T09:25:27Z",
+        "followUpThreadId": "1a1b00e5da7ecd17"
       }
     },
     {
@@ -278,7 +280,7 @@
       },
       "nextAction": "Await partner reply on international eligibility, commission and payout terms, tracking, data feed/widget and approved media permissions.",
       "sourceChecked": "2026-11-07",
-      "contactedAt": "2026-11-07T09:27:00Z",
+      "contactedAt": "2026-11-07T09:26:22Z",
       "contactEvidence": "Gmail sent thread 1a1b55499f867f5f"
     },
     {
@@ -327,7 +329,7 @@
       "nextAction": "Await partner reply on international eligibility, commission and payout terms, tracking, data feed/widget and approved media permissions.",
       "sourceChecked": "2026-11-07",
       "notes": "Free to join; monthly bank transfer from €50 after the charter starts and is fully paid. Website content and photos require separate permission.",
-      "contactedAt": "2026-11-07T09:27:00Z",
+      "contactedAt": "2026-11-07T09:26:24Z",
       "contactEvidence": "Gmail sent thread 1a1b554a183f6e96"
     }
   ]
