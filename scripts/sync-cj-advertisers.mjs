@@ -569,13 +569,12 @@ function compactCatalogProduct(product) {
     network: product.network || NETWORKS.CJ.network,
     id: String(product.id || ""),
     title: String(product.title || "").slice(0, 240),
-    description: String(product.englishDescription || product.description || "").slice(0, 320),
+    description: String(product.englishDescription || product.description || "").slice(0, 180),
     brand: String(product.brand || "").slice(0, 100),
     advertiserId: String(product.advertiserId || ""),
     advertiserName: String(product.advertiserName || "CJ Affiliate").slice(0, 120),
     category: String(product.category || "Featured").slice(0, 80),
     imageLink: cleanUrl(product.imageLink),
-    destination: cleanUrl(product.destination),
     clickUrl: cleanUrl(product.clickUrl),
     price: product.price ?? null,
     salePrice: product.salePrice ?? null,
@@ -586,7 +585,6 @@ function compactCatalogProduct(product) {
 
   if (product.englishTitle) compact.englishTitle = String(product.englishTitle).slice(0, 240);
   if (product.englishCategory) compact.englishCategory = String(product.englishCategory).slice(0, 80);
-  if (product.englishDescription) compact.englishDescription = String(product.englishDescription).slice(0, 320);
 
   return compact;
 }
@@ -654,4 +652,4 @@ console.log("Products received from CJ: " + received);
 console.log("Products with valid CJ tracking links: " + imported.length);
 console.log("Previous catalog products preserved: " + previousProducts.length);
 console.log("Total products in merged catalog: " + compactProducts.length);
-console.log("Compact catalog product fields saved; long descriptions truncated to 320 characters.");
+console.log("Compact catalog product fields saved; descriptions truncated to 180 characters.");
