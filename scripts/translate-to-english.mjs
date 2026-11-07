@@ -4,6 +4,7 @@ const CATALOG_PATH = "data/catalog.json";
 const CACHE_PATH = "data/translation-cache.json";
 
 const TARGET_LANGUAGE = "en";
+const MAX_NEW_TRANSLATIONS_PER_RUN = 300;
 
 async function readJson(path, fallback) {
   try {
@@ -112,6 +113,12 @@ async function translateCached(text) {
     return cache[key];
   }
 
+  if (translatedCount >= MAX_NEW_TRANSLATIONS_PER_RUN) {
+    throw new Error(
+      `Safe translation batch limit reached (${MAX_NEW_TRANSLATIONS_PER_RUN} new strings).`
+    );
+  }
+
   const translated =
     await translateText(key);
 
@@ -183,21 +190,13 @@ for (
 
 await fs.writeFile(
   CATALOG_PATH,
-  JSON.stringify(
-    catalog,
-    null,
-    2
-  ),
+  JSON.stringify(catalog),
   "utf8"
 );
 
 await fs.writeFile(
   CACHE_PATH,
-  JSON.stringify(
-    cache,
-    null,
-    2
-  ),
+  JSON.stringify(cache),
   "utf8"
 );
 
