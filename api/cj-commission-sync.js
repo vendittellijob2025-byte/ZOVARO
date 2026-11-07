@@ -1,7 +1,7 @@
 import { get, put } from "@vercel/blob";
 
 const CJ_COMMISSION_API = "https://commissions.api.cj.com/query";
-const PUBLISHER_ID = "101881140";
+const PUBLISHER_CID = "8068799";
 const STATE_PATH = "cj-commissions/state.json";
 const BACKFILL_DAYS = 30;
 const MAX_PAGES = 100;
@@ -116,7 +116,7 @@ async function fetchWithRetry(query, token) {
 
 function buildQuery({ sincePostingDate, beforePostingDate, sinceCommissionId }) {
   const args = [
-    "forPublishers: " + JSON.stringify([PUBLISHER_ID]),
+    "forPublishers: " + JSON.stringify([PUBLISHER_CID]),
     "sincePostingDate: " + JSON.stringify(sincePostingDate),
     "beforePostingDate: " + JSON.stringify(beforePostingDate),
     'actionTypes: ["sim_sale", "item_sale", "sim_lead", "item_lead"]'
@@ -313,7 +313,7 @@ export default async function handler(req, res) {
 
     const state = {
       schema: "zovaro.cj-commission-state.v1",
-      publisher_id: PUBLISHER_ID,
+      publisher_cid: PUBLISHER_CID,
       max_commission_id: latestCursor,
       last_synced_at: new Date().toISOString(),
       backfill_window_days: BACKFILL_DAYS,
