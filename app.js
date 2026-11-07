@@ -1,6 +1,6 @@
 
 const $ = s => document.querySelector(s);
-const $ = s => [...document.querySelectorAll(s)];
+const $$ = s => [...document.querySelectorAll(s)];
 
 const PRODUCT_PAGE_SIZE = 36;
 let activeResults = [];
