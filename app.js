@@ -57,6 +57,31 @@ const CJ_TRACKED_ADVERTISERS = Object.freeze({
   "5384937": "cj-ecosmetics"
 });
 
+// Preserve readable IDs for existing advertisers and automatically track
+// every new joined CJ advertiser without requiring another code edit.
+function getCjPartnerId(product) {
+  const advertiserId = String(product.advertiserId || "").trim();
+  if (!advertiserId) return "";
+
+  const knownPartnerId = CJ_TRACKED_ADVERTISERS[advertiserId];
+  if (knownPartnerId) return knownPartnerId;
+
+  const merchantName = String(
+    product.merchant || product.advertiserName || "advertiser"
+  );
+  const merchantSlug = merchantName
+    .normalize("NFKD")
+    .replace(/[\\u0300-\\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 32) || "advertiser";
+  const safeAdvertiserId = advertiserId
+    .replace(/[^a-z0-9_-]/gi, "")
+    .slice(0, 16);
+  return ("cj-" + merchantSlug + "-" + safeAdvertiserId).slice(0, 60);
+}
+
 // Match the server-side allowlist. If CJ returns a different tracking host,
 // keep the original affiliate URL working rather than sending a broken redirect.
 const CJ_TRACKING_HOSTS = new Set([
@@ -73,7 +98,7 @@ function getProductClickUrl(product) {
 
   const partnerId =
     String(product.source || "").toUpperCase() === "CJ"
-      ? CJ_TRACKED_ADVERTISERS[String(product.advertiserId || "")]
+      ? getCjPartnerId(product)
       : "";
 
   if (!partnerId) return originalUrl;
