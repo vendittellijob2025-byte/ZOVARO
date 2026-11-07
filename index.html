@@ -1157,6 +1157,7 @@ footer{
 }
 
 </style>
+  <link rel="stylesheet" href="marketplace.css">
 </head>
 
 
@@ -1962,245 +1963,64 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     SELL PRODUCTS — TEMPORARILY UNDER MAINTENANCE
-     ===================================================== -->
-
-<section
-  id="sellProductsView"
-  class="view hidden"
->
-
-  <button
-    type="button"
-    class="back-button"
-    id="backFromSell"
-  >
-    ← Back
-  </button>
-
-
-  <h2 class="choice-title">
-    SELL PRODUCTS
-  </h2>
-
-
-  <p class="choice-subtitle">
-    This section is temporarily under maintenance while we make improvements.
-    It will be available again soon.
-    We apologize for the inconvenience and thank you for your understanding.
-  </p>
-
-
-  <div class="form-panel">
-
-    <p
-      style="
-        margin:0;
-        text-align:center;
-        color:#b7cbe0;
-        font-size:14px;
-        line-height:1.8;
-      "
-    >
-      We are currently working on this section
-      to improve the ZOVARO selling experience.
-    </p>
-
-    <!--
-      Kept hidden so the existing JavaScript
-      remains compatible and no errors are generated.
-    -->
-
-    <button
-      type="button"
-      id="sellSubmit"
-      hidden
-      aria-hidden="true"
-    >
-      SUBMIT PRODUCT
-    </button>
-
+<!-- SELL PRODUCTS: listings are published only after moderation -->
+<section id="sellProductsView" class="view hidden marketplace-view">
+  <button type="button" class="back-button" id="backFromSell">← Back</button>
+  <h2 class="choice-title">SELL PRODUCTS</h2>
+  <p class="choice-subtitle">List a pre-owned product. Every listing is reviewed before it appears publicly.</p>
+  <div class="marketplace-layout">
+    <form id="productListingForm" class="form-panel marketplace-form">
+      <h3>Create a product listing</h3>
+      <div class="form-group"><label for="productTitle">Product title</label><input id="productTitle" name="title" required maxlength="100" placeholder="e.g. Mountain bike, barely used"></div>
+      <div class="form-group"><label for="productCategory">Category</label><select id="productCategory" name="category" required><option value="">Choose a category</option><option>Electronics</option><option>Home &amp; Living</option><option>Fashion</option><option>Sports</option><option>Baby &amp; Kids</option><option>Vehicles</option><option>Other</option></select></div>
+      <div class="marketplace-fields">
+        <div class="form-group"><label for="productPrice">Asking price</label><input id="productPrice" name="price" type="number" min="0.01" max="100000000" step="0.01" required placeholder="0.00"></div>
+        <div class="form-group"><label for="productCurrency">Currency</label><select id="productCurrency" name="currency"><option>USD</option><option>EUR</option><option>COP</option><option>GBP</option></select></div>
+      </div>
+      <div class="form-group"><label for="productCondition">Condition</label><select id="productCondition" name="condition" required><option value="">Choose condition</option><option>New</option><option>Like new</option><option>Very good</option><option>Good</option><option>Fair</option></select></div>
+      <div class="form-group"><label for="productLocation">Location</label><input id="productLocation" name="location" required maxlength="100" placeholder="City, country"></div>
+      <div class="form-group"><label for="productDescription">Description</label><textarea id="productDescription" name="description" required maxlength="2000" placeholder="Describe the product, its condition and any relevant details."></textarea></div>
+      <div class="form-group"><label for="productContact">Contact email</label><input id="productContact" name="contactEmail" type="email" required maxlength="254" placeholder="you@example.com"></div>
+      <label class="marketplace-consent"><input type="checkbox" name="publicContact" required><span>I agree that this email address may be displayed publicly on the listing after approval.</span></label>
+      <label class="marketplace-honeypot" aria-hidden="true">Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+      <button class="form-submit" type="submit">SUBMIT FOR REVIEW</button>
+      <p class="marketplace-status" id="productFormStatus" role="status" aria-live="polite"></p>
+      <p class="marketplace-note">Your listing stays private until reviewed. Do not include payment details, passwords or sensitive personal information.</p>
+    </form>
+    <aside class="marketplace-info"><strong>How selling works</strong><ol><li>Submit your product details.</li><li>ZOVARO reviews the listing for quality and safety.</li><li>Approved listings appear in the public marketplace.</li><li>Interested buyers contact you using the email you explicitly agreed to publish.</li></ol><p>ZOVARO does not process payments or guarantee transactions between users.</p></aside>
   </div>
-
 </section>
 
-
-<section
-  id="lookingJobView"
-  class="view hidden"
->
-
-  <button
-    type="button"
-    class="back-button"
-    id="backFromLookingJob"
-  >
-    ← Back
-  </button>
-
-
-  <h2 class="choice-title">
-    LOOKING FOR A JOB
-  </h2>
-
-
-  <p class="choice-subtitle">
-    This section will contain the ZOVARO
-    job search system.
-  </p>
-
+<section id="lookingJobView" class="view hidden marketplace-view">
+  <button type="button" class="back-button" id="backFromLookingJob">← Back</button>
+  <h2 class="choice-title">LOOKING FOR A JOB</h2>
+  <p class="choice-subtitle">Browse opportunities published by employers and reviewed by ZOVARO.</p>
+  <div class="marketplace-toolbar"><input id="jobSearchInput" type="search" maxlength="100" placeholder="Search job title, company or location" aria-label="Search jobs"><button type="button" id="jobSearchButton">SEARCH</button></div>
+  <div id="jobListings" class="marketplace-listings" aria-live="polite"></div>
+  <p id="jobListingsEmpty" class="marketplace-empty">No approved job opportunities are available yet. Check again soon.</p>
 </section>
 
-
-<section
-  id="offerJobView"
-  class="view hidden"
->
-
-  <button
-    type="button"
-    class="back-button"
-    id="backFromOfferJob"
-  >
-    ← Back
-  </button>
-
-
-  <h2 class="choice-title">
-    OFFER A JOB
-  </h2>
-
-
-  <p class="choice-subtitle">
-    Publish your opportunity and find
-    the right worker.
-  </p>
-
-
-  <div class="form-panel">
-
-    <div class="form-group">
-
-      <label for="jobTitle">
-        Job title
-      </label>
-
-      <input
-        id="jobTitle"
-        type="text"
-        placeholder="What position are you offering?"
-      >
-
+<section id="offerJobView" class="view hidden marketplace-view">
+  <button type="button" class="back-button" id="backFromOfferJob">← Back</button>
+  <h2 class="choice-title">OFFER A JOB</h2>
+  <p class="choice-subtitle">Submit a genuine job opportunity. Listings are checked before publication.</p>
+  <form id="jobListingForm" class="form-panel marketplace-form">
+    <div class="form-group"><label for="jobTitle">Job title</label><input id="jobTitle" name="title" required maxlength="100" placeholder="What position are you offering?"></div>
+    <div class="form-group"><label for="jobCompany">Company / Employer</label><input id="jobCompany" name="company" required maxlength="100" placeholder="Company or employer name"></div>
+    <div class="marketplace-fields">
+      <div class="form-group"><label for="jobType">Employment type</label><select id="jobType" name="jobType" required><option value="">Choose type</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Freelance</option><option>Temporary</option><option>Internship</option></select></div>
+      <div class="form-group"><label for="jobWorkplace">Workplace</label><select id="jobWorkplace" name="workplace" required><option value="">Choose workplace</option><option>On-site</option><option>Hybrid</option><option>Remote</option></select></div>
     </div>
-
-
-    <div class="form-group">
-
-      <label for="jobCompany">
-        Company / Employer
-      </label>
-
-      <input
-        id="jobCompany"
-        type="text"
-        placeholder="Company or employer name"
-      >
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="jobType">
-        Job type
-      </label>
-
-      <select
-        id="jobType"
-      >
-
-        <option>
-          Full-time
-        </option>
-
-        <option>
-          Part-time
-        </option>
-
-        <option>
-          Freelance
-        </option>
-
-        <option>
-          Remote
-        </option>
-
-        <option>
-          Temporary
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="jobLocation">
-        Location
-      </label>
-
-      <input
-        id="jobLocation"
-        type="text"
-        placeholder="City / Country / Remote"
-      >
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="jobDescription">
-        Job description
-      </label>
-
-      <textarea
-        id="jobDescription"
-        placeholder="Describe the job..."
-      ></textarea>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="jobContact">
-        Contact
-      </label>
-
-      <input
-        id="jobContact"
-        type="text"
-        placeholder="How can applicants contact you?"
-      >
-
-    </div>
-
-
-    <button
-      type="button"
-      class="form-submit"
-      id="jobSubmit"
-    >
-      SUBMIT JOB
-    </button>
-
-  </div>
-
+    <div class="form-group"><label for="jobLocation">Location</label><input id="jobLocation" name="location" required maxlength="100" placeholder="City, country or Remote worldwide"></div>
+    <div class="form-group"><label for="jobDescription">Job description</label><textarea id="jobDescription" name="description" required maxlength="3000" placeholder="Responsibilities, requirements, salary range (if available), and application details."></textarea></div>
+    <div class="form-group"><label for="jobContact">Recruitment contact email</label><input id="jobContact" name="contactEmail" type="email" required maxlength="254" placeholder="recruitment@company.com"></div>
+    <label class="marketplace-consent"><input type="checkbox" name="publicContact" required><span>I am authorized to publish this opportunity and agree that this contact email will be displayed publicly after approval.</span></label>
+    <label class="marketplace-honeypot" aria-hidden="true">Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+    <button type="submit" class="form-submit">SUBMIT JOB FOR REVIEW</button>
+    <p class="marketplace-status" id="jobFormStatus" role="status" aria-live="polite"></p>
+    <p class="marketplace-note">No recruitment fees, upfront payments or requests for passwords are permitted. ZOVARO does not verify employment contracts or act as the employer.</p>
+  </form>
 </section>
-
 
 <section
   id="tiktok"
@@ -2389,6 +2209,7 @@ footer{
 
 <script src="app-cj-loader.js"></script>
 <script src="app-direct-partners-loader.js"></script>
+<script src="marketplace.js" defer></script>
 
 
 <script>
