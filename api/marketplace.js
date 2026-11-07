@@ -2,12 +2,12 @@ import crypto from "node:crypto";
 import { del, get, list, put } from "@vercel/blob";
 
 const rateLimits = new Map();
-const EMAIL_RE = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$/i;
+const EMAIL_RE = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const FREE_EMAILS = new Set(["gmail.com","yahoo.com","outlook.com","hotmail.com","live.com","icloud.com","aol.com","proton.me","protonmail.com","yandex.com","mail.com","gmx.com"]);
 const POLICY_VERSION = "2026-11-07.1";
 
 function clean(value, max) {
-  return String(value ?? "").replace(/[\\u0000-\\u001f\\u007f]/g, " ").replace(/\\s+/g, " ").trim().slice(0, max);
+  return String(value ?? "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
 }
 function readBody(req) {
   if (req.body && typeof req.body === "object") return req.body;
@@ -27,7 +27,7 @@ function rateLimit(req, bucket, max, windowMs) {
   return true;
 }
 function normalise(value) {
-  return String(value || "").normalize("NFKD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 function includesAny(text, terms) {
   return terms.find(term => text.includes(term)) || "";
@@ -37,7 +37,7 @@ function websiteDomain(value) {
   try {
     const url = new URL(value);
     if (url.protocol !== "https:" || url.username || url.password) return "";
-    return url.hostname.toLowerCase().replace(/^www\\./, "");
+    return url.hostname.toLowerCase().replace(/^www\./, "");
   } catch { return ""; }
 }
 function cookieValue(header, name) {
@@ -130,7 +130,7 @@ function moderationDecision(record) {
     if (!record.companyWebsite || !domainMatches || FREE_EMAILS.has(domain)) {
       return { status:"pending", action:"manual_review", reasons:["Employer identity is not sufficiently corroborated by a matching company website and email domain."], score:45 };
     }
-    if (record.salaryText && /\\b(guaranteed|unlimited|\\$[0-9]{4,}\\s*(per|a)\\s*day)\\b/i.test(record.salaryText)) {
+    if (record.salaryText && /\b(guaranteed|unlimited|\$[0-9]{4,}\s*(per|a)\s*day)\b/i.test(record.salaryText)) {
       return { status:"pending", action:"manual_review", reasons:["Unusually high or guaranteed compensation claim."], score:55 };
     }
     return { status:"approved", action:"auto_approved", reasons:["Required fields complete; no prohibited-content or common job-scam indicators; employer website and contact domain match. This is automated screening, not identity verification."], score:15 };
@@ -193,7 +193,7 @@ function validateSubmission(body) {
     const conditions=["New","Like new","Very good","Good","Fair"];
     if (!categories.includes(record.category)||!conditions.includes(record.condition)||!["USD","EUR","COP","GBP"].includes(record.currency)||!Number.isFinite(record.price)||record.price<=0||record.price>100000000) return { error:"Please provide valid category, condition, price and currency." };
     if (!record.sellerDisplayName||!record.sellerCountry||!["private","business"].includes(record.traderType)||!record.sellerDeclaration||!record.ownershipDeclaration) return { error:"Seller details and declarations are required." };
-    if (record.imageUrl && !/^https:\\/\\//i.test(record.imageUrl)) return { error:"Product image must use a secure HTTPS address." };
+    if (record.imageUrl && !/^https:\/\//i.test(record.imageUrl)) return { error:"Product image must use a secure HTTPS address." };
   }
   return { record };
 }
