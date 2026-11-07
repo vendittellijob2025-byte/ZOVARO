@@ -224,22 +224,25 @@ function normalizeRecord(record) {
 }
 
 export default async function handler(req, res) {
-  const cronSecret = process.env.CRON_SECRET;
-  const authorization = req.headers.authorization;
+  res.setHeader("Cache-Control", "no-store");
 
-  if (!cronSecret || authorization !== "Bearer " + cronSecret) {
-    return res.status(401).json({ error: "Non autorizzato" });
-  }
   if (req.method !== "GET" && req.method !== "POST") {
     res.setHeader("Allow", "GET, POST");
     return res.status(405).json({ error: "Metodo non consentito" });
   }
 
-  const token = process.env.CJ_API_TOKEN;
-  if (!token) {
-    return res.status(503).json({
-      error: "CJ_API_TOKEN non configurato nell'ambiente Vercel Production."
-    });
+  // GitHub Actions sends the existing CJ token over HTTPS in the Authorization
+  // header. Vercel Cron can alternatively use CRON_SECRET plus CJ_API_TOKEN.
+  const authorization = String(req.headers.authorization || "");
+  const cronSecret = process.env.CRON_SECRET;
+  const isVercelCron = Boolean(cronSecret && authorization === "Bearer " + cronSecret);
+  const suppliedToken = authorization.startsWith("Bearer ")
+    ? authorization.slice(7).trim()
+    : "";
+  const token = isVercelCron ? process.env.CJ_API_TOKEN : suppliedToken;
+
+  if (!token || token.length < 20) {
+    return res.status(401).json({ error: "Autorizzazione CJ non valida o token mancante." });
   }
   if (!process.env.BLOB_STORE_ID) {
     return res.status(503).json({
