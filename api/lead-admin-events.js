@@ -53,8 +53,12 @@ export default async function handler(req, res) {
   if (!secret || secret.length < 32 || !verifySession(token, secret)) {
     return res.status(401).json({ error: "Sessione amministratore assente o scaduta." });
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    return res.status(503).json({ error: "Archivio eventi non configurato: manca BLOB_READ_WRITE_TOKEN." });
+
+  // The connected private Blob store uses Vercel OIDC.
+  // @vercel/blob resolves the request-scoped OIDC token together with BLOB_STORE_ID.
+  // Do not require a long-lived BLOB_READ_WRITE_TOKEN on this Vercel deployment.
+  if (!process.env.BLOB_STORE_ID) {
+    return res.status(503).json({ error: "Archivio eventi non configurato: il Blob Store non risulta collegato a questo ambiente." });
   }
 
   try {
@@ -88,6 +92,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("ZOVARO admin dashboard error:", error);
-    return res.status(503).json({ error: "Impossibile leggere l'archivio privato. Verifica che il Blob store collegato sia privato e attivo." });
+    return res.status(503).json({ error: "Impossibile leggere l'archivio privato tramite OIDC. Verifica il collegamento Blob del progetto e la versione SDK." });
   }
 }
