@@ -98,7 +98,10 @@ async function graphql(query) {
   });
 
   const body = await response.text();
-  if (!response.ok) throw new Error("CJ Product Feed API failed with HTTP " + response.status);
+  if (!response.ok) {
+    const diagnostic = body.replace(/\s+/g, " ").trim().slice(0, 1200);
+    throw new Error("CJ Product Feed API failed with HTTP " + response.status + (diagnostic ? ": " + diagnostic : ""));
+  }
 
   let payload;
   try {
