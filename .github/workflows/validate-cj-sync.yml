@@ -87,10 +87,10 @@ jobs:
             if (!scripts.length) throw new Error("Dashboard script not found.");
             for (const script of scripts) new vm.Script(script, { filename: "lead-sales-dashboard.html" });
             const homepage = fs.readFileSync("index.html", "utf8");
-            const inlineScripts = [...homepage.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)].map(match => match[1]).filter(script => script.trim());
+            const inlineScripts = homepage.split("<script>").slice(1).map(part => part.split("</script>")[0]).filter(script => script.trim());
             for (const script of inlineScripts) new vm.Script(script, { filename: "index.html" });
             const admin = fs.readFileSync("marketplace-admin.html", "utf8");
-            const adminScripts = [...admin.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)].map(match => match[1]).filter(script => script.trim());
+            const adminScripts = admin.split("<script>").slice(1).map(part => part.split("</script>")[0]).filter(script => script.trim());
             for (const script of adminScripts) new vm.Script(script, { filename: "marketplace-admin.html" });
             JSON.parse(fs.readFileSync("vercel.json", "utf8"));
             const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
