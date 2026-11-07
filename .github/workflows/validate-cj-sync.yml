@@ -19,6 +19,8 @@ on:
       - "api/lead-admin-events.js"
       - "api/marketplace.js"
       - "lib/marketplace-moderation.js"
+      - "lib/product-category.js"
+      - "scripts/test-product-category.mjs"
       - "scripts/test-marketplace-moderation.mjs"
       - "lib/marketplace-moderation.js"
       - "scripts/test-marketplace-moderation.mjs"
@@ -81,8 +83,11 @@ jobs:
           node --check api/lead-admin-events.js
           node --check api/marketplace.js
           node --check lib/marketplace-moderation.js
+          node --check lib/product-category.js
           node --check scripts/test-marketplace-moderation.mjs
+          node --check scripts/test-product-category.mjs
           node scripts/test-marketplace-moderation.mjs
+          node scripts/test-product-category.mjs
           node --check marketplace.js
           node --check api/tiktok-direct-post.js
           node --input-type=module -e '
