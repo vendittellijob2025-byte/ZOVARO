@@ -141,7 +141,7 @@ function moderationDecision(record) {
     "real estate","property","rent an apartment","medical device","medicine","supplement","cosmetic injection",
     "luxury watch","designer handbag","antique","collectible","ticket","gift card","financial","investment","crypto"
   ]);
-  if (highRisk || record.category === "Vehicles" || record.category === "Baby & Kids") {
+  if (highRisk || ["Vehicles","Automotive","Baby & Kids","Kids & Babies","Beauty","Collectibles"].includes(record.category)) {
     return { status:"pending", action:"manual_review", reasons:["High-risk, regulated, safety-sensitive or high-value category; requires human review."], score:60 };
   }
   if (!record.sellerDisplayName || !record.sellerCountry || !record.sellerDeclaration || !record.ownershipDeclaration) {
@@ -189,7 +189,7 @@ function validateSubmission(body) {
     record.sellerDeclaration=body.sellerDeclaration===true;
     record.ownershipDeclaration=body.ownershipDeclaration===true;
     record.imageUrl=clean(body.imageUrl,500);
-    const categories=["Electronics","Home & Living","Fashion","Sports","Baby & Kids","Vehicles","Other"];
+    const categories=["Electronics","Phones & Tablets","Computers","Gaming","Sports","Fashion","Kids & Babies","Home","Furniture","Beauty","Automotive","Tools & DIY","Books & Media","Collectibles","Appliances","Other"];
     const conditions=["New","Like new","Very good","Good","Fair"];
     if (!categories.includes(record.category)||!conditions.includes(record.condition)||!["USD","EUR","COP","GBP"].includes(record.currency)||!Number.isFinite(record.price)||record.price<=0||record.price>100000000) return { error:"Please provide valid category, condition, price and currency." };
     if (!record.sellerDisplayName||!record.sellerCountry||!["private","business"].includes(record.traderType)||!record.sellerDeclaration||!record.ownershipDeclaration) return { error:"Seller details and declarations are required." };
