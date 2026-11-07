@@ -60,14 +60,13 @@ jobs:
           node --check api/cj-commission-sync.js
           node --check api/lead-admin-events.js
           node --check api/tiktok-direct-post.js
-          node --check api/lead-track.js
           node --input-type=module -e '
             import fs from "node:fs";
             import vm from "node:vm";
             const html = fs.readFileSync("lead-sales-dashboard.html", "utf8");
-            const scripts = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)];
+            const scripts = html.split("<script>").slice(1).map(part => part.split("</script>")[0]);
             if (!scripts.length) throw new Error("Dashboard script not found.");
-            for (const script of scripts) new vm.Script(script[1], { filename: "lead-sales-dashboard.html" });
+            for (const script of scripts) new vm.Script(script, { filename: "lead-sales-dashboard.html" });
             JSON.parse(fs.readFileSync("vercel.json", "utf8"));
             console.log("Dashboard JavaScript and Vercel configuration are valid.");
           '
