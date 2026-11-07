@@ -139,10 +139,12 @@ function moderationDecision(record) {
   const highRisk = includesAny(combined, [
     "vehicle","car","automobile","motorcycle","motorbike","boat","yacht","aircraft","private jet","plane",
     "real estate","property","rent an apartment","medical device","medicine","supplement","cosmetic injection",
-    "luxury watch","designer handbag","antique","collectible","ticket","gift card","financial","investment","crypto"
+    "luxury watch","designer handbag","antique","collectible","ticket","gift card","financial","investment","crypto",
+    "helmet","child seat","car seat","safety equipment","medical","battery pack","lithium battery","charger"
   ]);
-  if (highRisk || ["Vehicles","Automotive","Baby & Kids","Kids & Babies","Beauty","Collectibles"].includes(record.category)) {
-    return { status:"pending", action:"manual_review", reasons:["High-risk, regulated, safety-sensitive or high-value category; requires human review."], score:60 };
+  const lowRiskCategories=["Home","Furniture","Books & Media","Sports"];
+  if (highRisk || !lowRiskCategories.includes(record.category)) {
+    return { status:"pending", action:"manual_review", reasons:["This category or item type requires a human review for product safety, authenticity, regulation or seller-risk reasons."], score:60 };
   }
   if (!record.sellerDisplayName || !record.sellerCountry || !record.sellerDeclaration || !record.ownershipDeclaration) {
     return { status:"pending", action:"manual_review", reasons:["Seller identity and ownership declarations are incomplete."], score:50 };
