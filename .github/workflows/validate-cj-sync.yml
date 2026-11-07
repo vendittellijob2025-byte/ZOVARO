@@ -134,7 +134,14 @@ jobs:
           TRACK_STATUS="$(curl --silent --show-error --output /tmp/zovaro-track-response.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/lead-track")"
           test "$TRACK_STATUS" = "400"
 
-          MARKETPLACE_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace.json --write-out '%{http_code}' --max-time 20 "$BASE_URL/api/marketplace?type=job")"
+          MARKETPLACE_STATUS=""
+          for attempt in $(seq 1 30); do
+            MARKETPLACE_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace.json --write-out '%{http_code}' --max-time 20 "$BASE_URL/api/marketplace?type=job")"
+            if [ "$MARKETPLACE_STATUS" = "200" ]; then
+              break
+            fi
+            sleep 10
+          done
           test "$MARKETPLACE_STATUS" = "200"
           node --input-type=module -e '
             import fs from "node:fs";
