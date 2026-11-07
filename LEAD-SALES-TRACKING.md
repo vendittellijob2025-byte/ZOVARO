@@ -49,13 +49,31 @@ A valid signature authenticates the partner source; it does not independently pr
 
 ## Protected admin dashboard
 
-A password-protected page is available at `/lead-sales-dashboard.html` on the Vercel deployment. It uses an HttpOnly, Secure, SameSite=Lax cookie with an eight-hour expiry. The dashboard reads only private event files and shows the latest 100 click records and latest 100 partner updates. Counts therefore describe the displayed recent sample, not lifetime totals. Declared amounts are grouped by currency and are not a payable commission ledger.\n\nSet these additional Vercel environment variables before using it:\n\n- `ZOVARO_ADMIN_PASSWORD`: a unique password of at least 16 characters.\n- `ZOVARO_ADMIN_SESSION_SECRET`: a unique random secret of at least 32 characters.\n\nThe login endpoint has a best-effort per-instance attempt limit; serverless memory limits mean this is not a substitute for an edge/WAF rate limit. Do not reuse this password elsewhere.\n\n## Vercel configuration required
+A password-protected page is available at `/lead-sales-dashboard.html` on the Vercel deployment. It uses an HttpOnly, Secure, SameSite=Lax cookie with an eight-hour expiry. The dashboard reads only private event files and shows the latest 100 click records and latest 100 partner updates. Counts therefore describe the displayed recent sample, not lifetime totals. Declared amounts are grouped by currency and are not a payable commission ledger.
 
-Set these variables in the Vercel project settings, then redeploy:
+Set these additional Vercel project environment variables before using it (Production):
 
-- `BLOB_READ_WRITE_TOKEN`: private Blob storage access. Confirm that the existing Vercel Blob store is connected to this deployment.
+- `ZOVARO_ADMIN_PASSWORD`: a unique password of at least 16 characters.
+- `ZOVARO_ADMIN_SESSION_SECRET`: a unique random secret of at least 32 characters.
+
+The login endpoint has a best-effort per-instance attempt limit; serverless memory limits mean this is not a substitute for an edge/WAF rate limit. Do not reuse this password elsewhere.
+
+## Vercel Blob authentication
+
+The existing `zovaro-tiktok` private Blob Store is connected to the `zovaro` project, and the Vercel Store page confirms that all connected projects use OIDC. The project already has `BLOB_STORE_ID` in Preview and Production.
+
+- On Vercel Functions, the current `@vercel/blob` SDK can authenticate using the request-scoped Vercel OIDC token together with `BLOB_STORE_ID`.
+- A long-lived `BLOB_READ_WRITE_TOKEN` is not required for this OIDC-connected Vercel deployment.
+- Keep the SDK at a version that supports OIDC (OIDC support was introduced in `@vercel/blob` 2.4.0; this repository declares `^2.6.1`).
+- Do not revoke or rotate Blob credentials as part of this setup. The Vercel Store UI may recommend revoking an old read-write token, but leave it untouched while existing TikTok integrations are being preserved and verified.
+- Local development outside Vercel may need a separately managed development credential or a configured local OIDC flow; do not copy production secrets into chat.
+
+The admin events endpoint uses the connected store's OIDC authentication and checks for `BLOB_STORE_ID`, not for a static `BLOB_READ_WRITE_TOKEN`.
+
+## Other Vercel configuration required before partner tracking is enabled
+
 - `ZOVARO_PARTNER_DOMAINS`: comma-separated exact hostnames for the actual outbound tracking destinations. Include the affiliate-network tracking hostname if the stored click URL uses one, not merely the final merchant hostname.
-- `ZOVARO_PARTNER_SECRETS`: JSON object mapping each partner ID to a unique random secret of at least 32 characters, e.g. `{"dealer_one":"GENERATE_A_UNIQUE_RANDOM_SECRET_OF_AT_LEAST_32_CHARACTERS"}`. Never put real values in Git.
+- `ZOVARO_PARTNER_SECRETS`: JSON object mapping each partner ID to a unique random secret of at least 32 characters. Never put real values in Git.
 
 Do not configure a partner until its identity, destination hostname, attribution method and written participation are confirmed.
 
