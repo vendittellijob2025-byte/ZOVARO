@@ -1,0 +1,32 @@
+name: ZOVARO - CJ Commission Reconciliation
+
+on:
+  schedule:
+    - cron: "15 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Import CJ commissions into private ZOVARO storage
+        env:
+          CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
+        run: |
+          if [ -z "$CJ_API_TOKEN" ]; then
+            echo "CJ_API_TOKEN GitHub Actions secret is missing."
+            exit 1
+          fi
+
+          curl --fail-with-body --silent --show-error \
+            --max-time 240 \
+            --retry 2 --retry-all-errors --retry-delay 5 \
+            -X POST \
+            -H "Authorization: Bearer ${CJ_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{}' \
+            "https://zovaro.vercel.app/api/cj-commission-sync"
