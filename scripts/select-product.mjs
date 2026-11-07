@@ -30,8 +30,13 @@ const validProducts =
       product &&
       product.id &&
       product.imageLink &&
-      product.clickUrl &&
-      product.joinedStatus === true
+      typeof product.clickUrl === "string" &&
+      product.clickUrl.startsWith("https://") &&
+      product.joinedStatus === true &&
+      typeof product.englishTitle === "string" &&
+      product.englishTitle.trim() &&
+      typeof product.englishCategory === "string" &&
+      product.englishCategory.trim()
     );
 
   });
@@ -385,7 +390,6 @@ const selectedData =
 
       const englishDescription =
         product.englishDescription ||
-        product.description ||
         `${product.brand ? product.brand + " — " : ""}${englishTitle}`;
 
 
@@ -428,7 +432,7 @@ const selectedData =
           product.advertiserName,
 
         category:
-          englishCategory,
+          product.englishCategory,
 
         imageLink:
           product.imageLink,

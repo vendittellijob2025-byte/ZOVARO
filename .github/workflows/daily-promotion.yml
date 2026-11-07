@@ -9,6 +9,9 @@ on:
       - main
     paths:
       - ".github/workflows/daily-promotion.yml"
+      - "scripts/select-product.mjs"
+      - "scripts/create-promotion.mjs"
+      - "scripts/create-tiktok-video.mjs"
 
 permissions:
   contents: write

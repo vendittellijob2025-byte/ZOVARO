@@ -36,7 +36,6 @@
 
     const translatedDescription =
       product.englishDescription ||
-      product.description ||
       `${product.brand ? product.brand + " — " : ""}${translatedTitle}`;
 
     const translatedCategory =
@@ -195,9 +194,13 @@
               product.network
             ) &&
             product.joinedStatus === true &&
+            typeof product.englishTitle === "string" &&
+            product.englishTitle.trim() &&
+            typeof product.englishCategory === "string" &&
+            product.englishCategory.trim() &&
             typeof product.clickUrl ===
               "string" &&
-            (product.clickUrl.trim().startsWith("https://") || product.clickUrl.trim().startsWith("http://"))
+            product.clickUrl.trim().startsWith("https://")
           )
           .map(normalizeProduct)
           .filter(product =>

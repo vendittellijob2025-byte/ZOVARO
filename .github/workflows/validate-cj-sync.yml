@@ -8,6 +8,7 @@ on:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
       - "scripts/create-tiktok-video.mjs"
+      - "scripts/select-product.mjs"
       - "app.js"
       - "app-cj-loader.js"
       - "api/lead-track.js"
@@ -28,6 +29,7 @@ on:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
       - "scripts/create-tiktok-video.mjs"
+      - "scripts/select-product.mjs"
       - "app.js"
       - "app-cj-loader.js"
       - "api/lead-track.js"
@@ -59,6 +61,7 @@ jobs:
           node --check scripts/sync-cj-advertisers.mjs
           node --check scripts/translate-to-english.mjs
           node --check scripts/create-tiktok-video.mjs
+          node --check scripts/select-product.mjs
           node --check app.js
           node --check app-cj-loader.js
           node --check api/lead-track.js
