@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { NETWORKS } from "./network-config.mjs";
+import { categoryFor } from "../lib/product-category.js";
 
 const API_URL = "https://ads.api.cj.com/query";
 const ADVERTISER_API_URL = "https://advertiser-lookup.api.cj.com/v2/advertiser-lookup";
@@ -24,34 +25,6 @@ function decodeXml(value) {
 function xmlTag(block, tag) {
   const match = block.match(new RegExp("<" + tag + "(?:\\s[^>]*)?>([\\s\\S]*?)<\\/" + tag + ">", "i"));
   return match ? decodeXml(match[1].replace(/<[^>]+>/g, "").trim()) : "";
-}
-
-function categoryFor(advertiser, product) {
-  const productText = [
-    product.category, product.title, product.description, product.brand
-  ].filter(Boolean).join(" ").toLowerCase();
-  const advertiserText = [
-    advertiser.name, advertiser.parentCategory, advertiser.childCategory
-  ].filter(Boolean).join(" ").toLowerCase();
-  const text = [productText, advertiserText].filter(Boolean).join(" ");
-
-  // Product/merchant sports signals take priority over broad feed taxonomy.
-  // Some CJ feeds expose a generic or incorrect parent category (for example
-  // Pets) even when the advertiser is a specialist padel/sports retailer.
-  if (/\b(sport|sports|fitness|padel|tennis|racket|racquet|golf|gym|cycling|athletic|exercise)\b/.test(productText) ||
-      /\b(padel|tennis|sports retailer|sporting goods)\b/.test(advertiserText)) return "Sports";
-
-  if (/\b(baby|babies|infant|newborn|nursery|diaper|toddler|kids|children)\b/.test(text)) return "Babies";
-  if (/\b(pet|pets|dog|dogs|cat|cats|canine|feline)\b/.test(text)) return "Pets";
-  if (/\b(automotive|automobile|car parts|vehicle|motorcycle|motorbike|car accessories)\b/.test(text)) return "Automotive";
-  if (/\b(travel|luggage|suitcase|airline|hotel|holiday|vacation)\b/.test(text)) return "Travel";
-  if (/\b(garden|gardening|plant|plants|lawn|horticulture)\b/.test(text)) return "Garden";
-  if (/\b(toy|toys|board game|puzzle|doll|action figure|video game|gaming)\b/.test(text)) return "Toys & Games";
-  if (/\b(beauty|cosmetic|skincare|skin care|makeup|fragrance|perfume|haircare)\b/.test(text)) return "Beauty";
-  if (/\b(fashion|clothing|apparel|footwear|shoes|sneakers|handbag|jewelry|garment)\b/.test(text)) return "Fashion";
-  if (/\b(electronic|electronics|smartphone|mobile phone|tablet|headphone|earbud|camera|television|audio)\b/.test(text)) return "Electronics";
-  if (/\b(office|software|computer|laptop|printer|keyboard|mouse|technology|tech)\b/.test(text)) return "Office & Technology";
-  return "Home & Living";
 }
 
 function cleanUrl(value) {
