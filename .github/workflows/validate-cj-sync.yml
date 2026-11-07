@@ -11,6 +11,7 @@ on:
       - "app.js"
       - "app-cj-loader.js"
       - "api/lead-track.js"
+      - "package.json"
       - "api/tiktok-direct-post.js"
       - "vercel.json"
       - "lead-sales-dashboard.html"
@@ -30,6 +31,7 @@ on:
       - "app.js"
       - "app-cj-loader.js"
       - "api/lead-track.js"
+      - "package.json"
       - "api/tiktok-direct-post.js"
       - "data/catalog.json"
       - ".github/workflows/cj-products.yml"
@@ -44,12 +46,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
+          package-manager-cache: false
 
       - name: Check JavaScript syntax
         run: |
@@ -70,6 +73,10 @@ jobs:
             if (!scripts.length) throw new Error("Dashboard script not found.");
             for (const script of scripts) new vm.Script(script, { filename: "lead-sales-dashboard.html" });
             JSON.parse(fs.readFileSync("vercel.json", "utf8"));
+            const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
+            if (pkg.type !== "module") throw new Error("package.json must declare native ESM.");
+            if (!pkg.dependencies?.["@vercel/blob"]) throw new Error("@vercel/blob dependency is missing.");
+            console.log("Node.js package configuration is valid.");
             console.log("Dashboard JavaScript and Vercel configuration are valid.");
           '
 
