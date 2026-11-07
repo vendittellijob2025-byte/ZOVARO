@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "partners": [],
   "products": [],
   "notes": [
@@ -13,7 +13,7 @@
     {
       "id": "edel-stark",
       "name": "Edel & Stark",
-      "status": "contacted",
+      "status": "responded",
       "programType": "luxury-car-rental-affiliate",
       "territories": [
         "Europe",
@@ -30,10 +30,33 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Request affiliate onboarding, tracked request widget, approved vehicle feed/API and payout terms.",
+      "nextAction": "Await Agent Agreement, inquiry-tool code, approved vehicle photos/media permissions, and separate private-jet referral terms; review agreement before activation.",
       "sourceChecked": "2026-11-06",
       "contactedAt": "2026-11-06T08:51:57Z",
-      "contactEvidence": "Gmail sent thread 1a1b00e5da7ecd17"
+      "contactEvidence": "Gmail sent thread 1a1b00e5da7ecd17",
+      "response": {
+        "receivedAt": "2026-11-06T10:07:28Z",
+        "contactName": "Stephan Behrendt",
+        "role": "Business Development Manager",
+        "evidence": "Gmail thread 1a1b00e5da7ecd17",
+        "internationalPublishersAccepted": true,
+        "programmeFee": "Free",
+        "exclusivity": "Non-exclusive",
+        "agreementRequired": "Signed Agent Agreement",
+        "commissions": {
+          "vehicleRentals": "10% of booking price paid by customer",
+          "sportsCarTours": "10% of booking price paid by customer",
+          "chauffeurServices": "5% of booking price paid by customer",
+          "privateJetServices": "Not yet confirmed; clarification requested"
+        },
+        "reporting": "Completed and invoiced bookings reported monthly; ZOVARO issues commission invoice.",
+        "minimumPayoutThreshold": "None",
+        "payment": "Agreed common currency; within invoice payment period",
+        "attribution": "Embeddable inquiry tool attributes inquiries to ZOVARO; direct referrals recorded and assigned.",
+        "catalogue": "Vehicle descriptions, current prices and locations are available on Edel & Stark website; catalogue feed/API requires technical clarification.",
+        "media": "Photos available on request; explicit image and brand-use permission still pending.",
+        "fulfilment": "Customer contracts and pays Edel & Stark; Edel & Stark handles customer verification and fulfilment."
+      }
     },
     {
       "id": "carbirds",
