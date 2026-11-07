@@ -12,6 +12,8 @@ on:
       - main
     paths:
       - "scripts/sync-cj-advertisers.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
+      - "lib/product-category.js"
       - "scripts/translate-to-english.mjs"
       - "app-cj-loader.js"
       - ".github/workflows/cj-products.yml"
@@ -38,6 +40,9 @@ jobs:
         env:
           CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
         run: node scripts/sync-cj-advertisers.mjs
+
+      - name: Reclassify every catalog product by its primary product type
+        run: node scripts/reclassify-catalog-categories.mjs
 
       # Translation is deliberately decoupled from catalog ingestion.
       # The public free translation endpoint is rate-limited and must not block
@@ -79,6 +84,7 @@ jobs:
               git fetch origin "${GITHUB_REF_NAME}"
               git reset --hard "origin/${GITHUB_REF_NAME}"
               node scripts/sync-cj-advertisers.mjs
+              node scripts/reclassify-catalog-categories.mjs
               git add data/catalog.json data/translation-cache.json
               if git diff --cached --quiet; then
                 echo "Latest branch already contains the current catalog."
