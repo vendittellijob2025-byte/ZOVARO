@@ -341,7 +341,7 @@ export default async function handler(req,res) {
   const body=readBody(req);
   if (!body||typeof body!=="object") return res.status(400).json({error:"Invalid submission."});
   try {
-    if (body.action==="moderate"||body.action==="close_case") return await handleAdminPost(req,res,body);
+    if (body.action==="moderate"||body.action==="close_case"||body.action==="unpublish") return await handleAdminPost(req,res,body);
     if (body.action==="report") return await handlePublicCase(req,res,body,"reports");
     if (body.action==="appeal") return await handlePublicCase(req,res,body,"appeals");
     return await handleSubmit(req,res,body);
