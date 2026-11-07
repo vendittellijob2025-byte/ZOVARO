@@ -204,6 +204,120 @@
       "nextAction": "Check applicant-country eligibility and commission terms before applying.",
       "sourceChecked": "2026-11-06",
       "priority": "low"
+    },
+    {
+      "id": "perejets",
+      "name": "pereJets",
+      "status": "prospect",
+      "programType": "private-jet-charter-referral",
+      "territories": [
+        "150+ countries; publisher eligibility to confirm"
+      ],
+      "publicCommission": "Commission on each confirmed charter; rate negotiated based on volume and client profile",
+      "contact": {
+        "applicationUrl": "https://perejets.com/partners/",
+        "sourceUrl": "https://perejets.com/partners/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request publisher-country eligibility, rate card, tracked referral link, booking reporting, aircraft data feed/API and approved imagery.",
+      "sourceChecked": "2026-11-07"
+    },
+    {
+      "id": "skylyft",
+      "name": "Skylyft",
+      "status": "prospect",
+      "programType": "private-jet-referral",
+      "territories": [
+        "No country restriction stated in current referral terms"
+      ],
+      "publicCommission": "30% of Skylyft's commission on qualifying charter, empty-leg or seat bookings; exact payout value depends on booking",
+      "contact": {
+        "applicationUrl": "https://skylyft.aero/referral-partner",
+        "sourceUrl": "https://skylyft.aero/referral-partner"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Review individual-partner terms and request a website-compatible tracked referral link, booking reports, approved aircraft imagery and listing/feed options.",
+      "sourceChecked": "2026-11-07"
+    },
+    {
+      "id": "timeflys",
+      "name": "TimeFlys",
+      "status": "prospect",
+      "programType": "private-jet-charter-affiliate",
+      "territories": [
+        "International eligibility to confirm"
+      ],
+      "publicCommission": "Typically 2.5% of total charter price (50% of its 5% platform fee); published average $250–$500+ per accepted booking",
+      "contact": {
+        "email": "support@timeflys.co",
+        "applicationUrl": "https://www.timeflys.co/affiliates",
+        "sourceUrl": "https://www.timeflys.co/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm Italy-based publisher eligibility, tracking and attribution, payout thresholds, booking data, approved aircraft media and whether a searchable feed or widget is available.",
+      "sourceChecked": "2026-11-07"
+    },
+    {
+      "id": "the-yacht-charter",
+      "name": "The Yacht Charter",
+      "status": "prospect",
+      "programType": "yacht-charter-affiliate",
+      "territories": [
+        "International eligibility to confirm; multilingual site supports EUR, USD and GBP"
+      ],
+      "publicCommission": "Up to 50% of platform fee on successful bookings; lifetime referral tracking stated",
+      "contact": {
+        "applicationUrl": "https://www.theyachtcharter.com/partner-terms",
+        "sourceUrl": "https://www.theyachtcharter.com/partner-terms"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm Italy eligibility, actual commission base/rate, payout schedule and minimum, Stripe payout requirements, tracked link/widget/API and permission for yacht listings and photos.",
+      "sourceChecked": "2026-11-07",
+      "notes": "Partner terms require an approved account and valid Stripe payout account; self-referrals are prohibited."
+    },
+    {
+      "id": "skippercity",
+      "name": "SkipperCity",
+      "status": "prospect",
+      "programType": "yacht-charter-affiliate",
+      "territories": [
+        "International publishers accepted; charter inventory focuses on Croatian marinas"
+      ],
+      "publicCommission": "20% of SkipperCity's commission, up to 25% by written agreement; 365-day last-click referral window and lifetime customer association",
+      "contact": {
+        "email": "info@skippercity.com",
+        "applicationUrl": "https://skippercity.com/yacht-charter-affiliate-program",
+        "sourceUrl": "https://skippercity.com/yacht-charter-affiliate-program/partner-agreement"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request boat feed/API or widget, approved listing photos/descriptions, attribution/reporting and confirmation that ZOVARO may display curated Croatian yacht offers.",
+      "sourceChecked": "2026-11-07",
+      "notes": "Free to join; monthly bank transfer from €50 after the charter starts and is fully paid. Website content and photos require separate permission."
     }
   ]
 }
