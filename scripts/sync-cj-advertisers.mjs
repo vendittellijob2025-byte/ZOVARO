@@ -589,7 +589,48 @@ function compactCatalogProduct(product) {
   return compact;
 }
 
-const compactProducts = finalProducts.map(compactCatalogProduct);
+// Publish a balanced storefront selection rather than forcing every
+// visitor to download the entire 50k+ affiliate inventory. Each category is
+// capped at 1,200 products and sampled round-robin across advertisers.
+function selectStorefrontProducts(products, perCategoryLimit = 1200) {
+  const categories = new Map();
+
+  for (const product of products) {
+    const category = String(product.category || "Featured").trim() || "Featured";
+    const advertiser = String(product.advertiserId || "unknown");
+    if (!categories.has(category)) categories.set(category, new Map());
+    const advertisers = categories.get(category);
+    if (!advertisers.has(advertiser)) advertisers.set(advertiser, []);
+    advertisers.get(advertiser).push(product);
+  }
+
+  const selected = [];
+  for (const [category, advertisers] of categories) {
+    const groups = [...advertisers.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([, items]) => items);
+    const cursors = groups.map(() => 0);
+    let categoryCount = 0;
+
+    while (categoryCount < perCategoryLimit) {
+      let addedInRound = false;
+      for (let i = 0; i < groups.length && categoryCount < perCategoryLimit; i += 1) {
+        const item = groups[i][cursors[i]];
+        if (!item) continue;
+        selected.push(item);
+        cursors[i] += 1;
+        categoryCount += 1;
+        addedInRound = true;
+      }
+      if (!addedInRound) break;
+    }
+  }
+
+  return selected;
+}
+
+const storefrontProducts = selectStorefrontProducts(finalProducts);
+const compactProducts = storefrontProducts.map(compactCatalogProduct);
 const advertiserRecords = new Map(
   (Array.isArray(catalog.advertisers) ? catalog.advertisers : []).map(item => [String(item.id), item])
 );
@@ -624,6 +665,8 @@ const updatedCatalog = {
   advertisers: [...advertiserRecords.values()],
   rowsReceived: received,
   productCount: compactProducts.length,
+  inventoryProductCount: finalProducts.length,
+  selectionPolicy: "up to 1200 products per category, balanced across advertisers",
   products: compactProducts,
   sync: {
     ...(catalog.sync || {}),
@@ -651,5 +694,6 @@ console.log("ZOVARO CJ catalog merge completed.");
 console.log("Products received from CJ: " + received);
 console.log("Products with valid CJ tracking links: " + imported.length);
 console.log("Previous catalog products preserved: " + previousProducts.length);
-console.log("Total products in merged catalog: " + compactProducts.length);
+console.log("Validated products in full CJ inventory: " + finalProducts.length);
+console.log("Products selected for public storefront: " + compactProducts.length);
 console.log("Compact catalog product fields saved; descriptions truncated to 180 characters.");
