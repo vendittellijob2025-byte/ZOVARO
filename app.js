@@ -709,7 +709,7 @@ function createTikTokButton() {
     "pointer";
 
   button.textContent =
-    "SHARE VIDEO TO TIKTOK";
+    "SEND PRIVATE TEST TO TIKTOK";
 
   const status =
     document.createElement(
@@ -729,7 +729,7 @@ function createTikTokButton() {
     "#aaa";
 
   status.textContent =
-    "Ready to share the latest ZOVARO video.";
+    "Ready to send a private TikTok test. Public posting is not enabled yet.";
 
   const connectButton =
     document.querySelector(
@@ -794,7 +794,7 @@ async function shareLatestTikTokVideo() {
 
   const confirmed =
     window.confirm(
-      "Authorize ZOVARO to send the current promotional video and its prepared caption to your TikTok account?"
+      "Send the current ZOVARO video and caption to TikTok using SELF_ONLY privacy? This is a private test and will not be publicly visible."
     );
 
   if (!confirmed) {
@@ -945,7 +945,7 @@ async function shareLatestTikTokVideo() {
         "1";
 
       button.textContent =
-        "SHARE VIDEO TO TIKTOK";
+        "SEND PRIVATE TEST TO TIKTOK";
     }
   }
 }
