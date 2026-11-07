@@ -11,7 +11,7 @@ for (const product of catalog.products) {
   if (!product || typeof product !== "object") continue;
   const nextCategory = categoryFor(
     { name: product.advertiserName || "", parentCategory: product.advertiserCategory || "", childCategory: product.advertiserSubcategory || "" },
-    product
+    { ...product, category: product.sourceCategory || "" }
   );
   const previous = String(product.category || "");
   if (previous !== nextCategory) {
