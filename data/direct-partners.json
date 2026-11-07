@@ -235,7 +235,7 @@
       "territories": [
         "No country restriction stated in current referral terms"
       ],
-      "publicCommission": "30% of Skylyft's commission on qualifying charter, empty-leg or seat bookings; exact payout value depends on booking",
+      "publicCommission": "30% of Skylyft's net commission on qualifying charter and empty-leg bookings; per-seat bookings are excluded unless Skylyft confirms otherwise in writing.",
       "contact": {
         "applicationUrl": "https://skylyft.aero/referral-partner",
         "sourceUrl": "https://skylyft.aero/referral-partner"
@@ -246,8 +246,15 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Review individual-partner terms and request a website-compatible tracked referral link, booking reports, approved aircraft imagery and listing/feed options.",
-      "sourceChecked": "2026-11-07"
+      "nextAction": "Await ZOVARO publisher eligibility and ask whether the website can use a referral code/link, booking-level reports and approved aircraft data/media; do not apply until the individual terms and consent are reviewed.",
+      "sourceChecked": "2026-11-07",
+      "terms": {
+        "referralWindow": "12 months from first successful code use or manual linking",
+        "payout": "Monthly bank transfer in AED, after full customer payment and flight completion; payment subject to Skylyft approval",
+        "reversals": "Cancelled, refunded or charged-back bookings are reversed",
+        "eligibility": "No country restriction stated at the current application stage; approval is manual",
+        "restrictions": "Unique non-transferable code; no spam or misleading claims; no guaranteed income or fixed rate sheet"
+      }
     },
     {
       "id": "timeflys",
