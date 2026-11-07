@@ -46,7 +46,8 @@
     container.replaceChildren();
     for (const item of items) {
       const card = document.createElement("article");
-      card.className = "marketplace-listing";
+      card.className = type === "product" ? "marketplace-listing used-listing" : "marketplace-listing";
+      if (type === "product") card.dataset.category = item.category || "Other";
       addText(card, "span", "marketplace-kicker", type === "job" ? [item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
       addText(card, "h3", "", item.title);
       if (item.company) addText(card, "p", "marketplace-company", item.company);
@@ -75,6 +76,7 @@
       const items = Array.isArray(data) ? data : [];
       renderListings(container, items, type);
       if (empty) empty.classList.toggle("hidden", items.length > 0);
+      if (type === "product" && typeof window.filterUsedListings === "function") window.filterUsedListings();
       return items;
     } catch (error) {
       if (empty) { empty.classList.remove("hidden"); empty.textContent = "Listings are temporarily unavailable. Please try again later."; }
