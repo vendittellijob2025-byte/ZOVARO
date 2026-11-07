@@ -142,7 +142,7 @@ function productQuery(advertiserId, offset) {
     "query {",
     "  products(companyId: \"" + COMPANY_ID + "\", partnerIds: [\"" + advertiserId + "\"], limit: " + PAGE_SIZE + ", offset: " + offset + ") {",
     "    resultList {",
-    "      id adId advertiserId advertiserName title description brand category imageLink additionalImageLink link mobileLink",
+    "      id adId advertiserId advertiserName title description brand imageLink additionalImageLink link mobileLink",
     "      price { amount currency }",
     "      salePrice { amount currency }",
     "      discountPercentage",
@@ -163,7 +163,7 @@ function productTokenQuery(advertiserId, pageToken = null) {
     products(companyId: "${COMPANY_ID}", partnerIds: ["${advertiserId}"], limit: 10000${pageArgument}) {
       nextPage
       resultList {
-        id adId advertiserId advertiserName title description brand category imageLink additionalImageLink link mobileLink
+        id adId advertiserId advertiserName title description brand imageLink additionalImageLink link mobileLink
         price { amount currency }
         salePrice { amount currency }
         discountPercentage
