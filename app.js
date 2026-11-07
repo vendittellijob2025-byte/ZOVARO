@@ -63,7 +63,8 @@ const CJ_TRACKING_HOSTS = new Set([
   "www.dpbolvw.net",
   "www.tkqlhce.com",
   "www.anrdoezrs.net",
-  "www.jdoqocy.com"
+  "www.jdoqocy.com",
+  "www.kqzyfj.com"
 ]);
 
 function getProductClickUrl(product) {
