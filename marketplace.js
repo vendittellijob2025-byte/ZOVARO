@@ -29,7 +29,30 @@
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed.");
       form.reset();
-      if (status) status.textContent = result.message || "Submitted for review.";
+      if (status) {
+        status.textContent = result.message || "Submitted for screening.";
+        if (result.status === "rejected" && result.id) {
+          const appeal = document.createElement("button");
+          appeal.type = "button";
+          appeal.className = "marketplace-report";
+          appeal.textContent = "APPEAL THIS DECISION";
+          appeal.addEventListener("click", async () => {
+            const email = window.prompt("Contact email for your appeal:");
+            if (!email) return;
+            const details = window.prompt("Explain why this listing should be reconsidered (at least 15 characters):");
+            if (!details || details.trim().length < 15) return;
+            appeal.disabled = true;
+            try {
+              const r = await fetch(API, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"appeal",id:result.id,email,reason:"Automated moderation appeal",details})});
+              const d = await r.json();
+              if (!r.ok) throw new Error(d.error || "Appeal failed.");
+              appeal.textContent = "APPEAL SENT";
+            } catch (e) { window.alert(e.message); appeal.disabled = false; }
+          });
+          status.appendChild(document.createTextNode(" "));
+          status.appendChild(appeal);
+        }
+      }
     } catch (error) {
       if (status) status.textContent = error.message || "Unable to submit. Please try again.";
     } finally {
