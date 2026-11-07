@@ -19,6 +19,17 @@ Example (replace values with real partner-approved data):
 /api/lead-track?partner=dealer_one&ref=zv-ref-00001&item=vehicle-123&source=tiktok&campaign=video-001&to=https%3A%2F%2Fdealer.example%2Fvehicle
 ```
 
+#### Frontend integration
+
+The product modal now routes verified CJ products from the following joined advertisers through the ZOVARO click recorder:
+
+- Kaiya Baby (CJ advertiser ID `8022425`)
+- Padel Iberico ES (CJ advertiser ID `7969352`)
+
+The recorder stores a unique click event and then redirects to the original CJ tracking URL unchanged. This preserves CJ's normal affiliate redirect and cookie-based click attribution. The ZOVARO referral reference is currently internal to the ZOVARO event log; it is not appended as a CJ sub-ID because a supported advertiser/network sub-ID parameter has not yet been confirmed. Therefore, do not claim per-referral CJ sale matching yet.
+
+Products from other advertisers, networks, and direct partners continue to use their existing destination URLs and are not routed through this allowlist until their partner identity and tracking host are verified.
+
 ### 2. Signed partner conversion intake
 
 `POST /api/partner-postback`
@@ -79,7 +90,7 @@ Do not configure a partner until its identity, destination hostname, attribution
 
 ## Not yet complete / production blockers
 
-- The existing product modal still uses the product's affiliate click URL directly. Automatic routing through `/api/lead-track` is intentionally not enabled until the real partner-ID mapping, affiliate tracking hostnames and referral/sub-ID rules are confirmed. Redirecting blindly could break affiliate attribution or send visitors to an unapproved domain.
+- The product modal now routes only the two explicitly mapped CJ advertisers (Kaiya Baby and Padel Iberico ES) through `/api/lead-track`; all other products retain their original links. Their original CJ click URLs are passed through unchanged. ZOVARO records its own referral reference, but CJ sub-ID attribution has not been enabled pending confirmation of a supported parameter. Redirecting blindly could break affiliate attribution or send visitors to an unapproved domain.
 - No dealer is yet configured to send signed conversion postbacks.
 - No transactional database, idempotency/reconciliation layer, payable commission ledger, export/reporting interface, retention/deletion controls or privacy notice has been implemented. The current dashboard is a recent-event viewer, not an accounting system.
 - Blob event files are an intake log, not a transactional accounting database. The dashboard reads at most the latest 100 records of each type; do not treat these sample counts as lifetime totals. Use a database with unique constraints and audit history before calculating amounts payable.
