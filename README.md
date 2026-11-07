@@ -27,8 +27,9 @@ Translation runs separately from CJ ingestion so a translation-service rate limi
 
 - CJ affiliate click URLs are preserved when a customer leaves ZOVARO for the merchant.
 - ZOVARO's Lead & Sales Control records outbound referrals independently from the merchant's own conversion reporting.
-- A recorded click proves that a referral was sent; it does not prove a sale or commission.
-- Completed sales, reversals, commission validation, payout thresholds, invoicing and payment schedules must be confirmed through the affiliate network or partner.
+- For CJ links, ZOVARO passes the same unique referral ID as the CJ `SID` parameter; the Commission Detail API can return it as `shopperId` for matching when CJ supplies it.
+- A private Vercel Cron imports CJ sale/lead commission records daily, initially backfilling 30 days and then using CJ's incremental commission cursor.
+- A recorded click proves that a referral was sent; it does not prove a sale or commission. CJ commission records can be corrected, reversed or remain pending validation.
 
 ### Direct commercial partners
 
@@ -69,7 +70,11 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 - `scripts/translate-to-english.mjs` — safe translation batches
 - `app-cj-loader.js` — public storefront loader
 - `api/tiktok-direct-post.js` — private TikTok Direct Post endpoint
-- `.github/workflows/cj-products.yml` — six-hour CJ synchronization
+- `api/cj-commission-sync.js` — private CJ Commission Detail import
+- `api/lead-admin-events.js` — protected dashboard data API
+- `lead-sales-dashboard.html` — protected Lead & Sales dashboard
+- `LEAD-SALES-TRACKING.md` — click and commission reconciliation details
+- `.github/workflows/cj-products.yml` — six-hour CJ product synchronization
 - `.github/workflows/translate-catalog.yml` — scheduled translation batches
 - `.github/workflows/validate-cj-sync.yml` — catalogue validation
 - `.github/workflows/direct-partners.yml` — direct-partner validation
