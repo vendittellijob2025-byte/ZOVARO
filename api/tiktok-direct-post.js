@@ -127,7 +127,6 @@ export default async function handler(req, res) {
     const body = req.body || {};
 
     const {
-      privacy_level: requestedPrivacyLevel,
       title,
       video_url,
       video_size,
