@@ -37,6 +37,49 @@ function formatMoney(value, currency = "USD") {
   return `${symbol}${number.toFixed(2)}`;
 }
 
+const ZOVARO_TRACKING_API = "https://zovaro.vercel.app/api/lead-track";
+
+// Only advertisers with verified CJ links and known tracking hosts are routed
+// through ZOVARO's click recorder. Other merchants keep their original links.
+const CJ_TRACKED_ADVERTISERS = Object.freeze({
+  "8022425": "cj-kaiya-baby",
+  "7969352": "cj-padel-iberico"
+});
+
+function getProductClickUrl(product) {
+  const originalUrl = String(product.clickUrl || product.destination || "").trim();
+  if (!originalUrl) return "#";
+
+  const partnerId =
+    String(product.source || "").toUpperCase() === "CJ"
+      ? CJ_TRACKED_ADVERTISERS[String(product.advertiserId || "")]
+      : "";
+
+  if (!partnerId) return originalUrl;
+
+  try {
+    const destination = new URL(originalUrl);
+    if (destination.protocol !== "https:") return originalUrl;
+
+    const trackingUrl = new URL(ZOVARO_TRACKING_API);
+    trackingUrl.searchParams.set("partner", partnerId);
+    trackingUrl.searchParams.set(
+      "ref",
+      "zv-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12)
+    );
+    trackingUrl.searchParams.set(
+      "item",
+      String(product.id || "product").replace(/[^a-z0-9_-]/gi, "-").slice(0, 100)
+    );
+    trackingUrl.searchParams.set("source", "website");
+    trackingUrl.searchParams.set("campaign", "product-modal");
+    trackingUrl.searchParams.set("to", destination.toString());
+    return trackingUrl.toString();
+  } catch {
+    return originalUrl;
+  }
+}
+
 function card(p) {
   const old =
     p.oldPrice != null
@@ -359,9 +402,7 @@ function openProduct(id) {
     p.description || "";
 
   $("#modalLink").href =
-    p.clickUrl ||
-    p.destination ||
-    "#";
+    getProductClickUrl(p);
 
   $("#modalLink").target =
     "_blank";
