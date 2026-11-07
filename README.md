@@ -76,6 +76,7 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 - `LEAD-SALES-TRACKING.md` — click and commission reconciliation details
 - `.github/workflows/cj-products.yml` — six-hour CJ product synchronization
 - `.github/workflows/translate-catalog.yml` — scheduled translation batches
+- `.github/workflows/cj-commission-sync.yml` — daily CJ sales and commission import
 - `.github/workflows/validate-cj-sync.yml` — catalogue validation
 - `.github/workflows/direct-partners.yml` — direct-partner validation
 - `.github/workflows/daily-promotion.yml` — daily promotion-video generation
