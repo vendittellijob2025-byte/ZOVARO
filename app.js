@@ -110,10 +110,15 @@ function getProductClickUrl(product) {
 
     const trackingUrl = new URL(ZOVARO_TRACKING_API);
     trackingUrl.searchParams.set("partner", partnerId);
-    trackingUrl.searchParams.set(
-      "ref",
-      "zv-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12)
-    );
+
+    // The same unique referral ID is recorded by ZOVARO and sent to CJ as
+    // its supported SID sub-ID so later commission records can be reconciled.
+    const referralId =
+      "zv-" + Date.now().toString(36) + "-" +
+      Math.random().toString(36).slice(2, 12);
+
+    destination.searchParams.set("SID", referralId);
+    trackingUrl.searchParams.set("ref", referralId);
     trackingUrl.searchParams.set(
       "item",
       String(product.id || "product").replace(/[^a-z0-9_-]/gi, "-").slice(0, 100)
