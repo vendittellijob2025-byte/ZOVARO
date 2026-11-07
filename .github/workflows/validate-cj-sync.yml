@@ -17,6 +17,14 @@ on:
       - "vercel.json"
       - "lead-sales-dashboard.html"
       - "api/lead-admin-events.js"
+      - "api/marketplace.js"
+      - "api/marketplace-admin.js"
+      - "marketplace.js"
+      - "marketplace.css"
+      - "marketplace-admin.html"
+      - "index.html"
+      - "privacy.html"
+      - "terms.html"
       - "api/cj-commission-sync.js"
       - "data/catalog.json"
       - ".github/workflows/cj-products.yml"
@@ -67,6 +75,9 @@ jobs:
           node --check api/lead-track.js
           node --check api/cj-commission-sync.js
           node --check api/lead-admin-events.js
+          node --check api/marketplace.js
+          node --check api/marketplace-admin.js
+          node --check marketplace.js
           node --check api/tiktok-direct-post.js
           node --input-type=module -e '
             import fs from "node:fs";
@@ -75,6 +86,12 @@ jobs:
             const scripts = html.split("<script>").slice(1).map(part => part.split("</script>")[0]);
             if (!scripts.length) throw new Error("Dashboard script not found.");
             for (const script of scripts) new vm.Script(script, { filename: "lead-sales-dashboard.html" });
+            const homepage = fs.readFileSync("index.html", "utf8");
+            const inlineScripts = [...homepage.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)].map(match => match[1]).filter(script => script.trim());
+            for (const script of inlineScripts) new vm.Script(script, { filename: "index.html" });
+            const admin = fs.readFileSync("marketplace-admin.html", "utf8");
+            const adminScripts = [...admin.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)].map(match => match[1]).filter(script => script.trim());
+            for (const script of adminScripts) new vm.Script(script, { filename: "marketplace-admin.html" });
             JSON.parse(fs.readFileSync("vercel.json", "utf8"));
             const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
             if (pkg.type !== "module") throw new Error("package.json must declare native ESM.");
@@ -116,6 +133,19 @@ jobs:
 
           TRACK_STATUS="$(curl --silent --show-error --output /tmp/zovaro-track-response.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/lead-track")"
           test "$TRACK_STATUS" = "400"
+
+          MARKETPLACE_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace.json --write-out '%{http_code}' --max-time 20 "$BASE_URL/api/marketplace?type=job")"
+          test "$MARKETPLACE_STATUS" = "200"
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const listings = JSON.parse(fs.readFileSync("/tmp/zovaro-marketplace.json", "utf8"));
+            if (!Array.isArray(listings)) throw new Error("Marketplace GET did not return a listing array.");
+            if (listings.some(item => item.status || item.contactEmail === undefined && item.publicContact)) throw new Error("Marketplace response contains internal fields.");
+            console.log("Marketplace public read test passed: " + listings.length + " approved jobs.");
+          '
+
+          MARKETPLACE_ADMIN_STATUS="$(curl --silent --show-error --output /tmp/zovaro-marketplace-admin.json --write-out '%{http_code}' --max-time 15 "$BASE_URL/api/marketplace-admin")"
+          test "$MARKETPLACE_ADMIN_STATUS" = "401"
 
           COMMISSION_STATUS="$(curl --silent --show-error --output /tmp/zovaro-commission-response.json --write-out '%{http_code}' --max-time 15 -X POST -H "Content-Type: application/json" --data '{}' "$BASE_URL/api/cj-commission-sync")"
           test "$COMMISSION_STATUS" = "401"
