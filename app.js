@@ -158,7 +158,7 @@ const CATEGORY_ALIASES = new Map([
 ]);
 
 function categoryLabel(value) {
-  const label = String(value || "").replace(/\\s+/g, " ").trim();
+  const label = String(value || "").replace(/\s+/g, " ").trim();
   if (!label) return "";
   return CATEGORY_ALIASES.get(label.toLowerCase()) || label;
 }
