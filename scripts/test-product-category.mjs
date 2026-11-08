@@ -163,6 +163,11 @@ assert.equal(categoryFor({ name: "General Retailer" }, {
   title: "Unbranded Item 123",
   category: "Beauty & Personal Care"
 }), "Other");
+assert.equal(categoryFor({ name: "General Retailer" }, {
+  title: "Unbranded Item 123",
+  category: "Beauty & Personal Care",
+  sourceCategory: "Electronics"
+}), "Electronics");
 assert.equal(categoryFor({ name: "Abelssoft Int", parentCategory: "Electronics" }, {
   title: "Abelssoft StartupStar 2025"
 }), "Office & Technology");
