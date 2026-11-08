@@ -13,12 +13,12 @@ function extractArray(source, pattern, label) {
 
 const frontendHosts = extractArray(
   frontend,
-  /const CJ_TRACKING_HOSTS = new Set\\(\\[([\\s\\S]*?)\\]\\);/,
+  /const CJ_TRACKING_HOSTS = new Set\(\[([\s\\S]*?)\]\);/,
   "Frontend CJ tracking"
 );
 const serverHosts = extractArray(
   server,
-  /const trustedCjHosts = \\[([\\s\\S]*?)\\];/,
+  /const trustedCjHosts = \[([\s\\S]*?)\];/,
   "Server CJ tracking"
 );
 
