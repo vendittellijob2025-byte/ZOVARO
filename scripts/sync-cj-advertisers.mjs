@@ -496,10 +496,13 @@ for (const advertiserId of eligibleFeedAdvertisers) {
     }
 
     diagnostic.productsPassingValidation += 1;
-    diagnostic.productsImported += 1;
     const key = productKey(normalized);
-    if (importedByKey.has(key)) diagnostic.duplicateProductKeys += 1;
-    importedByKey.set(key, normalized);
+    if (importedByKey.has(key)) {
+      diagnostic.duplicateProductKeys += 1;
+    } else {
+      diagnostic.productsImported += 1;
+      importedByKey.set(key, normalized);
+    }
   }
 }
 
