@@ -36,6 +36,7 @@ const cases = [
   ["Farmhouse Fresh Fluffy Bunny Shea Butter Hand Cream 2Oz", "Beauty"],
   ["Sundae Body Whipped Shower Foam - Very Vanilla 8.9Oz", "Beauty"],
   ["Moschino Toy Boy Coffret - 3Pc", "Beauty", { advertiser: { name: "FragranceShop.com" } }],
+  ["Moschino Toy Boy Gift Set", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Michael Kors Underwire Baby Doll Tankini Top In New Navy - S", "Fashion"],
   ["Rexing Rexing-MSD-64GB microSDXC UHS-3 Memory Card with Adapter", "Electronics"],
   ["Rexing M1S Monocular", "Electronics", { description: "4K IR Night Vision Digital Monocular with 8x Zoom" }],
