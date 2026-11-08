@@ -555,6 +555,18 @@ for (const product of imported) {
 
 const finalProducts = [...merged.values()];
 
+// Reclassify all current CJ products BEFORE storefront sampling. This keeps the
+// 1,200-per-category cap accurate after older catalog items are reclassified.
+for (const product of finalProducts) {
+  if (product.source !== "CJ" && product.network !== NETWORKS.CJ.network) continue;
+  const advertiser = advertiserMap.get(String(product.advertiserId)) || {
+    name: product.advertiserName || ""
+  };
+  const category = categoryFor(advertiser, product);
+  product.category = category;
+  product.englishCategory = category;
+}
+
 // Keep the public catalog lean: the storefront only needs these fields.
 // Long descriptions and unused feed metadata otherwise make the 50k+ product
 // JSON unnecessarily large and slow to download on mobile connections.
@@ -661,6 +673,16 @@ const storefrontEligibleProducts = finalProducts.filter(product => {
 
 const storefrontProducts = selectStorefrontProducts(storefrontEligibleProducts);
 const compactProducts = storefrontProducts.map(compactCatalogProduct);
+const finalCategoryCounts = compactProducts.reduce((counts, product) => {
+  const category = String(product.category || "Other");
+  counts[category] = (counts[category] || 0) + 1;
+  return counts;
+}, {});
+const overLimitCategories = Object.entries(finalCategoryCounts).filter(([, count]) => count > 1200);
+console.log("Final storefront category counts: " + JSON.stringify(finalCategoryCounts));
+if (overLimitCategories.length) {
+  throw new Error("Storefront category cap exceeded: " + JSON.stringify(overLimitCategories));
+}
 const advertiserRecords = new Map(
   (Array.isArray(catalog.advertisers) ? catalog.advertisers : []).map(item => [String(item.id), item])
 );

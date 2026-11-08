@@ -35,7 +35,7 @@ const cases = [
   ["Rude Splash Liner Eyeliner | Comic Book", "Beauty"],
   ["Farmhouse Fresh Fluffy Bunny Shea Butter Hand Cream 2Oz", "Beauty"],
   ["Sundae Body Whipped Shower Foam - Very Vanilla 8.9Oz", "Beauty"],
-  ["Moschino Toy Boy Coffret - 3Pc", "Beauty", { description: "Eau de parfum with woody and spicy notes" }],
+  ["Moschino Toy Boy Coffret - 3Pc", "Beauty", { advertiser: { name: "FragranceShop.com" } }],
   ["Michael Kors Underwire Baby Doll Tankini Top In New Navy - S", "Fashion"],
   ["Rexing Rexing-MSD-64GB microSDXC UHS-3 Memory Card with Adapter", "Electronics"],
   ["Rexing M1S Monocular", "Electronics", { description: "4K IR Night Vision Digital Monocular with 8x Zoom" }],
@@ -100,7 +100,22 @@ const cases = [
   ["Abelssoft Undeleter 2025", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["Abelssoft WashAndGo 24", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Fashion"],
-  ["Le Specs Air Heart Cat-Eye Sunglasses", "Fashion"]
+  ["Le Specs Air Heart Cat-Eye Sunglasses", "Fashion"],
+["Rexing CPW-1 Wireless Apple CarPlay Adapter", "Electronics"],
+  ["Rexing Smart Hardwire Kit with 360 Motion Detection", "Electronics"],
+  ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Fashion"],
+  ["UNice Sport-Friendly Glueless Curly Wig", "Fashion"],
+  ["Chi Tea Tree Oil Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Clinique Travel Size Take The Day Off Cleansing Balm", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Style And Grace Travel Cup Gift Bath And Body Gift Sets", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Joe's Jeans The Hi Honey Skinny Ankle Jeans In Divine", "Fashion"],
+  ["Lovery Almond Milk And Honey Body Butter", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Savannah Bee Company Whipped Honey Gift Set", "Food & Grocery"],
+  ["Vacation Arizona Lip Balms 3Pc", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Nuda Self Tan Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Teaology Yoga Care Radiance Butter Shower Scrub", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Rexing Hard Travel Case Replacement", "Travel"],
+  ["Millefiori Icon Classic Car Air Freshener", "Automotive"]
 ];
 
 for (const [title, expected, options = {}] of cases) {
