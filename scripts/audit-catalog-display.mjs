@@ -14,6 +14,7 @@ const counts = {
   joined: 0,
   trackedHttps: 0,
   translatedTitle: 0,
+  originalTitleFallback: 0,
   translatedCategory: 0,
   image: 0,
   validPrice: 0,
@@ -27,14 +28,15 @@ for (const p of catalog.products) {
   const active = activeNetworks.has(p.network);
   const joined = p.joinedStatus === true;
   const tracked = typeof p.clickUrl === "string" && /^https:\/\//i.test(p.clickUrl.trim());
-  const title = typeof p.englishTitle === "string" && !!p.englishTitle.trim();
+  const title = (typeof p.englishTitle === "string" && !!p.englishTitle.trim()) || (typeof p.title === "string" && !!p.title.trim());
   const category = typeof p.englishCategory === "string" && !!p.englishCategory.trim();
   const image = !!String(p.imageLink || (Array.isArray(p.additionalImageLinks) ? p.additionalImageLinks[0] || "" : "")).trim();
   const price = typeof p.price === "number" && Number.isFinite(p.price) && p.price > 0;
   if (active) counts.activeNetwork++;
   if (joined) counts.joined++;
   if (tracked) counts.trackedHttps++;
-  if (title) counts.translatedTitle++;
+  if (typeof p.englishTitle === "string" && p.englishTitle.trim()) counts.translatedTitle++;
+  else if (typeof p.title === "string" && p.title.trim()) counts.originalTitleFallback++;
   if (category) counts.translatedCategory++;
   if (image) counts.image++;
   if (price) counts.validPrice++;

@@ -194,8 +194,8 @@
               product.network
             ) &&
             product.joinedStatus === true &&
-            typeof product.englishTitle === "string" &&
-            product.englishTitle.trim() &&
+            ((typeof product.englishTitle === "string" && product.englishTitle.trim()) ||
+              (typeof product.title === "string" && product.title.trim())) &&
             typeof product.englishCategory === "string" &&
             product.englishCategory.trim() &&
             typeof product.clickUrl ===
