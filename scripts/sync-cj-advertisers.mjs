@@ -431,7 +431,19 @@ if (!feeds.length) throw new Error("CJ returned no product feed summaries; exist
 
 const advertiserMap = new Map(joinedAdvertisers.map(item => [item.id, item]));
 const importedByKey = new Map();
-const advertiserDiagnostics = new Map();
+// Keep a per-advertiser outcome for every joined relationship, including
+// advertisers that have not published a product feed yet.
+const advertiserDiagnostics = new Map(joinedAdvertisers.map(advertiser => [advertiser.id, {
+  advertiserId: advertiser.id,
+  advertiserName: advertiser.name,
+  status: eligibleFeedAdvertisers.has(advertiser.id) ? "feed_available" : "no_product_feed",
+  productsReceived: 0,
+  advertiserIdMismatch: 0,
+  productsPassingValidation: 0,
+  productsImported: 0,
+  duplicateProductKeys: 0,
+  rejectedByReason: {}
+}]));
 let received = 0;
 let advertiserMismatchCount = 0;
 
@@ -439,22 +451,12 @@ for (const advertiserId of eligibleFeedAdvertisers) {
   const advertiser = advertiserMap.get(advertiserId);
   if (!advertiser) continue;
 
-  const diagnostic = {
-    advertiserId,
-    advertiserName: advertiser.name,
-    productsReceived: 0,
-    advertiserIdMismatch: 0,
-    productsPassingValidation: 0,
-    duplicateProductKeys: 0,
-    rejectedByReason: {}
-  };
-  advertiserDiagnostics.set(advertiserId, diagnostic);
-
+  const diagnostic = advertiserDiagnostics.get(advertiserId);
   let products;
   try {
     products = await getProductsForAdvertiser(advertiser);
   } catch (error) {
-    diagnostic.syncStatus = "failed";
+    diagnostic.status = "sync_failed";
     diagnostic.syncError = String(error.message || error).slice(0, 500);
     console.error("CJ advertiser sync failed; continuing with other joined advertisers: " + JSON.stringify({
       advertiserId,
@@ -464,7 +466,7 @@ for (const advertiserId of eligibleFeedAdvertisers) {
     continue;
   }
 
-  diagnostic.syncStatus = "completed";
+  diagnostic.status = "synced";
   if (products.length && products.every(product => !cleanUrl(product.linkCode?.clickUrl))) {
     await diagnoseShoppingProducts(advertiser);
   }
@@ -494,6 +496,7 @@ for (const advertiserId of eligibleFeedAdvertisers) {
     }
 
     diagnostic.productsPassingValidation += 1;
+    diagnostic.productsImported += 1;
     const key = productKey(normalized);
     if (importedByKey.has(key)) diagnostic.duplicateProductKeys += 1;
     importedByKey.set(key, normalized);
@@ -521,6 +524,18 @@ if (!imported.length) {
 }
 
 const previousProducts = catalog.products;
+const previouslyKnownAdvertiserIds = new Set(
+  (Array.isArray(catalog.advertisers) ? catalog.advertisers : []).map(item => String(item.id))
+);
+const newlyJoinedAdvertisers = joinedAdvertisers.filter(advertiser =>
+  !previouslyKnownAdvertiserIds.has(String(advertiser.id))
+);
+console.log("Newly discovered joined CJ advertisers: " + JSON.stringify(newlyJoinedAdvertisers.map(item => ({
+  advertiserId: item.id,
+  advertiserName: item.name,
+  hasProductFeed: eligibleFeedAdvertisers.has(item.id)
+}))));
+
 const merged = new Map(previousProducts.map(product => [productKey(product), product]));
 
 for (const product of imported) {
@@ -688,12 +703,31 @@ const updatedCatalog = {
     productsReceived: received,
     productsWithValidTrackingLinks: imported.length,
     productsPreservedFromPreviousCatalog: previousProducts.length,
-    advertisersFailed: [...advertiserDiagnostics.values()].filter(item => item.syncStatus === "failed").map(item => ({
+    newlyJoinedAdvertisers: newlyJoinedAdvertisers.map(item => ({
+      advertiserId: item.id,
+      advertiserName: item.name,
+      hasProductFeed: eligibleFeedAdvertisers.has(item.id)
+    })),
+    advertisersWithoutProductFeeds: advertisersWithoutProductFeeds.map(item => ({
+      advertiserId: item.id,
+      advertiserName: item.name
+    })),
+    advertiserStatuses: [...advertiserDiagnostics.values()].map(item => ({
+      advertiserId: item.advertiserId,
+      advertiserName: item.advertiserName,
+      status: item.status,
+      productsReceived: item.productsReceived,
+      productsImported: item.productsImported,
+      productsPassingValidation: item.productsPassingValidation,
+      rejectedByReason: item.rejectedByReason,
+      ...(item.syncError ? { error: item.syncError } : {})
+    })),
+    advertisersFailed: [...advertiserDiagnostics.values()].filter(item => item.status === "sync_failed").map(item => ({
       advertiserId: item.advertiserId,
       advertiserName: item.advertiserName,
       error: item.syncError
     })),
-    syncStatus: [...advertiserDiagnostics.values()].some(item => item.syncStatus === "failed") ? "partial" : "complete"
+    syncStatus: [...advertiserDiagnostics.values()].some(item => item.status === "sync_failed") ? "partial" : "complete"
   }
 };
 
