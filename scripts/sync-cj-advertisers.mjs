@@ -666,13 +666,18 @@ const advertiserRecords = new Map(
 );
 
 for (const advertiser of joinedAdvertisers) {
-  if (eligibleFeedAdvertisers.has(advertiser.id)) {
-    advertiserRecords.set(advertiser.id, {
-      id: advertiser.id,
-      name: advertiser.name,
-      category: categoryFor(advertiser, {})
-    });
-  }
+  // Persist every joined relationship, even before its product feed is ready.
+  // This prevents repeatedly reporting the same accepted advertiser as "new"
+  // on every six-hour run while still allowing later feed discovery.
+  advertiserRecords.set(advertiser.id, {
+    ...(advertiserRecords.get(advertiser.id) || {}),
+    id: advertiser.id,
+    name: advertiser.name,
+    category: categoryFor(advertiser, {}),
+    relationshipStatus: advertiser.relationshipStatus || "joined",
+    productFeedAvailable: eligibleFeedAdvertisers.has(advertiser.id),
+    lastCheckedAt: new Date().toISOString()
+  });
 }
 
 const sourceRecords = new Map(
