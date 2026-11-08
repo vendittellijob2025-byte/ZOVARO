@@ -192,8 +192,10 @@ jobs:
             }
             console.log("Existing catalog valid: " + catalog.products.length + " products.");
           '
-      - name: Audit stored categories against primary product identity
-        run: node scripts/audit-category-quality.mjs
+      - name: Reclassify and audit stored categories against primary product identity
+        run: |
+          node scripts/reclassify-catalog-categories.mjs
+          node scripts/audit-category-quality.mjs
 
       - name: Audit actual storefront eligibility and category distribution
         run: node scripts/audit-catalog-display.mjs

@@ -41,6 +41,9 @@ jobs:
           CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
         run: node scripts/sync-cj-advertisers.mjs
 
+      - name: Reclassify products using primary product identity
+        run: node scripts/reclassify-catalog-categories.mjs
+
       - name: Verify category consistency and storefront limits
         run: node scripts/audit-category-quality.mjs
 
@@ -84,6 +87,7 @@ jobs:
               git fetch origin "${GITHUB_REF_NAME}"
               git reset --hard "origin/${GITHUB_REF_NAME}"
               node scripts/sync-cj-advertisers.mjs
+              node scripts/reclassify-catalog-categories.mjs
               node scripts/audit-category-quality.mjs
               git add data/catalog.json data/translation-cache.json
               if git diff --cached --quiet; then
