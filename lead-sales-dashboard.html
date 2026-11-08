@@ -46,13 +46,13 @@ h1{font-size:clamp(27px,4vw,38px);margin:30px 0 5px;letter-spacing:-1px}.sub{col
 <div class="metric"><span>Commissioni CJ nette nel campione (USD)</span><strong id="mCjCommission">—</strong></div>
 <div class="metric"><span>Commissioni CJ in attesa (USD)</span><strong id="mCjPending">—</strong></div>
 <div class="metric"><span>Record CJ con referral SID</span><strong id="mCjReferral">—</strong></div>
-<div class="metric"><span>Commissioni CJ collegate a click ZOVARO</span><strong id="mCjMatched">—</strong></div>
+<div class="metric"><span>Record CJ collegati ai click (campioni max 100)</span><strong id="mCjMatched">—</strong></div>
 </div>
 <div class="metric" style="margin-bottom:12px"><span>Valore vendite dichiarate dai partner esterni (non CJ)</span><strong id="mRevenue">—</strong></div>
 <p id="cjLastSync" class="muted">Sincronizzazione commissioni CJ: in attesa della prima esecuzione.</p>
 <h2 class="section-title">Registro attività</h2>
 <div class="table-wrap"><table><thead><tr><th>Data</th><th>Evento</th><th>Partner</th><th>Referral</th><th>Prodotto / ID</th><th>Vendita</th><th>Commissione CJ</th><th>Verifica</th></tr></thead><tbody id="eventRows"><tr><td colspan="8" class="empty">Nessun dato caricato.</td></tr></tbody></table></div>
-<div class="notice"><strong>Nota importante:</strong> i clic sono registrati da ZOVARO. Le transazioni e le commissioni CJ vengono importate dal Commission Detail API; le correzioni possono aggiungere importi negativi e i totali mostrati sono un campione recente, non un saldo definitivo. Il referral SID collega una vendita al clic solo quando CJ restituisce lo stesso identificativo. Le commissioni in attesa non sono ancora pagabili. I lead, gli appuntamenti e le vendite degli altri partner compaiono solo quando inviano aggiornamenti firmati. Una firma autentica il mittente, ma non costituisce prova indipendente della vendita.</div>
+<div class="notice"><strong>Nota importante:</strong> i clic sono registrati da ZOVARO. Le transazioni e le commissioni CJ vengono importate dal Commission Detail API; le correzioni possono aggiungere importi negativi e i totali mostrati sono un campione recente, non un saldo definitivo. Il referral SID collega una vendita al clic solo quando CJ restituisce lo stesso identificativo. Il conteggio dei collegamenti confronta gli ultimi 100 click e gli ultimi 100 record CJ: è un indicatore del campione, non il totale storico. Le commissioni in attesa non sono ancora pagabili. I lead, gli appuntamenti e le vendite degli altri partner compaiono solo quando inviano aggiornamenti firmati. Una firma autentica il mittente, ma non costituisce prova indipendente della vendita.</div>
 </main>
 </div>
 <script>
