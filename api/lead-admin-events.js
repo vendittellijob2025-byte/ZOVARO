@@ -103,6 +103,10 @@ export default async function handler(req, res) {
     ).toFixed(2));
     const cjSales = cjCommissions.filter(record => record.event_type === "cj_sale");
     const cjSaleOrders = new Set(cjSales.map(record => record.order_id || record.commission_id));
+    const clickReferralIds = new Set(clicks.map(event => String(event.referral_id || "").trim()).filter(Boolean));
+    const cjRecordsMatchingClicks = cjCommissions.filter(record =>
+      Boolean(record.referral_id) && clickReferralIds.has(String(record.referral_id).trim())
+    ).length;
 
     return res.status(200).json({
       generated_at: new Date().toISOString(),
@@ -115,7 +119,8 @@ export default async function handler(req, res) {
         closed_won: closed.length,
         cj_commission_records: cjCommissions.length,
         cj_sale_orders: cjSaleOrders.size,
-        cj_lead_records: cjCommissions.filter(record => record.event_type === "cj_lead").length
+        cj_lead_records: cjCommissions.filter(record => record.event_type === "cj_lead").length,
+        cj_records_matching_clicks: cjRecordsMatchingClicks
       },
       reported_revenue_by_currency: revenueByCurrency,
       cj_summary: {
