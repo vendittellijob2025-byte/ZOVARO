@@ -29,30 +29,56 @@ const cases = [
   ["Dog Food Storage Container", "Pets"],
   ["Garden Hose", "Garden"],
   ["Hair Extensions 20 Inch", "Fashion"],
-  ["Unclassified Special Item", "Other", { advertiser: { name: "General Retailer" } }]
+  ["Unclassified Special Item", "Other", { advertiser: { name: "General Retailer" } }],
+  ["Ahava Brightening Mud Mask Face Masks 1.7Oz", "Beauty"],
+  ["Rude Return Of The Jeteye 35 Eyeshadows Palette - Book 4 1.34Oz", "Beauty"],
+  ["Rude Splash Liner Eyeliner | Comic Book", "Beauty"],
+  ["Farmhouse Fresh Fluffy Bunny Shea Butter Hand Cream 2Oz", "Beauty"],
+  ["Sundae Body Whipped Shower Foam - Very Vanilla 8.9Oz", "Beauty"],
+  ["Moschino Toy Boy Coffret - 3Pc", "Beauty", { description: "Eau de parfum with woody and spicy notes" }],
+  ["Michael Kors Underwire Baby Doll Tankini Top In New Navy - S", "Fashion"],
+  ["Rexing Rexing-MSD-64GB microSDXC UHS-3 Memory Card with Adapter", "Electronics"],
+  ["Rexing M1S Monocular", "Electronics", { description: "4K IR Night Vision Digital Monocular with 8x Zoom" }],
+  ["UNice Skin Melt HD Lace Body Wave Human Hair Wig Camera Ready Styling", "Fashion"],
+  ["Vitajuwel Via Heat Tea Strainer", "Home & Living"],
+  ["Rexing Installation Service", "Other"],
+  ["Patchology Rose Hydrating Under Eye Masks - 5Pair", "Beauty"],
+  ["Biotherm Blue Peptides Eyes & Lips Contour Reshaper Eye Cream", "Beauty"],
+  ["Covergirl Perfect Blend Eyeliner | Black Brown", "Beauty"],
+  ["Le 9 De Givenchy Multi Finish Eyeshadows Palette", "Beauty"],
+  ["Rexing BC500 In-Car Baby Monitor HD 1080p", "Electronics"],
+  ["Baby Sleep Sack Organic Cotton", "Babies"],
+  ["Shiseido Sports Bb Broad Spectrum Spf 50+ Wetforce", "Beauty"],
+  ["Super Pack Drop Shot Carat Pro Padel Racket", "Sports"]
 ];
 
 for (const [title, expected, options = {}] of cases) {
   const merchant = options.advertiser || advertiser;
   assert.equal(
-    categoryFor(merchant, { title, ...(options.description ? { description: options.description } : {}), ...(options.category ? { category: options.category } : {}) }),
+    categoryFor(merchant, {
+      title,
+      ...(options.description ? { description: options.description } : {}),
+      ...(options.category ? { category: options.category } : {})
+    }),
     expected,
     title
   );
 }
 
-// A product title must beat conflicting advertiser and feed taxonomy.
+// A title beats a stale ZOVARO/source category, not merely advertiser metadata.
 assert.equal(categoryFor({ name: "Travel Store", parentCategory: "Travel" }, {
   title: "Toy Story Eau de Parfum",
-  category: "Travel"
+  category: "Travel",
+  sourceCategory: "Travel"
 }), "Beauty");
 assert.equal(categoryFor({ name: "Beauty Store" }, {
   title: "Ceramic Coffee Mug",
-  category: "Beauty"
+  category: "Beauty",
+  sourceCategory: "Beauty"
 }), "Home & Living");
 assert.equal(categoryFor({ name: "General Retailer" }, {
   title: "Unbranded Item 123",
   category: "Beauty & Personal Care"
-}), "Beauty");
+}), "Other");
 
-console.log("Product primary-category tests passed (" + (cases.length + 2) + " checks).");
+console.log("Product primary-category tests passed (" + (cases.length + 3) + " checks).");
