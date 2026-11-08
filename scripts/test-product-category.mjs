@@ -49,7 +49,26 @@ const cases = [
   ["Rexing BC500 In-Car Baby Monitor HD 1080p", "Electronics"],
   ["Baby Sleep Sack Organic Cotton", "Babies"],
   ["Shiseido Sports Bb Broad Spectrum Spf 50+ Wetforce", "Beauty"],
-  ["Super Pack Drop Shot Carat Pro Padel Racket", "Sports"]
+  ["Super Pack Drop Shot Carat Pro Padel Racket", "Sports"],
+  ["Jane Iredale Oval Blender Brush", "Beauty"],
+  ["Etafor Portable Blender | Black", "Appliances"],
+  ["Mac Love Me Liquid Lipcolour | Whatta Doll", "Beauty"],
+  ["Lovery Dinosaur Egg Bath Bombs - Gift Toys With Dino Surprises Inside", "Beauty"],
+  ["Kaloo Les Amis Eau D'ambiance Spray + Free Penguin Soft Toy", "Beauty"],
+  ["Mac Kohl Power Eye Pencil | Feline", "Beauty"],
+  ["R+Co Motorcycle Flexible Gel 5 Oz", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Sam Edelman Lavina Buckle Mule In Natural", "Fashion"],
+  ["Charlotte Tilbury Luxury Palette | Pillow Talk Dreams", "Beauty"],
+  ["Drowsy Pillow Scrunchie | Dusty Gold", "Fashion"],
+  ["Nox Ml10 Pro Cup Silver By Miguel Lamperti 2027", "Sports", { advertiser: { name: "Padel Iberico ES" } }],
+  ["Farmhouse Fresh Triple Shot Caramel Coffee Body Polish", "Beauty"],
+  ["Cliganic Mosquito Repellent Patches", "Health & Wellness"],
+  ["Aveda Botanical Kinetics Energizing Eye Creme", "Beauty"],
+  ["Abelssoft FileCryptor 2025 | Daten verschlüsseln", "Office & Technology"],
+  ["JetDrive 9 | Defragmentiert Deine Festplatte", "Office & Technology"],
+  ["Mediatheken Downloader 2025 | Legal von ARD herunterladen", "Office & Technology"],
+  ["Myova Myoplus Tablets 120Ct", "Health & Wellness"],
+  ["UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair", "Fashion"]
 ];
 
 for (const [title, expected, options = {}] of cases) {
@@ -65,7 +84,6 @@ for (const [title, expected, options = {}] of cases) {
   );
 }
 
-// A title beats a stale ZOVARO/source category, not merely advertiser metadata.
 assert.equal(categoryFor({ name: "Travel Store", parentCategory: "Travel" }, {
   title: "Toy Story Eau de Parfum",
   category: "Travel",
