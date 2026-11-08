@@ -145,5 +145,11 @@ assert.equal(categoryFor({ name: "General Retailer" }, {
   title: "Unbranded Item 123",
   category: "Beauty & Personal Care"
 }), "Other");
+assert.equal(categoryFor({ name: "Abelssoft Int", parentCategory: "Electronics" }, {
+  title: "Abelssoft StartupStar 2025"
+}), "Office & Technology");
+assert.equal(categoryFor({ name: "UNice", parentCategory: "Beauty" }, {
+  title: "UNice Surprise Box Gift Set"
+}), "Other");
 
 console.log("Product primary-category tests passed (" + (cases.length + 3) + " checks).");
