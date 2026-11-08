@@ -193,12 +193,7 @@ jobs:
             console.log("Existing catalog valid: " + catalog.products.length + " products.");
           '
       - name: Audit stored categories against primary product identity
-        run: |
-          if git diff --name-only HEAD^ HEAD | grep -qx 'data/catalog.json'; then
-            node scripts/audit-category-quality.mjs
-          else
-            echo 'Catalog data unchanged in this commit; category consistency audit deferred.'
-          fi
+        run: node scripts/audit-category-quality.mjs
 
       - name: Audit actual storefront eligibility and category distribution
         run: node scripts/audit-catalog-display.mjs
