@@ -45,6 +45,10 @@ export default async function handler(req, res) {
   // CJ returned this verified tracking host in valid joined-publisher
   // linkCode URLs. Keep it alongside the configurable partner allowlist.
   const trustedCjHosts = [
+    "www.dpbolvw.net",
+    "www.tkqlhce.com",
+    "www.anrdoezrs.net",
+    "www.jdoqocy.com",
     "www.kqzyfj.com"
   ];
   const allowedHosts = new Set([
