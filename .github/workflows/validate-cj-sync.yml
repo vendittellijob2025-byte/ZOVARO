@@ -190,3 +190,5 @@ jobs:
             }
             console.log("Existing catalog valid: " + catalog.products.length + " products.");
           '
+      - name: Audit actual storefront eligibility and category distribution
+        run: node scripts/audit-catalog-display.mjs
