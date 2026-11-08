@@ -12,6 +12,7 @@ on:
       - "app.js"
       - "app-cj-loader.js"
       - "api/lead-track.js"
+      - "scripts/test-cj-tracking-hosts.mjs"
       - "package.json"
       - "api/tiktok-direct-post.js"
       - "vercel.json"
@@ -21,6 +22,7 @@ on:
       - "lib/marketplace-moderation.js"
       - "lib/product-category.js"
       - "scripts/test-product-category.mjs"
+      - "scripts/test-cj-tracking-hosts.mjs"
       - "scripts/reclassify-catalog-categories.mjs"
       - "scripts/test-marketplace-moderation.mjs"
       - "lib/marketplace-moderation.js"
@@ -90,6 +92,7 @@ jobs:
           node --check scripts/reclassify-catalog-categories.mjs
           node scripts/test-marketplace-moderation.mjs
           node scripts/test-product-category.mjs
+          node scripts/test-cj-tracking-hosts.mjs
           node --check marketplace.js
           node --check api/tiktok-direct-post.js
           node --input-type=module -e '
