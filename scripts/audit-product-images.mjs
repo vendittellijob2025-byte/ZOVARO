@@ -315,12 +315,12 @@ async function main() {
     if (hashDistance("0000000000000000", "000000000000000f") !== 4) throw new Error("Perceptual hash self-test failed.");
     if (!qualityFlags(metrics, 1024).includes("image_file_too_small")) throw new Error("Quality flags self-test failed.");
     const mismatch = compareVisualCategory("Babies", [
-      { label: "lipstick, mascara, eyeliner or other makeup product", score: 0.72 },
+      { label: "lipstick, lip gloss, lip liner or lip balm makeup", score: 0.72 },
       { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.11 }
     ]);
     if (mismatch.status !== "possible_mismatch" || mismatch.detectedCategory !== "Beauty") throw new Error("Visual category self-test failed.");
     const ambiguous = compareVisualCategory("Babies", [
-      { label: "lipstick, mascara, eyeliner or other makeup product", score: 0.29 },
+      { label: "lipstick, lip gloss, lip liner or lip balm makeup", score: 0.29 },
       { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.27 }
     ]);
     if (ambiguous.status !== "ambiguous") throw new Error("Visual ambiguity self-test failed.");
