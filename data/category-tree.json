@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "sourceModel": "Amazon-inspired browse hierarchy; ZOVARO taxonomy and presentation",
+  "categories": [
+    {
+      "name": "Automotive",
+      "children": [
+        {
+          "name": "Vehicles for Sale",
+          "children": [
+            "Cars",
+            "SUVs & Crossovers",
+            "Pickup Trucks",
+            "Electric & Hybrid Vehicles",
+            "Vans & Commercial Vehicles",
+            "Motorcycles"
+          ]
+        },
+        {
+          "name": "Accessories",
+          "children": [
+            "Interior Accessories",
+            "Exterior Accessories",
+            "Electronics & Navigation",
+            "Phone & Device Mounts",
+            "Seat Covers & Floor Mats",
+            "Cargo, Roof & Towing",
+            "Safety & Emergency"
+          ]
+        },
+        {
+          "name": "Replacement Parts",
+          "children": [
+            "Tires & Wheels",
+            "Mirrors & Glass",
+            "Brakes",
+            "Engine & Engine Parts",
+            "Filters",
+            "Batteries & Electrical",
+            "Lighting",
+            "Steering & Suspension",
+            "Transmission & Drivetrain",
+            "Exhaust & Emissions",
+            "Body Parts & Trim",
+            "Wipers & Washers",
+            "Belts, Hoses & Cooling"
+          ]
+        },
+        {
+          "name": "Car Care & Fluids",
+          "children": [
+            "Cleaning Kits",
+            "Exterior Care",
+            "Interior Care",
+            "Glass Care",
+            "Tire & Wheel Care",
+            "Oils & Fluids",
+            "Paint & Body Care"
+          ]
+        },
+        {
+          "name": "Tools & Equipment",
+          "children": [
+            "Diagnostic Tools",
+            "Lifting & Jacks",
+            "Hand Tools",
+            "Power Tools",
+            "Workshop Equipment"
+          ]
+        },
+        {
+          "name": "Motorcycles & Powersports",
+          "children": [
+            "Motorcycle Parts",
+            "Motorcycle Accessories",
+            "Protective Gear",
+            "ATV & Powersports Parts"
+          ]
+        },
+        {
+          "name": "RV & Commercial Vehicles",
+          "children": [
+            "RV Parts & Accessories",
+            "Truck Parts & Accessories",
+            "Heavy-Duty Equipment"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beauty",
+      "children": [
+        {
+          "name": "Makeup",
+          "children": [
+            "Lip Makeup",
+            "Eye Makeup",
+            "Face Makeup",
+            "Nails",
+            "Makeup Tools"
+          ]
+        },
+        {
+          "name": "Skincare",
+          "children": [
+            "Cleansers",
+            "Moisturizers",
+            "Serums",
+            "Masks & Treatments",
+            "Sun Care"
+          ]
+        },
+        {
+          "name": "Hair Care",
+          "children": [
+            "Shampoo & Conditioner",
+            "Styling",
+            "Treatments",
+            "Hair Tools"
+          ]
+        },
+        {
+          "name": "Fragrance",
+          "children": [
+            "Perfume",
+            "Eau de Toilette",
+            "Body Mist"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "children": [
+        {
+          "name": "Phones & Tablets",
+          "children": [
+            "Smartphones",
+            "Tablets",
+            "Cases & Accessories"
+          ]
+        },
+        {
+          "name": "Computers",
+          "children": [
+            "Laptops",
+            "Desktops",
+            "Monitors",
+            "Components & Peripherals"
+          ]
+        },
+        {
+          "name": "Cameras & Photography",
+          "children": [
+            "Digital Cameras",
+            "Lenses",
+            "Action Cameras",
+            "Accessories"
+          ]
+        },
+        {
+          "name": "Audio",
+          "children": [
+            "Headphones",
+            "Earbuds",
+            "Speakers"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fashion",
+      "children": [
+        {
+          "name": "Clothing",
+          "children": [
+            "Women",
+            "Men",
+            "Children"
+          ]
+        },
+        {
+          "name": "Shoes",
+          "children": [
+            "Sneakers",
+            "Boots",
+            "Sandals",
+            "Formal Shoes"
+          ]
+        },
+        {
+          "name": "Bags & Accessories",
+          "children": [
+            "Handbags",
+            "Backpacks",
+            "Wallets",
+            "Jewelry",
+            "Eyewear"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Babies",
+      "children": [
+        {
+          "name": "Baby Care",
+          "children": [
+            "Bath & Hygiene",
+            "Baby Skin Care",
+            "Diapering"
+          ]
+        },
+        {
+          "name": "Baby Gear",
+          "children": [
+            "Strollers",
+            "Car Seats",
+            "Monitors",
+            "Carriers"
+          ]
+        },
+        {
+          "name": "Baby Clothing",
+          "children": [
+            "Newborn",
+            "Infant",
+            "Toddler"
+          ]
+        }
+      ]
+    }
+  ]
+}
