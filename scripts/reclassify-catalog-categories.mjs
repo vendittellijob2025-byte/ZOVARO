@@ -8,7 +8,7 @@ if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is
 const imageAuditPath = "data/image-audit-report.json";
 const imageAudits = new Map();
 try {
-  const report = JSON.parse(fs.readFileSync(imageAuditPath, "utf8"));
+  const report = JSON.parse(await fs.readFile(imageAuditPath, "utf8"));
   for (const item of Array.isArray(report.results) ? report.results : []) {
     if (item?.key) imageAudits.set(String(item.key), item);
   }
