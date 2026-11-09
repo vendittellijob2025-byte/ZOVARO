@@ -44,7 +44,7 @@ jobs:
             zovaro-yolos-tiny-${{ runner.os }}-
 
       - name: Install free local vision runtime
-        run: npm install --no-save --no-package-lock @huggingface/transformers
+        run: npm install --no-save --no-package-lock @huggingface/transformers@3.8.1
 
       - name: Run image-audit logic tests
         run: node scripts/audit-product-images.mjs --self-test
