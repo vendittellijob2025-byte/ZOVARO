@@ -643,6 +643,26 @@ const activeNonCjNetworks = new Set(
     .map(source => source.network)
 );
 
+// Apply only hard image-audit failures to the public storefront. Unchecked images
+// remain eligible; uncertain visual/category findings are review-only and never
+// remove products automatically. Full inventory and affiliate tracking records stay intact.
+const imageAuditByKey = new Map();
+try {
+  const imageAuditReport = JSON.parse(await fs.readFile("data/image-audit-report.json", "utf8"));
+  for (const item of Array.isArray(imageAuditReport.results) ? imageAuditReport.results : []) {
+    if (item && item.key) imageAuditByKey.set(String(item.key), item);
+  }
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
+const imageAuditBlockedKeys = new Set(
+  finalProducts.filter(product => {
+    const audit = imageAuditByKey.get(productKey(product));
+    return audit && audit.imageUrl === product.imageLink && audit.decision === "review_required";
+  }).map(productKey)
+);
+console.log("Products excluded from public storefront by confirmed image-quality failures: " + imageAuditBlockedKeys.size);
+
 const storefrontEligibleProducts = finalProducts.filter(product => {
   const isCurrentJoinedCjProduct =
     (product.source === "CJ" || product.network === NETWORKS.CJ.network) &&
@@ -668,7 +688,8 @@ const storefrontEligibleProducts = finalProducts.filter(product => {
     Number(product.price) > 0;
 
   return (isCurrentJoinedCjProduct || isActiveOtherNetworkProduct) &&
-    hasValidClickUrl && hasValidImage && hasPrice;
+    hasValidClickUrl && hasValidImage && hasPrice &&
+    !imageAuditBlockedKeys.has(productKey(product));
 });
 
 const storefrontProducts = selectStorefrontProducts(storefrontEligibleProducts);
