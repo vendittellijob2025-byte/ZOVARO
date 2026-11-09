@@ -331,6 +331,7 @@ async function main() {
     }
   }
   report.model = MODEL_ID;
+  report.imageClassifier = IMAGE_CLASSIFIER_ID;
   report.generatedAt = new Date().toISOString();
   report.totalAudited = existing.size;
   report.results = [...existing.values()];
