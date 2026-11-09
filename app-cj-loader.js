@@ -55,6 +55,9 @@
       category:
         translatedCategory,
 
+      subcategory:
+        product.englishSubcategory || product.subcategory || "Other",
+
       price:
         hasSale
           ? salePrice
