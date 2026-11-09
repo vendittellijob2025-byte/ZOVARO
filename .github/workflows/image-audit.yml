@@ -1,0 +1,65 @@
+name: ZOVARO product image intelligence audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: Number of new or changed product images to inspect
+        required: false
+        default: "250"
+  schedule:
+    - cron: "17 4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zovaro-image-audit
+  cancel-in-progress: false
+
+jobs:
+  image-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      HF_HOME: ${{ github.workspace }}/.cache/huggingface
+      IMAGE_AUDIT_BATCH_SIZE: ${{ inputs.batch_size || '250' }}
+    steps:
+      - name: Checkout catalog
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Restore open-source vision model cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: zovaro-yolos-tiny-${{ runner.os }}-v1
+          restore-keys: |
+            zovaro-yolos-tiny-${{ runner.os }}-
+
+      - name: Install free local vision runtime
+        run: npm install --no-save --no-package-lock @huggingface/transformers@3.8.1
+
+      - name: Run image-audit logic tests
+        run: node scripts/audit-product-images.mjs --self-test
+
+      - name: Analyse new and changed catalogue images
+        run: node scripts/audit-product-images.mjs
+
+      - name: Save audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/image-audit-report.json
+          if git diff --cached --quiet; then
+            echo "No image-audit report changes to commit."
+          else
+            git commit -m "chore: update automated product image audit"
+            git push origin HEAD:main
+          fi

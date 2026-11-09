@@ -39,6 +39,8 @@ on:
       - ".github/workflows/cj-products.yml"
       - ".github/workflows/cj-commission-sync.yml"
       - ".github/workflows/validate-cj-sync.yml"
+      - "scripts/audit-product-images.mjs"
+      - ".github/workflows/image-audit.yml"
   pull_request:
     branches:
       - main
@@ -56,6 +58,8 @@ on:
       - ".github/workflows/cj-products.yml"
       - ".github/workflows/cj-commission-sync.yml"
       - ".github/workflows/validate-cj-sync.yml"
+      - "scripts/audit-product-images.mjs"
+      - ".github/workflows/image-audit.yml"
 
 permissions:
   contents: read
@@ -77,6 +81,8 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
+          node --check scripts/audit-product-images.mjs
+          node scripts/audit-product-images.mjs --self-test
           node --check scripts/sync-cj-advertisers.mjs
           node --check scripts/translate-to-english.mjs
           node --check scripts/create-tiktok-video.mjs
