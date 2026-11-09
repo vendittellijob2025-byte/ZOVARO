@@ -4,6 +4,29 @@ import { categoryFor } from "../lib/product-category.js";
 const CATALOG_PATH = "data/catalog.json";
 const REPORT_PATH = "data/image-audit-report.json";
 const MODEL_ID = process.env.IMAGE_AUDIT_MODEL || "Xenova/yolos-tiny";
+const IMAGE_CLASSIFIER_ID = process.env.IMAGE_CLASSIFIER_MODEL || "Xenova/clip-vit-base-patch32";
+const VISUAL_CANDIDATES = [
+  { label: "lipstick, mascara, eyeliner or other makeup product", category: "Beauty" },
+  { label: "skincare, facial cream, face serum or moisturizer", category: "Beauty" },
+  { label: "perfume, fragrance or cosmetic beauty product", category: "Beauty" },
+  { label: "baby-specific lotion, baby oil, diaper cream or baby wash", category: "Babies" },
+  { label: "baby clothes, newborn clothing or infant apparel", category: "Babies" },
+  { label: "baby stroller, infant car seat or nursery equipment", category: "Babies" },
+  { label: "toy for a baby, toddler or child", category: "Toys & Games" },
+  { label: "women's clothing, shoes, handbag or fashion accessory", category: "Fashion" },
+  { label: "laptop, smartphone, camera or electronic device", category: "Electronics" },
+  { label: "kitchen appliance or household electrical appliance", category: "Appliances" },
+  { label: "furniture, kitchenware or home decoration", category: "Home & Living" },
+  { label: "dog, cat or other pet product", category: "Pets" },
+  { label: "sports equipment, fitness or exercise gear", category: "Sports" },
+  { label: "food, drink or grocery product", category: "Food & Grocery" },
+  { label: "car accessory or automotive product", category: "Automotive" },
+  { label: "garden tool, plant or gardening product", category: "Garden" },
+  { label: "book, magazine or media product", category: "Books & Media" },
+  { label: "office supplies or computer software", category: "Office & Technology" },
+  { label: "travel luggage, suitcase or travel accessory", category: "Travel" },
+  { label: "medical, health or wellness product", category: "Health & Wellness" }
+];
 const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 250) || 250;
 const BATCH_SIZE = Math.min(500, Math.max(1, requestedBatchSize));
 const MIN_BYTES = 8 * 1024;
@@ -102,6 +125,42 @@ export function qualityFlags(metrics, byteLength) {
   return flags;
 }
 
+export function compareVisualCategory(expectedCategory, predictions) {
+  const ranked = (Array.isArray(predictions) ? predictions : [])
+    .map(item => {
+      const candidate = VISUAL_CANDIDATES.find(entry => entry.label === item.label);
+      return candidate ? { category: candidate.category, label: item.label, score: Number(item.score || 0) } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score);
+  const first = ranked[0];
+  const second = ranked[1];
+  if (!first) return { expectedCategory, status: "not_assessable" };
+  const margin = first.score - (second?.score || 0);
+  if (first.score < 0.28 || margin < 0.045) {
+    return {
+      expectedCategory,
+      detectedCategory: first.category,
+      status: "ambiguous",
+      confidence: Number(first.score.toFixed(3)),
+      margin: Number(margin.toFixed(3))
+    };
+  }
+  return {
+    expectedCategory,
+    detectedCategory: first.category,
+    status: first.category === expectedCategory ? "consistent" : "possible_mismatch",
+    visualLabel: first.label,
+    confidence: Number(first.score.toFixed(3)),
+    margin: Number(margin.toFixed(3)),
+    alternatives: ranked.slice(0, 3).map(item => ({
+      category: item.category,
+      label: item.label,
+      score: Number(item.score.toFixed(3))
+    }))
+  };
+}
+
 function categoryMismatch(product, detections) {
   const expected = categoryFor({ name: product.advertiserName || "" }, product);
   const relevant = detections
@@ -140,7 +199,7 @@ async function loadReport() {
   }
 }
 
-async function analyseProduct(product, detector, RawImage) {
+async function analyseProduct(product, detector, classifier, RawImage) {
   const imageUrl = String(product.imageLink || "");
   const base = {
     key: [product.source || "", product.advertiserId || "", product.id || ""].join("|"),
@@ -171,7 +230,11 @@ async function analyseProduct(product, detector, RawImage) {
         score: Number(item.score || 0),
         box: item.box || null
       }));
-    const mismatch = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
+    const expectedCategory = categoryFor({ name: product.advertiserName || "" }, product);
+    const visualPredictions = await classifier(image, VISUAL_CANDIDATES.map(item => item.label));
+    const visualCheck = compareVisualCategory(expectedCategory, visualPredictions);
+    const objectCheck = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
+    const mismatch = visualCheck.status === "not_assessable" ? objectCheck : visualCheck;
     if (mismatch.status === "possible_mismatch") flags.push("possible_category_mismatch");
     const decision = flags.some(flag => ["low_resolution", "image_file_too_small"].includes(flag))
       ? "review_required"
@@ -207,6 +270,16 @@ async function main() {
     if (metrics.width !== 64 || !/^[0-9a-f]{16}$/.test(metrics.perceptualHash)) throw new Error("Image metrics self-test failed.");
     if (hashDistance("0000000000000000", "000000000000000f") !== 4) throw new Error("Perceptual hash self-test failed.");
     if (!qualityFlags(metrics, 1024).includes("image_file_too_small")) throw new Error("Quality flags self-test failed.");
+    const mismatch = compareVisualCategory("Babies", [
+      { label: "lipstick, mascara, eyeliner or other makeup product", score: 0.72 },
+      { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.11 }
+    ]);
+    if (mismatch.status !== "possible_mismatch" || mismatch.detectedCategory !== "Beauty") throw new Error("Visual category self-test failed.");
+    const ambiguous = compareVisualCategory("Babies", [
+      { label: "lipstick, mascara, eyeliner or other makeup product", score: 0.29 },
+      { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.27 }
+    ]);
+    if (ambiguous.status !== "ambiguous") throw new Error("Visual ambiguity self-test failed.");
     console.log("Image audit self-tests passed.");
     return;
   }
@@ -231,11 +304,14 @@ async function main() {
 
   const { pipeline, RawImage, env } = await import("@huggingface/transformers");
   env.allowRemoteModels = true;
-  const detector = await pipeline("object-detection", MODEL_ID, { device: "cpu" });
+  const [detector, classifier] = await Promise.all([
+    pipeline("object-detection", MODEL_ID, { device: "cpu" }),
+    pipeline("zero-shot-image-classification", IMAGE_CLASSIFIER_ID, { device: "cpu" })
+  ]);
   let passed = 0;
   let review = 0;
   for (let index = 0; index < batch.length; index += 1) {
-    const result = await analyseProduct(batch[index], detector, RawImage);
+    const result = await analyseProduct(batch[index], detector, classifier, RawImage);
     const previous = [...existing.values()].filter(item => item.metrics?.perceptualHash);
     const duplicate = result.metrics?.perceptualHash
       ? previous.find(item => item.key !== result.key &&
