@@ -177,10 +177,21 @@ async function analyseProduct(product, detector, RawImage) {
       : flags.length ? "review" : "pass";
     return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck: mismatch };
   } catch (error) {
+    const reason = String(error.message || error).slice(0, 120);
+    const hardFailure = [
+      "invalid_image_url",
+      "response_not_image",
+      "image_too_large",
+      "image_file_too_small",
+      "image_http_404",
+      "image_http_410"
+    ].includes(reason);
     return {
       ...base,
-      decision: "review_required",
-      flags: [String(error.message || error).slice(0, 120)],
+      // Transient network errors, 403s and server errors are review-only:
+      // they must never remove a good affiliate product from the storefront.
+      decision: hardFailure ? "review_required" : "review",
+      flags: [reason],
       metrics: null,
       detections: [],
       categoryCheck: { status: "not_assessable" }
