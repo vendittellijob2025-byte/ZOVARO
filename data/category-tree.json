@@ -233,7 +233,14 @@
         {
           "name": "Makeup",
           "children": [
-            "Makeup Tools & Accessories",
+            {
+              "name": "Makeup Tools & Accessories",
+              "children": [
+                "Makeup Brushes",
+                "Cosmetic Sponges",
+                "Makeup Applicators"
+              ]
+            },
             "Body Makeup",
             "Lip Makeup",
             "Eye Makeup",
@@ -613,8 +620,24 @@
             "Resistance Bands",
             "Benches & Racks",
             "Home Gym Equipment",
-            "Cardio Machines",
-            "Yoga & Pilates"
+            {
+              "name": "Cardio Machines",
+              "children": [
+                "Treadmills",
+                "Exercise Bikes",
+                "Ellipticals",
+                "Rowing Machines",
+                "Jump Ropes"
+              ]
+            },
+            {
+              "name": "Yoga & Pilates",
+              "children": [
+                "Yoga Mats",
+                "Yoga Blocks & Straps",
+                "Pilates Equipment"
+              ]
+            }
           ]
         },
         {
