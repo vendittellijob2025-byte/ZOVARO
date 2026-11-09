@@ -204,4 +204,33 @@ for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
   assert.equal(actualCategory, expectedCategory, title);
   assert.equal(subcategoryFor(actualCategory, { title }), expectedSubcategory, title + " subcategory");
 }
-console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2) + " checks).");
+
+const departmentCases = [
+  ["Vitamin D3 2000 IU Supplement", "Health & Wellness", "Vitamins & Supplements"],
+  ["Digital Blood Pressure Monitor", "Health & Wellness", "Health Monitoring"],
+  ["First Aid Adhesive Bandages", "Health & Wellness", "Medical Supplies"],
+  ["Whey Protein Powder", "Health & Wellness", "Sports Nutrition"],
+  ["Yoga Mat Non Slip", "Sports", "Yoga & Pilates"],
+  ["Padel Racket Carbon", "Sports", "Racquet Sports"],
+  ["Mountain Bike Helmet", "Sports", "Cycling"],
+  ["Women's Floral Summer Dress", "Fashion", "Women's Clothing"],
+  ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
+  ["Baby Bottle with Silicone Nipple", "Babies", "Feeding"],
+  ["Baby Stroller Travel System", "Babies", "Baby Gear"],
+  ["Stainless Steel Cookware Set", "Home & Living", "Kitchen & Dining"],
+  ["Robot Vacuum Cleaner", "Appliances", "Floor Care"],
+  ["Dog Harness Adjustable", "Pets", "Dogs"],
+  ["LEGO Building Blocks Set", "Toys & Games", "Building & Construction"],
+  ["Arabica Coffee Beans", "Food & Grocery", "Beverages"],
+  ["Laptop Computer 15 inch", "Electronics", "Computers"],
+  ["Wireless Bluetooth Headphones", "Electronics", "Audio"],
+  ["Cordless Power Drill", "Tools & DIY", "Power Tools"],
+  ["Carry On Suitcase", "Travel", "Luggage"],
+  ["Organic Tomato Seeds", "Garden", "Gardening"]
+];
+for (const [title, expectedCategory, expectedSubcategory] of departmentCases) {
+  const actualCategory = categoryFor({ name: "General Retailer" }, { title });
+  assert.equal(actualCategory, expectedCategory, title);
+  assert.equal(subcategoryFor(actualCategory, { title }), expectedSubcategory, title + " subcategory");
+}
+console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2 + departmentCases.length * 2) + " checks).");
