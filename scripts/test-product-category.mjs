@@ -197,7 +197,7 @@ const autoCases = [
   ["Car Wash Shampoo", "Automotive", "Car Care & Fluids"],
   ["Used Cars for Sale - Dealer Inventory", "Automotive", "Vehicles for Sale"],
   ["Baby Pink Lipstick", "Beauty", "Makeup > Lip Makeup"],
-  ["Baby Wash for Newborn", "Babies", "Other"]
+  ["Baby Wash for Newborn", "Babies", "Baby Care"]
 ];
 for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
   const actualCategory = categoryFor({ name: "General Retailer" }, { title });
