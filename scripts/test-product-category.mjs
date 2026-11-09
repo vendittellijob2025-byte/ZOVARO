@@ -210,7 +210,7 @@ const departmentCases = [
   ["Digital Blood Pressure Monitor", "Health & Wellness", "Health Monitoring"],
   ["First Aid Adhesive Bandages", "Health & Wellness", "Medical Supplies"],
   ["Whey Protein Powder", "Health & Wellness", "Sports Nutrition > Protein Powders"],
-  ["Yoga Mat Non Slip", "Sports", "Yoga & Pilates"],
+  ["Yoga Mat Non Slip", "Sports", "Yoga & Pilates > Yoga Mats"],
   ["Padel Racket Carbon", "Sports", "Racquet Sports > Padel"],
   ["Mountain Bike Helmet", "Sports", "Cycling > Helmets & Protection"],
   ["Women's Floral Summer Dress", "Fashion", "Women's Clothing"],
