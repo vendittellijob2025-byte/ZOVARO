@@ -1,3 +1,4 @@
+import fs from "node:fs/promises";
 import assert from "node:assert/strict";
 import { categoryFor, subcategoryFor } from "../lib/product-category.js";
 
@@ -233,4 +234,22 @@ for (const [title, expectedCategory, expectedSubcategory] of departmentCases) {
   assert.equal(actualCategory, expectedCategory, title);
   assert.equal(subcategoryFor(actualCategory, { title }), expectedSubcategory, title + " subcategory");
 }
+
+const categoryTree = JSON.parse(await fs.readFile(new URL("../data/category-tree.json", import.meta.url), "utf8"));
+function treeHasPath(categoryName, path) {
+  const root = categoryTree.categories.find(item => item.name === categoryName);
+  if (!root) return false;
+  let nodes = root.children || [];
+  for (const part of path.split(" > ")) {
+    const node = nodes.find(item => (typeof item === "string" ? item : item.name) === part);
+    if (!node) return false;
+    nodes = typeof node === "string" ? [] : (node.children || []);
+  }
+  return true;
+}
+for (const [title, category, subcategory] of [...autoCases, ...departmentCases]) {
+  assert.equal(treeHasPath(category, subcategory), true, "Missing browse-tree path: " + category + " > " + subcategory + " (" + title + ")");
+}
+console.log("Amazon.it browse-tree path integrity passed (" + (autoCases.length + departmentCases.length) + " paths).");
+
 console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2 + departmentCases.length * 2) + " checks).");
