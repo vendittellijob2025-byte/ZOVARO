@@ -196,7 +196,7 @@ const autoCases = [
   ["Car Interior Organizer", "Automotive", "Accessories"],
   ["Car Wash Shampoo", "Automotive", "Car Care & Fluids"],
   ["Used Cars for Sale - Dealer Inventory", "Automotive", "Vehicles for Sale"],
-  ["Baby Pink Lipstick", "Beauty", "Makeup"],
+  ["Baby Pink Lipstick", "Beauty", "Makeup > Lip Makeup"],
   ["Baby Wash for Newborn", "Babies", "Other"]
 ];
 for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
