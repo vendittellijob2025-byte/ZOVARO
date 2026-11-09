@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "sourceModel": "Amazon-inspired browse hierarchy; ZOVARO taxonomy and presentation",
+  "schemaVersion": 2,
+  "sourceModel": "Amazon-style browse tree principles: department > product family > specific product type; independently authored ZOVARO taxonomy",
   "categories": [
     {
       "name": "Automotive",
@@ -31,7 +31,6 @@
         {
           "name": "Replacement Parts",
           "children": [
-            "Tires & Wheels",
             "Mirrors & Glass",
             "Brakes",
             "Engine & Engine Parts",
@@ -43,18 +42,31 @@
             "Exhaust & Emissions",
             "Body Parts & Trim",
             "Wipers & Washers",
-            "Belts, Hoses & Cooling"
+            "Belts, Hoses & Cooling",
+            "Fuel System"
+          ]
+        },
+        {
+          "name": "Tires & Wheels",
+          "children": [
+            "Car Tires",
+            "Motorcycle Tires",
+            "Truck Tires",
+            "Wheels & Rims",
+            "Wheel Accessories",
+            "Tire Pressure & Repair"
           ]
         },
         {
           "name": "Car Care & Fluids",
           "children": [
-            "Cleaning Kits",
-            "Exterior Care",
-            "Interior Care",
+            "Exterior Cleaning",
+            "Interior Cleaning",
+            "Wax, Polish & Detailing",
             "Glass Care",
             "Tire & Wheel Care",
-            "Oils & Fluids",
+            "Motor Oils",
+            "Fluids & Additives",
             "Paint & Body Care"
           ]
         },
@@ -96,35 +108,332 @@
             "Lip Makeup",
             "Eye Makeup",
             "Face Makeup",
-            "Nails",
-            "Makeup Tools"
+            "Eyebrow Products",
+            "Nail Makeup",
+            "Makeup Sets",
+            "Makeup Tools & Brushes",
+            "False Eyelashes"
           ]
         },
         {
           "name": "Skincare",
           "children": [
-            "Cleansers",
+            "Face Cleansers",
+            "Toners & Mists",
             "Moisturizers",
-            "Serums",
-            "Masks & Treatments",
-            "Sun Care"
+            "Serums & Essences",
+            "Eye Care",
+            "Face Masks",
+            "Exfoliators",
+            "Acne Treatments",
+            "Sun Protection",
+            "Lip Care"
           ]
         },
         {
           "name": "Hair Care",
           "children": [
-            "Shampoo & Conditioner",
-            "Styling",
-            "Treatments",
-            "Hair Tools"
+            "Shampoo",
+            "Conditioner",
+            "Hair Treatments & Masks",
+            "Hair Oils",
+            "Hair Styling Products",
+            "Hair Color",
+            "Hair Extensions & Wigs",
+            "Hair Brushes & Combs",
+            "Hair Dryers & Styling Tools"
           ]
         },
         {
           "name": "Fragrance",
           "children": [
-            "Perfume",
+            "Women's Fragrance",
+            "Men's Fragrance",
+            "Unisex Fragrance",
+            "Eau de Parfum",
             "Eau de Toilette",
-            "Body Mist"
+            "Body Mist",
+            "Fragrance Sets"
+          ]
+        },
+        {
+          "name": "Bath & Body",
+          "children": [
+            "Body Wash & Shower Gel",
+            "Body Lotion & Cream",
+            "Body Scrubs",
+            "Bath Soaks & Salts",
+            "Hand & Foot Care",
+            "Deodorants"
+          ]
+        },
+        {
+          "name": "Nail Care",
+          "children": [
+            "Nail Polish",
+            "Nail Treatments",
+            "Nail Tools",
+            "Nail Art & Accessories"
+          ]
+        },
+        {
+          "name": "Men's Grooming",
+          "children": [
+            "Shaving",
+            "Beard Care",
+            "Aftershave",
+            "Men's Skincare",
+            "Grooming Tools"
+          ]
+        },
+        {
+          "name": "Beauty Devices",
+          "children": [
+            "Facial Cleansing Devices",
+            "Hair Removal Devices",
+            "LED & Light Therapy",
+            "Mirrors & Organizers"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Health & Wellness",
+      "children": [
+        {
+          "name": "Vitamins & Supplements",
+          "children": [
+            "Multivitamins",
+            "Vitamin A-K",
+            "Vitamin B",
+            "Vitamin C",
+            "Vitamin D",
+            "Minerals",
+            "Herbal Supplements",
+            "Omega Oils",
+            "Probiotics",
+            "Protein & Amino Acids"
+          ]
+        },
+        {
+          "name": "Sports Nutrition",
+          "children": [
+            "Protein Powders",
+            "Pre-Workout",
+            "Post-Workout",
+            "Creatine",
+            "Electrolytes",
+            "Energy & Recovery"
+          ]
+        },
+        {
+          "name": "Medical Supplies",
+          "children": [
+            "First Aid",
+            "Bandages & Dressings",
+            "Medical Tape",
+            "Protective Equipment",
+            "Home Medical Supplies"
+          ]
+        },
+        {
+          "name": "Health Monitoring",
+          "children": [
+            "Thermometers",
+            "Blood Pressure Monitors",
+            "Blood Glucose Monitors",
+            "Pulse Oximeters",
+            "Scales & Body Composition"
+          ]
+        },
+        {
+          "name": "Personal Care",
+          "children": [
+            "Oral Care",
+            "Dental Floss & Irrigators",
+            "Eye Care",
+            "Ear Care",
+            "Feminine Care",
+            "Incontinence Care"
+          ]
+        },
+        {
+          "name": "Mobility & Daily Living",
+          "children": [
+            "Walking Aids",
+            "Wheelchairs & Mobility",
+            "Supports & Braces",
+            "Daily Living Aids"
+          ]
+        },
+        {
+          "name": "Pain Relief & Therapy",
+          "children": [
+            "Hot & Cold Therapy",
+            "Massage Devices",
+            "Pain Relief Supports",
+            "Recovery Equipment"
+          ]
+        },
+        {
+          "name": "Sleep & Relaxation",
+          "children": [
+            "Sleep Aids",
+            "Eye Masks & Earplugs",
+            "Relaxation Products",
+            "Aromatherapy"
+          ]
+        },
+        {
+          "name": "Vision & Hearing",
+          "children": [
+            "Reading Glasses",
+            "Magnifiers",
+            "Hearing Accessories"
+          ]
+        },
+        {
+          "name": "Health Devices",
+          "children": [
+            "Nebulizers",
+            "TENS & EMS Units",
+            "Diagnostic Devices",
+            "Replacement Parts & Accessories"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sports",
+      "children": [
+        {
+          "name": "Fitness & Strength Training",
+          "children": [
+            "Weights & Dumbbells",
+            "Resistance Bands",
+            "Benches & Racks",
+            "Home Gym Equipment",
+            "Weightlifting Accessories"
+          ]
+        },
+        {
+          "name": "Cardio Training",
+          "children": [
+            "Treadmills",
+            "Exercise Bikes",
+            "Ellipticals",
+            "Rowing Machines",
+            "Jump Ropes"
+          ]
+        },
+        {
+          "name": "Yoga & Pilates",
+          "children": [
+            "Yoga Mats",
+            "Blocks & Straps",
+            "Pilates Equipment",
+            "Yoga Clothing & Accessories"
+          ]
+        },
+        {
+          "name": "Running",
+          "children": [
+            "Running Shoes",
+            "Running Apparel",
+            "Hydration",
+            "Safety & Visibility",
+            "Running Accessories"
+          ]
+        },
+        {
+          "name": "Cycling",
+          "children": [
+            "Bicycles",
+            "Bike Components",
+            "Helmets & Protection",
+            "Cycling Apparel",
+            "Lights & Electronics",
+            "Pumps & Repair"
+          ]
+        },
+        {
+          "name": "Racquet Sports",
+          "children": [
+            "Tennis",
+            "Padel",
+            "Badminton",
+            "Squash",
+            "Racquets & Strings",
+            "Balls & Accessories"
+          ]
+        },
+        {
+          "name": "Team Sports",
+          "children": [
+            "Soccer",
+            "Basketball",
+            "Baseball & Softball",
+            "Volleyball",
+            "American Football",
+            "Hockey"
+          ]
+        },
+        {
+          "name": "Outdoor Recreation",
+          "children": [
+            "Camping",
+            "Hiking",
+            "Climbing",
+            "Backpacks",
+            "Tents & Shelters",
+            "Outdoor Tools"
+          ]
+        },
+        {
+          "name": "Water Sports",
+          "children": [
+            "Swimming",
+            "Surfing",
+            "Paddleboarding",
+            "Kayaking",
+            "Diving & Snorkeling"
+          ]
+        },
+        {
+          "name": "Winter Sports",
+          "children": [
+            "Skiing",
+            "Snowboarding",
+            "Ice Skating",
+            "Winter Protection"
+          ]
+        },
+        {
+          "name": "Golf",
+          "children": [
+            "Golf Clubs",
+            "Golf Balls",
+            "Golf Bags",
+            "Golf Training Aids",
+            "Golf Accessories"
+          ]
+        },
+        {
+          "name": "Combat & Martial Arts",
+          "children": [
+            "Boxing",
+            "Martial Arts",
+            "Protective Gear",
+            "Training Equipment"
+          ]
+        },
+        {
+          "name": "Sports Apparel & Accessories",
+          "children": [
+            "Sports Clothing",
+            "Sports Footwear",
+            "Sports Bags",
+            "Protective Equipment"
           ]
         }
       ]
@@ -136,17 +445,23 @@
           "name": "Phones & Tablets",
           "children": [
             "Smartphones",
+            "Basic Phones",
             "Tablets",
-            "Cases & Accessories"
+            "E-Readers",
+            "Cases & Screen Protectors",
+            "Chargers & Cables"
           ]
         },
         {
           "name": "Computers",
           "children": [
             "Laptops",
-            "Desktops",
+            "Desktop Computers",
             "Monitors",
-            "Components & Peripherals"
+            "Computer Components",
+            "Keyboards & Mice",
+            "Storage & Memory",
+            "Networking"
           ]
         },
         {
@@ -155,7 +470,9 @@
             "Digital Cameras",
             "Lenses",
             "Action Cameras",
-            "Accessories"
+            "Video Cameras",
+            "Tripods & Stabilizers",
+            "Camera Accessories"
           ]
         },
         {
@@ -163,7 +480,49 @@
           "children": [
             "Headphones",
             "Earbuds",
-            "Speakers"
+            "Speakers",
+            "Microphones",
+            "Home Audio",
+            "Audio Accessories"
+          ]
+        },
+        {
+          "name": "TV & Home Theater",
+          "children": [
+            "Televisions",
+            "Projectors",
+            "Streaming Devices",
+            "Home Theater Systems",
+            "TV Mounts & Accessories"
+          ]
+        },
+        {
+          "name": "Smart Home",
+          "children": [
+            "Smart Speakers",
+            "Smart Lighting",
+            "Security Cameras",
+            "Sensors & Alarms",
+            "Smart Plugs & Hubs"
+          ]
+        },
+        {
+          "name": "Wearable Technology",
+          "children": [
+            "Smartwatches",
+            "Fitness Trackers",
+            "VR Headsets",
+            "Wearable Accessories"
+          ]
+        },
+        {
+          "name": "Car Electronics",
+          "children": [
+            "Dash Cameras",
+            "GPS Navigation",
+            "Car Audio",
+            "CarPlay & Android Auto",
+            "Parking & Backup Cameras"
           ]
         }
       ]
@@ -172,30 +531,85 @@
       "name": "Fashion",
       "children": [
         {
-          "name": "Clothing",
+          "name": "Women's Clothing",
           "children": [
-            "Women",
-            "Men",
-            "Children"
+            "Dresses",
+            "Tops & T-Shirts",
+            "Blouses & Shirts",
+            "Jeans & Trousers",
+            "Skirts",
+            "Jackets & Coats",
+            "Activewear",
+            "Sleepwear & Lingerie",
+            "Swimwear"
+          ]
+        },
+        {
+          "name": "Men's Clothing",
+          "children": [
+            "T-Shirts & Polos",
+            "Shirts",
+            "Jeans & Trousers",
+            "Suits & Formalwear",
+            "Jackets & Coats",
+            "Activewear",
+            "Underwear & Sleepwear"
+          ]
+        },
+        {
+          "name": "Kids' Clothing",
+          "children": [
+            "Girls' Clothing",
+            "Boys' Clothing",
+            "School Uniforms",
+            "Kids' Outerwear"
           ]
         },
         {
           "name": "Shoes",
           "children": [
             "Sneakers",
+            "Running Shoes",
             "Boots",
             "Sandals",
-            "Formal Shoes"
+            "Heels",
+            "Flats",
+            "Formal Shoes",
+            "Slippers"
           ]
         },
         {
-          "name": "Bags & Accessories",
+          "name": "Bags & Luggage",
           "children": [
             "Handbags",
+            "Shoulder Bags",
             "Backpacks",
             "Wallets",
-            "Jewelry",
-            "Eyewear"
+            "Travel Bags",
+            "Suitcases",
+            "Laptop Bags"
+          ]
+        },
+        {
+          "name": "Jewelry",
+          "children": [
+            "Necklaces",
+            "Bracelets",
+            "Earrings",
+            "Rings",
+            "Watches & Accessories",
+            "Jewelry Sets"
+          ]
+        },
+        {
+          "name": "Accessories",
+          "children": [
+            "Sunglasses",
+            "Belts",
+            "Hats & Caps",
+            "Scarves",
+            "Gloves",
+            "Hair Accessories"
           ]
         }
       ]
@@ -206,9 +620,22 @@
         {
           "name": "Baby Care",
           "children": [
-            "Bath & Hygiene",
+            "Baby Bath & Hygiene",
             "Baby Skin Care",
-            "Diapering"
+            "Baby Hair Care",
+            "Diapering",
+            "Baby Wipes",
+            "Baby Health & Safety"
+          ]
+        },
+        {
+          "name": "Feeding",
+          "children": [
+            "Bottles & Nipples",
+            "Breastfeeding",
+            "Bottle Warmers",
+            "High Chairs",
+            "Baby Food & Formula Accessories"
           ]
         },
         {
@@ -216,16 +643,542 @@
           "children": [
             "Strollers",
             "Car Seats",
-            "Monitors",
-            "Carriers"
+            "Baby Carriers",
+            "Baby Monitors",
+            "Playards & Cribs",
+            "Bouncers & Swings"
+          ]
+        },
+        {
+          "name": "Nursery",
+          "children": [
+            "Cribs & Mattresses",
+            "Bedding",
+            "Changing Tables",
+            "Nursery Décor",
+            "Storage & Organization"
           ]
         },
         {
           "name": "Baby Clothing",
           "children": [
-            "Newborn",
-            "Infant",
-            "Toddler"
+            "Newborn Clothing",
+            "Bodysuits",
+            "Sleepwear",
+            "Outerwear",
+            "Shoes & Socks"
+          ]
+        },
+        {
+          "name": "Toys & Development",
+          "children": [
+            "Activity Gyms",
+            "Teethers",
+            "Rattles",
+            "Learning Toys",
+            "Bath Toys"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home & Living",
+      "children": [
+        {
+          "name": "Furniture",
+          "children": [
+            "Living Room Furniture",
+            "Bedroom Furniture",
+            "Dining Furniture",
+            "Office Furniture",
+            "Outdoor Furniture"
+          ]
+        },
+        {
+          "name": "Kitchen & Dining",
+          "children": [
+            "Cookware",
+            "Bakeware",
+            "Kitchen Utensils",
+            "Knives & Cutting",
+            "Tableware",
+            "Drinkware",
+            "Food Storage"
+          ]
+        },
+        {
+          "name": "Bedding & Bath",
+          "children": [
+            "Sheets & Pillowcases",
+            "Comforters & Duvets",
+            "Pillows",
+            "Blankets",
+            "Towels",
+            "Bath Mats",
+            "Shower Curtains"
+          ]
+        },
+        {
+          "name": "Home Décor",
+          "children": [
+            "Wall Art",
+            "Mirrors",
+            "Candles & Holders",
+            "Vases",
+            "Decorative Objects",
+            "Clocks"
+          ]
+        },
+        {
+          "name": "Storage & Organization",
+          "children": [
+            "Closet Organization",
+            "Storage Bins",
+            "Shelving",
+            "Laundry Organization"
+          ]
+        },
+        {
+          "name": "Cleaning & Household",
+          "children": [
+            "Cleaning Tools",
+            "Cleaning Supplies",
+            "Laundry Care",
+            "Paper Products",
+            "Air Fresheners"
+          ]
+        },
+        {
+          "name": "Lighting",
+          "children": [
+            "Ceiling Lights",
+            "Table & Floor Lamps",
+            "Desk Lamps",
+            "Outdoor Lighting"
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "children": [
+            "Hardware",
+            "Paint & Supplies",
+            "Plumbing",
+            "Electrical",
+            "Safety & Security"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Appliances",
+      "children": [
+        {
+          "name": "Kitchen Appliances",
+          "children": [
+            "Coffee Machines",
+            "Blenders & Mixers",
+            "Air Fryers",
+            "Microwaves",
+            "Toasters",
+            "Food Processors",
+            "Refrigerators"
+          ]
+        },
+        {
+          "name": "Laundry Appliances",
+          "children": [
+            "Washing Machines",
+            "Dryers",
+            "Irons & Steamers"
+          ]
+        },
+        {
+          "name": "Floor Care",
+          "children": [
+            "Vacuum Cleaners",
+            "Robot Vacuums",
+            "Steam Cleaners"
+          ]
+        },
+        {
+          "name": "Climate Control",
+          "children": [
+            "Air Conditioners",
+            "Fans",
+            "Heaters",
+            "Air Purifiers",
+            "Humidifiers & Dehumidifiers"
+          ]
+        },
+        {
+          "name": "Personal Appliances",
+          "children": [
+            "Hair Dryers",
+            "Electric Shavers",
+            "Epilators",
+            "Electric Toothbrushes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Garden",
+      "children": [
+        {
+          "name": "Gardening",
+          "children": [
+            "Seeds & Bulbs",
+            "Soil & Fertilizers",
+            "Planters & Pots",
+            "Watering & Irrigation",
+            "Garden Tools"
+          ]
+        },
+        {
+          "name": "Lawn Care",
+          "children": [
+            "Lawn Mowers",
+            "Trimmers & Edgers",
+            "Leaf Blowers",
+            "Lawn Treatment"
+          ]
+        },
+        {
+          "name": "Outdoor Living",
+          "children": [
+            "Patio Furniture",
+            "Grills & Outdoor Cooking",
+            "Outdoor Décor",
+            "Shade & Canopies"
+          ]
+        },
+        {
+          "name": "Pools & Spas",
+          "children": [
+            "Pool Equipment",
+            "Pool Cleaning",
+            "Pool Chemicals",
+            "Inflatables"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pets",
+      "children": [
+        {
+          "name": "Dogs",
+          "children": [
+            "Dog Food",
+            "Treats",
+            "Beds & Furniture",
+            "Collars, Leashes & Harnesses",
+            "Toys",
+            "Grooming & Health"
+          ]
+        },
+        {
+          "name": "Cats",
+          "children": [
+            "Cat Food",
+            "Litter & Litter Boxes",
+            "Beds & Furniture",
+            "Toys",
+            "Grooming & Health"
+          ]
+        },
+        {
+          "name": "Birds",
+          "children": [
+            "Bird Food",
+            "Cages",
+            "Toys & Perches"
+          ]
+        },
+        {
+          "name": "Fish & Aquatics",
+          "children": [
+            "Aquariums",
+            "Filters & Pumps",
+            "Fish Food",
+            "Water Care"
+          ]
+        },
+        {
+          "name": "Small Animals",
+          "children": [
+            "Habitats",
+            "Food",
+            "Bedding",
+            "Accessories"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Toys & Games",
+      "children": [
+        {
+          "name": "Building & Construction",
+          "children": [
+            "Building Sets",
+            "Blocks",
+            "Model Kits"
+          ]
+        },
+        {
+          "name": "Dolls & Figures",
+          "children": [
+            "Dolls",
+            "Action Figures",
+            "Accessories"
+          ]
+        },
+        {
+          "name": "Board Games & Puzzles",
+          "children": [
+            "Board Games",
+            "Card Games",
+            "Jigsaw Puzzles",
+            "Educational Games"
+          ]
+        },
+        {
+          "name": "Outdoor Play",
+          "children": [
+            "Ride-On Toys",
+            "Playhouses",
+            "Sports Toys",
+            "Water Toys"
+          ]
+        },
+        {
+          "name": "Creative & Learning",
+          "children": [
+            "Arts & Crafts",
+            "STEM Toys",
+            "Musical Toys",
+            "Learning & Educational Toys"
+          ]
+        },
+        {
+          "name": "Video Games",
+          "children": [
+            "Consoles",
+            "Video Games",
+            "Controllers & Accessories",
+            "Gaming Headsets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food & Grocery",
+      "children": [
+        {
+          "name": "Pantry Staples",
+          "children": [
+            "Pasta & Rice",
+            "Cooking Oils",
+            "Sauces & Condiments",
+            "Flour & Baking",
+            "Canned & Packaged Foods"
+          ]
+        },
+        {
+          "name": "Snacks & Sweets",
+          "children": [
+            "Chocolate",
+            "Candy",
+            "Cookies & Biscuits",
+            "Chips & Savory Snacks"
+          ]
+        },
+        {
+          "name": "Beverages",
+          "children": [
+            "Coffee",
+            "Tea",
+            "Water",
+            "Juices",
+            "Soft Drinks"
+          ]
+        },
+        {
+          "name": "Specialty & Organic",
+          "children": [
+            "Organic Foods",
+            "Gluten-Free",
+            "Vegan Foods",
+            "Dietary Foods"
+          ]
+        },
+        {
+          "name": "Food Gifts",
+          "children": [
+            "Gift Baskets",
+            "Honey & Spreads",
+            "Gourmet Sets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Books & Media",
+      "children": [
+        {
+          "name": "Books",
+          "children": [
+            "Fiction",
+            "Nonfiction",
+            "Business & Finance",
+            "Science & Technology",
+            "Health & Fitness",
+            "Children's Books",
+            "Education & Reference"
+          ]
+        },
+        {
+          "name": "Music",
+          "children": [
+            "CDs",
+            "Vinyl Records",
+            "Digital Music"
+          ]
+        },
+        {
+          "name": "Movies & TV",
+          "children": [
+            "DVD",
+            "Blu-ray",
+            "Digital Video"
+          ]
+        },
+        {
+          "name": "Magazines & Periodicals",
+          "children": [
+            "Lifestyle",
+            "Technology",
+            "Sports",
+            "Business"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office & Technology",
+      "children": [
+        {
+          "name": "Office Supplies",
+          "children": [
+            "Paper",
+            "Writing Instruments",
+            "Filing & Organization",
+            "Desk Accessories",
+            "Printer Supplies"
+          ]
+        },
+        {
+          "name": "Software",
+          "children": [
+            "Security & Antivirus",
+            "Productivity",
+            "Utilities",
+            "Creative Software",
+            "Business Software"
+          ]
+        },
+        {
+          "name": "Office Electronics",
+          "children": [
+            "Printers & Scanners",
+            "Shredders",
+            "Calculators",
+            "Conference Equipment"
+          ]
+        },
+        {
+          "name": "IT Accessories",
+          "children": [
+            "Cables & Adapters",
+            "Storage",
+            "Networking Accessories",
+            "Computer Peripherals"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tools & DIY",
+      "children": [
+        {
+          "name": "Power Tools",
+          "children": [
+            "Drills",
+            "Saws",
+            "Sanders",
+            "Grinders",
+            "Impact Drivers"
+          ]
+        },
+        {
+          "name": "Hand Tools",
+          "children": [
+            "Screwdrivers",
+            "Wrenches",
+            "Pliers",
+            "Hammers",
+            "Tool Sets"
+          ]
+        },
+        {
+          "name": "Power Tool Accessories",
+          "children": [
+            "Drill Bits",
+            "Saw Blades",
+            "Sanding Accessories",
+            "Batteries & Chargers"
+          ]
+        },
+        {
+          "name": "Workshop & Safety",
+          "children": [
+            "Tool Storage",
+            "Workbenches",
+            "Protective Equipment",
+            "Measuring Tools"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Travel",
+      "children": [
+        {
+          "name": "Luggage",
+          "children": [
+            "Suitcases",
+            "Carry-On Bags",
+            "Travel Backpacks",
+            "Duffel Bags"
+          ]
+        },
+        {
+          "name": "Travel Accessories",
+          "children": [
+            "Packing Organizers",
+            "Travel Pillows",
+            "Passport Holders",
+            "Luggage Tags",
+            "Travel Adapters"
+          ]
+        },
+        {
+          "name": "Outdoor & Adventure Travel",
+          "children": [
+            "Camping Gear",
+            "Hiking Accessories",
+            "Travel Safety"
           ]
         }
       ]
