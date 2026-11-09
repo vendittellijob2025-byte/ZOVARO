@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import { NETWORKS } from "./network-config.mjs";
-import { categoryFor } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor } from "../lib/product-category.js";
 
 const API_URL = "https://ads.api.cj.com/query";
 const ADVERTISER_API_URL = "https://advertiser-lookup.api.cj.com/v2/advertiser-lookup";
@@ -350,6 +350,8 @@ function makeCatalogProduct(product, advertiser) {
   const parsedDestination = destination ? new URL(destination) : null;
   if (parsedDestination && parsedClick.hostname === parsedDestination.hostname && parsedClick.pathname === parsedDestination.pathname) return null;
 
+  const category = categoryFor(advertiser, product);
+  const subcategory = subcategoryFor(category, product);
   return {
     source: "CJ",
     network: NETWORKS.CJ.network,
@@ -361,7 +363,9 @@ function makeCatalogProduct(product, advertiser) {
     sourceCategory: String(product.category || ""),
     advertiserId: advertiser.id,
     advertiserName: String(product.advertiserName || advertiser.name || "CJ Affiliate"),
-    category: categoryFor(advertiser, product),
+    category,
+    subcategory,
+    englishSubcategory: subcategory,
     imageLink,
     additionalImageLinks: Array.isArray(product.additionalImageLink) ? product.additionalImageLink.map(cleanUrl).filter(Boolean) : [],
     destination,
