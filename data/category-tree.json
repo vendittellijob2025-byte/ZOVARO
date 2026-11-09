@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "sourceModel": "Amazon-style browse tree principles: department > product family > specific product type; independently authored ZOVARO taxonomy",
+  "sourceModel": "Based on the public Amazon.it browse-node hierarchy and Amazon Seller Central Browse Tree principles; translated, adapted and extended for ZOVARO products and storefront UX.",
   "categories": [
     {
       "name": "Automotive",
