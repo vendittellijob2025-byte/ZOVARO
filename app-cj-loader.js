@@ -140,6 +140,15 @@
 
   async function loadAffiliateCatalog() {
     try {
+      try {
+        const treeResponse = await fetch("./data/category-tree.json?v=" + Date.now(), { cache: "no-store" });
+        if (treeResponse.ok) {
+          const categoryTree = await treeResponse.json();
+          window.ZOVARO_CATEGORY_TREE = Array.isArray(categoryTree.categories) ? categoryTree.categories : [];
+        }
+      } catch (treeError) {
+        console.warn("ZOVARO category tree:", treeError);
+      }
       const response =
         await fetch(
           `${CATALOG_URL}?v=${Date.now()}`,
