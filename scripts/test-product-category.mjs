@@ -191,13 +191,13 @@ assert.equal(categoryFor({ name: "UNice", parentCategory: "Beauty" }, {
 
 
 const autoCases = [
-  ["Michelin Pilot Sport 4 Tire", "Automotive", "Tires & Wheels"],
-  ["Universal Side Mirror Replacement", "Automotive", "Replacement Parts"],
-  ["Car Interior Organizer", "Automotive", "Accessories"],
-  ["Car Wash Shampoo", "Automotive", "Car Care & Fluids"],
+  ["Michelin Pilot Sport 4 Tire", "Automotive", "Rims & Tires"],
+  ["Universal Side Mirror Replacement", "Automotive", "Car Parts"],
+  ["Car Interior Organizer", "Automotive", "Car Accessories"],
+  ["Car Wash Shampoo", "Automotive", "Vehicle Care"],
   ["Used Cars for Sale - Dealer Inventory", "Automotive", "Vehicles for Sale"],
   ["Baby Pink Lipstick", "Beauty", "Makeup > Lip Makeup"],
-  ["Baby Wash for Newborn", "Babies", "Baby Care"]
+  ["Baby Wash for Newborn", "Babies", "Hygiene & Wellness > Baby Bath"]
 ];
 for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
   const actualCategory = categoryFor({ name: "General Retailer" }, { title });
@@ -206,12 +206,12 @@ for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
 }
 
 const departmentCases = [
-  ["Vitamin D3 2000 IU Supplement", "Health & Wellness", "Vitamins & Supplements > Vitamin D"],
-  ["Digital Blood Pressure Monitor", "Health & Wellness", "Health Monitoring"],
-  ["First Aid Adhesive Bandages", "Health & Wellness", "Medical Supplies"],
-  ["Whey Protein Powder", "Health & Wellness", "Sports Nutrition > Protein Powders"],
-  ["Yoga Mat Non Slip", "Sports", "Yoga & Pilates > Yoga Mats"],
-  ["Padel Racket Carbon", "Sports", "Racquet Sports > Padel"],
+  ["Vitamin D3 2000 IU Supplement", "Health & Wellness", "Nutrition > Vitamins, Minerals & Supplements > Vitamin D"],
+  ["Digital Blood Pressure Monitor", "Health & Wellness", "Medical Devices & Equipment > Diagnostic & Monitoring Devices"],
+  ["First Aid Adhesive Bandages", "Health & Wellness", "First Aid & Wound Care > First Aid"],
+  ["Whey Protein Powder", "Health & Wellness", "Nutrition > Sports Supplements > Protein Powders"],
+  ["Yoga Mat Non Slip", "Sports", "Fitness & Gym > Yoga & Pilates > Yoga Mats"],
+  ["Padel Racket Carbon", "Sports", "Padel"],
   ["Mountain Bike Helmet", "Sports", "Cycling > Helmets & Protection"],
   ["Women's Floral Summer Dress", "Fashion", "Women's Clothing"],
   ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
