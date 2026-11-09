@@ -1,6 +1,12 @@
 name: ZOVARO product image intelligence audit
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/audit-product-images.mjs"
+      - ".github/workflows/image-audit.yml"
   workflow_dispatch:
     inputs:
       batch_size:
