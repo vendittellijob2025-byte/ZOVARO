@@ -221,7 +221,7 @@ const departmentCases = [
   ["Robot Vacuum Cleaner", "Appliances", "Floor Care"],
   ["Dog Harness Adjustable", "Pets", "Dogs > Collars, Leashes & Harnesses"],
   ["LEGO Building Blocks Set", "Toys & Games", "Building & Construction"],
-  ["Arabica Coffee Beans", "Food & Grocery", "Beverages"],
+  ["Arabica Coffee Beans", "Food & Grocery", "Beverages > Coffee"],
   ["Laptop Computer 15 inch", "Electronics", "Computers"],
   ["Wireless Bluetooth Headphones", "Electronics", "Audio"],
   ["Cordless Power Drill", "Tools & DIY", "Power Tools"],
