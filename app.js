@@ -308,52 +308,50 @@ document.addEventListener("keydown", event => {
 
 
 function renderCategories() {
-
   const cats = [
-    ...new Set(
-      PRODUCTS
-        .map(p => categoryLabel(p.category))
-        .filter(Boolean)
-    )
+    ...new Set(PRODUCTS.map(p => categoryLabel(p.category)).filter(Boolean))
   ].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 
-  $("#categoryGrid").innerHTML =
-    cats
-      .map(
-        (c, i) =>
-          `
-          <button
-            class="category"
-            data-cat="${esc(c)}"
-          >
-            ${
-              /bab(y|ies)|kids/i.test(c)
-                ? '<img class="category-image" src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85" alt="" loading="lazy">'
-                : /sport/i.test(c)
-                  ? '<img class="category-image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="" loading="lazy">'
-                  : ""
-            }
-            <strong>${esc(c)}</strong>
-          </button>
-          `
-      )
-      .join("");
+  const renderSubcategories = category => {
+    const matching = PRODUCTS.filter(p => categoryLabel(p.category) === category);
+    const subcategories = [...new Set(matching.map(p => String(p.subcategory || "Other").trim()).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+    const buttons = subcategories.map(subcategory => `
+      <button class="category" data-subcat="${esc(subcategory)}">
+        <strong>${esc(subcategory)}</strong>
+        <span class="category-count">${matching.filter(p => String(p.subcategory || "Other") === subcategory).length} products</span>
+      </button>`).join("");
+    $("#categoryGrid").innerHTML = `
+      <button class="category category-back" data-back-categories="1"><strong>← All categories</strong></button>
+      <button class="category" data-all-category="${esc(category)}"><strong>All ${esc(category)}</strong></button>
+      ${buttons}
+    `;
+    $$("[data-back-categories]").forEach(el => el.addEventListener("click", renderCategories));
+    $$("[data-all-category]").forEach(el => el.addEventListener("click", () =>
+      showResults(matching, `${category} picks`)));
+    $$("[data-subcat]").forEach(el => el.addEventListener("click", () => {
+      const subcategory = el.dataset.subcat;
+      showResults(matching.filter(p => String(p.subcategory || "Other") === subcategory),
+        `${category} · ${subcategory}`);
+    }));
+  };
 
-  $$(".category").forEach(
-    el =>
-      el.addEventListener(
-        "click",
-        () =>
-          showResults(
-            PRODUCTS.filter(
-              p =>
-                categoryLabel(p.category) ===
-                el.dataset.cat
-            ),
-            `${el.dataset.cat} picks`
-          )
-      )
-  );
+  $("#categoryGrid").innerHTML = cats.map(c => `
+    <button class="category" data-cat="${esc(c)}">
+      <strong>${esc(c)}</strong>
+      <span class="category-count">${PRODUCTS.filter(p => categoryLabel(p.category) === c).length} products</span>
+    </button>`).join("");
+
+  $$(".category[data-cat]").forEach(el => el.addEventListener("click", () => {
+    const category = el.dataset.cat;
+    const matching = PRODUCTS.filter(p => categoryLabel(p.category) === category);
+    const subcategories = new Set(matching.map(p => String(p.subcategory || "").trim()).filter(Boolean));
+    if (subcategories.size > 1 || (subcategories.size === 1 && !subcategories.has("Other"))) {
+      renderSubcategories(category);
+      return;
+    }
+    showResults(matching, `${category} picks`);
+  }));
 }
 
 
