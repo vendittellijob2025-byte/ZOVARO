@@ -254,9 +254,32 @@
           "name": "Nutrition",
           "children": [
             "Nutritional Bars & Drinks",
-            "Sports Supplements",
+            {
+              "name": "Sports Supplements",
+              "children": [
+                "Protein Powders",
+                "Creatine",
+                "Pre-Workout",
+                "Post-Workout",
+                "Electrolytes",
+                "Amino Acids"
+              ]
+            },
             "Weight Management",
-            "Vitamins, Minerals & Supplements",
+            {
+              "name": "Vitamins, Minerals & Supplements",
+              "children": [
+                "Multivitamins",
+                "Vitamin A-K",
+                "Vitamin B",
+                "Vitamin C",
+                "Vitamin D",
+                "Minerals",
+                "Probiotics",
+                "Omega Oils",
+                "Herbal Supplements"
+              ]
+            },
             "Multivitamins",
             "Vitamin A-K",
             "Vitamin B",
@@ -296,6 +319,7 @@
             "Tanning Lamps",
             "Massage & Relaxation",
             "Alternative Therapies",
+            "Sleep & Relaxation",
             "Sleep & Relaxation"
           ]
         },
