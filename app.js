@@ -308,55 +308,87 @@ document.addEventListener("keydown", event => {
 
 
 function renderCategories() {
-  const cats = [
-    ...new Set(PRODUCTS.map(p => categoryLabel(p.category)).filter(Boolean))
-  ].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+  const products = PRODUCTS || [];
+  const tree = Array.isArray(window.ZOVARO_CATEGORY_TREE) ? window.ZOVARO_CATEGORY_TREE : [];
+  const categories = [
+    ...new Set([
+      ...tree.map(item => item.name),
+      ...products.map(product => categoryLabel(product.category)).filter(Boolean)
+    ])
+  ].sort((a,b) => a.localeCompare(b,"en",{sensitivity:"base"}));
 
-  const renderSubcategories = category => {
-    const matching = PRODUCTS.filter(p => categoryLabel(p.category) === category);
-    const subcategories = [...new Set([
-      ...matching.map(p => String(p.subcategory || "Other").trim()).filter(Boolean),
-      ...(category === "Automotive" ? [
-        "Vehicles for Sale", "Accessories", "Replacement Parts", "Tires & Wheels",
-        "Car Care & Fluids", "Tools & Equipment", "Motorcycles & Powersports",
-        "RV & Commercial Vehicles"
-      ] : [])
-    ])].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
-    const buttons = subcategories.map(subcategory => `
-      <button class="category" data-subcat="${esc(subcategory)}">
-        <strong>${esc(subcategory)}</strong>
-        <span class="category-count">${matching.filter(p => String(p.subcategory || "Other") === subcategory).length} products</span>
-      </button>`).join("");
+  const productCount = items => items.length;
+  const categoryProducts = category => products.filter(p => categoryLabel(p.category) === category);
+  const renderLevel = (category, nodes, parentPath = "", level = 0) => {
+    const matching = categoryProducts(category);
+    const html = nodes.map(node => {
+      const name = typeof node === "string" ? node : node.name;
+      const path = parentPath ? parentPath + " > " + name : name;
+      const children = typeof node === "string" ? [] : (node.children || []);
+      const count = matching.filter(p => {
+        const sub = String(p.subcategory || "").trim();
+        return sub === path || sub.startsWith(path + " >");
+      }).length;
+      return `
+        <button class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
+          <strong>${esc(name)}</strong>
+          <span class="category-count">${count} products</span>
+        </button>`;
+    }).join("");
+    const parentProducts = parentPath
+      ? matching.filter(p => String(p.subcategory || "").trim() === parentPath)
+      : [];
     $("#categoryGrid").innerHTML = `
-      <button class="category category-back" data-back-categories="1"><strong>← All categories</strong></button>
-      <button class="category" data-all-category="${esc(category)}"><strong>All ${esc(category)}</strong></button>
-      ${buttons}
+      <button class="category category-back" data-tree-back="${level}"><strong>← Back</strong></button>
+      ${parentPath ? `
+        <button class="category" data-tree-all="${esc(parentPath)}">
+          <strong>All products in this department</strong>
+          <span class="category-count">${productCount(parentProducts)} products</span>
+        </button>` : ""}
+      ${html || '<p class="category-empty">No subcategories available yet.</p>'}
     `;
-    $$("[data-back-categories]").forEach(el => el.addEventListener("click", renderCategories));
-    $$("[data-all-category]").forEach(el => el.addEventListener("click", () =>
-      showResults(matching, `${category} picks`)));
-    $$("[data-subcat]").forEach(el => el.addEventListener("click", () => {
-      const subcategory = el.dataset.subcat;
-      showResults(matching.filter(p => String(p.subcategory || "Other") === subcategory),
-        `${category} · ${subcategory}`);
+    $$("[data-tree-back]").forEach(el => el.addEventListener("click", () => {
+      if (level === 0) renderCategories();
+      else {
+        const parts = parentPath.split(" > ");
+        const parent = parts.slice(0,-1).join(" > ");
+        const categoryNode = tree.find(item => item.name === category);
+        let nodes = categoryNode?.children || [];
+        for (const part of parts.slice(0,-1)) {
+          const found = nodes.find(item => (typeof item === "string" ? item : item.name) === part);
+          nodes = typeof found === "string" || !found ? [] : (found.children || []);
+        }
+        renderLevel(category, nodes, parent, level - 1);
+      }
+    }));
+    $$("[data-tree-all]").forEach(el => el.addEventListener("click", () =>
+      showResults(parentProducts, `${category} · ${parentPath}`)));
+    $$("[data-tree-path]").forEach(el => el.addEventListener("click", () => {
+      const path = el.dataset.treePath;
+      const node = nodes.find(item => (typeof item === "string" ? item : item.name) === path.split(" > ").at(-1));
+      const children = typeof node === "string" || !node ? [] : (node.children || []);
+      const selected = matching.filter(p => {
+        const sub = String(p.subcategory || "").trim();
+        return sub === path || sub.startsWith(path + " >");
+      });
+      if (children.length) renderLevel(category, children, path, level + 1);
+      else showResults(selected, `${category} · ${path}`);
     }));
   };
 
-  $("#categoryGrid").innerHTML = cats.map(c => `
-    <button class="category" data-cat="${esc(c)}">
-      <strong>${esc(c)}</strong>
-      <span class="category-count">${PRODUCTS.filter(p => categoryLabel(p.category) === c).length} products</span>
-    </button>`).join("");
-
-  $$(".category[data-cat]").forEach(el => el.addEventListener("click", () => {
-    const category = el.dataset.cat;
-    const matching = PRODUCTS.filter(p => categoryLabel(p.category) === category);
-    const subcategories = new Set(matching.map(p => String(p.subcategory || "").trim()).filter(Boolean));
-    if (subcategories.size > 1 || (subcategories.size === 1 && !subcategories.has("Other"))) {
-      renderSubcategories(category);
-      return;
-    }
-    showResults(matching, `${category} picks`);
+  $("#categoryGrid").innerHTML = categories.map(category => {
+    const count = categoryProducts(category).length;
+    return `
+      <button class="category" data-root-category="${esc(category)}">
+        <strong>${esc(category)}</strong>
+        <span class="category-count">${count} products</span>
+      </button>`;
+  }).join("");
+  $$("[data-root-category]").forEach(el => el.addEventListener("click", () => {
+    const category = el.dataset.rootCategory;
+    const node = tree.find(item => item.name === category);
+    if (node?.children?.length) renderLevel(category, node.children, "", 0);
+    else showResults(categoryProducts(category), `${category} picks`);
   }));
 }
 
