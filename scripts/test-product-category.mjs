@@ -3,6 +3,15 @@ import { categoryFor } from "../lib/product-category.js";
 
 const advertiser = { name: "Toy Story Travel & Toys", parentCategory: "Travel", childCategory: "Toys" };
 const cases = [
+  // Brand/model words are weak evidence: classify by what the product actually is.
+  ["Baby Lips Moisturizing Lip Balm", "Beauty", { advertiser: { name: "Babies & Kids Store" } }],
+  ["Baby Doll Matte Liquid Lipstick", "Beauty", { advertiser: { name: "Baby Fashion Brand" } }],
+  ["Baby Pink Waterproof Mascara", "Beauty", { advertiser: { name: "Babies Store" } }],
+  ["Baby Glow Hydrating Face Cream", "Beauty", { advertiser: { name: "Baby & Kids Shop" } }],
+  ["Babies Collection Women's Concealer", "Beauty", { advertiser: { name: "Babies Collection" } }],
+  ["Mustela Vitamin Barrier Cream For Baby", "Babies"],
+  ["Pod Organics Vitamin C Baby Wash", "Babies"],
+  ["Baby Sleep Sack Organic Cotton", "Babies"],
   ["Toy Story Eau de Parfum 100ml", "Beauty", { description: "Luxury fragrance for women" }],
   ["Toy Story Perfume Gift Set", "Beauty", { category: "Toys & Games" }],
   ["Compact Digital Camera 24MP", "Electronics", { description: "Small camera ideal for trips" }],
