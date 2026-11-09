@@ -6,26 +6,66 @@ const REPORT_PATH = "data/image-audit-report.json";
 const MODEL_ID = process.env.IMAGE_AUDIT_MODEL || "Xenova/yolos-tiny";
 const IMAGE_CLASSIFIER_ID = process.env.IMAGE_CLASSIFIER_MODEL || "Xenova/clip-vit-base-patch32";
 const VISUAL_CANDIDATES = [
-  { label: "lipstick, mascara, eyeliner or other makeup product", category: "Beauty" },
-  { label: "skincare, facial cream, face serum or moisturizer", category: "Beauty" },
-  { label: "perfume, fragrance or cosmetic beauty product", category: "Beauty" },
+  { label: "lipstick, lip gloss, lip liner or lip balm makeup", category: "Beauty" },
+  { label: "mascara, eyeliner, eyeshadow or eyebrow makeup", category: "Beauty" },
+  { label: "foundation, concealer, blush or face powder makeup", category: "Beauty" },
+  { label: "nail polish, manicure or nail art product", category: "Beauty" },
+  { label: "makeup brushes, cosmetic sponges or beauty tools", category: "Beauty" },
+  { label: "facial cleanser, toner or micellar water skincare", category: "Beauty" },
+  { label: "face serum, moisturizer, eye cream or face mask skincare", category: "Beauty" },
+  { label: "sunscreen, sun protection or tanning skincare", category: "Beauty" },
+  { label: "shampoo, conditioner, hair mask or hair treatment", category: "Beauty" },
+  { label: "hair dryer, curling iron, straightener or styling tool", category: "Beauty" },
+  { label: "perfume, eau de parfum, cologne or body fragrance", category: "Beauty" },
+  { label: "body wash, shower gel, body lotion or deodorant", category: "Beauty" },
   { label: "baby-specific lotion, baby oil, diaper cream or baby wash", category: "Babies" },
-  { label: "baby clothes, newborn clothing or infant apparel", category: "Babies" },
-  { label: "baby stroller, infant car seat or nursery equipment", category: "Babies" },
-  { label: "toy for a baby, toddler or child", category: "Toys & Games" },
-  { label: "women's clothing, shoes, handbag or fashion accessory", category: "Fashion" },
-  { label: "laptop, smartphone, camera or electronic device", category: "Electronics" },
-  { label: "kitchen appliance or household electrical appliance", category: "Appliances" },
-  { label: "furniture, kitchenware or home decoration", category: "Home & Living" },
-  { label: "dog, cat or other pet product", category: "Pets" },
-  { label: "sports equipment, fitness or exercise gear", category: "Sports" },
-  { label: "food, drink or grocery product", category: "Food & Grocery" },
-  { label: "car accessory or automotive product", category: "Automotive" },
-  { label: "garden tool, plant or gardening product", category: "Garden" },
-  { label: "book, magazine or media product", category: "Books & Media" },
-  { label: "office supplies or computer software", category: "Office & Technology" },
-  { label: "travel luggage, suitcase or travel accessory", category: "Travel" },
-  { label: "medical, health or wellness product", category: "Health & Wellness" }
+  { label: "baby bottle, feeding nipple, breast pump or high chair", category: "Babies" },
+  { label: "baby stroller, infant car seat, baby carrier or baby monitor", category: "Babies" },
+  { label: "newborn clothing, baby bodysuit or infant apparel", category: "Babies" },
+  { label: "vitamins, minerals, multivitamins or dietary supplements", category: "Health & Wellness" },
+  { label: "protein powder, creatine, electrolyte or sports nutrition supplement", category: "Health & Wellness" },
+  { label: "blood pressure monitor, thermometer or pulse oximeter", category: "Health & Wellness" },
+  { label: "first aid bandages, medical dressing or wound care supplies", category: "Health & Wellness" },
+  { label: "dental care, toothbrush, toothpaste or oral hygiene product", category: "Health & Wellness" },
+  { label: "mobility aid, orthopedic brace or medical support device", category: "Health & Wellness" },
+  { label: "dumbbells, kettlebells, weights or strength training equipment", category: "Sports" },
+  { label: "treadmill, exercise bike, rowing machine or cardio equipment", category: "Sports" },
+  { label: "yoga mat, yoga block or pilates equipment", category: "Sports" },
+  { label: "tennis racket, padel racket, badminton racket or sports balls", category: "Sports" },
+  { label: "bicycle, cycling helmet, bike pump or cycling equipment", category: "Sports" },
+  { label: "camping tent, hiking backpack or outdoor recreation gear", category: "Sports" },
+  { label: "swimming, diving, surfing or water sports equipment", category: "Sports" },
+  { label: "women's dress, blouse, jeans or clothing", category: "Fashion" },
+  { label: "men's shirt, trousers, jacket or clothing", category: "Fashion" },
+  { label: "sneakers, boots, sandals or fashion footwear", category: "Fashion" },
+  { label: "handbag, wallet, backpack or fashion bag", category: "Fashion" },
+  { label: "jewelry, necklace, bracelet, ring or earrings", category: "Fashion" },
+  { label: "smartphone, tablet, laptop or computer", category: "Electronics" },
+  { label: "digital camera, camera lens, webcam or photography equipment", category: "Electronics" },
+  { label: "headphones, earbuds, speaker or microphone audio device", category: "Electronics" },
+  { label: "television, projector, streaming device or home theater", category: "Electronics" },
+  { label: "smartwatch, fitness tracker or wearable technology", category: "Electronics" },
+  { label: "car tire, alloy wheel, automotive mirror or replacement car part", category: "Automotive" },
+  { label: "car interior accessory, car seat cover, floor mat or roof rack", category: "Automotive" },
+  { label: "car battery, brake pad, headlight or engine component", category: "Automotive" },
+  { label: "car wash, automotive polish, engine oil or vehicle care product", category: "Automotive" },
+  { label: "kitchen appliance, coffee machine, blender or air fryer", category: "Appliances" },
+  { label: "vacuum cleaner, robot vacuum or floor cleaning appliance", category: "Appliances" },
+  { label: "sofa, chair, table, bed or household furniture", category: "Home & Living" },
+  { label: "cookware, kitchen utensils, plates, cups or tableware", category: "Home & Living" },
+  { label: "bedding, pillows, towels or bathroom accessories", category: "Home & Living" },
+  { label: "lamp, wall art, candle, vase or home decoration", category: "Home & Living" },
+  { label: "dog food, dog harness, dog bed or dog toy", category: "Pets" },
+  { label: "cat food, cat litter, cat bed or cat toy", category: "Pets" },
+  { label: "bird cage, aquarium, fish tank or small animal habitat", category: "Pets" },
+  { label: "building blocks, construction toy or model kit", category: "Toys & Games" },
+  { label: "doll, action figure, board game or puzzle", category: "Toys & Games" },
+  { label: "coffee, tea, snack, chocolate or packaged food", category: "Food & Grocery" },
+  { label: "plant seeds, flower pot, fertilizer or garden tools", category: "Garden" },
+  { label: "power drill, hand tools, screwdriver or workshop equipment", category: "Tools & DIY" },
+  { label: "book, magazine, DVD or music record", category: "Books & Media" },
+  { label: "office stationery, printer supplies or computer software", category: "Office & Technology" },
+  { label: "suitcase, carry-on luggage, travel backpack or travel accessory", category: "Travel" }
 ];
 const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 250) || 250;
 const BATCH_SIZE = Math.min(500, Math.max(1, requestedBatchSize));
@@ -126,13 +166,17 @@ export function qualityFlags(metrics, byteLength) {
 }
 
 export function compareVisualCategory(expectedCategory, predictions) {
-  const ranked = (Array.isArray(predictions) ? predictions : [])
-    .map(item => {
-      const candidate = VISUAL_CANDIDATES.find(entry => entry.label === item.label);
-      return candidate ? { category: candidate.category, label: item.label, score: Number(item.score || 0) } : null;
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.score - a.score);
+  const bestByCategory = new Map();
+  for (const item of Array.isArray(predictions) ? predictions : []) {
+    const candidate = VISUAL_CANDIDATES.find(entry => entry.label === item.label);
+    if (!candidate) continue;
+    const score = Number(item.score || 0);
+    const previous = bestByCategory.get(candidate.category);
+    if (!previous || score > previous.score) {
+      bestByCategory.set(candidate.category, { category: candidate.category, label: item.label, score });
+    }
+  }
+  const ranked = [...bestByCategory.values()].sort((a, b) => b.score - a.score);
   const first = ranked[0];
   const second = ranked[1];
   if (!first) return { expectedCategory, status: "not_assessable" };
