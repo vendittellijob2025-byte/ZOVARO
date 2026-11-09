@@ -314,8 +314,14 @@ function renderCategories() {
 
   const renderSubcategories = category => {
     const matching = PRODUCTS.filter(p => categoryLabel(p.category) === category);
-    const subcategories = [...new Set(matching.map(p => String(p.subcategory || "Other").trim()).filter(Boolean))]
-      .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+    const subcategories = [...new Set([
+      ...matching.map(p => String(p.subcategory || "Other").trim()).filter(Boolean),
+      ...(category === "Automotive" ? [
+        "Vehicles for Sale", "Accessories", "Replacement Parts", "Tires & Wheels",
+        "Car Care & Fluids", "Tools & Equipment", "Motorcycles & Powersports",
+        "RV & Commercial Vehicles"
+      ] : [])
+    ])].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
     const buttons = subcategories.map(subcategory => `
       <button class="category" data-subcat="${esc(subcategory)}">
         <strong>${esc(subcategory)}</strong>
