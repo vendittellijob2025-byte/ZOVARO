@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { categoryFor } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor } from "../lib/product-category.js";
 
 const advertiser = { name: "Toy Story Travel & Toys", parentCategory: "Travel", childCategory: "Toys" };
 const cases = [
@@ -189,4 +189,19 @@ assert.equal(categoryFor({ name: "UNice", parentCategory: "Beauty" }, {
   title: "UNice Surprise Box Gift Set"
 }), "Other");
 
-console.log("Product primary-category tests passed (" + (cases.length + 3) + " checks).");
+
+const autoCases = [
+  ["Michelin Pilot Sport 4 Tire", "Automotive", "Replacement Parts"],
+  ["Universal Side Mirror Replacement", "Automotive", "Replacement Parts"],
+  ["Car Interior Organizer", "Automotive", "Accessories"],
+  ["Car Wash Shampoo", "Automotive", "Car Care & Fluids"],
+  ["Used Cars for Sale - Dealer Inventory", "Automotive", "Vehicles for Sale"],
+  ["Baby Pink Lipstick", "Beauty", "Makeup"],
+  ["Baby Wash for Newborn", "Babies", "Other"]
+];
+for (const [title, expectedCategory, expectedSubcategory] of autoCases) {
+  const actualCategory = categoryFor({ name: "General Retailer" }, { title });
+  assert.equal(actualCategory, expectedCategory, title);
+  assert.equal(subcategoryFor(actualCategory, { title }), expectedSubcategory, title + " subcategory");
+}
+console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2) + " checks).");
