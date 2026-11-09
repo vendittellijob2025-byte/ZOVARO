@@ -224,7 +224,7 @@ async function main() {
   let review = 0;
   for (let index = 0; index < batch.length; index += 1) {
     const result = await analyseProduct(batch[index], detector, RawImage);
-    const previous = report.results.filter(item => item.metrics?.perceptualHash);
+    const previous = [...existing.values()].filter(item => item.metrics?.perceptualHash);
     const duplicate = result.metrics?.perceptualHash
       ? previous.find(item => item.key !== result.key &&
           item.metrics?.perceptualHash &&
