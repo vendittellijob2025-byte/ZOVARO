@@ -59,14 +59,19 @@ jobs:
       - name: Analyse new and changed catalogue images
         run: node scripts/audit-product-images.mjs
 
-      - name: Save audit report
+      - name: Apply high-confidence visual category corrections
+        run: |
+          node scripts/reclassify-catalog-categories.mjs
+          node scripts/audit-category-quality.mjs
+
+      - name: Save image audit and corrected catalog
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-audit-report.json
+          git add data/image-audit-report.json data/catalog.json
           if git diff --cached --quiet; then
-            echo "No image-audit report changes to commit."
+            echo "No image-audit report or category changes to commit."
           else
-            git commit -m "chore: update automated product image audit"
+            git commit -m "chore: update visual product audit and category corrections"
             git push origin HEAD:main
           fi
