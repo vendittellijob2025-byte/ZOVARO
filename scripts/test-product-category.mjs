@@ -191,7 +191,7 @@ assert.equal(categoryFor({ name: "UNice", parentCategory: "Beauty" }, {
 
 
 const autoCases = [
-  ["Michelin Pilot Sport 4 Tire", "Automotive", "Replacement Parts"],
+  ["Michelin Pilot Sport 4 Tire", "Automotive", "Tires & Wheels"],
   ["Universal Side Mirror Replacement", "Automotive", "Replacement Parts"],
   ["Car Interior Organizer", "Automotive", "Accessories"],
   ["Car Wash Shampoo", "Automotive", "Car Care & Fluids"],
