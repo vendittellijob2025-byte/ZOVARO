@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import { categoryFor } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor } from "../lib/product-category.js";
 
 const path = "data/catalog.json";
 const catalog = JSON.parse(await fs.readFile(path, "utf8"));
@@ -21,7 +21,7 @@ const examples = {};
 let changed = 0;
 for (const product of catalog.products) {
   if (!product || typeof product !== "object") continue;
-  const nextCategory = categoryFor(
+  let nextCategory = categoryFor(
     {
       name: product.advertiserName || "",
       parentCategory: product.advertiserCategory || "",
@@ -60,6 +60,8 @@ for (const product of catalog.products) {
     changed++;
   }
   product.englishCategory = nextCategory;
+  product.subcategory = subcategoryFor(nextCategory, product);
+  product.englishSubcategory = product.subcategory;
 }
 await fs.writeFile(path, JSON.stringify(catalog), "utf8");
 console.log("Primary category audit completed for " + catalog.products.length + " catalog products.");
