@@ -1147,6 +1147,10 @@ footer{
   text-shadow:0 1px 5px rgba(0,0,0,.65);
 }
 #categoryGrid button.category:hover .category-image{transform:scale(1.025);}
+#categoryGrid .category-node{display:flex;flex-direction:column;gap:7px;min-width:0;}
+#categoryGrid .category-node>.category{width:100%;}
+#categoryGrid .category-browse{align-self:flex-start;border:0;background:transparent;color:#70dfff;font-size:11px;font-weight:700;padding:3px 5px;cursor:pointer;text-align:left;}
+#categoryGrid .category-browse:hover{color:#fff;text-decoration:underline;}
 @media(max-width:760px){
   #categoryGrid.shop-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
   #categoryGrid button.category{height:104px;min-height:104px;padding:11px 12px;}

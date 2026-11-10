@@ -330,10 +330,13 @@ function renderCategories() {
         return sub === path || sub.startsWith(path + " >");
       }).length;
       return `
-        <button class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
-          <strong>${esc(name)}</strong>
-          <span class="category-count">${count} products</span>
-        </button>`;
+        <div class="category-node">
+          <button class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
+            <strong>${esc(name)}</strong>
+            <span class="category-count">${count} products</span>
+          </button>
+          ${children.length ? `<button type="button" class="category-browse" data-tree-browse="${esc(path)}">Browse subcategories →</button>` : ""}
+        </div>`;
     }).join("");
     const parentProducts = parentPath
       ? matching.filter(p => {
@@ -384,8 +387,19 @@ function renderCategories() {
         const sub = String(p.subcategory || "").trim();
         return sub === path || sub.startsWith(path + " >");
       });
+      if (selected.length) {
+        showResults(selected, `${category} · ${path}`);
+      } else if (children.length) {
+        renderLevel(category, children, path, level + 1);
+      } else {
+        showResults(selected, `${category} · ${path}`);
+      }
+    }));
+    $("#categoryGrid [data-tree-browse]").forEach(el => el.addEventListener("click", () => {
+      const path = el.dataset.treeBrowse;
+      const node = nodes.find(item => (typeof item === "string" ? item : item.name) === path.split(" > ").at(-1));
+      const children = typeof node === "string" || !node ? [] : (node.children || []);
       if (children.length) renderLevel(category, children, path, level + 1);
-      else showResults(selected, `${category} · ${path}`);
     }));
   };
 
