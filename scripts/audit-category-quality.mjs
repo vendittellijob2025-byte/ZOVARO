@@ -14,7 +14,7 @@ try {
   if (error.code !== "ENOENT") throw error;
 }
 
-const BABY_INTENT_TITLE = /\\b(for baby|baby (?:wash|shampoo|lotion|cream|oil|butter|balm|wipes|sunscreen|sun cream|perfume|fragrance|stroller|monitor|carrier|clothes|clothing)|diaper|newborn|infant|nursery|toddler|sleep sack)\\b/i;
+const BABY_INTENT_TITLE = /\b(for baby|baby (?:wash|shampoo|lotion|cream|oil|butter|balm|wipes|sunscreen|sun cream|perfume|fragrance|stroller|monitor|carrier|clothes|clothing)|diaper|newborn|infant|nursery|toddler|sleep sack)\b/i;
 const distribution = new Map();
 const examples = [];
 let checked = 0;
