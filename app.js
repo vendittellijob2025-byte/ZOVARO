@@ -325,17 +325,19 @@ function renderCategories() {
       const name = typeof node === "string" ? node : node.name;
       const path = parentPath ? parentPath + " > " + name : name;
       const children = typeof node === "string" ? [] : (node.children || []);
-      const count = matching.filter(p => {
+      const selected = matching.filter(p => {
         const sub = String(p.subcategory || "").trim();
         return sub === path || sub.startsWith(path + " >");
-      }).length;
+      });
+      const count = selected.length;
       return `
         <div class="category-node">
-          <button class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
+          <button type="button" class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
             <strong>${esc(name)}</strong>
             <span class="category-count">${count} products</span>
           </button>
-          ${children.length ? `<button type="button" class="category-browse" data-tree-browse="${esc(path)}">Browse subcategories →</button>` : ""}
+          ${selected.length ? `<button type="button" class="category-products" data-tree-products="${esc(path)}">View products (${count}) →</button>` : ""}
+          ${children.length ? `<button type="button" class="category-browse" data-tree-browse="${esc(path)}">Open subcategories →</button>` : ""}
         </div>`;
     }).join("");
     const parentProducts = parentPath
@@ -349,13 +351,13 @@ function renderCategories() {
       return !sub || sub === "Other";
     });
     $("#categoryGrid").innerHTML = `
-      <button class="category category-back" data-tree-back="${level}"><strong>← Back</strong></button>
-      <button class="category" data-tree-all="${esc(parentPath || category)}">
+      <button type="button" class="category category-back" data-tree-back="${level}"><strong>← Back</strong></button>
+      <button type="button" class="category" data-tree-all="${esc(parentPath || category)}">
         <strong>${parentPath ? "All products in this department" : "All products in this category"}</strong>
         <span class="category-count">${productCount(parentProducts)} products</span>
       </button>
       ${unclassifiedProducts.length ? `
-        <button class="category" data-tree-unclassified="${esc(category)}">
+        <button type="button" class="category" data-tree-unclassified="${esc(category)}">
           <strong>Other / More products</strong>
           <span class="category-count">${productCount(unclassifiedProducts)} products</span>
         </button>` : ""}
@@ -387,9 +389,7 @@ function renderCategories() {
         const sub = String(p.subcategory || "").trim();
         return sub === path || sub.startsWith(path + " >");
       });
-      if (selected.length) {
-        showResults(selected, `${category} · ${path}`);
-      } else if (children.length) {
+      if (children.length) {
         renderLevel(category, children, path, level + 1);
       } else {
         showResults(selected, `${category} · ${path}`);
@@ -401,12 +401,20 @@ function renderCategories() {
       const children = typeof node === "string" || !node ? [] : (node.children || []);
       if (children.length) renderLevel(category, children, path, level + 1);
     }));
+    $("#categoryGrid [data-tree-products]").forEach(el => el.addEventListener("click", () => {
+      const path = el.dataset.treeProducts;
+      const selected = matching.filter(p => {
+        const sub = String(p.subcategory || "").trim();
+        return sub === path || sub.startsWith(path + " >");
+      });
+      showResults(selected, `${category} · ${path}`);
+    }));
   };
 
   $("#categoryGrid").innerHTML = categories.map(category => {
     const count = categoryProducts(category).length;
     return `
-      <button class="category" data-root-category="${esc(category)}">
+      <button type="button" class="category" data-root-category="${esc(category)}">
         <strong>${esc(category)}</strong>
         <span class="category-count">${count} products</span>
       </button>`;
