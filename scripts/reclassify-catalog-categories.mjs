@@ -38,6 +38,7 @@ for (const product of catalog.products) {
   const title = String(product.englishTitle || product.title || "");
   if (
     visualCheck?.status === "possible_mismatch" &&
+    !/padel iberico/i.test(String(product.advertiserName || "")) &&
     Number(visualCheck.confidence) >= 0.45 &&
     Number(visualCheck.margin) >= 0.10 &&
     typeof visualCheck.detectedCategory === "string" &&
