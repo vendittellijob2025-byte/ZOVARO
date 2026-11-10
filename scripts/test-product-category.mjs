@@ -235,6 +235,15 @@ for (const [title, expectedCategory, expectedSubcategory] of departmentCases) {
   assert.equal(subcategoryFor(actualCategory, { title }), expectedSubcategory, title + " subcategory");
 }
 
+assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Camiseta Head Tie Break Women" }), "Sports");
+assert.equal(subcategoryFor("Sports", { title: "Camiseta Head Tie Break Women", advertiserName: "Padel Iberico ES" }), "Sports Apparel > Sports Clothing");
+assert.equal(subcategoryFor("Sports", { title: "Nox ML10 Pro Cup Padel Racket", advertiserName: "Padel Iberico ES" }), "Padel > Padel Rackets");
+assert.equal(subcategoryFor("Sports", { title: "Paletero Padel Bag", advertiserName: "Padel Iberico ES" }), "Padel > Padel Bags");
+assert.equal(categoryFor({ name: "Kaiya Baby" }, { title: "All Season Long Sleeve Sleep Sack" }), "Babies");
+assert.equal(subcategoryFor("Babies", { title: "All Season Long Sleeve Sleep Sack", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Sleepwear");
+assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Snap Bodysuit", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Bodysuits");
+assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Jogger Pants", advertiserName: "Kaiya Baby" }), "Baby Clothing");
+
 const categoryTree = JSON.parse(await fs.readFile(new URL("../data/category-tree.json", import.meta.url), "utf8"));
 function treeHasPath(categoryName, path) {
   const root = categoryTree.categories.find(item => item.name === categoryName);
@@ -246,6 +255,15 @@ function treeHasPath(categoryName, path) {
     nodes = typeof node === "string" ? [] : (node.children || []);
   }
   return true;
+}
+for (const [category, path] of [
+  ["Sports", "Sports Apparel > Sports Clothing"],
+  ["Sports", "Padel > Padel Rackets"],
+  ["Sports", "Padel > Padel Bags"],
+  ["Babies", "Baby Clothing > Baby Sleepwear"],
+  ["Babies", "Baby Clothing > Baby Bodysuits"]
+]) {
+  assert.equal(treeHasPath(category, path), true, "Missing browse-tree path: " + category + " > " + path);
 }
 for (const [title, category, subcategory] of [...autoCases, ...departmentCases]) {
   assert.equal(treeHasPath(category, subcategory), true, "Missing browse-tree path: " + category + " > " + subcategory + " (" + title + ")");
