@@ -336,14 +336,25 @@ function renderCategories() {
         </button>`;
     }).join("");
     const parentProducts = parentPath
-      ? matching.filter(p => String(p.subcategory || "").trim() === parentPath)
-      : [];
+      ? matching.filter(p => {
+          const sub = String(p.subcategory || "").trim();
+          return sub === parentPath || sub.startsWith(parentPath + " >");
+        })
+      : matching;
+    const unclassifiedProducts = matching.filter(p => {
+      const sub = String(p.subcategory || "").trim();
+      return !sub || sub === "Other";
+    });
     $("#categoryGrid").innerHTML = `
       <button class="category category-back" data-tree-back="${level}"><strong>← Back</strong></button>
-      ${parentPath ? `
-        <button class="category" data-tree-all="${esc(parentPath)}">
-          <strong>All products in this department</strong>
-          <span class="category-count">${productCount(parentProducts)} products</span>
+      <button class="category" data-tree-all="${esc(parentPath || category)}">
+        <strong>${parentPath ? "All products in this department" : "All products in this category"}</strong>
+        <span class="category-count">${productCount(parentProducts)} products</span>
+      </button>
+      ${unclassifiedProducts.length ? `
+        <button class="category" data-tree-unclassified="${esc(category)}">
+          <strong>Other / More products</strong>
+          <span class="category-count">${productCount(unclassifiedProducts)} products</span>
         </button>` : ""}
       ${html || '<p class="category-empty">No subcategories available yet.</p>'}
     `;
@@ -361,8 +372,10 @@ function renderCategories() {
         renderLevel(category, nodes, parent, level - 1);
       }
     }));
-    $$("[data-tree-all]").forEach(el => el.addEventListener("click", () =>
-      showResults(parentProducts, `${category} · ${parentPath}`)));
+    $("[data-tree-all]").forEach(el => el.addEventListener("click", () =>
+      showResults(parentProducts, parentPath ? `${category} · ${parentPath}` : `${category} · All products`)));
+    $("[data-tree-unclassified]").forEach(el => el.addEventListener("click", () =>
+      showResults(unclassifiedProducts, `${category} · Other / More products`)));
     $$("[data-tree-path]").forEach(el => el.addEventListener("click", () => {
       const path = el.dataset.treePath;
       const node = nodes.find(item => (typeof item === "string" ? item : item.name) === path.split(" > ").at(-1));
