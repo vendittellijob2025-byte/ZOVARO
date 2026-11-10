@@ -37,6 +37,7 @@ for (const product of catalog.products) {
   const title = String(product.englishTitle || product.title || "");
   const trustedVisualOverride =
     visual?.status === "possible_mismatch" &&
+    !/padel iberico/i.test(String(product.advertiserName || "")) &&
     visual.expectedCategory === expected &&
     Number(visual.confidence) >= 0.45 &&
     Number(visual.margin) >= 0.10 &&
