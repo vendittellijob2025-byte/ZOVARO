@@ -9,7 +9,8 @@
     "Use only product assets the partner authorized ZOVARO to display.",
     "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately.",
     "Research additions dated 2026-11-11 are prospects only; they are not approved ZOVARO partners. Do not publish products or imply commissions until partner acceptance, tracking and content permissions are verified.",
-    "Food delivery prospects researched 2026-11-11: Uber's official affiliate programme pays for qualified first Uber Eats orders; rate varies by country/audience and application is vetted. Just Eat Spain listing advertises 9% new / 2% returning via Awin; access fees and publisher eligibility must be checked. Rappi Colombia's public pages reviewed are merchant/restaurant onboarding, not a verified publisher affiliate programme; do not present Rappi as a commission partner for ZOVARO unless a separate publisher agreement is confirmed."
+    "Food delivery prospects researched 2026-11-11: Uber's official affiliate programme pays for qualified first Uber Eats orders; rate varies by country/audience and application is vetted. Just Eat Spain listing advertises 9% new / 2% returning via Awin; access fees and publisher eligibility must be checked. Rappi Colombia's public pages reviewed are merchant/restaurant onboarding, not a verified publisher affiliate programme; do not present Rappi as a commission partner for ZOVARO unless a separate publisher agreement is confirmed.",
+    "Global food delivery/grocery strategy added 2026-11-11: target local restaurants, restaurant chains, grocery/supermarket delivery and delivery marketplaces country-by-country. Uber Eats, Just Eat Spain, foodpanda Pakistan/Philippines, Instacart and GlobalFoodHub are recorded as unapproved prospects only. Do not show any as commission-enabled until ZOVARO receives written approval, valid tracking/deep links, territory/city coverage, conversion reporting and permitted media/catalogue terms. For direct restaurant/supermarket deals, negotiate unique referral codes or trackable ordering links with commission per completed, paid, non-refunded order; do not assume public merchant onboarding pays publishers."
   ],
   "prospects": [
     {
@@ -607,6 +608,153 @@
       },
       "nextAction": "Verify whether ZOVARO can join without upfront cost; confirm Spain and other market eligibility, current rates, tracking and promotional restrictions before applying.",
       "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "uber-eats-global-affiliate",
+      "name": "Uber Eats / Uber Affiliate Programme",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Multiple countries and cities across 6 continents; exact availability and affiliate eligibility vary by country"
+      ],
+      "publicCommission": "Commission for qualified first Uber Eats orders; rate negotiated according to audience and country; no programme fee stated",
+      "contact": {
+        "applicationUrl": "https://www.uber.com/co/en/affiliate-program/",
+        "sourceUrl": "https://www.uber.com/co/en/affiliate-program/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "restaurantFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Apply as ZOVARO international publisher; request country-by-country coverage, repeat-order eligibility, rates, deep links to local restaurants and reporting/API options.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official Uber affiliate page states qualified first orders, country/audience-dependent rates, publisher vetting and no joining fee."
+    },
+    {
+      "id": "just-eat-spain-affiliate",
+      "name": "Just Eat Spain",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Spain; wider group presence in 13 countries, but affiliate availability outside Spain must be confirmed"
+      ],
+      "publicCommission": "Official Spain affiliate page states 9% new customers and 2% returning customers; attribution via cookies; access route and current terms to confirm",
+      "contact": {
+        "applicationUrl": "https://www.just-eat.es/promo/afiliacion",
+        "sourceUrl": "https://www.just-eat.es/promo/afiliacion"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "restaurantFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Confirm direct free signup versus Awin dependency, eligible publisher country, app/in-app attribution and whether local restaurant deep links are available.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official Just Eat Spain affiliate page."
+    },
+    {
+      "id": "foodpanda-pakistan-affiliate",
+      "name": "foodpanda Pakistan",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Pakistan; city coverage and publisher eligibility subject to approval"
+      ],
+      "publicCommission": "Up to 9% advertised; 7-day cookie; exact rate supplied after approval",
+      "contact": {
+        "email": "affiliate@foodpanda.pk",
+        "applicationUrl": "https://www.foodpanda.pk/contents/affiliates",
+        "sourceUrl": "https://www.foodpanda.pk/contents/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "restaurantFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Request international publisher eligibility, order-level attribution, eligible restaurant/grocery verticals and deep-link or feed access.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official foodpanda Pakistan affiliate page."
+    },
+    {
+      "id": "foodpanda-philippines-affiliate",
+      "name": "foodpanda Philippines",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Philippines; city coverage and publisher eligibility subject to approval"
+      ],
+      "publicCommission": "Up to 7% advertised; 7-day cookie; exact rate supplied after approval",
+      "contact": {
+        "email": "affiliate@foodpanda.ph",
+        "applicationUrl": "https://www.foodpanda.ph/contents/affiliates",
+        "sourceUrl": "https://www.foodpanda.ph/contents/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "restaurantFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Request international publisher eligibility, order-level attribution, eligible restaurant/grocery verticals and deep-link or feed access.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official foodpanda Philippines affiliate page."
+    },
+    {
+      "id": "instacart-affiliate",
+      "name": "Instacart",
+      "status": "prospect",
+      "programType": "grocery-delivery-affiliate",
+      "territories": [
+        "United States and Canada traffic; other territories not confirmed"
+      ],
+      "publicCommission": "CPA or revenue share for qualifying first and repeat orders; official page describes a 5% cart-value model for a specific developer programme, not a universal affiliate rate",
+      "contact": {
+        "applicationUrl": "https://company.instacart.ca/affiliate",
+        "sourceUrl": "https://company.instacart.ca/affiliate"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "retailerFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Ask which publisher track accepts ZOVARO, verify traffic-country restrictions, commission base, retailer/deep-link coverage and whether grocery store links can be embedded.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official Instacart affiliate page; programme eligibility indicates US/Canada-based traffic."
+    },
+    {
+      "id": "global-food-hub-affiliate",
+      "name": "GlobalFoodHub",
+      "status": "prospect",
+      "programType": "online-grocery-affiliate",
+      "territories": [
+        "European Union; exact delivery countries and city coverage to verify"
+      ],
+      "publicCommission": "6% advertised on qualified purchases; first order attribution within 48 hours; referral programme also describes commissions for referred customers",
+      "contact": {
+        "email": "affiliates@globalfoodhub.com",
+        "applicationUrl": "https://globalfoodhub.com/pages/affiliates",
+        "sourceUrl": "https://globalfoodhub.com/pages/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "cityCoverage": "pending",
+        "catalogFeed": "pending",
+        "conversionReporting": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Confirm country delivery map, commission exclusions, repeat purchase terms, deep-linking and product feed for grocery catalog integration.",
+      "sourceChecked": "2026-11-11",
+      "sourceEvidence": "Official GlobalFoodHub affiliate page."
     }
   ]
 }
