@@ -307,126 +307,185 @@ document.addEventListener("keydown", event => {
 });
 
 
-function renderCategories() {
-  const products = PRODUCTS || [];
-  const tree = Array.isArray(window.ZOVARO_CATEGORY_TREE) ? window.ZOVARO_CATEGORY_TREE : [];
-  const categories = [
-    ...new Set([
-      ...tree.map(item => item.name),
-      ...products.map(product => categoryLabel(product.category)).filter(Boolean)
-    ])
-  ].sort((a,b) => a.localeCompare(b,"en",{sensitivity:"base"}));
+let zovaroCategoryTree = [];
+let zovaroCategoryView = { category: "", parentPath: "", level: 0 };
 
-  const productCount = items => items.length;
-  const categoryProducts = category => products.filter(p => categoryLabel(p.category) === category);
-  const renderLevel = (category, nodes, parentPath = "", level = 0) => {
-    const matching = categoryProducts(category);
-    const html = nodes.map(node => {
-      const name = typeof node === "string" ? node : node.name;
-      const path = parentPath ? parentPath + " > " + name : name;
-      const children = typeof node === "string" ? [] : (node.children || []);
-      const selected = matching.filter(p => {
-        const sub = String(p.subcategory || "").trim();
-        return sub === path || sub.startsWith(path + " >");
-      });
-      const count = selected.length;
-      return `
-        <div class="category-node">
-          <button type="button" class="category" data-tree-path="${esc(path)}" data-tree-level="${level}">
-            <strong>${esc(name)}</strong>
-            <span class="category-count">${count} products</span>
-          </button>
-          ${selected.length ? `<button type="button" class="category-products" data-tree-products="${esc(path)}">View products (${count}) →</button>` : ""}
-          ${children.length ? `<button type="button" class="category-browse" data-tree-browse="${esc(path)}">Open subcategories →</button>` : ""}
-        </div>`;
-    }).join("");
-    const parentProducts = parentPath
-      ? matching.filter(p => {
-          const sub = String(p.subcategory || "").trim();
-          return sub === parentPath || sub.startsWith(parentPath + " >");
-        })
-      : matching;
-    const unclassifiedProducts = matching.filter(p => {
-      const sub = String(p.subcategory || "").trim();
-      return !sub || sub === "Other";
+function findCategoryNode(category, path) {
+  const root = zovaroCategoryTree.find(item => item && item.name === category);
+  if (!root) return null;
+  if (!path) return root;
+  const parts = String(path).split(" > ").filter(Boolean);
+  let nodes = Array.isArray(root.children) ? root.children : [];
+  let found = null;
+  for (const part of parts) {
+    found = nodes.find(item => (typeof item === "string" ? item : item?.name) === part) || null;
+    if (!found) return null;
+    nodes = typeof found === "string" || !Array.isArray(found.children) ? [] : found.children;
+  }
+  return found;
+}
+
+function categoryProductsFor(category) {
+  return (PRODUCTS || []).filter(product => categoryLabel(product.category) === category);
+}
+
+function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
+  const matching = categoryProductsFor(category);
+  const safeNodes = Array.isArray(nodes) ? nodes : [];
+  const parentProducts = parentPath
+    ? matching.filter(product => {
+        const sub = String(product.subcategory || "").trim();
+        return sub === parentPath || sub.startsWith(parentPath + " > ");
+      })
+    : matching;
+  const unclassified = matching.filter(product => {
+    const sub = String(product.subcategory || "").trim();
+    return !sub || sub === "Other";
+  });
+
+  const childrenHtml = safeNodes.map(node => {
+    const name = typeof node === "string" ? node : String(node?.name || "");
+    if (!name) return "";
+    const path = parentPath ? parentPath + " > " + name : name;
+    const children = typeof node === "string" || !Array.isArray(node.children) ? [] : node.children;
+    const selected = matching.filter(product => {
+      const sub = String(product.subcategory || "").trim();
+      return sub === path || sub.startsWith(path + " > ");
     });
-    $("#categoryGrid").innerHTML = `
-      <button type="button" class="category category-back" data-tree-back="${level}"><strong>← Back</strong></button>
-      <button type="button" class="category" data-tree-all="${esc(parentPath || category)}">
-        <strong>${parentPath ? "All products in this department" : "All products in this category"}</strong>
-        <span class="category-count">${productCount(parentProducts)} products</span>
-      </button>
-      ${unclassifiedProducts.length ? `
-        <button type="button" class="category" data-tree-unclassified="${esc(category)}">
-          <strong>Other / More products</strong>
-          <span class="category-count">${productCount(unclassifiedProducts)} products</span>
-        </button>` : ""}
-      ${html || '<p class="category-empty">No subcategories available yet.</p>'}
-    `;
-    $$("[data-tree-back]").forEach(el => el.addEventListener("click", () => {
-      if (level === 0) renderCategories();
-      else {
-        const parts = parentPath.split(" > ");
-        const parent = parts.slice(0,-1).join(" > ");
-        const categoryNode = tree.find(item => item.name === category);
-        let nodes = categoryNode?.children || [];
-        for (const part of parts.slice(0,-1)) {
-          const found = nodes.find(item => (typeof item === "string" ? item : item.name) === part);
-          nodes = typeof found === "string" || !found ? [] : (found.children || []);
-        }
-        renderLevel(category, nodes, parent, level - 1);
-      }
-    }));
-    $("[data-tree-all]").forEach(el => el.addEventListener("click", () =>
-      showResults(parentProducts, parentPath ? `${category} · ${parentPath}` : `${category} · All products`)));
-    $("[data-tree-unclassified]").forEach(el => el.addEventListener("click", () =>
-      showResults(unclassifiedProducts, `${category} · Other / More products`)));
-    $$("[data-tree-path]").forEach(el => el.addEventListener("click", () => {
-      const path = el.dataset.treePath;
-      const node = nodes.find(item => (typeof item === "string" ? item : item.name) === path.split(" > ").at(-1));
-      const children = typeof node === "string" || !node ? [] : (node.children || []);
-      const selected = matching.filter(p => {
-        const sub = String(p.subcategory || "").trim();
-        return sub === path || sub.startsWith(path + " >");
-      });
-      if (children.length) {
-        renderLevel(category, children, path, level + 1);
-      } else {
-        showResults(selected, `${category} · ${path}`);
-      }
-    }));
-    $("#categoryGrid [data-tree-browse]").forEach(el => el.addEventListener("click", () => {
-      const path = el.dataset.treeBrowse;
-      const node = nodes.find(item => (typeof item === "string" ? item : item.name) === path.split(" > ").at(-1));
-      const children = typeof node === "string" || !node ? [] : (node.children || []);
-      if (children.length) renderLevel(category, children, path, level + 1);
-    }));
-    $("#categoryGrid [data-tree-products]").forEach(el => el.addEventListener("click", () => {
-      const path = el.dataset.treeProducts;
-      const selected = matching.filter(p => {
-        const sub = String(p.subcategory || "").trim();
-        return sub === path || sub.startsWith(path + " >");
-      });
-      showResults(selected, `${category} · ${path}`);
-    }));
-  };
+    return `
+      <div class="category-node">
+        <button type="button" class="category" data-tree-open="${esc(path)}">
+          <strong>${esc(name)}</strong>
+          <span class="category-count">${selected.length} products</span>
+        </button>
+        ${selected.length ? `<button type="button" class="category-products" data-tree-products="${esc(path)}">View products (${selected.length}) →</button>` : ""}
+        ${children.length ? `<button type="button" class="category-browse" data-tree-open="${esc(path)}">Open subcategories →</button>` : ""}
+      </div>`;
+  }).join("");
 
-  $("#categoryGrid").innerHTML = categories.map(category => {
-    const count = categoryProducts(category).length;
+  zovaroCategoryView = { category, parentPath, level };
+  const grid = $("#categoryGrid");
+  grid.innerHTML = `
+    <button type="button" class="category category-back" data-tree-back><strong>← Back</strong></button>
+    <button type="button" class="category" data-tree-all>
+      <strong>${parentPath ? "All products in this department" : "All products in this category"}</strong>
+      <span class="category-count">${parentProducts.length} products</span>
+    </button>
+    ${unclassified.length ? `
+      <button type="button" class="category" data-tree-unclassified>
+        <strong>Other / More products</strong>
+        <span class="category-count">${unclassified.length} products</span>
+      </button>` : ""}
+    ${childrenHtml || '<p class="category-empty">No subcategories available yet.</p>'}
+  `;
+}
+
+function renderCategories() {
+  zovaroCategoryTree = Array.isArray(window.ZOVARO_CATEGORY_TREE) ? window.ZOVARO_CATEGORY_TREE : [];
+  const products = PRODUCTS || [];
+  const categories = [...new Set([
+    ...zovaroCategoryTree.map(item => item?.name).filter(Boolean),
+    ...products.map(product => categoryLabel(product.category)).filter(Boolean)
+  ])].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+
+  const grid = $("#categoryGrid");
+  if (!grid.dataset.navigationBound) {
+    grid.addEventListener("click", event => {
+      const button = event.target.closest("button");
+      if (!button || !grid.contains(button)) return;
+
+      if (button.hasAttribute("data-root-category")) {
+        const category = button.dataset.rootCategory;
+        const root = zovaroCategoryTree.find(item => item?.name === category);
+        if (root && Array.isArray(root.children) && root.children.length) {
+          renderCategoryLevel(category, root.children, "", 0);
+        } else {
+          showResults(categoryProductsFor(category), `${category} picks`);
+        }
+        return;
+      }
+
+      if (button.hasAttribute("data-tree-back")) {
+        const { category, parentPath, level } = zovaroCategoryView;
+        if (level <= 0 || !parentPath) {
+          renderCategories();
+          return;
+        }
+        const parts = parentPath.split(" > ").filter(Boolean);
+        parts.pop();
+        const newParent = parts.join(" > ");
+        const parentNode = findCategoryNode(category, newParent);
+        const root = zovaroCategoryTree.find(item => item?.name === category);
+        const nextNodes = newParent
+          ? (parentNode && Array.isArray(parentNode.children) ? parentNode.children : [])
+          : (root && Array.isArray(root.children) ? root.children : []);
+        renderCategoryLevel(category, nextNodes, newParent, Math.max(0, level - 1));
+        return;
+      }
+
+      if (button.hasAttribute("data-tree-all")) {
+        const { category, parentPath } = zovaroCategoryView;
+        const matching = categoryProductsFor(category);
+        const selected = parentPath
+          ? matching.filter(product => {
+              const sub = String(product.subcategory || "").trim();
+              return sub === parentPath || sub.startsWith(parentPath + " > ");
+            })
+          : matching;
+        showResults(selected, parentPath ? `${category} · ${parentPath}` : `${category} · All products`);
+        return;
+      }
+
+      if (button.hasAttribute("data-tree-unclassified")) {
+        const { category } = zovaroCategoryView;
+        const selected = categoryProductsFor(category).filter(product => {
+          const sub = String(product.subcategory || "").trim();
+          return !sub || sub === "Other";
+        });
+        showResults(selected, `${category} · Other / More products`);
+        return;
+      }
+
+      if (button.hasAttribute("data-tree-products")) {
+        const { category } = zovaroCategoryView;
+        const path = button.dataset.treeProducts;
+        const selected = categoryProductsFor(category).filter(product => {
+          const sub = String(product.subcategory || "").trim();
+          return sub === path || sub.startsWith(path + " > ");
+        });
+        showResults(selected, `${category} · ${path}`);
+        return;
+      }
+
+      if (button.hasAttribute("data-tree-open")) {
+        const { category, level } = zovaroCategoryView;
+        const path = button.dataset.treeOpen;
+        const node = findCategoryNode(category, path);
+        const children = node && typeof node !== "string" && Array.isArray(node.children) ? node.children : [];
+        if (children.length) {
+          renderCategoryLevel(category, children, path, level + 1);
+        } else {
+          const selected = categoryProductsFor(category).filter(product => {
+            const sub = String(product.subcategory || "").trim();
+            return sub === path || sub.startsWith(path + " > ");
+          });
+          showResults(selected, `${category} · ${path}`);
+        }
+      }
+    });
+    grid.dataset.navigationBound = "true";
+  }
+
+  zovaroCategoryView = { category: "", parentPath: "", level: 0 };
+  grid.innerHTML = categories.map(category => {
+    const count = categoryProductsFor(category).length;
     return `
       <button type="button" class="category" data-root-category="${esc(category)}">
         <strong>${esc(category)}</strong>
         <span class="category-count">${count} products</span>
       </button>`;
   }).join("");
-  $$("[data-root-category]").forEach(el => el.addEventListener("click", () => {
-    const category = el.dataset.rootCategory;
-    const node = tree.find(item => item.name === category);
-    if (node?.children?.length) renderLevel(category, node.children, "", 0);
-    else showResults(categoryProducts(category), `${category} picks`);
-  }));
 }
-
 
 function renderResultPage(append = false) {
   const grid = $("#trendingGrid");
