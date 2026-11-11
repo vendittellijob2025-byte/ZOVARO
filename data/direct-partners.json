@@ -13,7 +13,8 @@
     "Global food delivery/grocery strategy added 2026-11-11: target local restaurants, restaurant chains, grocery/supermarket delivery and delivery marketplaces country-by-country. Uber Eats, Just Eat Spain, foodpanda Pakistan/Philippines, Instacart and GlobalFoodHub are recorded as unapproved prospects only. Do not show any as commission-enabled until ZOVARO receives written approval, valid tracking/deep links, territory/city coverage, conversion reporting and permitted media/catalogue terms. For direct restaurant/supermarket deals, negotiate unique referral codes or trackable ordering links with commission per completed, paid, non-refunded order; do not assume public merchant onboarding pays publishers.",
     "Payout policy for all ZOVARO affiliate, referral, rental and sale commissions: the intended beneficiary is the business owner, Carlo Vendittelli, and the preferred payout method is bank transfer to the owner's designated bank account. Never store IBAN, BIC/SWIFT, bank branch details, identity documents or other banking credentials in this public repository, source code, website, logs or partner prospect records. Enter bank details only by the owner directly into each partner's verified secure payout/onboarding portal, or provide them through a verified secure channel specifically requested by the partner. Confirm that the partner supports bank transfer, the beneficiary name, accepted currency, fees, minimum payout, tax/KYC requirements and whether a business account or tax documentation is required before activation.",
     "Payout negotiation preference: in affiliate/partner application emails, explicitly request weekly payouts by bank transfer to the owner, Carlo Vendittelli, and state that bank transfer is the required/preferred payout method. Ask each partner to confirm weekly payout availability, payout day, minimum threshold, currency, fees and KYC/tax requirements. Do not put the owner's full IBAN/BIC or bank branch details in initial or bulk outreach emails or the public repository; provide full bank coordinates only during verified payout onboarding through the partner's secure portal, or a specifically verified secure channel if the partner requires email. The owner has authorized stating the beneficiary name and weekly bank-transfer preference in applications.",
-    "CJ approvals verified from welcome emails dated 2026-11-09 to 2026-11-11: FOREO, STYLEVANA, The Ayurveda Experience, Nilight, Creality, AliExpress (CID 7711902) and Amazfit US. Status approved_on_network means accepted into the advertiser programme on CJ; it does NOT by itself mean products are live on ZOVARO. Before publication, validate tracking links, feed/data access, territorial eligibility, permitted assets, conversion terms and payout setup. Do not claim weekly payouts unless the advertiser confirms."
+    "CJ approvals verified from welcome emails dated 2026-11-09 to 2026-11-11: FOREO, STYLEVANA, The Ayurveda Experience, Nilight, Creality, AliExpress (CID 7711902) and Amazfit US. Status approved_on_network means accepted into the advertiser programme on CJ; it does NOT by itself mean products are live on ZOVARO. Before publication, validate tracking links, feed/data access, territorial eligibility, permitted assets, conversion terms and payout setup. Do not claim weekly payouts unless the advertiser confirms.",
+    "Additional CJ welcome/acceptance emails reviewed 2026-11-06 to 2026-11-09: ISEE Hair/BGMgirl/WigFever, KSP Performance, Fanttik, Chow Sang Sang Jewellery, OEDRO, Aurzen, AOMEI, Dream Pairs/Bruno Marc/Nortiv 8, Soundcore US, UNice Hair, Rexing, eCosmetics, Abelssoft, 24-7PressRelease and FragranceShop.com. Recorded as approved_on_network only. This is network/program acceptance, not proof that products are already published on ZOVARO; verify valid CJ tracking links, country restrictions, datafeeds, approved assets and payout terms before live promotion."
   ],
   "prospects": [
     {
@@ -963,6 +964,432 @@
         "threadId": "1a1c2410b6d890e2"
       },
       "nextAction": "Confirm US-only restrictions, eligible publisher countries, delivery destinations and approved product creatives."
+    },
+    {
+      "id": "isee-hair-family",
+      "name": "ISEE Hair / BGMgirl / WigFever",
+      "status": "approved_on_network",
+      "programType": "beauty-hair-affiliate",
+      "territories": [
+        "Main markets stated: US, UK, Canada, France"
+      ],
+      "publicCommission": "Not specified in welcome email",
+      "terms": {
+        "tracking": "Use designated CJ tracking links; UTM parameters recommended"
+      },
+      "contact": {
+        "email": "Dave@iseehair.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "brand assets to request",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bfb7034b7ee11"
+      },
+      "nextAction": "Confirm exact brand coverage, rates, market eligibility, tracking links and authorized assets."
+    },
+    {
+      "id": "ksp-performance",
+      "name": "KSP Performance",
+      "status": "approved_on_network",
+      "programType": "automotive-performance-affiliate",
+      "territories": [
+        "United States",
+        "Canada"
+      ],
+      "publicCommission": "7.5% and higher for qualifying partners",
+      "terms": {
+        "datafeed": "Available with product attributes, SKU, fitment, materials, images and pricing"
+      },
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "verify terms",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bf2021fbf5e9e"
+      },
+      "nextAction": "Confirm Italy-based publisher eligibility and shipping/territory scope before including in global catalog."
+    },
+    {
+      "id": "fanttik",
+      "name": "Fanttik",
+      "status": "approved_on_network",
+      "programType": "tools-automotive-outdoor-affiliate",
+      "territories": [
+        "Eligibility and shipping markets to verify"
+      ],
+      "publicCommission": "7%–20%",
+      "terms": {
+        "cookieDuration": "30 days",
+        "averageOrderValue": "USD 115"
+      },
+      "contact": {
+        "email": "publish@fanttik.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bf201c1c81858"
+      },
+      "nextAction": "Verify geographic eligibility, product feed and approved media."
+    },
+    {
+      "id": "chow-sang-sang",
+      "name": "Chow Sang Sang Jewellery",
+      "status": "approved_on_network",
+      "programType": "jewellery-affiliate",
+      "territories": [
+        "Hong Kong",
+        "United States",
+        "Australia",
+        "Canada",
+        "Singapore",
+        "United Kingdom",
+        "Malaysia"
+      ],
+      "publicCommission": "4% gold products; 10% non-gold products",
+      "terms": {
+        "cookieDuration": "30 days",
+        "exclusions": "No commission on bullion, gold bars/ingots, watches, shipping, duties or taxes; separate exclusions apply"
+      },
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ creative/link selection pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "use CJ-approved creatives",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bf201994bfb2d"
+      },
+      "nextAction": "Confirm territory and exact product exclusions before listing; ensure jewellery and watch distinction is correct."
+    },
+    {
+      "id": "oedro",
+      "name": "OEDRO",
+      "status": "approved_on_network",
+      "programType": "automotive-accessories-affiliate",
+      "territories": [
+        "Eligibility and shipping markets to verify"
+      ],
+      "publicCommission": "5%–12%",
+      "contact": {
+        "email": "oedrocarpart@gmail.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "banners/text links mentioned; verify usage",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bf090ed1618a8"
+      },
+      "nextAction": "Verify country eligibility, feed, product coverage and asset permissions."
+    },
+    {
+      "id": "aurzen",
+      "name": "Aurzen",
+      "status": "approved_on_network",
+      "programType": "projectors-electronics-affiliate",
+      "territories": [
+        "Eligibility and shipping markets to verify"
+      ],
+      "publicCommission": "10%",
+      "terms": {
+        "cookieDuration": "45 days",
+        "datafeed": "Available",
+        "restrictions": "No bidding on Aurzen trademarks/domain or variations; no branded direct-linking PPC"
+      },
+      "contact": {
+        "email": "liz@aurzen.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "CJ creatives/terms to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1be569113bb9e0"
+      },
+      "nextAction": "Confirm shipping territories, product feed access and SEM restrictions."
+    },
+    {
+      "id": "aomei",
+      "name": "AOMEI",
+      "status": "approved_on_network",
+      "programType": "software-utility-affiliate",
+      "territories": [
+        "Global programme; eligible markets to verify"
+      ],
+      "publicCommission": "Not specified in welcome email",
+      "contact": {
+        "email": "paul@aomeitech.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "campaign creatives to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1be4d7b9cd4ad1"
+      },
+      "nextAction": "Check commission, cookie, software products, licence terms and approved promotional materials."
+    },
+    {
+      "id": "dream-pairs-bruno-marc-nortiv8",
+      "name": "Dream Pairs / Bruno Marc / Nortiv 8",
+      "status": "approved_on_network",
+      "programType": "footwear-apparel-affiliate",
+      "territories": [
+        "Eligibility and delivery markets to verify"
+      ],
+      "publicCommission": "4%–15%",
+      "terms": {
+        "cookieDuration": "30 days",
+        "assets": "Coupons, deals, text links, banners, newsletters and datafeed mentioned"
+      },
+      "contact": {
+        "email": "cj@dreampairshoes.com",
+        "network": "CJ Affiliate",
+        "advertiserId": "6258731"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "CJ-approved assets to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bde8b290b64a9"
+      },
+      "nextAction": "Verify exact market coverage for each brand, feed and approved creatives."
+    },
+    {
+      "id": "soundcore-us",
+      "name": "Soundcore US",
+      "status": "approved_on_network",
+      "programType": "audio-electronics-affiliate",
+      "territories": [
+        "US programme; publisher and destination eligibility to verify"
+      ],
+      "publicCommission": "7% on approved sales",
+      "terms": {
+        "cookieDuration": "30 days",
+        "datafeed": "Daily feed available",
+        "restrictions": "No bidding on Soundcore trademark/display URL"
+      },
+      "contact": {
+        "email": "affiliate@anker.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "CJ creatives/terms to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "threadId": "1a1bdd6659fa4ea9"
+      },
+      "nextAction": "Confirm whether an Italy-based publisher can promote US programme and which countries can order."
+    },
+    {
+      "id": "unice",
+      "name": "UNice Hair",
+      "status": "approved_on_network",
+      "programType": "beauty-hair-affiliate",
+      "territories": [
+        "Eligibility and delivery markets to verify"
+      ],
+      "publicCommission": "5%",
+      "terms": {
+        "cookieDuration": "30 days",
+        "restrictions": "No trademark/URL bidding; no promotion through wholesale or dropshipping"
+      },
+      "contact": {
+        "email": "affiliate@unice.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "CJ materials to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-07",
+        "threadId": "1a1b372b7f6012f4"
+      },
+      "nextAction": "Verify shipping markets and exact permitted promotional channels."
+    },
+    {
+      "id": "rexing",
+      "name": "Rexing",
+      "status": "approved_on_network",
+      "programType": "automotive-dashcam-affiliate",
+      "territories": [
+        "Eligibility and shipping markets to verify"
+      ],
+      "publicCommission": "15% on qualifying purchases",
+      "terms": {
+        "cookieDuration": "45 days"
+      },
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ tracking link generation pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "CJ assets/terms to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-06",
+        "threadId": "1a1b1a8f57b749a1"
+      },
+      "nextAction": "Verify territory, tracking link, product feed and allowed media."
+    },
+    {
+      "id": "ecosmetics",
+      "name": "eCosmetics",
+      "status": "approved_on_network",
+      "programType": "beauty-fragrance-cosmetics-affiliate",
+      "territories": [
+        "Eligibility and delivery markets to verify"
+      ],
+      "publicCommission": "Up to 8%",
+      "terms": {
+        "cookieDuration": "Up to 30 days",
+        "restrictions": "No bidding on eCosmetics trademark/domain or misspellings"
+      },
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "banners/content mentioned; verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-06",
+        "threadId": "1a1b11b1cc5d0d14"
+      },
+      "nextAction": "Verify fragrance brand availability, authenticity, countries shipped and approved creative assets."
+    },
+    {
+      "id": "abelssoft",
+      "name": "Abelssoft",
+      "status": "approved_on_network",
+      "programType": "software-affiliate",
+      "territories": [
+        "Worldwide languages/markets stated; sales eligibility to verify"
+      ],
+      "publicCommission": "50% publisher share",
+      "terms": {
+        "cookieDuration": "30 days",
+        "datafeed": "Daily feed available",
+        "restrictions": "No PPC partners; no bidding on trademarks/product names/domain or variations"
+      },
+      "contact": {
+        "email": "cj-international@abelssoft.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ link verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-06",
+        "threadId": "1a1afa83ee9730be"
+      },
+      "nextAction": "Verify software catalogue, product claims, licence model and SEM restrictions."
+    },
+    {
+      "id": "24-7pressrelease",
+      "name": "24-7PressRelease",
+      "status": "approved_on_network",
+      "programType": "press-release-distribution-service-affiliate",
+      "territories": [
+        "Eligibility and service availability to verify"
+      ],
+      "publicCommission": "USD 15 per qualifying new customer package",
+      "terms": {
+        "cookieDuration": "45 days",
+        "qualifyingPackages": "USD 49, 89, 139 and 419 packages"
+      },
+      "contact": {
+        "network": "CJ Affiliate",
+        "advertiserId": "2898768"
+      },
+      "integration": {
+        "affiliateLink": "CJ coded links to retrieve",
+        "inventoryFeed": "not applicable",
+        "imagePermission": "CJ banners/text links available",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-06",
+        "threadId": "1a1afa3ae321d023"
+      },
+      "nextAction": "Check ZOVARO audience fit and retrieve CJ coded links before promotion."
+    },
+    {
+      "id": "fragranceshop",
+      "name": "FragranceShop.com",
+      "status": "approved_on_network",
+      "programType": "fragrance-retailer-affiliate",
+      "territories": [
+        "Eligibility and shipping markets to verify"
+      ],
+      "publicCommission": "5% per sale",
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ unique referral link to retrieve",
+        "inventoryFeed": "pending",
+        "imagePermission": "affiliate dashboard assets to verify",
+        "conversionReporting": "CJ reporting; validate"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-06",
+        "threadId": "1a1af9f225dd5d4d"
+      },
+      "nextAction": "Verify brand assortment, authenticity, shipping countries and CJ links before adding perfumes."
     }
   ]
 }
