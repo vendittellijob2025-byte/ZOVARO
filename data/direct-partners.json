@@ -1390,6 +1390,82 @@
         "threadId": "1a1af9f225dd5d4d"
       },
       "nextAction": "Verify brand assortment, authenticity, shipping countries and CJ links before adding perfumes."
+    },
+    {
+      "id": "grovegear-garden",
+      "name": "GroveGear",
+      "status": "contacted",
+      "programType": "garden-tools-affiliate",
+      "territories": [
+        "United Kingdom",
+        "International publishers accepted; delivery territories to confirm"
+      ],
+      "publicCommission": "Tiered commission; exact rate to confirm with partner",
+      "contact": {
+        "email": "b2b@grovegear.co.uk",
+        "sourceUrl": "https://grovegear.co.uk/affliate-program/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm exact commission tiers, eligible publisher/delivery territories, feed/API, tracking link, payout threshold and approved creative assets.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-11T23:35:00Z",
+      "contactEvidence": "Gmail sent thread 1a1ccf8fd153df46",
+      "notes": "Official affiliate page states international partners are welcome, 30-day cookie and monthly payouts after returns window; minimum threshold and exact commission tier require confirmation."
+    },
+    {
+      "id": "floraiku-paris-affiliate",
+      "name": "Floraïku Paris",
+      "status": "contacted",
+      "programType": "niche-fragrance-affiliate",
+      "territories": [
+        "International; publisher eligibility and delivery markets to confirm"
+      ],
+      "publicCommission": "Not published on official affiliate contact page; request terms",
+      "contact": {
+        "email": "hello@floraiku.com",
+        "sourceUrl": "https://www.floraiku.com/pages/faq"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm whether international publisher applications are accepted, commission, cookie, tracking, feed/catalogue, payout terms and written image/brand permissions.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-11T23:35:00Z",
+      "contactEvidence": "Gmail sent thread 1a1ccf902fc991c3",
+      "notes": "Official FAQ directs prospective affiliate partners to customer service; no commission or attribution terms published on that page."
+    },
+    {
+      "id": "mein-schoener-garten-affiliate",
+      "name": "Mein schöner Garten Shop",
+      "status": "contacted",
+      "programType": "garden-home-affiliate",
+      "territories": [
+        "Germany"
+      ],
+      "publicCommission": "Up to 12% (official programme claim; individual rate and publisher acceptance to confirm)",
+      "contact": {
+        "email": "affiliate@burda.com",
+        "sourceUrl": "https://shop.mein-schoener-garten.de/pages/affiliate-programme"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "available-in-programme; access pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Confirm if an Italy-based international publisher may join despite Germany-only sales territory, exact commission, cookie, feed access, attribution, payout and image permissions.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-11T23:35:00Z",
+      "contactEvidence": "Gmail sent thread 1a1ccf90aec44de7",
+      "notes": "Official programme page advertises up to 12%, deeplink generator and product data feed; territory stated as Germany."
     }
   ]
 }
