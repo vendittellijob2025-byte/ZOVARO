@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-11",
   "partners": [],
   "products": [],
   "notes": [
     "Publish only after written partner approval.",
     "Every published product must have a verified partner-issued tracking URL.",
     "Use only product assets the partner authorized ZOVARO to display.",
-    "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately."
+    "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately.",
+    "Research additions dated 2026-11-11 are prospects only; they are not approved ZOVARO partners. Do not publish products or imply commissions until partner acceptance, tracking and content permissions are verified."
   ],
   "prospects": [
     {
@@ -331,6 +332,237 @@
       "notes": "Free to join; monthly bank transfer from €50 after the charter starts and is fully paid. Website content and photos require separate permission.",
       "contactedAt": "2026-11-07T09:26:24Z",
       "contactEvidence": "Gmail sent thread 1a1b554a183f6e96"
+    },
+    {
+      "id": "farfetch-affiliate",
+      "name": "FARFETCH",
+      "status": "prospect",
+      "programType": "luxury-fashion-affiliate",
+      "territories": [
+        "Global; site ships to 190+ countries; publisher approval required"
+      ],
+      "publicCommission": "Commission on approved global sales; rate to confirm",
+      "contact": {
+        "email": "affiliates@farfetch.com",
+        "applicationUrl": "https://www.farfetch.com/it/pag1987.aspx",
+        "sourceUrl": "https://www.farfetch.com/it/pag1987.aspx"
+      },
+      "integration": {
+        "affiliateNetwork": "CJ or direct onboarding per reply",
+        "affiliateLink": "pending",
+        "inventoryFeed": "daily product feeds stated",
+        "imagePermission": "confirm partner terms",
+        "conversionReporting": "network reporting"
+      },
+      "nextAction": "Apply/contact with ZOVARO website URL; confirm available network, country eligibility, commission, feed access and asset permissions.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "mytheresa-affiliate",
+      "name": "Mytheresa",
+      "status": "prospect",
+      "programType": "luxury-fashion-affiliate",
+      "territories": [
+        "International; country eligibility subject to network approval"
+      ],
+      "publicCommission": "Competitive commission on eligible net sales; rate to confirm",
+      "contact": {
+        "email": "affiliate@mytheresa.com",
+        "applicationUrl": "https://www.mytheresa.com/it/en/affiliates",
+        "sourceUrl": "https://www.mytheresa.com/it/en/affiliates"
+      },
+      "integration": {
+        "affiliateNetwork": "CJ or Rakuten",
+        "affiliateLink": "pending",
+        "inventoryFeed": "daily product feeds in 8 languages stated",
+        "imagePermission": "confirm partner terms",
+        "conversionReporting": "network sales reporting"
+      },
+      "nextAction": "Apply through CJ/Rakuten; confirm publisher-country eligibility, feed and permitted creative use.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "cos-affiliate",
+      "name": "COS",
+      "status": "prospect",
+      "programType": "fashion-affiliate",
+      "territories": [
+        "Italy and listed European markets"
+      ],
+      "publicCommission": "Rate to confirm in Rakuten programme",
+      "contact": {
+        "applicationUrl": "https://www.cos.com/en-eu-e/affiliates",
+        "sourceUrl": "https://www.cos.com/en-eu-e/affiliates"
+      },
+      "integration": {
+        "affiliateNetwork": "Rakuten",
+        "affiliateLink": "pending",
+        "inventoryFeed": "confirm after approval",
+        "imagePermission": "subject to programme terms",
+        "conversionReporting": "network reporting"
+      },
+      "nextAction": "Register with Rakuten and apply to COS; programme states free participation and Italy eligibility.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "sony-it-affiliate",
+      "name": "Sony Store Online Italia",
+      "status": "prospect",
+      "programType": "electronics-tv-audio-affiliate",
+      "territories": [
+        "Italy"
+      ],
+      "publicCommission": "Up to 3% by category per Awin listing; confirm current rate card",
+      "contact": {
+        "applicationUrl": "https://ui.awin.com/merchant-profile/116817",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/116817"
+      },
+      "integration": {
+        "affiliateNetwork": "Awin",
+        "affiliateLink": "pending",
+        "inventoryFeed": "updated product feed stated",
+        "imagePermission": "network assets/terms",
+        "conversionReporting": "Awin reporting"
+      },
+      "nextAction": "Apply to Sony IT on Awin; verify acceptance, exact categories, product feed and paid social permissions.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "unieuro-it-affiliate",
+      "name": "Unieuro Italia",
+      "status": "prospect",
+      "programType": "electronics-appliances-affiliate",
+      "territories": [
+        "Italy"
+      ],
+      "publicCommission": "Category-dependent commission; confirm current Awin rates",
+      "contact": {
+        "applicationUrl": "https://ui.awin.com/merchant-profile/10139",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/10139"
+      },
+      "integration": {
+        "affiliateNetwork": "Awin",
+        "affiliateLink": "pending",
+        "inventoryFeed": "real-time product feed stated",
+        "imagePermission": "network assets/terms",
+        "conversionReporting": "Awin reporting"
+      },
+      "nextAction": "Apply to Unieuro IT on Awin; confirm commission schedule and use for website/social traffic.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "delonghi-it-affiliate",
+      "name": "De'Longhi Italia",
+      "status": "prospect",
+      "programType": "home-appliances-affiliate",
+      "territories": [
+        "Italy; network-specific availability"
+      ],
+      "publicCommission": "Competitive commission; exact rate to confirm",
+      "contact": {
+        "applicationUrl": "https://www.delonghi.com/it-it/e/iscrizione-programma-affiliazione",
+        "sourceUrl": "https://www.delonghi.com/it-it/e/iscrizione-programma-affiliazione"
+      },
+      "integration": {
+        "affiliateNetwork": "Awin or TradeDoubler per official programme page",
+        "affiliateLink": "pending",
+        "inventoryFeed": "full product feed stated",
+        "imagePermission": "dashboard creatives and partner terms",
+        "conversionReporting": "network tracking; 30-day cookie stated"
+      },
+      "nextAction": "Apply through the supported network and verify Italian publisher access, rate card and feed.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "wayfair-affiliate",
+      "name": "Wayfair",
+      "status": "prospect",
+      "programType": "furniture-home-affiliate",
+      "territories": [
+        "Global product catalogue; Italy publisher and customer eligibility to confirm"
+      ],
+      "publicCommission": "UK programme page states 7% and 7-day referral period; do not assume same terms elsewhere",
+      "contact": {
+        "applicationUrl": "https://www.aboutwayfair.com/partner-with-us",
+        "sourceUrl": "https://www.aboutwayfair.com/partner-with-us"
+      },
+      "integration": {
+        "affiliateNetwork": "CJ",
+        "affiliateLink": "pending",
+        "inventoryFeed": "2M+ product range and data feeds stated",
+        "imagePermission": "programme terms",
+        "conversionReporting": "CJ reporting"
+      },
+      "nextAction": "Check whether ZOVARO's Italian publisher account can join a relevant Wayfair advertiser programme and serve intended countries.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "playstation-direct-affiliate",
+      "name": "PlayStation Direct",
+      "status": "prospect",
+      "programType": "gaming-console-affiliate",
+      "territories": [
+        "Italy, Spain, France, Germany, UK and other listed markets"
+      ],
+      "publicCommission": "Rate to confirm in Partnerize",
+      "contact": {
+        "email": "playstationservices@partnerizemanagement.com",
+        "applicationUrl": "https://direct.playstation.com/en-us/playstation-affiliate-programme",
+        "sourceUrl": "https://direct.playstation.com/en-us/playstation-affiliate-programme"
+      },
+      "integration": {
+        "affiliateNetwork": "Partnerize",
+        "affiliateLink": "pending",
+        "inventoryFeed": "confirm campaign assets/feed",
+        "imagePermission": "Partnerize campaign terms",
+        "conversionReporting": "Partnerize reporting"
+      },
+      "nextAction": "Apply to PlayStation Direct campaign through Partnerize; confirm ZOVARO website and social channels, eligible territories and tracking.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "jets-and-partners",
+      "name": "Jets & Partners",
+      "status": "prospect",
+      "programType": "private-aviation-referral",
+      "territories": [
+        "International markets; partner eligibility to confirm"
+      ],
+      "publicCommission": "Website advertises 50/50 revenue share; exact commission base and contract terms must be confirmed",
+      "contact": {
+        "applicationUrl": "https://jets.partners/en/affiliate",
+        "sourceUrl": "https://jets.partners/en/affiliate"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request written terms defining 50/50 calculation, attribution, completed bookings and aircraft-sale referrals before joining.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "vomos-affiliate",
+      "name": "VOMOS",
+      "status": "prospect",
+      "programType": "luxury-travel-referral",
+      "territories": [
+        "International eligibility to confirm"
+      ],
+      "publicCommission": "Commission on qualifying referrals and completed bookings; rate not published",
+      "contact": {
+        "applicationUrl": "https://vomos.com/become-an-affiliate/",
+        "sourceUrl": "https://vomos.com/become-an-affiliate/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request publisher eligibility, referral tracking, commission and payout conditions for private aviation, villas, yachts and luxury vehicles.",
+      "sourceChecked": "2026-11-11"
     }
   ]
 }
