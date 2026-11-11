@@ -12,7 +12,8 @@
     "Food delivery prospects researched 2026-11-11: Uber's official affiliate programme pays for qualified first Uber Eats orders; rate varies by country/audience and application is vetted. Just Eat Spain listing advertises 9% new / 2% returning via Awin; access fees and publisher eligibility must be checked. Rappi Colombia's public pages reviewed are merchant/restaurant onboarding, not a verified publisher affiliate programme; do not present Rappi as a commission partner for ZOVARO unless a separate publisher agreement is confirmed.",
     "Global food delivery/grocery strategy added 2026-11-11: target local restaurants, restaurant chains, grocery/supermarket delivery and delivery marketplaces country-by-country. Uber Eats, Just Eat Spain, foodpanda Pakistan/Philippines, Instacart and GlobalFoodHub are recorded as unapproved prospects only. Do not show any as commission-enabled until ZOVARO receives written approval, valid tracking/deep links, territory/city coverage, conversion reporting and permitted media/catalogue terms. For direct restaurant/supermarket deals, negotiate unique referral codes or trackable ordering links with commission per completed, paid, non-refunded order; do not assume public merchant onboarding pays publishers.",
     "Payout policy for all ZOVARO affiliate, referral, rental and sale commissions: the intended beneficiary is the business owner, Carlo Vendittelli, and the preferred payout method is bank transfer to the owner's designated bank account. Never store IBAN, BIC/SWIFT, bank branch details, identity documents or other banking credentials in this public repository, source code, website, logs or partner prospect records. Enter bank details only by the owner directly into each partner's verified secure payout/onboarding portal, or provide them through a verified secure channel specifically requested by the partner. Confirm that the partner supports bank transfer, the beneficiary name, accepted currency, fees, minimum payout, tax/KYC requirements and whether a business account or tax documentation is required before activation.",
-    "Payout negotiation preference: in affiliate/partner application emails, explicitly request weekly payouts by bank transfer to the owner, Carlo Vendittelli, and state that bank transfer is the required/preferred payout method. Ask each partner to confirm weekly payout availability, payout day, minimum threshold, currency, fees and KYC/tax requirements. Do not put the owner's full IBAN/BIC or bank branch details in initial or bulk outreach emails or the public repository; provide full bank coordinates only during verified payout onboarding through the partner's secure portal, or a specifically verified secure channel if the partner requires email. The owner has authorized stating the beneficiary name and weekly bank-transfer preference in applications."
+    "Payout negotiation preference: in affiliate/partner application emails, explicitly request weekly payouts by bank transfer to the owner, Carlo Vendittelli, and state that bank transfer is the required/preferred payout method. Ask each partner to confirm weekly payout availability, payout day, minimum threshold, currency, fees and KYC/tax requirements. Do not put the owner's full IBAN/BIC or bank branch details in initial or bulk outreach emails or the public repository; provide full bank coordinates only during verified payout onboarding through the partner's secure portal, or a specifically verified secure channel if the partner requires email. The owner has authorized stating the beneficiary name and weekly bank-transfer preference in applications.",
+    "CJ approvals verified from welcome emails dated 2026-11-09 to 2026-11-11: FOREO, STYLEVANA, The Ayurveda Experience, Nilight, Creality, AliExpress (CID 7711902) and Amazfit US. Status approved_on_network means accepted into the advertiser programme on CJ; it does NOT by itself mean products are live on ZOVARO. Before publication, validate tracking links, feed/data access, territorial eligibility, permitted assets, conversion terms and payout setup. Do not claim weekly payouts unless the advertiser confirms."
   ],
   "prospects": [
     {
@@ -757,6 +758,211 @@
       "nextAction": "Confirm country delivery map, commission exclusions, repeat purchase terms, deep-linking and product feed for grocery catalog integration.",
       "sourceChecked": "2026-11-11",
       "sourceEvidence": "Official GlobalFoodHub affiliate page."
+    },
+    {
+      "id": "foreo",
+      "name": "FOREO",
+      "status": "approved_on_network",
+      "programType": "beauty-skincare-affiliate",
+      "territories": [
+        "CJ programme; eligible countries and shipping coverage to verify"
+      ],
+      "publicCommission": "3.5%–11.5%",
+      "terms": {
+        "cookieDuration": "60 days",
+        "restrictions": "No trademark bidding; no PPC."
+      },
+      "contact": {
+        "email": "frank@foreo.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-11",
+        "emailSubject": "Welcome to affiliate program of FOREO.com!",
+        "threadId": "1a1c9da90a02ee89"
+      },
+      "nextAction": "Verify link generation, permitted markets, product feed and approved creative assets before publishing."
+    },
+    {
+      "id": "stylevana",
+      "name": "STYLEVANA",
+      "status": "approved_on_network",
+      "programType": "beauty-fashion-affiliate",
+      "territories": [
+        "CJ programme; shipping destinations and publisher eligibility to verify"
+      ],
+      "publicCommission": "Not specified in welcome email; check CJ programme terms",
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-11",
+        "emailSubject": "Welcome to STYLEVANA!",
+        "threadId": "1a1c9914c68ac2c9"
+      },
+      "nextAction": "Check commission, cookie, country coverage, product feed and approved creative assets."
+    },
+    {
+      "id": "the-ayurveda-experience",
+      "name": "The Ayurveda Experience",
+      "status": "approved_on_network",
+      "programType": "beauty-wellness-affiliate",
+      "territories": [
+        "Worldwide shipping stated; major markets USA, Canada and Australia"
+      ],
+      "publicCommission": "15%–25% for non-coupon content publishers depending on content type; 3% coupon/cashback",
+      "terms": {
+        "cookieDuration": "Not stated in welcome email; check CJ terms"
+      },
+      "contact": {
+        "email": "affiliate@theayurveda-experience.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-11",
+        "emailSubject": "Welcome to The Ayurveda Experience's Affiliate program!",
+        "threadId": "1a1c923779eff87e"
+      },
+      "nextAction": "Confirm applicable content-publisher rate, prohibited claims, product feed, geographic availability and approved creatives."
+    },
+    {
+      "id": "nilight",
+      "name": "Nilight",
+      "status": "approved_on_network",
+      "programType": "automotive-outdoor-affiliate",
+      "territories": [
+        "CJ programme; country eligibility and shipping destinations to verify"
+      ],
+      "publicCommission": "12%",
+      "terms": {
+        "cookieDuration": "45 days"
+      },
+      "contact": {
+        "email": "support@nilight.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-10",
+        "emailSubject": "Welcome to the Nilight Affiliate Program",
+        "threadId": "1a1c4187ccabb7cd"
+      },
+      "nextAction": "Verify destination-country coverage, product data and image permissions before publishing."
+    },
+    {
+      "id": "creality",
+      "name": "Creality",
+      "status": "approved_on_network",
+      "programType": "3d-printing-maker-affiliate",
+      "territories": [
+        "Worldwide (as stated by advertiser)"
+      ],
+      "publicCommission": "3%",
+      "terms": {
+        "cookieDuration": "45 days",
+        "productDatafeed": "Available",
+        "averageOrderValue": "USD 599",
+        "restrictions": "No paid search bidding on Creality trademarks/variations without written permission; direct linking from paid search ads not allowed."
+      },
+      "contact": {
+        "email": "affiliate@creality.com",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "Available; access pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-10",
+        "emailSubject": "Welcome to the Creality Affiliate Program",
+        "threadId": "1a1c35ce7fa6d4c8"
+      },
+      "nextAction": "Obtain feed, approved images/banners and country-specific shipping/stock data; respect SEM restrictions."
+    },
+    {
+      "id": "aliexpress",
+      "name": "AliExpress",
+      "status": "approved_on_network",
+      "programType": "global-marketplace-affiliate",
+      "territories": [
+        "International; actual delivery markets and commission eligibility vary by product and destination"
+      ],
+      "publicCommission": "2% electronics/computers/tablets; 8% selected phone accessories, interior accessories, garden supplies and apparel; 6% other categories; 0% special category",
+      "terms": {
+        "cookieDuration": "3 days",
+        "lockingPeriod": "90 days",
+        "cid": "7711902"
+      },
+      "contact": {
+        "email": "apryang1@publicisgroupe.net",
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "catalogue/API access to verify",
+        "imagePermission": "use CJ/partner-authorized assets only",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-10",
+        "emailSubject": "Affiliate Partnership enquiry -AliExpress",
+        "threadId": "1a1c34adbcd8c5d5"
+      },
+      "nextAction": "Verify link generation, product-level commission mapping, destination shipping, prohibited categories and approved data/assets."
+    },
+    {
+      "id": "amazfit-us",
+      "name": "Amazfit US",
+      "status": "approved_on_network",
+      "programType": "wearables-electronics-affiliate",
+      "territories": [
+        "US programme; confirm whether traffic/publishers outside US are eligible and whether US shipping only"
+      ],
+      "publicCommission": "Up to 10%; accessories 7%",
+      "terms": {
+        "cookieDuration": "30 days",
+        "communityDiscount": "15% on MSRP-priced products"
+      },
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "integration": {
+        "affiliateLink": "CJ account link generation/verification pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "partner assets/terms to verify",
+        "conversionReporting": "CJ reporting available; validate account access"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-09",
+        "emailSubject": "Welcome to the Amazfit US Affiliate Program!",
+        "threadId": "1a1c2410b6d890e2"
+      },
+      "nextAction": "Confirm US-only restrictions, eligible publisher countries, delivery destinations and approved product creatives."
     }
   ]
 }
