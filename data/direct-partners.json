@@ -8,7 +8,8 @@
     "Every published product must have a verified partner-issued tracking URL.",
     "Use only product assets the partner authorized ZOVARO to display.",
     "A click is not proof of a sale or commission; conversion reporting and payout terms must be agreed separately.",
-    "Research additions dated 2026-11-11 are prospects only; they are not approved ZOVARO partners. Do not publish products or imply commissions until partner acceptance, tracking and content permissions are verified."
+    "Research additions dated 2026-11-11 are prospects only; they are not approved ZOVARO partners. Do not publish products or imply commissions until partner acceptance, tracking and content permissions are verified.",
+    "Food delivery prospects researched 2026-11-11: Uber's official affiliate programme pays for qualified first Uber Eats orders; rate varies by country/audience and application is vetted. Just Eat Spain listing advertises 9% new / 2% returning via Awin; access fees and publisher eligibility must be checked. Rappi Colombia's public pages reviewed are merchant/restaurant onboarding, not a verified publisher affiliate programme; do not present Rappi as a commission partner for ZOVARO unless a separate publisher agreement is confirmed."
   ],
   "prospects": [
     {
@@ -562,6 +563,49 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Request publisher eligibility, referral tracking, commission and payout conditions for private aviation, villas, yachts and luxury vehicles.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "uber-eats-affiliate",
+      "name": "Uber Affiliate Program (Uber Eats)",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Country coverage and publisher eligibility subject to Uber approval"
+      ],
+      "publicCommission": "Commission for qualified first Uber Eats orders; rate negotiated based on audience and country; no publisher fee stated",
+      "contact": {
+        "applicationUrl": "https://www.uber.com/co/en/affiliate-program/",
+        "sourceUrl": "https://www.uber.com/co/en/affiliate-program/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "not confirmed",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Apply as ZOVARO publisher; confirm country eligibility, qualified first-order definition, commission rate, attribution window, tracking, and approved promotional assets.",
+      "sourceChecked": "2026-11-11"
+    },
+    {
+      "id": "just-eat-affiliate",
+      "name": "Just Eat Affiliate Programme",
+      "status": "prospect",
+      "programType": "food-delivery-affiliate",
+      "territories": [
+        "Spain programme found; ZOVARO publisher eligibility and other country programmes to confirm"
+      ],
+      "publicCommission": "Awin Spain listing: 9% new customers and 2% returning customers; network access and current terms to verify",
+      "contact": {
+        "sourceUrl": "https://ui.awin.com/merchant-profile/11140"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "not confirmed",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Verify whether ZOVARO can join without upfront cost; confirm Spain and other market eligibility, current rates, tracking and promotional restrictions before applying.",
       "sourceChecked": "2026-11-11"
     }
   ]
