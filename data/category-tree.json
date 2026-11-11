@@ -732,6 +732,59 @@
       ]
     },
     {
+      "name": "Food Delivery & Restaurant Orders",
+      "children": [
+        {
+          "name": "Restaurant Meals",
+          "children": [
+            "Local Restaurants",
+            "International Cuisine",
+            "Healthy & Vegetarian Meals",
+            "Vegan & Special Diets",
+            "Breakfast & Brunch",
+            "Lunch & Dinner"
+          ]
+        },
+        {
+          "name": "Fast Food & Pizza",
+          "children": [
+            "Burgers & Sandwiches",
+            "Pizza",
+            "Fried Chicken",
+            "Sushi & Asian Food",
+            "Tacos & Mexican Food",
+            "Desserts & Ice Cream"
+          ]
+        },
+        {
+          "name": "Grocery & Supermarket Delivery",
+          "children": [
+            "Supermarket Orders",
+            "Fresh Produce",
+            "Meat & Seafood",
+            "Bakery & Deli",
+            "Drinks & Pantry Essentials"
+          ]
+        },
+        {
+          "name": "Meal Kits & Prepared Meals",
+          "children": [
+            "Meal Kit Subscriptions",
+            "Ready-to-Eat Meals",
+            "Diet & Fitness Meal Plans"
+          ]
+        },
+        {
+          "name": "Group Orders & Catering",
+          "children": [
+            "Office Lunches",
+            "Party Catering",
+            "Family & Group Meals"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Gaming",
       "children": [
         {
