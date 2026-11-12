@@ -21,7 +21,8 @@
     "CJ approval update 2026-11-12: Allegro.pl welcome email dated 2026-11-09 confirms acceptance on CJ, 17% commission, 1-day cookie and a PPC ban (Google/Bing etc.). Added as approved_on_network only. Italy publisher eligibility, commission basis/exclusions, product feed, tracking links, permitted assets and payout terms remain unverified. Follow-up sent to the programme support contact.",
     "CJ programme terms update 2026-11-11: Creality emails announce pending terms labelled 5%-10% with activation dates 12-Nov and 14-Nov-2026. The visible summary lists 5% website-purchase commission for CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia; no 10% basis is visible. Review the full CJAM schedule before representing any higher rate.",
     "CJ promotions 2026-11-11: AOMEI Black Friday bundle advertised at 80% off from 11-Nov to 11-Dec-2026, with campaign link ID 17385381 and updated assets in CJ. Dream Pairs advertised a members-only 25% sale for 12-Nov to 19-Nov-2026. These are advertiser promotions, not proof that ZOVARO has generated a valid deep link or that product content is already live.",
-    "CJ Commission Reconciliation workflow run 5 completed successfully on 2026-11-11, including the import step into private ZOVARO storage. Workflow success alone does not prove a sale, commission amount or payout."
+    "CJ Commission Reconciliation workflow run 5 completed successfully on 2026-11-11, including the import step into private ZOVARO storage. Workflow success alone does not prove a sale, commission amount or payout.",
+    "Partner research update 2026-11-11: Acme Tools official affiliate page confirms Impact tracking, minimum 2% commission on qualified purchases, 15-day tracking, 91,000+ product catalogue, full data feed and creative assets. ZOVARO emailed the dedicated affiliate manager on 2026-11-11; publisher-country eligibility, actual customer delivery destinations, exclusions, tracking activation, asset permissions and payout terms remain pending. RainPoint official affiliate page advertises free signup, 10% qualifying-sales commission, product feed, unique tracking links and dashboard assets; payouts only after a minimum threshold (schedule/threshold unspecified), and branded paid-search bidding/direct paid traffic are restricted. Prospect recorded for portal application; general support address not used for affiliate outreach. Prunarbo official affiliate page advertises 10% commission and monthly PayPal/bank-transfer payout above an unspecified threshold; Italy appears in the storefront country selector but publisher eligibility and delivery coverage require confirmation. Prospect recorded for official portal application; no public dedicated affiliate email identified."
   ],
   "prospects": [
     {
@@ -1715,6 +1716,81 @@
       "contactEvidence": "Gmail sent message 1a1cd240e8e60a0a",
       "emailDeliveryStatus": "sent",
       "nextAction": "Await VivNetworks/CJ confirmation of Italy publisher eligibility, exact commission basis/exclusions, approved traffic sources, product feed/deep links, permitted assets and payout terms. Never use PPC traffic while the stated restriction remains in force."
+    },
+    {
+      "id": "acme-tools",
+      "name": "Acme Tools",
+      "status": "contacted",
+      "programType": "tools-diy-professional-equipment-affiliate",
+      "territories": [
+        "United States store; publisher and customer-country eligibility to confirm"
+      ],
+      "publicCommission": "Minimum 2% on qualified purchases (official programme page; exact category exclusions and rates to confirm)",
+      "cookie": "15 days",
+      "contact": {
+        "email": "affiliatesmanager@acmetools.com",
+        "sourceUrl": "https://www.acmetools.com/affiliates.html",
+        "applicationUrl": "https://app.impact.com/campaign-campaign-info-v2/Acme-Tools.brand",
+        "network": "Impact"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "offered by programme; access pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Impact programme; account access pending"
+      },
+      "nextAction": "Await reply on Italy-based publisher eligibility, customer delivery countries, rate exclusions, feed access, approved asset use and payout terms; do not publish before approval and valid tracking links.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-12T00:30:05.439Z",
+      "contactEvidence": "Gmail sent message 1a1cd2900202478b",
+      "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "rainpoint",
+      "name": "RainPoint",
+      "status": "prospect",
+      "programType": "smart-irrigation-garden-affiliate",
+      "territories": [
+        "Programme advertises 100+ countries; actual publisher and delivery eligibility to confirm"
+      ],
+      "publicCommission": "10% on qualifying sales (official affiliate page; exclusions and final terms to confirm)",
+      "contact": {
+        "applicationUrl": "https://us.rainpoint.com/pages/affiliate-program",
+        "generalSupportEmail": "service@rainpoint.com",
+        "emailPurpose": "general customer support only; not used for affiliate outreach"
+      },
+      "integration": {
+        "affiliateLink": "available after approval",
+        "inventoryFeed": "product feed advertised; access pending",
+        "imagePermission": "dashboard assets advertised; permissions/terms pending",
+        "conversionReporting": "automatic tracking advertised; dashboard access pending"
+      },
+      "nextAction": "Apply through the official GoAffPro portal and confirm publisher-country eligibility, customer delivery territories, cookie, exclusions, payout schedule/threshold and paid-traffic restrictions. Do not email general customer support for a sales pitch.",
+      "sourceChecked": "2026-11-11",
+      "statusEvidence": "Official programme states free signup, 10% qualifying-sales commission, unique links, product feed and dashboard creatives; payment only after minimum threshold, schedule not specified."
+    },
+    {
+      "id": "prunarbo",
+      "name": "Prunarbo",
+      "status": "prospect",
+      "programType": "garden-tools-affiliate",
+      "territories": [
+        "International storefront currency selector includes Italy and multiple countries; shipping and publisher eligibility to confirm"
+      ],
+      "publicCommission": "10% on qualifying sales (official programme page; detailed exclusions to confirm)",
+      "payout": "Monthly via PayPal or bank transfer after minimum threshold; threshold and payout currency not published on reviewed page",
+      "contact": {
+        "applicationUrl": "https://www.prunarbo.com/affiliate-program/recruit",
+        "sourceUrl": "https://www.prunarbo.com/pages/affiliate-program"
+      },
+      "integration": {
+        "affiliateLink": "unique referral links after approval",
+        "inventoryFeed": "not stated",
+        "imagePermission": "brand guidelines apply; specific media permissions to confirm",
+        "conversionReporting": "not specified"
+      },
+      "nextAction": "Apply through the official affiliate portal only after checking publisher-country acceptance; request tracked links, reporting, shipping countries, product feed/assets, minimum payout and whether weekly bank transfer can be negotiated.",
+      "sourceChecked": "2026-11-11"
     }
   ]
 }
