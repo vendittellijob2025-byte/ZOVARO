@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-12",
+  "purpose": "Research leads for ZOVARO affiliate/referral supply. These are not approved partners or live catalog offers until acceptance, terms, tracking and availability are verified.",
+  "opportunities": [
+    {
+      "partner": "ALANELI",
+      "status": "prospect",
+      "verticals": [
+        "luxury car rentals",
+        "villas and residences",
+        "yachts and superyachts",
+        "helicopters",
+        "private jets"
+      ],
+      "publicProgram": "Referral programme advertises 5% for cars, villas and yachts/helicopters, 2.5% for private jets; payout after completed booking.",
+      "url": "https://alaneli.com/en/refer-earn/",
+      "nextVerification": [
+        "publisher eligibility and Italy/Colombia territories",
+        "written agreement and tracking attribution",
+        "commission base, cancellations, payout method and timing",
+        "inventory and listing/feed access"
+      ]
+    },
+    {
+      "partner": "VOMOS",
+      "status": "application_sent",
+      "verticals": [
+        "private aviation",
+        "luxury homes and villas",
+        "yacht charters",
+        "luxury vehicles",
+        "chauffeur services",
+        "curated experiences"
+      ],
+      "publicProgram": "Public affiliate page describes commissions on qualifying referrals and completed bookings; no public rate captured.",
+      "url": "https://vomos.com/become-an-affiliate/",
+      "nextVerification": [
+        "existing outreach reply",
+        "territories and qualification rules",
+        "tracking or lead registration and attribution window",
+        "commission rates and payout terms"
+      ]
+    },
+    {
+      "partner": "Edel & Stark",
+      "status": "application_sent",
+      "verticals": [
+        "luxury car rental",
+        "chauffeur services",
+        "sports car tours",
+        "private jet services"
+      ],
+      "publicProgram": "Public affiliate page states commissions up to 15%, subject to agent agreement and booked referrals.",
+      "url": "https://www.edelstark.com/en/about/affiliate/",
+      "nextVerification": [
+        "existing outreach reply",
+        "written agent agreement",
+        "country coverage and referral tracking",
+        "actual rate by service and payment schedule"
+      ]
+    },
+    {
+      "partner": "IDC Luxury Rentals",
+      "status": "prospect",
+      "verticals": [
+        "luxury and exotic car rentals"
+      ],
+      "publicProgram": "Public affiliate page states commission per completed rental day, 30-day attribution and payout normally within 7 days after approval; rates vary by car.",
+      "url": "https://idcluxuryrentals.com/affiliates/",
+      "nextVerification": [
+        "geographic service area",
+        "publisher approval and link issuance",
+        "per-car rates and payout options",
+        "rental insurance and eligibility terms"
+      ]
+    },
+    {
+      "partner": "Borrow Luxury",
+      "status": "prospect",
+      "verticals": [
+        "fine jewelry rental"
+      ],
+      "publicProgram": "Public affiliate page states 15% tier-one commission on completed rentals; quarterly payout and monthly content obligations.",
+      "url": "https://borrow-luxury.com/pages/affiliates",
+      "nextVerification": [
+        "publisher eligibility and shipping territories",
+        "content obligations and term length",
+        "tracking and return/cancellation rules",
+        "commission tier progression and payout method"
+      ]
+    },
+    {
+      "partner": "Sofara",
+      "status": "prospect",
+      "verticals": [
+        "Dubai real estate sales"
+      ],
+      "publicProgram": "Public ambassador page advertises up to 3% on qualifying property closings; payment terms and legal eligibility need independent written confirmation.",
+      "url": "https://sofara.io/",
+      "nextVerification": [
+        "licensing and cross-border referral eligibility",
+        "written referral agreement and lead protection",
+        "commission trigger, calculation base and payout",
+        "approved projects and current listing feed"
+      ]
+    },
+    {
+      "partner": "Provera Real Estate",
+      "status": "prospect",
+      "verticals": [
+        "Dubai property referrals",
+        "Abu Dhabi property referrals",
+        "London property referrals"
+      ],
+      "publicProgram": "Public programme says applications are free and rewards are determined only by written agreement; tracking is link-based.",
+      "url": "https://smartdecisionproperties.com/en/corporate/affiliate-program",
+      "nextVerification": [
+        "written commission agreement",
+        "territories and licensing boundaries",
+        "lead attribution and duplicate-lead handling",
+        "payout trigger and timing"
+      ]
+    },
+    {
+      "partner": "Propertysuite",
+      "status": "prospect",
+      "verticals": [
+        "Dubai property referral programme",
+        "landlord and agent platform referrals"
+      ],
+      "publicProgram": "Public page advertises 25% qualified / 10% handoff referral terms; verify exact basis and agreement before promotion.",
+      "url": "https://propertysuite.ae/become-affiliate",
+      "nextVerification": [
+        "confirm exact commission basis and eligible lead types",
+        "publisher country eligibility",
+        "tracking duration and lead protection",
+        "written contract and payout schedule"
+      ]
+    }
+  ]
+}
