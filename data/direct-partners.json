@@ -1767,7 +1767,9 @@
       },
       "nextAction": "Apply through the official GoAffPro portal and confirm publisher-country eligibility, customer delivery territories, cookie, exclusions, payout schedule/threshold and paid-traffic restrictions. Do not email general customer support for a sales pitch.",
       "sourceChecked": "2026-11-11",
-      "statusEvidence": "Official programme states free signup, 10% qualifying-sales commission, unique links, product feed and dashboard creatives; payment only after minimum threshold, schedule not specified."
+      "statusEvidence": "Official programme states free signup, 10% qualifying-sales commission, unique links, product feed and dashboard creatives; payment only after minimum threshold, schedule not specified.",
+      "draftEvidence": "Gmail draft r-3390396528362111347 created without recipient; affiliate contact not verified, so not sent.",
+      "draftCreatedAt": "2026-11-12T00:31:56.354Z"
     },
     {
       "id": "prunarbo",
@@ -1790,7 +1792,9 @@
         "conversionReporting": "not specified"
       },
       "nextAction": "Apply through the official affiliate portal only after checking publisher-country acceptance; request tracked links, reporting, shipping countries, product feed/assets, minimum payout and whether weekly bank transfer can be negotiated.",
-      "sourceChecked": "2026-11-11"
+      "sourceChecked": "2026-11-11",
+      "draftEvidence": "Gmail draft r-8685999007190519248 created without recipient; no dedicated public affiliate email identified, so not sent.",
+      "draftCreatedAt": "2026-11-12T00:31:56.354Z"
     }
   ]
 }
