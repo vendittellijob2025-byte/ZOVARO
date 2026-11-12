@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-12",
   "partners": [],
   "products": [],
   "notes": [
@@ -14,13 +14,16 @@
     "Payout policy for all ZOVARO affiliate, referral, rental and sale commissions: the intended beneficiary is the business owner, Carlo Vendittelli, and the preferred payout method is bank transfer to the owner's designated bank account. Never store IBAN, BIC/SWIFT, bank branch details, identity documents or other banking credentials in this public repository, source code, website, logs or partner prospect records. Enter bank details only by the owner directly into each partner's verified secure payout/onboarding portal, or provide them through a verified secure channel specifically requested by the partner. Confirm that the partner supports bank transfer, the beneficiary name, accepted currency, fees, minimum payout, tax/KYC requirements and whether a business account or tax documentation is required before activation.",
     "Payout negotiation preference: in affiliate/partner application emails, explicitly request weekly payouts by bank transfer to the owner, Carlo Vendittelli, and state that bank transfer is the required/preferred payout method. Ask each partner to confirm weekly payout availability, payout day, minimum threshold, currency, fees and KYC/tax requirements. Do not put the owner's full IBAN/BIC or bank branch details in initial or bulk outreach emails or the public repository; provide full bank coordinates only during verified payout onboarding through the partner's secure portal, or a specifically verified secure channel if the partner requires email. The owner has authorized stating the beneficiary name and weekly bank-transfer preference in applications.",
     "CJ approvals verified from welcome emails dated 2026-11-09 to 2026-11-11: FOREO, STYLEVANA, The Ayurveda Experience, Nilight, Creality, AliExpress (CID 7711902) and Amazfit US. Status approved_on_network means accepted into the advertiser programme on CJ; it does NOT by itself mean products are live on ZOVARO. Before publication, validate tracking links, feed/data access, territorial eligibility, permitted assets, conversion terms and payout setup. Do not claim weekly payouts unless the advertiser confirms.",
-    "Additional CJ welcome/acceptance emails reviewed 2026-11-06 to 2026-11-09: ISEE Hair/BGMgirl/WigFever, KSP Performance, Fanttik, Chow Sang Sang Jewellery, OEDRO, Aurzen, AOMEI, Dream Pairs/Bruno Marc/Nortiv 8, Soundcore US, UNice Hair, Rexing, eCosmetics, Abelssoft, 24-7PressRelease and FragranceShop.com. Recorded as approved_on_network only. This is network/program acceptance, not proof that products are already published on ZOVARO; verify valid CJ tracking links, country restrictions, datafeeds, approved assets and payout terms before live promotion."
+    "Additional CJ welcome/acceptance emails reviewed 2026-11-06 to 2026-11-09: ISEE Hair/BGMgirl/WigFever, KSP Performance, Fanttik, Chow Sang Sang Jewellery, OEDRO, Aurzen, AOMEI, Dream Pairs/Bruno Marc/Nortiv 8, Soundcore US, UNice Hair, Rexing, eCosmetics, Abelssoft, 24-7PressRelease and FragranceShop.com. Recorded as approved_on_network only. This is network/program acceptance, not proof that products are already published on ZOVARO; verify valid CJ tracking links, country restrictions, datafeeds, approved assets and payout terms before live promotion.",
+    "Partner outreach run 2026-11-12: sent nine individual partnership enquiries to Safari.com, Umbra, kfzteile24, CutterPillar, HelloFresh Italia, foodpanda Philippines, foodpanda Pakistan, VOMOS and Blackline Concierge. Gmail send IDs are recorded on each prospect. No immediate delivery failures were found for these nine messages at the time of the check; this is not proof that recipients accepted or replied. CARiD was added as a prospect and an unaddressed Gmail draft was prepared because its official affiliate page provides an Impact application but only a general customer/business email, not a dedicated affiliate contact.",
+    "Edel & Stark update 2026-11-11: partner is not activating the Agent Agreement or enquiry tool at ZOVARO's current reach. Revisit only when ZOVARO can submit a concrete qualified rental enquiry. No image/brand permission or active tracking integration exists.",
+    "Floraïku outreach 2026-11-11 bounced with SMTP 550 5.4.1 recipient address rejected at hello@floraiku.com. Do not retry that address; find a verified alternative channel before further contact."
   ],
   "prospects": [
     {
       "id": "edel-stark",
       "name": "Edel & Stark",
-      "status": "responded",
+      "status": "contacted",
       "programType": "luxury-car-rental-affiliate",
       "territories": [
         "Europe",
@@ -37,10 +40,10 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await Agent Agreement, inquiry-tool code, approved vehicle photos/media permissions, and separate private-jet referral terms; review agreement before activation.",
-      "sourceChecked": "2026-11-06",
+      "nextAction": "Deferred by partner: do not request agreement or integration again until ZOVARO has a concrete qualified rental enquiry; no Agent Agreement, enquiry tool, feed or image permission currently granted.",
+      "sourceChecked": "2026-11-12",
       "contactedAt": "2026-11-06T08:51:57Z",
-      "contactEvidence": "Gmail sent thread 1a1b00e5da7ecd17",
+      "contactEvidence": "Gmail sent message 1a1b00e5da7ecd17",
       "response": {
         "receivedAt": "2026-11-06T10:07:28Z",
         "contactName": "Stephan Behrendt",
@@ -64,8 +67,11 @@
         "media": "Photos available on request; explicit image and brand-use permission still pending.",
         "fulfilment": "Customer contracts and pays Edel & Stark; Edel & Stark handles customer verification and fulfilment.",
         "followUpSentAt": "2026-11-07T09:25:27Z",
-        "followUpThreadId": "1a1b00e5da7ecd17"
-      }
+        "followUpThreadId": "1a1b00e5da7ecd17",
+        "latestUpdateAt": "2026-11-11T14:07:39Z",
+        "latestUpdate": "Partner declined to issue the Agent Agreement or enable the enquiry tool at ZOVARO's current reach. They invited ZOVARO to forward a concrete rental enquiry directly by email and revisit the partnership then. Vehicle availability/pricing remains quote-specific; no vehicle images or brand materials may be published without express approval."
+      },
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "carbirds",
@@ -551,15 +557,16 @@
     {
       "id": "vomos-affiliate",
       "name": "VOMOS",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "luxury-travel-referral",
       "territories": [
-        "International eligibility to confirm"
+        "International eligibility and service coverage to confirm"
       ],
-      "publicCommission": "Commission on qualifying referrals and completed bookings; rate not published",
+      "publicCommission": "Commission on qualifying completed bookings; rates and calculation not publicly specified and must be agreed.",
       "contact": {
         "applicationUrl": "https://vomos.com/become-an-affiliate/",
-        "sourceUrl": "https://vomos.com/become-an-affiliate/"
+        "sourceUrl": "https://vomos.com/become-an-affiliate/",
+        "email": "contact@vomos.com"
       },
       "integration": {
         "affiliateLink": "pending",
@@ -567,8 +574,11 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Request publisher eligibility, referral tracking, commission and payout conditions for private aviation, villas, yachts and luxury vehicles.",
-      "sourceChecked": "2026-11-11"
+      "nextAction": "Await publisher eligibility, service-specific commission, referral attribution, reporting, approved media and payout terms; manual approval required.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:41Z",
+      "contactEvidence": "Gmail sent message 1a1cd1efbb617a34",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "uber-eats-affiliate",
@@ -664,16 +674,17 @@
     {
       "id": "foodpanda-pakistan-affiliate",
       "name": "foodpanda Pakistan",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "food-delivery-affiliate",
       "territories": [
-        "Pakistan; city coverage and publisher eligibility subject to approval"
+        "Pakistan; publisher-country and traffic eligibility to confirm"
       ],
-      "publicCommission": "Up to 9% advertised; 7-day cookie; exact rate supplied after approval",
+      "publicCommission": "Up to 9% per successful order (official public page; exact rate disclosed after approval); 7-day cookie.",
       "contact": {
         "email": "affiliate@foodpanda.pk",
         "applicationUrl": "https://www.foodpanda.pk/contents/affiliates",
-        "sourceUrl": "https://www.foodpanda.pk/contents/affiliates"
+        "sourceUrl": "https://www.foodpanda.pk/contents/affiliates",
+        "network": "Partnerize"
       },
       "integration": {
         "affiliateLink": "pending",
@@ -682,23 +693,27 @@
         "conversionReporting": "pending",
         "imagePermission": "pending"
       },
-      "nextAction": "Request international publisher eligibility, order-level attribution, eligible restaurant/grocery verticals and deep-link or feed access.",
-      "sourceChecked": "2026-11-11",
-      "sourceEvidence": "Official foodpanda Pakistan affiliate page."
+      "nextAction": "Await confirmation of Italy-based publisher eligibility, exact commission, approved traffic territories, tracking and payout terms; do not publish before approval.",
+      "sourceChecked": "2026-11-12",
+      "sourceEvidence": "Official foodpanda Pakistan affiliate page.",
+      "contactedAt": "2026-11-12T00:18:40Z",
+      "contactEvidence": "Gmail sent message 1a1cd1ef5bee577e",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "foodpanda-philippines-affiliate",
       "name": "foodpanda Philippines",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "food-delivery-affiliate",
       "territories": [
-        "Philippines; city coverage and publisher eligibility subject to approval"
+        "Philippines; publisher-country and traffic eligibility to confirm"
       ],
-      "publicCommission": "Up to 7% advertised; 7-day cookie; exact rate supplied after approval",
+      "publicCommission": "Up to 7% per successful order (official public page; exact rate disclosed after approval); 7-day cookie.",
       "contact": {
         "email": "affiliate@foodpanda.ph",
         "applicationUrl": "https://www.foodpanda.ph/contents/affiliates",
-        "sourceUrl": "https://www.foodpanda.ph/contents/affiliates"
+        "sourceUrl": "https://www.foodpanda.ph/contents/affiliates",
+        "network": "Partnerize"
       },
       "integration": {
         "affiliateLink": "pending",
@@ -707,9 +722,12 @@
         "conversionReporting": "pending",
         "imagePermission": "pending"
       },
-      "nextAction": "Request international publisher eligibility, order-level attribution, eligible restaurant/grocery verticals and deep-link or feed access.",
-      "sourceChecked": "2026-11-11",
-      "sourceEvidence": "Official foodpanda Philippines affiliate page."
+      "nextAction": "Await confirmation of Italy-based publisher eligibility, exact commission, approved traffic territories, tracking and payout terms; do not publish before approval.",
+      "sourceChecked": "2026-11-12",
+      "sourceEvidence": "Official foodpanda Philippines affiliate page.",
+      "contactedAt": "2026-11-12T00:18:38Z",
+      "contactEvidence": "Gmail sent message 1a1cd1eef25a3dae",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "instacart-affiliate",
@@ -1436,11 +1454,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Confirm whether international publisher applications are accepted, commission, cookie, tracking, feed/catalogue, payout terms and written image/brand permissions.",
+      "nextAction": "Do not retry hello@floraiku.com: Gmail received SMTP 550 5.4.1 Recipient address rejected. Find a verified alternative partnerships contact or application route before any further contact.",
       "sourceChecked": "2026-11-11",
       "contactedAt": "2026-11-11T23:35:00Z",
       "contactEvidence": "Gmail sent thread 1a1ccf902fc991c3",
-      "notes": "Official FAQ directs prospective affiliate partners to customer service; no commission or attribution terms published on that page."
+      "notes": "Official FAQ directs prospective affiliate partners to customer service; no commission or attribution terms published on that page.",
+      "emailDeliveryStatus": "bounced_550_5_4_1"
     },
     {
       "id": "mein-schoener-garten-affiliate",
@@ -1466,6 +1485,184 @@
       "contactedAt": "2026-11-11T23:35:00Z",
       "contactEvidence": "Gmail sent thread 1a1ccf90aec44de7",
       "notes": "Official programme page advertises up to 12%, deeplink generator and product data feed; territory stated as Germany."
+    },
+    {
+      "id": "safari-com-affiliate",
+      "name": "Safari.com",
+      "status": "contacted",
+      "programType": "luxury-safari-affiliate",
+      "territories": [
+        "Luxury safari destinations in Southern and East Africa; international publisher eligibility to confirm"
+      ],
+      "publicCommission": "15% / 17.5% / 22.5% of gross profit on referred bookings, tiered by generated gross profit; commission becomes due after guests complete travel (official published terms).",
+      "contact": {
+        "email": "affiliates@safari.com",
+        "sourceUrl": "https://www.safari.com/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending approval; official page describes code-based tracked links and a private live dashboard",
+        "inventoryFeed": "pending; destination/lodge catalogue API to clarify",
+        "imagePermission": "affiliate Post Studio/image library described; reuse permissions to confirm",
+        "conversionReporting": "dashboard described for clicks, leads, open bookings, completed/lost bookings"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:30Z",
+      "contactEvidence": "Gmail sent message 1a1cd1ecdb805a5a",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await confirmation of Italy-based publisher eligibility, final attribution rules, payout timing/threshold/currency and approved asset/API access."
+    },
+    {
+      "id": "umbra-affiliate",
+      "name": "Umbra",
+      "status": "contacted",
+      "programType": "home-living-affiliate",
+      "territories": [
+        "US, Canada, UK, EU and Australia storefronts are publicly linked; publisher and visitor-country eligibility to confirm"
+      ],
+      "publicCommission": "Up to 5% on qualifying sales; 30-day cookie (official public programme page).",
+      "contact": {
+        "email": "affiliates@umbra.com",
+        "sourceUrl": "https://www.umbra.com/pages/affiliate-program",
+        "network": "Impact"
+      },
+      "integration": {
+        "affiliateLink": "pending Impact approval",
+        "inventoryFeed": "not stated; requested",
+        "imagePermission": "pending programme approval and brand terms",
+        "conversionReporting": "Impact programme; account access pending"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:32Z",
+      "contactEvidence": "Gmail sent message 1a1cd1ed5d00586d",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await Italy/international publisher eligibility, approved catalogue/feed, asset permissions, commission exclusions and payout terms."
+    },
+    {
+      "id": "kfzteile24-affiliate",
+      "name": "kfzteile24",
+      "status": "contacted",
+      "programType": "automotive-parts-affiliate",
+      "territories": [
+        "Germany storefront; shipping and publisher eligibility for Italy to confirm"
+      ],
+      "publicCommission": "6–8% new customers; 4–6% existing customers; 30-day cookie (official public page).",
+      "contact": {
+        "email": "partner@kfzteile24.de",
+        "sourceUrl": "https://www.kfzteile24.de/partnerprogramm",
+        "network": "Impact or Awin; requested Impact route"
+      },
+      "integration": {
+        "affiliateLink": "pending Impact approval",
+        "inventoryFeed": "not stated; requested",
+        "imagePermission": "pending programme terms",
+        "conversionReporting": "network reporting after approval"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:33Z",
+      "contactEvidence": "Gmail sent message 1a1cd1eda0187436",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await confirmation that Impact is available without publisher fees, Italy eligibility, shipping coverage, catalogue/feed and payout terms; avoid Awin if fees apply."
+    },
+    {
+      "id": "cutterpillar-affiliate",
+      "name": "CutterPillar",
+      "status": "contacted",
+      "programType": "arts-crafts-tools-affiliate",
+      "territories": [
+        "International availability and publisher-country eligibility to confirm"
+      ],
+      "publicCommission": "Up to 15% per qualifying sale; 30-day tracking; commissions described as paid in the first week of the month after the 30-day period.",
+      "contact": {
+        "email": "affiliates@cutterpillar.com",
+        "sourceUrl": "https://cutterpillar.co/pages/cutter-affilate-program",
+        "network": "In-house affiliate portal"
+      },
+      "integration": {
+        "affiliateLink": "pending approval",
+        "inventoryFeed": "not stated; requested",
+        "imagePermission": "pending brand approval",
+        "conversionReporting": "personal affiliate dashboard described; access pending"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:35Z",
+      "contactEvidence": "Gmail sent message 1a1cd1ee1ea865ba",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await international eligibility, final rate, approved product catalogue, media permissions, payout currency/threshold and bank-transfer availability."
+    },
+    {
+      "id": "hellofresh-italy-affiliate",
+      "name": "HelloFresh Italia",
+      "status": "contacted",
+      "programType": "meal-kit-food-affiliate",
+      "territories": [
+        "Italy programme; international publisher and traffic eligibility to confirm"
+      ],
+      "publicCommission": "Fixed commission per qualifying sale; amount not published on the Italian page; 30-day cookie. Official page says Impact registration is free and provides creative assets.",
+      "contact": {
+        "email": "hellofresh-it@accelerationpartners.com",
+        "sourceUrl": "https://www.hellofresh.it/about/affiliazione",
+        "network": "Impact / Acceleration Partners"
+      },
+      "integration": {
+        "affiliateLink": "pending Impact approval",
+        "inventoryFeed": "not stated; offer/box catalogue requested",
+        "imagePermission": "selection of images described; terms to confirm",
+        "conversionReporting": "Impact reporting after approval"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:37Z",
+      "contactEvidence": "Gmail sent message 1a1cd1ee7a575001",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await exact fixed commission, Italy publisher acceptance, qualifying customer rules, tracking and payout terms."
+    },
+    {
+      "id": "blackline-concierge-affiliate",
+      "name": "Blackline Concierge",
+      "status": "contacted",
+      "programType": "miami-luxury-concierge-referral",
+      "territories": [
+        "Miami and South Florida service area; international publisher eligibility to confirm"
+      ],
+      "publicCommission": "Affiliate reward not publicly specified; negotiated directly. Public programme offers customers a 15% discount code, which is not the affiliate commission.",
+      "contact": {
+        "email": "Blackline235@gmail.com",
+        "sourceUrl": "https://www.blacklineconcierge.group/affiliate-program"
+      },
+      "integration": {
+        "affiliateLink": "personal referral code after manual approval",
+        "inventoryFeed": "not stated; service catalogue on website",
+        "imagePermission": "pending express permission",
+        "conversionReporting": "manual referral/booking attribution to confirm"
+      },
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-12T00:18:43Z",
+      "contactEvidence": "Gmail sent message 1a1cd1f006c2e48e",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await written confirmation of ZOVARO eligibility, affiliate compensation (separate from customer discount), code attribution, reporting and media permissions."
+    },
+    {
+      "id": "carid-affiliate",
+      "name": "CARiD",
+      "status": "prospect",
+      "programType": "automotive-parts-affiliate",
+      "territories": [
+        "United States storefront; international publisher and customer eligibility to confirm"
+      ],
+      "publicCommission": "Commission on qualifying sales; rate and cookie not published on reviewed official affiliate page.",
+      "contact": {
+        "applicationUrl": "https://www.carid.com/affiliate.html",
+        "network": "Impact",
+        "publicGeneralEmail": "info@carid.com"
+      },
+      "integration": {
+        "affiliateLink": "pending Impact application",
+        "inventoryFeed": "not stated; catalogue of 20M+ products described",
+        "imagePermission": "promotional assets available to approved affiliates; terms to confirm",
+        "conversionReporting": "Impact programme reporting after approval"
+      },
+      "sourceChecked": "2026-11-12",
+      "draftEvidence": "Gmail draft r2484316135930342885",
+      "nextAction": "Review and route the saved draft to the affiliate team if a partner-specific contact is found. General info@carid.com was not emailed because it is not identified as an affiliate contact."
     }
   ]
 }
