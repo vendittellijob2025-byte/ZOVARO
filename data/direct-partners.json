@@ -17,7 +17,11 @@
     "Additional CJ welcome/acceptance emails reviewed 2026-11-06 to 2026-11-09: ISEE Hair/BGMgirl/WigFever, KSP Performance, Fanttik, Chow Sang Sang Jewellery, OEDRO, Aurzen, AOMEI, Dream Pairs/Bruno Marc/Nortiv 8, Soundcore US, UNice Hair, Rexing, eCosmetics, Abelssoft, 24-7PressRelease and FragranceShop.com. Recorded as approved_on_network only. This is network/program acceptance, not proof that products are already published on ZOVARO; verify valid CJ tracking links, country restrictions, datafeeds, approved assets and payout terms before live promotion.",
     "Partner outreach run 2026-11-12: sent nine individual partnership enquiries to Safari.com, Umbra, kfzteile24, CutterPillar, HelloFresh Italia, foodpanda Philippines, foodpanda Pakistan, VOMOS and Blackline Concierge. Gmail send IDs are recorded on each prospect. No immediate delivery failures were found for these nine messages at the time of the check; this is not proof that recipients accepted or replied. CARiD was added as a prospect and an unaddressed Gmail draft was prepared because its official affiliate page provides an Impact application but only a general customer/business email, not a dedicated affiliate contact.",
     "Edel & Stark update 2026-11-11: partner is not activating the Agent Agreement or enquiry tool at ZOVARO's current reach. Revisit only when ZOVARO can submit a concrete qualified rental enquiry. No image/brand permission or active tracking integration exists.",
-    "Floraïku outreach 2026-11-11 bounced with SMTP 550 5.4.1 recipient address rejected at hello@floraiku.com. Do not retry that address; find a verified alternative channel before further contact."
+    "Floraïku outreach 2026-11-11 bounced with SMTP 550 5.4.1 recipient address rejected at hello@floraiku.com. Do not retry that address; find a verified alternative channel before further contact.",
+    "CJ approval update 2026-11-12: Allegro.pl welcome email dated 2026-11-09 confirms acceptance on CJ, 17% commission, 1-day cookie and a PPC ban (Google/Bing etc.). Added as approved_on_network only. Italy publisher eligibility, commission basis/exclusions, product feed, tracking links, permitted assets and payout terms remain unverified. Follow-up sent to the programme support contact.",
+    "CJ programme terms update 2026-11-11: Creality emails announce pending terms labelled 5%-10% with activation dates 12-Nov and 14-Nov-2026. The visible summary lists 5% website-purchase commission for CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia; no 10% basis is visible. Review the full CJAM schedule before representing any higher rate.",
+    "CJ promotions 2026-11-11: AOMEI Black Friday bundle advertised at 80% off from 11-Nov to 11-Dec-2026, with campaign link ID 17385381 and updated assets in CJ. Dream Pairs advertised a members-only 25% sale for 12-Nov to 19-Nov-2026. These are advertiser promotions, not proof that ZOVARO has generated a valid deep link or that product content is already live.",
+    "CJ Commission Reconciliation workflow run 5 completed successfully on 2026-11-11, including the import step into private ZOVARO storage. Workflow success alone does not prove a sale, commission amount or payout."
   ],
   "prospects": [
     {
@@ -921,7 +925,9 @@
         "emailSubject": "Welcome to the Creality Affiliate Program",
         "threadId": "1a1c35ce7fa6d4c8"
       },
-      "nextAction": "Obtain feed, approved images/banners and country-specific shipping/stock data; respect SEM restrictions."
+      "nextAction": "Verify the complete CJAM program-terms schedule before relying on the new 5%-10% label. CJ email summaries show 5% website-purchase commission for CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia; pending terms are shown as activating 12-Nov-2026 and again 14-Nov-2026. The visible summary does not substantiate a 10% rate.",
+      "termsUpdateReceivedAt": "2026-11-11",
+      "termsUpdate": "CJ transactional emails for advertiser 8023201 show active Creality-5% terms ending 12-Nov-2026 08:00 PST / 14-Nov-2026 08:00 PST and pending Creality-5%-10% terms. Visible situational commissioning lists 5% website purchase across CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia. Full schedule must be reviewed in CJAM; do not advertise 10% as confirmed."
     },
     {
       "id": "aliexpress",
@@ -1180,7 +1186,16 @@
         "date": "2026-11-09",
         "threadId": "1a1be4d7b9cd4ad1"
       },
-      "nextAction": "Check commission, cookie, software products, licence terms and approved promotional materials."
+      "nextAction": "Check commission, cookie, software products, licence terms and approved promotional materials.",
+      "latestPromotion": {
+        "name": "2026 Black Friday bundle",
+        "publicOffer": "80% off bundle",
+        "period": "2026-11-11 to 2026-12-11",
+        "cjCampaignLinkId": "17385381",
+        "trackingLinkVerified": false,
+        "assets": "Latest promotional assets stated available in CJ advertiser library; permissions/creative review still required",
+        "sourceEmailThread": "1a1c957f1834eed9"
+      }
     },
     {
       "id": "dream-pairs-bruno-marc-nortiv8",
@@ -1210,7 +1225,16 @@
         "date": "2026-11-09",
         "threadId": "1a1bde8b290b64a9"
       },
-      "nextAction": "Verify exact market coverage for each brand, feed and approved creatives."
+      "nextAction": "Verify exact market coverage for each brand, feed and approved creatives.",
+      "latestPromotion": {
+        "name": "Dream Pairs Pre-Holiday Sale",
+        "publicOffer": "25% off, members-only",
+        "period": "2026-11-12 to 2026-11-19",
+        "landingPage": "https://www.dreampairs.com/promotion/sale-shoes",
+        "assets": "Banners and copy stated available in CJ asset library",
+        "trackingLinkVerified": false,
+        "sourceEmailThread": "1a1be6dc4f9c570e"
+      }
     },
     {
       "id": "soundcore-us",
@@ -1663,6 +1687,34 @@
       "sourceChecked": "2026-11-12",
       "draftEvidence": "Gmail draft r2484316135930342885",
       "nextAction": "Review and route the saved draft to the affiliate team if a partner-specific contact is found. General info@carid.com was not emailed because it is not identified as an affiliate contact."
+    },
+    {
+      "id": "allegro-pl-affiliate",
+      "name": "Allegro.pl",
+      "status": "approved_on_network",
+      "programType": "polish-marketplace-affiliate",
+      "territories": [
+        "Poland storefront; Italy-based publisher eligibility and non-Polish audience eligibility to confirm"
+      ],
+      "publicCommission": "17% per CJ welcome email; 1-day cookie; PPC advertising (Google, Bing etc.) prohibited. Commission basis/exclusions and market coverage require CJAM terms verification.",
+      "contact": {
+        "email": "podpora+allegro.pl@vivnetworks.com",
+        "network": "CJ Affiliate / VivNetworks",
+        "sourceUrl": "Gmail CJ welcome email thread 1a1bf2dab2be3ed4"
+      },
+      "integration": {
+        "affiliateLink": "pending; no ZOVARO tracking link verified",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending CJ programme/advertiser media terms",
+        "conversionReporting": "CJ reporting access pending verification"
+      },
+      "sourceChecked": "2026-11-12",
+      "approvedAt": "2026-11-09T07:20:02Z",
+      "approvalEvidence": "CJ welcome email thread 1a1bf2dab2be3ed4",
+      "contactedAt": "2026-11-12T00:24:14Z",
+      "contactEvidence": "Gmail sent message 1a1cd240e8e60a0a",
+      "emailDeliveryStatus": "sent",
+      "nextAction": "Await VivNetworks/CJ confirmation of Italy publisher eligibility, exact commission basis/exclusions, approved traffic sources, product feed/deep links, permitted assets and payout terms. Never use PPC traffic while the stated restriction remains in force."
     }
   ]
 }
