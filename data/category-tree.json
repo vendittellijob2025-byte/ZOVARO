@@ -1629,10 +1629,10 @@
       ]
     },
     {
-      "name": "SOLO PER LA CLASSE RICCA",
+      "name": "Luxury & Prestige",
       "children": [
         {
-          "name": "Auto di lusso e hypercar",
+          "name": "Luxury Cars & Hypercars",
           "children": [
             "Ferrari",
             "Lamborghini",
@@ -1643,35 +1643,35 @@
             "McLaren",
             "Porsche",
             "Mercedes-Maybach",
-            "Auto di lusso nuove",
-            "Auto di lusso usate",
-            "Auto da collezione"
+            "New Luxury Cars",
+            "Pre-Owned Luxury Cars",
+            "Collector Cars"
           ]
         },
         {
-          "name": "Elicotteri e aviazione privata",
+          "name": "Private Helicopters & Aviation",
           "children": [
-            "Elicotteri privati",
-            "Jet privati",
-            "Business jet",
-            "Aerei executive",
-            "Charter privati",
-            "Vendita aeromobili"
+            "Private Helicopters",
+            "Private Jets",
+            "Business Jets",
+            "Executive Aircraft",
+            "Private Charters",
+            "Aircraft for Sale"
           ]
         },
         {
-          "name": "Yacht e imbarcazioni",
+          "name": "Yachts & Boats",
           "children": [
-            "Yacht di lusso",
-            "Superyacht",
-            "Megayacht",
-            "Barche esclusive",
-            "Charter yacht",
-            "Vendita yacht"
+            "Luxury Yachts",
+            "Superyachts",
+            "Megayachts",
+            "Exclusive Boats",
+            "Yacht Charters",
+            "Yachts for Sale"
           ]
         },
         {
-          "name": "Orologi e gioielli di lusso",
+          "name": "Luxury Watches & Jewelry",
           "children": [
             "Rolex",
             "Patek Philippe",
@@ -1679,114 +1679,114 @@
             "Richard Mille",
             "Vacheron Constantin",
             "Cartier",
-            "Alta gioielleria",
-            "Orologi da collezione"
+            "High Jewelry",
+            "Collectible Watches"
           ]
         },
         {
-          "name": "Arte e collezionismo",
+          "name": "Fine Art & Collectibles",
           "children": [
-            "Dipinti di alta gamma",
-            "Sculture",
-            "Opere d'arte",
-            "Arte contemporanea",
-            "Antiquariato",
-            "Collezioni private",
-            "Oggetti rari"
+            "Fine Art Paintings",
+            "Sculptures",
+            "Artworks",
+            "Contemporary Art",
+            "Antiques",
+            "Private Collections",
+            "Rare Objects"
           ]
         },
         {
-          "name": "Ville e immobili esclusivi",
+          "name": "Exclusive Villas & Real Estate",
           "children": [
-            "Ville di lusso",
-            "Attici e penthouse",
-            "Residenze private",
-            "Tenute e proprietà",
-            "Immobili fronte mare"
+            "Luxury Villas",
+            "Penthouses",
+            "Private Residences",
+            "Estates & Country Properties",
+            "Waterfront Properties"
           ]
         },
         {
-          "name": "Castelli e dimore storiche",
+          "name": "Castles & Historic Estates",
           "children": [
-            "Castelli",
-            "Palazzi storici",
-            "Manieri",
-            "Tenute nobiliari",
-            "Dimore storiche"
+            "Castles",
+            "Historic Palaces",
+            "Manor Houses",
+            "Noble Estates",
+            "Historic Residences"
           ]
         },
         {
-          "name": "Isole private",
+          "name": "Private Islands",
           "children": [
-            "Isole in vendita",
-            "Isole private in affitto",
-            "Arcipelaghi",
-            "Resort privati"
+            "Private Islands for Sale",
+            "Private Islands for Rent",
+            "Archipelagos",
+            "Private Resorts"
           ]
         },
         {
-          "name": "Esperienze e servizi ultra-lusso",
+          "name": "Ultra-Luxury Experiences & Services",
           "children": [
-            "Concierge privato",
-            "Charter jet",
-            "Charter elicotteri",
-            "Esperienze VIP",
-            "Viaggi esclusivi",
-            "Servizi lifestyle"
+            "Private Concierge",
+            "Private Jet Charter",
+            "Helicopter Charter",
+            "VIP Experiences",
+            "Exclusive Travel",
+            "Luxury Lifestyle Services"
           ]
         },
         {
-          "name": "Noleggio di auto e mobilità di lusso",
+          "name": "Luxury Car & Mobility Rentals",
           "children": [
-            "Supercar e hypercar a noleggio",
-            "Auto classiche e da collezione",
-            "SUV e berline con chauffeur",
-            "Auto di lusso a lungo termine"
+            "Supercar & Hypercar Rentals",
+            "Classic & Collector Car Rentals",
+            "Chauffeur-Driven SUVs & Sedans",
+            "Long-Term Luxury Car Rentals"
           ]
         },
         {
-          "name": "Noleggio moda e accessori firmati",
+          "name": "Designer Fashion & Accessories Rental",
           "children": [
-            "Abiti haute couture e da cerimonia",
-            "Borse e accessori firmati",
-            "Moda e accessori per eventi",
-            "Guardaroba designer in abbonamento"
+            "Haute Couture & Formalwear",
+            "Designer Bags & Accessories",
+            "Event Fashion & Accessories",
+            "Designer Wardrobe Subscriptions"
           ]
         },
         {
-          "name": "Noleggio orologi e gioielli",
+          "name": "Luxury Watches & Jewelry Rental",
           "children": [
-            "Orologi di alta gamma a noleggio",
-            "Gioielli e alta gioielleria a noleggio",
-            "Accessori preziosi per eventi"
+            "Luxury Watch Rentals",
+            "Fine Jewelry Rentals",
+            "Fine Accessories for Events"
           ]
         },
         {
-          "name": "Charter nautico e aeronautico",
+          "name": "Yacht & Aviation Charter",
           "children": [
-            "Yacht e superyacht con equipaggio",
-            "Barche e catamarani",
-            "Elicotteri con pilota",
-            "Jet privati e business aviation",
-            "Aerei executive e charter"
+            "Crewed Yachts & Superyachts",
+            "Boats & Catamarans",
+            "Piloted Helicopters",
+            "Private Jets & Business Aviation",
+            "Executive Aircraft & Charters"
           ]
         },
         {
-          "name": "Soggiorni e proprietà di lusso",
+          "name": "Luxury Stays & Property Rentals",
           "children": [
-            "Ville e chalet in affitto",
-            "Castelli e dimore storiche in affitto",
-            "Isole e resort privati",
-            "Penthouse e residenze esclusive"
+            "Luxury Villas & Chalets for Rent",
+            "Castles & Historic Homes for Rent",
+            "Private Islands & Resorts",
+            "Penthouses & Exclusive Residences"
           ]
         },
         {
-          "name": "Noleggio arte e beni da collezione",
+          "name": "Art & Collectibles Rental",
           "children": [
-            "Arte e sculture in leasing",
-            "Auto da esposizione ed eventi",
-            "Arredi e oggetti di design",
-            "Collezionabili per esposizioni"
+            "Art & Sculpture Leasing",
+            "Display & Event Cars",
+            "Designer Furniture & Objects",
+            "Collectibles for Exhibitions"
           ]
         }
       ]
