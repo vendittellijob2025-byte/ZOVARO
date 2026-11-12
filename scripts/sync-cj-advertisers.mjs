@@ -614,8 +614,8 @@ function compactCatalogProduct(product) {
 
 // Publish a balanced storefront selection rather than forcing every
 // visitor to download the entire 50k+ affiliate inventory. Each category is
-// capped at 1,200 products and sampled round-robin across advertisers.
-function selectStorefrontProducts(products, perCategoryLimit = 1200) {
+// capped at 1,800 products and sampled round-robin across advertisers.
+function selectStorefrontProducts(products, perCategoryLimit = 1800) {
   const categories = new Map();
 
   for (const product of products) {
@@ -714,7 +714,7 @@ const finalCategoryCounts = compactProducts.reduce((counts, product) => {
   counts[category] = (counts[category] || 0) + 1;
   return counts;
 }, {});
-const overLimitCategories = Object.entries(finalCategoryCounts).filter(([, count]) => count > 1200);
+const overLimitCategories = Object.entries(finalCategoryCounts).filter(([, count]) => count > 1800);
 console.log("Final storefront category counts: " + JSON.stringify(finalCategoryCounts));
 if (overLimitCategories.length) {
   throw new Error("Storefront category cap exceeded: " + JSON.stringify(overLimitCategories));
@@ -759,7 +759,7 @@ const updatedCatalog = {
   rowsReceived: received,
   productCount: compactProducts.length,
   inventoryProductCount: finalProducts.length,
-  selectionPolicy: "up to 1200 products per category, balanced across advertisers",
+  selectionPolicy: "up to 1800 products per category, balanced across advertisers",
   products: compactProducts,
   sync: {
     ...(catalog.sync || {}),
