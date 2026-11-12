@@ -5,7 +5,7 @@ const $$ = s => [...document.querySelectorAll(s)];
 const PRODUCT_PAGE_SIZE = 36;
 let activeResults = [];
 let activeResultsPage = 1;
-let activeResultsTitle = "Trending Products";
+let activeResultsTitle = "Popular Discoveries";
 let activeResultsMeta = "";
 
 const esc = s =>
@@ -613,7 +613,7 @@ function renderResultPage(append = false) {
 
 function showResults(
   items,
-  title = "Trending Products",
+  title = "Popular Discoveries",
   meta = ""
 ) {
   activeResults = Array.isArray(items) ? items : [];
@@ -641,7 +641,7 @@ function render() {
 
   showResults(
     PRODUCTS.filter(p => p.type === "trending"),
-    "Trending Products"
+    "Popular Discoveries"
   );
 
   const deals = PRODUCTS.filter(p => p.discount);
@@ -807,7 +807,7 @@ $("#searchForm").addEventListener(
             p.type ===
             "trending"
         ),
-        "Trending Products"
+        "Popular Discoveries"
       );
 
       return;
