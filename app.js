@@ -341,6 +341,7 @@ const CATEGORY_PHOTOS = {
   fashion: "photo-1483985988355-763728e1935b",
   "food & grocery": "photo-1542838132-92c53300491e",
   "food delivery": "photo-1513104890138-7c749659a591",
+  "food delivery & restaurant orders": "photo-1513104890138-7c749659a591",
   gaming: "photo-1593305841991-05c297ba4575",
   garden: "photo-1416879595882-3373a0480b5b",
   "health & wellness": "photo-1505751172876-fa1923c5c528",
