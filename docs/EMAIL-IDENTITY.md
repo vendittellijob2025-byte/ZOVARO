@@ -40,7 +40,7 @@ Before any address is used:
 5. Confirm the From name and actual From address shown to an external recipient.
 6. Update website contact details, signatures, partner records and future outreach templates only after successful verification.
 
-The current `zovaro.vercel.app` address is a website subdomain, not an email domain. The domain `vendittelligames.com` is not to be substituted for a ZOVARO-branded sender unless the user explicitly chooses that branding.
+A public-domain check found `zovaro.com` is already registered and used by an unrelated audit/compliance consultancy; it is not a ZOVARO-owned domain and must not be used.\n\nThe current `zovaro.vercel.app` address is a website subdomain, not an email domain. The domain `vendittelligames.com` is not to be substituted for a ZOVARO-branded sender unless the user explicitly chooses that branding.
 
 ## Operating rule
 
