@@ -11,6 +11,9 @@ const MAX_OFFSET_RESULTS = 10000;
 // Bound very large network feeds so one marketplace cannot block every CJ sync.
 // The storefront samples up to 1,200 products per category, so importing millions is wasteful.
 const MAX_PRODUCTS_PER_ADVERTISER = 50000;
+// These two joined advertisers previously returned large feeds with no usable CJ click URLs.
+// Recheck a tiny shoppingProducts sample each run; skip bulk downloads only while the sample remains untracked.
+const KNOWN_NO_TRACKING_ADVERTISERS = new Set(["7819130", "5755636"]);
 const ADVERTISER_PAGE_SIZE = 100;
 const CATALOG_PATH = "data/catalog.json";
 
@@ -287,6 +290,7 @@ async function diagnoseShoppingProducts(advertiser) {
   try {
     const result = (await graphql(query)).shoppingProducts;
     const samples = Array.isArray(result?.resultList) ? result.resultList : [];
+    const hasValidClickUrl = samples.some(product => Boolean(cleanUrl(product.linkCode?.clickUrl)));
     console.log("CJ shoppingProducts diagnostic: " + JSON.stringify({
       advertiserId: advertiser.id,
       advertiserName: advertiser.name,
@@ -303,12 +307,14 @@ async function diagnoseShoppingProducts(advertiser) {
         hasClickUrl: Boolean(cleanUrl(product.linkCode?.clickUrl))
       }))
     }));
+    return hasValidClickUrl;
   } catch (error) {
     console.log("CJ shoppingProducts diagnostic failed: " + JSON.stringify({
       advertiserId: advertiser.id,
       advertiserName: advertiser.name,
       error: String(error.message || error).slice(0, 500)
     }));
+    return null;
   }
 }
 
@@ -464,6 +470,18 @@ for (const advertiserId of eligibleFeedAdvertisers) {
   if (!advertiser) continue;
 
   const diagnostic = advertiserDiagnostics.get(advertiserId);
+  if (KNOWN_NO_TRACKING_ADVERTISERS.has(advertiserId)) {
+    const sampleHasTracking = await diagnoseShoppingProducts(advertiser);
+    if (sampleHasTracking === false) {
+      diagnostic.status = "feed_without_valid_tracking";
+      diagnostic.syncError = "Bulk feed skipped because CJ's current sample contains no valid affiliate click URL; this is rechecked on every sync.";
+      console.log("Skipping bulk CJ feed without valid tracking URL: " + JSON.stringify({
+        advertiserId,
+        advertiserName: advertiser.name
+      }));
+      continue;
+    }
+  }
   let products;
   try {
     products = await getProductsForAdvertiser(advertiser);
