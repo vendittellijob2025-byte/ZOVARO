@@ -8,6 +8,9 @@ const COMPANY_ID = "8068799";
 const PUBLISHER_ID = "101881140";
 const PAGE_SIZE = 1000;
 const MAX_OFFSET_RESULTS = 10000;
+// Bound very large network feeds so one marketplace cannot block every CJ sync.
+// The storefront samples up to 1,200 products per category, so importing millions is wasteful.
+const MAX_PRODUCTS_PER_ADVERTISER = 50000;
 const ADVERTISER_PAGE_SIZE = 100;
 const CATALOG_PATH = "data/catalog.json";
 
@@ -198,6 +201,11 @@ async function getProductsBeyondTenThousand(advertiser, expectedTotal) {
     all.push(...pageProducts);
     console.log("CJ advertiser " + advertiser.id + ": token page " + pageNumber + ", received " + pageProducts.length + "; accumulated " + all.length + " of " + expectedTotal + ".");
 
+    if (all.length >= MAX_PRODUCTS_PER_ADVERTISER && all.length < expectedTotal) {
+      console.log("CJ advertiser " + advertiser.id + " reached the per-advertiser import cap of " + MAX_PRODUCTS_PER_ADVERTISER + "; continuing with other joined advertisers.");
+      break;
+    }
+
     if (all.length > expectedTotal) {
       throw new Error("CJ token pagination exceeded the advertised total for advertiser " + advertiser.id + "; existing catalog left untouched.");
     }
@@ -215,7 +223,7 @@ async function getProductsBeyondTenThousand(advertiser, expectedTotal) {
     }
   }
 
-  if (all.length !== expectedTotal) {
+  if (all.length !== expectedTotal && all.length < MAX_PRODUCTS_PER_ADVERTISER) {
     throw new Error("CJ token pagination incomplete for advertiser " + advertiser.id + ": received " + all.length + " of " + expectedTotal + "; existing catalog left untouched.");
   }
   return all;
@@ -470,7 +478,10 @@ for (const advertiserId of eligibleFeedAdvertisers) {
     continue;
   }
 
-  diagnostic.status = "synced";
+  diagnostic.status = products.length >= MAX_PRODUCTS_PER_ADVERTISER
+    ? "synced_partial_capped"
+    : "synced";
+  diagnostic.importCap = MAX_PRODUCTS_PER_ADVERTISER;
   if (products.length && products.every(product => !cleanUrl(product.linkCode?.clickUrl))) {
     await diagnoseShoppingProducts(advertiser);
   }
