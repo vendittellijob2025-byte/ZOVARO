@@ -69,6 +69,11 @@ for (const product of catalog.products) {
     if (invalidSubcategoryExamples.length < 25) invalidSubcategoryExamples.push({ id: product.id || "", title: product.title || "", category: actual, subcategory, rootExists, subcategoryValid });
   }
   const english = String(product.englishCategory || "");
+  const englishSubcategory = String(product.englishSubcategory || "");
+  if (englishSubcategory !== subcategory) {
+    invalidSubcategoryPaths++;
+    if (invalidSubcategoryExamples.length < 25) invalidSubcategoryExamples.push({ id: product.id || "", title: product.title || "", category: actual, subcategory, englishSubcategory, reason: "english_subcategory_mismatch" });
+  }
   checked++;
   distribution.set(acceptedCategory, (distribution.get(acceptedCategory) || 0) + 1);
   if (trustedVisualOverride) visualOverrides++;
