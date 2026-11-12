@@ -53,7 +53,7 @@ for (const product of catalog.products) {
   const acceptedCategory = trustedVisualOverride ? visual.detectedCategory : expected;
   const actual = String(product.category || "");
   const subcategory = String(product.subcategory || "");
-  const rootExists = taxonomyRoots.has(actual);
+  const rootExists = taxonomyRoots.has(actual) || actual === "Other";
   const subcategoryValid = !subcategory || subcategory === "Other" || (() => {
     const root = taxonomy.categories.find(item => item.name === actual);
     let nodes = Array.isArray(root?.children) ? root.children : [];
