@@ -14,6 +14,7 @@ on:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/reclassify-catalog-categories.mjs"
       - "lib/product-category.js"
+      - "lib/category-taxonomy.js"
       - "scripts/translate-to-english.mjs"
       - "app-cj-loader.js"
       - ".github/workflows/cj-products.yml"
