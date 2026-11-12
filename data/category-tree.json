@@ -3,6 +3,47 @@
   "sourceModel": "Global affiliate and referral marketplace taxonomy informed by Amazon marketplace category structures and Alibaba.com B2B coverage; adapted for ZOVARO product discovery, local services, and partner-tracked offers.",
   "categories": [
     {
+      "name": "Accessible & Adaptive Living",
+      "children": [
+        {
+          "name": "Mobility & Independence",
+          "children": [
+            "Mobility Scooters",
+            "Wheelchairs & Power Chairs",
+            "Stairlifts & Home Lifts",
+            "Walking & Transfer Aids"
+          ]
+        },
+        {
+          "name": "Accessible Home & Bathroom",
+          "children": [
+            "Accessible Bathroom Equipment",
+            "Kitchen Adaptations",
+            "Ramps & Threshold Solutions",
+            "Smart Home Accessibility"
+          ]
+        },
+        {
+          "name": "Vision, Hearing & Communication",
+          "children": [
+            "Assistive Listening Devices",
+            "Low-Vision Technology",
+            "Speech & Communication Aids",
+            "Accessible Computing"
+          ]
+        },
+        {
+          "name": "Ergonomics & Daily Living",
+          "children": [
+            "Adaptive Clothing",
+            "Ergonomic Furniture",
+            "Personal Care Aids",
+            "Adaptive Kitchen Tools"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Appliances",
       "children": [
         {
@@ -50,6 +91,40 @@
             "Electric Shavers",
             "Epilators",
             "Electric Toothbrushes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arts, Crafts & Sewing",
+      "children": [
+        {
+          "name": "Art Supplies",
+          "children": [
+            "Paints & Brushes",
+            "Drawing & Sketching",
+            "Canvases & Easels",
+            "Sculpting Materials"
+          ]
+        },
+        {
+          "name": "Crafts & Creative DIY",
+          "children": [
+            "Beads & Jewelry Making",
+            "Models & Miniatures",
+            "Resin & Molds",
+            "Paper Crafts",
+            "Candle & Soap Making"
+          ]
+        },
+        {
+          "name": "Sewing & Textiles",
+          "children": [
+            "Sewing Machines",
+            "Fabrics",
+            "Yarn & Knitting",
+            "Needles & Notions",
+            "Patterns"
           ]
         }
       ]
@@ -512,6 +587,38 @@
       ]
     },
     {
+      "name": "Business, Wholesale & Bulk Supply",
+      "children": [
+        {
+          "name": "Wholesale Products",
+          "children": [
+            "Bulk Consumer Goods",
+            "Wholesale Electronics",
+            "Wholesale Fashion",
+            "Wholesale Home & Garden"
+          ]
+        },
+        {
+          "name": "Packaging & Shipping Supplies",
+          "children": [
+            "Boxes & Mailers",
+            "Labels & Printers",
+            "Protective Packaging",
+            "Retail Bags"
+          ]
+        },
+        {
+          "name": "Retail & Hospitality Supplies",
+          "children": [
+            "Point of Sale Equipment",
+            "Shop Fixtures",
+            "Hospitality Supplies",
+            "Cleaning & Janitorial"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Electronics",
       "children": [
         {
@@ -596,6 +703,39 @@
             "Car Audio",
             "CarPlay & Android Auto",
             "Parking & Backup Cameras"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Energy, Solar & Electric Mobility",
+      "children": [
+        {
+          "name": "Solar & Renewable Energy",
+          "children": [
+            "Solar Panels",
+            "Inverters",
+            "Solar Batteries",
+            "Mounting Systems",
+            "Portable Solar Generators"
+          ]
+        },
+        {
+          "name": "Power Storage & Backup",
+          "children": [
+            "Power Stations",
+            "UPS Systems",
+            "Home Battery Storage",
+            "Portable Power Banks"
+          ]
+        },
+        {
+          "name": "Electric Mobility",
+          "children": [
+            "EV Chargers",
+            "Charging Cables",
+            "Charging Accessories",
+            "E-Bike Charging"
           ]
         }
       ]
@@ -1154,6 +1294,92 @@
       ]
     },
     {
+      "name": "Industrial & Scientific",
+      "children": [
+        {
+          "name": "Industrial Machinery",
+          "children": [
+            "Manufacturing Equipment",
+            "Packaging Machinery",
+            "Welding Equipment",
+            "Pumps & Compressors",
+            "Material Handling"
+          ]
+        },
+        {
+          "name": "Lab & Scientific Equipment",
+          "children": [
+            "Laboratory Instruments",
+            "Microscopes",
+            "Testing & Measurement",
+            "Lab Consumables"
+          ]
+        },
+        {
+          "name": "Commercial & Catering Equipment",
+          "children": [
+            "Professional Kitchen Equipment",
+            "Refrigeration for Business",
+            "Restaurant Supplies",
+            "Hotel Supplies"
+          ]
+        },
+        {
+          "name": "Workwear & PPE",
+          "children": [
+            "Protective Clothing",
+            "Safety Footwear",
+            "Helmets & Eye Protection",
+            "Respiratory Protection",
+            "Workplace Signage"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Musical Instruments & Studio",
+      "children": [
+        {
+          "name": "Instruments",
+          "children": [
+            "Guitars & Basses",
+            "Keyboards & Pianos",
+            "Drums & Percussion",
+            "Strings",
+            "Wind Instruments"
+          ]
+        },
+        {
+          "name": "Recording & Production",
+          "children": [
+            "Audio Interfaces",
+            "Studio Monitors",
+            "Mixers",
+            "MIDI Controllers",
+            "Recording Microphones"
+          ]
+        },
+        {
+          "name": "Live Sound & DJ",
+          "children": [
+            "PA Systems",
+            "DJ Controllers",
+            "Lighting Effects",
+            "Stage Equipment"
+          ]
+        },
+        {
+          "name": "Instrument Accessories",
+          "children": [
+            "Cases & Stands",
+            "Strings & Reeds",
+            "Tuners",
+            "Cables & Pedals"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Office & Technology",
       "children": [
         {
@@ -1244,6 +1470,160 @@
             "Food",
             "Bedding",
             "Accessories"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Real Estate",
+      "children": [
+        {
+          "name": "Residential Property for Sale",
+          "children": [
+            "Apartments & Condominiums",
+            "Houses & Villas",
+            "Luxury Penthouses",
+            "Country Houses & Estates",
+            "New Developments",
+            "Off-Market Residential Property"
+          ]
+        },
+        {
+          "name": "Residential Property for Rent",
+          "children": [
+            "Apartments for Rent",
+            "Houses & Villas for Rent",
+            "Holiday Homes & Short Stays",
+            "Serviced Apartments",
+            "Luxury Rentals"
+          ]
+        },
+        {
+          "name": "Commercial Property",
+          "children": [
+            "Offices & Coworking",
+            "Retail & Shopping Units",
+            "Hotels & Hospitality Properties",
+            "Industrial & Logistics Buildings",
+            "Commercial Property for Sale",
+            "Commercial Property for Lease"
+          ]
+        },
+        {
+          "name": "Land & Development",
+          "children": [
+            "Residential Land",
+            "Agricultural Land",
+            "Commercial Development Land",
+            "Building Plots"
+          ]
+        },
+        {
+          "name": "Special Properties",
+          "children": [
+            "Castles & Historic Estates",
+            "Private Islands",
+            "Farms & Vineyards",
+            "Resorts & Retreats"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Refurbished, Pre-Owned & Outlet",
+      "children": [
+        {
+          "name": "Certified Refurbished Electronics",
+          "children": [
+            "Refurbished Smartphones",
+            "Refurbished Computers",
+            "Refurbished Tablets",
+            "Refurbished Audio & Cameras"
+          ]
+        },
+        {
+          "name": "Pre-Owned Fashion & Luxury",
+          "children": [
+            "Pre-Owned Designer Bags",
+            "Pre-Owned Watches",
+            "Pre-Owned Jewelry",
+            "Vintage Fashion"
+          ]
+        },
+        {
+          "name": "Outlet & Clearance",
+          "children": [
+            "Last-Season Products",
+            "Open-Box Offers",
+            "Clearance Deals",
+            "Overstock"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Repair & Circular Economy",
+      "children": [
+        {
+          "name": "Repair Services",
+          "children": [
+            "Electronics & Phone Repair",
+            "Appliance Repair",
+            "Computer & IT Repair",
+            "Furniture & Upholstery Repair",
+            "Clothing & Shoe Repair"
+          ]
+        },
+        {
+          "name": "Parts & Components",
+          "children": [
+            "Replacement Parts",
+            "Repair Kits & Tools",
+            "Appliance Components",
+            "Electronics Components"
+          ]
+        },
+        {
+          "name": "Reuse & Reconditioning",
+          "children": [
+            "Certified Refurbished Goods",
+            "Reconditioned Equipment",
+            "Pre-Owned Premium Goods",
+            "Upcycled & Repaired Design"
+          ]
+        },
+        {
+          "name": "Rental & Sharing",
+          "children": [
+            "Tool & Equipment Rental",
+            "Electronics Rental",
+            "Home Appliance Rental",
+            "Reusable Event Equipment"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Security & Safety",
+      "children": [
+        {
+          "name": "Home & Business Security",
+          "children": [
+            "Alarm Systems",
+            "CCTV & Video Surveillance",
+            "Smart Locks",
+            "Access Control",
+            "Safes & Lockboxes"
+          ]
+        },
+        {
+          "name": "Personal & Workplace Safety",
+          "children": [
+            "First Aid Kits",
+            "Fire Safety Equipment",
+            "Protective Equipment",
+            "Emergency Lighting",
+            "Safety Sensors"
           ]
         }
       ]
@@ -1353,6 +1733,60 @@
             "Esperienze VIP",
             "Viaggi esclusivi",
             "Servizi lifestyle"
+          ]
+        },
+        {
+          "name": "Noleggio di auto e mobilità di lusso",
+          "children": [
+            "Supercar e hypercar a noleggio",
+            "Auto classiche e da collezione",
+            "SUV e berline con chauffeur",
+            "Auto di lusso a lungo termine"
+          ]
+        },
+        {
+          "name": "Noleggio moda e accessori firmati",
+          "children": [
+            "Abiti haute couture e da cerimonia",
+            "Borse e accessori firmati",
+            "Moda e accessori per eventi",
+            "Guardaroba designer in abbonamento"
+          ]
+        },
+        {
+          "name": "Noleggio orologi e gioielli",
+          "children": [
+            "Orologi di alta gamma a noleggio",
+            "Gioielli e alta gioielleria a noleggio",
+            "Accessori preziosi per eventi"
+          ]
+        },
+        {
+          "name": "Charter nautico e aeronautico",
+          "children": [
+            "Yacht e superyacht con equipaggio",
+            "Barche e catamarani",
+            "Elicotteri con pilota",
+            "Jet privati e business aviation",
+            "Aerei executive e charter"
+          ]
+        },
+        {
+          "name": "Soggiorni e proprietà di lusso",
+          "children": [
+            "Ville e chalet in affitto",
+            "Castelli e dimore storiche in affitto",
+            "Isole e resort privati",
+            "Penthouse e residenze esclusive"
+          ]
+        },
+        {
+          "name": "Noleggio arte e beni da collezione",
+          "children": [
+            "Arte e sculture in leasing",
+            "Auto da esposizione ed eventi",
+            "Arredi e oggetti di design",
+            "Collezionabili per esposizioni"
           ]
         }
       ]
@@ -2031,248 +2465,6 @@
             "TV Stands",
             "Cables & Connectivity",
             "Remote Controls"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Industrial & Scientific",
-      "children": [
-        {
-          "name": "Industrial Machinery",
-          "children": [
-            "Manufacturing Equipment",
-            "Packaging Machinery",
-            "Welding Equipment",
-            "Pumps & Compressors",
-            "Material Handling"
-          ]
-        },
-        {
-          "name": "Lab & Scientific Equipment",
-          "children": [
-            "Laboratory Instruments",
-            "Microscopes",
-            "Testing & Measurement",
-            "Lab Consumables"
-          ]
-        },
-        {
-          "name": "Commercial & Catering Equipment",
-          "children": [
-            "Professional Kitchen Equipment",
-            "Refrigeration for Business",
-            "Restaurant Supplies",
-            "Hotel Supplies"
-          ]
-        },
-        {
-          "name": "Workwear & PPE",
-          "children": [
-            "Protective Clothing",
-            "Safety Footwear",
-            "Helmets & Eye Protection",
-            "Respiratory Protection",
-            "Workplace Signage"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Musical Instruments & Studio",
-      "children": [
-        {
-          "name": "Instruments",
-          "children": [
-            "Guitars & Basses",
-            "Keyboards & Pianos",
-            "Drums & Percussion",
-            "Strings",
-            "Wind Instruments"
-          ]
-        },
-        {
-          "name": "Recording & Production",
-          "children": [
-            "Audio Interfaces",
-            "Studio Monitors",
-            "Mixers",
-            "MIDI Controllers",
-            "Recording Microphones"
-          ]
-        },
-        {
-          "name": "Live Sound & DJ",
-          "children": [
-            "PA Systems",
-            "DJ Controllers",
-            "Lighting Effects",
-            "Stage Equipment"
-          ]
-        },
-        {
-          "name": "Instrument Accessories",
-          "children": [
-            "Cases & Stands",
-            "Strings & Reeds",
-            "Tuners",
-            "Cables & Pedals"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Arts, Crafts & Sewing",
-      "children": [
-        {
-          "name": "Art Supplies",
-          "children": [
-            "Paints & Brushes",
-            "Drawing & Sketching",
-            "Canvases & Easels",
-            "Sculpting Materials"
-          ]
-        },
-        {
-          "name": "Crafts & Creative DIY",
-          "children": [
-            "Beads & Jewelry Making",
-            "Models & Miniatures",
-            "Resin & Molds",
-            "Paper Crafts",
-            "Candle & Soap Making"
-          ]
-        },
-        {
-          "name": "Sewing & Textiles",
-          "children": [
-            "Sewing Machines",
-            "Fabrics",
-            "Yarn & Knitting",
-            "Needles & Notions",
-            "Patterns"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Security & Safety",
-      "children": [
-        {
-          "name": "Home & Business Security",
-          "children": [
-            "Alarm Systems",
-            "CCTV & Video Surveillance",
-            "Smart Locks",
-            "Access Control",
-            "Safes & Lockboxes"
-          ]
-        },
-        {
-          "name": "Personal & Workplace Safety",
-          "children": [
-            "First Aid Kits",
-            "Fire Safety Equipment",
-            "Protective Equipment",
-            "Emergency Lighting",
-            "Safety Sensors"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Energy, Solar & Electric Mobility",
-      "children": [
-        {
-          "name": "Solar & Renewable Energy",
-          "children": [
-            "Solar Panels",
-            "Inverters",
-            "Solar Batteries",
-            "Mounting Systems",
-            "Portable Solar Generators"
-          ]
-        },
-        {
-          "name": "Power Storage & Backup",
-          "children": [
-            "Power Stations",
-            "UPS Systems",
-            "Home Battery Storage",
-            "Portable Power Banks"
-          ]
-        },
-        {
-          "name": "Electric Mobility",
-          "children": [
-            "EV Chargers",
-            "Charging Cables",
-            "Charging Accessories",
-            "E-Bike Charging"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Refurbished, Pre-Owned & Outlet",
-      "children": [
-        {
-          "name": "Certified Refurbished Electronics",
-          "children": [
-            "Refurbished Smartphones",
-            "Refurbished Computers",
-            "Refurbished Tablets",
-            "Refurbished Audio & Cameras"
-          ]
-        },
-        {
-          "name": "Pre-Owned Fashion & Luxury",
-          "children": [
-            "Pre-Owned Designer Bags",
-            "Pre-Owned Watches",
-            "Pre-Owned Jewelry",
-            "Vintage Fashion"
-          ]
-        },
-        {
-          "name": "Outlet & Clearance",
-          "children": [
-            "Last-Season Products",
-            "Open-Box Offers",
-            "Clearance Deals",
-            "Overstock"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Business, Wholesale & Bulk Supply",
-      "children": [
-        {
-          "name": "Wholesale Products",
-          "children": [
-            "Bulk Consumer Goods",
-            "Wholesale Electronics",
-            "Wholesale Fashion",
-            "Wholesale Home & Garden"
-          ]
-        },
-        {
-          "name": "Packaging & Shipping Supplies",
-          "children": [
-            "Boxes & Mailers",
-            "Labels & Printers",
-            "Protective Packaging",
-            "Retail Bags"
-          ]
-        },
-        {
-          "name": "Retail & Hospitality Supplies",
-          "children": [
-            "Point of Sale Equipment",
-            "Shop Fixtures",
-            "Hospitality Supplies",
-            "Cleaning & Janitorial"
           ]
         }
       ]
