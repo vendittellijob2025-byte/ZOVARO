@@ -329,6 +329,76 @@ function categoryProductsFor(category) {
   return (PRODUCTS || []).filter(product => categoryLabel(product.category) === category);
 }
 
+/* Curated editorial imagery for every generated department and subcategory.
+   Images are illustrative category photography, never merchant/product endorsements. */
+const CATEGORY_PHOTOS = {
+  appliances: "photo-1586201375761-83865001e31c",
+  automotive: "photo-1492144534655-ae79c964c9d7",
+  babies: "photo-1519689680058-324335c77eba",
+  beauty: "photo-1596462502278-27bfdc403348",
+  "books & media": "photo-1507842217343-583bb7270b66",
+  electronics: "photo-1511707171634-5f897ff02aa9",
+  fashion: "photo-1483985988355-763728e1935b",
+  "food & grocery": "photo-1542838132-92c53300491e",
+  "food delivery": "photo-1513104890138-7c749659a591",
+  gaming: "photo-1593305841991-05c297ba4575",
+  garden: "photo-1416879595882-3373a0480b5b",
+  "health & wellness": "photo-1505751172876-fa1923c5c528",
+  "home & living": "photo-1600210492486-724fe5c67fb0",
+  "office & technology": "photo-1498050108023-c5249f4df085",
+  pets: "photo-1450778869180-41d0601e046e",
+  "solo per la classe ricca": "photo-1511818966892-d7d671e672a2",
+  sports: "photo-1461896836934-ffe607ba8211",
+  "tools & diy": "photo-1504148455328-c376907d081c",
+  "toys & games": "photo-1599623560574-39d485900c95",
+  travel: "photo-1488646953014-85cb44e25828",
+  "tvs & home cinema": "photo-1593359677879-a4bb92f829d1",
+  "industrial & scientific": "photo-1581091226825-a6a2a5aee158",
+  "musical instruments & studio": "photo-1511379938547-c1f69419868d",
+  "arts, crafts & sewing": "photo-1513364776144-60967b0f800f",
+  "security & safety": "photo-1557597774-9d273605dfa9",
+  "energy, solar & electric mobility": "photo-1509391366360-2e959784a276",
+  "refurbished, pre-owned & outlet": "photo-1517336714731-489689fd1ca8",
+  "business, wholesale & bulk supply": "photo-1586528116311-ad8dd3c8310d"
+};
+
+const CATEGORY_DETAIL_PHOTOS = [
+  [/perfume|fragrance|eau de|parfum/i, "photo-1541643600914-78b084683601"],
+  [/makeup|cosmetic|skincare|beauty|nail|manicure|hair care/i, "photo-1596462502278-27bfdc403348"],
+  [/phone|tablet|mobile/i, "photo-1511707171634-5f897ff02aa9"],
+  [/laptop|computer|pc|monitor/i, "photo-1496181133206-80ce9b88a853"],
+  [/camera|photography/i, "photo-1516035069371-29a1b244cc32"],
+  [/watch|watches|jewelry|jewellery/i, "photo-1523170335258-f5ed11844a49"],
+  [/shoe|sneaker|footwear/i, "photo-1542291026-7eec264c27ff"],
+  [/bag|luggage|backpack/i, "photo-1553062407-98eeb64c6a62"],
+  [/car|vehicle|automotive|motorcycle|tire|wheel/i, "photo-1492144534655-ae79c964c9d7"],
+  [/baby|babies|nursery|stroller|diaper|maternity/i, "photo-1519689680058-324335c77eba"],
+  [/dog|cat|pet|animal/i, "photo-1450778869180-41d0601e046e"],
+  [/garden|plant|lawn|flower/i, "photo-1416879595882-3373a0480b5b"],
+  [/padel|tennis|racket|racquet/i, "photo-1622279457486-62dcc4a431d6"],
+  [/football|soccer|basketball|running|fitness|gym|sport/i, "photo-1461896836934-ffe607ba8211"],
+  [/yacht|boat|marine|sailing/i, "photo-1567899378494-47b22a2ae96a"],
+  [/jet|helicopter|aviation|aircraft/i, "photo-1436491865332-7a61a109cc05"],
+  [/villa|castle|island|luxury|estate/i, "photo-1511818966892-d7d671e672a2"],
+  [/book|library|reading/i, "photo-1507842217343-583bb7270b66"],
+  [/food|grocery|supermarket|restaurant|meal|pizza/i, "photo-1542838132-92c53300491e"],
+  [/game|console|gaming|controller/i, "photo-1593305841991-05c297ba4575"],
+  [/tool|diy|workshop|hardware/i, "photo-1504148455328-c376907d081c"],
+  [/sofa|furniture|home|kitchen|dining|decor|lighting/i, "photo-1600210492486-724fe5c67fb0"],
+  [/solar|energy|battery|electric mobility/i, "photo-1509391366360-2e959784a276"],
+  [/travel|suitcase|tourism|hotel/i, "photo-1488646953014-85cb44e25828"]
+];
+
+function categoryImageUrl(name, parentCategory = "") {
+  const label = String(name || "").trim();
+  const parent = String(parentCategory || "").trim();
+  const detail = CATEGORY_DETAIL_PHOTOS.find(([pattern]) => pattern.test(label));
+  const parentKey = parent.toLowerCase();
+  const rootKey = label.toLowerCase();
+  const photo = detail?.[1] || CATEGORY_PHOTOS[rootKey] || CATEGORY_PHOTOS[parentKey] || CATEGORY_PHOTOS.electronics;
+  return "https://images.unsplash.com/" + photo + "?auto=format&fit=crop&w=900&q=80";
+}
+
 function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
   const matching = categoryProductsFor(category);
   const safeNodes = Array.isArray(nodes) ? nodes : [];
@@ -355,6 +425,7 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
     return `
       <div class="category-node">
         <button type="button" class="category" data-tree-open="${esc(path)}">
+          <img class="category-image" src="${esc(categoryImageUrl(name, category))}" alt="" loading="lazy" decoding="async">
           <strong>${esc(name)}</strong>
           <span class="category-count">${selected.length} products</span>
         </button>
@@ -481,6 +552,7 @@ function renderCategories() {
     const count = categoryProductsFor(category).length;
     return `
       <button type="button" class="category" data-root-category="${esc(category)}">
+        <img class="category-image" src="${esc(categoryImageUrl(category))}" alt="" loading="lazy" decoding="async">
         <strong>${esc(category)}</strong>
         <span class="category-count">${count} products</span>
       </button>`;
