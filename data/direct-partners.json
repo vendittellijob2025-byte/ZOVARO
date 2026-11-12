@@ -23,7 +23,7 @@
     {
       "id": "edel-stark",
       "name": "Edel & Stark",
-      "status": "contacted",
+      "status": "responded",
       "programType": "luxury-car-rental-affiliate",
       "territories": [
         "Europe",
@@ -43,7 +43,7 @@
       "nextAction": "Deferred by partner: do not request agreement or integration again until ZOVARO has a concrete qualified rental enquiry; no Agent Agreement, enquiry tool, feed or image permission currently granted.",
       "sourceChecked": "2026-11-12",
       "contactedAt": "2026-11-06T08:51:57Z",
-      "contactEvidence": "Gmail sent message 1a1b00e5da7ecd17",
+      "contactEvidence": "Gmail sent thread 1a1b00e5da7ecd17; partner reply received in same thread",
       "response": {
         "receivedAt": "2026-11-06T10:07:28Z",
         "contactName": "Stephan Behrendt",
@@ -71,7 +71,7 @@
         "latestUpdateAt": "2026-11-11T14:07:39Z",
         "latestUpdate": "Partner declined to issue the Agent Agreement or enable the enquiry tool at ZOVARO's current reach. They invited ZOVARO to forward a concrete rental enquiry directly by email and revisit the partnership then. Vehicle availability/pricing remains quote-specific; no vehicle images or brand materials may be published without express approval."
       },
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "replied"
     },
     {
       "id": "carbirds",
