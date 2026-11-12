@@ -233,6 +233,24 @@
         "generate and test EPN tracking links and confirm attribution before publishing",
         "verify payment profile, tax documentation, payout currency, thresholds and bank/PayPal details inside EPN securely"
       ]
+    },
+    {
+      "partner": "Uber / Uber Eats Affiliate Program",
+      "status": "prospect",
+      "verticals": [
+        "food delivery",
+        "mobility",
+        "new customer acquisition"
+      ],
+      "publicProgram": "Official Uber affiliate program. Public program page says qualified first rides and first Uber Eats orders can earn rewards; commission amount depends on audience and country, is discussed after acceptance; applications are reviewed and joining is free.",
+      "url": "https://www.uber.com/it/it/affiliate-program/",
+      "nextVerification": [
+        "submit official publisher application for ZOVARO",
+        "confirm publisher eligibility and supported countries, especially Italy and Colombia",
+        "obtain written acceptance, commission rates, attribution window and permitted channels",
+        "verify tracking links, conversion reporting, payout threshold, frequency and bank transfer availability",
+        "do not publish Uber/Eats offers until approval and tracking are confirmed"
+      ]
     }
   ]
 }
