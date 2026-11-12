@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: zovaro-cj-products-sync-${{ github.ref }}
+  group: zovaro-catalog-sync-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
