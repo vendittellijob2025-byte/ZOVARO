@@ -292,10 +292,20 @@ textarea{
   text-decoration:none;
   background:
     linear-gradient(90deg,rgba(5,5,8,.98) 0%,rgba(8,7,8,.91) 36%,rgba(8,7,8,.48) 67%,rgba(8,7,8,.15) 100%),
-    url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=85") center 48%/cover no-repeat;
+    url("assets/Offerte%20Esclusive%20di%20Lusso%20Dorato.png") center 50%/cover no-repeat;
   box-shadow:0 0 0 1px rgba(255,220,145,.24),0 0 28px rgba(221,177,78,.32),inset 0 0 38px rgba(231,190,98,.12);
   transition:transform .22s ease,box-shadow .22s ease;
 }
+.luxury-feature-shop{
+  min-height:220px;
+  margin:22px 0 28px;
+  padding:26px clamp(18px,4vw,42px);
+  border-radius:22px;
+}
+.luxury-feature-shop:before{inset:7px;border-radius:15px}
+.luxury-feature-shop .luxury-feature-title{font-size:clamp(30px,4.5vw,48px)}
+.luxury-feature-shop .luxury-feature-copy{max-width:620px;font-size:clamp(14px,1.6vw,18px)}
+.luxury-feature-shop .luxury-feature-cta{margin-top:12px}
 .luxury-feature:hover{
   transform:translateY(-4px);
   box-shadow:0 0 0 2px rgba(255,230,166,.4),0 0 42px rgba(238,190,82,.52),inset 0 0 42px rgba(231,190,98,.16);
@@ -1719,6 +1729,20 @@ footer{
   </form>
 
 
+  <a
+    href="#"
+    class="luxury-feature luxury-feature-shop"
+    id="openLuxuryShop"
+    aria-label="Explore Luxury and Prestige offers"
+  >
+    <div class="luxury-feature-content">
+      <span class="luxury-feature-kicker">ZOVARO WORLDWIDE · PRIVATE COLLECTION</span>
+      <h2 class="luxury-feature-title">LUXURY &amp; PRESTIGE</h2>
+      <p class="luxury-feature-copy">Explore exceptional properties, supercars, private jets, yachts and exclusive experiences.</p>
+      <span class="luxury-feature-cta">EXPLORE EXCLUSIVE OFFERS →</span>
+    </div>
+  </a>
+
   <div
     class="shop-categories category-grid"
     id="categoryGrid"
@@ -2360,6 +2384,21 @@ document
 
 document
   .getElementById("openLuxury")
+  .addEventListener("click", event => {
+    event.preventDefault();
+    showView("buyProductsView");
+    requestAnimationFrame(() => {
+      const luxuryCategory = [...document.querySelectorAll("#categoryGrid [data-root-category]")]
+        .find(button => button.dataset.rootCategory === "Luxury & Prestige");
+      if (luxuryCategory) {
+        luxuryCategory.click();
+        document.getElementById("categoryGrid").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+document
+  .getElementById("openLuxuryShop")
   .addEventListener("click", event => {
     event.preventDefault();
     showView("buyProductsView");
