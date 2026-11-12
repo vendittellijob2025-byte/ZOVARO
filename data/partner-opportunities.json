@@ -137,6 +137,77 @@
         "tracking duration and lead protection",
         "written contract and payout schedule"
       ]
+    },
+    {
+      "partner": "onefinestay",
+      "status": "prospect",
+      "verticals": [
+        "luxury villa rentals",
+        "premium holiday homes",
+        "exclusive stays"
+      ],
+      "publicProgram": "Official affiliate page offers promotion through Rakuten and states potential commission up to 5%, varying by destination and booking value.",
+      "url": "https://www.onefinestay.com/affiliate-programme",
+      "nextVerification": [
+        "publisher approval and eligible countries",
+        "live tracking links and property feed/deep links",
+        "commission basis, cancellation window and payout timing",
+        "permission to use property images and descriptions"
+      ]
+    },
+    {
+      "partner": "Pickup Charter",
+      "status": "prospect",
+      "verticals": [
+        "private jet charter",
+        "crewed yacht and boat charter",
+        "chauffeur-driven luxury transport",
+        "airport and event transfers"
+      ],
+      "publicProgram": "Official affiliate programme provides tracked links and reports; commission is agreed in writing and paid monthly after completed bookings and refund window.",
+      "url": "https://pickupcharter.com/affiliates/",
+      "nextVerification": [
+        "publisher eligibility and countries served",
+        "written commission rate and attribution window",
+        "tracked link or lead registration for high-value enquiries",
+        "licensed operator checks, cancellations and payout terms"
+      ]
+    },
+    {
+      "partner": "LVH Global",
+      "status": "prospect",
+      "verticals": [
+        "luxury villa rentals",
+        "luxury real estate referral",
+        "private transportation",
+        "yacht and jet partner services"
+      ],
+      "publicProgram": "Official site describes luxury travel affiliate and real-estate partner programmes; public commission rates and universal tracking terms were not found.",
+      "url": "https://lvhglobal.com/affiliates",
+      "nextVerification": [
+        "whether ZOVARO can join as a publisher/referral partner",
+        "written referral commission and lead-protection agreement",
+        "territories, property inventory and booking process",
+        "tracking method for offline real-estate closings"
+      ]
+    },
+    {
+      "partner": "D Finest Cars",
+      "status": "prospect",
+      "verticals": [
+        "exotic car rentals",
+        "luxury yacht charters",
+        "chauffeur services",
+        "premium memberships"
+      ],
+      "publicProgram": "Official affiliate page describes custom referral codes and commissions on qualifying bookings; no public commission rate captured.",
+      "url": "https://dfinestcars.com/affiliates/",
+      "nextVerification": [
+        "service area and international customer eligibility",
+        "commission rate, attribution and payout terms in writing",
+        "fleet availability and booking attribution",
+        "insurance, deposits, age and driver requirements"
+      ]
     }
   ]
 }
