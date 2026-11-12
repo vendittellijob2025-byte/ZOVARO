@@ -355,7 +355,7 @@ const CATEGORY_PHOTOS = {
   travel: "photo-1488646953014-85cb44e25828",
   "tvs & home cinema": "photo-1593359677879-a4bb92f829d1",
   "industrial & scientific": "photo-1581091226825-a6a2a5aee158",
-  "real estate": "photo-1600590500-374f3a9f7e1b",
+  "real estate": "photo-1511818966892-d7d671e672a2",
   "accessible & adaptive living": "photo-1576091160399-112ba8d25d1d",
   "repair & circular economy": "photo-1581091226825-a6a2a5aee158",
   "musical instruments & studio": "photo-1511379938547-c1f69419868d",
