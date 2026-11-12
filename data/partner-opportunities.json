@@ -208,6 +208,31 @@
         "fleet availability and booking attribution",
         "insurance, deposits, age and driver requirements"
       ]
+    },
+    {
+      "partner": "eBay Partner Network",
+      "status": "prospect",
+      "verticals": [
+        "eBay marketplace products",
+        "independent eBay sellers",
+        "used and refurbished goods",
+        "collectibles",
+        "fashion",
+        "electronics",
+        "auto parts",
+        "home and garden",
+        "luxury and rare items"
+      ],
+      "publicProgram": "Official eBay affiliate programme. Publisher earns commissions on qualifying transactions attributed to tracked links; participation, rates and eligible marketplaces depend on EPN approval and current programme terms. Not every seller is a direct ZOVARO affiliate.",
+      "url": "https://partnernetwork.ebay.com/",
+      "nextVerification": [
+        "confirm whether ZOVARO already has an approved EPN publisher account; otherwise complete account application with owner authentication",
+        "obtain the EPN campaign ID and confirm accepted marketplace territories",
+        "verify eBay developer application credentials and OAuth access for Browse API",
+        "verify eligible product data, image usage rights, availability and marketplace-specific policies",
+        "generate and test EPN tracking links and confirm attribution before publishing",
+        "verify payment profile, tax documentation, payout currency, thresholds and bank/PayPal details inside EPN securely"
+      ]
     }
   ]
 }
