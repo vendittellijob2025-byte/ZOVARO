@@ -1,8 +1,11 @@
 import fs from "node:fs/promises";
 import { categoryFor, subcategoryFor } from "../lib/product-category.js";
+import { normalizeSubcategoryPath } from "../lib/category-taxonomy.js";
 
 const path = "data/catalog.json";
 const catalog = JSON.parse(await fs.readFile(path, "utf8"));
+const taxonomy = JSON.parse(await fs.readFile("data/category-tree.json", "utf8"));
+if (!Array.isArray(taxonomy.categories)) throw new Error("Canonical category taxonomy is missing.");
 if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
 
 const imageAuditPath = "data/image-audit-report.json";
@@ -61,7 +64,8 @@ for (const product of catalog.products) {
     changed++;
   }
   product.englishCategory = nextCategory;
-  product.subcategory = subcategoryFor(nextCategory, product);
+  const proposedSubcategory = subcategoryFor(nextCategory, product);
+  product.subcategory = normalizeSubcategoryPath(nextCategory, proposedSubcategory, taxonomy);
   product.englishSubcategory = product.subcategory;
 }
 await fs.writeFile(path, JSON.stringify(catalog), "utf8");
