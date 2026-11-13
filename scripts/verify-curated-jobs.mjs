@@ -10,9 +10,9 @@ function normalize(value) {
     .toLowerCase()
     .replace(/&amp;/g, "and")
     .replace(/&#8211;|&ndash;|&mdash;/g, " ")
-    .replace(/[^\\p{L}\\p{N}]+/gu, " ")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim()
-    .replace(/\\s+/g, " ");
+    .replace(/\s+/g, " ");
 }
 
 async function getSource(url) {
@@ -35,7 +35,7 @@ let open = 0, review = 0, unavailable = 0;
 
 for (const job of jobs) {
   try {
-    if (!job.sourceUrl || !/^https:\\/\\//i.test(job.sourceUrl) || !job.sourceTitle) {
+    if (!job.sourceUrl || !/^https:\/\//i.test(job.sourceUrl) || !job.sourceTitle) {
       job.status = "needs_review";
       job.statusReason = "Missing official source URL or source title.";
       review++;
@@ -48,7 +48,10 @@ for (const job of jobs) {
       unavailable++;
       continue;
     }
-    const pageText = normalize(source.html.replace(/<script[\\s\\S]*?<\\/script>/gi, " ").replace(/<style[\\s\\S]*?<\\/style>/gi, " ").replace(/<[^>]+>/g, " "));
+    const pageText = normalize(source.html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " "));
     if (pageText.includes(normalize(job.sourceTitle))) {
       job.status = "open";
       job.verifiedAt = TODAY;
@@ -67,7 +70,7 @@ for (const job of jobs) {
   }
 }
 
-await fs.writeFile(PATH, JSON.stringify(jobs, null, 2) + "\\n", "utf8");
+await fs.writeFile(PATH, JSON.stringify(jobs, null, 2) + "\n", "utf8");
 console.log("ZOVARO JOBS source check completed: " + TODAY);
 console.log("Open and source-visible: " + open);
 console.log("Needs manual review: " + review);
