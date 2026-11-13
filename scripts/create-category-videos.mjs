@@ -58,7 +58,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
     filters.push(draw(textInputs[i].title,start,end,scene.titleSize||50,scene.titleY||540));
     filters.push(draw(textInputs[i].subtitle,start,end,scene.subtitleSize||30,scene.subtitleY||900));
   });
-  filters.push(draw(await textFile(name+"-footer.txt","ZOVARO WORLDWIDE · DISCOVER BETTER. SHOP SMARTER."),0,40,29,1400));
+  filters.push(draw(await textFile(name+"-footer.txt","ZOVARO WORLDWIDE · DISCOVER BETTER. SHOP SMARTER."),0,40,18,1400));
   const filterComplex="[0:v]"+filters.join(",")+"[base];[2:v]scale=360:-1[logo];[base][logo]overlay=(W-w)/2:85:format=auto,fade=t=in:st=0:d=1,fade=t=out:st=38:d=2,format=yuv420p[v]";
   const output=path.join(OUTPUT,name+".mp4");
   await execFileAsync("ffmpeg",[
