@@ -290,14 +290,6 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck: mismatch };
   } catch (error) {
     const reason = String(error.message || error).slice(0, 120);
-    const hardFailure = [
-      "invalid_image_url",
-      "response_not_image",
-      "image_too_large",
-      "image_file_too_small",
-      "image_http_404",
-      "image_http_410"
-    ].includes(reason);
     return {
       ...base,
       // If the image cannot be inspected, the visual classification is unverified.
