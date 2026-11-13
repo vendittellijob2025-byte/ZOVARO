@@ -389,11 +389,13 @@
       const response = await fetch("/data/curated-jobs.json", { cache: "no-store" });
       if (!response.ok) throw new Error("Curated job directory unavailable.");
       const source = await response.json();
-      const curated = (Array.isArray(source) ? source : source.jobs || []).map(item => ({
-        ...item,
-        approvedAt: item.verifiedAt || null,
-        isCurated: true
-      }));
+      const curated = (Array.isArray(source) ? source : source.jobs || [])
+        .filter(item => item.status === "open")
+        .map(item => ({
+          ...item,
+          approvedAt: item.verifiedAt || null,
+          isCurated: true
+        }));
       if (curated.length) {
         renderListings($("jobListings"), curated, "job", true);
         jobItems.push(...curated);
