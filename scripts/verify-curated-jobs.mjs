@@ -8,7 +8,7 @@ function normalize(value) {
   return String(value || "")
     .normalize("NFKD")
     .toLowerCase()
-    .replace(/&amp;/g, "and")
+    .replace(/&amp;/g, " ")
     .replace(/&#8211;|&ndash;|&mdash;/g, " ")
     .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim()
