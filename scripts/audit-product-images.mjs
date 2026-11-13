@@ -300,9 +300,9 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     ].includes(reason);
     return {
       ...base,
-      // Transient network errors, 403s and server errors are review-only:
-      // they must never remove a good affiliate product from the storefront.
-      decision: hardFailure ? "review_required" : "review",
+      // If the image cannot be inspected, the visual classification is unverified.
+      // Keep the item explicitly review-required; retry it after the recheck interval.
+      decision: "review_required",
       flags: [reason],
       metrics: null,
       detections: [],
