@@ -30,7 +30,9 @@
       "Chile",
       "Colombia",
       "Mexico"
-    ]
+    ],
+    "sourceTitle": "Team Lead – Cloud Network Engineer",
+    "status": "open"
   },
   {
     "id": "siblings-agentic-ai-developer-m365-copilot",
@@ -63,7 +65,9 @@
       "Chile",
       "Colombia",
       "Mexico"
-    ]
+    ],
+    "sourceTitle": "Agentic AI Developer (Microsoft 365 Copilot)",
+    "status": "open"
   },
   {
     "id": "siblings-gcp-enterprise-architect",
@@ -96,7 +100,9 @@
       "Chile",
       "Colombia",
       "Mexico"
-    ]
+    ],
+    "sourceTitle": "GCP Enterprise Architect",
+    "status": "open"
   },
   {
     "id": "siblings-forward-deployed-engineer-conversational-ai",
@@ -129,7 +135,9 @@
       "Chile",
       "Colombia",
       "Mexico"
-    ]
+    ],
+    "sourceTitle": "Forward Deployed Engineer – Conversational AI",
+    "status": "open"
   },
   {
     "id": "siblings-salesforce-business-analyst",
@@ -159,7 +167,9 @@
     "countries": [
       "Argentina",
       "Brazil"
-    ]
+    ],
+    "sourceTitle": "Salesforce Business Analyst",
+    "status": "open"
   },
   {
     "id": "siblings-senior-quality-engineer-mobile",
@@ -188,7 +198,9 @@
     "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
     "countries": [
       "Argentina"
-    ]
+    ],
+    "sourceTitle": "Senior Quality Engineer (Mobile)",
+    "status": "open"
   },
   {
     "id": "siblings-lead-infrastructure-engineer",
@@ -217,7 +229,9 @@
     "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
     "countries": [
       "Mexico"
-    ]
+    ],
+    "sourceTitle": "Lead Infrastructure Engineer",
+    "status": "open"
   },
   {
     "id": "siblings-experience-technical-consultant-agentic-ai",
@@ -248,7 +262,9 @@
       "Argentina",
       "Brazil",
       "Colombia"
-    ]
+    ],
+    "sourceTitle": "Experience & Technical Consultant (Agentic AI)",
+    "status": "open"
   },
   {
     "id": "siblings-release-engineer-mobile",
@@ -277,7 +293,9 @@
     "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
     "countries": [
       "Argentina"
-    ]
+    ],
+    "sourceTitle": "Release Engineer (Mobile)",
+    "status": "open"
   },
   {
     "id": "canonical-alliances-field-engineer-3433732",
@@ -306,6 +324,8 @@
     "verificationNote": "Canonical's official role page was accessible on 13 November 2026 and displayed an Apply action.",
     "countries": [
       "Worldwide"
-    ]
+    ],
+    "sourceTitle": "Alliances Field Engineer",
+    "status": "open"
   }
 ]
