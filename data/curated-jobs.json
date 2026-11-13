@@ -321,11 +321,12 @@
     "sourceUrl": "https://canonical.com/careers/3433732",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "Canonical's official role page was accessible on 13 November 2026 and displayed an Apply action.",
+    "verificationNote": "Manually checked against Canonical's official role page on 13 November 2026; the page displayed an Apply action. Recheck manually because the automated page parser does not reliably read this page.",
     "countries": [
       "Worldwide"
     ],
     "sourceTitle": "Alliances Field Engineer",
-    "status": "open"
+    "status": "open",
+    "verificationMode": "manual"
   }
 ]
