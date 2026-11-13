@@ -67,6 +67,16 @@ async function publishPublicRecord(record) {
   record.publicPath=pathname;
   return pathname;
 }
+async function findPublicRecord(type,id) {
+  let cursor;
+  do {
+    const page=await list({prefix:"marketplace/public/"+type+"/",limit:1000,...(cursor?{cursor}:{})});
+    const blob=page.blobs.find(item=>item.pathname.endsWith("_"+id+".json"));
+    if(blob) return readRecord(blob.pathname);
+    cursor=page.hasMore?page.cursor:null;
+  } while(cursor);
+  return null;
+}
 async function listPublicRecords(type,cursor) {
   const options={prefix:"marketplace/public/"+type+"/",limit:40};
   if(cursor) options.cursor=cursor;
@@ -283,6 +293,15 @@ export default async function handler(req,res) {
       catch(error){console.error("ZOVARO admin queue error:",error);return res.status(503).json({error:"Unable to load moderation queue."});}
     }
     const type=url.searchParams.get("type");
+    const requestedId=url.searchParams.get("id");
+    if(requestedId){
+      if(type!=="job" || !/^[0-9a-f-]{36}$/i.test(requestedId)) return res.status(400).json({error:"Invalid job ID."});
+      try{
+        const record=await findPublicRecord("job",requestedId);
+        if(!record) return res.status(404).json({error:"Job opportunity not found."});
+        return res.status(200).json(record);
+      }catch(error){console.error("ZOVARO job detail read error:",error);return res.status(503).json({error:"Job details are temporarily unavailable."});}
+    }
     if (type&&!["job","product"].includes(type)) return res.status(400).json({error:"Invalid listing type."});
     if (!type) return res.status(400).json({error:"A listing type is required."});
     try {
