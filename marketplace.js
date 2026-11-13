@@ -363,13 +363,13 @@
         if (!append) jobItems.length = 0;
         jobItems.push(...items);
         refreshJobGeography();
-        applyJobFilters();
       }
       loadedCounts[type] += items.length;
       cursors[type] = response.headers.get("X-Zovaro-Next-Cursor") || null;
       const moreButton = $(type === "job" ? "jobLoadMore" : "usedLoadMore");
       if (moreButton) moreButton.classList.toggle("hidden", !cursors[type]);
       if (empty) empty.classList.toggle("hidden", loadedCounts[type] > 0);
+      if (type === "job") applyJobFilters();
       if (type === "product" && typeof window.filterUsedListings === "function") window.filterUsedListings();
       return items;
     } catch (error) {
