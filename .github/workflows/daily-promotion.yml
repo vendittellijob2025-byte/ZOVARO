@@ -10,6 +10,7 @@ on:
       - feature/global-jobs-portal
       - fix/shop-gif-loop
       - fix/shop-video-runtime
+      - fix/normalize-shop-images
     paths:
       - ".github/workflows/daily-promotion.yml"
       - "scripts/select-product.mjs"

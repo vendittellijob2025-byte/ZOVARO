@@ -570,8 +570,29 @@ for (
     imagePath
   );
 
+  // Normalize remote images to a clean, single-frame PNG before looping them.
+  // This handles animated GIFs and malformed JPEG metadata consistently.
+  const normalizedImagePath =
+    `${TEMP_DIR}/product-${index + 1}.png`;
+
+  await run(
+    "ffmpeg",
+    [
+      "-y",
+      "-i",
+      imagePath,
+      "-vf",
+      "scale=1600:1600:force_original_aspect_ratio=decrease",
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      normalizedImagePath
+    ]
+  );
+
   const cardBackgroundColor =
-    await detectProductCardBackground(imagePath, index + 1);
+    await detectProductCardBackground(normalizedImagePath, index + 1);
 
   const regularPrice =
     Number(product.price);
@@ -1224,11 +1245,11 @@ for (
     [
       "-y",
 
-      "-stream_loop",
-      "-1",
+      "-loop",
+      "1",
 
       "-i",
-      imagePath,
+      normalizedImagePath,
 
       "-loop",
       "1",
