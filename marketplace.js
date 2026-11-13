@@ -163,6 +163,24 @@
     uniqueSorted(values).forEach(value => select.add(new Option(value, value)));
     select.value = values.includes(current) ? current : "";
   }
+  async function loadWorldCountries() {
+    if (!countrySelect) return;
+    try {
+      const response = await fetch("https://restcountries.com/v3.1/all?fields=name,cca2", { cache: "force-cache" });
+      if (!response.ok) throw new Error("Country directory unavailable");
+      const countries = await response.json();
+      const names = countries.map(item => item?.name?.common).filter(Boolean).sort((a,b)=>a.localeCompare(b));
+      const current = countrySelect.value;
+      countrySelect.replaceChildren(new Option("All countries", ""));
+      countrySelect.add(new Option("Remote / Worldwide", "Remote / Worldwide"));
+      names.forEach(name => countrySelect.add(new Option(name, name)));
+      countrySelect.value = names.includes(current) || current === "Remote / Worldwide" ? current : "";
+    } catch {
+      // The portal remains usable with countries found in available listings.
+      setOptions(countrySelect, [...jobItems.map(x=>x.country), "Remote / Worldwide"], "All countries");
+    }
+  }
+
   function refreshJobGeography() {
     if (!countrySelect) return;
     setOptions(countrySelect, jobItems.map(x => x.country), "All countries");
@@ -200,6 +218,60 @@
       empty.classList.toggle("hidden", selected.length > 0);
     }
   }
+  const fxRates = new Map();
+  function parseSalaryCurrency(text) {
+    const value = String(text || "");
+    const upper = value.toUpperCase();
+    const codes = ["USD","EUR","GBP","CHF","CAD","AUD","NZD","INR","BRL","COP","MXN","PLN","SEK","NOK","DKK","JPY","CNY","SGD","HKD","ZAR","AED","TRY","CZK","HUF","RON","THB","IDR","MYR","PHP","ILS","KRW"];
+    const explicit = codes.find(code => new RegExp("\\b" + code + "\\b").test(upper));
+    if (explicit) return explicit;
+    if (value.includes("€")) return "EUR";
+    if (value.includes("£")) return "GBP";
+    if (value.includes("₹")) return "INR";
+    if (value.includes("R$")) return "BRL";
+    if (value.includes("zł")) return "PLN";
+    if (value.includes("₩")) return "KRW";
+    if (value.includes("₺")) return "TRY";
+    if (value.includes("د.إ")) return "AED";
+    if (value.includes("$")) return null; // $ alone is ambiguous (USD, CAD, AUD, etc.).
+    return null;
+  }
+  function parseSalaryNumbers(text) {
+    const matches = [...String(text || "").matchAll(/\\d[\\d., ]*/g)].map(match => match[0].trim()).filter(Boolean);
+    return matches.slice(0,2).map(raw => {
+      let value = raw.replace(/ /g,"");
+      const lastComma=value.lastIndexOf(","),lastDot=value.lastIndexOf(".");
+      if(lastComma>=0&&lastDot>=0){
+        const decimal=lastComma>lastDot?",":".";
+        value=value.replace(/[.,]/g,"");
+        const decimals=raw.slice(Math.max(lastComma,lastDot)+1).replace(/\\D/g,"");
+        value=value.slice(0,-decimals.length)+"."+decimals;
+      } else if(lastComma>=0||lastDot>=0){
+        const sep=lastComma>=0?",":".",parts=value.split(sep);
+        if(parts.length===2&&parts[1].length!==3) value=parts[0]+"."+parts[1];
+        else value=parts.join("");
+      }
+      const number=Number(value);
+      return Number.isFinite(number)?number:null;
+    }).filter(value=>value!==null);
+  }
+  async function salaryUsd(text) {
+    const currency=parseSalaryCurrency(text);
+    if(!currency) return null;
+    const numbers=parseSalaryNumbers(text);
+    if(!numbers.length) return null;
+    if(currency==="USD") return {text:numbers.map(n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n)).join(" – "),date:null,original:text};
+    try {
+      let data=fxRates.get(currency);
+      if(!data){
+        const response=await fetch("https://api.frankfurter.dev/v2/rate/"+currency.toLowerCase()+"/usd");
+        if(!response.ok) return null;
+        data=await response.json();fxRates.set(currency,data);
+      }
+      return {text:numbers.map(n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n*data.rate)).join(" – "),date:data.date,original:text};
+    } catch { return null; }
+  }
+
   function openJobDetail(item) {
     const panel = $("jobDetailPanel");
     if (!panel) return;
@@ -216,6 +288,15 @@
       const cell=document.createElement("div"),strong=document.createElement("strong"),span=document.createElement("span");
       strong.textContent=label;span.textContent=value;cell.append(strong,span);meta.appendChild(cell);
     });
+    if(item.salaryText){
+      salaryUsd(item.salaryText).then(converted=>{
+        if(!converted || !panel.classList.contains("open")) return;
+        const cell=document.createElement("div"),strong=document.createElement("strong"),span=document.createElement("span");
+        strong.textContent="Estimated salary in USD";
+        span.textContent=converted.text+(converted.date?" · reference rate "+converted.date:"")+(converted.original?" (original: "+converted.original+")":"");
+        cell.append(strong,span);meta.appendChild(cell);
+      });
+    }
     $("jobDetailDescription").textContent = item.description || "Please follow the official application link for the full role description.";
     const actions=$("jobDetailActions");actions.replaceChildren();
     if(item.applicationUrl) addSafeLink(actions,item.applicationUrl,"APPLY ON COMPANY WEBSITE");
@@ -290,6 +371,7 @@
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
   $("jobSearchInput")?.addEventListener("input", filterJobs);
 
+  loadWorldCountries();
   loadListings("job");
   loadListings("product");
 })();
