@@ -7,9 +7,11 @@ on:
   push:
     branches:
       - main
+      - feature/global-jobs-portal
     paths:
       - ".github/workflows/daily-promotion.yml"
       - "scripts/select-product.mjs"
+      - "scripts/split-selected-products.mjs"
       - "scripts/create-promotion.mjs"
       - "scripts/create-tiktok-video.mjs"
       - "data/selected-products.json"
@@ -24,7 +26,7 @@ concurrency:
 jobs:
   daily-promotion:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
@@ -41,25 +43,50 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Select products
+      - name: Select 24 unique products
         run: node scripts/select-product.mjs
+
+      - name: Prepare three product batches
+        run: node scripts/split-selected-products.mjs
 
       - name: Create promotion package
         run: node scripts/create-promotion.mjs
 
-      - name: Create automatic TikTok video
-        run: node scripts/create-tiktok-video.mjs
-
-      - name: Verify generated video
+      - name: Generate three automatic SHOP videos
         run: |
-          test -s data/tiktok-video.mp4
-          DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 data/tiktok-video.mp4)"
-          node -e 'const d=Number(process.argv[1]); if (!Number.isFinite(d) || d < 10 || d > 180) throw new Error("Generated video duration is invalid: " + process.argv[1]); console.log("Verified TikTok video duration: " + d.toFixed(1) + " seconds.");' "$DURATION"
+          mkdir -p zovaro-shop-videos
+          for i in 1 2 3; do
+            if [ "$i" -eq 1 ]; then
+              OUTPUT="data/tiktok-video.mp4"
+            else
+              OUTPUT="zovaro-shop-videos/tiktok-video-$i.mp4"
+            fi
+            SELECTED_PRODUCTS_PATH=".zovaro-shop-batches/products-$i.json" VIDEO_OUTPUT_PATH="$OUTPUT" node scripts/create-tiktok-video.mjs
+          done
 
-      - name: Save daily promotion
+      - name: Verify all three generated videos
         run: |
+          for FILE in data/tiktok-video.mp4 zovaro-shop-videos/tiktok-video-2.mp4 zovaro-shop-videos/tiktok-video-3.mp4; do
+            test -s "$FILE"
+            DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$FILE")"
+            node -e 'const d=Number(process.argv[1]); if (!Number.isFinite(d) || d < 10 || d > 180) throw new Error("Generated video duration is invalid: " + process.argv[1]); console.log("Verified SHOP video duration: " + d.toFixed(1) + " seconds.");' "$DURATION"
+          done
+
+      - name: Upload all daily SHOP videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: zovaro-daily-shop-videos
+          path: |
+            data/tiktok-video.mp4
+            zovaro-shop-videos/*.mp4
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Save daily promotion metadata and first SHOP video
+        run: |
+          rm -rf .zovaro-shop-batches zovaro-shop-videos
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/selected-product.json data/selected-products.json data/promotion.json data/social-image.svg data/tiktok-video.mp4
-          git diff --cached --quiet || git commit -m "Update daily promotion video"
+          git diff --cached --quiet || git commit -m "Update daily SHOP videos and promotion"
           git push
