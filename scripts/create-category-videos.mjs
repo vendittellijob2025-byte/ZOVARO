@@ -44,7 +44,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
   for(let i=0;i<scenes.length;i++){
     const scene=scenes[i];
     textInputs.push({
-      title:await textFile(name+"-"+i+"-title.txt",wrap(scene.title,34)),
+      title:await textFile(name+"-"+i+"-title.txt",wrap(scene.title,40)),
       subtitle:await textFile(name+"-"+i+"-subtitle.txt",wrap(scene.subtitle,55))
     });
   }
@@ -78,10 +78,15 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
   return {file:output,duration,music:audio,caption,hashtags};
 }
 
+function jobLocation(job) {
+  if (job.countries?.includes("Worldwide")) return "Remote · Worldwide";
+  if (job.countries?.length > 1) return "Remote · LATAM";
+  return "Remote · " + (job.countries?.[0] || job.country || "Location in employer details");
+}
 const jobScenes=selectedJobs.length>=1?[
   {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Browse real job openings on ZOVARO."},
-  {title:""+selectedJobs[0].title,subtitle:[selectedJobs[0].company,selectedJobs[0].location].filter(Boolean).join(" · ")},
-  {title:selectedJobs[1]?.title||"REMOTE & WORK FROM HOME",subtitle:selectedJobs[2]?[selectedJobs[2].title,selectedJobs[2].company].join(" · "):"Explore more verified roles and career categories."}
+  {title:selectedJobs[0].title,subtitle:[selectedJobs[0].company,jobLocation(selectedJobs[0])].filter(Boolean).join(" · "),titleSize:40,subtitleSize:28},
+  {title:selectedJobs[1]?.title||"EXPLORE MORE OPENINGS",subtitle:selectedJobs[1]?[selectedJobs[1].company,jobLocation(selectedJobs[1])].filter(Boolean).join(" · "):"Explore more verified roles on ZOVARO.",titleSize:40,subtitleSize:28}
 ]:[
   {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Explore 20 career categories and professional role guides."},
   {title:"REMOTE & WORK FROM HOME",subtitle:"Software · Design · Customer Support · Administration"},
@@ -89,13 +94,13 @@ const jobScenes=selectedJobs.length>=1?[
 ];
 const remoteScenes=[
   {title:"REMOTE & WORK FROM HOME",subtitle:"Explore flexible remote career paths on ZOVARO."},
-  {title:remoteRoles[0]?.title||"REMOTE SOFTWARE DEVELOPER",subtitle:remoteRoles[1]?.title||"REMOTE GRAPHIC DESIGNER"},
-  {title:remoteRoles[2]?.title||"REMOTE CUSTOMER SUPPORT",subtitle:"Career guides and current openings on ZOVARO JOBS."}
+  {title:remoteRoles[0]?.title||"REMOTE SOFTWARE DEVELOPER",subtitle:remoteRoles[1]?.title||"REMOTE GRAPHIC DESIGNER",titleSize:42,subtitleSize:28},
+  {title:remoteRoles[2]?.title||"REMOTE CUSTOMER SUPPORT",subtitle:"Career guides and current openings on ZOVARO JOBS.",titleSize:42,subtitleSize:28}
 ];
 const industryScenes=[
-  {title:"CAREERS ACROSS INDUSTRIES",subtitle:"Explore work in hospitality, construction, trades and logistics."},
-  {title:industryRoles[0]?.title||"BAKER · CHEF · HOTEL STAFF",subtitle:industryRoles[1]?.title||"FOOD & HOSPITALITY CAREER PATHS"},
-  {title:industryRoles[2]?.title||"ELECTRICIAN · CARPENTER",subtitle:industryRoles[3]?.title||"CONSTRUCTION & SKILLED TRADES"}
+  {title:"CAREERS ACROSS INDUSTRIES",subtitle:"Hospitality · Construction · Skilled Trades"},
+  {title:industryRoles[0]?.title||"BAKER · CHEF · HOTEL STAFF",subtitle:industryRoles[1]?.title||"FOOD & HOSPITALITY CAREER PATHS",titleSize:42,subtitleSize:28},
+  {title:industryRoles[2]?.title||"ELECTRICIAN · CARPENTER",subtitle:industryRoles[3]?.title||"CONSTRUCTION & SKILLED TRADES",titleSize:42,subtitleSize:28}
 ];
 const luxuryThemes=[
   {title:"LUXURY CARS · YACHTS",subtitle:"PRIVATE JETS · HELICOPTERS · EXCLUSIVE MOBILITY"},

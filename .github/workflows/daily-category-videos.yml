@@ -10,6 +10,7 @@ on:
       - feature/global-jobs-portal
       - fix/shop-gif-loop
       - feature/daily-industry-video
+      - fix/job-video-text
     paths:
       - "scripts/create-category-videos.mjs"
       - "data/curated-jobs.json"
