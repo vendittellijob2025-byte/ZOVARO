@@ -1057,7 +1057,7 @@ for (
     `[scene1]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
-      `text='DON'T MISS IT!':` +
+      `text='DON’T MISS IT!':` +
       `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:` +
       `fontsize=48:` +
       `x=(w-text_w)/2:` +
