@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - feature/global-jobs-portal
+      - fix/shop-gif-loop
     paths:
       - ".github/workflows/daily-promotion.yml"
       - "scripts/select-product.mjs"
