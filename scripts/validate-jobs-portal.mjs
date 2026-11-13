@@ -28,7 +28,7 @@ for(const job of jobs){
   if(!/^https:\/\//i.test(job.sourceUrl||""))errors.push("Missing HTTPS source URL: "+job.id);
   if(!/^https:\/\//i.test(job.applicationUrl||""))errors.push("Missing HTTPS application URL: "+job.id);
   if(!categoryNames.has(job.category))errors.push("Unknown job category: "+job.id+" / "+job.category);
-  if(!/^\d{4}-\d{2}-\d{2}$/.test(job.verifiedAt||""))errors.push("Invalid verification date: "+job.id);
+  if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(job.verifiedAt||""))errors.push("Invalid verification date: "+job.id);
   if(!Array.isArray(job.countries)||!job.countries.length)errors.push("Missing eligible country list: "+job.id);
 }
 for(const id of ["jobCountryFilter","jobRegionFilter","jobCityFilter","jobCategoryFilter","careerCategoryFilter","careerGuideSearch","careerGuidesGrid","careerGuidesMeta"]){
