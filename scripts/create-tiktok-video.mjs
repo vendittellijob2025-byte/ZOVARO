@@ -1051,8 +1051,7 @@ for (
       `x=(w-text_w)/2:` +
       `y=${categoryY}:` +
       `line_spacing=8:` +
-      `expansion=none:` +
-      ` +
+      `expansion=none` +
       `[text1]`,
 
     /*
@@ -1063,13 +1062,12 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
       `textfile='${nameText}':` +
-      `fontcolor=0x38BDF8:borderw=2:bordercolor=0x006BFF:shadowcolor=0x00BFFF@0.95:shadowx=0:shadowy=0:` +
+      `fontcolor=0x00D9FF:borderw=2:bordercolor=0x006BFF:shadowcolor=0x00BFFF@0.95:shadowx=0:shadowy=0:` +
       `fontsize=46:` +
       `x=(w-text_w)/2:` +
       `y=${titleY}:` +
       `line_spacing=12:` +
-      `expansion=none:` +
-      ` +
+      `expansion=none` +
       `[text2]`,
 
     /*
@@ -1085,8 +1083,7 @@ for (
       `x=(w-text_w)/2:` +
       `y=${merchantY}:` +
       `line_spacing=8:` +
-      `expansion=none:` +
-      ` +
+      `expansion=none` +
       `[text3]`,
 
     /*
@@ -1101,8 +1098,7 @@ for (
       `fontsize=70:` +
       `x=(w-text_w)/2:` +
       `y=${priceY}:` +
-      `expansion=none:` +
-      ` +
+      `expansion=none` +
       `[text4]`
   ];
 
