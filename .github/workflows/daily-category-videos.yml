@@ -11,6 +11,7 @@ on:
       - fix/shop-gif-loop
       - feature/daily-industry-video
       - fix/job-video-text
+      - fix/shop-video-runtime
     paths:
       - "scripts/create-category-videos.mjs"
       - "data/curated-jobs.json"

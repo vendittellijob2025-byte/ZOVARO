@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 
 const source = JSON.parse(await fs.readFile("data/selected-products.json","utf8"));
 const products = Array.isArray(source.products) ? source.products : [];
-const BATCH_SIZE = 8;
+const BATCH_SIZE = 6;
 const BATCH_COUNT = 3;
 
 if (products.length < BATCH_SIZE * BATCH_COUNT) {

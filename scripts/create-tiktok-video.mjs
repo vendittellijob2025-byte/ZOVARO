@@ -160,7 +160,9 @@ async function run(command, args) {
     command,
     args,
     {
-      maxBuffer: 20 * 1024 * 1024
+      maxBuffer: 20 * 1024 * 1024,
+      timeout: 180000,
+      killSignal: "SIGKILL"
     }
   );
 
@@ -185,22 +187,29 @@ async function fileExists(path) {
 }
 
 async function downloadFile(url, outputPath) {
-  const response = await fetch(url);
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const response = await fetch(url, {
+        signal: AbortSignal.timeout(25000),
+        redirect: "follow"
+      });
 
-  if (!response.ok) {
-    throw new Error(
-      `Unable to download ${url}: HTTP ${response.status}`
-    );
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const buffer = Buffer.from(await response.arrayBuffer());
+      if (buffer.length < 100) throw new Error("Downloaded image is empty or incomplete.");
+      await fs.writeFile(outputPath, buffer);
+      return;
+    } catch (error) {
+      lastError = error;
+      console.warn(`Product image download attempt ${attempt}/2 failed: ${String(error?.message || error)}`);
+      if (attempt < 2) await new Promise(resolve => setTimeout(resolve, 1000));
+    }
   }
-
-  const buffer = Buffer.from(
-    await response.arrayBuffer()
-  );
-
-  await fs.writeFile(
-    outputPath,
-    buffer
-  );
+  throw new Error(`Unable to download product image after 2 attempts: ${url}. ${String(lastError?.message || lastError)}`);
 }
 
 async function detectProductCardBackground(imagePath, index) {

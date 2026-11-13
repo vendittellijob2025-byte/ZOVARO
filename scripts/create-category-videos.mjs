@@ -98,9 +98,9 @@ const remoteScenes=[
   {title:remoteRoles[2]?.title||"REMOTE CUSTOMER SUPPORT",subtitle:"Career guides and current openings on ZOVARO JOBS.",titleSize:42,subtitleSize:28}
 ];
 const industryScenes=[
-  {title:"CAREERS ACROSS INDUSTRIES",subtitle:"Hospitality · Construction · Skilled Trades"},
-  {title:industryRoles[0]?.title||"BAKER · CHEF · HOTEL STAFF",subtitle:industryRoles[1]?.title||"FOOD & HOSPITALITY CAREER PATHS",titleSize:42,subtitleSize:28},
-  {title:industryRoles[2]?.title||"ELECTRICIAN · CARPENTER",subtitle:industryRoles[3]?.title||"CONSTRUCTION & SKILLED TRADES",titleSize:42,subtitleSize:28}
+  {title:"CONSTRUCTION & LOGISTICS CAREERS",subtitle:"Skilled trades · Manufacturing · Transport"},
+  {title:industryRoles[0]?.title||"ELECTRICIAN · CARPENTER",subtitle:industryRoles[1]?.title||"BRICKLAYER · TECHNICIAN",titleSize:42,subtitleSize:28},
+  {title:industryRoles[2]?.title||"FACTORY OPERATOR",subtitle:industryRoles[3]?.title||"DRIVER · WAREHOUSE · LOGISTICS",titleSize:42,subtitleSize:28}
 ];
 const luxuryThemes=[
   {title:"LUXURY CARS · YACHTS",subtitle:"PRIVATE JETS · HELICOPTERS · EXCLUSIVE MOBILITY"},
@@ -138,7 +138,7 @@ results.push(await makeVideo({
   background:"assets/job-visual.png",
   music:MUSIC_DEFAULT,
   scenes:industryScenes,
-  caption:"Explore career paths in food and hospitality, construction, skilled trades and logistics on ZOVARO JOBS Worldwide. These are career guides; live vacancies are listed separately. https://zovaro.vercel.app/?view=jobs",
+  caption:"Explore construction, manufacturing, skilled trades and transport career paths on ZOVARO JOBS Worldwide. These are career guides; live vacancies are listed separately. https://zovaro.vercel.app/?view=jobs",
   hashtags:["#ZOVARO","#HospitalityJobs","#ConstructionJobs","#SkilledTrades"]
 }));
 results.push(await makeVideo({

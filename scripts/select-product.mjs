@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 const CATALOG_PATH = "data/catalog.json";
 const SELECTED_PATH = "data/selected-product.json";
 const SELECTED_PRODUCTS_PATH = "data/selected-products.json";
-const DAILY_PRODUCT_TARGET = 24;
+const DAILY_PRODUCT_TARGET = 18;
 
 const catalogText =
   await fs.readFile(
