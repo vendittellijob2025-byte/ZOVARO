@@ -1241,6 +1241,26 @@ footer{
 .job-open-details{margin-top:12px;padding:10px 14px;border:1px solid rgba(42,204,255,.65);border-radius:9px;background:rgba(0,135,210,.14);color:#70e3ff;font-weight:800;cursor:pointer}
 @media(max-width:680px){.jobs-location-grid{grid-template-columns:1fr}.job-detail-meta{grid-template-columns:1fr}}
 
+/* JOBS WORLDWIDE — CATEGORY AND CAREER EXPLORER */
+.jobs-category-filter{max-width:420px;margin:14px 0 22px}
+.jobs-category-filter label,.career-explorer-tools label{display:block;color:#8fdfff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.jobs-category-filter select,.career-explorer-tools select,.career-explorer-tools input{width:100%;margin-top:7px;min-height:46px;padding:10px 12px;border:1px solid rgba(65,169,235,.4);border-radius:11px;background:#061124;color:#fff}
+.career-explorer{margin:38px 0 12px;padding:clamp(18px,3vw,30px);border:1px solid rgba(43,204,255,.3);border-radius:20px;background:linear-gradient(145deg,rgba(7,24,47,.92),rgba(2,8,20,.92))}
+.career-explorer h3{margin:8px 0;color:#fff;font-family:"Space Grotesk",sans-serif;font-size:clamp(22px,3vw,30px)}
+.career-explorer-intro{max-width:850px;color:#a9c1dc;line-height:1.65}
+.career-explorer-tools{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(240px,1.2fr);gap:12px;margin:18px 0}
+.career-guides-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.career-guide-card{padding:17px;border:1px solid rgba(65,169,235,.22);border-radius:14px;background:rgba(255,255,255,.025)}
+.career-guide-label{display:inline-block;color:#63ddff;font-size:9px;font-weight:900;letter-spacing:.06em;line-height:1.5}
+.career-guide-card h3{font-size:17px;margin:10px 0 5px}
+.career-guide-category{color:#68cfff;font-size:11px;font-weight:800}
+.career-guide-summary{color:#c4d5e8;font-size:13px;line-height:1.6}
+.career-guide-skills{color:#8fa9c5;font-size:11px;line-height:1.6}
+.job-open-details{text-decoration:none}
+@media(max-width:900px){.career-guides-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.career-explorer-tools,.career-guides-grid{grid-template-columns:1fr}}
+
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 </head>
@@ -2119,17 +2139,29 @@ footer{
   <button type="button" class="back-button" id="backFromLookingJob">← Back</button>
   <p class="eyebrow">ZOVARO WORLDWIDE · CAREER DISCOVERY</p>
   <h2 class="choice-title">JOBS AROUND THE WORLD</h2>
-  <p class="jobs-worldwide-intro">Explore opportunities by country, region or state, and city. Every listing opens a dedicated ZOVARO job profile with the available role details, compensation and official application route.</p>
+  <p class="jobs-worldwide-intro">Explore employer-published opportunities by country, region or state, and city. Open every offer in its own ZOVARO detail page and apply directly through the employer. Browse career guides separately. No registration is required to search or read listings.</p>
   <div class="jobs-location-grid" aria-label="Browse jobs by location">
     <label>Country<select id="jobCountryFilter"><option value="">All countries</option></select></label>
     <label>Region / State<select id="jobRegionFilter" disabled><option value="">All regions / states</option></select></label>
     <label>City<select id="jobCityFilter" disabled><option value="">All cities</option></select></label>
   </div>
   <div class="marketplace-toolbar"><input id="jobSearchInput" type="search" maxlength="100" placeholder="Search job title, employer, skills or location" aria-label="Search jobs"><button type="button" id="jobSearchButton">SEARCH</button></div>
+  <div class="jobs-category-filter"><label for="jobCategoryFilter">JOB CATEGORY</label><select id="jobCategoryFilter"><option value="">All job categories</option></select></div>
   <div id="jobResultsMeta" class="jobs-results-meta">Browse verified opportunities worldwide.</div>
   <div id="jobListings" class="marketplace-listings" aria-live="polite"></div>
   <button id="jobLoadMore" class="marketplace-more hidden" type="button">LOAD MORE JOBS</button>
-  <p id="jobListingsEmpty" class="marketplace-empty">No approved job opportunities are available yet. Check again soon.</p>
+  <p id="jobListingsEmpty" class="marketplace-empty">No verified live job opportunities are currently loaded. Browse the career guides below or check back for new openings.</p>
+  <section class="career-explorer" aria-labelledby="careerExplorerTitle">
+    <p class="eyebrow">CAREER EXPLORER</p>
+    <h3 id="careerExplorerTitle">EXPLORE PROFESSIONS & JOB CATEGORIES</h3>
+    <p class="career-explorer-intro">Discover common professions, typical responsibilities and skills across industries. These profiles help you explore career paths; they are not live job advertisements.</p>
+    <div class="career-explorer-tools">
+      <label for="careerCategoryFilter">CATEGORY<select id="careerCategoryFilter"><option value="">All career categories</option></select></label>
+      <input id="careerGuideSearch" type="search" maxlength="100" placeholder="Search professions or skills" aria-label="Search career profiles">
+    </div>
+    <p id="careerGuidesMeta" class="jobs-results-meta">Loading career profiles…</p>
+    <div id="careerGuidesGrid" class="career-guides-grid"></div>
+  </section>
   <div id="jobDetailPanel" class="job-detail-panel" role="dialog" aria-modal="true" aria-labelledby="jobDetailTitle">
     <article class="job-detail-card">
       <button type="button" class="back-button" id="closeJobDetail">← Back to job offers</button>
@@ -2156,6 +2188,7 @@ footer{
       <div class="form-group"><label for="jobType">Employment type</label><select id="jobType" name="jobType" required><option value="">Choose type</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Freelance</option><option>Temporary</option><option>Internship</option></select></div>
       <div class="form-group"><label for="jobWorkplace">Workplace</label><select id="jobWorkplace" name="workplace" required><option value="">Choose workplace</option><option>On-site</option><option>Hybrid</option><option>Remote</option></select></div>
     </div>
+    <div class="form-group"><label for="jobCategory">Job category</label><select id="jobCategory" name="category" required><option value="">Choose a job category</option><option>Food &amp; Hospitality</option><option>Construction &amp; Skilled Trades</option><option>Manufacturing &amp; Production</option><option>Transport &amp; Logistics</option><option>Office &amp; Administration</option><option>Business &amp; Management</option><option>Retail &amp; Customer Service</option><option>Cleaning &amp; Sanitation</option><option>Security &amp; Events</option><option>Healthcare &amp; Medical</option><option>Education &amp; Training</option><option>Finance &amp; Accounting</option><option>Marketing &amp; Communications</option><option>IT, Software &amp; Data</option><option>Engineering &amp; Technology</option><option>Agriculture &amp; Farming</option><option>Beauty &amp; Personal Care</option><option>Legal &amp; Compliance</option><option>Arts, Media &amp; Creative</option><option>Remote &amp; Work From Home</option></select></div>
     <div class="marketplace-fields">
       <div class="form-group"><label for="jobCountry">Country</label><input id="jobCountry" name="country" required maxlength="80" placeholder="Country" autocomplete="country-name"></div>
       <div class="form-group"><label for="jobRegion">Region / State</label><input id="jobRegion" name="region" maxlength="100" placeholder="Region, state or province"></div>
