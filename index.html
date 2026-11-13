@@ -2972,10 +2972,12 @@ document
   .textContent =
     new Date().getFullYear();
 
-// Allow reviewers to open the live product/category view directly.
+// Allow direct links to the main marketplace sections.
 const initialView = new URLSearchParams(window.location.search).get("view");
 if (initialView === "products") {
   showView("buyProductsView");
+} else if (initialView === "jobs") {
+  showView("lookingJobView");
 }
 
 </script>
