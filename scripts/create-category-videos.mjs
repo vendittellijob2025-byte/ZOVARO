@@ -49,7 +49,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
     });
   }
   const filters=[
-    "[0:v]scale="+WIDTH+":"+HEIGHT+":force_original_aspect_ratio=increase,crop="+WIDTH+":"+HEIGHT+",eq=brightness=-0.08:saturation=0.92",
+    "scale="+WIDTH+":"+HEIGHT+":force_original_aspect_ratio=increase,crop="+WIDTH+":"+HEIGHT+",eq=brightness=-0.08:saturation=0.92",
     "drawbox=x=55:y=300:w=970:h=1260:color=black@0.82:t=fill",
     "drawbox=x=55:y=300:w=970:h=1260:color=0x00D9FF:t=6"
   ];
@@ -128,6 +128,7 @@ results.push(await makeVideo({
   caption:"Discover the world of luxury on ZOVARO — luxury cars, yachts, private aviation, villas, estates and watches. Explore the categories and curated opportunities. https://zovaro.vercel.app/",
   hashtags:["#ZOVARO","#LuxuryLifestyle","#Yachts","#PrivateJets","#LuxuryCars"]
 }));
+await fs.rm(temp,{recursive:true,force:true});
 await fs.writeFile(path.join(OUTPUT,"captions.json"),JSON.stringify({
   createdAt:new Date().toISOString(),
   videos:results.map(item=>({file:path.basename(item.file),duration:item.duration,musicSource:item.music,caption:item.caption,hashtags:item.hashtags}))
