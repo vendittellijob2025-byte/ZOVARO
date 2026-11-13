@@ -78,6 +78,10 @@ function publicRecord(record) {
   return {
     id: record.id, type: record.type, title: record.title, category: record.category || null,
     company: record.company || null, jobType: record.jobType || null, workplace: record.workplace || null,
+    country: record.country || null, region: record.region || null, city: record.city || null,
+    salaryText: record.salaryText || null, applicationUrl: record.applicationUrl || null,
+    sourceName: record.sourceName || null, sourceUrl: record.sourceUrl || null,
+    sourceType: record.sourceType || "employer-submitted",
     condition: record.condition || null, price: record.price ?? null, currency: record.currency || null,
     location: record.location, description: record.description,
     imageUrl: record.imageUrl || null,
@@ -107,6 +111,14 @@ function validateSubmission(body) {
     record.jobType=clean(body.jobType,30);
     record.workplace=clean(body.workplace,20);
     record.salaryText=clean(body.salaryText,100);
+    record.country=clean(body.country,80);
+    record.region=clean(body.region,100);
+    record.city=clean(body.city,100);
+    record.applicationUrl=clean(body.applicationUrl,500);
+    record.sourceType="employer-submitted";
+    record.sourceName=record.company;
+    record.sourceUrl=record.companyWebsite;
+    if(record.applicationUrl && !/^https:\/\//i.test(record.applicationUrl)) return { error:"Application URL must use HTTPS." };
     const validTypes=["Full-time","Part-time","Contract","Freelance","Temporary","Internship"];
     const validWorkplaces=["On-site","Hybrid","Remote"];
     if (record.company.length<2 || !websiteDomain(record.companyWebsite) || !validTypes.includes(record.jobType) || !validWorkplaces.includes(record.workplace)) return { error:"Please provide a company website, valid employer, employment type and workplace details." };
