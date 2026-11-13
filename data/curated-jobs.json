@@ -23,7 +23,7 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -32,7 +32,8 @@
       "Mexico"
     ],
     "sourceTitle": "Team Lead – Cloud Network Engineer",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-agentic-ai-developer-m365-copilot",
@@ -58,7 +59,7 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -67,7 +68,8 @@
       "Mexico"
     ],
     "sourceTitle": "Agentic AI Developer (Microsoft 365 Copilot)",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-gcp-enterprise-architect",
@@ -93,7 +95,7 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Brazil",
       "Argentina",
@@ -102,7 +104,8 @@
       "Mexico"
     ],
     "sourceTitle": "GCP Enterprise Architect",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-forward-deployed-engineer-conversational-ai",
@@ -128,7 +131,7 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -137,7 +140,8 @@
       "Mexico"
     ],
     "sourceTitle": "Forward Deployed Engineer – Conversational AI",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-salesforce-business-analyst",
@@ -163,13 +167,14 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil"
     ],
     "sourceTitle": "Salesforce Business Analyst",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-senior-quality-engineer-mobile",
@@ -195,12 +200,13 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina"
     ],
     "sourceTitle": "Senior Quality Engineer (Mobile)",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-lead-infrastructure-engineer",
@@ -226,12 +232,13 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Mexico"
     ],
     "sourceTitle": "Lead Infrastructure Engineer",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-experience-technical-consultant-agentic-ai",
@@ -257,14 +264,15 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
       "Colombia"
     ],
     "sourceTitle": "Experience & Technical Consultant (Agentic AI)",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "siblings-release-engineer-mobile",
@@ -290,12 +298,13 @@
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
     "verifiedAt": "2026-11-13",
-    "verificationNote": "The employer's careers page listed this role among open positions updated 11 November 2026.",
+    "verificationNote": "Official employer source checked on 2026-11-13; the role title is still present on the source page.",
     "countries": [
       "Argentina"
     ],
     "sourceTitle": "Release Engineer (Mobile)",
-    "status": "open"
+    "status": "open",
+    "statusReason": ""
   },
   {
     "id": "canonical-alliances-field-engineer-3433732",
