@@ -104,7 +104,12 @@
       addText(card, "p", "marketplace-location", item.location);
       if (type === "job") {
         const salary = item.salaryText ? " · " + item.salaryText : "";
-        if (salary) addText(card, "p", "marketplace-price", salary);
+        if (salary) {
+          addText(card, "p", "marketplace-price", salary);
+          salaryUsd(item.salaryText).then(converted => {
+            if (converted && card.isConnected) addText(card, "p", "marketplace-price", "Approx. " + converted.text + " USD" + (converted.date ? " · " + converted.date : ""));
+          });
+        }
         const details = document.createElement("button");
         details.type = "button";
         details.className = "job-open-details";
@@ -183,7 +188,6 @@
 
   function refreshJobGeography() {
     if (!countrySelect) return;
-    setOptions(countrySelect, jobItems.map(x => x.country), "All countries");
     const country = countrySelect.value;
     const scoped = jobItems.filter(x => !country || x.country === country);
     setOptions(regionSelect, scoped.map(x => x.region), "All regions / states");
