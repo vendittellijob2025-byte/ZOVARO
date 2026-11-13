@@ -188,6 +188,7 @@
 
   function refreshJobGeography() {
     if (!countrySelect) return;
+    if (countrySelect.options.length <= 2 && jobItems.length) setOptions(countrySelect, [...jobItems.map(x=>x.country), "Remote / Worldwide"], "All countries");
     const country = countrySelect.value;
     const scoped = jobItems.filter(x => !country || x.country === country);
     setOptions(regionSelect, scoped.map(x => x.region), "All regions / states");
