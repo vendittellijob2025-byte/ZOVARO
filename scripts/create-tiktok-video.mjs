@@ -1026,6 +1026,18 @@ for (
 
     `[softbackground]` +
       `drawbox=x=55:y=35:w=970:h=1830:color=${cardBackgroundColor}:t=fill` +
+      `[adaptiveimagebackground]`,
+
+    /*
+      FIXED TEXT AREA
+
+      The upper product-image area keeps its automatic
+      white/black contrast background. The lower area
+      behind every text element is always solid black.
+    */
+
+    `[adaptiveimagebackground]` +
+      `drawbox=x=55:y=950:w=970:h=915:color=black:t=fill` +
       `[cardbackground]`,
 
     `[0:v]` +
