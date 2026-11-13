@@ -203,6 +203,30 @@ async function downloadFile(url, outputPath) {
   );
 }
 
+async function detectProductCardBackground(imagePath, index) {
+  const samplePath = `${TEMP_DIR}/brightness-${index}.pgm`;
+
+  await run("ffmpeg", [
+    "-y",
+    "-i", imagePath,
+    "-vf", "crop=iw*0.60:ih*0.60:(iw-ow)/2:(ih-oh)/2,scale=1:1:flags=area,format=gray",
+    "-frames:v", "1",
+    samplePath
+  ]);
+
+  const pgm = await fs.readFile(samplePath);
+  const headerEnd = pgm.indexOf(10, pgm.indexOf(10, pgm.indexOf(10) + 1) + 1);
+  if (headerEnd < 0 || headerEnd >= pgm.length) {
+    throw new Error("Unable to read product brightness sample.");
+  }
+
+  const luminance = pgm[headerEnd + 1];
+  const background = luminance < 128 ? "white" : "black";
+
+  console.log(`Product center luminance: ${luminance}; unified card background: ${background}`);
+  return background;
+}
+
 function formatMoney(value, currency) {
   const number = Number(value);
 
@@ -536,6 +560,9 @@ for (
     product.imageLink,
     imagePath
   );
+
+  const cardBackgroundColor =
+    await detectProductCardBackground(imagePath, index + 1);
 
   const regularPrice =
     Number(product.price);
@@ -997,13 +1024,17 @@ for (
       `t=fill` +
       `[softbackground]`,
 
+    `[softbackground]` +
+      `drawbox=x=55:y=35:w=970:h=1830:color=${cardBackgroundColor}:t=fill` +
+      `[cardbackground]`,
+
     `[0:v]` +
       `scale=900:880:force_original_aspect_ratio=decrease,` +
       `format=rgba,` +
       `colorchannelmixer=aa=${PRODUCT_OPACITY}` +
       `[product]`,
 
-    `[softbackground][product]` +
+    `[cardbackground][product]` +
       `overlay=(W-w)/2:55:format=auto` +
       `[scene1]`,
 
@@ -1021,9 +1052,7 @@ for (
       `y=${categoryY}:` +
       `line_spacing=8:` +
       `expansion=none:` +
-      `box=1:` +
-      `boxcolor=${TEXT_BOX_COLOR}:` +
-      `boxborderw=${TEXT_BOX_BORDER}` +
+      ` +
       `[text1]`,
 
     /*
@@ -1040,9 +1069,7 @@ for (
       `y=${titleY}:` +
       `line_spacing=12:` +
       `expansion=none:` +
-      `box=1:` +
-      `boxcolor=${TEXT_BOX_COLOR}:` +
-      `boxborderw=${TEXT_BOX_BORDER}` +
+      ` +
       `[text2]`,
 
     /*
@@ -1053,15 +1080,13 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${merchantText}':` +
-      `fontcolor=white:borderw=1:bordercolor=0x007BFF:shadowcolor=0x00BFFF@0.90:shadowx=0:shadowy=0:` +
+      `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:shadowcolor=0x00BFFF@0.90:shadowx=0:shadowy=0:` +
       `fontsize=26:` +
       `x=(w-text_w)/2:` +
       `y=${merchantY}:` +
       `line_spacing=8:` +
       `expansion=none:` +
-      `box=1:` +
-      `boxcolor=${TEXT_BOX_COLOR}:` +
-      `boxborderw=${TEXT_BOX_BORDER}` +
+      ` +
       `[text3]`,
 
     /*
@@ -1072,14 +1097,12 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
       `textfile='${priceTextFile}':` +
-      `fontcolor=111111:` +
+      `fontcolor=0x00D9FF:` +
       `fontsize=70:` +
       `x=(w-text_w)/2:` +
       `y=${priceY}:` +
       `expansion=none:` +
-      `box=1:` +
-      `boxcolor=${TEXT_BOX_COLOR}:` +
-      `boxborderw=${TEXT_BOX_BORDER}` +
+      ` +
       `[text4]`
   ];
 
@@ -1096,14 +1119,12 @@ for (
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
         `textfile='${oldPriceTextFile}':` +
-        `fontcolor=0xA5C8E8:borderw=1:bordercolor=0x174EA6:` +
+        `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:` +
         `fontsize=34:` +
         `x=(w-text_w)/2:` +
         `y=${oldPriceY}:` +
         `expansion=none:` +
-        `box=1:` +
-        `boxcolor=${TEXT_BOX_COLOR}:` +
-        `boxborderw=${TEXT_BOX_BORDER}` +
+        ` +
         `[text5]`
     );
   } else {
@@ -1125,14 +1146,12 @@ for (
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
         `textfile='${discountTextFile}':` +
-        `fontcolor=111111:` +
+        `fontcolor=0x00D9FF:` +
         `fontsize=38:` +
         `x=(w-text_w)/2:` +
         `y=${discountY}:` +
         `expansion=none:` +
-        `box=1:` +
-        `boxcolor=${TEXT_BOX_COLOR}:` +
-        `boxborderw=${TEXT_BOX_BORDER}` +
+        ` +
         `[text6]`
     );
   } else {
