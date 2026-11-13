@@ -621,7 +621,12 @@ function showResults(
   activeResultsTitle = title;
   activeResultsMeta = meta;
 
-  $("#resultsTitle").textContent = activeResultsTitle;
+  const resultsTitle = $("#resultsTitle");
+  if (resultsTitle) resultsTitle.textContent = activeResultsTitle;
+
+  const resultsSection = $("#trending");
+  if (resultsSection) resultsSection.classList.remove("hidden");
+
   renderResultPage(false);
 
   $("#trending").scrollIntoView({
@@ -632,13 +637,9 @@ function showResults(
 
 
 function render() {
+  // On entering SHOP, show only the category tiles.
+  // Product results appear after an explicit search or category selection.
   renderCategories();
-
-  showResults(
-    PRODUCTS.filter(p => p.type === "trending"),
-    "Popular Discoveries"
-  );
-
 }
 
 
