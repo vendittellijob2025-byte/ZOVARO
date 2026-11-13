@@ -34,7 +34,8 @@ for(const job of jobs){
 for(const id of ["jobCountryFilter","jobRegionFilter","jobCityFilter","jobCategoryFilter","careerCategoryFilter","careerGuideSearch","careerGuidesGrid","careerGuidesMeta"]){
   if(!html.includes('id="'+id+'"'))errors.push("Missing jobs UI element: "+id);
 }
-if(!html.includes('showView("lookingJobView")'))errors.push("Missing direct JOBS view routing.");
+if(!html.includes('id="homeView"')||!html.includes('id="openJobs"')||!html.includes('go("jobChoiceView")')||!html.includes('go("lookingJobView")'))errors.push("Missing homepage-to-JOBS navigation.");
+if(/new URLSearchParams\\(window\\.location\\.search\\)\\.get\\(["']view["']\\)/.test(html))errors.push("A query parameter must not override the default homepage.");
 if(!html.includes('id="jobListingForm"')||!html.includes('name="category"'))errors.push("Employer job form does not capture a category.");
 if(!detailHtml.includes('src="/job-detail.js"'))errors.push("Standalone job detail page is missing its renderer.");
 if(!clientJs.includes('/data/curated-jobs.json')||!clientJs.includes('/data/career-guides.json'))errors.push("Marketplace does not load curated jobs and career guides.");
