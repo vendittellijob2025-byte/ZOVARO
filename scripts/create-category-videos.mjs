@@ -45,7 +45,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
     const scene=scenes[i];
     textInputs.push({
       title:await textFile(name+"-"+i+"-title.txt",wrap(scene.title,34)),
-      subtitle:await textFile(name+"-"+i+"-subtitle.txt",wrap(scene.subtitle,42))
+      subtitle:await textFile(name+"-"+i+"-subtitle.txt",wrap(scene.subtitle,55))
     });
   }
   const filters=[
@@ -56,7 +56,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
   scenes.forEach((scene,i)=>{
     const start=i*12, end=i===scenes.length-1?38:(i+1)*12;
     filters.push(draw(textInputs[i].title,start,end,scene.titleSize||50,scene.titleY||540));
-    filters.push(draw(textInputs[i].subtitle,start,end,scene.subtitleSize||34,scene.subtitleY||900));
+    filters.push(draw(textInputs[i].subtitle,start,end,scene.subtitleSize||30,scene.subtitleY||900));
   });
   filters.push(draw(await textFile(name+"-footer.txt","ZOVARO WORLDWIDE · DISCOVER BETTER. SHOP SMARTER."),0,40,29,1400));
   const filterComplex="[0:v]"+filters.join(",")+"[base];[2:v]scale=360:-1[logo];[base][logo]overlay=(W-w)/2:85:format=auto,fade=t=in:st=0:d=1,fade=t=out:st=38:d=2,format=yuv420p[v]";
@@ -79,7 +79,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
 }
 
 const jobScenes=selectedJobs.length>=1?[
-  {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Browse real openings on ZOVARO JOBS Worldwide."},
+  {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Browse real job openings on ZOVARO."},
   {title:""+selectedJobs[0].title,subtitle:[selectedJobs[0].company,selectedJobs[0].location].filter(Boolean).join(" · ")},
   {title:selectedJobs[1]?.title||"REMOTE & WORK FROM HOME",subtitle:selectedJobs[2]?[selectedJobs[2].title,selectedJobs[2].company].join(" · "):"Explore more verified roles and career categories."}
 ]:[
@@ -88,7 +88,7 @@ const jobScenes=selectedJobs.length>=1?[
   {title:"EXPLORE CAREER PATHS",subtitle:"Discover professions, typical duties and skills on ZOVARO."}
 ];
 const remoteScenes=[
-  {title:"REMOTE & WORK FROM HOME",subtitle:"Explore professional paths designed for distributed work."},
+  {title:"REMOTE & WORK FROM HOME",subtitle:"Explore flexible remote career paths on ZOVARO."},
   {title:remoteRoles[0]?.title||"REMOTE SOFTWARE DEVELOPER",subtitle:remoteRoles[1]?.title||"REMOTE GRAPHIC DESIGNER"},
   {title:remoteRoles[2]?.title||"REMOTE CUSTOMER SUPPORT",subtitle:"Career guides and current openings on ZOVARO JOBS."}
 ];
