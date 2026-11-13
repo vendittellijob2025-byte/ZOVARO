@@ -122,6 +122,7 @@ function validateSubmission(body) {
     record.workplace=clean(body.workplace,20);
     record.salaryText=clean(body.salaryText,100);
     record.country=clean(body.country,80);
+    if(!record.country) return { error:"Please specify the job country. Use Remote / Worldwide for fully remote roles." };
     record.region=clean(body.region,100);
     record.city=clean(body.city,100);
     record.applicationUrl=clean(body.applicationUrl,500);
