@@ -106,7 +106,7 @@
         const salary = item.salaryText ? " · " + item.salaryText : "";
         if (salary) {
           addText(card, "p", "marketplace-price", salary);
-          salaryUsd(item.salaryText).then(converted => {
+          salaryUsd(item.salaryText, item.country).then(converted => {
             if (converted && card.isConnected) addText(card, "p", "marketplace-price", "Approx. " + converted.text + " USD" + (converted.date ? " · " + converted.date : ""));
           });
         }
@@ -223,7 +223,7 @@
     }
   }
   const fxRates = new Map();
-  function parseSalaryCurrency(text) {
+  function parseSalaryCurrency(text, country) {
     const value = String(text || "");
     const upper = value.toUpperCase();
     const codes = ["USD","EUR","GBP","CHF","CAD","AUD","NZD","INR","BRL","COP","MXN","PLN","SEK","NOK","DKK","JPY","CNY","SGD","HKD","ZAR","AED","TRY","CZK","HUF","RON","THB","IDR","MYR","PHP","ILS","KRW"];
@@ -237,18 +237,26 @@
     if (value.includes("₩")) return "KRW";
     if (value.includes("₺")) return "TRY";
     if (value.includes("د.إ")) return "AED";
-    if (value.includes("$")) return null; // $ alone is ambiguous (USD, CAD, AUD, etc.).
+    if (value.includes("$")) {
+      const countryCurrency = {
+        "United States":"USD","Canada":"CAD","Australia":"AUD","New Zealand":"NZD",
+        "Singapore":"SGD","Hong Kong":"HKD","Liberia":"USD","Ecuador":"USD",
+        "Panama":"USD","El Salvador":"USD","Timor-Leste":"USD","Marshall Islands":"USD",
+        "Micronesia":"USD","Palau":"USD"
+      };
+      return countryCurrency[country] || null;
+    } // A dollar sign alone is ambiguous without a reliable country.
     return null;
   }
   function parseSalaryNumbers(text) {
-    const matches = [...String(text || "").matchAll(/\\d[\\d., ]*/g)].map(match => match[0].trim()).filter(Boolean);
+    const matches = [...String(text || "").matchAll(/\d[\d., ]*/g)].map(match => match[0].trim()).filter(Boolean);
     return matches.slice(0,2).map(raw => {
       let value = raw.replace(/ /g,"");
       const lastComma=value.lastIndexOf(","),lastDot=value.lastIndexOf(".");
       if(lastComma>=0&&lastDot>=0){
         const decimal=lastComma>lastDot?",":".";
         value=value.replace(/[.,]/g,"");
-        const decimals=raw.slice(Math.max(lastComma,lastDot)+1).replace(/\\D/g,"");
+        const decimals=raw.slice(Math.max(lastComma,lastDot)+1).replace(/\D/g,"");
         value=value.slice(0,-decimals.length)+"."+decimals;
       } else if(lastComma>=0||lastDot>=0){
         const sep=lastComma>=0?",":".",parts=value.split(sep);
@@ -259,8 +267,8 @@
       return Number.isFinite(number)?number:null;
     }).filter(value=>value!==null);
   }
-  async function salaryUsd(text) {
-    const currency=parseSalaryCurrency(text);
+  async function salaryUsd(text, country) {
+    const currency=parseSalaryCurrency(text, country);
     if(!currency) return null;
     const numbers=parseSalaryNumbers(text);
     if(!numbers.length) return null;
@@ -276,7 +284,7 @@
     } catch { return null; }
   }
 
-  function openJobDetail(item) {
+  function openJobDetail(item, updateUrl = true) {
     const panel = $("jobDetailPanel");
     if (!panel) return;
     $("jobDetailTitle").textContent = item.title || "Job opportunity";
@@ -293,7 +301,7 @@
       strong.textContent=label;span.textContent=value;cell.append(strong,span);meta.appendChild(cell);
     });
     if(item.salaryText){
-      salaryUsd(item.salaryText).then(converted=>{
+      salaryUsd(item.salaryText, item.country).then(converted=>{
         if(!converted || !panel.classList.contains("open")) return;
         const cell=document.createElement("div"),strong=document.createElement("strong"),span=document.createElement("span");
         strong.textContent="Estimated salary in USD";
@@ -311,15 +319,24 @@
     if(item.sourceUrl && /^https:\/\//i.test(item.sourceUrl)) addSafeLink(source,item.sourceUrl,"OPEN ORIGINAL SOURCE");
     panel.classList.add("open");
     document.body.style.overflow="hidden";
+    if(updateUrl && item.id){
+      const url=new URL(window.location.href);url.searchParams.set("job",item.id);
+      window.history.pushState({zovaroJobId:item.id},"",url);
+    }
   }
   function addSafeLink(parent,url,label) {
     if(!/^https:\/\//i.test(url)) return;
     const link=document.createElement("a");link.href=url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=label;parent.appendChild(link);
   }
-  function closeJobDetail() {
+  function closeJobDetail(updateUrl = true) {
     $("jobDetailPanel")?.classList.remove("open");
     document.body.style.overflow="";
+    if(updateUrl){
+      const url=new URL(window.location.href);url.searchParams.delete("job");
+      window.history.replaceState({}, "", url);
+    }
   }
+  window.addEventListener("popstate",()=>closeJobDetail(false));
   $("closeJobDetail")?.addEventListener("click",closeJobDetail);
   $("jobDetailPanel")?.addEventListener("click",event=>{if(event.target.id==="jobDetailPanel")closeJobDetail();});
   countrySelect?.addEventListener("change",()=>{refreshJobGeography();applyJobFilters();});
@@ -376,6 +393,24 @@
   $("jobSearchInput")?.addEventListener("input", filterJobs);
 
   loadWorldCountries();
-  loadListings("job");
+  loadListings("job").then(async () => {
+    const jobId = new URLSearchParams(window.location.search).get("job");
+    if (!jobId) return;
+    const view = $("lookingJobView");
+    if (view) {
+      document.querySelectorAll(".view").forEach(el=>el.classList.add("hidden"));
+      view.classList.remove("hidden");
+    }
+    const existing = jobItems.find(item=>item.id===jobId);
+    if(existing){openJobDetail(existing,false);return;}
+    try{
+      const response=await fetch(API+"?type=job&id="+encodeURIComponent(jobId),{cache:"no-store"});
+      if(!response.ok) throw new Error("Job not found");
+      const item=await response.json();
+      if(item && item.id) openJobDetail(item,false);
+    }catch{
+      const empty=$("jobListingsEmpty");if(empty){empty.textContent="This job offer is no longer available.";empty.classList.remove("hidden");}
+    }
+  });
   loadListings("product");
 })();
