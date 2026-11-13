@@ -12,6 +12,7 @@ on:
       - "scripts/select-product.mjs"
       - "scripts/create-promotion.mjs"
       - "scripts/create-tiktok-video.mjs"
+      - "data/selected-products.json"
 
 permissions:
   contents: write
@@ -30,7 +31,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v24
         with:
           node-version: 24
           package-manager-cache: false
