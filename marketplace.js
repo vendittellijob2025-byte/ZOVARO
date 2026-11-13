@@ -74,6 +74,10 @@
       const card = document.createElement("article");
       card.className = type === "product" ? "marketplace-listing used-listing" : "marketplace-listing";
       if (type === "product") card.dataset.category = item.category || "Other";
+      if (type === "job") {
+        card.dataset.jobCard = "true";
+        card.dataset.jobId = item.id || "";
+      }
       addText(card, "span", "marketplace-kicker", type === "job" ? [item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
       if (item.imageUrl) {
         const image = document.createElement("img");
@@ -98,7 +102,21 @@
       }
       if (item.price != null) addText(card, "p", "marketplace-price", new Intl.NumberFormat(undefined, { style: "currency", currency: item.currency || "USD" }).format(Number(item.price)));
       addText(card, "p", "marketplace-location", item.location);
-      addText(card, "p", "marketplace-description", item.description);
+      if (type === "job") {
+        const salary = item.salaryText ? " · " + item.salaryText : "";
+        if (salary) addText(card, "p", "marketplace-price", salary);
+        const details = document.createElement("button");
+        details.type = "button";
+        details.className = "job-open-details";
+        details.textContent = "VIEW FULL JOB DETAILS";
+        details.addEventListener("click", () => openJobDetail(item));
+        card.appendChild(details);
+        card.addEventListener("click", event => {
+          if (event.target === card || event.target.tagName === "H3") openJobDetail(item);
+        });
+      } else {
+        addText(card, "p", "marketplace-description", item.description);
+      }
       if (item.contactEmail) {
         const link = document.createElement("a");
         link.className = "marketplace-contact";
@@ -129,6 +147,100 @@
     }
   }
 
+
+  const jobItems = [];
+  const countrySelect = $("jobCountryFilter");
+  const regionSelect = $("jobRegionFilter");
+  const citySelect = $("jobCityFilter");
+
+  function uniqueSorted(values) {
+    return [...new Set(values.map(value => String(value || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
+  }
+  function setOptions(select, values, placeholder) {
+    if (!select) return;
+    const current = select.value;
+    select.replaceChildren(new Option(placeholder, ""));
+    uniqueSorted(values).forEach(value => select.add(new Option(value, value)));
+    select.value = values.includes(current) ? current : "";
+  }
+  function refreshJobGeography() {
+    if (!countrySelect) return;
+    setOptions(countrySelect, jobItems.map(x => x.country), "All countries");
+    const country = countrySelect.value;
+    const scoped = jobItems.filter(x => !country || x.country === country);
+    setOptions(regionSelect, scoped.map(x => x.region), "All regions / states");
+    regionSelect.disabled = !country || !scoped.some(x => x.region);
+    const region = regionSelect.value;
+    const cityScope = scoped.filter(x => !region || x.region === region);
+    setOptions(citySelect, cityScope.map(x => x.city), "All cities");
+    citySelect.disabled = !region || !cityScope.some(x => x.city);
+  }
+  function selectedJobItems() {
+    const country = countrySelect?.value || "";
+    const region = regionSelect?.value || "";
+    const city = citySelect?.value || "";
+    const q = ($("jobSearchInput")?.value || "").trim().toLowerCase();
+    return jobItems.filter(item =>
+      (!country || item.country === country) &&
+      (!region || item.region === region) &&
+      (!city || item.city === city) &&
+      (!q || [item.title,item.company,item.location,item.description,item.country,item.region,item.city].join(" ").toLowerCase().includes(q))
+    );
+  }
+  function applyJobFilters() {
+    const selected = selectedJobItems();
+    const cards = $("jobListings")?.querySelectorAll('[data-job-card="true"]') || [];
+    const visibleIds = new Set(selected.map(x => x.id));
+    cards.forEach(card => card.classList.toggle("hidden", !visibleIds.has(card.dataset.jobId)));
+    const meta = $("jobResultsMeta");
+    if (meta) meta.textContent = selected.length + " matching opportunities in the currently loaded results.";
+    const empty = $("jobListingsEmpty");
+    if (empty) {
+      empty.textContent = selected.length ? "" : "No jobs match these filters. Try another location or search term.";
+      empty.classList.toggle("hidden", selected.length > 0);
+    }
+  }
+  function openJobDetail(item) {
+    const panel = $("jobDetailPanel");
+    if (!panel) return;
+    $("jobDetailTitle").textContent = item.title || "Job opportunity";
+    $("jobDetailCompany").textContent = [item.company, item.location].filter(Boolean).join(" · ");
+    const meta = $("jobDetailMeta");
+    meta.replaceChildren();
+    const entries = [
+      ["Country",item.country],["Region / State",item.region],["City",item.city],
+      ["Employment type",item.jobType],["Workplace",item.workplace],
+      ["Compensation",item.salaryText],["Published / verified",item.approvedAt ? new Date(item.approvedAt).toLocaleDateString() : ""]
+    ];
+    entries.filter(x=>x[1]).forEach(([label,value])=>{
+      const cell=document.createElement("div"),strong=document.createElement("strong"),span=document.createElement("span");
+      strong.textContent=label;span.textContent=value;cell.append(strong,span);meta.appendChild(cell);
+    });
+    $("jobDetailDescription").textContent = item.description || "Please follow the official application link for the full role description.";
+    const actions=$("jobDetailActions");actions.replaceChildren();
+    if(item.applicationUrl) addSafeLink(actions,item.applicationUrl,"APPLY ON COMPANY WEBSITE");
+    else if(item.companyWebsite) addSafeLink(actions,item.companyWebsite,"VISIT OFFICIAL COMPANY WEBSITE");
+    if(item.contactEmail){const mail=document.createElement("a");mail.href="mailto:"+item.contactEmail;mail.textContent="CONTACT EMPLOYER";actions.appendChild(mail);}
+    const source=$("jobDetailSource");
+    source.textContent = item.sourceName ? "Source: "+item.sourceName+(item.sourceUrl?" · ":"") : "Employer-submitted opportunity.";
+    if(item.sourceUrl && /^https:\/\//i.test(item.sourceUrl)) addSafeLink(source,item.sourceUrl,"OPEN ORIGINAL SOURCE");
+    panel.classList.add("open");
+    document.body.style.overflow="hidden";
+  }
+  function addSafeLink(parent,url,label) {
+    if(!/^https:\/\//i.test(url)) return;
+    const link=document.createElement("a");link.href=url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=label;parent.appendChild(link);
+  }
+  function closeJobDetail() {
+    $("jobDetailPanel")?.classList.remove("open");
+    document.body.style.overflow="";
+  }
+  $("closeJobDetail")?.addEventListener("click",closeJobDetail);
+  $("jobDetailPanel")?.addEventListener("click",event=>{if(event.target.id==="jobDetailPanel")closeJobDetail();});
+  countrySelect?.addEventListener("change",()=>{refreshJobGeography();applyJobFilters();});
+  regionSelect?.addEventListener("change",()=>{refreshJobGeography();applyJobFilters();});
+  citySelect?.addEventListener("change",applyJobFilters);
+
   const cursors = { job: null, product: null };
   const loadedCounts = { job: 0, product: 0 };
 
@@ -144,6 +256,12 @@
       if (!response.ok) throw new Error(data.error || "Unable to load listings.");
       const items = Array.isArray(data) ? data : [];
       renderListings(container, items, type, append);
+      if (type === "job") {
+        if (!append) jobItems.length = 0;
+        jobItems.push(...items);
+        refreshJobGeography();
+        applyJobFilters();
+      }
       loadedCounts[type] += items.length;
       cursors[type] = response.headers.get("X-Zovaro-Next-Cursor") || null;
       const moreButton = $(type === "job" ? "jobLoadMore" : "usedLoadMore");
@@ -157,21 +275,7 @@
     }
   }
 
-  function filterJobs() {
-    const query = ($("jobSearchInput")?.value || "").trim().toLowerCase();
-    const cards = $("jobListings")?.querySelectorAll(".marketplace-listing") || [];
-    let visible = 0;
-    cards.forEach(card => {
-      const show = !query || card.textContent.toLowerCase().includes(query);
-      card.classList.toggle("hidden", !show);
-      if (show) visible++;
-    });
-    const empty = $("jobListingsEmpty");
-    if (empty && cards.length) {
-      empty.textContent = visible ? "" : "No jobs match your search.";
-      empty.classList.toggle("hidden", visible > 0);
-    }
-  }
+  function filterJobs() { applyJobFilters(); }
 
   $("productListingForm")?.addEventListener("submit", event => {
     event.preventDefault();
