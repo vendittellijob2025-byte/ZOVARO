@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - feature/global-jobs-portal
+      - fix/shop-gif-loop
     paths:
       - "scripts/create-category-videos.mjs"
       - "data/curated-jobs.json"
