@@ -3,12 +3,13 @@ name: ZOVARO - Daily JOBS and LUXURY videos
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 12 * * *"
+    - cron: "0 14 * * *"
   push:
     branches:
       - main
       - feature/global-jobs-portal
       - fix/shop-gif-loop
+      - feature/daily-industry-video
     paths:
       - "scripts/create-category-videos.mjs"
       - "data/curated-jobs.json"
