@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 const CATALOG_PATH = "data/catalog.json";
 const SELECTED_PATH = "data/selected-product.json";
 const SELECTED_PRODUCTS_PATH = "data/selected-products.json";
+const DAILY_PRODUCT_TARGET = 24;
 
 const catalogText =
   await fs.readFile(
@@ -272,7 +273,7 @@ for (
 
 
   if (
-    selectedProducts.length >= 8
+    selectedProducts.length >= DAILY_PRODUCT_TARGET
   ) {
     break;
   }
@@ -302,7 +303,7 @@ for (
 ) {
 
   if (
-    selectedProducts.length >= 8
+    selectedProducts.length >= DAILY_PRODUCT_TARGET
   ) {
     break;
   }
@@ -324,7 +325,7 @@ for (
    ========================================================= */
 
 if (
-  selectedProducts.length < 8
+  selectedProducts.length < DAILY_PRODUCT_TARGET
 ) {
 
   for (
@@ -333,7 +334,7 @@ if (
   ) {
 
     if (
-      selectedProducts.length >= 8
+      selectedProducts.length >= DAILY_PRODUCT_TARGET
     ) {
       break;
     }
