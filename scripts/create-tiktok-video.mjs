@@ -65,7 +65,7 @@ const BACKGROUND_WHITE_OVERLAY = 0.10;
   This opacity was visually approved.
 */
 
-const TEXT_BOX_COLOR = "white@0.82";
+const TEXT_BOX_COLOR = "black@0.90";
 const TEXT_BOX_BORDER = 18;
 
 /*
@@ -429,8 +429,7 @@ console.log(
 );
 
 const logoCandidates = [
-  "assets/zovaro-logo.png",
-  "Logo ZOVARO con globo orbitante al neon (1).png"
+  "assets/zovaro-logo.png"
 ];
 
 let logoPath = null;
@@ -1016,7 +1015,7 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${categoryText}':` +
-      `fontcolor=444444:` +
+      `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:shadowcolor=0x00BFFF@0.95:shadowx=0:shadowy=0:` +
       `fontsize=28:` +
       `x=(w-text_w)/2:` +
       `y=${categoryY}:` +
@@ -1035,7 +1034,7 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
       `textfile='${nameText}':` +
-      `fontcolor=111111:` +
+      `fontcolor=0x38BDF8:borderw=2:bordercolor=0x006BFF:shadowcolor=0x00BFFF@0.95:shadowx=0:shadowy=0:` +
       `fontsize=46:` +
       `x=(w-text_w)/2:` +
       `y=${titleY}:` +
@@ -1054,7 +1053,7 @@ for (
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${merchantText}':` +
-      `fontcolor=555555:` +
+      `fontcolor=white:borderw=1:bordercolor=0x007BFF:shadowcolor=0x00BFFF@0.90:shadowx=0:shadowy=0:` +
       `fontsize=26:` +
       `x=(w-text_w)/2:` +
       `y=${merchantY}:` +
@@ -1097,7 +1096,7 @@ for (
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
         `textfile='${oldPriceTextFile}':` +
-        `fontcolor=777777:` +
+        `fontcolor=0xA5C8E8:borderw=1:bordercolor=0x174EA6:` +
         `fontsize=34:` +
         `x=(w-text_w)/2:` +
         `y=${oldPriceY}:` +
@@ -1260,7 +1259,7 @@ await run(
       `[finalscene]` +
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
-        `text='DISCOVER. SHARE. SHOP.':` +
+        `text='ZOVARO WORLDWIDE':` +
         `fontcolor=white:` +
         `fontsize=52:` +
         `x=(w-text_w)/2:` +
@@ -1270,7 +1269,7 @@ await run(
       `[finaltext1]` +
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
-        `text='Products and deals through ZOVARO':` +
+        `text='SHOP & JOB | DISCOVER BETTER. SHOP SMARTER.':` +
         `fontcolor=white:` +
         `fontsize=32:` +
         `x=(w-text_w)/2:` +
@@ -1359,7 +1358,7 @@ await run(
       `[endingscene]` +
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
-        `text='DISCOVER. SHARE. SHOP.':` +
+        `text='ZOVARO WORLDWIDE':` +
         `fontcolor=white:` +
         `fontsize=52:` +
         `x=(w-text_w)/2:` +
@@ -1370,7 +1369,7 @@ await run(
       `[endingtext1]` +
         `drawtext=` +
         `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
-        `text='Products and deals through ZOVARO':` +
+        `text='SHOP & JOB | DISCOVER BETTER. SHOP SMARTER.':` +
         `fontcolor=white:` +
         `fontsize=32:` +
         `x=(w-text_w)/2:` +
