@@ -129,6 +129,14 @@ results.push(await makeVideo({
   hashtags:["#ZOVARO","#RemoteWork","#WorkFromHome","#DigitalCareers"]
 }));
 results.push(await makeVideo({
+  name:"ZOVARO-INDUSTRY-CAREERS",
+  background:"assets/job-visual.png",
+  music:MUSIC_DEFAULT,
+  scenes:industryScenes,
+  caption:"Explore career paths in food and hospitality, construction, skilled trades and logistics on ZOVARO JOBS Worldwide. These are career guides; live vacancies are listed separately. https://zovaro.vercel.app/?view=jobs",
+  hashtags:["#ZOVARO","#HospitalityJobs","#ConstructionJobs","#SkilledTrades"]
+}));
+results.push(await makeVideo({
   name:"ZOVARO-LUXURY-DAILY",
   background:"assets/Offerte Esclusive di Lusso Dorato.png",
   music:MUSIC_LUXURY,
