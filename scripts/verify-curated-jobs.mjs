@@ -31,10 +31,15 @@ async function getSource(url) {
 }
 
 const jobs = JSON.parse(await fs.readFile(PATH, "utf8"));
-let open = 0, review = 0, unavailable = 0;
+let open = 0, review = 0, unavailable = 0, manual = 0;
 
 for (const job of jobs) {
   try {
+    if (job.verificationMode === "manual") {
+      manual++;
+      console.log(job.id + ": retained for manual source verification; last verified " + (job.verifiedAt || "unknown"));
+      continue;
+    }
     if (!job.sourceUrl || !/^https:\/\//i.test(job.sourceUrl) || !job.sourceTitle) {
       job.status = "needs_review";
       job.statusReason = "Missing official source URL or source title.";
@@ -58,15 +63,18 @@ for (const job of jobs) {
       job.statusReason = "";
       job.verificationNote = "Official employer source checked on " + TODAY + "; the role title is still present on the source page.";
       open++;
+      console.log(job.id + ": open; title found on official source.");
     } else {
       job.status = "needs_review";
       job.statusReason = "Role title was not found on the official source page; withheld pending manual confirmation.";
       review++;
+      console.log(job.id + ": needs review; title not found on source.");
     }
   } catch (error) {
     job.status = "temporarily_unverified";
     job.statusReason = "Source check failed: " + String(error?.message || "network error").slice(0, 180) + ". Listing withheld until a successful check.";
     unavailable++;
+    console.log(job.id + ": temporarily unverified; " + job.statusReason);
   }
 }
 
@@ -75,3 +83,4 @@ console.log("ZOVARO JOBS source check completed: " + TODAY);
 console.log("Open and source-visible: " + open);
 console.log("Needs manual review: " + review);
 console.log("Temporarily unverified: " + unavailable);
+console.log("Manual source checks retained for AI review: " + manual);
