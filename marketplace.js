@@ -165,42 +165,135 @@
   function uniqueSorted(values) {
     return [...new Set(values.map(value => String(value || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
   }
-  function setOptions(select, values, placeholder) {
+  function setOptions(select, values, placeholder, selected = "") {
     if (!select) return;
-    const current = select.value;
     select.replaceChildren(new Option(placeholder, ""));
     uniqueSorted(values).forEach(value => select.add(new Option(value, value)));
-    select.value = values.includes(current) ? current : "";
+    select.value = values.includes(selected) ? selected : "";
+  }
+
+  const GEO_API = "https://countriesnow.space/api/v0.1";
+  const geoCache = { states: new Map(), cities: new Map() };
+  let worldCountryNames = [];
+  let geoRequest = 0;
+
+  async function geoFetch(url, options) {
+    const response = await fetch(url, { cache: "force-cache", ...options });
+    if (!response.ok) throw new Error("Geographic directory unavailable");
+    const body = await response.json();
+    if (body?.error) throw new Error(body.msg || "Geographic directory unavailable");
+    return body.data;
   }
   async function loadWorldCountries() {
     if (!countrySelect) return;
     try {
-      const response = await fetch("https://restcountries.com/v3.1/all?fields=name,cca2", { cache: "force-cache" });
-      if (!response.ok) throw new Error("Country directory unavailable");
-      const countries = await response.json();
-      const names = countries.map(item => item?.name?.common).filter(Boolean).sort((a,b)=>a.localeCompare(b));
-      const current = countrySelect.value;
-      countrySelect.replaceChildren(new Option("All countries", ""));
-      countrySelect.add(new Option("Remote / Worldwide", "Remote / Worldwide"));
-      names.forEach(name => countrySelect.add(new Option(name, name)));
-      countrySelect.value = names.includes(current) || current === "Remote / Worldwide" ? current : "";
-    } catch {
-      // The portal remains usable with countries found in available listings.
-      setOptions(countrySelect, [...jobItems.flatMap(x=>Array.isArray(x.countries)?x.countries:[x.country]).filter(Boolean), "Remote / Worldwide"], "All countries");
+      const data = await geoFetch(GEO_API + "/countries/iso");
+      worldCountryNames = uniqueSorted((Array.isArray(data) ? data : []).map(item => item?.name));
+      if (!worldCountryNames.length) throw new Error("Empty country directory");
+    } catch (error) {
+      console.warn("ZOVARO country directory fallback:", error.message);
+      worldCountryNames = uniqueSorted(jobItems.flatMap(x => Array.isArray(x.countries) ? x.countries : [x.country]));
     }
+    const current = countrySelect.value;
+    setOptions(countrySelect, ["Remote / Worldwide", ...worldCountryNames], "Select a country", current);
+    countrySelect.options[0].textContent = "All countries";
+    countrySelect.disabled = false;
+    refreshJobGeography(true);
   }
 
-  function refreshJobGeography() {
-    if (!countrySelect) return;
-    if (countrySelect.options.length <= 2 && jobItems.length) setOptions(countrySelect, [...jobItems.map(x=>x.country), "Remote / Worldwide"], "All countries");
+  async function loadStates(country) {
+    if (geoCache.states.has(country)) return geoCache.states.get(country);
+    const data = await geoFetch(GEO_API + "/countries/states/q?country=" + encodeURIComponent(country));
+    const states = uniqueSorted((data?.states || []).map(item => typeof item === "string" ? item : item?.name));
+    geoCache.states.set(country, states);
+    return states;
+  }
+  async function loadCities(country, region) {
+    const key = country + "::" + region;
+    if (geoCache.cities.has(key)) return geoCache.cities.get(key);
+    const data = await geoFetch(GEO_API + "/countries/state/cities", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ country, state: region })
+    });
+    const cities = uniqueSorted((Array.isArray(data) ? data : []).map(item => typeof item === "string" ? item : item?.name));
+    geoCache.cities.set(key, cities);
+    return cities;
+  }
+
+  async function refreshJobGeography(resetChildren = false) {
+    if (!countrySelect || !regionSelect || !citySelect) return;
     const country = countrySelect.value;
-    const scoped = jobItems.filter(x => !country || (Array.isArray(x.countries) ? x.countries.includes(country) : x.country === country) || (country === "Remote / Worldwide" && x.country === "Worldwide"));
-    setOptions(regionSelect, scoped.map(x => x.region), "All regions / states");
-    regionSelect.disabled = !country || !scoped.some(x => x.region);
-    const region = regionSelect.value;
-    const cityScope = scoped.filter(x => !region || x.region === region);
-    setOptions(citySelect, cityScope.map(x => x.city), "All cities");
-    citySelect.disabled = !region || !cityScope.some(x => x.city);
+    if (resetChildren) {
+      setOptions(regionSelect, [], "Select a region / state");
+      setOptions(citySelect, [], "Select a city");
+      regionSelect.disabled = true;
+      citySelect.disabled = true;
+    }
+    if (!country || country === "Remote / Worldwide") {
+      regionSelect.disabled = true;
+      citySelect.disabled = true;
+      applyJobFilters();
+      return;
+    }
+    const requestId = ++geoRequest;
+    regionSelect.disabled = true;
+    regionSelect.replaceChildren(new Option("Loading regions / states…", ""));
+    citySelect.disabled = true;
+    citySelect.replaceChildren(new Option("Select a region / state first", ""));
+    try {
+      const [apiRegions] = await Promise.all([
+        loadStates(country)
+      ]);
+      if (requestId !== geoRequest || countrySelect.value !== country) return;
+      const listingRegions = jobItems.filter(x => x.country === country || (Array.isArray(x.countries) && x.countries.includes(country))).map(x => x.region);
+      const regions = uniqueSorted([...apiRegions, ...listingRegions]);
+      setOptions(regionSelect, regions, regions.length ? "All regions / states" : "No regions listed");
+      regionSelect.disabled = !regions.length;
+      if (!regions.length) {
+        const countryCities = jobItems.filter(x => x.country === country && x.city).map(x => x.city);
+        setOptions(citySelect, countryCities, "All cities");
+        citySelect.disabled = !countryCities.length;
+      }
+    } catch (error) {
+      if (requestId !== geoRequest) return;
+      const listingRegions = jobItems.filter(x => x.country === country || (Array.isArray(x.countries) && x.countries.includes(country))).map(x => x.region);
+      setOptions(regionSelect, listingRegions, "All regions / states");
+      regionSelect.disabled = !listingRegions.length;
+      setOptions(citySelect, [], "Select a region / state first");
+      citySelect.disabled = true;
+      console.warn("ZOVARO region directory fallback:", error.message);
+    }
+    applyJobFilters();
+  }
+
+  async function refreshJobCities() {
+    const country = countrySelect?.value || "";
+    const region = regionSelect?.value || "";
+    if (!country || !region || country === "Remote / Worldwide") {
+      setOptions(citySelect, [], "Select a region / state first");
+      citySelect.disabled = true;
+      applyJobFilters();
+      return;
+    }
+    const requestId = ++geoRequest;
+    citySelect.disabled = true;
+    citySelect.replaceChildren(new Option("Loading cities…", ""));
+    try {
+      const apiCities = await loadCities(country, region);
+      if (requestId !== geoRequest || countrySelect.value !== country || regionSelect.value !== region) return;
+      const listingCities = jobItems.filter(x => x.country === country && x.region === region).map(x => x.city);
+      const cities = uniqueSorted([...apiCities, ...listingCities]);
+      setOptions(citySelect, cities, cities.length ? "All cities" : "No cities listed");
+      citySelect.disabled = !cities.length;
+    } catch (error) {
+      if (requestId !== geoRequest) return;
+      const listingCities = jobItems.filter(x => x.country === country && x.region === region).map(x => x.city);
+      setOptions(citySelect, listingCities, "All cities");
+      citySelect.disabled = !listingCities.length;
+      console.warn("ZOVARO city directory fallback:", error.message);
+    }
+    applyJobFilters();
   }
   function selectedJobItems() {
     const country = countrySelect?.value || "";
@@ -346,8 +439,8 @@
   window.addEventListener("popstate",()=>closeJobDetail(false));
   $("closeJobDetail")?.addEventListener("click",closeJobDetail);
   $("jobDetailPanel")?.addEventListener("click",event=>{if(event.target.id==="jobDetailPanel")closeJobDetail();});
-  countrySelect?.addEventListener("change",()=>{refreshJobGeography();applyJobFilters();});
-  regionSelect?.addEventListener("change",()=>{refreshJobGeography();applyJobFilters();});
+  countrySelect?.addEventListener("change",()=>{refreshJobGeography(true);});
+  regionSelect?.addEventListener("change",refreshJobCities);
   citySelect?.addEventListener("change",applyJobFilters);
 
   const cursors = { job: null, product: null };
@@ -368,7 +461,7 @@
       if (type === "job") {
         if (!append) jobItems.length = 0;
         jobItems.push(...items);
-        refreshJobGeography();
+        // Geography selectors use the complete world directory, not just current job records.
       }
       loadedCounts[type] += items.length;
       cursors[type] = response.headers.get("X-Zovaro-Next-Cursor") || null;
@@ -402,7 +495,7 @@
         loadedCounts.job += curated.length;
         $("jobListingsEmpty")?.classList.add("hidden");
       }
-      refreshJobGeography();
+      // Geography selectors use the complete world directory, not just current job records.
       applyJobFilters();
     } catch (error) {
       console.warn("ZOVARO curated jobs unavailable:", error.message);
