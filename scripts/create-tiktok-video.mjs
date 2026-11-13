@@ -1215,8 +1215,8 @@ for (
     [
       "-y",
 
-      "-loop",
-      "1",
+      "-stream_loop",
+      "-1",
 
       "-i",
       imagePath,
