@@ -1119,8 +1119,7 @@ for (
         `fontsize=34:` +
         `x=(w-text_w)/2:` +
         `y=${oldPriceY}:` +
-        `expansion=none:` +
-        ` +
+        `expansion=none` +
         `[text5]`
     );
   } else {
@@ -1146,8 +1145,7 @@ for (
         `fontsize=38:` +
         `x=(w-text_w)/2:` +
         `y=${discountY}:` +
-        `expansion=none:` +
-        ` +
+        `expansion=none` +
         `[text6]`
     );
   } else {
