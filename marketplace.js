@@ -78,7 +78,7 @@
         card.dataset.jobCard = "true";
         card.dataset.jobId = item.id || "";
       }
-      addText(card, "span", "marketplace-kicker", type === "job" ? [item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
+      addText(card, "span", "marketplace-kicker", type === "job" ? [item.category, item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
       if (item.imageUrl) {
         const image = document.createElement("img");
         image.src = item.imageUrl;
@@ -110,15 +110,11 @@
             if (converted && card.isConnected) addText(card, "p", "marketplace-price", "Approx. " + converted.text + " USD" + (converted.date ? " · " + converted.date : ""));
           });
         }
-        const details = document.createElement("button");
-        details.type = "button";
+        const details = document.createElement("a");
         details.className = "job-open-details";
+        details.href = "/job.html?id=" + encodeURIComponent(item.id || "");
         details.textContent = "VIEW FULL JOB DETAILS";
-        details.addEventListener("click", () => openJobDetail(item));
         card.appendChild(details);
-        card.addEventListener("click", event => {
-          if (event.target === card || event.target.tagName === "H3") openJobDetail(item);
-        });
       } else {
         addText(card, "p", "marketplace-description", item.description);
       }
@@ -157,6 +153,11 @@
   const countrySelect = $("jobCountryFilter");
   const regionSelect = $("jobRegionFilter");
   const citySelect = $("jobCityFilter");
+  const jobCategorySelect = $("jobCategoryFilter");
+  const careerCategorySelect = $("careerCategoryFilter");
+  const careerSearchInput = $("careerGuideSearch");
+  const careerGuidesGrid = $("careerGuidesGrid");
+  let careerGuideCards = [];
 
   function uniqueSorted(values) {
     return [...new Set(values.map(value => String(value || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
@@ -190,7 +191,7 @@
     if (!countrySelect) return;
     if (countrySelect.options.length <= 2 && jobItems.length) setOptions(countrySelect, [...jobItems.map(x=>x.country), "Remote / Worldwide"], "All countries");
     const country = countrySelect.value;
-    const scoped = jobItems.filter(x => !country || x.country === country);
+    const scoped = jobItems.filter(x => !country || (Array.isArray(x.countries) ? x.countries.includes(country) : x.country === country) || (country === "Remote / Worldwide" && x.country === "Worldwide"));
     setOptions(regionSelect, scoped.map(x => x.region), "All regions / states");
     regionSelect.disabled = !country || !scoped.some(x => x.region);
     const region = regionSelect.value;
@@ -202,12 +203,14 @@
     const country = countrySelect?.value || "";
     const region = regionSelect?.value || "";
     const city = citySelect?.value || "";
+    const category = jobCategorySelect?.value || "";
     const q = ($("jobSearchInput")?.value || "").trim().toLowerCase();
     return jobItems.filter(item =>
-      (!country || item.country === country) &&
+      (!country || (Array.isArray(item.countries) ? item.countries.includes(country) : item.country === country) || (country === "Remote / Worldwide" && item.country === "Worldwide")) &&
       (!region || item.region === region) &&
       (!city || item.city === city) &&
-      (!q || [item.title,item.company,item.location,item.description,item.country,item.region,item.city].join(" ").toLowerCase().includes(q))
+      (!category || item.category === category) &&
+      (!q || [item.title,item.company,item.category,item.location,item.description,item.country,item.region,item.city].join(" ").toLowerCase().includes(q))
     );
   }
   function applyJobFilters() {
@@ -216,7 +219,7 @@
     const visibleIds = new Set(selected.map(x => x.id));
     cards.forEach(card => card.classList.toggle("hidden", !visibleIds.has(card.dataset.jobId)));
     const meta = $("jobResultsMeta");
-    if (meta) meta.textContent = selected.length + " matching opportunities in the currently loaded results.";
+    if (meta) meta.textContent = selected.length + " matching live job opportunities in the currently loaded results. Career guides are shown separately below.";
     const empty = $("jobListingsEmpty");
     if (empty) {
       empty.textContent = selected.length ? "" : "No jobs match these filters. Try another location or search term.";
@@ -378,6 +381,71 @@
     }
   }
 
+  async function loadCuratedJobs() {
+    try {
+      const response = await fetch("/data/curated-jobs.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Curated job directory unavailable.");
+      const source = await response.json();
+      const curated = (Array.isArray(source) ? source : source.jobs || []).map(item => ({
+        ...item,
+        approvedAt: item.verifiedAt || null,
+        isCurated: true
+      }));
+      if (curated.length) {
+        renderListings($("jobListings"), curated, "job", true);
+        jobItems.push(...curated);
+        loadedCounts.job += curated.length;
+        $("jobListingsEmpty")?.classList.add("hidden");
+      }
+      refreshJobGeography();
+      applyJobFilters();
+    } catch (error) {
+      console.warn("ZOVARO curated jobs unavailable:", error.message);
+    }
+  }
+
+  async function loadCareerGuides() {
+    try {
+      const response = await fetch("/data/career-guides.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Career guide directory unavailable.");
+      const data = await response.json();
+      const categories = data.categories || [];
+      setOptions(jobCategorySelect, categories.map(item => item.name), "All job categories");
+      setOptions(careerCategorySelect, categories.map(item => item.name), "All career categories");
+      careerGuideCards = categories.flatMap(category => (category.roles || []).map(role => ({
+        ...role, category: category.name
+      })));
+      renderCareerGuides();
+    } catch (error) {
+      const meta = $("careerGuidesMeta");
+      if (meta) meta.textContent = "Career guides are temporarily unavailable.";
+      console.warn("ZOVARO career guides unavailable:", error.message);
+    }
+  }
+
+  function renderCareerGuides() {
+    if (!careerGuidesGrid) return;
+    const category = careerCategorySelect?.value || "";
+    const query = (careerSearchInput?.value || "").trim().toLowerCase();
+    const matches = careerGuideCards.filter(role =>
+      (!category || role.category === category) &&
+      (!query || [role.title, role.category, role.summary, ...(role.skills || [])].join(" ").toLowerCase().includes(query))
+    );
+    careerGuidesGrid.replaceChildren();
+    matches.forEach(role => {
+      const card = document.createElement("article");
+      card.className = "career-guide-card";
+      addText(card, "span", "career-guide-label", "CAREER GUIDE · NOT A LIVE VACANCY");
+      addText(card, "h3", "", role.title);
+      addText(card, "p", "career-guide-category", role.category);
+      addText(card, "p", "career-guide-summary", role.summary);
+      if (role.skills?.length) addText(card, "p", "career-guide-skills", "Typical skills: " + role.skills.join(" · "));
+      careerGuidesGrid.appendChild(card);
+    });
+    const meta = $("careerGuidesMeta");
+    if (meta) meta.textContent = matches.length + " career profiles across " + new Set(matches.map(x => x.category)).size + " categories. These are informational role guides, not advertised vacancies.";
+  }
+
   function filterJobs() { applyJobFilters(); }
 
   $("productListingForm")?.addEventListener("submit", event => {
@@ -392,9 +460,14 @@
   $("jobLoadMore")?.addEventListener("click", () => loadListings("job", true));
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
   $("jobSearchInput")?.addEventListener("input", filterJobs);
+  jobCategorySelect?.addEventListener("change", filterJobs);
+  careerCategorySelect?.addEventListener("change", renderCareerGuides);
+  careerSearchInput?.addEventListener("input", renderCareerGuides);
 
   loadWorldCountries();
+  loadCareerGuides();
   loadListings("job").then(async () => {
+    await loadCuratedJobs();
     const jobId = new URLSearchParams(window.location.search).get("job");
     if (!jobId) return;
     const view = $("lookingJobView");
