@@ -26,7 +26,8 @@ const remote = guides.categories.find(x=>x.name==="Remote & Work From Home")?.ro
 const trades = guides.categories.find(x=>x.name==="Construction & Skilled Trades")?.roles || [];
 const food = guides.categories.find(x=>x.name==="Food & Hospitality")?.roles || [];
 const remoteRoles = rotate(remote,3,day%Math.max(1,remote.length));
-const industryRoles = [...food.slice(0,2),...trades.slice(0,2)];
+const industryPool = [...food,...trades];
+const industryRoles = rotate(industryPool,4,day%Math.max(1,industryPool.length));
 
 function wrap(value,max=30){
   const words=String(value||"").split(/\s+/);const lines=[];let line="";
@@ -97,10 +98,18 @@ const industryScenes=[
   {title:industryRoles[0]?.title||"BAKER · CHEF · HOTEL STAFF",subtitle:industryRoles[1]?.title||"FOOD & HOSPITALITY CAREER PATHS"},
   {title:industryRoles[2]?.title||"ELECTRICIAN · CARPENTER",subtitle:industryRoles[3]?.title||"CONSTRUCTION & SKILLED TRADES"}
 ];
+const luxuryThemes=[
+  {title:"LUXURY CARS · YACHTS",subtitle:"PRIVATE JETS · HELICOPTERS · EXCLUSIVE MOBILITY"},
+  {title:"VILLAS · CASTLES · ISLANDS",subtitle:"PRIVATE ESTATES · LUXURY REAL ESTATE"},
+  {title:"LUXURY WATCHES · ART",subtitle:"COLLECTIBLES · RARE AND ICONIC OBJECTS"}
+];
+const luxuryFirst=luxuryThemes[day%luxuryThemes.length];
+const luxurySecond=luxuryThemes[(day+1)%luxuryThemes.length];
+const luxuryThird=luxuryThemes[(day+2)%luxuryThemes.length];
 const luxuryScenes=[
   {title:"DISCOVER THE EXTRAORDINARY",subtitle:"Explore the world of luxury on ZOVARO."},
-  {title:"LUXURY CARS · YACHTS",subtitle:"PRIVATE JETS · HELICOPTERS · EXCLUSIVE MOBILITY"},
-  {title:"VILLAS · ESTATES · WATCHES",subtitle:"Discover luxury categories and curated opportunities."}
+  {title:luxuryFirst.title,subtitle:luxuryFirst.subtitle},
+  {title:luxurySecond.title,subtitle:luxuryThird.title+" · CURATED DISCOVERIES"}
 ];
 
 const results=[];
