@@ -186,7 +186,7 @@
       countrySelect.value = names.includes(current) || current === "Remote / Worldwide" ? current : "";
     } catch {
       // The portal remains usable with countries found in available listings.
-      setOptions(countrySelect, [...jobItems.map(x=>x.country), "Remote / Worldwide"], "All countries");
+      setOptions(countrySelect, [...jobItems.flatMap(x=>Array.isArray(x.countries)?x.countries:[x.country]).filter(Boolean), "Remote / Worldwide"], "All countries");
     }
   }
 
