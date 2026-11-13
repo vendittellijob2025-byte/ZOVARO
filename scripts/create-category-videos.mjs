@@ -24,9 +24,9 @@ const rotate = (items,count,offset=0) => Array.from({length:Math.min(count,items
 const selectedJobs = rotate(openJobs,3,openJobs.length ? day%openJobs.length : 0);
 const remote = guides.categories.find(x=>x.name==="Remote & Work From Home")?.roles || [];
 const trades = guides.categories.find(x=>x.name==="Construction & Skilled Trades")?.roles || [];
-const food = guides.categories.find(x=>x.name==="Food & Hospitality")?.roles || [];
-const remoteRoles = rotate(remote,3,day%Math.max(1,remote.length));
-const industryPool = [...food,...trades];
+const manufacturing = guides.categories.find(x=>x.name==="Manufacturing & Production")?.roles || [];
+const transport = guides.categories.find(x=>x.name==="Transport & Logistics")?.roles || [];
+const industryPool = [...trades,...manufacturing,...transport];
 const industryRoles = rotate(industryPool,4,day%Math.max(1,industryPool.length));
 
 function wrap(value,max=30){
