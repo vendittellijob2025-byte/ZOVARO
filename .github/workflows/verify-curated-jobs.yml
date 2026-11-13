@@ -1,0 +1,42 @@
+name: ZOVARO - Verify curated job sources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 13 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/curated-jobs.json"
+      - "scripts/verify-curated-jobs.mjs"
+      - ".github/workflows/verify-curated-jobs.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zovaro-curated-jobs-verification
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Verify official employer sources
+        run: node scripts/verify-curated-jobs.mjs
+      - name: Save verification results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/curated-jobs.json
+          git diff --cached --quiet || git commit -m "Verify curated job opportunities"
+          git push
