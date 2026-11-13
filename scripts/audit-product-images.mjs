@@ -234,11 +234,13 @@ function categoryMismatch(product, detections) {
 
 async function loadReport() {
   try {
-    const parsed = JSON.parse(await fs.readFile(REPORT_PATH, "utf8"));
+    const raw = await fs.readFile(REPORT_PATH, "utf8");
+    if (!raw.trim()) return { schemaVersion: 2, model: MODEL_ID, generatedAt: null, results: [] };
+    const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.results)) throw new Error("Invalid image audit report.");
     return parsed;
   } catch (error) {
-    if (error.code === "ENOENT") return { schemaVersion: 1, model: MODEL_ID, generatedAt: null, results: [] };
+    if (error.code === "ENOENT") return { schemaVersion: 2, model: MODEL_ID, generatedAt: null, results: [] };
     throw error;
   }
 }
@@ -280,9 +282,11 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     const objectCheck = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
     const mismatch = visualCheck.status === "not_assessable" ? objectCheck : visualCheck;
     if (mismatch.status === "possible_mismatch") flags.push("possible_category_mismatch");
-    const decision = flags.some(flag => ["low_resolution", "image_file_too_small"].includes(flag))
+    // A category disagreement, ambiguous visual result, or unassessable image
+    // is never treated as an automatic pass. It remains explicitly review-required.
+    const decision = flags.length || mismatch.status !== "consistent"
       ? "review_required"
-      : flags.length ? "review" : "pass";
+      : "pass";
     return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck: mismatch };
   } catch (error) {
     const reason = String(error.message || error).slice(0, 120);
@@ -332,13 +336,27 @@ async function main() {
   if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
   const report = await loadReport();
   const existing = new Map(report.results.map(item => [item.key, item]));
+  const recheckDays = Math.max(1, Number(process.env.IMAGE_AUDIT_RECHECK_DAYS || 30) || 30);
+  const recheckBefore = Date.now() - recheckDays * 24 * 60 * 60 * 1000;
   const pending = catalog.products.filter(product => {
     const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
     const previous = existing.get(key);
-    return product.imageLink && (!previous || previous.imageUrl !== product.imageLink);
+    const auditedAt = Date.parse(previous?.auditedAt || "");
+    return product.imageLink && (
+      !previous ||
+      previous.imageUrl !== product.imageLink ||
+      !Number.isFinite(auditedAt) ||
+      auditedAt < recheckBefore
+    );
+  }).sort((a, b) => {
+    const keyA = [a.source || "", a.advertiserId || "", a.id || ""].join("|");
+    const keyB = [b.source || "", b.advertiserId || "", b.id || ""].join("|");
+    const timeA = Date.parse(existing.get(keyA)?.auditedAt || "") || 0;
+    const timeB = Date.parse(existing.get(keyB)?.auditedAt || "") || 0;
+    return timeA - timeB;
   });
   const batch = pending.slice(0, BATCH_SIZE);
-  console.log("Image audit queue: " + pending.length + " products; processing " + batch.length + "; model " + MODEL_ID);
+  console.log("Full-catalog image audit queue: " + pending.length + " products due for first/30-day recheck; processing " + batch.length + "; model " + MODEL_ID);
   if (!batch.length) {
     report.generatedAt = new Date().toISOString();
     await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2) + "\n");
