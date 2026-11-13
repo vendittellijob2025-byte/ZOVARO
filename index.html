@@ -2949,13 +2949,10 @@ document
   .textContent =
     new Date().getFullYear();
 
-// Allow direct links to the main marketplace sections.
-const initialView = new URLSearchParams(window.location.search).get("view");
-if (initialView === "products") {
-  showView("buyProductsView");
-} else if (initialView === "jobs") {
-  showView("lookingJobView");
-}
+// Always render the main HOME PAGE on first load.
+// Internal sections (SHOP, BUY PRODUCTS, JOBS) are opened only after an explicit
+// user action from the homepage navigation. Ignore legacy ?view=jobs/products
+// query parameters so shared or tracked URLs never replace the homepage.
 
 </script>
 
