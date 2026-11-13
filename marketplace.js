@@ -79,6 +79,9 @@
         card.dataset.jobId = item.id || "";
       }
       addText(card, "span", "marketplace-kicker", type === "job" ? [item.category, item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
+      if (type === "job") {
+        addText(card, "span", "career-guide-label", item.isCurated ? "ZOVARO CURATED · EMPLOYER SOURCE CHECKED" : "EMPLOYER-SUBMITTED LISTING");
+      }
       if (item.imageUrl) {
         const image = document.createElement("img");
         image.src = item.imageUrl;
