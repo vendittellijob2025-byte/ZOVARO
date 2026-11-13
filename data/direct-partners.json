@@ -28,7 +28,8 @@
     "eBay EPN public terms reviewed 2026-11-12: standard Buy It Now attribution is 24 hours and last-click; auction and Best Offer have separate qualifying-event rules. Current Global Rate Card and caps are published by category and may be overridden by the authenticated account's Contract Terms. Official public payment guidance indicates a monthly payout threshold of USD 10 and a monthly payment cycle, with EFT/direct deposit and PayPal options; current published calendar pays on the 10th for the month before the previous month. Weekly payout is not indicated. A help page and the current rate card differ on real-estate eligibility/rate; confirm the account-specific rule before any promotion.",
     "eBay Browse API review 2026-11-12: Browse API can search and retrieve item details including image, title, price, condition, availability, shipping and seller information. For EPN tracking, requests must include X-EBAY-C-ENDUSERCTX with the required 10-digit affiliateCampaignId to return itemAffiliateWebUrl; affiliateReferenceId is optional. Buy API production use is intended for approved eBay partners and requires EPN membership, a production application, technical review and specific agreements; no production access or API integration is currently verified. Do not publish eBay listings until EPN approval, API access, tracking, marketplace delivery and content-policy checks are complete.",
     "eBay independent seller policy 2026-11-12: EPN affiliation is with eBay, not each individual seller. Any separate direct referral relationship with a seller requires a distinct explicit agreement. EPN affiliate links must be used only on permitted external channels and not inserted into eBay listings, Stores or eBay Messages.",
-    "Outreach delivery failures reviewed 2026-11-12: the message to EMEA-affiliates@lenovo.com was blocked by the recipient mail system, and the message to amartinez@charismabrands.com returned SMTP 550 address not found. Do not retry either address; only consider new contact routes after verifying an official affiliate/partnership contact."
+    "Outreach delivery failures reviewed 2026-11-12: the message to EMEA-affiliates@lenovo.com was blocked by the recipient mail system, and the message to amartinez@charismabrands.com returned SMTP 550 address not found. Do not retry either address; only consider new contact routes after verifying an official affiliate/partnership contact.",
+    "Affiliate outreach 2026-11-12: individual enquiries sent to AnkerWork (affiliate@anker.com), Nature Portfolio (affiliates@nature.com) and ABMIUM (info@abmium.com) for Office & Technology, Books & Media, and Industrial & Scientific coverage. Gmail sent IDs: 1a1d2a7f958cfca3, 1a1d2a802fee93be, 1a1d2a80f3e16e9a. These are contact attempts only; no approval, tracking, feed, image rights or commission is confirmed until partner replies and technical checks pass."
   ],
   "prospects": [
     {
@@ -1912,6 +1913,78 @@
       "developerAppStatus": "not verified",
       "apiProductionApproval": "not obtained or verified",
       "payoutSettingsStatus": "not verified in authenticated EPN portal"
+    },
+    {
+      "id": "ankerwork",
+      "name": "AnkerWork",
+      "status": "contacted",
+      "programType": "office-technology-affiliate",
+      "territories": [
+        "to confirm"
+      ],
+      "publicCommission": "8% published on official affiliate page; current applicability and market eligibility requested",
+      "contact": {
+        "email": "affiliate@anker.com",
+        "sourceUrl": "https://us.ankerwork.com/pages/become-an-affiliate"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await confirmation of Italy-based publisher eligibility, territory, current commission/cookie, product feed, permitted assets and payout terms.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T02:05:00Z",
+      "contactEvidence": "Gmail sent message 1a1d2a7f958cfca3"
+    },
+    {
+      "id": "nature-portfolio",
+      "name": "Nature Portfolio",
+      "status": "contacted",
+      "programType": "books-media-scientific-journals-affiliate",
+      "territories": [
+        "to confirm"
+      ],
+      "publicCommission": "Up to 25% and 30-day cookie shown on official affiliate information; verify current rate and eligibility",
+      "contact": {
+        "email": "affiliates@nature.com",
+        "sourceUrl": "https://www.springernature.com/la/partners/affiliates/nature"
+      },
+      "integration": {
+        "affiliateLink": "CJ application/links pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await confirmation of Italy publisher eligibility, subscription commission basis, tracking, approved assets and payment terms; existing CJ publisher account may be used if accepted.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T02:05:00Z",
+      "contactEvidence": "Gmail sent message 1a1d2a802fee93be"
+    },
+    {
+      "id": "abmium",
+      "name": "ABMIUM",
+      "status": "contacted",
+      "programType": "industrial-scientific-affiliate",
+      "territories": [
+        "to confirm"
+      ],
+      "publicCommission": "Not published; requested current rate and terms",
+      "contact": {
+        "email": "info@abmium.com",
+        "sourceUrl": "https://www.abmium.com/pages/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await Italy publisher eligibility, shipping territories, commission, tracking, catalogue/assets and payout terms before any promotion.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T02:05:00Z",
+      "contactEvidence": "Gmail sent message 1a1d2a80f3e16e9a"
     }
   ]
 }
