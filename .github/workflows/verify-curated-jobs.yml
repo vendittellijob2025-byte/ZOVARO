@@ -1,0 +1,76 @@
+name: ZOVARO - Verify curated job sources
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/career-guides.json"
+      - "data/curated-jobs.json"
+      - "index.html"
+      - "marketplace.js"
+      - "job.html"
+      - "job-detail.js"
+      - "api/marketplace.js"
+      - "scripts/verify-curated-jobs.mjs"
+      - "scripts/validate-jobs-portal.mjs"
+      - "scripts/create-category-videos.mjs"
+      - "scripts/select-product.mjs"
+      - "scripts/create-tiktok-video.mjs"
+      - "scripts/split-selected-products.mjs"
+      - ".github/workflows/daily-promotion.yml"
+      - ".github/workflows/daily-category-videos.yml"
+      - ".github/workflows/verify-curated-jobs.yml"
+  schedule:
+    - cron: "15 13 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/curated-jobs.json"
+      - "scripts/verify-curated-jobs.mjs"
+      - ".github/workflows/verify-curated-jobs.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zovaro-curated-jobs-verification
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Check JavaScript syntax
+        run: |
+          node --check marketplace.js
+          node --check job-detail.js
+          node --check api/marketplace.js
+          node --check scripts/verify-curated-jobs.mjs
+          node --check scripts/validate-jobs-portal.mjs
+          node --check scripts/create-category-videos.mjs
+          node --check scripts/select-product.mjs
+          node --check scripts/create-tiktok-video.mjs
+          node --check scripts/split-selected-products.mjs
+      - name: Validate portal data and routes
+        run: node scripts/validate-jobs-portal.mjs
+      - name: Verify official employer sources
+        run: node scripts/verify-curated-jobs.mjs
+      - name: Save verification results
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/curated-jobs.json
+          git diff --cached --quiet || git commit -m "Verify curated job opportunities"
+          git push

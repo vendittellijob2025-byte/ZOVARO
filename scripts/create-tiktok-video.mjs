@@ -5,10 +5,10 @@ import { promisify } from "node:util";
 const execFileAsync = promisify(execFile);
 
 const SELECTED_PRODUCTS_PATH =
-  "data/selected-products.json";
+  process.env.SELECTED_PRODUCTS_PATH || "data/selected-products.json";
 
 const VIDEO_OUTPUT_PATH =
-  "data/tiktok-video.mp4";
+  process.env.VIDEO_OUTPUT_PATH || "data/tiktok-video.mp4";
 
 const TEMP_DIR =
   ".zovaro-video-temp";

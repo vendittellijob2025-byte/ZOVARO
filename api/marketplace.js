@@ -67,6 +67,16 @@ async function publishPublicRecord(record) {
   record.publicPath=pathname;
   return pathname;
 }
+async function findPublicRecord(type,id) {
+  let cursor;
+  do {
+    const page=await list({prefix:"marketplace/public/"+type+"/",limit:1000,...(cursor?{cursor}:{})});
+    const blob=page.blobs.find(item=>item.pathname.endsWith("_"+id+".json"));
+    if(blob) return readRecord(blob.pathname);
+    cursor=page.hasMore?page.cursor:null;
+  } while(cursor);
+  return null;
+}
 async function listPublicRecords(type,cursor) {
   const options={prefix:"marketplace/public/"+type+"/",limit:40};
   if(cursor) options.cursor=cursor;
@@ -78,6 +88,10 @@ function publicRecord(record) {
   return {
     id: record.id, type: record.type, title: record.title, category: record.category || null,
     company: record.company || null, jobType: record.jobType || null, workplace: record.workplace || null,
+    country: record.country || null, region: record.region || null, city: record.city || null,
+    salaryText: record.salaryText || null, applicationUrl: record.applicationUrl || null,
+    sourceName: record.sourceName || null, sourceUrl: record.sourceUrl || null,
+    sourceType: record.sourceType || "employer-submitted",
     condition: record.condition || null, price: record.price ?? null, currency: record.currency || null,
     location: record.location, description: record.description,
     imageUrl: record.imageUrl || null,
@@ -107,6 +121,18 @@ function validateSubmission(body) {
     record.jobType=clean(body.jobType,30);
     record.workplace=clean(body.workplace,20);
     record.salaryText=clean(body.salaryText,100);
+    record.category=clean(body.category,60);
+    const jobCategories=["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Remote & Work From Home"];
+    if(!jobCategories.includes(record.category)) return { error:"Please choose a valid job category." };
+    record.country=clean(body.country,80);
+    if(!record.country) return { error:"Please specify the job country. Use Remote / Worldwide for fully remote roles." };
+    record.region=clean(body.region,100);
+    record.city=clean(body.city,100);
+    record.applicationUrl=clean(body.applicationUrl,500);
+    record.sourceType="employer-submitted";
+    record.sourceName=record.company;
+    record.sourceUrl=record.companyWebsite;
+    if(record.applicationUrl && !/^https:\/\//i.test(record.applicationUrl)) return { error:"Application URL must use HTTPS." };
     const validTypes=["Full-time","Part-time","Contract","Freelance","Temporary","Internship"];
     const validWorkplaces=["On-site","Hybrid","Remote"];
     if (record.company.length<2 || !websiteDomain(record.companyWebsite) || !validTypes.includes(record.jobType) || !validWorkplaces.includes(record.workplace)) return { error:"Please provide a company website, valid employer, employment type and workplace details." };
@@ -271,6 +297,15 @@ export default async function handler(req,res) {
       catch(error){console.error("ZOVARO admin queue error:",error);return res.status(503).json({error:"Unable to load moderation queue."});}
     }
     const type=url.searchParams.get("type");
+    const requestedId=url.searchParams.get("id");
+    if(requestedId){
+      if(type!=="job" || !/^[0-9a-f-]{36}$/i.test(requestedId)) return res.status(400).json({error:"Invalid job ID."});
+      try{
+        const record=await findPublicRecord("job",requestedId);
+        if(!record) return res.status(404).json({error:"Job opportunity not found."});
+        return res.status(200).json(record);
+      }catch(error){console.error("ZOVARO job detail read error:",error);return res.status(503).json({error:"Job details are temporarily unavailable."});}
+    }
     if (type&&!["job","product"].includes(type)) return res.status(400).json({error:"Invalid listing type."});
     if (!type) return res.status(400).json({error:"A listing type is required."});
     try {

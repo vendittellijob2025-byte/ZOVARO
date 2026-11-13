@@ -1,0 +1,53 @@
+name: ZOVARO - Daily JOBS and LUXURY videos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 12 * * *"
+  push:
+    branches:
+      - main
+      - feature/global-jobs-portal
+    paths:
+      - "scripts/create-category-videos.mjs"
+      - "data/curated-jobs.json"
+      - "data/career-guides.json"
+      - "assets/job-visual.png"
+      - "assets/Offerte Esclusive di Lusso Dorato.png"
+      - "assets/zovaro-logo.png"
+      - "assets/ZOVARO_AFFILIATE.MP3"
+      - "assets/ZOVARO_LUXURY.MP3"
+      - ".github/workflows/daily-category-videos.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zovaro-daily-category-videos
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Setup FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Generate JOBS and LUXURY videos
+        run: node scripts/create-category-videos.mjs ./zovaro-social-videos
+      - name: Upload ready-to-publish videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: zovaro-daily-social-videos
+          path: zovaro-social-videos/
+          if-no-files-found: error
+          retention-days: 14

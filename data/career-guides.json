@@ -1,0 +1,826 @@
+{
+  "updatedAt": "2026-11-13",
+  "notice": "Career guides describe common duties and skills. They are not advertisements for live vacancies.",
+  "categories": [
+    {
+      "name": "Food & Hospitality",
+      "roles": [
+        {
+          "title": "Baker",
+          "summary": "Prepare breads, pastries and baked goods; manage dough, ovens, food safety and production timing.",
+          "skills": [
+            "Baking techniques",
+            "Food hygiene",
+            "Recipe accuracy",
+            "Time management"
+          ]
+        },
+        {
+          "title": "Butcher",
+          "summary": "Prepare and portion meat, maintain safe temperatures, manage displays and advise customers on cuts.",
+          "skills": [
+            "Meat preparation",
+            "Food safety",
+            "Knife handling",
+            "Customer service"
+          ]
+        },
+        {
+          "title": "Chef / Cook",
+          "summary": "Prepare meals, coordinate kitchen service, manage ingredients and maintain hygiene standards.",
+          "skills": [
+            "Food preparation",
+            "Kitchen operations",
+            "Menu execution",
+            "Food safety"
+          ]
+        },
+        {
+          "title": "Bartender",
+          "summary": "Prepare beverages, serve guests, manage bar stock and follow responsible service rules.",
+          "skills": [
+            "Beverage preparation",
+            "Customer service",
+            "Cash handling",
+            "Stock control"
+          ]
+        },
+        {
+          "title": "Hotel Receptionist",
+          "summary": "Welcome guests, manage reservations and coordinate check-in, check-out and guest requests.",
+          "skills": [
+            "Communication",
+            "Reservation systems",
+            "Languages",
+            "Problem solving"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Construction & Skilled Trades",
+      "roles": [
+        {
+          "title": "Bricklayer / Mason",
+          "summary": "Build and repair walls and structures using masonry materials, drawings and site safety procedures.",
+          "skills": [
+            "Masonry",
+            "Blueprint reading",
+            "Measurements",
+            "Site safety"
+          ]
+        },
+        {
+          "title": "Electrician",
+          "summary": "Install, inspect and repair electrical systems while following local electrical codes and safety rules.",
+          "skills": [
+            "Electrical installation",
+            "Diagnostics",
+            "Code compliance",
+            "Safety procedures"
+          ]
+        },
+        {
+          "title": "Carpenter",
+          "summary": "Measure, cut and install wood structures, fixtures and fittings for construction or renovation projects.",
+          "skills": [
+            "Joinery",
+            "Tool handling",
+            "Technical drawings",
+            "Precision"
+          ]
+        },
+        {
+          "title": "Welder",
+          "summary": "Join metal components using approved welding processes and inspect finished joints for quality.",
+          "skills": [
+            "MIG/TIG/arc welding",
+            "Metal fabrication",
+            "Quality inspection",
+            "Safety"
+          ]
+        },
+        {
+          "title": "Construction Site Supervisor",
+          "summary": "Coordinate site teams, schedules, materials and safety procedures to keep projects on track.",
+          "skills": [
+            "Team leadership",
+            "Scheduling",
+            "Site safety",
+            "Progress reporting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing & Production",
+      "roles": [
+        {
+          "title": "Factory Production Operator",
+          "summary": "Operate production equipment, follow work instructions and record output and quality checks.",
+          "skills": [
+            "Machine operation",
+            "Quality control",
+            "Work instructions",
+            "Safety"
+          ]
+        },
+        {
+          "title": "Assembly Technician",
+          "summary": "Assemble components and finished products using tools, technical instructions and inspection steps.",
+          "skills": [
+            "Assembly",
+            "Hand tools",
+            "Technical drawings",
+            "Attention to detail"
+          ]
+        },
+        {
+          "title": "Quality Control Inspector",
+          "summary": "Inspect materials and finished goods, document defects and support corrective actions.",
+          "skills": [
+            "Inspection methods",
+            "Documentation",
+            "Measurement",
+            "Root-cause awareness"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transport & Logistics",
+      "roles": [
+        {
+          "title": "Delivery Driver / Courier",
+          "summary": "Collect and deliver goods safely, plan routes and maintain accurate delivery records.",
+          "skills": [
+            "Driving licence",
+            "Route planning",
+            "Customer service",
+            "Vehicle checks"
+          ]
+        },
+        {
+          "title": "Truck Driver",
+          "summary": "Transport cargo over local or long-distance routes while meeting safety and delivery requirements.",
+          "skills": [
+            "Appropriate licence",
+            "Vehicle inspection",
+            "Load security",
+            "Route compliance"
+          ]
+        },
+        {
+          "title": "Warehouse Operative",
+          "summary": "Receive, store, pick, pack and dispatch goods using inventory procedures and warehouse equipment.",
+          "skills": [
+            "Picking and packing",
+            "Inventory systems",
+            "Manual handling",
+            "Accuracy"
+          ]
+        },
+        {
+          "title": "Logistics Coordinator",
+          "summary": "Coordinate shipments, carriers, schedules and documentation across supply-chain operations.",
+          "skills": [
+            "Planning",
+            "Transport documentation",
+            "Communication",
+            "Spreadsheets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office & Administration",
+      "roles": [
+        {
+          "title": "Administrative Assistant",
+          "summary": "Support daily office operations, correspondence, records, scheduling and internal coordination.",
+          "skills": [
+            "Office software",
+            "Organisation",
+            "Written communication",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Secretary / Executive Assistant",
+          "summary": "Manage calendars, meetings, travel and correspondence for managers or executive teams.",
+          "skills": [
+            "Calendar management",
+            "Professional communication",
+            "Prioritisation",
+            "Office systems"
+          ]
+        },
+        {
+          "title": "Data Entry Clerk",
+          "summary": "Enter, validate and maintain business information accurately across digital systems.",
+          "skills": [
+            "Typing accuracy",
+            "Spreadsheets",
+            "Data validation",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Human Resources Assistant",
+          "summary": "Support recruitment administration, employee records, onboarding and HR coordination.",
+          "skills": [
+            "People administration",
+            "Document management",
+            "Communication",
+            "HR systems"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Business & Management",
+      "roles": [
+        {
+          "title": "Operations Manager",
+          "summary": "Coordinate teams, processes, resources and performance indicators to improve business operations.",
+          "skills": [
+            "Operational planning",
+            "Leadership",
+            "Process improvement",
+            "Reporting"
+          ]
+        },
+        {
+          "title": "Project Manager",
+          "summary": "Plan project scope, schedules, resources, risks and stakeholder communication through delivery.",
+          "skills": [
+            "Project planning",
+            "Risk management",
+            "Stakeholder management",
+            "Agile or waterfall methods"
+          ]
+        },
+        {
+          "title": "Sales Representative",
+          "summary": "Explain products or services to prospective customers, manage enquiries and maintain sales records.",
+          "skills": [
+            "Product knowledge",
+            "Communication",
+            "Negotiation",
+            "CRM systems"
+          ]
+        },
+        {
+          "title": "Account Manager",
+          "summary": "Maintain business relationships, coordinate customer needs and support account growth and retention.",
+          "skills": [
+            "Relationship management",
+            "Problem solving",
+            "Commercial awareness",
+            "CRM systems"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Retail & Customer Service",
+      "roles": [
+        {
+          "title": "Retail Sales Assistant",
+          "summary": "Assist customers, maintain product displays, process transactions and replenish store stock.",
+          "skills": [
+            "Customer service",
+            "Point-of-sale systems",
+            "Product knowledge",
+            "Teamwork"
+          ]
+        },
+        {
+          "title": "Cashier",
+          "summary": "Process purchases and payments, balance transactions and provide courteous customer assistance.",
+          "skills": [
+            "Cash handling",
+            "Accuracy",
+            "Point-of-sale systems",
+            "Customer service"
+          ]
+        },
+        {
+          "title": "Customer Support Agent",
+          "summary": "Resolve customer questions through approved phone, email or chat channels and document outcomes.",
+          "skills": [
+            "Clear communication",
+            "Troubleshooting",
+            "Ticketing systems",
+            "Empathy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cleaning & Sanitation",
+      "roles": [
+        {
+          "title": "Cleaner / Housekeeper",
+          "summary": "Clean and maintain homes, offices or hospitality spaces using appropriate products and procedures.",
+          "skills": [
+            "Cleaning methods",
+            "Safe chemical handling",
+            "Time management",
+            "Attention to detail"
+          ]
+        },
+        {
+          "title": "Sanitation Worker",
+          "summary": "Support public or private sanitation operations, waste collection and environmental cleanliness.",
+          "skills": [
+            "Safety procedures",
+            "Physical readiness",
+            "Equipment handling",
+            "Teamwork"
+          ]
+        },
+        {
+          "title": "Waste Management Operative",
+          "summary": "Collect, sort or process waste and recyclables in line with environmental and safety rules.",
+          "skills": [
+            "Waste sorting",
+            "Equipment operation",
+            "Safety",
+            "Environmental procedures"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Security & Events",
+      "roles": [
+        {
+          "title": "Security Officer",
+          "summary": "Monitor premises, control access, report incidents and follow site security procedures.",
+          "skills": [
+            "Observation",
+            "Incident reporting",
+            "Conflict de-escalation",
+            "Required local licence"
+          ]
+        },
+        {
+          "title": "Close Protection Officer",
+          "summary": "Provide protective support following lawful risk assessments, professional training and local licensing requirements.",
+          "skills": [
+            "Recognised training",
+            "Risk assessment",
+            "Situational awareness",
+            "First aid"
+          ]
+        },
+        {
+          "title": "DJ",
+          "summary": "Prepare and perform music sets for events, coordinate with organisers and manage audio equipment.",
+          "skills": [
+            "Music selection",
+            "Mixing",
+            "Audio equipment",
+            "Event coordination"
+          ]
+        },
+        {
+          "title": "Live Sound / Lighting Technician",
+          "summary": "Set up, operate and troubleshoot sound and lighting systems for live events and venues.",
+          "skills": [
+            "Audio systems",
+            "Lighting consoles",
+            "Cable safety",
+            "Troubleshooting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Healthcare & Medical",
+      "roles": [
+        {
+          "title": "Registered Nurse",
+          "summary": "Provide patient care, monitor clinical conditions and document treatment within professional scope and local licensing.",
+          "skills": [
+            "Nursing qualification",
+            "Clinical assessment",
+            "Patient communication",
+            "Documentation"
+          ]
+        },
+        {
+          "title": "Medical Receptionist",
+          "summary": "Coordinate appointments, patient enquiries and administrative records while protecting confidentiality.",
+          "skills": [
+            "Scheduling",
+            "Patient service",
+            "Medical administration",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Care Assistant",
+          "summary": "Support people with daily living activities under care plans and applicable local training requirements.",
+          "skills": [
+            "Personal care training",
+            "Empathy",
+            "Communication",
+            "Safeguarding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Education & Training",
+      "roles": [
+        {
+          "title": "School Teacher",
+          "summary": "Plan and deliver lessons, assess learning and support students in line with curriculum requirements.",
+          "skills": [
+            "Teaching qualification",
+            "Subject knowledge",
+            "Classroom management",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Tutor",
+          "summary": "Provide individual or small-group learning support and adapt explanations to student needs.",
+          "skills": [
+            "Subject expertise",
+            "Communication",
+            "Lesson planning",
+            "Patience"
+          ]
+        },
+        {
+          "title": "Corporate Trainer",
+          "summary": "Design and deliver workplace training, evaluate learning outcomes and maintain course materials.",
+          "skills": [
+            "Instructional design",
+            "Presentation",
+            "Facilitation",
+            "Evaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Finance & Accounting",
+      "roles": [
+        {
+          "title": "Bookkeeper",
+          "summary": "Maintain financial records, reconcile transactions and prepare routine accounting information.",
+          "skills": [
+            "Bookkeeping",
+            "Accounting software",
+            "Reconciliation",
+            "Accuracy"
+          ]
+        },
+        {
+          "title": "Accountant",
+          "summary": "Prepare financial statements, analyse records and support tax and compliance processes under local rules.",
+          "skills": [
+            "Accounting standards",
+            "Financial reporting",
+            "Tax knowledge",
+            "Analysis"
+          ]
+        },
+        {
+          "title": "Payroll Specialist",
+          "summary": "Process payroll data, verify deductions and maintain accurate employee pay records.",
+          "skills": [
+            "Payroll systems",
+            "Numerical accuracy",
+            "Confidentiality",
+            "Local payroll rules"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marketing & Communications",
+      "roles": [
+        {
+          "title": "Digital Marketing Specialist",
+          "summary": "Plan and measure online campaigns across search, social, email and other digital channels.",
+          "skills": [
+            "Campaign analytics",
+            "SEO/SEM",
+            "Content planning",
+            "Reporting"
+          ]
+        },
+        {
+          "title": "Social Media Manager",
+          "summary": "Plan channel calendars, publish approved content and monitor audience engagement and performance.",
+          "skills": [
+            "Content strategy",
+            "Platform knowledge",
+            "Analytics",
+            "Brand communication"
+          ]
+        },
+        {
+          "title": "Graphic Designer",
+          "summary": "Create visual assets for digital and print use while following brand systems and project briefs.",
+          "skills": [
+            "Design software",
+            "Typography",
+            "Layout",
+            "Portfolio"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IT, Software & Data",
+      "roles": [
+        {
+          "title": "Software Developer",
+          "summary": "Design, build, test and maintain software applications and services.",
+          "skills": [
+            "Programming",
+            "Version control",
+            "Testing",
+            "Problem solving"
+          ]
+        },
+        {
+          "title": "IT Support Technician",
+          "summary": "Diagnose hardware, software and network issues and help users restore reliable service.",
+          "skills": [
+            "Troubleshooting",
+            "Operating systems",
+            "Networking basics",
+            "Customer support"
+          ]
+        },
+        {
+          "title": "Cybersecurity Analyst",
+          "summary": "Monitor security alerts, investigate incidents and support vulnerability and risk management.",
+          "skills": [
+            "Security fundamentals",
+            "Log analysis",
+            "Incident response",
+            "Documentation"
+          ]
+        },
+        {
+          "title": "Data Analyst",
+          "summary": "Prepare, analyse and communicate data using queries, spreadsheets and visualisation tools.",
+          "skills": [
+            "SQL",
+            "Spreadsheets",
+            "Data visualisation",
+            "Critical thinking"
+          ]
+        },
+        {
+          "title": "Systems Administrator",
+          "summary": "Maintain servers, user access, backups, networks and system availability.",
+          "skills": [
+            "Linux or Windows administration",
+            "Networking",
+            "Backup and recovery",
+            "Scripting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Engineering & Technology",
+      "roles": [
+        {
+          "title": "Mechanical Engineer",
+          "summary": "Design, analyse and improve mechanical systems, equipment and components.",
+          "skills": [
+            "Engineering principles",
+            "CAD",
+            "Testing",
+            "Technical documentation"
+          ]
+        },
+        {
+          "title": "Civil Engineer",
+          "summary": "Plan, design or supervise infrastructure and construction works in line with local standards.",
+          "skills": [
+            "Civil engineering",
+            "Technical drawings",
+            "Project coordination",
+            "Regulatory awareness"
+          ]
+        },
+        {
+          "title": "Automation Technician",
+          "summary": "Install and maintain industrial control systems, sensors and automated equipment.",
+          "skills": [
+            "PLC basics",
+            "Electrical systems",
+            "Diagnostics",
+            "Safety"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agriculture & Farming",
+      "roles": [
+        {
+          "title": "Farm Worker",
+          "summary": "Support planting, harvesting, animal care or general farm operations according to seasonal needs.",
+          "skills": [
+            "Practical farm work",
+            "Equipment safety",
+            "Teamwork",
+            "Animal or crop care"
+          ]
+        },
+        {
+          "title": "Agricultural Technician",
+          "summary": "Collect field data and support crop, soil, irrigation or livestock management programmes.",
+          "skills": [
+            "Agricultural methods",
+            "Record keeping",
+            "Sampling",
+            "Technical awareness"
+          ]
+        },
+        {
+          "title": "Horticulture Worker",
+          "summary": "Grow and maintain plants, landscapes or nursery stock using suitable cultivation techniques.",
+          "skills": [
+            "Plant care",
+            "Pruning",
+            "Irrigation",
+            "Safe equipment use"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beauty & Personal Care",
+      "roles": [
+        {
+          "title": "Hairdresser / Barber",
+          "summary": "Consult with clients and provide hair cutting, styling and grooming services within local licensing rules.",
+          "skills": [
+            "Cutting and styling",
+            "Hygiene",
+            "Client consultation",
+            "Portfolio"
+          ]
+        },
+        {
+          "title": "Beauty Therapist",
+          "summary": "Provide permitted beauty treatments, maintain hygiene and explain aftercare to clients.",
+          "skills": [
+            "Recognised training",
+            "Treatment techniques",
+            "Hygiene",
+            "Client care"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Legal & Compliance",
+      "roles": [
+        {
+          "title": "Legal Assistant",
+          "summary": "Support legal professionals with document preparation, research, scheduling and case administration.",
+          "skills": [
+            "Legal administration",
+            "Research",
+            "Document accuracy",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Compliance Analyst",
+          "summary": "Help monitor internal controls, regulatory obligations and compliance documentation.",
+          "skills": [
+            "Policy analysis",
+            "Risk awareness",
+            "Reporting",
+            "Attention to detail"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arts, Media & Creative",
+      "roles": [
+        {
+          "title": "Video Editor",
+          "summary": "Edit footage, audio and graphics into finished video content for digital or broadcast use.",
+          "skills": [
+            "Editing software",
+            "Storytelling",
+            "Audio basics",
+            "Portfolio"
+          ]
+        },
+        {
+          "title": "3D Artist",
+          "summary": "Create 3D models, materials, lighting and renders for games, products or visual media.",
+          "skills": [
+            "3D modelling",
+            "Texturing",
+            "Lighting",
+            "Portfolio"
+          ]
+        },
+        {
+          "title": "Photographer",
+          "summary": "Plan and capture images, manage lighting and deliver edited visual material to clients.",
+          "skills": [
+            "Photography",
+            "Lighting",
+            "Image editing",
+            "Client briefing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Remote & Work From Home",
+      "roles": [
+        {
+          "title": "Remote Software Developer",
+          "summary": "Build and maintain software with distributed teams using online collaboration and version-control tools.",
+          "skills": [
+            "Programming",
+            "Git",
+            "Remote collaboration",
+            "Testing"
+          ]
+        },
+        {
+          "title": "Remote Graphic Designer",
+          "summary": "Create digital brand and marketing assets remotely, working from briefs and feedback cycles.",
+          "skills": [
+            "Graphic design",
+            "Creative software",
+            "File handoff",
+            "Communication"
+          ]
+        },
+        {
+          "title": "Remote Customer Support Agent",
+          "summary": "Assist customers by phone, email or chat from an approved remote location and document each case.",
+          "skills": [
+            "Written communication",
+            "Support platforms",
+            "Troubleshooting",
+            "Reliable workspace"
+          ]
+        },
+        {
+          "title": "Remote Virtual Assistant",
+          "summary": "Provide remote scheduling, inbox, research and administrative support to a business or professional.",
+          "skills": [
+            "Organisation",
+            "Office software",
+            "Written communication",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Remote Translator",
+          "summary": "Translate or localise documents and digital content while preserving meaning, tone and terminology.",
+          "skills": [
+            "Professional language proficiency",
+            "Terminology research",
+            "Editing",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Remote UX/UI Designer",
+          "summary": "Research user needs and design accessible digital interfaces, prototypes and interaction flows.",
+          "skills": [
+            "UX research",
+            "Interface design",
+            "Prototyping",
+            "Accessibility"
+          ]
+        },
+        {
+          "title": "Remote Digital Marketing Specialist",
+          "summary": "Manage digital campaigns and performance reporting across distributed marketing teams.",
+          "skills": [
+            "SEO/SEM",
+            "Analytics",
+            "Content",
+            "Remote coordination"
+          ]
+        }
+      ]
+    }
+  ]
+}
