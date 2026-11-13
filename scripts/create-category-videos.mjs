@@ -30,9 +30,8 @@ const industryPool = [...food,...trades];
 const industryRoles = rotate(industryPool,4,day%Math.max(1,industryPool.length));
 
 function wrap(value,max=30){
-  const words=String(value||"").split(/\s+/);const lines=[];let line="";
-  for(const word of words){if((line+" "+word).trim().length>max&&line){lines.push(line);line=word;}else line=(line+" "+word).trim();}
-  if(line)lines.push(line);return lines.slice(0,3).join("\n");
+  const text=String(value||"").replace(/\s+/g," ").trim();
+  return text.length>max ? text.slice(0,max-1).trim()+"…" : text;
 }
 function filterPath(value){return value.replace(/\\/g,"\\\\").replace(/:/g,"\\:").replace(/'/g,"\\'");}
 async function textFile(name,value){const file=path.join(temp,name);await fs.writeFile(file,value,"utf8");return filterPath(file);}
@@ -45,8 +44,8 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
   for(let i=0;i<scenes.length;i++){
     const scene=scenes[i];
     textInputs.push({
-      title:await textFile(name+"-"+i+"-title.txt",wrap(scene.title,26)),
-      subtitle:await textFile(name+"-"+i+"-subtitle.txt",wrap(scene.subtitle,38))
+      title:await textFile(name+"-"+i+"-title.txt",wrap(scene.title,34)),
+      subtitle:await textFile(name+"-"+i+"-subtitle.txt",wrap(scene.subtitle,42))
     });
   }
   const filters=[
@@ -56,10 +55,10 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
   ];
   scenes.forEach((scene,i)=>{
     const start=i*12, end=i===scenes.length-1?38:(i+1)*12;
-    filters.push(draw(textInputs[i].title,start,end,scene.titleSize||56,scene.titleY||540));
-    filters.push(draw(textInputs[i].subtitle,start,end,scene.subtitleSize||38,scene.subtitleY||900));
+    filters.push(draw(textInputs[i].title,start,end,scene.titleSize||50,scene.titleY||540));
+    filters.push(draw(textInputs[i].subtitle,start,end,scene.subtitleSize||34,scene.subtitleY||900));
   });
-  filters.push(draw(await textFile(name+"-footer.txt","ZOVARO WORLDWIDE\nDISCOVER BETTER. SHOP SMARTER."),0,40,29,1400));
+  filters.push(draw(await textFile(name+"-footer.txt","ZOVARO WORLDWIDE · DISCOVER BETTER. SHOP SMARTER."),0,40,29,1400));
   const filterComplex="[0:v]"+filters.join(",")+"[base];[2:v]scale=360:-1[logo];[base][logo]overlay=(W-w)/2:85:format=auto,fade=t=in:st=0:d=1,fade=t=out:st=38:d=2,format=yuv420p[v]";
   const output=path.join(OUTPUT,name+".mp4");
   await execFileAsync("ffmpeg",[
@@ -80,7 +79,7 @@ async function makeVideo({name,background,music,scenes,caption,hashtags}){
 }
 
 const jobScenes=selectedJobs.length>=1?[
-  {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Explore current employer-published openings on ZOVARO JOBS Worldwide."},
+  {title:"FIND YOUR NEXT OPPORTUNITY",subtitle:"Browse real openings on ZOVARO JOBS Worldwide."},
   {title:""+selectedJobs[0].title,subtitle:[selectedJobs[0].company,selectedJobs[0].location].filter(Boolean).join(" · ")},
   {title:selectedJobs[1]?.title||"REMOTE & WORK FROM HOME",subtitle:selectedJobs[2]?[selectedJobs[2].title,selectedJobs[2].company].join(" · "):"Explore more verified roles and career categories."}
 ]:[
