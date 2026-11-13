@@ -28,7 +28,7 @@ for(const job of jobs){
   if(!/^https:\/\//i.test(job.sourceUrl||""))errors.push("Missing HTTPS source URL: "+job.id);
   if(!/^https:\/\//i.test(job.applicationUrl||""))errors.push("Missing HTTPS application URL: "+job.id);
   if(!categoryNames.has(job.category))errors.push("Unknown job category: "+job.id+" / "+job.category);
-  if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(job.verifiedAt||""))errors.push("Invalid verification date: "+job.id);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(job.verifiedAt||""))errors.push("Invalid verification date: "+job.id);
   if(!Array.isArray(job.countries)||!job.countries.length)errors.push("Missing eligible country list: "+job.id);
 }
 for(const id of ["jobCountryFilter","jobRegionFilter","jobCityFilter","jobCategoryFilter","careerCategoryFilter","careerGuideSearch","careerGuidesGrid","careerGuidesMeta"]){
@@ -41,6 +41,6 @@ if(!clientJs.includes('/data/curated-jobs.json')||!clientJs.includes('/data/care
 if(!detailJs.includes('/api/marketplace?type=job&id='))errors.push("Standalone detail page cannot load employer-submitted jobs.");
 if(!api.includes('jobCategories.includes(record.category)'))errors.push("API does not validate employer job categories.");
 
-if(errors.length){console.error(errors.join("\\n"));process.exit(1);}
+if(errors.length){console.error(errors.join("\n"));process.exit(1);}
 console.log("ZOVARO JOBS portal validation passed.");
 console.log("Career categories: "+categories.length+"; career profiles: "+roles.length+"; curated source listings: "+jobs.length+".");
