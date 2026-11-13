@@ -22,7 +22,12 @@
     "CJ programme terms update 2026-11-11: Creality emails announce pending terms labelled 5%-10% with activation dates 12-Nov and 14-Nov-2026. The visible summary lists 5% website-purchase commission for CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia; no 10% basis is visible. Review the full CJAM schedule before representing any higher rate.",
     "CJ promotions 2026-11-11: AOMEI Black Friday bundle advertised at 80% off from 11-Nov to 11-Dec-2026, with campaign link ID 17385381 and updated assets in CJ. Dream Pairs advertised a members-only 25% sale for 12-Nov to 19-Nov-2026. These are advertiser promotions, not proof that ZOVARO has generated a valid deep link or that product content is already live.",
     "CJ Commission Reconciliation workflow run 5 completed successfully on 2026-11-11, including the import step into private ZOVARO storage. Workflow success alone does not prove a sale, commission amount or payout.",
-    "Partner research update 2026-11-11: Acme Tools official affiliate page confirms Impact tracking, minimum 2% commission on qualified purchases, 15-day tracking, 91,000+ product catalogue, full data feed and creative assets. ZOVARO emailed the dedicated affiliate manager on 2026-11-11; publisher-country eligibility, actual customer delivery destinations, exclusions, tracking activation, asset permissions and payout terms remain pending. RainPoint official affiliate page advertises free signup, 10% qualifying-sales commission, product feed, unique tracking links and dashboard assets; payouts only after a minimum threshold (schedule/threshold unspecified), and branded paid-search bidding/direct paid traffic are restricted. Prospect recorded for portal application; general support address not used for affiliate outreach. Prunarbo official affiliate page advertises 10% commission and monthly PayPal/bank-transfer payout above an unspecified threshold; Italy appears in the storefront country selector but publisher eligibility and delivery coverage require confirmation. Prospect recorded for official portal application; no public dedicated affiliate email identified."
+    "Partner research update 2026-11-11: Acme Tools official affiliate page confirms Impact tracking, minimum 2% commission on qualified purchases, 15-day tracking, 91,000+ product catalogue, full data feed and creative assets. ZOVARO emailed the dedicated affiliate manager on 2026-11-11; publisher-country eligibility, actual customer delivery destinations, exclusions, tracking activation, asset permissions and payout terms remain pending. RainPoint official affiliate page advertises free signup, 10% qualifying-sales commission, product feed, unique tracking links and dashboard assets; payouts only after a minimum threshold (schedule/threshold unspecified), and branded paid-search bidding/direct paid traffic are restricted. Prospect recorded for portal application; general support address not used for affiliate outreach. Prunarbo official affiliate page advertises 10% commission and monthly PayPal/bank-transfer payout above an unspecified threshold; Italy appears in the storefront country selector but publisher eligibility and delivery coverage require confirmation. Prospect recorded for official portal application; no public dedicated affiliate email identified.",
+    "Partner outreach 2026-11-12: initial personalised emails sent to Mirador Outdoor (affiliate@miradoroutdoor.com), Hertz Affiliate/Webgains (hertz@webgains.com) and RST Brands (affiliates@rstbrands.com). These are contacted prospects only; no programme approval, valid ZOVARO tracking links, feeds, media permissions or payout terms have been confirmed.",
+    "eBay/EPN review 2026-11-12: no eBay/EPN approval email was found in the connected Gmail search; no eBay-specific environment variable was present in the Vercel project environment-variable name list; no eBay connector or authenticated EPN portal access is available. This does not prove that no account exists; account approval and payout settings remain unverified. EPN participating marketplace sites listed in the current Network Agreement are AU, AT, BE, CA, FR, DE, IE, IT, NL, PL, ES, CH, UK and US; this is marketplace coverage, not confirmation of publisher-country eligibility.",
+    "eBay EPN public terms reviewed 2026-11-12: standard Buy It Now attribution is 24 hours and last-click; auction and Best Offer have separate qualifying-event rules. Current Global Rate Card and caps are published by category and may be overridden by the authenticated account's Contract Terms. Official public payment guidance indicates a monthly payout threshold of USD 10 and a monthly payment cycle, with EFT/direct deposit and PayPal options; current published calendar pays on the 10th for the month before the previous month. Weekly payout is not indicated. A help page and the current rate card differ on real-estate eligibility/rate; confirm the account-specific rule before any promotion.",
+    "eBay Browse API review 2026-11-12: Browse API can search and retrieve item details including image, title, price, condition, availability, shipping and seller information. For EPN tracking, requests must include X-EBAY-C-ENDUSERCTX with the required 10-digit affiliateCampaignId to return itemAffiliateWebUrl; affiliateReferenceId is optional. Buy API production use is intended for approved eBay partners and requires EPN membership, a production application, technical review and specific agreements; no production access or API integration is currently verified. Do not publish eBay listings until EPN approval, API access, tracking, marketplace delivery and content-policy checks are complete.",
+    "eBay independent seller policy 2026-11-12: EPN affiliation is with eBay, not each individual seller. Any separate direct referral relationship with a seller requires a distinct explicit agreement. EPN affiliate links must be used only on permitted external channels and not inserted into eBay listings, Stores or eBay Messages."
   ],
   "prospects": [
     {
@@ -1795,6 +1800,117 @@
       "sourceChecked": "2026-11-11",
       "draftEvidence": "Gmail draft r-8685999007190519248 created without recipient; no dedicated public affiliate email identified, so not sent.",
       "draftCreatedAt": "2026-11-12T00:31:56.354Z"
+    },
+    {
+      "id": "mirador-outdoor",
+      "name": "Mirador Outdoor",
+      "status": "contacted",
+      "programType": "CJ affiliate - outdoor furniture and structures",
+      "territories": [
+        "Not specified on official affiliate page; publisher and delivery eligibility to confirm"
+      ],
+      "publicCommission": "Up to 15% advertised; exact CJ rate and exclusions pending confirmation",
+      "cookie": "30 days (official affiliate page)",
+      "contact": {
+        "email": "affiliate@miradoroutdoor.com",
+        "sourceUrl": "https://www.miradoroutdoor.com/pages/affiliate",
+        "applicationUrl": "https://signup.cj.com/"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await confirmation of Italy-based publisher eligibility, destination countries, actual CJ rates, feed/deep links, permitted imagery, reporting and payout terms.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T00:27:41.714Z",
+      "contactEvidence": "Gmail sent message 1a1d24c6060444c2",
+      "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "hertz-affiliate-webgains",
+      "name": "Hertz Affiliate Programme",
+      "status": "contacted",
+      "programType": "Car-rental affiliate programme via Webgains",
+      "territories": [
+        "Hertz France page verified; other Hertz marketplace and publisher territories to confirm"
+      ],
+      "publicCommission": "Not published on the official affiliate page; programme described as free and network-managed",
+      "contact": {
+        "email": "hertz@webgains.com",
+        "sourceUrl": "https://www.hertz.fr/rentacar/b2b/AffiliateProgView-b2b"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await confirmation of Italy-based publisher acceptance, eligible Hertz sites/destinations, commission and cookie, Webgains onboarding, deep links, media permissions and payout terms. Direct high-volume travel-agency route not pursued.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T00:27:41.714Z",
+      "contactEvidence": "Gmail sent message 1a1d24c6937950c8",
+      "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "rst-brands",
+      "name": "RST Brands",
+      "status": "contacted",
+      "programType": "CJ affiliate - outdoor furniture and home storage",
+      "territories": [
+        "Not specified on official affiliate page; publisher and delivery eligibility to confirm"
+      ],
+      "publicCommission": "Commission on tracked sales; rate not published on official page",
+      "contact": {
+        "email": "affiliates@rstbrands.com",
+        "sourceUrl": "https://www.rstbrands.com/affiliate"
+      },
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await CJ advertiser ID, Italy publisher eligibility, destination countries, rate/cookie, product feed, permitted creative assets and payout terms. Observe official brand-search and direct-linking restrictions.",
+      "sourceChecked": "2026-11-12",
+      "contactedAt": "2026-11-13T00:27:41.714Z",
+      "contactEvidence": "Gmail sent message 1a1d24c6dc20e251",
+      "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "ebay-partner-network",
+      "name": "eBay Partner Network (EPN) + eBay Browse API",
+      "status": "prospect",
+      "programType": "Affiliate network and potential API catalogue integration",
+      "territories": [
+        "EPN participating marketplaces: Australia, Austria, Belgium, Canada, France, Germany, Ireland, Italy, Netherlands, Poland, Spain, Switzerland, United Kingdom, United States; publisher-country eligibility not verified"
+      ],
+      "publicCommission": "Published Global Rate Card: Business & Industrial 2.5%; Collectibles 3%; Electronics 2% (Computers/Tablets/Networking 1.5%); Fashion 4%; Home & Garden 3%; Lifestyle 3%; Media 3%; eBay Motors 4% (USD 100 cap); Vehicle Parts & Accessories 3%; Real Estate 1% (USD 100 cap); All Other 4%. Other per-transaction caps apply. Account-specific rates must be checked in EPN portal.",
+      "cookie": "24 hours for standard Buy It Now qualifying transactions; last-click attribution. Auction and Best Offer events have additional rules.",
+      "payout": "Monthly; published threshold USD 10. Payment options include EFT/direct deposit and PayPal. Current published calendar states payment on the 10th for the month before the previous month; exact account-specific cycle to verify. Weekly payouts not indicated.",
+      "contact": {
+        "website": "https://partnernetwork.ebay.com/",
+        "applicationUrl": "https://partnernetwork.ebay.com/",
+        "developerUrl": "https://developer.ebay.com/",
+        "browseApiUrl": "https://developer.ebay.com/api-docs/buy/api-browse.html",
+        "sourceUrl": "https://partnernetwork.ebay.com/page/network-agreement"
+      },
+      "integration": {
+        "affiliateLink": "not configured",
+        "campaignId": "not found",
+        "browseApiOAuth": "not configured",
+        "inventoryFeed": "not approved or verified",
+        "imagePermission": "pending",
+        "conversionReporting": "not connected"
+      },
+      "nextAction": "EPN account/approval cannot be verified without authenticated portal access; no approval email or eBay-specific Vercel environment variable was found. Required before monetized integration: confirm EPN account approval and publisher eligibility; obtain the 10-digit campaign ID; create an eBay Developer application and securely configure client ID/secret; apply for and receive Buy API production access and any required written approval for the proposed catalogue/display experience; then test OAuth, Browse API, itemAffiliateWebUrl tracking, marketplace delivery filters, item availability, and attribution. Do not contact or label individual eBay sellers as ZOVARO partners without separate written agreements. Never place EPN links in eBay listings, stores or eBay messages.",
+      "sourceChecked": "2026-11-12",
+      "accountStatus": "not verified; no authenticated EPN portal access or connected eBay account",
+      "campaignIdStatus": "missing",
+      "developerAppStatus": "not verified",
+      "apiProductionApproval": "not obtained or verified",
+      "payoutSettingsStatus": "not verified in authenticated EPN portal"
     }
   ]
 }
