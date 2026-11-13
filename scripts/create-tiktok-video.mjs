@@ -1041,14 +1041,40 @@ for (
       `[cardbackground]`,
 
     `[0:v]` +
-      `scale=900:880:force_original_aspect_ratio=decrease,` +
+      `scale=900:720:force_original_aspect_ratio=decrease,` +
       `format=rgba,` +
       `colorchannelmixer=aa=${PRODUCT_OPACITY}` +
       `[product]`,
 
-    `[cardbackground][product]` +
-      `overlay=(W-w)/2:55:format=auto` +
+    `[cardbackground]` +
+      `drawbox=x=55:y=35:w=970:h=150:color=black:t=fill` +
+      `[headerbackground]`,
+
+    `[headerbackground][product]` +
+      `overlay=(W-w)/2:205:format=auto` +
       `[scene1]`,
+
+    `[headline2]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+      `text='DON’T MISS IT!':` +
+      `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:` +
+      `fontsize=48:` +
+      `x=(w-text_w)/2:` +
+      `y=62:` +
+      `expansion=none` +
+      `[headline]`,
+
+    `[headline]` +
+      `drawtext=` +
+      `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
+      `text='GREAT DEALS & EXCLUSIVE FINDS ON ZOVARO':` +
+      `fontcolor=0x00D9FF:borderw=1:bordercolor=0x007BFF:` +
+      `fontsize=22:` +
+      `x=(w-text_w)/2:` +
+      `y=128:` +
+      `expansion=none` +
+      `[headline2]`,
 
     /*
       TEXT 1 — CATEGORY
@@ -1168,6 +1194,10 @@ for (
 
   filterParts.push(
     `[text6]` +
+      `drawbox=x=55:y=35:w=970:h=1830:color=0x00D9FF:t=6` +
+      `[framed]`,
+
+    `[framed]` +
       `format=rgba,` +
       `fade=t=out:st=${Math.max(
         0,
