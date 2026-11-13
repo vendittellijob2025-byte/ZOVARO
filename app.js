@@ -624,11 +624,6 @@ function showResults(
   $("#resultsTitle").textContent = activeResultsTitle;
   renderResultPage(false);
 
-  $("#dealGrid").innerHTML = "";
-  $("#newGrid").innerHTML = "";
-  const staleDealsButton = $("#viewAllDealsButton");
-  if (staleDealsButton) staleDealsButton.remove();
-
   $("#trending").scrollIntoView({
     behavior: "smooth",
     block: "start"
@@ -644,29 +639,6 @@ function render() {
     "Popular Discoveries"
   );
 
-  const deals = PRODUCTS.filter(p => p.discount);
-  $("#dealGrid").innerHTML = deals
-    .slice(0, PRODUCT_PAGE_SIZE)
-    .map(card)
-    .join("");
-
-  if (deals.length > PRODUCT_PAGE_SIZE) {
-    const moreDeals = document.createElement("button");
-    moreDeals.id = "viewAllDealsButton";
-    moreDeals.type = "button";
-    moreDeals.className = "text-btn";
-    moreDeals.style.display = "block";
-    moreDeals.style.margin = "24px auto 0";
-    moreDeals.textContent = `View all ${deals.length.toLocaleString()} deals`;
-    moreDeals.addEventListener("click", () => showResults(deals, "Best Deals"));
-    $("#dealGrid").after(moreDeals);
-  }
-
-  const newArrivals = PRODUCTS.filter(p => p.type === "new");
-  $("#newGrid").innerHTML = newArrivals
-    .slice(0, PRODUCT_PAGE_SIZE)
-    .map(card)
-    .join("");
 }
 
 
