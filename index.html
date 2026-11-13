@@ -1217,6 +1217,30 @@ footer{
   #categoryGrid button.category{height:96px;min-height:96px;}
 }
 
+
+/* ZOVARO JOBS WORLDWIDE */
+.jobs-worldwide-intro{max-width:900px;margin:0 auto 22px;text-align:center;color:#a9c1dc;line-height:1.65}
+.jobs-location-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.jobs-location-grid label{display:block;color:#8fdfff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.jobs-location-grid select{width:100%;margin-top:7px;min-height:46px;padding:10px 12px;border:1px solid rgba(65,169,235,.4);border-radius:11px;background:#061124;color:#fff}
+.jobs-results-meta{color:#83a1c1;font-size:12px;margin:10px 0 16px}
+.job-detail-panel{position:fixed;z-index:10020;inset:0;display:none;overflow:auto;background:rgba(0,5,15,.94);padding:28px 16px}
+.job-detail-panel.open{display:block}
+.job-detail-card{max-width:850px;margin:4vh auto;padding:clamp(20px,4vw,38px);border:1px solid rgba(43,204,255,.55);border-radius:22px;background:linear-gradient(145deg,#0a1b34,#030914);box-shadow:0 0 42px rgba(0,150,255,.18)}
+.job-detail-card h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(27px,5vw,42px);margin:8px 0}
+.job-detail-company{color:#4ddcff;font-weight:700}
+.job-detail-body{color:#c4d5e8;line-height:1.75;white-space:pre-wrap}
+.job-detail-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}
+.job-detail-meta div{padding:12px;border:1px solid rgba(65,169,235,.2);border-radius:10px;background:rgba(255,255,255,.025)}
+.job-detail-meta strong{display:block;color:#60dfff;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.job-detail-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.job-detail-actions a,.job-detail-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;border:1px solid #27cfff;border-radius:10px;background:#087cb8;color:white;text-decoration:none;font-weight:800;font-size:12px;cursor:pointer}
+.job-detail-actions button{background:transparent}
+.job-source-note{font-size:11px;color:#829bb8;margin-top:18px;line-height:1.6}
+.marketplace-listing[data-job-card="true"]{cursor:pointer}
+.job-open-details{margin-top:12px;padding:10px 14px;border:1px solid rgba(42,204,255,.65);border-radius:9px;background:rgba(0,135,210,.14);color:#70e3ff;font-weight:800;cursor:pointer}
+@media(max-width:680px){.jobs-location-grid{grid-template-columns:1fr}.job-detail-meta{grid-template-columns:1fr}}
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 </head>
@@ -2093,12 +2117,31 @@ footer{
 
 <section id="lookingJobView" class="view hidden marketplace-view">
   <button type="button" class="back-button" id="backFromLookingJob">← Back</button>
-  <h2 class="choice-title">LOOKING FOR A JOB</h2>
-  <p class="choice-subtitle">Browse opportunities published by employers and reviewed by ZOVARO.</p>
-  <div class="marketplace-toolbar"><input id="jobSearchInput" type="search" maxlength="100" placeholder="Search job title, company or location" aria-label="Search jobs"><button type="button" id="jobSearchButton">SEARCH</button></div>
+  <p class="eyebrow">ZOVARO WORLDWIDE · CAREER DISCOVERY</p>
+  <h2 class="choice-title">JOBS AROUND THE WORLD</h2>
+  <p class="jobs-worldwide-intro">Explore opportunities by country, region or state, and city. Every listing opens a dedicated ZOVARO job profile with the available role details, compensation and official application route.</p>
+  <div class="jobs-location-grid" aria-label="Browse jobs by location">
+    <label>Country<select id="jobCountryFilter"><option value="">All countries</option></select></label>
+    <label>Region / State<select id="jobRegionFilter" disabled><option value="">All regions / states</option></select></label>
+    <label>City<select id="jobCityFilter" disabled><option value="">All cities</option></select></label>
+  </div>
+  <div class="marketplace-toolbar"><input id="jobSearchInput" type="search" maxlength="100" placeholder="Search job title, employer, skills or location" aria-label="Search jobs"><button type="button" id="jobSearchButton">SEARCH</button></div>
+  <div id="jobResultsMeta" class="jobs-results-meta">Browse verified opportunities worldwide.</div>
   <div id="jobListings" class="marketplace-listings" aria-live="polite"></div>
   <button id="jobLoadMore" class="marketplace-more hidden" type="button">LOAD MORE JOBS</button>
   <p id="jobListingsEmpty" class="marketplace-empty">No approved job opportunities are available yet. Check again soon.</p>
+  <div id="jobDetailPanel" class="job-detail-panel" role="dialog" aria-modal="true" aria-labelledby="jobDetailTitle">
+    <article class="job-detail-card">
+      <button type="button" class="back-button" id="closeJobDetail">← Back to job offers</button>
+      <p class="eyebrow">ZOVARO JOB PROFILE</p>
+      <h2 id="jobDetailTitle"></h2>
+      <p id="jobDetailCompany" class="job-detail-company"></p>
+      <div id="jobDetailMeta" class="job-detail-meta"></div>
+      <div id="jobDetailDescription" class="job-detail-body"></div>
+      <div class="job-detail-actions" id="jobDetailActions"></div>
+      <p class="job-source-note" id="jobDetailSource"></p>
+    </article>
+  </div>
 </section>
 
 <section id="offerJobView" class="view hidden marketplace-view">
@@ -2113,9 +2156,15 @@ footer{
       <div class="form-group"><label for="jobType">Employment type</label><select id="jobType" name="jobType" required><option value="">Choose type</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Freelance</option><option>Temporary</option><option>Internship</option></select></div>
       <div class="form-group"><label for="jobWorkplace">Workplace</label><select id="jobWorkplace" name="workplace" required><option value="">Choose workplace</option><option>On-site</option><option>Hybrid</option><option>Remote</option></select></div>
     </div>
+    <div class="marketplace-fields">
+      <div class="form-group"><label for="jobCountry">Country</label><input id="jobCountry" name="country" maxlength="80" placeholder="Country" autocomplete="country-name"></div>
+      <div class="form-group"><label for="jobRegion">Region / State</label><input id="jobRegion" name="region" maxlength="100" placeholder="Region, state or province"></div>
+    </div>
+    <div class="form-group"><label for="jobCity">City</label><input id="jobCity" name="city" maxlength="100" placeholder="City or metropolitan area"></div>
     <div class="form-group"><label for="jobLocation">Location</label><input id="jobLocation" name="location" required maxlength="100" placeholder="City, country or Remote worldwide"></div>
     <div class="form-group"><label for="jobSalary">Salary / compensation range (optional)</label><input id="jobSalary" name="salaryText" maxlength="100" placeholder="e.g. €2,000–€2,500 gross per month"></div>
     <div class="form-group"><label for="jobDescription">Job description</label><textarea id="jobDescription" name="description" required maxlength="3000" placeholder="Responsibilities, requirements, salary range (if available), and application details."></textarea></div>
+    <div class="form-group"><label for="jobApplicationUrl">Official application URL (optional)</label><input id="jobApplicationUrl" name="applicationUrl" type="url" maxlength="500" placeholder="https://company.com/careers/job-id"></div>
     <div class="form-group"><label for="jobContact">Recruitment contact email</label><input id="jobContact" name="contactEmail" type="email" required maxlength="254" placeholder="recruitment@company.com"></div>
     <label class="marketplace-consent"><input type="checkbox" name="employerDeclaration" value="true" required><span>I confirm that I represent this employer or am authorized to publish this genuine opportunity, and that no applicant will be charged to apply or obtain the job.</span></label>
     <label class="marketplace-consent"><input type="checkbox" name="publicContact"><span>Optional: I agree that this recruitment contact email may be displayed publicly after approval. Leave unchecked to keep it private.</span></label>
