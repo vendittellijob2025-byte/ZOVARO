@@ -2,6 +2,20 @@ name: ZOVARO - Verify curated job sources
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/career-guides.json"
+      - "data/curated-jobs.json"
+      - "index.html"
+      - "marketplace.js"
+      - "job.html"
+      - "job-detail.js"
+      - "api/marketplace.js"
+      - "scripts/verify-curated-jobs.mjs"
+      - "scripts/validate-jobs-portal.mjs"
+      - ".github/workflows/verify-curated-jobs.yml"
   schedule:
     - cron: "15 13 * * *"
   push:
@@ -31,9 +45,19 @@ jobs:
         with:
           node-version: 24
           package-manager-cache: false
+      - name: Check JavaScript syntax
+        run: |
+          node --check marketplace.js
+          node --check job-detail.js
+          node --check api/marketplace.js
+          node --check scripts/verify-curated-jobs.mjs
+          node --check scripts/validate-jobs-portal.mjs
+      - name: Validate portal data and routes
+        run: node scripts/validate-jobs-portal.mjs
       - name: Verify official employer sources
         run: node scripts/verify-curated-jobs.mjs
       - name: Save verification results
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
