@@ -1054,10 +1054,10 @@ for (
       `overlay=(W-w)/2:205:format=auto` +
       `[scene1]`,
 
-    `[headline2]` +
+    `[scene1]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:` +
-      `text='DON’T MISS IT!':` +
+      `text='DON'T MISS IT!':` +
       `fontcolor=0x00D9FF:borderw=2:bordercolor=0x007BFF:` +
       `fontsize=48:` +
       `x=(w-text_w)/2:` +
@@ -1080,7 +1080,7 @@ for (
       TEXT 1 — CATEGORY
     */
 
-    `[scene1]` +
+    `[headline2]` +
       `drawtext=` +
       `fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:` +
       `textfile='${categoryText}':` +
