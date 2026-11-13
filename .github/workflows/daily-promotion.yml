@@ -22,7 +22,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: zovaro-daily-promotion
+  group: zovaro-daily-promotion-v2
   cancel-in-progress: true
 
 jobs:
