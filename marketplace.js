@@ -157,6 +157,7 @@
   const citySelect = $("jobCityFilter");
   const searchJobsButton = $("jobLocationSearch");
   const jobLocationStatus = $("jobLocationStatus");
+  const jobCategoryInstruction = $("jobCategoryInstruction");
   const careerCategoryGrid = $("careerCategoryGrid");
   let careerCategories = [];
   let locationSearchActive = false;
@@ -239,6 +240,7 @@
     setOptions(citySelect, [], "Select a country first");
     if (citySelect) citySelect.disabled = true;
     renderCareerCategoryTiles(careerCategories);
+    if (jobCategoryInstruction) jobCategoryInstruction.classList.add("hidden");
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
   async function populateCities(country) {
@@ -332,6 +334,7 @@
     });
     const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
     renderCareerCategoryTiles(available);
+    if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
     if (jobLocationStatus) {
       jobLocationStatus.textContent = available.length
         ? available.length + " professional categories with active opportunities in " + city + ", " + country + "."
