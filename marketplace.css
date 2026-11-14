@@ -8,7 +8,7 @@
 .career-explorer,.career-category-results{max-width:1120px;margin:26px auto;padding:24px;border:1px solid rgba(40,195,255,.24);border-radius:20px;background:linear-gradient(145deg,rgba(8,35,72,.58),rgba(2,8,21,.86));}
 .career-explorer h3{margin:0 0 18px;color:#fff;font:600 22px "Space Grotesk",sans-serif}
 .jobs-worldwide-intro,.jobs-results-meta,.job-category-instruction{max-width:1000px;margin:12px auto;color:#c6d9eb;line-height:1.6}
-.jobs-location-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:14px;align-items:end}
+.jobs-location-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:14px;align-items:end}
 .jobs-location-grid .form-group{margin:0}
 .jobs-location-grid label{display:block;margin-bottom:8px;color:#d7eaff;font-size:11px;font-weight:800;letter-spacing:.08em}
 .jobs-location-grid select,.jobs-location-grid input{width:100%;min-height:48px;padding:12px 14px;border:1px solid rgba(72,160,225,.5);border-radius:10px;background:#041022;color:#fff}
