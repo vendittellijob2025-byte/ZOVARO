@@ -154,6 +154,7 @@
 
   const jobItems = [];
   const countrySelect = $("jobCountryFilter");
+  const regionSelect = $("jobRegionFilter");
   const citySelect = $("jobCityFilter");
   const citySuggestions = $("jobCitySuggestions");
   const searchJobsButton = $("jobLocationSearch");
@@ -211,10 +212,28 @@
   }
   function categoryHasJobs(category, jobs) {
     const target = normalizeCategory(category);
-    return jobs.some(item => {
-      const actual = normalizeCategory(item.category || "");
-      return actual === target || (actual && target && (actual.includes(target) || target.includes(actual)));
-    });
+    return jobs.some(item => normalizeCategory(item.category || "") === target);
+  }
+  function jobMatchesLocation(item, country, region = "", city = "") {
+    const eligibleCountries = Array.isArray(item.countries) ? item.countries : [];
+    const itemCountry = normalizeLocation(item.country);
+    const requestedCountry = normalizeLocation(country);
+    const countryMatch = itemCountry === requestedCountry ||
+      eligibleCountries.some(value => normalizeLocation(value) === requestedCountry) ||
+      eligibleCountries.some(value => /^(worldwide|any country|global)$/i.test(String(value))) ||
+      /^(worldwide|remote worldwide|global)$/i.test(String(item.country || ""));
+    if (!countryMatch) return false;
+    if (region) {
+      const itemRegion = normalizeLocation(item.region);
+      const requestedRegion = normalizeLocation(region);
+      if (itemRegion !== requestedRegion && !(item.workplace === "Remote" && /remote|worldwide|multiple/i.test(itemRegion))) return false;
+    }
+    if (!city) return true;
+    const itemCity = normalizeLocation(item.city);
+    const requestedCity = normalizeLocation(city);
+    if (itemCity === requestedCity) return true;
+    return String(item.workplace || "").toLowerCase() === "remote" &&
+      (itemCity === "remote" || /remote|worldwide/i.test(String(item.location || "")));
   }
   function renderCareerCategoryTiles(categories) {
     if (!careerCategoryGrid) return;
@@ -254,9 +273,7 @@
         normalizeCategory(category).includes(normalizeCategory(item.category || ""));
       if (!categoryMatch) return false;
       if (!locationSearchActive) return true;
-      const countryMatch = normalizeLocation(item.country) === normalizeLocation(selectedCountry) ||
-        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(selectedCountry)));
-      return countryMatch && normalizeLocation(item.city) === normalizeLocation(selectedCity);
+      return jobMatchesLocation(item, selectedCountry, regionSelect?.value || "", selectedCity);
     });
     if (title) title.textContent = category;
     if (meta) meta.textContent = matches.length
@@ -274,6 +291,7 @@
   function restoreAllCareerCategories() {
     locationSearchActive = false;
     if (countrySelect) countrySelect.value = "";
+    if (regionSelect) { regionSelect.value = ""; regionSelect.disabled = true; setOptions(regionSelect, [], "All regions / states"); }
     if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
     if (citySuggestions) citySuggestions.replaceChildren();
     renderCareerCategoryTiles(careerCategories);
@@ -282,11 +300,20 @@
     document.querySelector("#lookingJobView .career-explorer")?.classList.remove("hidden");
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
-  function populateCities(country) {
+  function populateRegions(country) {
+    const regions = uniqueSorted(jobItems
+      .filter(item => jobMatchesLocation(item, country))
+      .map(item => item.region)
+      .filter(value => value && !/remote|worldwide|multiple/i.test(value)));
+    if (regionSelect) {
+      setOptions(regionSelect, regions, "All regions / states");
+      regionSelect.disabled = false;
+    }
+  }
+  function populateCities(country, region = "") {
     if (citySuggestions) citySuggestions.replaceChildren();
     const suggestions = uniqueSorted(jobItems
-      .filter(item => normalizeLocation(item.country) === normalizeLocation(country) ||
-        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country))))
+      .filter(item => jobMatchesLocation(item, country, region))
       .map(item => item.city));
     suggestions.forEach(city => citySuggestions?.appendChild(new Option(city, city)));
     if (citySelect) {
@@ -358,11 +385,8 @@
       return;
     }
     locationSearchActive = true;
-    const matches = jobItems.filter(item => {
-      const countryMatches = normalizeLocation(item.country) === normalizeLocation(country) ||
-        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country)));
-      return countryMatches && normalizeLocation(item.city) === normalizeLocation(city);
-    });
+    const region = regionSelect?.value || "";
+    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city));
     const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
     renderCareerCategoryTiles(available);
     if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
@@ -375,12 +399,18 @@
   countrySelect?.addEventListener("change",() => {
     const country = countrySelect.value;
     if (!country) {
+      if (regionSelect) { regionSelect.value = ""; regionSelect.disabled = true; setOptions(regionSelect, [], "All regions / states"); }
       if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
       if (citySuggestions) citySuggestions.replaceChildren();
       return;
     }
+    populateRegions(country);
     populateCities(country);
-    if (jobLocationStatus && countrySelect?.value === country) jobLocationStatus.textContent = "Now type or select a city in " + country + ".";
+    if (jobLocationStatus) jobLocationStatus.textContent = "Choose an optional region/state, then enter or select a city in " + country + ".";
+  });
+  regionSelect?.addEventListener("change", () => {
+    if (countrySelect?.value) populateCities(countrySelect.value, regionSelect.value);
+    if (citySelect) citySelect.value = "";
   });
   searchJobsButton?.addEventListener("click",searchJobsByLocation);
   $("backToCareerCategories")?.addEventListener("click",() => {
