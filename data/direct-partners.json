@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "partners": [],
   "products": [],
   "notes": [
@@ -29,7 +29,11 @@
     "eBay Browse API review 2026-11-12: Browse API can search and retrieve item details including image, title, price, condition, availability, shipping and seller information. For EPN tracking, requests must include X-EBAY-C-ENDUSERCTX with the required 10-digit affiliateCampaignId to return itemAffiliateWebUrl; affiliateReferenceId is optional. Buy API production use is intended for approved eBay partners and requires EPN membership, a production application, technical review and specific agreements; no production access or API integration is currently verified. Do not publish eBay listings until EPN approval, API access, tracking, marketplace delivery and content-policy checks are complete.",
     "eBay independent seller policy 2026-11-12: EPN affiliation is with eBay, not each individual seller. Any separate direct referral relationship with a seller requires a distinct explicit agreement. EPN affiliate links must be used only on permitted external channels and not inserted into eBay listings, Stores or eBay Messages.",
     "Outreach delivery failures reviewed 2026-11-12: the message to EMEA-affiliates@lenovo.com was blocked by the recipient mail system, and the message to amartinez@charismabrands.com returned SMTP 550 address not found. Do not retry either address; only consider new contact routes after verifying an official affiliate/partnership contact.",
-    "Affiliate outreach 2026-11-12: individual enquiries sent to AnkerWork (affiliate@anker.com), Nature Portfolio (affiliates@nature.com) and ABMIUM (info@abmium.com) for Office & Technology, Books & Media, and Industrial & Scientific coverage. Gmail sent IDs: 1a1d2a7f958cfca3, 1a1d2a802fee93be, 1a1d2a80f3e16e9a. These are contact attempts only; no approval, tracking, feed, image rights or commission is confirmed until partner replies and technical checks pass."
+    "Affiliate outreach 2026-11-12: individual enquiries sent to AnkerWork (affiliate@anker.com), Nature Portfolio (affiliates@nature.com) and ABMIUM (info@abmium.com) for Office & Technology, Books & Media, and Industrial & Scientific coverage. Gmail sent IDs: 1a1d2a7f958cfca3, 1a1d2a802fee93be, 1a1d2a80f3e16e9a. These are contact attempts only; no approval, tracking, feed, image rights or commission is confirmed until partner replies and technical checks pass.",
+    "CJ status update 2026-11-13: Global Amore Mall (Amorepacific) welcome email confirms approval on CJ (thread 1a1d3b9814d7b676). Latest CJ sync run 43519761281 shows advertiser 7468134 with 1,550 feed products received and 1,439 unique products imported after deduplication. CJ feed validation confirms valid prices, images and click URLs for imported records, but a live click/attribution test and advertiser-specific public storefront count are not available. The welcome email restricts image use to images shared by Global Amore Mall and identifies coupon codes CYOUNG, CYOUNGPLUS and LOREN15 as non-commissionable. Keep status approved_on_network, not fully publishable until asset scope and account terms are confirmed.",
+    "CJ deactivation update 2026-11-13: Baseus US Amazon Marketplace advertiser 7641760 was deactivated (thread 1a1d2e44ffcbd668). The latest CJ sync excludes non-active/non-joined advertisers from storefront eligibility; Baseus products retained in the internal merged inventory are not selected for the public storefront while the advertiser is not currently joined/feed-eligible. Do not promote its links during deactivation.",
+    "New partner research and outreach 2026-11-13: Click&Boat and YachtBooking.com were contacted on 2026-11-14T00:24Z using official affiliate/partner contacts. Catawiki and Boatbookings were added as prospects; no dedicated affiliate email was verified, so no email was sent. Thomann was added as a prospect but not contacted because its official programme requires at least 500 unique website visits/day or 5,000 social followers, neither of which has been verified for ZOVARO.",
+    "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received."
   ],
   "prospects": [
     {
@@ -1985,6 +1989,149 @@
       "sourceChecked": "2026-11-12",
       "contactedAt": "2026-11-13T02:05:00Z",
       "contactEvidence": "Gmail sent message 1a1d2a80f3e16e9a"
+    },
+    {
+      "id": "amore-mall-amorepacific",
+      "name": "Global Amore Mall (Amorepacific)",
+      "status": "approved_on_network",
+      "programType": "CJ beauty affiliate programme",
+      "category": "beauty-korean-skincare-affiliate",
+      "advertiserId": "7468134",
+      "approvedAt": "2026-11-13T07:05:10Z",
+      "source": "Gmail CJ welcome email thread 1a1d3b9814d7b676; CJ product sync run 43519761281",
+      "commission": "Not stated in welcome email; account-specific CJ terms not yet checked",
+      "cookie": "Not stated in welcome email",
+      "territories": [],
+      "integration": {
+        "feedStatus": "verified_in_CJ_sync",
+        "productsReceived": 1550,
+        "productsImported": 1439,
+        "trackingStatus": "CJ HTTPS click URLs passed feed validation for imported records; live click/attribution test not performed",
+        "storefrontVisibleCount": "not independently verified by advertiser",
+        "imagePermission": "restricted: welcome email says use only images shared by Global Amore Mall; exact feed-asset permission scope must be confirmed",
+        "conversionReporting": "CJ reporting access not inspected"
+      },
+      "nextAction": "Verify advertiser terms, exact commission/cookie, publisher and customer territories, approved feed-image scope, and CJ reporting. Do not use images outside the assets shared by Global Amore Mall. Exclude coupon codes CYOUNG, CYOUNGPLUS and LOREN15 because the welcome email says they are not commissionable. Test an approved deep link and attribution before promoting.",
+      "contactEvidence": "Welcome email subject: Welcome to Amorepacific Affiliate Program!; thread 1a1d3b9814d7b676"
+    },
+    {
+      "id": "baseus-us-amazon-marketplace",
+      "name": "Baseus US Amazon Marketplace",
+      "status": "deactivated_on_network",
+      "programType": "CJ advertiser programme",
+      "category": "electronics-accessories-affiliate",
+      "advertiserId": "7641760",
+      "deactivatedAt": "2026-11-13T03:12:19Z",
+      "source": "Gmail CJ deactivation notice thread 1a1d2e44ffcbd668",
+      "nextAction": "Do not use or promote Baseus US Amazon Marketplace links while deactivated: CJ says transactions driven during deactivation earn no commission. The 2026-11-13 CJ sync did not include advertiser 7641760 among active joined feed advertisers. The current storefront selector requires an advertiser to remain joined and feed-eligible, so older Baseus rows are excluded from the public storefront even if retained in the internal merged catalogue. Check external social posts for stale links and replace them.",
+      "contactEvidence": "CJ notice subject: Notice: Baseus US Amazon Marketplace (7641760) Program has been deactivated; thread 1a1d2e44ffcbd668"
+    },
+    {
+      "id": "bh-photo-affiliate",
+      "name": "B&H Photo Video",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "electronics-photography-video-affiliate",
+      "email": "affsignup@bhphoto.com",
+      "sourceUrl": "https://www.bhphotovideo.com/c/find/shared/affiliates.jsp",
+      "contactedAt": "2026-11-12T21:21:17Z",
+      "contactEvidence": "Gmail sent thread 1a1d1a2ed9922412; automatic reply thread 1a1d264ee0e05405 received 2026-11-13T00:53:08Z",
+      "publicCommission": "Official page advertises 2% base on 450,000+ products and 8% on 3,000+ selected products; final category/brand rates require programme terms",
+      "cookie": "Not stated on official affiliate page",
+      "territories": [],
+      "nextAction": "Automatic reply asks applicants to allow 1-2 weeks. Await response on Italy-based publisher eligibility, customer delivery territories, current rates, cookie, approved traffic, feed/API, assets and payout. Do not send a duplicate enquiry."
+    },
+    {
+      "id": "clickandboat-affiliate",
+      "name": "Click&Boat",
+      "status": "contacted",
+      "programType": "International boat and yacht rental affiliate programme via Impact",
+      "category": "luxury-yacht-boat-rental-affiliate",
+      "email": "clickandboat@artefact.com",
+      "sourceUrl": "https://blog.clickandboat.com/en/how-to-join-clickboats-affiliation-program/",
+      "contactedAt": "2026-11-14T00:24:00Z",
+      "contactEvidence": "Gmail sent message/thread 1a1d7708e22f8119",
+      "publicCommission": "Starting rates published: 6% of booking amount for new customers; 3% for existing customers",
+      "cookie": "30 days",
+      "integration": {
+        "tracking": "Impact.com; booking attribution described by the programme",
+        "feedStatus": "product feed advertised as available after approval",
+        "conversionRule": "commission only for confirmed and completed reservations; cancelled reservations are not commissionable",
+        "media": "programme lists banners, videos, links, inserts and promo codes"
+      },
+      "territories": [
+        "More than 100 destination countries are advertised; publisher-country eligibility not yet confirmed"
+      ],
+      "nextAction": "Await confirmation that an Italy-based publisher can join, the exact eligible customer markets, current rates, feed access, image/creative permissions, reporting and payout terms. Weekly bank transfer is a request only."
+    },
+    {
+      "id": "yachtbooking-affiliate",
+      "name": "YachtBooking.com",
+      "status": "contacted",
+      "programType": "Direct yacht and boat affiliate programme",
+      "category": "luxury-yacht-charter-affiliate",
+      "email": "partner@yachtbooking.com",
+      "sourceUrl": "https://www.yachtbooking.com/home/partners",
+      "contactedAt": "2026-11-14T00:24:02Z",
+      "contactEvidence": "Gmail sent message/thread 1a1d77096a3123aa",
+      "publicCommission": "Official partner page advertises 50% of the booking commission for affiliate referrals; a separate 50:50 intermediary arrangement is described for partners generating more than 10 reservations per month",
+      "cookie": "Not stated",
+      "territories": [
+        "International partner companies/agencies are mentioned; customer destinations and publisher eligibility require confirmation"
+      ],
+      "nextAction": "Await clarification of the 50% commission calculation, eligibility at ZOVARO's current stage, booking attribution, tracking links, cookie, inventory feed/API, permitted imagery, reporting and payout schedule. Do not imply that individual yacht owners have separate ZOVARO agreements."
+    },
+    {
+      "id": "catawiki-partner-network",
+      "name": "Catawiki Partner Network",
+      "status": "prospect",
+      "programType": "Collectibles, art, classic cars and luxury auctions affiliate network",
+      "category": "luxury-art-collectibles-classic-cars-affiliate",
+      "sourceUrl": "https://www.catawiki.com/en/partner-network",
+      "applicationUrl": "https://www.catawiki.com/en/partner-network",
+      "publicCommission": "Official page advertises up to EUR 40 per unique bidder and up to 80% commission; exact action-specific rate must be confirmed in the partner account",
+      "cookie": "30 days for bidders/lot submitters; 60 days for buyer/seller commissions",
+      "payout": "Monthly, according to the official page",
+      "integration": {
+        "tracking": "partner-ID tracking links",
+        "feedStatus": "product data feeds advertised",
+        "deepLinks": "advertised",
+        "media": "banners and promotional materials advertised"
+      },
+      "territories": [],
+      "nextAction": "Apply through the official Partner Network/Partnerize route only after checking publisher-country acceptance, exact action-based commission schedule, category restrictions, feed licence, image permissions, minimum payout, bank-transfer method and payout currency. No direct public affiliate email identified."
+    },
+    {
+      "id": "boatbookings-affiliate",
+      "name": "Boatbookings",
+      "status": "prospect",
+      "programType": "Luxury yacht charter affiliate and lead-referral programme",
+      "category": "luxury-yacht-charter-affiliate",
+      "sourceUrl": "https://www.boatbookings.com/yachting_content/travel_agent_yacht_charter.php",
+      "applicationUrl": "https://affiliates.boatbookings.com/signup.php",
+      "publicCommission": "Affiliate page advertises 20% of the commission earned by Boatbookings as a base rate; a separate lead-referral route advertises approximately 3% of charter rental fee",
+      "payout": "Bank transfer after invoice, one month after successful charter completion, as stated on the official page",
+      "integration": {
+        "tracking": "electronic lead tracking and real-time lead-status reporting advertised",
+        "media": "enquiry forms, images, buttons and banners supplied"
+      },
+      "territories": [
+        "Worldwide yacht charter destinations advertised"
+      ],
+      "nextAction": "Official affiliate signup is free but requires creating account credentials; do not submit or create an account without the required owner-approved secure onboarding. Confirm publisher eligibility, attribution, commission base, cancellation treatment and whether the EUR/USD/GBP/SGD 3,000 minimum applies only to the separate referral route. No verified dedicated affiliate email identified."
+    },
+    {
+      "id": "thomann-premium-partner",
+      "name": "Thomann Premium Partner Programme",
+      "status": "prospect",
+      "programType": "Musical instruments and studio equipment affiliate programme",
+      "category": "musical-instruments-studio-affiliate",
+      "email": "affiliate@thomann.de",
+      "sourceUrl": "https://www.thomann.de/de/faq_question_wie_werde_ich_thomann_affiliate_partner.html",
+      "publicCommission": "Official Thomann pages publish 2% for forums/meta-networks, 3.5% for websites/magazines and 4.5% for creators",
+      "cookie": "14 days",
+      "payout": "Automated invoicing/payment after EUR 50 commission is reached, per Thomann's official affiliate FAQ",
+      "nextAction": "Do not apply or email until ZOVARO's qualifying audience is verified: Thomann requires at least 500 unique website visits per day or 5,000 social followers. Existing CJ click totals do not prove unique visits or follower counts. If the threshold is met, ask about Italy publisher eligibility, countries shipped, feed/widget access, creative permissions and payout details."
     }
   ]
 }
