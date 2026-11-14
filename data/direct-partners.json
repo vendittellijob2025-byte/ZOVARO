@@ -4576,6 +4576,163 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; confirm Awin access, eligible territories, feed, deep links, assets and payout."
+    },
+    {
+      "id": "back-market-affiliate",
+      "name": "Back Market",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Refurbished; Pre-Owned; Electronics; Gaming",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/18275",
+      "contact": {
+        "email": "affiliates@backmarket.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/18275"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc406a18be313",
+      "territories": [
+        "US programme listing and Spain programme reference; exact approved countries pending"
+      ],
+      "commission": "Not stated in current listing snippet",
+      "cookie": "Public Awin listing states 30 days",
+      "payout": "Public listing states payment within 60 days after invoice",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin programme access, eligible countries, current commission, feed, tracking and asset permissions."
+    },
+    {
+      "id": "balalah-mobility-affiliate",
+      "name": "Balalah Mobility Aid Solutions",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Accessible & Adaptive Living",
+      "sourceUrl": "https://balalah.com/pages/become-an-affiliate",
+      "contact": {
+        "email": "sales@balalah.com",
+        "sourceUrl": "https://balalah.com/pages/become-an-affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc40748468595",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "To be confirmed in written approval",
+      "cookie": "Not stated; attribution via unique checkout code",
+      "integration": {
+        "affiliateLink": "pending",
+        "referralCode": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; obtain written commission, eligible products, territories, promo code, reporting and payout terms."
+    },
+    {
+      "id": "crazy-good-buy-affiliate",
+      "name": "Crazy Good Buy",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Industrial; Business Equipment; Refurbished",
+      "sourceUrl": "https://www.crazygoodbuy.com/pages/affiliate-program",
+      "contact": {
+        "email": "info@crazygoodbuy.com",
+        "sourceUrl": "https://www.crazygoodbuy.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc407d339064a",
+      "territories": [
+        "US; public page says it serves customers across the US"
+      ],
+      "commission": "Not published in public excerpt",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm commission, product categories, inventory data, tracking, approved images and payout."
+    },
+    {
+      "id": "rentari-real-estate-referral",
+      "name": "Rentari",
+      "status": "contacted",
+      "programType": "Direct referral programme",
+      "category": "Real Estate; Property Services",
+      "sourceUrl": "https://acme-pm.rentari.ai/partners",
+      "contact": {
+        "email": "info@rentari.ai",
+        "sourceUrl": "https://acme-pm.rentari.ai/partners"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc408400e1155",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Individually negotiated",
+      "cookie": "Not stated; qualifying referral terms to be agreed",
+      "integration": {
+        "affiliateLink": "pending",
+        "referralTracking": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; agree qualifying lead definition, territories, tracking, commission, payout and written agreement before referral activity."
+    },
+    {
+      "id": "oas-mobility-affiliate",
+      "name": "OAS Mobility",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Accessible & Adaptive Living",
+      "sourceUrl": "https://ui.awin.com/merchant-profile-terms/122024",
+      "contact": {
+        "email": "contact@oasmobility.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile-terms/122024"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc408ac5c7aa0",
+      "territories": [
+        "US market; exact customer delivery areas pending"
+      ],
+      "commission": "Public terms state 10% of net sales on qualified orders",
+      "cookie": "Not confirmed in reviewed terms",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher acceptance, product feed, tracking, image permission and customer delivery coverage."
+    },
+    {
+      "id": "techable-affiliate",
+      "name": "Techable",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Refurbished; Electronics; Gaming",
+      "sourceUrl": "https://techable.com/pages/affiliate",
+      "contact": {
+        "email": "support@techable.com",
+        "sourceUrl": "https://techable.com/pages/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4094888ca87",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 7%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher eligibility, supported countries, exact commission, product catalog, deep links and approved assets."
     }
   ]
 }
