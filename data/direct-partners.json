@@ -3424,8 +3424,10 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm application route, US delivery coverage, feed access, commission, tracking and content permissions.",
-      "formatCorrectionMessageId": "1a1dc3bdd12fbeea"
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "formatCorrectionMessageId": "1a1dc3bdd12fbeea",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Message blocked by recipient server (two delivery failures)"
     },
     {
       "id": "columbia-sportswear-affiliate",
@@ -3766,7 +3768,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify the US programme route, publisher eligibility, feed, tracking, content permissions and country restrictions. This is a new contact after the EMEA address previously bounced."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Message blocked by recipient server"
     },
     {
       "id": "rowenta-usa-affiliate",
@@ -4054,7 +4058,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin access, exact eligible markets, feed, tracking, image permissions and payout."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Address not found"
     },
     {
       "id": "accor-all-affiliate",
@@ -5098,7 +5104,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, customer countries, product catalogue, tracking, media rights and payout alternatives."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "550 5.1.1 address not found"
     },
     {
       "id": "trustedbrands-b2b-network",
@@ -5228,7 +5236,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm correct network programme, country coverage, feed, tracking and assets."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Message blocked by recipient server"
     },
     {
       "id": "greenpan-affiliate",
@@ -5332,7 +5342,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await referral to correct affiliate programme; do not treat as approved or commissionable until confirmed."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Address not found"
     },
     {
       "id": "gigabyte-aorus-partnership",
@@ -5384,7 +5396,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await referral to publisher programme; confirm eligible platform, countries, catalogue and tracking."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "550 5.1.1 address not found"
     },
     {
       "id": "cooler-master-partnership",
@@ -5620,7 +5634,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await referral to the appropriate commerce affiliate programme; do not count as approved until tracking and terms confirmed."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "550 5.1.1 address not found"
     },
     {
       "id": "loccitane-affiliate",
@@ -5881,7 +5897,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher and customer markets, exact terms, feed, tracking and approved assets."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Message blocked by recipient server"
     },
     {
       "id": "ctzn-cosmetics-affiliate",
@@ -5907,7 +5925,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, countries, tracking, assets and payout."
+      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "deliveryStatus": "bounced",
+      "bounceReason": "550 5.1.1 address not found"
     },
     {
       "id": "orena-fragrances-affiliate",
