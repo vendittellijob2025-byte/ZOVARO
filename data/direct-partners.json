@@ -36,7 +36,8 @@
     "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received.",
     "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified.",
     "Food delivery research 2026-11-13: Wolt's official localized affiliate page confirms a publisher programme through TradeDoubler, with tracked links/ads/banners and consumer delivery coverage in 25 countries across Europe and Asia. The page does not publish rates, cookie, feed/API or publisher-country eligibility and requires personal data plus bank details during TradeDoubler registration. Added as prospect only; no application or email submitted. foodpanda's official Delivery Hero Partnerize partnership agreement confirms a programme framework, but does not by itself prove an active campaign, approval, rate or territory for Pakistan/Philippines.",
-    "CJ technical matrix refreshed 2026-11-13 from sync run 43519761281: 26 advertisers have accountStatus Active and relationshipStatus joined. Technical audit now records advertiser IDs, feed status, received/passing/imported counts, deduplication and image-URL rejections, feed currency labels, URL-format validation, and explicit unknowns for test clicks, end-to-end attribution and advertiser-specific public visibility. 26 CJ advertisers are approved_on_network; none is automatically considered fully publishable solely from this sync. Latest public catalogue: 17,051 selected products; 192,165 feed products eligible before storefront selection; 0 category mismatches and 0 invalid subcategory paths in the 17,051-product audit. Latest image-audit batch: 250 processed, 14 passed, 236 marked for review, 15,243 remaining in queue. Feed currency/market labels are not proof of shipping territories."
+    "CJ technical matrix refreshed 2026-11-13 from sync run 43519761281: 26 advertisers have accountStatus Active and relationshipStatus joined. Technical audit now records advertiser IDs, feed status, received/passing/imported counts, deduplication and image-URL rejections, feed currency labels, URL-format validation, and explicit unknowns for test clicks, end-to-end attribution and advertiser-specific public visibility. 26 CJ advertisers are approved_on_network; none is automatically considered fully publishable solely from this sync. Latest public catalogue: 17,051 selected products; 192,165 feed products eligible before storefront selection; 0 category mismatches and 0 invalid subcategory paths in the 17,051-product audit. Latest image-audit batch: 250 processed, 14 passed, 236 marked for review, 15,243 remaining in queue. Feed currency/market labels are not proof of shipping territories.",
+    "Food delivery and grocery research 2026-11-13: Uber's official Italian affiliate page confirms a free affiliate programme for eligible first Uber trips and first Uber Eats orders; commission depends on audience and publisher country, and acceptance is discretionary. Application form only; no public affiliate email, so no email or application submitted. Instacart's official current page confirms a free Impact programme with up to USD 10 CPA for qualifying new-customer orders, unique tracking/reporting, US/Canada-based traffic requirement and payout approximately 55 days after month-end once USD 10 is reached. No public affiliate email; added as prospect only, pending audience-geography verification."
   ],
   "prospects": [
     {
@@ -3333,6 +3334,44 @@
         },
         "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
       }
+    },
+    {
+      "id": "uber-affiliate-uber-eats",
+      "name": "Uber Affiliate Programme (Uber + Uber Eats)",
+      "status": "prospect",
+      "programType": "Direct affiliate programme for first rides and first Uber Eats orders",
+      "category": "food-delivery-mobility-affiliate",
+      "sourceUrl": "https://www.uber.com/it/it/affiliate-program/",
+      "applicationUrl": "https://www.uber.com/it/it/affiliate-program/",
+      "publicCommission": "Not published; Uber says the rate depends on audience, publisher country and other factors. Commission is for eligible first rides and first Uber Eats orders.",
+      "cookie": "Not stated",
+      "payout": "Not stated",
+      "fees": "Official page says joining is free.",
+      "tracking": "Affiliate tracking required; exact attribution window and reporting are supplied after application/approval.",
+      "territories": [
+        "Uber operates in 10,000+ cities across six continents; this does not confirm publisher eligibility or every Uber Eats delivery market."
+      ],
+      "contact": "Official application form only; no dedicated public affiliate email identified.",
+      "nextAction": "Strong food-delivery prospect. Inspect the official application form and confirm Italy-based publisher eligibility, accepted audience countries, active Uber Eats markets, commission rates, attribution window, tracking/reporting and payout schedule. Do not submit the application until all required business/audience declarations are known. No email sent because no public affiliate email is listed."
+    },
+    {
+      "id": "instacart-affiliate-impact",
+      "name": "Instacart Affiliate Programme",
+      "status": "prospect",
+      "programType": "Grocery delivery affiliate programme via Impact",
+      "category": "food-grocery-delivery-affiliate",
+      "sourceUrl": "https://company.instacart.ca/affiliate",
+      "applicationUrl": "https://company.instacart.ca/affiliate",
+      "publicCommission": "Up to USD 10 CPA for each qualifying new-customer order; exact rate varies by approved publisher track and campaign.",
+      "cookie": "Not stated on the official current affiliate page.",
+      "payout": "Approximately 55 days after the end of the month in which qualifying orders occur; Impact balance must reach USD 10 equivalent before withdrawal.",
+      "fees": "Official page says the programme is free to join.",
+      "tracking": "Unique Impact tracking links and performance reporting; API/integration partners receive parameters after partner ID setup.",
+      "territories": [
+        "Publisher eligibility requires US and/or Canada-based traffic; customer service is focused on North America."
+      ],
+      "contact": "Official Impact application; no current dedicated public affiliate email identified.",
+      "nextAction": "Potentially useful for Food & Grocery only if ZOVARO can demonstrate sufficient US/Canada-based traffic. Verify audience geography before applying. Weekly bank transfer is not supported by the published timing; Impact payout is approximately 55 days after month-end. Do not apply until traffic eligibility is verified."
     }
   ]
 }
