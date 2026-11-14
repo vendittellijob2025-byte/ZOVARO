@@ -67,7 +67,7 @@ const VISUAL_CANDIDATES = [
   { label: "office stationery, printer supplies or computer software", category: "Office & Technology" },
   { label: "suitcase, carry-on luggage, travel backpack or travel accessory", category: "Travel" }
 ];
-const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 250) || 250;
+const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 350) || 350;
 const BATCH_SIZE = Math.min(500, Math.max(1, requestedBatchSize));
 const MIN_BYTES = 8 * 1024;
 const MAX_BYTES = 12 * 1024 * 1024;
