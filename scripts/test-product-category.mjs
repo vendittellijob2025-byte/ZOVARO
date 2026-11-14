@@ -215,7 +215,7 @@ const departmentCases = [
   ["Padel Racket Carbon", "Sports", "Padel"],
   ["Mountain Bike Helmet", "Sports", "Cycling > Helmets & Protection"],
   ["Women's Floral Summer Dress", "Fashion", "Women's Clothing"],
-  ["Women's Running Shoes", "Fashion", "Shoes > Running Shoes"],
+  ["Women's Running Shoes", "Sports", "Running > Running Shoes"],
   ["Men's Leather Sneakers", "Fashion", "Shoes > Sneakers"],
   ["Leather Ankle Boots", "Fashion", "Shoes > Boots"],
   ["Women's Sandals", "Fashion", "Shoes > Sandals"],
@@ -224,6 +224,7 @@ const departmentCases = [
   ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
   ["Baby Bottle with Silicone Nipple", "Babies", "Feeding & Nursing"],
   ["Baby Stroller Travel System", "Babies", "Strollers & Accessories"],
+  ["Baby Pre-Walker Shoes", "Babies", "Baby Shoes > Pre-Walker Shoes"],
   ["Stainless Steel Cookware Set", "Home & Living", "Kitchen & Dining"],
   ["Robot Vacuum Cleaner", "Appliances", "Floor Care"],
   ["Dog Harness Adjustable", "Pets", "Dogs > Collars, Leashes & Harnesses"],
@@ -242,7 +243,8 @@ for (const [title, expectedCategory, expectedSubcategory] of departmentCases) {
 }
 
 assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Camiseta Head Tie Break Women" }), "Sports");
-assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Padel Court Shoes" }), "Fashion");
+assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Padel Court Shoes" }), "Sports");
+assert.equal(subcategoryFor("Sports", { title: "Padel Court Shoes", advertiserName: "Padel Iberico ES" }), "Sports Apparel > Sports Footwear");
 assert.equal(subcategoryFor("Fashion", { title: "Padel Court Shoes", advertiserName: "Padel Iberico ES" }), "Shoes");
 assert.equal(subcategoryFor("Sports", { title: "Camiseta Head Tie Break Women", advertiserName: "Padel Iberico ES" }), "Sports Apparel > Sports Clothing");
 assert.equal(subcategoryFor("Sports", { title: "Nox ML10 Pro Cup Padel Racket", advertiserName: "Padel Iberico ES" }), "Padel > Padel Rackets");
@@ -266,10 +268,13 @@ function treeHasPath(categoryName, path) {
 }
 for (const [category, path] of [
   ["Sports", "Sports Apparel > Sports Clothing"],
+  ["Sports", "Sports Apparel > Sports Footwear"],
+  ["Sports", "Running > Running Shoes"],
   ["Sports", "Padel > Padel Rackets"],
   ["Sports", "Padel > Padel Bags"],
   ["Babies", "Baby Clothing > Baby Sleepwear"],
   ["Babies", "Baby Clothing > Baby Bodysuits"],
+  ["Babies", "Baby Shoes > Pre-Walker Shoes"],
   ["Fashion", "Shoes > Running Shoes"],
   ["Fashion", "Shoes > Sneakers"],
   ["Fashion", "Shoes > Boots"],
