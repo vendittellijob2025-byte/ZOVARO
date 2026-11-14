@@ -2112,7 +2112,7 @@ footer{
       </div>
       <div class="form-group">
         <label for="jobCityFilter">CITY</label>
-        <select id="jobCityFilter" disabled><option value="">Select a country first</option></select>
+        <input id="jobCityFilter" type="text" list="jobCitySuggestions" disabled autocomplete="off" placeholder="Select a country first"><datalist id="jobCitySuggestions"></datalist>
       </div>
       <button type="button" class="form-submit" id="jobLocationSearch">SEARCH JOBS</button>
     </div>
