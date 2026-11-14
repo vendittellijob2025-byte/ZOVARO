@@ -439,6 +439,7 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
       const sub = String(product.subcategory || "").trim();
       return sub === path || sub.startsWith(path + " > ");
     });
+    if (!selected.length) return "";
     return `
       <div class="category-node">
         <button type="button" class="category" data-tree-open="${esc(path)}">
@@ -446,7 +447,7 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
           <strong>${esc(name)}</strong>
           <span class="category-count">${selected.length} products</span>
         </button>
-        ${selected.length ? `<button type="button" class="category-products" data-tree-products="${esc(path)}">View products (${selected.length}) →</button>` : ""}
+        <button type="button" class="category-products" data-tree-products="${esc(path)}">View products (${selected.length}) →</button>
         ${children.length ? `<button type="button" class="category-browse" data-tree-open="${esc(path)}">Open subcategories →</button>` : ""}
       </div>`;
   }).join("");
@@ -474,7 +475,9 @@ function renderCategories() {
   const categories = [...new Set([
     ...zovaroCategoryTree.map(item => item?.name).filter(Boolean),
     ...products.map(product => categoryLabel(product.category)).filter(Boolean)
-  ])].sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+  ])]
+    .filter(category => category !== "Other" && categoryProductsFor(category).length > 0)
+    .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 
   const grid = $("#categoryGrid");
   if (!grid.dataset.navigationBound) {
@@ -565,7 +568,7 @@ function renderCategories() {
   }
 
   zovaroCategoryView = { category: "", parentPath: "", level: 0 };
-  grid.innerHTML = categories.map(category => {
+  grid.innerHTML = categories.length ? categories.map(category => {
     const count = categoryProductsFor(category).length;
     return `
       <button type="button" class="category" data-root-category="${esc(category)}">
@@ -573,7 +576,7 @@ function renderCategories() {
         <strong>${esc(category)}</strong>
         <span class="category-count">${count} products</span>
       </button>`;
-  }).join("");
+  }).join("") : '<p class="category-empty">New verified product categories are being added. Please check back soon.</p>';
 }
 
 function renderResultPage(append = false) {
