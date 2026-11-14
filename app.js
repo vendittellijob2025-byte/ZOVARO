@@ -394,9 +394,21 @@ const CATEGORY_DETAIL_PHOTOS = [
   [/travel|suitcase|tourism|hotel/i, "photo-1488646953014-85cb44e25828"]
 ];
 
-function categoryImageUrl(name, parentCategory = "") {
+function categoryImageUrl(name, parentCategory = "", categoryPath = "", products = []) {
   const label = String(name || "").trim();
   const parent = String(parentCategory || "").trim();
+  const normalizedLabel = label.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const brandLeaf = /^(rolex|patek philippe|audemars piguet|richard mille|vacheron constantin|cartier|ferrari|lamborghini|rolls royce|bentley|bugatti|aston martin|mclaren|porsche|mercedes maybach)$/i.test(normalizedLabel);
+  const candidates = (Array.isArray(products) ? products : []).filter(product =>
+    product && typeof product.image === "string" && /^https:\/\//i.test(product.image)
+  );
+  const exactProduct = candidates.find(product => {
+    const identity = String(product.brand || "") + " " + String(product.name || "");
+    return identity.toLowerCase().replace(/[^a-z0-9]+/g, " ").includes(normalizedLabel);
+  });
+  const representativeProduct = brandLeaf ? exactProduct : (exactProduct || candidates[0]);
+  if (representativeProduct) return representativeProduct.image;
+
   const detail = CATEGORY_DETAIL_PHOTOS.find(([pattern]) => pattern.test(label));
   const parentKey = parent.toLowerCase();
   const rootKey = label.toLowerCase();
@@ -430,7 +442,7 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
     return `
       <div class="category-node">
         <button type="button" class="category" data-tree-open="${esc(path)}">
-          <img class="category-image" src="${esc(categoryImageUrl(name, category))}" alt="" loading="lazy" decoding="async">
+          <img class="category-image" src="${esc(categoryImageUrl(name, category, path, selected))}" alt="" loading="lazy" decoding="async">
           <strong>${esc(name)}</strong>
           <span class="category-count">${selected.length} products</span>
         </button>
