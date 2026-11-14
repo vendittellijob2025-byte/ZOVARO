@@ -300,6 +300,7 @@
   function restoreAllCareerCategories() {
     locationSearchActive = false;
     if (countrySelect) countrySelect.value = "";
+    if ($("jobWorkplaceFilter")) $("jobWorkplaceFilter").value = "";
     if (regionSelect) { regionSelect.value = ""; regionSelect.disabled = true; setOptions(regionSelect, [], "All regions / states"); }
     if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
     if (citySuggestions) citySuggestions.replaceChildren();
