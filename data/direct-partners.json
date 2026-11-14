@@ -368,7 +368,7 @@
     {
       "id": "farfetch-affiliate",
       "name": "FARFETCH",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "luxury-fashion-affiliate",
       "territories": [
         "Global; site ships to 190+ countries; publisher approval required"
@@ -386,13 +386,16 @@
         "imagePermission": "confirm partner terms",
         "conversionReporting": "network reporting"
       },
-      "nextAction": "Apply/contact with ZOVARO website URL; confirm available network, country eligibility, commission, feed access and asset permissions.",
-      "sourceChecked": "2026-11-11"
+      "nextAction": "Await response to the publisher enquiry. Public programme advertises free entry, a 30-day cookie, approved global sales and daily product feeds; confirm Italy publisher eligibility, exact rates, feed access and asset rights before applying or listing.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-14T23:20:28Z",
+      "emailMessageId": "1a1dc5cbe9e8d577",
+      "contactEvidence": "Gmail sent thread 1a1dc5cbe9e8d577"
     },
     {
       "id": "mytheresa-affiliate",
       "name": "Mytheresa",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "luxury-fashion-affiliate",
       "territories": [
         "International; country eligibility subject to network approval"
@@ -410,8 +413,11 @@
         "imagePermission": "confirm partner terms",
         "conversionReporting": "network sales reporting"
       },
-      "nextAction": "Apply through CJ/Rakuten; confirm publisher-country eligibility, feed and permitted creative use.",
-      "sourceChecked": "2026-11-11"
+      "nextAction": "Await response and confirm the correct CJ/Rakuten route for ZOVARO. Public page describes free membership, competitive commission on eligible international net sales and daily feeds in 8 languages; exact rate, cookie, country eligibility and creative permissions remain unverified.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-14T23:20:30Z",
+      "emailMessageId": "1a1dc5cc8cf7cdca",
+      "contactEvidence": "Gmail sent thread 1a1dc5cc8cf7cdca"
     },
     {
       "id": "cos-affiliate",
@@ -531,7 +537,7 @@
     {
       "id": "playstation-direct-affiliate",
       "name": "PlayStation Direct",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "gaming-console-affiliate",
       "territories": [
         "Italy, Spain, France, Germany, UK and other listed markets"
@@ -549,8 +555,11 @@
         "imagePermission": "Partnerize campaign terms",
         "conversionReporting": "Partnerize reporting"
       },
-      "nextAction": "Apply to PlayStation Direct campaign through Partnerize; confirm ZOVARO website and social channels, eligible territories and tracking.",
-      "sourceChecked": "2026-11-11"
+      "nextAction": "Await guidance on the Partnerize application. Official programme lists Italy among supported PlayStation Direct markets and says payments are facilitated by bank transfer; campaign acceptance, commission, cookie, eligible product feed and exact payout schedule remain unverified.",
+      "sourceChecked": "2026-11-11",
+      "contactedAt": "2026-11-14T23:20:32Z",
+      "emailMessageId": "1a1dc5cce54909d4",
+      "contactEvidence": "Gmail sent thread 1a1dc5cce54909d4"
     },
     {
       "id": "jets-and-partners",
@@ -776,7 +785,7 @@
     {
       "id": "global-food-hub-affiliate",
       "name": "GlobalFoodHub",
-      "status": "prospect",
+      "status": "contacted",
       "programType": "online-grocery-affiliate",
       "territories": [
         "European Union; exact delivery countries and city coverage to verify"
@@ -794,9 +803,12 @@
         "conversionReporting": "pending",
         "imagePermission": "pending"
       },
-      "nextAction": "Confirm country delivery map, commission exclusions, repeat purchase terms, deep-linking and product feed for grocery catalog integration.",
+      "nextAction": "Await response and confirm exact delivery-country/city coverage, exclusions, repeat-order terms, feed/deep links, image rights and payout schedule. Public page advertises 6% commission and a 48-hour first-order attribution window; do not assume all EU cities are served.",
       "sourceChecked": "2026-11-11",
-      "sourceEvidence": "Official GlobalFoodHub affiliate page."
+      "sourceEvidence": "Official GlobalFoodHub affiliate page.",
+      "contactedAt": "2026-11-14T23:20:33Z",
+      "emailMessageId": "1a1dc5cd51cffc84",
+      "contactEvidence": "Gmail sent thread 1a1dc5cd51cffc84"
     },
     {
       "id": "foreo",
