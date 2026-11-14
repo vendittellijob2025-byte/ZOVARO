@@ -5954,6 +5954,298 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await approval and written terms, eligible markets, commission, cookie, tracking and payout."
+    },
+    {
+      "id": "beddley-affiliate",
+      "name": "Beddley",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Home & Living; Bedding",
+      "sourceUrl": "https://beddley.com/pages/affiliates",
+      "contact": {
+        "email": "affiliatemanager@beddley.com",
+        "sourceUrl": "https://beddley.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc418d35978ca",
+      "advertiserId": "59169",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published in public page",
+      "cookie": "Awin listing states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply and application review. Check programme restrictions before any email marketing; do not send consumer email promotions without valid opt-in."
+    },
+    {
+      "id": "belle-and-june-affiliate",
+      "name": "Belle & June",
+      "status": "contacted",
+      "deliveryStatus": "bounced",
+      "bounceReason": "Message blocked by recipient server",
+      "programType": "Impact affiliate programme",
+      "category": "Home & Living; Furniture; Décor; Luxury Gifts",
+      "sourceUrl": "https://www.belleandjune.com/affiliate-program",
+      "contact": {
+        "email": "affiliatepartnerships@belleandjune.com",
+        "sourceUrl": "https://www.belleandjune.com/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4196a0e9451",
+      "territories": [
+        "US and international shipping advertised; exact publisher/customer markets pending"
+      ],
+      "commission": "Public page states 6%",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Do not resend to bounced address. Use official Impact application route or verify a different affiliate manager contact."
+    },
+    {
+      "id": "linens-and-hutch-affiliate",
+      "name": "Linens & Hutch",
+      "status": "contacted",
+      "programType": "Rakuten affiliate programme",
+      "category": "Home & Living; Bedding",
+      "sourceUrl": "https://www.linensandhutch.com/pages/linens-hutch-affiliate-program",
+      "contact": {
+        "email": "affiliates@linensandhutch.com",
+        "sourceUrl": "https://www.linensandhutch.com/pages/linens-hutch-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc419c45a0804",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published in overview",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Rakuten acceptance, countries, product catalogue, tracking and payout."
+    },
+    {
+      "id": "kathy-kuo-home-affiliate",
+      "name": "Kathy Kuo Home",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Home & Living; Furniture; Luxury",
+      "sourceUrl": "https://www.kathykuohome.com/affiliates",
+      "contact": {
+        "email": "affiliates@kathykuohome.com",
+        "sourceUrl": "https://www.kathykuohome.com/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41a7baded4d",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states starting at 3%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm programme/network, customer territories, product feed, tracking and approved imagery."
+    },
+    {
+      "id": "honeypot-furniture-affiliate",
+      "name": "Honeypot Furniture",
+      "status": "contacted",
+      "programType": "Ambassador / affiliate programme",
+      "category": "Home & Living; Furniture",
+      "sourceUrl": "https://www.honeypotfurniture.co.uk/",
+      "contact": {
+        "email": "kathleen.ciabo@honeypotfurniture.co.uk",
+        "sourceUrl": "https://www.honeypotfurniture.co.uk/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41aee856194",
+      "territories": [
+        "UK retailer; customer delivery markets to confirm"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm whether a trackable publisher programme is open, eligible countries, commission and product data."
+    },
+    {
+      "id": "bedsure-affiliate",
+      "name": "Bedsure",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Home & Living; Bedding; Household Textiles",
+      "sourceUrl": "https://bedsurehome.com/pages/affiliate",
+      "contact": {
+        "email": "affiliate@bedsurehome.com",
+        "sourceUrl": "https://bedsurehome.com/pages/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41b62c6c89e",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 10% on approved sales",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin application, supported countries, daily feed, tracking and approved product assets."
+    },
+    {
+      "id": "heim-nest-affiliate",
+      "name": "Heim Nest",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Home & Living; Bedding; Furniture",
+      "sourceUrl": "https://heimnest.com/pages/affiliate-program",
+      "contact": {
+        "email": "business@heimnest.com",
+        "sourceUrl": "https://heimnest.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41bf57b4ee0",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 15%",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm eligible publisher/customer markets, product data, tracking, asset rights and payout."
+    },
+    {
+      "id": "king-arthur-baking-affiliate",
+      "name": "King Arthur Baking Company",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Food & Grocery; Baking; Kitchen",
+      "sourceUrl": "https://shop.kingarthurbaking.com/affiliate-program",
+      "contact": {
+        "email": "affiliates@kingarthurbaking.com",
+        "sourceUrl": "https://shop.kingarthurbaking.com/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41c58b9a529",
+      "territories": [
+        "US shipping only; international publisher eligibility possible if audience is primarily US"
+      ],
+      "commission": "Public page states 5%",
+      "cookie": "Public page states 30 days",
+      "payout": "Awin payment processing; USD 20 minimum balance; weekly bank-transfer availability to confirm in Awin settings",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Apply via Awin and disclose US fulfilment limits; confirm feed, exact terms and payout setup."
+    },
+    {
+      "id": "guitar-sale-affiliate",
+      "name": "Guitar.Sale",
+      "status": "contacted",
+      "programType": "Affiliate / media partnership enquiry",
+      "category": "Musical Instruments; Studio",
+      "sourceUrl": "https://guitar.sale/",
+      "contact": {
+        "email": "business@guitar.sale",
+        "sourceUrl": "https://guitar.sale/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41cf3350c98",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm if independent publisher tracking is available, product catalogue and eligible customer markets."
+    },
+    {
+      "id": "sunbasket-affiliate",
+      "name": "Sunbasket",
+      "status": "contacted",
+      "deliveryStatus": "bounced",
+      "bounceReason": "550 5.1.1 address not found",
+      "programType": "Affiliate programme",
+      "category": "Food & Grocery; Meal Kits; Food Delivery",
+      "sourceUrl": "https://sunbasket.com/",
+      "contact": {
+        "email": "partners@sunbasket.com",
+        "sourceUrl": "https://sunbasket.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41d8a852ded",
+      "territories": [
+        "US delivery regions; exact programme territories pending"
+      ],
+      "commission": "Not verified",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Do not resend to bounced address. Find current affiliate network application or verified partnerships contact."
+    },
+    {
+      "id": "wymans-food-affiliate",
+      "name": "Wyman's",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Food & Grocery; Frozen Foods",
+      "sourceUrl": "https://www.wymans.com/",
+      "contact": {
+        "email": "partnerships@wymans.com",
+        "sourceUrl": "https://www.wymans.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc41e1992f19f",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm direct affiliate capability, countries, catalogue, tracking and payout."
     }
   ]
 }
