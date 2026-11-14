@@ -80,7 +80,12 @@
       }
       addText(card, "span", "marketplace-kicker", type === "job" ? [item.category, item.workplace, item.jobType].filter(Boolean).join(" · ") : [item.category, item.condition].filter(Boolean).join(" · "));
       if (type === "job") {
-        addText(card, "span", "career-guide-label", item.isCurated ? "ZOVARO CURATED · EMPLOYER SOURCE CHECKED" : "EMPLOYER-SUBMITTED LISTING");
+        const label = item.isCurated
+          ? "ZOVARO CURATED · EMPLOYER SOURCE CHECKED"
+          : item.sourceType === "external-job-board"
+            ? "EXTERNAL JOB BOARD · ORIGINAL SOURCE"
+            : "EMPLOYER-SUBMITTED LISTING";
+        addText(card, "span", "career-guide-label", label);
       }
       if (item.imageUrl) {
         const image = document.createElement("img");
@@ -115,8 +120,15 @@
         }
         const details = document.createElement("a");
         details.className = "job-open-details";
-        details.href = "/job.html?id=" + encodeURIComponent(item.id || "");
-        details.textContent = "VIEW FULL JOB DETAILS";
+        if (item.sourceType === "external-job-board" && /^https:\/\//i.test(item.applicationUrl || "")) {
+          details.href = item.applicationUrl;
+          details.target = "_blank";
+          details.rel = "noopener noreferrer";
+          details.textContent = "OPEN ORIGINAL JOB AD";
+        } else {
+          details.href = "/job.html?id=" + encodeURIComponent(item.id || "");
+          details.textContent = "VIEW FULL JOB DETAILS";
+        }
         card.appendChild(details);
       } else {
         addText(card, "p", "marketplace-description", item.description);
@@ -387,7 +399,7 @@
       countrySelect.disabled = false;
     }
   }
-  function searchJobsByLocation() {
+  async function searchJobsByLocation() {
     const country = countrySelect?.value || "";
     const city = citySelect?.value || "";
     if (!country || !city) {
@@ -396,14 +408,34 @@
     }
     locationSearchActive = true;
     const region = regionSelect?.value || "";
-    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city, $("jobWorkplaceFilter")?.value || ""));
+    const workplace = $("jobWorkplaceFilter")?.value || "";
+    if (jobLocationStatus) jobLocationStatus.textContent = "Searching current ZOVARO listings and connected public job sources…";
+    if (country.toLowerCase() === "sweden") {
+      try {
+        const query = new URLSearchParams({ country: "Sweden", q: [city, region].filter(Boolean).join(" ") });
+        const response = await fetch("/api/jobs?" + query.toString(), { cache: "no-store" });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Swedish job source unavailable.");
+        const seen = new Set(jobItems.map(item => String(item.id || "")));
+        (Array.isArray(result.jobs) ? result.jobs : []).forEach(item => {
+          if (!seen.has(String(item.id || ""))) {
+            seen.add(String(item.id || ""));
+            jobItems.push(item);
+          }
+        });
+      } catch (error) {
+        console.warn("ZOVARO external Swedish job source:", error.message);
+        if (jobLocationStatus) jobLocationStatus.textContent = "The Swedish public source could not be reached. Showing existing ZOVARO listings only.";
+      }
+    }
+    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city, workplace));
     const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
     renderCareerCategoryTiles(available);
     if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
     if (jobLocationStatus) {
       jobLocationStatus.textContent = available.length
         ? available.length + " professional categories with active opportunities in " + city + ", " + country + "."
-        : "No job opportunities were found in " + city + ", " + country + ". Try another city or country.";
+        : "No verified job opportunities were found in " + city + ", " + country + ". Try another city or country.";
     }
   }
   countrySelect?.addEventListener("change",() => {
