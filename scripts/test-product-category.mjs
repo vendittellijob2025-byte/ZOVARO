@@ -215,6 +215,12 @@ const departmentCases = [
   ["Padel Racket Carbon", "Sports", "Padel"],
   ["Mountain Bike Helmet", "Sports", "Cycling > Helmets & Protection"],
   ["Women's Floral Summer Dress", "Fashion", "Women's Clothing"],
+  ["Women's Running Shoes", "Fashion", "Shoes > Running Shoes"],
+  ["Men's Leather Sneakers", "Fashion", "Shoes > Sneakers"],
+  ["Leather Ankle Boots", "Fashion", "Shoes > Boots"],
+  ["Women's Sandals", "Fashion", "Shoes > Sandals"],
+  ["Formal Oxford Shoes", "Fashion", "Shoes > Formal Shoes"],
+  ["Single Shoe", "Fashion", "Shoes"],
   ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
   ["Baby Bottle with Silicone Nipple", "Babies", "Feeding & Nursing"],
   ["Baby Stroller Travel System", "Babies", "Strollers & Accessories"],
@@ -261,7 +267,12 @@ for (const [category, path] of [
   ["Sports", "Padel > Padel Rackets"],
   ["Sports", "Padel > Padel Bags"],
   ["Babies", "Baby Clothing > Baby Sleepwear"],
-  ["Babies", "Baby Clothing > Baby Bodysuits"]
+  ["Babies", "Baby Clothing > Baby Bodysuits"],
+  ["Fashion", "Shoes > Running Shoes"],
+  ["Fashion", "Shoes > Sneakers"],
+  ["Fashion", "Shoes > Boots"],
+  ["Fashion", "Shoes > Sandals"],
+  ["Fashion", "Shoes > Formal Shoes"]
 ]) {
   assert.equal(treeHasPath(category, path), true, "Missing browse-tree path: " + category + " > " + path);
 }
