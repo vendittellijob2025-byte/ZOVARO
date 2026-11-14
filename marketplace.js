@@ -161,6 +161,7 @@
   let careerCategories = [];
   let locationSearchActive = false;
   let geoRequest = 0;
+  const GEO_API = "https://countriesnow.space/api/v0.1";
 
   const CAREER_CATEGORY_PHOTOS = [
     [/food|hospitality/i,"photo-1555939594-58d7cb561ad1"],
@@ -240,12 +241,30 @@
     renderCareerCategoryTiles(careerCategories);
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
-  function populateCities(country) {
-    const cities = uniqueSorted(jobItems
+  async function populateCities(country) {
+    const requestId = ++geoRequest;
+    const fallbackCities = uniqueSorted(jobItems
       .filter(item => normalizeLocation(item.country) === normalizeLocation(country) ||
         (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country))))
       .map(item => item.city));
-    setOptions(citySelect, cities, cities.length ? "Select a city" : "No cities with listed offers");
+    setOptions(citySelect, [], "Loading cities…");
+    if (citySelect) citySelect.disabled = true;
+    let cities = [];
+    try {
+      const response = await fetch(GEO_API + "/countries/cities", {
+        method:"POST", headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({country})
+      });
+      if (!response.ok) throw new Error("City directory unavailable");
+      const body = await response.json();
+      if (body?.error) throw new Error(body.msg || "City directory unavailable");
+      cities = uniqueSorted(Array.isArray(body.data) ? body.data : []);
+    } catch (error) {
+      console.warn("ZOVARO city directory fallback:",error.message);
+      cities = fallbackCities;
+    }
+    if (requestId !== geoRequest || countrySelect?.value !== country) return;
+    setOptions(citySelect,cities,cities.length ? "Select a city" : "No cities available");
     if (citySelect) citySelect.disabled = !cities.length;
   }
   async function loadJobDirectory() {
@@ -280,9 +299,19 @@
     } catch (error) {
       console.warn("ZOVARO curated job directory:",error.message);
     }
-    const countries = uniqueSorted([
+    let countries = uniqueSorted([
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
     ]);
+    try {
+      const response = await fetch(GEO_API + "/countries/iso",{cache:"force-cache"});
+      if (!response.ok) throw new Error("Country directory unavailable");
+      const body = await response.json();
+      if (body?.error) throw new Error(body.msg || "Country directory unavailable");
+      const worldwide = (Array.isArray(body.data) ? body.data : []).map(item => item?.name);
+      if (worldwide.length) countries = uniqueSorted([...countries,...worldwide]);
+    } catch (error) {
+      console.warn("ZOVARO country directory fallback:",error.message);
+    }
     if (countrySelect) {
       setOptions(countrySelect,countries,"Select a country");
       countrySelect.disabled = false;
@@ -316,8 +345,9 @@
       if (citySelect) citySelect.disabled = true;
       return;
     }
-    populateCities(country);
-    if (jobLocationStatus) jobLocationStatus.textContent = "Now select a city in " + country + ".";
+    populateCities(country).then(() => {
+      if (jobLocationStatus && countrySelect?.value === country) jobLocationStatus.textContent = "Now select a city in " + country + ".";
+    });
   });
   searchJobsButton?.addEventListener("click",searchJobsByLocation);
   $("backFromLookingJob")?.addEventListener("click",() => {
