@@ -154,14 +154,14 @@
 
   const jobItems = [];
   const countrySelect = $("jobCountryFilter");
-  const regionSelect = $("jobRegionFilter");
   const citySelect = $("jobCityFilter");
-  const jobCategorySelect = $("jobCategoryFilter");
-  const careerSearchInput = $("careerGuideSearch");
-  let selectedCareerCategory = "";
-  const careerGuidesGrid = $("careerGuidesGrid");
+  const searchJobsButton = $("jobLocationSearch");
+  const jobLocationStatus = $("jobLocationStatus");
   const careerCategoryGrid = $("careerCategoryGrid");
-  let careerGuideCards = [];
+  let careerCategories = [];
+  let locationSearchActive = false;
+  let geoRequest = 0;
+
   const CAREER_CATEGORY_PHOTOS = [
     [/food|hospitality/i,"photo-1555939594-58d7cb561ad1"],
     [/construction|skilled trades/i,"photo-1504307651254-35680f356dfd"],
@@ -186,170 +186,143 @@
   ];
   function careerCategoryImage(name) {
     const match = CAREER_CATEGORY_PHOTOS.find(([pattern]) => pattern.test(String(name || "")));
-    const photo = match?.[1] === "photo- laptop" ? "photo- laptop" : match?.[1];
-    return "https://images.unsplash.com/" + (photo && photo !== "photo- laptop" ? photo : "photo-1498050108023-c5249f4df085") + "?auto=format&fit=crop&w=900&q=80";
+    return "https://images.unsplash.com/" + (match?.[1] || "photo-1498050108023-c5249f4df085") + "?auto=format&fit=crop&w=900&q=80";
   }
-
   function uniqueSorted(values) {
     return [...new Set(values.map(value => String(value || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
+  }
+  function normalizeLocation(value) {
+    return String(value || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").trim().toLowerCase().replace(/\\s+/g," ");
+  }
+  function normalizeCategory(value) {
+    return normalizeLocation(value).replace(/&/g,"and").replace(/[^a-z0-9]+/g," ").trim();
   }
   function setOptions(select, values, placeholder, selected = "") {
     if (!select) return;
     select.replaceChildren(new Option(placeholder, ""));
-    uniqueSorted(values).forEach(value => select.add(new Option(value, value)));
-    select.value = values.includes(selected) ? selected : "";
+    const sorted = uniqueSorted(values);
+    sorted.forEach(value => select.add(new Option(value, value)));
+    select.value = sorted.includes(selected) ? selected : "";
   }
-
-  const GEO_API = "https://countriesnow.space/api/v0.1";
-  const geoCache = { states: new Map(), cities: new Map() };
-  let worldCountryNames = [];
-  let geoRequest = 0;
-
-  async function geoFetch(url, options) {
-    const response = await fetch(url, { cache: "force-cache", ...options });
-    if (!response.ok) throw new Error("Geographic directory unavailable");
-    const body = await response.json();
-    if (body?.error) throw new Error(body.msg || "Geographic directory unavailable");
-    return body.data;
-  }
-  async function loadWorldCountries() {
-    if (!countrySelect) return;
-    try {
-      const data = await geoFetch(GEO_API + "/countries/iso");
-      worldCountryNames = uniqueSorted((Array.isArray(data) ? data : []).map(item => item?.name));
-      if (!worldCountryNames.length) throw new Error("Empty country directory");
-    } catch (error) {
-      console.warn("ZOVARO country directory fallback:", error.message);
-      worldCountryNames = uniqueSorted(jobItems.flatMap(x => Array.isArray(x.countries) ? x.countries : [x.country]));
-    }
-    const current = countrySelect.value;
-    setOptions(countrySelect, ["Remote / Worldwide", ...worldCountryNames], "Select a country", current);
-    countrySelect.options[0].textContent = "All countries";
-    countrySelect.disabled = false;
-    refreshJobGeography(true);
-  }
-
-  async function loadStates(country) {
-    if (geoCache.states.has(country)) return geoCache.states.get(country);
-    const data = await geoFetch(GEO_API + "/countries/states/q?country=" + encodeURIComponent(country));
-    const states = uniqueSorted((data?.states || []).map(item => typeof item === "string" ? item : item?.name));
-    geoCache.states.set(country, states);
-    return states;
-  }
-  async function loadCities(country, region) {
-    const key = country + "::" + region;
-    if (geoCache.cities.has(key)) return geoCache.cities.get(key);
-    const data = await geoFetch(GEO_API + "/countries/state/cities", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ country, state: region })
+  function categoryHasJobs(category, jobs) {
+    const target = normalizeCategory(category);
+    return jobs.some(item => {
+      const actual = normalizeCategory(item.category || "");
+      return actual === target || (actual && target && (actual.includes(target) || target.includes(actual)));
     });
-    const cities = uniqueSorted((Array.isArray(data) ? data : []).map(item => typeof item === "string" ? item : item?.name));
-    geoCache.cities.set(key, cities);
-    return cities;
   }
-
-  async function refreshJobGeography(resetChildren = false) {
-    if (!countrySelect || !regionSelect || !citySelect) return;
-    const country = countrySelect.value;
-    if (resetChildren) {
-      setOptions(regionSelect, [], "Select a region / state");
-      setOptions(citySelect, [], "Select a city");
-      regionSelect.disabled = true;
-      citySelect.disabled = true;
-    }
-    if (!country || country === "Remote / Worldwide") {
-      regionSelect.disabled = true;
-      citySelect.disabled = true;
-      applyJobFilters();
-      return;
-    }
-    const requestId = ++geoRequest;
-    regionSelect.disabled = true;
-    regionSelect.replaceChildren(new Option("Loading regions / states…", ""));
-    citySelect.disabled = true;
-    citySelect.replaceChildren(new Option("Select a region / state first", ""));
+  function renderCareerCategoryTiles(categories) {
+    if (!careerCategoryGrid) return;
+    careerCategoryGrid.replaceChildren();
+    categories.forEach(item => {
+      const name = String(item.name || "");
+      if (!name) return;
+      const tile = document.createElement("button");
+      tile.type = "button";
+      tile.className = "career-category-card";
+      tile.dataset.category = name;
+      tile.setAttribute("aria-label", name + " — available job category");
+      const image = document.createElement("img");
+      image.src = careerCategoryImage(name);
+      image.alt = "";
+      image.loading = "lazy";
+      image.decoding = "async";
+      tile.appendChild(image);
+      addText(tile, "strong", "", name);
+      careerCategoryGrid.appendChild(tile);
+    });
+  }
+  function restoreAllCareerCategories() {
+    locationSearchActive = false;
+    if (countrySelect) countrySelect.value = "";
+    setOptions(citySelect, [], "Select a country first");
+    if (citySelect) citySelect.disabled = true;
+    renderCareerCategoryTiles(careerCategories);
+    if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
+  }
+  function populateCities(country) {
+    const cities = uniqueSorted(jobItems
+      .filter(item => normalizeLocation(item.country) === normalizeLocation(country) ||
+        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country))))
+      .map(item => item.city));
+    setOptions(citySelect, cities, cities.length ? "Select a city" : "No cities with listed offers");
+    if (citySelect) citySelect.disabled = !cities.length;
+  }
+  async function loadJobDirectory() {
+    const seen = new Set();
+    let cursor = null;
     try {
-      const [apiRegions] = await Promise.all([
-        loadStates(country)
-      ]);
-      if (requestId !== geoRequest || countrySelect.value !== country) return;
-      const listingRegions = jobItems.filter(x => x.country === country || (Array.isArray(x.countries) && x.countries.includes(country))).map(x => x.region);
-      const regions = uniqueSorted([...apiRegions, ...listingRegions]);
-      setOptions(regionSelect, regions, regions.length ? "All regions / states" : "No regions listed");
-      regionSelect.disabled = !regions.length;
-      if (!regions.length) {
-        const countryCities = jobItems.filter(x => x.country === country && x.city).map(x => x.city);
-        setOptions(citySelect, countryCities, "All cities");
-        citySelect.disabled = !countryCities.length;
+      do {
+        const query = new URLSearchParams({type:"job"});
+        if (cursor) query.set("cursor",cursor);
+        const response = await fetch(API + "?" + query.toString(), {cache:"no-store"});
+        if (!response.ok) throw new Error("Job directory unavailable");
+        const data = await response.json();
+        const items = Array.isArray(data) ? data : [];
+        items.forEach(item => {
+          const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
+          if (!seen.has(key)) { seen.add(key); jobItems.push(item); }
+        });
+        cursor = response.headers.get("X-Zovaro-Next-Cursor") || null;
+      } while (cursor);
+    } catch (error) {
+      console.warn("ZOVARO live job directory:", error.message);
+    }
+    try {
+      const response = await fetch("/data/curated-jobs.json",{cache:"no-store"});
+      if (response.ok) {
+        const source = await response.json();
+        (Array.isArray(source) ? source : source.jobs || []).filter(item => item.status === "open").forEach(item => {
+          const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
+          if (!seen.has(key)) { seen.add(key); jobItems.push({...item,approvedAt:item.verifiedAt || null,isCurated:true}); }
+        });
       }
     } catch (error) {
-      if (requestId !== geoRequest) return;
-      const listingRegions = jobItems.filter(x => x.country === country || (Array.isArray(x.countries) && x.countries.includes(country))).map(x => x.region);
-      setOptions(regionSelect, listingRegions, "All regions / states");
-      regionSelect.disabled = !listingRegions.length;
-      setOptions(citySelect, [], "Select a region / state first");
-      citySelect.disabled = true;
-      console.warn("ZOVARO region directory fallback:", error.message);
+      console.warn("ZOVARO curated job directory:",error.message);
     }
-    applyJobFilters();
+    const countries = uniqueSorted([
+      ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
+    ]);
+    if (countrySelect) {
+      setOptions(countrySelect,countries,"Select a country");
+      countrySelect.disabled = false;
+    }
   }
-
-  async function refreshJobCities() {
+  function searchJobsByLocation() {
     const country = countrySelect?.value || "";
-    const region = regionSelect?.value || "";
-    if (!country || !region || country === "Remote / Worldwide") {
-      setOptions(citySelect, [], "Select a region / state first");
-      citySelect.disabled = true;
-      applyJobFilters();
+    const city = citySelect?.value || "";
+    if (!country || !city) {
+      if (jobLocationStatus) jobLocationStatus.textContent = "Select both a country and a city before searching.";
       return;
     }
-    const requestId = ++geoRequest;
-    citySelect.disabled = true;
-    citySelect.replaceChildren(new Option("Loading cities…", ""));
-    try {
-      const apiCities = await loadCities(country, region);
-      if (requestId !== geoRequest || countrySelect.value !== country || regionSelect.value !== region) return;
-      const listingCities = jobItems.filter(x => x.country === country && x.region === region).map(x => x.city);
-      const cities = uniqueSorted([...apiCities, ...listingCities]);
-      setOptions(citySelect, cities, cities.length ? "All cities" : "No cities listed");
-      citySelect.disabled = !cities.length;
-    } catch (error) {
-      if (requestId !== geoRequest) return;
-      const listingCities = jobItems.filter(x => x.country === country && x.region === region).map(x => x.city);
-      setOptions(citySelect, listingCities, "All cities");
-      citySelect.disabled = !listingCities.length;
-      console.warn("ZOVARO city directory fallback:", error.message);
-    }
-    applyJobFilters();
-  }
-  function selectedJobItems() {
-    const country = countrySelect?.value || "";
-    const region = regionSelect?.value || "";
-    const city = citySelect?.value || "";
-    const category = jobCategorySelect?.value || "";
-    const q = ($("jobSearchInput")?.value || "").trim().toLowerCase();
-    return jobItems.filter(item =>
-      (!country || (Array.isArray(item.countries) ? item.countries.includes(country) : item.country === country) || (country === "Remote / Worldwide" && item.country === "Worldwide")) &&
-      (!region || item.region === region) &&
-      (!city || item.city === city) &&
-      (!category || item.category === category) &&
-      (!q || [item.title,item.company,item.category,item.location,item.description,item.country,item.region,item.city].join(" ").toLowerCase().includes(q))
-    );
-  }
-  function applyJobFilters() {
-    const selected = selectedJobItems();
-    const cards = $("jobListings")?.querySelectorAll('[data-job-card="true"]') || [];
-    const visibleIds = new Set(selected.map(x => x.id));
-    cards.forEach(card => card.classList.toggle("hidden", !visibleIds.has(card.dataset.jobId)));
-    const meta = $("jobResultsMeta");
-    if (meta) meta.textContent = selected.length + " matching live job opportunities in the currently loaded results. Career guides are shown separately below.";
-    const empty = $("jobListingsEmpty");
-    if (empty) {
-      empty.textContent = selected.length ? "" : "No jobs match these filters. Try another location or search term.";
-      empty.classList.toggle("hidden", selected.length > 0);
+    locationSearchActive = true;
+    const matches = jobItems.filter(item => {
+      const countryMatches = normalizeLocation(item.country) === normalizeLocation(country) ||
+        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country)));
+      return countryMatches && normalizeLocation(item.city) === normalizeLocation(city);
+    });
+    const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
+    renderCareerCategoryTiles(available);
+    if (jobLocationStatus) {
+      jobLocationStatus.textContent = available.length
+        ? available.length + " professional categories with active opportunities in " + city + ", " + country + "."
+        : "No job opportunities were found in " + city + ", " + country + ". Try another city or country.";
     }
   }
+  countrySelect?.addEventListener("change",() => {
+    const country = countrySelect.value;
+    if (!country) {
+      setOptions(citySelect,[],"Select a country first");
+      if (citySelect) citySelect.disabled = true;
+      return;
+    }
+    populateCities(country);
+    if (jobLocationStatus) jobLocationStatus.textContent = "Now select a city in " + country + ".";
+  });
+  searchJobsButton?.addEventListener("click",searchJobsByLocation);
+  $("backFromLookingJob")?.addEventListener("click",() => {
+    restoreAllCareerCategories();
+  });
   const fxRates = new Map();
   function parseSalaryCurrency(text, country) {
     const value = String(text || "");
@@ -530,75 +503,17 @@
     }
   }
 
-  async function loadCareerGuides() {
+  async function loadCareerCategories() {
     try {
-      const response = await fetch("/data/career-guides.json", { cache: "no-store" });
-      if (!response.ok) throw new Error("Career guide directory unavailable.");
+      const response = await fetch("/data/career-guides.json",{cache:"no-store"});
+      if (!response.ok) throw new Error("Career categories unavailable");
       const data = await response.json();
-      const categories = data.categories || [];
-      renderCareerCategoryTiles(categories);
-      careerGuideCards = categories.flatMap(category => (category.roles || []).map(role => ({
-        ...role, category: category.name
-      })));
-      renderCareerGuides();
+      careerCategories = (data.categories || []).filter(item => item && item.name);
     } catch (error) {
-      const meta = $("careerGuidesMeta");
-      if (meta) meta.textContent = "Career guides are temporarily unavailable.";
-      console.warn("ZOVARO career guides unavailable:", error.message);
+      console.warn("ZOVARO career categories:",error.message);
+      careerCategories = [];
     }
-  }
-
-  function renderCareerCategoryTiles(categories) {
-    if (!careerCategoryGrid) return;
-    careerCategoryGrid.replaceChildren();
-    categories.forEach(item => {
-      const name = String(item.name || "");
-      if (!name) return;
-      const count = (item.roles || []).length;
-      const tile = document.createElement("button");
-      tile.type = "button";
-      tile.className = "career-category-card";
-      tile.dataset.category = name;
-      tile.setAttribute("aria-pressed", selectedCareerCategory === name ? "true" : "false");
-      const image = document.createElement("img");
-      image.src = careerCategoryImage(name);
-      image.alt = "";
-      image.loading = "lazy";
-      image.decoding = "async";
-      tile.appendChild(image);
-      addText(tile, "strong", "", name);
-      addText(tile, "span", "career-category-count", count + (count === 1 ? " profession" : " professions"));
-      tile.addEventListener("click", () => {
-        selectedCareerCategory = selectedCareerCategory === name ? "" : name;
-        renderCareerGuides();
-        careerCategoryGrid.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === selectedCareerCategory ? "true" : "false"));
-        careerCategoryGrid.scrollIntoView({behavior:"smooth",block:"nearest"});
-      });
-      careerCategoryGrid.appendChild(tile);
-    });
-  }
-
-  function renderCareerGuides() {
-    if (!careerGuidesGrid) return;
-    const category = selectedCareerCategory;
-    const query = (careerSearchInput?.value || "").trim().toLowerCase();
-    const matches = careerGuideCards.filter(role =>
-      (!category || role.category === category) &&
-      (!query || [role.title, role.category, role.summary, ...(role.skills || [])].join(" ").toLowerCase().includes(query))
-    );
-    careerGuidesGrid.replaceChildren();
-    matches.forEach(role => {
-      const card = document.createElement("article");
-      card.className = "career-guide-card";
-      addText(card, "span", "career-guide-label", "CAREER GUIDE · NOT A LIVE VACANCY");
-      addText(card, "h3", "", role.title);
-      addText(card, "p", "career-guide-category", role.category);
-      addText(card, "p", "career-guide-summary", role.summary);
-      if (role.skills?.length) addText(card, "p", "career-guide-skills", "Typical skills: " + role.skills.join(" · "));
-      careerGuidesGrid.appendChild(card);
-    });
-    const meta = $("careerGuidesMeta");
-    if (meta) meta.textContent = matches.length + " career profiles across " + new Set(matches.map(x => x.category)).size + " categories. These are informational role guides, not advertised vacancies.";
+    renderCareerCategoryTiles(careerCategories);
   }
 
   function filterJobs() { applyJobFilters(); }
@@ -612,9 +527,8 @@
     submitListing(event.currentTarget, "job", "jobFormStatus", "SUBMIT JOB FOR REVIEW");
   });
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
-  careerSearchInput?.addEventListener("input", renderCareerGuides);
-
-  loadCareerGuides();
+  loadCareerCategories();
+  loadJobDirectory();
   const jobId = new URLSearchParams(window.location.search).get("job");
   if (jobId) {
     const view = $("lookingJobView");
