@@ -16,7 +16,7 @@ on:
       batch_size:
         description: Number of new or changed product images to inspect
         required: false
-        default: "250"
+        default: "350"
   schedule:
     - cron: "17 3,9,15,21 * * *"
 
@@ -33,7 +33,7 @@ jobs:
     timeout-minutes: 180
     env:
       HF_HOME: ${{ github.workspace }}/.cache/huggingface
-      IMAGE_AUDIT_BATCH_SIZE: ${{ inputs.batch_size || '250' }}
+      IMAGE_AUDIT_BATCH_SIZE: ${{ inputs.batch_size || '350' }}
     steps:
       - name: Checkout catalog
         uses: actions/checkout@v4
@@ -59,6 +59,9 @@ jobs:
 
       - name: Run image-audit logic tests
         run: node scripts/audit-product-images.mjs --self-test
+
+      - name: Verify product classification and browse paths
+        run: node scripts/test-product-category.mjs
 
       - name: Analyse new and changed catalogue images
         run: node scripts/audit-product-images.mjs
