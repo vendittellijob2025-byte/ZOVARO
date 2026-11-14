@@ -3397,7 +3397,8 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher/country eligibility, exact commission, feed/deep links, image permissions, conversion reporting and payout before publication."
+      "nextAction": "Await reply; verify publisher/country eligibility, exact commission, feed/deep links, image permissions, conversion reporting and payout before publication.",
+      "formatCorrectionMessageId": "1a1dc3bcb0355f8b"
     },
     {
       "id": "brandsmart-usa-affiliate",
@@ -3423,7 +3424,8 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm application route, US delivery coverage, feed access, commission, tracking and content permissions."
+      "nextAction": "Await reply; confirm application route, US delivery coverage, feed access, commission, tracking and content permissions.",
+      "formatCorrectionMessageId": "1a1dc3bdd12fbeea"
     },
     {
       "id": "columbia-sportswear-affiliate",
@@ -3449,7 +3451,8 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm application route, eligible territories, current terms, feed access, deep links and approved media."
+      "nextAction": "Await reply; confirm application route, eligible territories, current terms, feed access, deep links and approved media.",
+      "formatCorrectionMessageId": "1a1dc3bf5872655f"
     },
     {
       "id": "petco-affiliate",
@@ -3475,7 +3478,165 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher eligibility, supported countries/fulfilment, programme terms, feed, tracking and media permissions."
+      "nextAction": "Await reply; verify publisher eligibility, supported countries/fulfilment, programme terms, feed, tracking and media permissions.",
+      "formatCorrectionMessageId": "1a1dc3bfe228fb05"
+    },
+    {
+      "id": "coastal-pet-affiliate",
+      "name": "Coastal Pet Products",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Pets",
+      "sourceUrl": "https://www.coastalpet.com/affiliates/",
+      "contact": {
+        "email": "affiliates@coastalpet.com",
+        "sourceUrl": "https://www.coastalpet.com/affiliates/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3c88e5bc105",
+      "territories": [
+        "US qualified purchases per public page; other territories unconfirmed"
+      ],
+      "commission": "Public page advertises 5% on US Qualified Purchases; verify in approved terms",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm application route, publisher eligibility, exact country restrictions, feed, tracking and approved product assets."
+    },
+    {
+      "id": "la-coqueta-kids-affiliate",
+      "name": "La Coqueta Kids",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Babies; Kids; Fashion",
+      "sourceUrl": "https://us.lacoquetakids.com/pages/affiliate-program",
+      "contact": {
+        "email": "partnerships@lacoquetakids.com",
+        "sourceUrl": "https://us.lacoquetakids.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3c936b409d3",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Competitive; exact rate not public",
+      "cookie": "Public page states 30 days; verify approved programme terms",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher and customer territory eligibility, current terms, product feed, deep links and media rights."
+    },
+    {
+      "id": "aecojoy-homeleader-affiliate",
+      "name": "AECOJOY / HOMELEADER INC",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Home & Living; Garden; Pets",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/113628",
+      "contact": {
+        "email": "henry@advertisepurple.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/113628"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3c9a69b25e0",
+      "territories": [
+        "30 global warehouses advertised; delivery and publisher territories need confirmation"
+      ],
+      "commission": "Not verified",
+      "cookie": "Awin merchant profile currently displays 1 day; verify in account terms",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify current commission, territories, feed, tracking and image permissions."
+    },
+    {
+      "id": "garvee-affiliate",
+      "name": "GARVEE",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Tools & DIY; Automotive; Home; Garden; Business & Industrial",
+      "sourceUrl": "https://ui.awin.com/advertiser-terms/52725",
+      "contact": {
+        "email": "affiliate@garvee.com",
+        "sourceUrl": "https://ui.awin.com/advertiser-terms/52725"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3ca4c91d471",
+      "territories": [
+        "US delivery explicitly stated on programme terms; other territories unconfirmed"
+      ],
+      "commission": "Public Awin terms advertise 10%; verify exact qualifying sales and exclusions",
+      "cookie": "Public Awin terms advertise 30 days; verify current programme settings",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm ZOVARO's Awin eligibility, supported customer territories, feed, tracking, approved assets and payout."
+    },
+    {
+      "id": "husqvarna-affiliate",
+      "name": "Husqvarna Group",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Garden; Tools; Outdoor",
+      "sourceUrl": "https://www.husqvarna.com/id/learn-and-discover/press-room/husqvarna-affiliate-program/",
+      "contact": {
+        "email": "affiliates@husqvarnagroup.com",
+        "sourceUrl": "https://www.husqvarna.com/id/learn-and-discover/press-room/husqvarna-affiliate-program/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3cacd67de71",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify current CJ advertiser programme, eligible countries, terms, feed, tracking and approved assets."
+    },
+    {
+      "id": "joyreal-toys-affiliate",
+      "name": "Joyreal Toys",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Toys & Games; Education",
+      "sourceUrl": "https://joyrealtoys.com/pages/joyreal-toys-affiliate-program",
+      "contact": {
+        "email": "bd@joyrealtoys.com",
+        "sourceUrl": "https://joyrealtoys.com/pages/joyreal-toys-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3cb4bba07e8",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified",
+      "cookie": "Not verified",
+      "payout": "Official page mentions monthly PayPal payouts on the 15th for balances >= USD 10; bank transfer not confirmed",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher and customer territories, commission, cookie, catalogue, tracking, image permission and whether bank transfer can be offered."
     }
   ]
 }
