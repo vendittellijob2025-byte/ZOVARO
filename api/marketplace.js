@@ -122,7 +122,7 @@ function validateSubmission(body) {
     record.workplace=clean(body.workplace,20);
     record.salaryText=clean(body.salaryText,100);
     record.category=clean(body.category,60);
-    const jobCategories=["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Remote & Work From Home"];
+    const jobCategories=["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Aviation & Aerospace","Maritime & Offshore","Real Estate & Property","Science & Research","Energy & Utilities","Environment & Sustainability","Sports & Recreation","Travel & Tourism","Public Sector & Government"];
     if(!jobCategories.includes(record.category)) return { error:"Please choose a valid job category." };
     record.country=clean(body.country,80);
     if(!record.country) return { error:"Please specify the job country. Use Remote / Worldwide for fully remote roles." };
