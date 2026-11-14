@@ -160,7 +160,35 @@
   const careerCategorySelect = $("careerCategoryFilter");
   const careerSearchInput = $("careerGuideSearch");
   const careerGuidesGrid = $("careerGuidesGrid");
+  const careerCategoryGrid = $("careerCategoryGrid");
   let careerGuideCards = [];
+  const CAREER_CATEGORY_PHOTOS = [
+    [/food|hospitality/i,"photo-1555939594-58d7cb561ad1"],
+    [/construction|skilled trades/i,"photo-1504307651254-35680f356dfd"],
+    [/manufacturing|production/i,"photo-1581091226825-a6a2a5aee158"],
+    [/transport|logistics/i,"photo-1519003722824-194d4455a60c"],
+    [/office|administration/i,"photo-1497366754035-f200968a6e72"],
+    [/business|management/i,"photo-1460925895917-afdab827c52f"],
+    [/retail|customer service/i,"photo-1441986300917-64674bd600d8"],
+    [/cleaning|sanitation/i,"photo-1581578731548-c64695cc6952"],
+    [/security|events/i,"photo-1517457373958-b7lyde9b0c7"],
+    [/healthcare|medical/i,"photo-1576091160399-112ba8d25d1d"],
+    [/education|training/i,"photo-1503676260728-1c00da094a0b"],
+    [/finance|accounting/i,"photo-1554224155-6726b3ff858f"],
+    [/marketing|communications/i,"photo-1432888622747-4eb9a8efeb07"],
+    [/it, software|data/i,"photo-1518770660439-4636190af475"],
+    [/engineering|technology/i,"photo-1581092921461-eab62e97a780"],
+    [/agriculture|farming/i,"photo-1500382017468-9049fed747ef"],
+    [/beauty|personal care/i,"photo-1487412720507-e7ab37603c6f"],
+    [/legal|compliance/i,"photo-1589829545856-d10d557cf95f"],
+    [/arts|media|creative/i,"photo-1492619375914-88005aa9e8fb"],
+    [/remote|work from home/i,"photo- laptop"]
+  ];
+  function careerCategoryImage(name) {
+    const match = CAREER_CATEGORY_PHOTOS.find(([pattern]) => pattern.test(String(name || "")));
+    const photo = match?.[1] === "photo- laptop" ? "photo- laptop" : match?.[1];
+    return "https://images.unsplash.com/" + (photo && photo !== "photo- laptop" ? photo : "photo-1498050108023-c5249f4df085") + "?auto=format&fit=crop&w=900&q=80";
+  }
 
   function uniqueSorted(values) {
     return [...new Set(values.map(value => String(value || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
@@ -510,6 +538,7 @@
       const categories = data.categories || [];
       setOptions(jobCategorySelect, categories.map(item => item.name), "All job categories");
       setOptions(careerCategorySelect, categories.map(item => item.name), "All career categories");
+      renderCareerCategoryTiles(categories);
       careerGuideCards = categories.flatMap(category => (category.roles || []).map(role => ({
         ...role, category: category.name
       })));
@@ -519,6 +548,36 @@
       if (meta) meta.textContent = "Career guides are temporarily unavailable.";
       console.warn("ZOVARO career guides unavailable:", error.message);
     }
+  }
+
+  function renderCareerCategoryTiles(categories) {
+    if (!careerCategoryGrid) return;
+    careerCategoryGrid.replaceChildren();
+    categories.forEach(item => {
+      const name = String(item.name || "");
+      if (!name) return;
+      const count = (item.roles || []).length;
+      const tile = document.createElement("button");
+      tile.type = "button";
+      tile.className = "career-category-card";
+      tile.dataset.category = name;
+      tile.setAttribute("aria-pressed", careerCategorySelect?.value === name ? "true" : "false");
+      const image = document.createElement("img");
+      image.src = careerCategoryImage(name);
+      image.alt = "";
+      image.loading = "lazy";
+      image.decoding = "async";
+      tile.appendChild(image);
+      addText(tile, "strong", "", name);
+      addText(tile, "span", "career-category-count", count + (count === 1 ? " profession" : " professions"));
+      tile.addEventListener("click", () => {
+        if (careerCategorySelect) careerCategorySelect.value = careerCategorySelect.value === name ? "" : name;
+        renderCareerGuides();
+        careerCategoryGrid.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === (careerCategorySelect?.value || "") ? "true" : "false"));
+        careerCategoryGrid.scrollIntoView({behavior:"smooth",block:"nearest"});
+      });
+      careerCategoryGrid.appendChild(tile);
+    });
   }
 
   function renderCareerGuides() {
@@ -559,7 +618,10 @@
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
   $("jobSearchInput")?.addEventListener("input", filterJobs);
   jobCategorySelect?.addEventListener("change", filterJobs);
-  careerCategorySelect?.addEventListener("change", renderCareerGuides);
+  careerCategorySelect?.addEventListener("change", () => {
+    renderCareerGuides();
+    careerCategoryGrid?.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === (careerCategorySelect?.value || "") ? "true" : "false"));
+  });
   careerSearchInput?.addEventListener("input", renderCareerGuides);
 
   loadWorldCountries();
