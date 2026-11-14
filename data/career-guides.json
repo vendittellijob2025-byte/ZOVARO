@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "notice": "Career guides describe common duties and skills. They are not advertisements for live vacancies.",
   "categories": [
     {
@@ -748,76 +748,289 @@
       ]
     },
     {
-      "name": "Remote & Work From Home",
+      "name": "Aviation & Aerospace",
       "roles": [
         {
-          "title": "Remote Software Developer",
-          "summary": "Build and maintain software with distributed teams using online collaboration and version-control tools.",
+          "title": "Aircraft Maintenance Technician",
+          "summary": "Inspect, maintain and repair aircraft systems under aviation authority standards and approved maintenance procedures.",
           "skills": [
-            "Programming",
-            "Git",
-            "Remote collaboration",
-            "Testing"
+            "Aircraft maintenance",
+            "Safety compliance",
+            "Technical documentation"
           ]
         },
         {
-          "title": "Remote Graphic Designer",
-          "summary": "Create digital brand and marketing assets remotely, working from briefs and feedback cycles.",
+          "title": "Pilot / Flight Crew",
+          "summary": "Operate aircraft or support flight operations while meeting licensing, medical and recurrent-training requirements.",
           "skills": [
-            "Graphic design",
-            "Creative software",
-            "File handoff",
-            "Communication"
+            "Flight operations",
+            "Crew resource management",
+            "Aviation regulations"
           ]
         },
         {
-          "title": "Remote Customer Support Agent",
-          "summary": "Assist customers by phone, email or chat from an approved remote location and document each case.",
+          "title": "Airport Operations Agent",
+          "summary": "Coordinate passenger, baggage, ramp or terminal activities to keep airport operations safe and on schedule.",
           "skills": [
-            "Written communication",
-            "Support platforms",
-            "Troubleshooting",
-            "Reliable workspace"
+            "Airport procedures",
+            "Customer service",
+            "Operational coordination"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maritime & Offshore",
+      "roles": [
+        {
+          "title": "Deck Officer / Seafarer",
+          "summary": "Support navigation, vessel operations, cargo handling and safety procedures aboard commercial or offshore vessels.",
+          "skills": [
+            "Maritime safety",
+            "Navigation",
+            "STCW certification where required"
           ]
         },
         {
-          "title": "Remote Virtual Assistant",
-          "summary": "Provide remote scheduling, inbox, research and administrative support to a business or professional.",
+          "title": "Marine Engineer",
+          "summary": "Maintain propulsion, electrical and mechanical systems aboard ships or offshore facilities.",
           "skills": [
-            "Organisation",
-            "Office software",
-            "Written communication",
-            "Confidentiality"
+            "Marine engineering",
+            "Fault diagnosis",
+            "Preventive maintenance"
           ]
         },
         {
-          "title": "Remote Translator",
-          "summary": "Translate or localise documents and digital content while preserving meaning, tone and terminology.",
+          "title": "Offshore Operations Technician",
+          "summary": "Support offshore energy or marine operations while following site safety and emergency procedures.",
           "skills": [
-            "Professional language proficiency",
-            "Terminology research",
-            "Editing",
-            "Confidentiality"
+            "Offshore safety",
+            "Equipment operations",
+            "Permit-to-work systems"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Real Estate & Property",
+      "roles": [
+        {
+          "title": "Real Estate Agent",
+          "summary": "Advise buyers, sellers, landlords or tenants and coordinate property viewings and transactions under local licensing rules.",
+          "skills": [
+            "Property valuation",
+            "Negotiation",
+            "Local real-estate regulations"
           ]
         },
         {
-          "title": "Remote UX/UI Designer",
-          "summary": "Research user needs and design accessible digital interfaces, prototypes and interaction flows.",
+          "title": "Property Manager",
+          "summary": "Oversee buildings, tenants, maintenance, budgets and compliance for residential or commercial properties.",
           "skills": [
-            "UX research",
-            "Interface design",
-            "Prototyping",
-            "Accessibility"
+            "Facilities coordination",
+            "Tenant relations",
+            "Budget management"
           ]
         },
         {
-          "title": "Remote Digital Marketing Specialist",
-          "summary": "Manage digital campaigns and performance reporting across distributed marketing teams.",
+          "title": "Property Surveyor / Valuer",
+          "summary": "Inspect properties, assess condition and value, and prepare reports for owners, lenders or public authorities.",
           "skills": [
-            "SEO/SEM",
-            "Analytics",
-            "Content",
-            "Remote coordination"
+            "Property assessment",
+            "Valuation methods",
+            "Technical reporting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Science & Research",
+      "roles": [
+        {
+          "title": "Research Scientist",
+          "summary": "Design and conduct studies, analyse evidence and communicate findings within a specialist scientific field.",
+          "skills": [
+            "Research methods",
+            "Data analysis",
+            "Scientific writing"
+          ]
+        },
+        {
+          "title": "Laboratory Technician",
+          "summary": "Prepare samples, operate laboratory equipment and document results under quality and safety procedures.",
+          "skills": [
+            "Laboratory techniques",
+            "Quality control",
+            "Data recording"
+          ]
+        },
+        {
+          "title": "Clinical Research Associate",
+          "summary": "Monitor clinical research sites and study documentation in line with approved protocols and applicable regulations.",
+          "skills": [
+            "Clinical trial processes",
+            "GCP knowledge",
+            "Monitoring and reporting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Energy & Utilities",
+      "roles": [
+        {
+          "title": "Renewable Energy Technician",
+          "summary": "Install, inspect and maintain solar, wind or other renewable-energy equipment.",
+          "skills": [
+            "Electrical systems",
+            "Preventive maintenance",
+            "Working-at-height safety"
+          ]
+        },
+        {
+          "title": "Power Systems Engineer",
+          "summary": "Design, operate or improve electrical generation, transmission and distribution systems.",
+          "skills": [
+            "Power engineering",
+            "Grid analysis",
+            "Safety standards"
+          ]
+        },
+        {
+          "title": "Utilities Operations Technician",
+          "summary": "Monitor water, gas, electricity or district-energy infrastructure and respond to operational issues.",
+          "skills": [
+            "Plant operations",
+            "Instrumentation",
+            "Emergency procedures"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Environment & Sustainability",
+      "roles": [
+        {
+          "title": "Environmental Scientist",
+          "summary": "Assess environmental conditions, collect samples and prepare impact or compliance reports.",
+          "skills": [
+            "Environmental sampling",
+            "Impact assessment",
+            "Regulatory reporting"
+          ]
+        },
+        {
+          "title": "Sustainability Specialist",
+          "summary": "Help organisations measure environmental and social impacts and implement improvement programmes.",
+          "skills": [
+            "ESG reporting",
+            "Carbon accounting",
+            "Stakeholder engagement"
+          ]
+        },
+        {
+          "title": "Conservation Officer",
+          "summary": "Support habitat, wildlife and natural-resource protection through fieldwork, monitoring and public engagement.",
+          "skills": [
+            "Biodiversity monitoring",
+            "Field research",
+            "Conservation planning"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sports & Recreation",
+      "roles": [
+        {
+          "title": "Sports Coach",
+          "summary": "Plan and deliver training sessions, develop participant skills and promote safe, inclusive sporting activity.",
+          "skills": [
+            "Coaching methods",
+            "Athlete development",
+            "Safeguarding"
+          ]
+        },
+        {
+          "title": "Fitness Instructor",
+          "summary": "Lead exercise sessions, support clients and maintain safe use of fitness facilities.",
+          "skills": [
+            "Exercise instruction",
+            "First aid",
+            "Client assessment"
+          ]
+        },
+        {
+          "title": "Sports Operations Coordinator",
+          "summary": "Coordinate facilities, fixtures, events, equipment and participant logistics for sports organisations.",
+          "skills": [
+            "Event coordination",
+            "Scheduling",
+            "Facility operations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Travel & Tourism",
+      "roles": [
+        {
+          "title": "Tour Guide",
+          "summary": "Lead visitors through destinations and attractions, share accurate information and manage group safety.",
+          "skills": [
+            "Local knowledge",
+            "Languages",
+            "Group management"
+          ]
+        },
+        {
+          "title": "Travel Consultant",
+          "summary": "Design and arrange travel itineraries, bookings and customer support according to client requirements.",
+          "skills": [
+            "Travel systems",
+            "Destination knowledge",
+            "Customer service"
+          ]
+        },
+        {
+          "title": "Tourism Operations Manager",
+          "summary": "Coordinate accommodation, excursions, transport partners and service quality for tourism operations.",
+          "skills": [
+            "Operations management",
+            "Supplier relations",
+            "Service quality"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Public Sector & Government",
+      "roles": [
+        {
+          "title": "Public Administration Officer",
+          "summary": "Deliver public services, process applications and maintain accurate records under applicable procedures.",
+          "skills": [
+            "Public administration",
+            "Records management",
+            "Public-service ethics"
+          ]
+        },
+        {
+          "title": "Policy Analyst",
+          "summary": "Research policy options, evaluate evidence and prepare recommendations for public decision-makers.",
+          "skills": [
+            "Policy research",
+            "Data interpretation",
+            "Report writing"
+          ]
+        },
+        {
+          "title": "Emergency Services Officer",
+          "summary": "Respond to public-safety incidents and support emergency operations according to local training and authority requirements.",
+          "skills": [
+            "Incident response",
+            "Public safety",
+            "Emergency protocols"
           ]
         }
       ]
