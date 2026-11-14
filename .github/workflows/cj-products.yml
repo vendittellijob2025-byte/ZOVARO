@@ -97,8 +97,10 @@ jobs:
               git reset --hard "origin/${GITHUB_REF_NAME}"
               node scripts/sync-cj-advertisers.mjs
               node scripts/reclassify-catalog-categories.mjs
+              node scripts/validate-product-category-rules.mjs
               node scripts/audit-category-quality.mjs
-              git add data/catalog.json data/translation-cache.json
+              node scripts/report-category-coverage.mjs
+              git add data/catalog.json data/translation-cache.json data/category-coverage.json
               if git diff --cached --quiet; then
                 echo "Latest branch already contains the current catalog."
                 exit 0
