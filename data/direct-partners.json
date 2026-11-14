@@ -3117,7 +3117,15 @@
       "publicCommission": "Official page advertises 2% base on 450,000+ products and 8% on 3,000+ selected products; final category/brand rates require programme terms",
       "cookie": "Not stated on official affiliate page",
       "territories": [],
-      "nextAction": "Automatic reply asks applicants to allow 1-2 weeks. Await response on Italy-based publisher eligibility, customer delivery territories, current rates, cookie, approved traffic, feed/API, assets and payout. Do not send a duplicate enquiry."
+      "nextAction": "Wait the stated 1–2 week application window. Do not send a duplicate enquiry. Verify Italy-based publisher eligibility, customer delivery territories, rates, cookie, feed/API, approved traffic and payout before promoting.",
+      "emailDeliveryStatus": "replied",
+      "response": {
+        "receivedAt": "2026-11-13T00:53:08Z",
+        "contactName": "B&H Affiliate Team",
+        "status": "automatic_acknowledgement",
+        "summary": "Automatic reply says existing affiliate support takes 1–2 business days and new affiliate applications 1–2 weeks; no approval yet.",
+        "evidence": "Gmail thread 1a1d264ee0e05405"
+      }
     },
     {
       "id": "clickandboat-affiliate",
@@ -5025,7 +5033,15 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify current UK campaign terms, publisher eligibility, tracking, feed and approved assets."
+      "nextAction": "Wait for a substantive review outcome. Do not mark as approved or import products until eligibility, customer territories, commission, tracking, feed and asset permissions are confirmed.",
+      "emailDeliveryStatus": "replied",
+      "response": {
+        "receivedAt": "2026-11-14T22:51:37Z",
+        "contactName": "SimpliSafe Partnerships Team",
+        "status": "under_review",
+        "summary": "The partnerships team acknowledged the enquiry and said it is being reviewed. This is not an approval and no commission, tracking, feed or asset terms have been granted.",
+        "evidence": "Gmail thread 1a1dc424d3703aac"
+      }
     },
     {
       "id": "bradford-exchange-affiliate",
@@ -5450,7 +5466,15 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher eligibility, countries, commission, feed, tracking and approved assets."
+      "nextAction": "Await a substantive human response. Do not mark as approved or import products until publisher eligibility, countries, commission, feed, tracking and approved assets are verified.",
+      "emailDeliveryStatus": "replied",
+      "response": {
+        "receivedAt": "2026-11-14T22:53:11Z",
+        "contactName": "Mii Cosmetics Influencer Team",
+        "status": "automatic_acknowledgement",
+        "summary": "Automatic reply confirms the enquiry was forwarded to the appropriate team; no human approval or programme terms yet.",
+        "evidence": "Gmail thread 1a1dc43d042e560c"
+      }
     },
     {
       "id": "escentual-affiliate",
