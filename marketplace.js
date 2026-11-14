@@ -380,6 +380,20 @@
     } catch (error) {
       console.warn("ZOVARO curated job directory:",error.message);
     }
+    try {
+      const response = await fetch("/data/remote-jobs.json",{cache:"no-store"});
+      if (response.ok) {
+        const feed = await response.json();
+        (Array.isArray(feed.jobs) ? feed.jobs : [])
+          .filter(item => item && item.status === "open" && item.sourceType === "external-job-board")
+          .forEach(item => {
+            const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
+            if (!seen.has(key)) { seen.add(key); jobItems.push(item); }
+          });
+      }
+    } catch (error) {
+      console.warn("ZOVARO global remote job feeds:",error.message);
+    }
     let countries = uniqueSorted([
       ...FALLBACK_COUNTRIES,
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
