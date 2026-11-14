@@ -87,7 +87,7 @@ function eligibleCountries(geo) {
     .replace(/^[\\s\\-:]+|[\\s\\-:]+$/g," ").trim();
   const key = normal(raw);
   if (!key) return [];
-  const parts = raw.split(/[,;|/]+/).map(part=>part.trim()).filter(Boolean);
+  const parts = raw.split(/[,;|/]+|\\s+or\\s+/i).map(part=>part.trim()).filter(Boolean);
   if (parts.length > 1) {
     const expanded = [];
     for (const part of parts) {
