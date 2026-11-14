@@ -3637,6 +3637,424 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; confirm publisher and customer territories, commission, cookie, catalogue, tracking, image permission and whether bank transfer can be offered."
+    },
+    {
+      "id": "pro-breeze-affiliate",
+      "name": "Pro Breeze",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Appliances; Home Climate",
+      "sourceUrl": "https://probreeze.com/pages/affiliates",
+      "contact": {
+        "email": "aoife@oneretailgroup.com",
+        "sourceUrl": "https://probreeze.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d2a34abcdb",
+      "territories": [
+        "UK and international presence advertised; exact publisher and fulfilment territories pending"
+      ],
+      "commission": "Not published",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm eligible countries, terms, feed, tracking and asset permissions."
+    },
+    {
+      "id": "willit-affiliate",
+      "name": "WILLIT",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Fashion; Sports; Outdoor",
+      "sourceUrl": "https://www.willitsports.com/pages/willit-affiliates-creators",
+      "contact": {
+        "email": "collab@willitsports.com",
+        "sourceUrl": "https://www.willitsports.com/pages/willit-affiliates-creators"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d32b48bda9",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises 10%-20%; verify actual approved programme rate",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin programme access, country coverage, product feed, tracking and approved media."
+    },
+    {
+      "id": "velotric-affiliate",
+      "name": "Velotric",
+      "status": "contacted",
+      "programType": "Impact / AvantLink affiliate programme",
+      "category": "E-Mobility; Cycling; Outdoor",
+      "sourceUrl": "https://www.velotricbike.com/pages/affiliate",
+      "contact": {
+        "email": "affiliate@velotric.bike",
+        "sourceUrl": "https://www.velotricbike.com/pages/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d3c64eef11",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises 5%-7% plus possible monthly revenue bonus; verify exact terms",
+      "cookie": "Public page advertises 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm eligible territories, programme selection, feed, deep links and approved assets."
+    },
+    {
+      "id": "sorel-affiliate",
+      "name": "SOREL",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Footwear; Fashion; Outdoor",
+      "sourceUrl": "https://www.sorel.ch/en/l/affiliate-program-sorel",
+      "contact": {
+        "email": "sorel@accelerationpartners.com",
+        "sourceUrl": "https://www.sorel.ch/en/l/affiliate-program-sorel"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d45d87604a",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 10%; verify actual rate",
+      "cookie": "Public page advertises 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher/customer countries, feed, deep links, permitted images and programme terms."
+    },
+    {
+      "id": "lenovo-north-america-affiliate",
+      "name": "Lenovo North America",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Computers; Electronics",
+      "sourceUrl": "https://www.lenovo.com/us/en/landingpage/promotions/affiliate/affiliate-program/",
+      "contact": {
+        "email": "NA_affiliate@lenovo.com",
+        "sourceUrl": "https://www.lenovo.com/us/en/landingpage/promotions/affiliate/affiliate-program/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d4f689e762",
+      "territories": [
+        "North America programme contact; customer and publisher territories pending"
+      ],
+      "commission": "Not published",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify the US programme route, publisher eligibility, feed, tracking, content permissions and country restrictions. This is a new contact after the EMEA address previously bounced."
+    },
+    {
+      "id": "rowenta-usa-affiliate",
+      "name": "Rowenta USA",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Appliances; Beauty",
+      "sourceUrl": "https://www.rowentausa.com/rowenta-affiliate-program",
+      "contact": {
+        "email": "affiliates@rowentausa.com",
+        "sourceUrl": "https://www.rowentausa.com/rowenta-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d586fa8ad1",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm CJ advertiser status, eligible territories, commission, feed, tracking and assets."
+    },
+    {
+      "id": "saucony-eu-affiliate",
+      "name": "Saucony EU",
+      "status": "contacted",
+      "programType": "Rakuten affiliate programme",
+      "category": "Sports; Fashion; Footwear",
+      "sourceUrl": "https://www.saucony.com/ES/es_SE/content?caid=become-affiliate",
+      "contact": {
+        "email": "Affiliates.EU@wwwinc.com",
+        "sourceUrl": "https://www.saucony.com/ES/es_SE/content?caid=become-affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d636f7ce48",
+      "territories": [
+        "EU programme; exact publisher and customer countries pending"
+      ],
+      "commission": "Public page states 7% baseline/full price, 5% sale and 4% voucher; verify account terms",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Rakuten eligibility, exact countries, feed, links, assets and payout."
+    },
+    {
+      "id": "eskute-eu-affiliate",
+      "name": "Eskute EU",
+      "status": "contacted",
+      "programType": "Awin / Webgains affiliate programme",
+      "category": "E-Mobility; Cycling; Outdoor",
+      "sourceUrl": "https://eu.eskute.com/pages/affiliate-program",
+      "contact": {
+        "email": "affiliate.uk@eskute.com",
+        "sourceUrl": "https://eu.eskute.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d6d0cc8667",
+      "territories": [
+        "Europe; exact customer delivery countries pending"
+      ],
+      "commission": "Public page states 5% on eligible e-bike sales; accessories and extended warranty excluded",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher/customer country coverage, current rates, feed, tracking and approved media."
+    },
+    {
+      "id": "homsee-affiliate",
+      "name": "HOMSEE",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Home & Living; Furniture",
+      "sourceUrl": "https://homsee.com/pages/affiliate-program",
+      "contact": {
+        "email": "Kurt@homsee.com",
+        "sourceUrl": "https://homsee.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d73e5713ef",
+      "advertiserId": "8027729",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states 5% default, up to 20%; verify CJ account terms",
+      "cookie": "Public page states at least 30 days; verify programme settings",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify advertiser status in CJ, exact terms, feed, click URLs, country restrictions and image permissions."
+    },
+    {
+      "id": "corel-affiliate",
+      "name": "Corel",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Software; Digital Products; Creative Tools",
+      "sourceUrl": "https://www.corel.com/en/affiliate/",
+      "contact": {
+        "email": "affiliates@corel.com",
+        "sourceUrl": "https://www.corel.com/en/affiliate/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d7c981025f",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states 10% basic, up to 25% based on performance",
+      "cookie": "Public page states 90 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, supported countries, software product links, approved creatives and current payout terms."
+    },
+    {
+      "id": "guzzini-affiliate",
+      "name": "Fratelli Guzzini",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Home & Living; Kitchen & Dining",
+      "sourceUrl": "https://us.guzzini.com/pages/become-an-affiliate",
+      "contact": {
+        "email": "guzzini@stratagem.agency",
+        "sourceUrl": "https://us.guzzini.com/pages/become-an-affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d87c2c297e",
+      "territories": [
+        "US programme page; exact eligible customer markets pending"
+      ],
+      "commission": "Not published",
+      "cookie": "Public page states 30 days",
+      "payout": "Public page states commission paid 30 days after sale locking date; method to confirm",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher/customer territories, feed, tracking, image permission and payout method."
+    },
+    {
+      "id": "jomashop-affiliate",
+      "name": "Jomashop",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Luxury; Watches; Jewelry; Fashion; Beauty",
+      "sourceUrl": "https://help.jomashop.com/hc/en-us/articles/11923106976027-Affiliate-Program",
+      "contact": {
+        "email": "affiliate@jomashop.com",
+        "sourceUrl": "https://help.jomashop.com/hc/en-us/articles/11923106976027-Affiliate-Program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d902ef7581",
+      "territories": [
+        "Global programme described; exact eligible countries pending"
+      ],
+      "commission": "Public page states 4%-10%; verify exact product and category terms",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify CJ advertiser status, eligible territories, product feed, tracking, brand permissions and payout."
+    },
+    {
+      "id": "ao-uk-affiliate",
+      "name": "AO.com",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Appliances; Electronics",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/19526",
+      "contact": {
+        "email": "affiliate@ao.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/19526"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3d9a4bd2b97",
+      "territories": [
+        "UK retailer; customer delivery footprint to confirm"
+      ],
+      "commission": "Public Awin profile lists category rates from 0.4% to 2.5%; verify current terms",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, UK fulfilment coverage, feed, tracking, approved assets and payout terms."
+    },
+    {
+      "id": "charles-keith-affiliate",
+      "name": "CHARLES & KEITH",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Fashion; Footwear; Bags; Accessories",
+      "sourceUrl": "https://www.charleskeith.com/us/information/about-us/affiliates.html",
+      "contact": {
+        "email": "affiliates@charleskeith.com",
+        "sourceUrl": "https://www.charleskeith.com/us/information/about-us/affiliates.html"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3da02ffddfa",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm programme/network, publisher and customer countries, feed, tracking and approved content."
+    },
+    {
+      "id": "leisure-lakes-bikes-affiliate",
+      "name": "Leisure Lakes Bikes",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Sports; Cycling; Outdoor",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/6914",
+      "contact": {
+        "email": "affiliates@mediaworks.co.uk",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/6914"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3da7dfcef9d",
+      "territories": [
+        "UK retailer; exact customer coverage pending"
+      ],
+      "commission": "Public Awin profile states 3% CPA",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, feed, tracking, image rights and payout."
+    },
+    {
+      "id": "tech21-affiliate",
+      "name": "Tech21",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Electronics; Phone Accessories",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/6675",
+      "contact": {
+        "email": "tech21@acquire.co.uk",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/6675"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3db0682fb95",
+      "territories": [
+        "US and Canada programme per public Awin profile"
+      ],
+      "commission": "Public Awin profile states 6% new and 3% returning customers",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin access, exact eligible markets, feed, tracking, image permissions and payout."
     }
   ]
 }
