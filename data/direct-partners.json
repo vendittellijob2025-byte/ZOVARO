@@ -4342,6 +4342,240 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights."
+    },
+    {
+      "id": "cricut-affiliate",
+      "name": "Cricut",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Arts; Crafts; Sewing",
+      "sourceUrl": "https://cricut.com/en-ca/partners",
+      "contact": {
+        "email": "cricut@accelerationpartners.com",
+        "sourceUrl": "https://cricut.com/en-ca/partners"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3fcfd72944e",
+      "territories": [
+        "Canada programme page; exact publisher and customer territories pending"
+      ],
+      "commission": "Public page advertises up to 12%; verify exact terms",
+      "cookie": "Public page states 5 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm programme eligibility, territories, feed, tracking and approved assets."
+    },
+    {
+      "id": "michaels-affiliate",
+      "name": "Michaels",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Arts; Crafts; Sewing",
+      "sourceUrl": "https://www.michaels.com/affiliate-program",
+      "contact": {
+        "email": "CJ_Michaels@cj.com",
+        "sourceUrl": "https://www.michaels.com/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3fd47ccede4",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states typical 2% starting rate and up to 10% for select partners",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify CJ application, countries, product feed, exact commission, exclusions and tracking."
+    },
+    {
+      "id": "allpowers-affiliate",
+      "name": "ALLPOWERS",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Energy; Solar; Portable Power",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/38934",
+      "contact": {
+        "email": "marketing@allpowers.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/38934"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3fdd25d3af6",
+      "territories": [
+        "International programme listing; exact eligible markets pending"
+      ],
+      "commission": "Public Awin profile states 5%-8%",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm current Awin programme access, territories, feed, tracking and approved media."
+    },
+    {
+      "id": "ecoflow-eu-affiliate",
+      "name": "EcoFlow Europe",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Energy; Solar; Home Backup",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/59181",
+      "contact": {
+        "email": "eu.affiliate@ecoflow.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/59181"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3fe8f11a0f2",
+      "territories": [
+        "UK, EU, Germany, France, Spain and Italy named in public programme listing; confirm publisher eligibility"
+      ],
+      "commission": "Public Awin profile states 5%-8%",
+      "cookie": "Public Awin profile states 7 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify exact market eligibility, feed, links, asset permissions and current payout terms."
+    },
+    {
+      "id": "easunpower-affiliate",
+      "name": "EASUNPOWER",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Energy; Solar; Inverters; Batteries",
+      "sourceUrl": "https://www.easunpower.com/pages/easunpower-affiliate-program",
+      "contact": {
+        "email": "avy@easunpower.com",
+        "sourceUrl": "https://www.easunpower.com/pages/easunpower-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3fef0c38ec8",
+      "territories": [
+        "Global brand claim; customer fulfilment territories pending"
+      ],
+      "commission": "Public page states 5% per confirmed order",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify eligible countries, tracking method, feed, image permissions, payout and reporting."
+    },
+    {
+      "id": "steelseries-affiliate",
+      "name": "SteelSeries",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Gaming; Electronics; PC Accessories",
+      "sourceUrl": "https://steelseries.com/affiliate-program",
+      "contact": {
+        "email": "affiliates@steelseries.com",
+        "sourceUrl": "https://steelseries.com/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3ff49b9a74c",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 8%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Public signup currently states closed; await reply on waitlist or future publisher route. Do not represent as active."
+    },
+    {
+      "id": "overland-solar-affiliate",
+      "name": "Overland Solar",
+      "status": "contacted",
+      "programType": "AvantLink affiliate programme",
+      "category": "Energy; Solar; Outdoor",
+      "sourceUrl": "https://www.overlandsolar.com/pages/affiliate-program",
+      "contact": {
+        "email": "affiliates@overlandsolar.com",
+        "sourceUrl": "https://www.overlandsolar.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3ffb3f4478b",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states 10%-15%",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher/customer territories, feed, tracking, approved assets and payout."
+    },
+    {
+      "id": "growatt-portable-affiliate",
+      "name": "Growatt Portable",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Energy; Solar; Portable Power",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/98001",
+      "contact": {
+        "email": "marketing.pps@growatt.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/98001"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc40006cec3fc",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public Awin listing states 5% on named flagship power stations; verify full product schedule",
+      "cookie": "Public Awin profile states 15 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify customer markets, current commission schedule, product feed, tracking and approved images."
+    },
+    {
+      "id": "mustar-musical-instruments",
+      "name": "Mustar",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Musical Instruments; Studio",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/116829",
+      "contact": {
+        "email": "info@mustarmusic.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/116829"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc400904b51d4",
+      "territories": [
+        "US programme; other countries not confirmed"
+      ],
+      "commission": "Public Awin listing states 10%",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin access, eligible territories, feed, deep links, assets and payout."
     }
   ]
 }
