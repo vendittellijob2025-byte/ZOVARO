@@ -9,6 +9,7 @@ if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is
 
 const BABY_INTENT_TITLE = /\b(for baby|baby (?:wash|shampoo|lotion|cream|oil|butter|balm|wipes|sunscreen|sun cream|perfume|fragrance|stroller|monitor|carrier|clothes|clothing)|diaper|newborn|infant|nursery|toddler|sleep sack)\b/i;
 const distribution = new Map();
+const subcategoryDistribution = new Map();
 const examples = [];
 let checked = 0;
 let mismatches = 0;
@@ -55,6 +56,8 @@ for (const product of catalog.products) {
   }
   checked++;
   distribution.set(acceptedCategory, (distribution.get(acceptedCategory) || 0) + 1);
+  const subcategoryKey = acceptedCategory + " > " + (subcategory || "Other");
+  subcategoryDistribution.set(subcategoryKey, (subcategoryDistribution.get(subcategoryKey) || 0) + 1);
   if (actual !== acceptedCategory || english !== acceptedCategory) {
     mismatches++;
     if (examples.length < 25) {
@@ -74,6 +77,7 @@ console.log("Primary category consistency audit: " + JSON.stringify({
   checked,
   mismatches,
   distribution: Object.fromEntries([...distribution].sort((a,b) => a[0].localeCompare(b[0]))),
+  subcategoryDistribution: Object.fromEntries([...subcategoryDistribution].sort((a,b) => a[0].localeCompare(b[0]))),
   examples,
   invalidSubcategoryPaths,
   unclassifiedProducts,
