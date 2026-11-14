@@ -54,6 +54,16 @@
             "Languages",
             "Problem solving"
           ]
+        },
+        {
+          "title": "Waiter / Waitress",
+          "summary": "Welcome guests, explain menus, take orders and coordinate food and beverage service while maintaining service and hygiene standards.",
+          "skills": [
+            "Guest service",
+            "Menu knowledge",
+            "Order handling",
+            "Team coordination"
+          ]
         }
       ]
     },
@@ -108,6 +118,36 @@
             "Scheduling",
             "Site safety",
             "Progress reporting"
+          ]
+        },
+        {
+          "title": "Plumber",
+          "summary": "Install, maintain and repair water, drainage and heating pipework while following local codes and safety procedures.",
+          "skills": [
+            "Pipe installation",
+            "Leak diagnostics",
+            "Technical drawings",
+            "Safety procedures"
+          ]
+        },
+        {
+          "title": "HVAC Technician",
+          "summary": "Install, inspect and service heating, ventilation and air-conditioning systems, diagnose faults and document maintenance.",
+          "skills": [
+            "HVAC systems",
+            "Electrical diagnostics",
+            "Refrigeration basics",
+            "Safety compliance"
+          ]
+        },
+        {
+          "title": "Painter / Decorator",
+          "summary": "Prepare surfaces and apply paint, coatings or decorative finishes to residential and commercial properties.",
+          "skills": [
+            "Surface preparation",
+            "Painting techniques",
+            "Colour matching",
+            "Safe material handling"
           ]
         }
       ]
@@ -366,7 +406,7 @@
           ]
         },
         {
-          "title": "Close Protection Officer",
+          "title": "Bodyguard / Close Protection Officer",
           "summary": "Provide protective support following lawful risk assessments, professional training and local licensing requirements.",
           "skills": [
             "Recognised training",
@@ -818,6 +858,231 @@
             "Analytics",
             "Content",
             "Remote coordination"
+          ]
+        },
+        {
+          "title": "Remote Administrative Assistant",
+          "summary": "Provide remote scheduling, document, inbox and coordination support using approved cloud-based office systems.",
+          "skills": [
+            "Calendar management",
+            "Office software",
+            "Written communication",
+            "Confidentiality"
+          ]
+        },
+        {
+          "title": "Remote Web Designer",
+          "summary": "Design and maintain websites and responsive pages remotely, translating briefs into accessible visual layouts.",
+          "skills": [
+            "Web design",
+            "HTML/CSS awareness",
+            "Responsive design",
+            "Portfolio"
+          ]
+        },
+        {
+          "title": "Remote Data Analyst",
+          "summary": "Analyse business or research data from an approved remote location and deliver dashboards and concise reports.",
+          "skills": [
+            "SQL",
+            "Spreadsheets",
+            "Data visualisation",
+            "Remote collaboration"
+          ]
+        },
+        {
+          "title": "Remote Technical Support Specialist",
+          "summary": "Diagnose software and device issues through remote support tools, ticketing systems and clear user guidance.",
+          "skills": [
+            "Troubleshooting",
+            "Remote support tools",
+            "Ticketing systems",
+            "Customer communication"
+          ]
+        },
+        {
+          "title": "Remote Content Writer",
+          "summary": "Research and write original digital content to editorial briefs, style guides and publication schedules.",
+          "skills": [
+            "Writing and editing",
+            "Research",
+            "SEO basics",
+            "Deadline management"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sales & Business Development",
+      "roles": [
+        {
+          "title": "Sales Development Representative (SDR)",
+          "summary": "Identify and qualify potential customers, conduct initial outreach and arrange sales conversations for the commercial team.",
+          "skills": [
+            "Lead qualification",
+            "CRM systems",
+            "Written communication",
+            "Pipeline discipline"
+          ]
+        },
+        {
+          "title": "Account Executive",
+          "summary": "Manage qualified opportunities, understand buyer needs, present solutions and guide prospects through the sales process.",
+          "skills": [
+            "Consultative selling",
+            "Negotiation",
+            "Product knowledge",
+            "CRM forecasting"
+          ]
+        },
+        {
+          "title": "Business Development Manager",
+          "summary": "Develop new commercial relationships, identify markets and partnerships and build a qualified pipeline for growth.",
+          "skills": [
+            "Market research",
+            "Partnership development",
+            "Negotiation",
+            "Commercial planning"
+          ]
+        },
+        {
+          "title": "Key Account Manager",
+          "summary": "Maintain strategic customer relationships, coordinate service needs and identify retention and account-growth opportunities.",
+          "skills": [
+            "Account planning",
+            "Relationship management",
+            "Problem solving",
+            "Commercial analysis"
+          ]
+        },
+        {
+          "title": "Sales Operations Specialist",
+          "summary": "Improve sales processes, reporting, CRM data quality and coordination between sales, marketing and finance.",
+          "skills": [
+            "CRM administration",
+            "Sales analytics",
+            "Process improvement",
+            "Reporting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Science & Research",
+      "roles": [
+        {
+          "title": "Research Scientist",
+          "summary": "Plan and conduct structured research, analyse results and communicate findings in a laboratory, academic or industrial setting.",
+          "skills": [
+            "Research methods",
+            "Data analysis",
+            "Scientific writing",
+            "Laboratory or field protocols"
+          ]
+        },
+        {
+          "title": "Laboratory Technician",
+          "summary": "Prepare samples, operate laboratory equipment, maintain records and support testing under documented procedures.",
+          "skills": [
+            "Sample preparation",
+            "Lab equipment",
+            "Quality procedures",
+            "Accurate record keeping"
+          ]
+        },
+        {
+          "title": "Clinical Research Associate",
+          "summary": "Support clinical study sites, monitor documentation and help ensure trial activities follow approved protocols and regulations.",
+          "skills": [
+            "Clinical trial processes",
+            "Documentation",
+            "GCP awareness",
+            "Site coordination"
+          ]
+        },
+        {
+          "title": "Environmental Scientist",
+          "summary": "Collect and interpret environmental data, assess impacts and support conservation, compliance or remediation projects.",
+          "skills": [
+            "Environmental sampling",
+            "Data interpretation",
+            "Regulatory awareness",
+            "Technical reporting"
+          ]
+        },
+        {
+          "title": "Biotechnologist",
+          "summary": "Apply biological and laboratory techniques to research or production in biotechnology, pharmaceuticals, food or related industries.",
+          "skills": [
+            "Molecular biology",
+            "Laboratory methods",
+            "Quality control",
+            "Scientific documentation"
+          ]
+        },
+        {
+          "title": "Research Data Analyst",
+          "summary": "Clean, analyse and visualise research datasets and help teams interpret evidence and communicate results.",
+          "skills": [
+            "Statistics",
+            "SQL or Python",
+            "Data visualisation",
+            "Reproducible analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Public Services & Government",
+      "roles": [
+        {
+          "title": "Public Administration Officer",
+          "summary": "Process public-service requests, maintain official records and coordinate administrative work under applicable procedures.",
+          "skills": [
+            "Public administration",
+            "Record management",
+            "Communication",
+            "Policy awareness"
+          ]
+        },
+        {
+          "title": "Public Health Inspector",
+          "summary": "Inspect facilities and practices, document findings and support public-health and sanitation requirements within local authority.",
+          "skills": [
+            "Inspection",
+            "Public health standards",
+            "Reporting",
+            "Risk awareness"
+          ]
+        },
+        {
+          "title": "Social Services Caseworker",
+          "summary": "Assess service needs, coordinate referrals and maintain case records while following safeguarding and confidentiality rules.",
+          "skills": [
+            "Case management",
+            "Communication",
+            "Safeguarding",
+            "Documentation"
+          ]
+        },
+        {
+          "title": "Emergency Services Dispatcher",
+          "summary": "Receive urgent calls, gather essential information and coordinate responses with emergency-service teams.",
+          "skills": [
+            "Clear communication",
+            "Decision making",
+            "Dispatch systems",
+            "Stress management"
+          ]
+        },
+        {
+          "title": "Municipal Services Technician",
+          "summary": "Support the operation and maintenance of public infrastructure, facilities or local services using approved procedures.",
+          "skills": [
+            "Technical maintenance",
+            "Safety",
+            "Work orders",
+            "Public service"
           ]
         }
       ]
