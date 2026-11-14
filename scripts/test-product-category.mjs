@@ -225,6 +225,7 @@ const departmentCases = [
   ["Baby Bottle with Silicone Nipple", "Babies", "Feeding & Nursing"],
   ["Baby Stroller Travel System", "Babies", "Strollers & Accessories"],
   ["Baby Pre-Walker Shoes", "Babies", "Baby Shoes > Pre-Walker Shoes"],
+  ["Baby Pink Sneakers", "Fashion", "Shoes > Sneakers"],
   ["Stainless Steel Cookware Set", "Home & Living", "Kitchen & Dining"],
   ["Robot Vacuum Cleaner", "Appliances", "Floor Care"],
   ["Dog Harness Adjustable", "Pets", "Dogs > Collars, Leashes & Harnesses"],
