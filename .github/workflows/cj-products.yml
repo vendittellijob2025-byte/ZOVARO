@@ -13,6 +13,8 @@ on:
     paths:
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/reclassify-catalog-categories.mjs"
+      - "scripts/validate-product-category-rules.mjs"
+      - "scripts/report-category-coverage.mjs"
       - "lib/product-category.js"
       - "lib/category-taxonomy.js"
       - "scripts/translate-to-english.mjs"
@@ -45,8 +47,14 @@ jobs:
       - name: Reclassify products using primary product identity
         run: node scripts/reclassify-catalog-categories.mjs
 
+      - name: Verify category classifier coverage
+        run: node scripts/validate-product-category-rules.mjs
+
       - name: Verify category consistency and storefront limits
         run: node scripts/audit-category-quality.mjs
+
+      - name: Generate real product coverage report for every shop category
+        run: node scripts/report-category-coverage.mjs
 
       # Translation is deliberately decoupled from catalog ingestion.
       # The public free translation endpoint is rate-limited and must not block
@@ -59,7 +67,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/catalog.json data/translation-cache.json
+          git add data/catalog.json data/translation-cache.json data/category-coverage.json
 
           if git diff --cached --quiet; then
             echo "No catalog or translation changes."
