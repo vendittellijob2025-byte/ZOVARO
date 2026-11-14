@@ -51,7 +51,7 @@ jobs:
           node --check scripts/audit-category-quality.mjs
       - name: Reclassify existing products using primary product identity
         run: node scripts/reclassify-catalog-categories.mjs
-      - name: Validate all 31 category rules and collision examples
+      - name: Validate all 31 canonical category roots and collision examples
         run: node scripts/validate-product-category-rules.mjs
       - name: Audit category paths and product quality
         run: node scripts/audit-category-quality.mjs
