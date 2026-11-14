@@ -226,7 +226,7 @@
       tile.type = "button";
       tile.className = "career-category-card";
       tile.dataset.category = name;
-      tile.setAttribute("aria-label", name + " — available job category");
+      tile.setAttribute("aria-label", name + " — open job offers");
       const image = document.createElement("img");
       image.src = careerCategoryImage(name);
       image.alt = "";
@@ -234,8 +234,42 @@
       image.decoding = "async";
       tile.appendChild(image);
       addText(tile, "strong", "", name);
+      tile.addEventListener("click", () => openCareerCategoryJobs(name));
       careerCategoryGrid.appendChild(tile);
     });
+  }
+  function openCareerCategoryJobs(category) {
+    const explorer = document.querySelector("#lookingJobView .career-explorer");
+    const results = $("careerCategoryResults");
+    const title = $("careerCategoryResultsTitle");
+    const meta = $("careerCategoryResultsMeta");
+    const listings = $("careerCategoryListings");
+    const empty = $("careerCategoryEmpty");
+    if (!results || !listings) return;
+    const selectedCountry = countrySelect?.value || "";
+    const selectedCity = citySelect?.value || "";
+    const matches = jobItems.filter(item => {
+      const categoryMatch = normalizeCategory(item.category || "") === normalizeCategory(category) ||
+        normalizeCategory(item.category || "").includes(normalizeCategory(category)) ||
+        normalizeCategory(category).includes(normalizeCategory(item.category || ""));
+      if (!categoryMatch) return false;
+      if (!locationSearchActive) return true;
+      const countryMatch = normalizeLocation(item.country) === normalizeLocation(selectedCountry) ||
+        (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(selectedCountry)));
+      return countryMatch && normalizeLocation(item.city) === normalizeLocation(selectedCity);
+    });
+    if (title) title.textContent = category;
+    if (meta) meta.textContent = matches.length
+      ? matches.length + " job offer" + (matches.length === 1 ? "" : "s") + (locationSearchActive ? " in " + selectedCity + ", " + selectedCountry : " worldwide") + "."
+      : "No published job offers are currently available in this category" + (locationSearchActive ? " for " + selectedCity + ", " + selectedCountry : "") + ".";
+    renderListings(listings, matches, "job");
+    if (empty) {
+      empty.textContent = "There are no published offers in this category yet. Please check again later.";
+      empty.classList.toggle("hidden", matches.length > 0);
+    }
+    if (explorer) explorer.classList.add("hidden");
+    results.classList.remove("hidden");
+    results.scrollIntoView({behavior:"smooth",block:"start"});
   }
   function restoreAllCareerCategories() {
     locationSearchActive = false;
@@ -244,6 +278,8 @@
     if (citySuggestions) citySuggestions.replaceChildren();
     renderCareerCategoryTiles(careerCategories);
     if (jobCategoryInstruction) jobCategoryInstruction.classList.add("hidden");
+    $("careerCategoryResults")?.classList.add("hidden");
+    document.querySelector("#lookingJobView .career-explorer")?.classList.remove("hidden");
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
   function populateCities(country) {
@@ -347,6 +383,12 @@
     if (jobLocationStatus && countrySelect?.value === country) jobLocationStatus.textContent = "Now type or select a city in " + country + ".";
   });
   searchJobsButton?.addEventListener("click",searchJobsByLocation);
+  $("backToCareerCategories")?.addEventListener("click",() => {
+    $("careerCategoryResults")?.classList.add("hidden");
+    document.querySelector("#lookingJobView .career-explorer")?.classList.remove("hidden");
+    $("careerCategoryListings")?.replaceChildren();
+    document.querySelector("#lookingJobView .career-explorer")?.scrollIntoView({behavior:"smooth",block:"start"});
+  });
   $("backFromLookingJob")?.addEventListener("click",() => {
     restoreAllCareerCategories();
   });
@@ -467,9 +509,8 @@
   window.addEventListener("popstate",()=>closeJobDetail(false));
   $("closeJobDetail")?.addEventListener("click",closeJobDetail);
   $("jobDetailPanel")?.addEventListener("click",event=>{if(event.target.id==="jobDetailPanel")closeJobDetail();});
-  countrySelect?.addEventListener("change",()=>{refreshJobGeography(true);});
-  regionSelect?.addEventListener("change",refreshJobCities);
-  citySelect?.addEventListener("change",applyJobFilters);
+  // JOB location search is managed by the single country/city directory above.
+  // Do not attach the legacy filter handlers here: their functions/elements are not part of this view.
 
   const cursors = { job: null, product: null };
   const loadedCounts = { job: 0, product: 0 };
