@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "partners": [],
   "products": [],
   "notes": [
@@ -3372,6 +3372,110 @@
       ],
       "contact": "Official Impact application; no current dedicated public affiliate email identified.",
       "nextAction": "Potentially useful for Food & Grocery only if ZOVARO can demonstrate sufficient US/Canada-based traffic. Verify audience geography before applying. Weekly bank transfer is not supported by the published timing; Impact payout is approximately 55 days after month-end. Do not apply until traffic eligibility is verified."
+    },
+    {
+      "id": "baby-tula-affiliate",
+      "name": "Baby Tula",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Babies",
+      "sourceUrl": "https://babytula.com/pages/affiliates",
+      "contact": {
+        "email": "partner@babytula.com",
+        "sourceUrl": "https://babytula.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3b44ccf14f5",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 10%; actual ZOVARO terms pending",
+      "cookie": "Public page advertises 30 days; verify in approved programme",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher/country eligibility, exact commission, feed/deep links, image permissions, conversion reporting and payout before publication."
+    },
+    {
+      "id": "brandsmart-usa-affiliate",
+      "name": "BrandsMart USA",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Electronics; Appliances",
+      "sourceUrl": "https://www.brandsmartusa.com/pages/affiliates",
+      "contact": {
+        "email": "affiliate@bm1.brandsmart.com",
+        "sourceUrl": "https://www.brandsmartusa.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3b51594617d",
+      "territories": [
+        "US regional fulfilment; exact coverage to confirm"
+      ],
+      "commission": "Not confirmed",
+      "cookie": "Not confirmed",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm application route, US delivery coverage, feed access, commission, tracking and content permissions."
+    },
+    {
+      "id": "columbia-sportswear-affiliate",
+      "name": "Columbia Sportswear",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Sports; Outdoor; Fashion",
+      "sourceUrl": "https://www.columbiasportswear.co.uk/l/affiliate-program-columbia",
+      "contact": {
+        "email": "columbia@accelerationpartners.com",
+        "sourceUrl": "https://www.columbiasportswear.co.uk/l/affiliate-program-columbia"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3b5a175c575",
+      "territories": [
+        "UK programme page; international publisher eligibility pending"
+      ],
+      "commission": "Public page advertises up to 10%; actual ZOVARO terms pending",
+      "cookie": "Public page advertises 30 days; verify in approved programme",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm application route, eligible territories, current terms, feed access, deep links and approved media."
+    },
+    {
+      "id": "petco-affiliate",
+      "name": "Petco",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Pets",
+      "sourceUrl": "https://www.petco.com/affiliate",
+      "contact": {
+        "email": "petcoaffiliates@petco.com",
+        "sourceUrl": "https://www.petco.com/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3b617773b88",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published on official page",
+      "cookie": "Not published on official page",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher eligibility, supported countries/fulfilment, programme terms, feed, tracking and media permissions."
     }
   ]
 }
