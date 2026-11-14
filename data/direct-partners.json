@@ -33,7 +33,8 @@
     "CJ status update 2026-11-13: Global Amore Mall (Amorepacific) welcome email confirms approval on CJ (thread 1a1d3b9814d7b676). Latest CJ sync run 43519761281 shows advertiser 7468134 with 1,550 feed products received and 1,439 unique products imported after deduplication. CJ feed validation confirms valid prices, images and click URLs for imported records, but a live click/attribution test and advertiser-specific public storefront count are not available. The welcome email restricts image use to images shared by Global Amore Mall and identifies coupon codes CYOUNG, CYOUNGPLUS and LOREN15 as non-commissionable. Keep status approved_on_network, not fully publishable until asset scope and account terms are confirmed.",
     "CJ deactivation update 2026-11-13: Baseus US Amazon Marketplace advertiser 7641760 was deactivated (thread 1a1d2e44ffcbd668). The latest CJ sync excludes non-active/non-joined advertisers from storefront eligibility; Baseus products retained in the internal merged inventory are not selected for the public storefront while the advertiser is not currently joined/feed-eligible. Do not promote its links during deactivation.",
     "New partner research and outreach 2026-11-13: Click&Boat and YachtBooking.com were contacted on 2026-11-14T00:24Z using official affiliate/partner contacts. Catawiki and Boatbookings were added as prospects; no dedicated affiliate email was verified, so no email was sent. Thomann was added as a prospect but not contacted because its official programme requires at least 500 unique website visits/day or 5,000 social followers, neither of which has been verified for ZOVARO.",
-    "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received."
+    "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received.",
+    "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified."
   ],
   "prospects": [
     {
@@ -1910,13 +1911,32 @@
         "imagePermission": "pending",
         "conversionReporting": "not connected"
       },
-      "nextAction": "EPN account/approval cannot be verified without authenticated portal access; no approval email or eBay-specific Vercel environment variable was found. Required before monetized integration: confirm EPN account approval and publisher eligibility; obtain the 10-digit campaign ID; create an eBay Developer application and securely configure client ID/secret; apply for and receive Buy API production access and any required written approval for the proposed catalogue/display experience; then test OAuth, Browse API, itemAffiliateWebUrl tracking, marketplace delivery filters, item availability, and attribution. Do not contact or label individual eBay sellers as ZOVARO partners without separate written agreements. Never place EPN links in eBay listings, stores or eBay messages.",
+      "nextAction": "No authenticated EPN account, approval, campaign ID or developer credentials are available in connected access. Current official network agreement requires EPN acceptance before any promotional method is deployed. Current agreement provides monthly payment only when positive prior-month balance exceeds USD 10 or applicable bank fees, whichever is greater; no weekly payout. Fourteen public participating sites include Italy. Current agreement also restricts use of EPN Data in AI systems: no model training/benchmarking and no exposure to LLM services without prior written EPN approval and a specific written contract. Do not connect EPN transaction/portal data to ChatGPT or other LLMs until written approval. Next prerequisites: authenticate to EPN, verify application/account status, retrieve campaign ID, create eBay Developers app, obtain OAuth credentials, and request production Buy API access. Do not publish until approved and tracking is verified.",
       "sourceChecked": "2026-11-12",
       "accountStatus": "not verified; no authenticated EPN portal access or connected eBay account",
       "campaignIdStatus": "missing",
       "developerAppStatus": "not verified",
       "apiProductionApproval": "not obtained or verified",
-      "payoutSettingsStatus": "not verified in authenticated EPN portal"
+      "payoutSettingsStatus": "not verified in authenticated EPN portal",
+      "termsCheckedAt": "2026-11-13",
+      "officialMarkets": [
+        "Australia",
+        "Austria",
+        "Belgium",
+        "Canada",
+        "France",
+        "Germany",
+        "Ireland",
+        "Italy",
+        "Netherlands",
+        "Poland",
+        "Spain",
+        "Switzerland",
+        "United Kingdom",
+        "United States"
+      ],
+      "publicPayoutTerms": "Monthly payment of positive prior-month balance when above USD 10 or applicable banking fees, whichever is greater; exact portal payout method and bank details require authenticated verification.",
+      "publicAttributionTerms": "Buy It Now: qualifying click within 24 hours before purchase; auctions: bid within 24 hours after click and win within 10 days (subject to the additional auction rules)."
     },
     {
       "id": "ankerwork",
