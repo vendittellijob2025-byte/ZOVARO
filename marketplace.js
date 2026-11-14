@@ -190,7 +190,7 @@
     [/arts|media|creative/i,"photo-1492619375914-88005aa9e8fb"],
     [/aviation|aerospace/i,"photo-1436491865332-7a61a109cc05"],
     [/maritime|offshore/i,"photo-1510414842594-a61c69b5ae57"],
-    [/real estate|property/i,"photo-1560518883-ce09059ee 마"],
+    [/real estate|property/i,"photo-1564013799919-ab600027ffc6"],
     [/science|research/i,"photo-1532094349884-543bc11b234d"],
     [/energy|utilities/i,"photo-1473341304170-971dccb5ac1e"],
     [/environment|sustainability/i,"photo-1470071459604-3b5ec3a7fe05"],
