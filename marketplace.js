@@ -260,6 +260,10 @@
     }
   }
   async function loadJobDirectory() {
+    if (countrySelect) {
+      setOptions(countrySelect,FALLBACK_COUNTRIES,"Select a country");
+      countrySelect.disabled = false;
+    }
     const seen = new Set();
     let cursor = null;
     try {
@@ -335,8 +339,8 @@
   countrySelect?.addEventListener("change",() => {
     const country = countrySelect.value;
     if (!country) {
-      setOptions(citySelect,[],"Select a country first");
-      if (citySelect) citySelect.disabled = true;
+      if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
+      if (citySuggestions) citySuggestions.replaceChildren();
       return;
     }
     populateCities(country);
