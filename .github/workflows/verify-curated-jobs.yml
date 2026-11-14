@@ -34,6 +34,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: zovaro-curated-jobs-verification
@@ -66,11 +67,18 @@ jobs:
         run: node scripts/validate-jobs-portal.mjs
       - name: Verify official employer sources
         run: node scripts/verify-curated-jobs.mjs
-      - name: Save verification results
+      - name: Create or update review PR for verification results
         if: github.event_name != 'pull_request'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/curated-jobs.json
-          git diff --cached --quiet || git commit -m "Verify curated job opportunities"
-          git push
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: data/curated-jobs.json
+          commit-message: "Verify curated job opportunities"
+          branch: jobs/daily-feed-updates
+          delete-branch: false
+          title: "JOBS: daily verification updates"
+          body: |
+            Automated verification of employer-submitted and editorially curated job records.
+            Review every status change and removal before merging. Temporary network failures
+            must remain unverified rather than being treated as expired vacancies.
+          base: main

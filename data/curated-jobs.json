@@ -337,5 +337,191 @@
     "sourceTitle": "Alliances Field Engineer",
     "status": "open",
     "verificationMode": "manual"
+  },
+  {
+    "id": "kodalab-senior-full-stack-engineer",
+    "title": "Senior Full-Stack Engineer",
+    "company": "Kodalab",
+    "category": "IT, Software & Data",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote LATAM role. The published technology stack is React, Node.js, TypeScript and AWS; the employer says its team builds AI-native software for US clients. Detailed duties, seniority and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published stack: React, Node.js, TypeScript and AWS",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "Senior Full-Stack Engineer",
+    "status": "open",
+    "statusReason": ""
+  },
+  {
+    "id": "kodalab-cloud-devops-engineer",
+    "title": "Cloud / DevOps Engineer",
+    "company": "Kodalab",
+    "category": "Engineering & Technology",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote LATAM role supporting AI-native software delivery for US clients. The published stack highlights Kubernetes, Terraform, CI/CD and Google Cloud Platform. Detailed duties, seniority and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published stack: Kubernetes, Terraform, CI/CD and GCP",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "Cloud / DevOps Engineer",
+    "status": "open",
+    "statusReason": ""
+  },
+  {
+    "id": "kodalab-ai-machine-learning-engineer",
+    "title": "AI / Machine Learning Engineer",
+    "company": "Kodalab",
+    "category": "IT, Software & Data",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote LATAM role supporting AI-native software projects for US clients. The published stack includes Python, PyTorch, large language models and MLOps. Detailed duties, seniority and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published stack: Python, PyTorch, LLMs and MLOps",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "AI / Machine Learning Engineer",
+    "status": "open",
+    "statusReason": ""
+  },
+  {
+    "id": "kodalab-senior-product-designer",
+    "title": "Senior Product Designer",
+    "company": "Kodalab",
+    "category": "Arts, Media & Creative",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote LATAM design role. The published focus is Figma, design systems and UX research, within a remote team building software for US clients. Detailed responsibilities, seniority criteria and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published focus: Figma, design systems and UX research",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "Senior Product Designer",
+    "status": "open",
+    "statusReason": ""
+  },
+  {
+    "id": "kodalab-mobile-engineer-ios-android",
+    "title": "Mobile Engineer (iOS / Android)",
+    "company": "Kodalab",
+    "category": "IT, Software & Data",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote mobile engineering role for its software projects serving US clients. The published technology stack includes Swift, Kotlin and React Native. Detailed duties, seniority and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published stack: Swift, Kotlin and React Native",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "Mobile Engineer (iOS / Android)",
+    "status": "open",
+    "statusReason": ""
+  },
+  {
+    "id": "kodalab-qa-automation-engineer",
+    "title": "QA / Automation Engineer",
+    "company": "Kodalab",
+    "category": "IT, Software & Data",
+    "country": "Multiple LATAM countries",
+    "region": "LATAM",
+    "city": "Remote",
+    "location": "Remote · Latin America; exact eligible countries are not enumerated by the employer",
+    "jobType": "Not stated by employer",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Kodalab lists this as an open, fully remote QA and automation role supporting software delivery for US clients. The published stack includes Playwright, Cypress and CI pipelines. Detailed duties, seniority and country-by-country eligibility should be confirmed on the official application page.",
+    "requirements": [
+      "Published stack: Playwright, Cypress and CI pipelines",
+      "Remote across Latin America; exact eligible countries are not enumerated"
+    ],
+    "applicationUrl": "https://kodalab.ai/careers",
+    "contactEmail": "careers@kodalab.ai",
+    "sourceName": "Kodalab – official careers page",
+    "sourceUrl": "https://kodalab.ai/careers",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-13",
+    "verificationNote": "Official employer page checked on 2026-11-13; role remains listed under Open roles. Employer states fully remote across LATAM but does not enumerate eligible countries or salary.",
+    "countries": [
+      "Latin America (country eligibility not specified)"
+    ],
+    "sourceTitle": "QA / Automation Engineer",
+    "status": "open",
+    "statusReason": ""
   }
 ]
