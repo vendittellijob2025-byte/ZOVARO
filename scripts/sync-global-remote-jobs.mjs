@@ -81,15 +81,27 @@ function eligibleCountries(geo) {
   const key = normal(raw);
   if (!key) return [];
   if (/anywhere|worldwide|global|any country|all countries|remote globally/.test(key)) return ["Worldwide"];
+  const parts = raw.split(/[,;|/]+/).map(part=>part.replace(/[()]/g," ").trim()).filter(Boolean);
+  if (parts.length > 1) {
+    const expanded = [];
+    for (const part of parts) {
+      const partKey = normal(part);
+      const group = Object.entries(GEO_GROUPS).find(([name]) => partKey === name || partKey.includes(name));
+      if (group) expanded.push(...group[1]);
+      else if (/\\b(usa|u s|united states)\\b/.test(partKey)) expanded.push("United States");
+      else if (/\\b(uk|united kingdom|great britain)\\b/.test(partKey)) expanded.push("United Kingdom");
+      else if (/\\bcanada\\b/.test(partKey)) expanded.push("Canada");
+      else if (!/remote|hybrid|anywhere/i.test(partKey)) expanded.push(countryName(part));
+    }
+    return unique(expanded);
+  }
   for (const [group, countries] of Object.entries(GEO_GROUPS)) {
     if (key === group || key.includes(group)) return countries;
   }
-  if (/\b(usa|u s|united states)\b/.test(key)) return ["United States"];
-  if (/\b(uk|united kingdom|great britain)\b/.test(key)) return ["United Kingdom"];
-  if (/\bcanada\b/.test(key)) return ["Canada"];
-  const parts = raw.split(/[,;|/]+/).map(part=>part.trim()).filter(Boolean);
-  const mapped = parts.map(countryName).filter(part=>part && !/remote|hybrid|anywhere/i.test(part));
-  return mapped.length ? unique(mapped) : [];
+  if (/\\b(usa|u s|united states)\\b/.test(key)) return ["United States"];
+  if (/\\b(uk|united kingdom|great britain)\\b/.test(key)) return ["United Kingdom"];
+  if (/\\bcanada\\b/.test(key)) return ["Canada"];
+  return !/remote|hybrid/i.test(key) ? [countryName(raw)] : [];
 }
 function stripHtml(value) {
   return String(value ?? "")
