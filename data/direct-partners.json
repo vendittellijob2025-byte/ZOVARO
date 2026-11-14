@@ -4733,6 +4733,189 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; verify publisher eligibility, supported countries, exact commission, product catalog, deep links and approved assets."
+    },
+    {
+      "id": "polaroid-eu-affiliate",
+      "name": "Polaroid EU",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Photography; Cameras; Electronics",
+      "sourceUrl": "https://www.polaroid.com/en_ci/pages/polaroid-affiliate-program",
+      "contact": {
+        "email": "miles.galloway@scaledigital.co",
+        "sourceUrl": "https://www.polaroid.com/en_ci/pages/polaroid-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc40f329472ef",
+      "territories": [
+        "EU page; exact publisher/customer countries pending"
+      ],
+      "commission": "Public page states up to 6%",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify eligible territories, Impact access, feed, deep links and asset rights."
+    },
+    {
+      "id": "royal-rentals-affiliate",
+      "name": "Royal Rentals",
+      "status": "contacted",
+      "programType": "Direct luxury-car-rental affiliate programme",
+      "category": "Luxury; Cars; Rentals",
+      "sourceUrl": "https://royalrentals.io/affiliate",
+      "contact": {
+        "email": "info@royalrentals.io",
+        "sourceUrl": "https://royalrentals.io/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc40f94e4a029",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Commission on completed referred rentals; rate not published",
+      "cookie": "Not stated; referral link/code to confirm",
+      "integration": {
+        "affiliateLink": "pending",
+        "fleetFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; agree fleet/territory, completed-booking attribution, cancellation rules, commission and media permissions."
+    },
+    {
+      "id": "biofargo-affiliate",
+      "name": "Biofargo",
+      "status": "contacted",
+      "programType": "Affiliate and Partner Laboratory programme",
+      "category": "Industrial & Scientific; Laboratory Supplies",
+      "sourceUrl": "https://biofargo.com/pages/biofargo-affiliate-partner-lab-program",
+      "contact": {
+        "email": "contact@biofargo.com",
+        "sourceUrl": "https://biofargo.com/pages/biofargo-affiliate-partner-lab-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc40fe9f800a2",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, catalogue, tracking, approved scientific claims, compliance docs and payout."
+    },
+    {
+      "id": "arenti-affiliate",
+      "name": "Arenti",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://arenti.com/pages/affiliate-program",
+      "contact": {
+        "email": "affiliate@arenti.nl",
+        "sourceUrl": "https://arenti.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc410bb692ad7",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 18%; verify actual approved rate",
+      "cookie": "Public page states 30 days",
+      "payout": "Public page says Awin pays monthly by bank transfer; verify account terms",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin programme, eligible countries, feed, tracking, permitted content and payout details."
+    },
+    {
+      "id": "keldco-affiliate",
+      "name": "KeldCo",
+      "status": "contacted",
+      "programType": "Direct ambassador affiliate programme",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://keldco.com/pages/ambassador-affiliate-program",
+      "contact": {
+        "email": "affiliate@keldco.com",
+        "sourceUrl": "https://keldco.com/pages/ambassador-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4115693395f",
+      "territories": [
+        "Australia; exact delivery countries to confirm"
+      ],
+      "commission": "Public page states minimum 10%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm platform publisher eligibility, countries, tracking, feed and payout terms."
+    },
+    {
+      "id": "u-tec-ultraloq-affiliate",
+      "name": "U-tec / ULTRALOQ",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://u-tec.com/pages/affiliate-program",
+      "contact": {
+        "email": "affiliate@xthings.com",
+        "sourceUrl": "https://u-tec.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc411ed58dff1",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states minimum 10%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm supported countries, current programme terms, feed, tracking and permitted assets."
+    },
+    {
+      "id": "wansview-affiliate",
+      "name": "Wansview",
+      "status": "contacted",
+      "programType": "Direct / Amazon affiliate-based programme enquiry",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://www.wansview.com/Affiliate",
+      "contact": {
+        "email": "marketing@wansview.com",
+        "sourceUrl": "https://www.wansview.com/Affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4126308b777",
+      "territories": [
+        "Amazon US programme referenced; independent ZOVARO attribution not verified"
+      ],
+      "commission": "Public page states 5%-10% through Amazon Associates; not a direct ZOVARO commission arrangement",
+      "cookie": "Amazon Associates terms apply; not verified for ZOVARO",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; only proceed if they provide a permitted ZOVARO-specific or approved network tracking arrangement. Do not count Amazon Associates links as direct partner approval."
     }
   ]
 }
