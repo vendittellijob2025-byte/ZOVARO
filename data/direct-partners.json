@@ -4055,6 +4055,293 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; confirm Awin access, exact eligible markets, feed, tracking, image permissions and payout."
+    },
+    {
+      "id": "accor-all-affiliate",
+      "name": "Accor ALL",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Travel; Hotels",
+      "sourceUrl": "https://all.accor.com/a/en/affiliate-program.html",
+      "contact": {
+        "email": "contact.all.affiliation@accor.com",
+        "sourceUrl": "https://all.accor.com/a/en/affiliate-program.html"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e4304a34b6",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published on overview page",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "hotelFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify CJ campaign terms, eligible countries, commission, hotel data, deep links and approved assets."
+    },
+    {
+      "id": "advance-auto-parts-affiliate",
+      "name": "Advance Auto Parts",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Automotive; Auto Parts",
+      "sourceUrl": "https://shop.advanceautoparts.com/o/affiliates",
+      "contact": {
+        "email": "advanceauto@gen3marketing.com",
+        "sourceUrl": "https://shop.advanceautoparts.com/o/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e514e0b8db",
+      "territories": [
+        "US; retailer reports stores in 40 states"
+      ],
+      "commission": "Public page advertises up to 10%; verify actual qualifying rate",
+      "cookie": "Public page describes a 30-day return window; attribution details to verify",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Impact acceptance, delivery area, catalog feed, click tracking and image rights."
+    },
+    {
+      "id": "every-foods-affiliate",
+      "name": "every Foods",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Food & Grocery",
+      "sourceUrl": "https://ambassador.every-foods.com/program-legal/terms",
+      "contact": {
+        "email": "sponsoring@every-foods.com",
+        "sourceUrl": "https://ambassador.every-foods.com/program-legal/terms"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e5b9c7ee79",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm countries, product catalogue, tracking, commission, payout and approved assets. Follow disclosure and anti-spam rules."
+    },
+    {
+      "id": "nh-hotels-affiliate",
+      "name": "NH Hotels",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Travel; Hotels",
+      "sourceUrl": "https://www.nh-hotels.com/en/affiliates",
+      "contact": {
+        "email": "affiliate@nh-hotels.com",
+        "sourceUrl": "https://www.nh-hotels.com/en/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e617b177d6",
+      "territories": [
+        "350+ hotels in 28 countries advertised; publisher eligibility to confirm"
+      ],
+      "commission": "Not verified",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "hotelFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify current affiliate network, commission, feed, customer coverage, deep links and media permissions."
+    },
+    {
+      "id": "olivers-travels-affiliate",
+      "name": "Oliver's Travels",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Travel; Luxury Villas",
+      "sourceUrl": "https://www.oliverstravels.com/affiliates/",
+      "contact": {
+        "email": "affiliates@oliverstravels.com",
+        "sourceUrl": "https://www.oliverstravels.com/affiliates/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e6c82e2d20",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states average GBP 180 per completed booking; verify actual terms",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "propertyFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify eligible territories, feed/catalogue, tracking, media rights and payout terms."
+    },
+    {
+      "id": "todson-affiliate",
+      "name": "Todson",
+      "status": "contacted",
+      "programType": "AvantLink affiliate programme",
+      "category": "Sports; Cycling; Outdoor",
+      "sourceUrl": "https://shop.todson.com/pages/affiliate",
+      "contact": {
+        "email": "info@todson.com",
+        "sourceUrl": "https://shop.todson.com/pages/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e73d5e4692",
+      "territories": [
+        "US programme; other markets unconfirmed"
+      ],
+      "commission": "Public page states 9% flat commission",
+      "cookie": "Public page states 60 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, customer territory, feed, tracking, approved assets and payout."
+    },
+    {
+      "id": "nuby-affiliate",
+      "name": "Nûby",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Babies; Kids",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/71255",
+      "contact": {
+        "email": "affiliates@nuby.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/71255"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e7b5dec020",
+      "territories": [
+        "Distributed in 155+ countries; programme customer territory needs confirmation"
+      ],
+      "commission": "Public Awin profile states 5%",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin programme access, publisher/customer territories, current feed, tracking and approved imagery."
+    },
+    {
+      "id": "little-baby-toys-affiliate",
+      "name": "Little Baby Toys",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Toys & Games; Babies",
+      "sourceUrl": "https://littlebabytoys.co/media-partnerships/",
+      "contact": {
+        "email": "support@littlebabytoys.co",
+        "sourceUrl": "https://littlebabytoys.co/media-partnerships/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e82bfb7f36",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify dedicated affiliate programme, commission, countries, tracking, product data and image permissions."
+    },
+    {
+      "id": "insignia-luxury-affiliate",
+      "name": "Insignia",
+      "status": "contacted",
+      "programType": "Luxury partner / affiliate application",
+      "category": "Luxury; Travel; Experiences",
+      "sourceUrl": "https://insignia-com.insidev.tech/partner-with-us/",
+      "contact": {
+        "email": "marketing@insignia.com",
+        "sourceUrl": "https://insignia-com.insidev.tech/partner-with-us/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e8c2ad6602",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not applicable / not confirmed",
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryAccess": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm partner eligibility, referral attribution, qualifying enquiry process, territories, assets and payout terms."
+    },
+    {
+      "id": "marriott-affiliate",
+      "name": "Marriott International",
+      "status": "contacted",
+      "programType": "Partnerize affiliate programme",
+      "category": "Travel; Hotels",
+      "sourceUrl": "https://www.marriott.com/marriott/affiliateprogramfaq.mi",
+      "contact": {
+        "email": "affiliatemanager@marriott.com",
+        "sourceUrl": "https://www.marriott.com/marriott/affiliateprogramfaq.mi"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3e9617fa047",
+      "territories": [
+        "Global properties in 138 countries/territories; publisher eligibility to confirm"
+      ],
+      "commission": "Not stated in FAQ",
+      "cookie": "Not stated in FAQ",
+      "payout": "Public FAQ says Partnerize payments bi-weekly when minimum threshold is met; bank-transfer method to confirm",
+      "integration": {
+        "affiliateLink": "pending",
+        "hotelFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Partnerize eligibility, commission, exact customer countries, hotel feed, approved creatives and payout method."
+    },
+    {
+      "id": "luxury-hotels-group",
+      "name": "Luxury Hotels Group",
+      "status": "contacted",
+      "programType": "Direct referral / listing partnership enquiry",
+      "category": "Luxury; Travel; Hotels; Property; Yachts; Private Jets",
+      "sourceUrl": "https://luxuryhotels.group/contact-us",
+      "contact": {
+        "email": "info@luxuryhotels.group",
+        "sourceUrl": "https://luxuryhotels.group/contact-us"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc3eb90409b16",
+      "territories": [
+        "300+ destinations advertised; exact inventory and coverage to confirm"
+      ],
+      "commission": "Not published",
+      "cookie": "Not applicable / not confirmed",
+      "integration": {
+        "affiliateLink": "pending",
+        "inventoryAccess": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights."
     }
   ]
 }
