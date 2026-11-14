@@ -35,7 +35,7 @@ const cases = [
   ["Office Chair", "Home & Living"],
   ["Digital Camera Bag", "Electronics"],
   ["Wireless Bluetooth Headphones", "Electronics"],
-  ["Women's Running Shoes", "Sports"],
+  ["Women's Running Shoes", "Fashion"],
   ["Cotton Summer Dress", "Fashion"],
   ["Cordless Power Drill", "Tools & DIY"],
   ["Stainless Steel Refrigerator", "Appliances"],
