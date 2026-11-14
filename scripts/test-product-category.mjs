@@ -242,6 +242,8 @@ for (const [title, expectedCategory, expectedSubcategory] of departmentCases) {
 }
 
 assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Camiseta Head Tie Break Women" }), "Sports");
+assert.equal(categoryFor({ name: "Padel Iberico ES" }, { title: "Padel Court Shoes" }), "Fashion");
+assert.equal(subcategoryFor("Fashion", { title: "Padel Court Shoes", advertiserName: "Padel Iberico ES" }), "Shoes");
 assert.equal(subcategoryFor("Sports", { title: "Camiseta Head Tie Break Women", advertiserName: "Padel Iberico ES" }), "Sports Apparel > Sports Clothing");
 assert.equal(subcategoryFor("Sports", { title: "Nox ML10 Pro Cup Padel Racket", advertiserName: "Padel Iberico ES" }), "Padel > Padel Rackets");
 assert.equal(subcategoryFor("Sports", { title: "Paletero Padel Bag", advertiserName: "Padel Iberico ES" }), "Padel > Padel Bags");
