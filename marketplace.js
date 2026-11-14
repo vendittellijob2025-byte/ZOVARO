@@ -155,14 +155,17 @@
   const jobItems = [];
   const countrySelect = $("jobCountryFilter");
   const citySelect = $("jobCityFilter");
+  const citySuggestions = $("jobCitySuggestions");
   const searchJobsButton = $("jobLocationSearch");
   const jobLocationStatus = $("jobLocationStatus");
   const jobCategoryInstruction = $("jobCategoryInstruction");
   const careerCategoryGrid = $("careerCategoryGrid");
-  let careerCategories = [];
+  const FALLBACK_CAREER_CATEGORIES = ["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Remote & Work From Home"].map(name => ({name}));
+  let careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
   let locationSearchActive = false;
   let geoRequest = 0;
   const GEO_API = "https://countriesnow.space/api/v0.1";
+  const FALLBACK_COUNTRIES = ["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czechia","Democratic Republic of the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
 
   const CAREER_CATEGORY_PHOTOS = [
     [/food|hospitality/i,"photo-1555939594-58d7cb561ad1"],
@@ -237,37 +240,24 @@
   function restoreAllCareerCategories() {
     locationSearchActive = false;
     if (countrySelect) countrySelect.value = "";
-    setOptions(citySelect, [], "Select a country first");
-    if (citySelect) citySelect.disabled = true;
+    if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
+    if (citySuggestions) citySuggestions.replaceChildren();
     renderCareerCategoryTiles(careerCategories);
     if (jobCategoryInstruction) jobCategoryInstruction.classList.add("hidden");
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
-  async function populateCities(country) {
-    const requestId = ++geoRequest;
-    const fallbackCities = uniqueSorted(jobItems
+  function populateCities(country) {
+    if (citySuggestions) citySuggestions.replaceChildren();
+    const suggestions = uniqueSorted(jobItems
       .filter(item => normalizeLocation(item.country) === normalizeLocation(country) ||
         (Array.isArray(item.countries) && item.countries.some(value => normalizeLocation(value) === normalizeLocation(country))))
       .map(item => item.city));
-    setOptions(citySelect, [], "Loading cities…");
-    if (citySelect) citySelect.disabled = true;
-    let cities = [];
-    try {
-      const response = await fetch(GEO_API + "/countries/cities", {
-        method:"POST", headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({country})
-      });
-      if (!response.ok) throw new Error("City directory unavailable");
-      const body = await response.json();
-      if (body?.error) throw new Error(body.msg || "City directory unavailable");
-      cities = uniqueSorted(Array.isArray(body.data) ? body.data : []);
-    } catch (error) {
-      console.warn("ZOVARO city directory fallback:",error.message);
-      cities = fallbackCities;
+    suggestions.forEach(city => citySuggestions?.appendChild(new Option(city, city)));
+    if (citySelect) {
+      citySelect.value = "";
+      citySelect.disabled = false;
+      citySelect.placeholder = suggestions.length ? "Type or select a city" : "Type a city";
     }
-    if (requestId !== geoRequest || countrySelect?.value !== country) return;
-    setOptions(citySelect,cities,cities.length ? "Select a city" : "No cities available");
-    if (citySelect) citySelect.disabled = !cities.length;
   }
   async function loadJobDirectory() {
     const seen = new Set();
@@ -302,6 +292,7 @@
       console.warn("ZOVARO curated job directory:",error.message);
     }
     let countries = uniqueSorted([
+      ...FALLBACK_COUNTRIES,
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
     ]);
     try {
@@ -348,9 +339,8 @@
       if (citySelect) citySelect.disabled = true;
       return;
     }
-    populateCities(country).then(() => {
-      if (jobLocationStatus && countrySelect?.value === country) jobLocationStatus.textContent = "Now select a city in " + country + ".";
-    });
+    populateCities(country);
+    if (jobLocationStatus && countrySelect?.value === country) jobLocationStatus.textContent = "Now type or select a city in " + country + ".";
   });
   searchJobsButton?.addEventListener("click",searchJobsByLocation);
   $("backFromLookingJob")?.addEventListener("click",() => {
@@ -544,8 +534,9 @@
       careerCategories = (data.categories || []).filter(item => item && item.name);
     } catch (error) {
       console.warn("ZOVARO career categories:",error.message);
-      careerCategories = [];
+      careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
     }
+    if (!careerCategories.length) careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
     renderCareerCategoryTiles(careerCategories);
   }
 
@@ -560,6 +551,7 @@
     submitListing(event.currentTarget, "job", "jobFormStatus", "SUBMIT JOB FOR REVIEW");
   });
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
+  renderCareerCategoryTiles(careerCategories);
   loadCareerCategories();
   loadJobDirectory();
   const jobId = new URLSearchParams(window.location.search).get("job");
