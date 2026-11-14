@@ -1,5 +1,40 @@
 [
   {
+    "id": "acronis-it-help-desk-technician-2026",
+    "title": "IT Help Desk Technician",
+    "company": "Acronis",
+    "category": "IT, Software & Technical Support",
+    "country": "Italy / Spain",
+    "region": "Remote · Italy / Spain",
+    "city": "Remote",
+    "location": "Remote · Italy or Spain",
+    "jobType": "Full-time",
+    "workplace": "Remote",
+    "salaryText": null,
+    "description": "Provide first- and second-level IT support to end users, troubleshoot hardware, software and network issues, maintain and configure computer systems, document solutions, and assist with IT operations and hardware diagnostics. The listing identifies Italy and Spain as eligible remote locations.",
+    "requirements": [
+      "2–3 years of relevant experience in IT troubleshooting, technical support and networking",
+      "Windows, macOS, remote desktop support tools and hardware repair experience",
+      "Knowledge of network protocols, security systems and Microsoft 365",
+      "Upper-intermediate English; application and CV must be submitted in English"
+    ],
+    "applicationUrl": "https://acronis.wd502.myworkdayjobs.com/acronis_careers/job/Spain---Remote/IT-Help-Desk-Technician_R-101288",
+    "contactEmail": null,
+    "sourceName": "Acronis Workday careers listing (job availability/location cross-checked against Almaz Capital job board)",
+    "sourceUrl": "https://acronis.wd502.myworkdayjobs.com/acronis_careers/job/Spain---Remote/IT-Help-Desk-Technician_R-101288",
+    "sourceType": "editorially-curated",
+    "verifiedAt": "2026-11-14",
+    "verificationNote": "Manually checked on 14 November 2026. The job board lists this as full-time and remote in Italy/Spain; its Apply action leads to Acronis Workday. Recheck the employer page before applying because the Workday page did not expose readable job text to the automated checker.",
+    "countries": [
+      "Italy",
+      "Spain"
+    ],
+    "sourceTitle": "IT Help Desk Technician",
+    "status": "open",
+    "statusReason": "",
+    "verificationMode": "manual"
+  },
+  {
     "id": "siblings-team-lead-cloud-network-engineer",
     "title": "Team Lead – Cloud Network Engineer",
     "company": "Siblings Software",
