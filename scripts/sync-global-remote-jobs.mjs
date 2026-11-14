@@ -49,6 +49,8 @@ const GEO_GROUPS = {
   "asia pacific": APAC,
   "north america": NORTH_AMERICA,
   "latin america": LATIN_AMERICA,
+  latam: LATIN_AMERICA,
+  "lat am": LATIN_AMERICA,
   "south america": ["Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador","Guyana","Paraguay","Peru","Suriname","Uruguay","Venezuela"],
   "united states": ["United States"],
   usa: ["United States"],
@@ -77,11 +79,15 @@ function countryName(value) {
   return aliases[key] || String(value).trim();
 }
 function eligibleCountries(geo) {
-  const raw = String(geo ?? "").trim();
+  const original = String(geo ?? "").trim();
+  const originalKey = normal(original);
+  if (!originalKey) return [];
+  if (/anywhere|worldwide|global|any country|all countries|remote globally/.test(originalKey)) return ["Worldwide"];
+  const raw = original.replace(/\\b(remote|hybrid)\\b/gi," ").replace(/[()[\]]/g," ")
+    .replace(/^[\\s\\-:]+|[\\s\\-:]+$/g," ").trim();
   const key = normal(raw);
   if (!key) return [];
-  if (/anywhere|worldwide|global|any country|all countries|remote globally/.test(key)) return ["Worldwide"];
-  const parts = raw.split(/[,;|/]+/).map(part=>part.replace(/[()]/g," ").trim()).filter(Boolean);
+  const parts = raw.split(/[,;|/]+/).map(part=>part.trim()).filter(Boolean);
   if (parts.length > 1) {
     const expanded = [];
     for (const part of parts) {
@@ -91,7 +97,7 @@ function eligibleCountries(geo) {
       else if (/\\b(usa|u s|united states)\\b/.test(partKey)) expanded.push("United States");
       else if (/\\b(uk|united kingdom|great britain)\\b/.test(partKey)) expanded.push("United Kingdom");
       else if (/\\bcanada\\b/.test(partKey)) expanded.push("Canada");
-      else if (!/remote|hybrid|anywhere/i.test(partKey)) expanded.push(countryName(part));
+      else if (partKey && !/anywhere|worldwide|global/i.test(partKey)) expanded.push(countryName(part));
     }
     return unique(expanded);
   }
@@ -101,7 +107,7 @@ function eligibleCountries(geo) {
   if (/\\b(usa|u s|united states)\\b/.test(key)) return ["United States"];
   if (/\\b(uk|united kingdom|great britain)\\b/.test(key)) return ["United Kingdom"];
   if (/\\bcanada\\b/.test(key)) return ["Canada"];
-  return !/remote|hybrid/i.test(key) ? [countryName(raw)] : [];
+  return [countryName(raw)];
 }
 function stripHtml(value) {
   return String(value ?? "")
