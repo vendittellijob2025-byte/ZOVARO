@@ -13,6 +13,7 @@ const examples = [];
 let checked = 0;
 let mismatches = 0;
 let invalidSubcategoryPaths = 0;
+let unclassifiedProducts = 0;
 const invalidSubcategoryExamples = [];
 
 for (const product of catalog.products) {
@@ -30,6 +31,7 @@ for (const product of catalog.products) {
   const acceptedCategory = expected;
   const actual = String(product.category || "");
   const subcategory = String(product.subcategory || "");
+  if (!subcategory || subcategory === "Other" || actual === "Other") unclassifiedProducts++;
   const rootExists = taxonomyRoots.has(actual) || actual === "Other";
   const subcategoryValid = !subcategory || subcategory === "Other" || (() => {
     const root = taxonomy.categories.find(item => item.name === actual);
@@ -62,8 +64,7 @@ for (const product of catalog.products) {
         actual,
         english,
         expected: acceptedCategory,
-        classifierCategory: expected,
-        visualOverride: Boolean(trustedVisualOverride)
+        classifierCategory: expected
       });
     }
   }
@@ -75,6 +76,7 @@ console.log("Primary category consistency audit: " + JSON.stringify({
   distribution: Object.fromEntries([...distribution].sort((a,b) => a[0].localeCompare(b[0]))),
   examples,
   invalidSubcategoryPaths,
+  unclassifiedProducts,
   invalidSubcategoryExamples
 }));
 if (mismatches || invalidSubcategoryPaths) {
