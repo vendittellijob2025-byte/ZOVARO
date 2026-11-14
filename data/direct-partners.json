@@ -35,7 +35,8 @@
     "New partner research and outreach 2026-11-13: Click&Boat and YachtBooking.com were contacted on 2026-11-14T00:24Z using official affiliate/partner contacts. Catawiki and Boatbookings were added as prospects; no dedicated affiliate email was verified, so no email was sent. Thomann was added as a prospect but not contacted because its official programme requires at least 500 unique website visits/day or 5,000 social followers, neither of which has been verified for ZOVARO.",
     "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received.",
     "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified.",
-    "Food delivery research 2026-11-13: Wolt's official localized affiliate page confirms a publisher programme through TradeDoubler, with tracked links/ads/banners and consumer delivery coverage in 25 countries across Europe and Asia. The page does not publish rates, cookie, feed/API or publisher-country eligibility and requires personal data plus bank details during TradeDoubler registration. Added as prospect only; no application or email submitted. foodpanda's official Delivery Hero Partnerize partnership agreement confirms a programme framework, but does not by itself prove an active campaign, approval, rate or territory for Pakistan/Philippines."
+    "Food delivery research 2026-11-13: Wolt's official localized affiliate page confirms a publisher programme through TradeDoubler, with tracked links/ads/banners and consumer delivery coverage in 25 countries across Europe and Asia. The page does not publish rates, cookie, feed/API or publisher-country eligibility and requires personal data plus bank details during TradeDoubler registration. Added as prospect only; no application or email submitted. foodpanda's official Delivery Hero Partnerize partnership agreement confirms a programme framework, but does not by itself prove an active campaign, approval, rate or territory for Pakistan/Philippines.",
+    "CJ technical matrix refreshed 2026-11-13 from sync run 43519761281: 26 advertisers have accountStatus Active and relationshipStatus joined. Technical audit now records advertiser IDs, feed status, received/passing/imported counts, deduplication and image-URL rejections, feed currency labels, URL-format validation, and explicit unknowns for test clicks, end-to-end attribution and advertiser-specific public visibility. 26 CJ advertisers are approved_on_network; none is automatically considered fully publishable solely from this sync. Latest public catalogue: 17,051 selected products; 192,165 feed products eligible before storefront selection; 0 category mismatches and 0 invalid subcategory paths in the 17,051-product audit. Latest image-audit batch: 250 processed, 14 passed, 236 marked for review, 15,243 remaining in queue. Feed currency/market labels are not proof of shipping territories."
   ],
   "prospects": [
     {
@@ -824,7 +825,51 @@
         "emailSubject": "Welcome to affiliate program of FOREO.com!",
         "threadId": "1a1c9da90a02ee89"
       },
-      "nextAction": "Verify link generation, permitted markets, product feed and approved creative assets before publishing."
+      "nextAction": "Verify link generation, permitted markets, product feed and approved creative assets before publishing.",
+      "advertiserId": "5755636",
+      "category": "beauty-skincare-devices",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 316,
+          "productsPassingValidation": 316,
+          "productsImported": 316,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD",
+            "US/EUR"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / skincare devices",
+          "productsImported": 316,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "stylevana",
@@ -849,7 +894,52 @@
         "emailSubject": "Welcome to STYLEVANA!",
         "threadId": "1a1c9914c68ac2c9"
       },
-      "nextAction": "Check commission, cookie, country coverage, product feed and approved creative assets."
+      "nextAction": "Check commission, cookie, country coverage, product feed and approved creative assets.",
+      "advertiserId": "7819130",
+      "category": "beauty-korean-asian-skincare",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced_partial_capped",
+          "productsReceived": 50000,
+          "productsPassingValidation": 50000,
+          "productsImported": 30649,
+          "duplicateProductKeys": 19351,
+          "rejectedByReason": {},
+          "importCap": 50000,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD",
+            "MX/MXN",
+            "CA/CAD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / Asian skincare",
+          "productsImported": 30649,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request pagination or a larger approved feed limit; verify country/brand eligibility and link attribution before expanding import."
+      }
     },
     {
       "id": "the-ayurveda-experience",
@@ -878,7 +968,50 @@
         "emailSubject": "Welcome to The Ayurveda Experience's Affiliate program!",
         "threadId": "1a1c923779eff87e"
       },
-      "nextAction": "Confirm applicable content-publisher rate, prohibited claims, product feed, geographic availability and approved creatives."
+      "nextAction": "Confirm applicable content-publisher rate, prohibited claims, product feed, geographic availability and approved creatives.",
+      "advertiserId": "6441070",
+      "category": "beauty-health-ayurveda",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "IN/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / health",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
+      }
     },
     {
       "id": "nilight",
@@ -907,7 +1040,50 @@
         "emailSubject": "Welcome to the Nilight Affiliate Program",
         "threadId": "1a1c4187ccabb7cd"
       },
-      "nextAction": "Verify destination-country coverage, product data and image permissions before publishing."
+      "nextAction": "Verify destination-country coverage, product data and image permissions before publishing.",
+      "advertiserId": "7897821",
+      "category": "automotive-lighting-accessories",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 4916,
+          "productsPassingValidation": 4916,
+          "productsImported": 4238,
+          "duplicateProductKeys": 678,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "HK/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Automotive / lighting",
+          "productsImported": 4238,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "creality",
@@ -941,7 +1117,59 @@
       },
       "nextAction": "Verify the complete CJAM program-terms schedule before relying on the new 5%-10% label. CJ email summaries show 5% website-purchase commission for CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia; pending terms are shown as activating 12-Nov-2026 and again 14-Nov-2026. The visible summary does not substantiate a 10% rate.",
       "termsUpdateReceivedAt": "2026-11-11",
-      "termsUpdate": "CJ transactional emails for advertiser 8023201 show active Creality-5% terms ending 12-Nov-2026 08:00 PST / 14-Nov-2026 08:00 PST and pending Creality-5%-10% terms. Visible situational commissioning lists 5% website purchase across CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia. Full schedule must be reviewed in CJAM; do not advertise 10% as confirmed."
+      "termsUpdate": "CJ transactional emails for advertiser 8023201 show active Creality-5% terms ending 12-Nov-2026 08:00 PST / 14-Nov-2026 08:00 PST and pending Creality-5%-10% terms. Visible situational commissioning lists 5% website purchase across CA, Spain, US, UK, France, EU, Mexico, Japan, Germany and Australia. Full schedule must be reviewed in CJAM; do not advertise 10% as confirmed.",
+      "advertiserId": "8023201",
+      "category": "electronics-3d-printing-tools",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 9277,
+          "productsPassingValidation": 9277,
+          "productsImported": 4891,
+          "duplicateProductKeys": 4386,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "EU/EUR",
+            "ES/EUR",
+            "UK/GBP",
+            "CA/CAD",
+            "DE/EUR",
+            "FR/EUR",
+            "AU/AUD",
+            "US/USD",
+            "MX/MXN",
+            "JP/JPY"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Electronics / 3D printing / tools",
+          "productsImported": 4891,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "aliexpress",
@@ -972,7 +1200,48 @@
         "emailSubject": "Affiliate Partnership enquiry -AliExpress",
         "threadId": "1a1c34adbcd8c5d5"
       },
-      "nextAction": "Verify link generation, product-level commission mapping, destination shipping, prohibited categories and approved data/assets."
+      "nextAction": "Verify link generation, product-level commission mapping, destination shipping, prohibited categories and approved data/assets.",
+      "advertiserId": "7711902",
+      "category": "multi-category-global-marketplace",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": []
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Multi-category marketplace",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
+      }
     },
     {
       "id": "amazfit-us",
@@ -1001,7 +1270,50 @@
         "emailSubject": "Welcome to the Amazfit US Affiliate Program!",
         "threadId": "1a1c2410b6d890e2"
       },
-      "nextAction": "Confirm US-only restrictions, eligible publisher countries, delivery destinations and approved product creatives."
+      "nextAction": "Confirm US-only restrictions, eligible publisher countries, delivery destinations and approved product creatives.",
+      "advertiserId": "5757681",
+      "category": "electronics-wearables",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Electronics / wearables",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
+      }
     },
     {
       "id": "isee-hair-family",
@@ -1029,7 +1341,55 @@
         "date": "2026-11-09",
         "threadId": "1a1bfb7034b7ee11"
       },
-      "nextAction": "Confirm exact brand coverage, rates, market eligibility, tracking links and authorized assets."
+      "nextAction": "Confirm exact brand coverage, rates, market eligibility, tracking links and authorized assets.",
+      "advertiserId": "7721121",
+      "category": "beauty-hair-wigs",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 1184,
+          "productsPassingValidation": 919,
+          "productsImported": 248,
+          "duplicateProductKeys": 671,
+          "rejectedByReason": {
+            "missing_image_url": 265
+          },
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "CN/USD",
+            "FR/EUR",
+            "UK/GBP",
+            "AU/AUD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / hair",
+          "productsImported": 248,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "265 feed records rejected for missing image URL; imported records passed URL presence validation",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "ksp-performance",
@@ -1057,7 +1417,50 @@
         "date": "2026-11-09",
         "threadId": "1a1bf2021fbf5e9e"
       },
-      "nextAction": "Confirm Italy-based publisher eligibility and shipping/territory scope before including in global catalog."
+      "nextAction": "Confirm Italy-based publisher eligibility and shipping/territory scope before including in global catalog.",
+      "advertiserId": "7686542",
+      "category": "automotive-performance-parts",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 516,
+          "productsPassingValidation": 516,
+          "productsImported": 512,
+          "duplicateProductKeys": 4,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "CN/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Automotive / performance parts",
+          "productsImported": 512,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "fanttik",
@@ -1086,7 +1489,48 @@
         "date": "2026-11-09",
         "threadId": "1a1bf201c1c81858"
       },
-      "nextAction": "Verify geographic eligibility, product feed and approved media."
+      "nextAction": "Verify geographic eligibility, product feed and approved media.",
+      "advertiserId": "7423961",
+      "category": "tools-electronics",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": []
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Tools / electronics",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
+      }
     },
     {
       "id": "chow-sang-sang",
@@ -1120,7 +1564,50 @@
         "date": "2026-11-09",
         "threadId": "1a1bf201994bfb2d"
       },
-      "nextAction": "Confirm territory and exact product exclusions before listing; ensure jewellery and watch distinction is correct."
+      "nextAction": "Confirm territory and exact product exclusions before listing; ensure jewellery and watch distinction is correct.",
+      "advertiserId": "6536042",
+      "category": "jewellery-watches",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 2388,
+          "productsPassingValidation": 2388,
+          "productsImported": 2089,
+          "duplicateProductKeys": 299,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "HK/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Jewellery / watches",
+          "productsImported": 2089,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "oedro",
@@ -1145,7 +1632,50 @@
         "date": "2026-11-09",
         "threadId": "1a1bf090ed1618a8"
       },
-      "nextAction": "Verify country eligibility, feed, product coverage and asset permissions."
+      "nextAction": "Verify country eligibility, feed, product coverage and asset permissions.",
+      "advertiserId": "7455332",
+      "category": "automotive-accessories",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 1171,
+          "productsPassingValidation": 1171,
+          "productsImported": 1079,
+          "duplicateProductKeys": 92,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "HK/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Automotive / accessories",
+          "productsImported": 1079,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "aurzen",
@@ -1175,7 +1705,52 @@
         "date": "2026-11-09",
         "threadId": "1a1be569113bb9e0"
       },
-      "nextAction": "Confirm shipping territories, product feed access and SEM restrictions."
+      "nextAction": "Confirm shipping territories, product feed access and SEM restrictions.",
+      "advertiserId": "7895424",
+      "category": "electronics-projectors",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 179,
+          "productsPassingValidation": 178,
+          "productsImported": 178,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {
+            "missing_image_url": 1
+          },
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "CN/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Electronics / projectors",
+          "productsImported": 178,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "1 feed records rejected for missing image URL; imported records passed URL presence validation",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "aomei",
@@ -1209,6 +1784,47 @@
         "trackingLinkVerified": false,
         "assets": "Latest promotional assets stated available in CJ advertiser library; permissions/creative review still required",
         "sourceEmailThread": "1a1c957f1834eed9"
+      },
+      "advertiserId": "7529241",
+      "category": "software-backup-utilities",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": []
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Software / backup utilities",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
       }
     },
     {
@@ -1248,6 +1864,54 @@
         "assets": "Banners and copy stated available in CJ asset library",
         "trackingLinkVerified": false,
         "sourceEmailThread": "1a1be6dc4f9c570e"
+      },
+      "advertiserId": "6258731",
+      "category": "fashion-footwear",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced_partial_capped",
+          "productsReceived": 50000,
+          "productsPassingValidation": 50000,
+          "productsImported": 45832,
+          "duplicateProductKeys": 4168,
+          "rejectedByReason": {},
+          "importCap": 50000,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD",
+            "UK/GBP",
+            "DE/EUR",
+            "FR/EUR",
+            "IT/EUR",
+            "ES/EUR"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Fashion / footwear",
+          "productsImported": 45832,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request pagination or a larger approved feed limit; verify country/brand eligibility and link attribution before expanding import."
       }
     },
     {
@@ -1278,7 +1942,52 @@
         "date": "2026-11-09",
         "threadId": "1a1bdd6659fa4ea9"
       },
-      "nextAction": "Confirm whether an Italy-based publisher can promote US programme and which countries can order."
+      "nextAction": "Confirm whether an Italy-based publisher can promote US programme and which countries can order.",
+      "advertiserId": "7382109",
+      "category": "electronics-audio",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 221,
+          "productsPassingValidation": 220,
+          "productsImported": 220,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {
+            "missing_image_url": 1
+          },
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Electronics / audio",
+          "productsImported": 220,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "1 feed records rejected for missing image URL; imported records passed URL presence validation",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "unice",
@@ -1307,7 +2016,54 @@
         "date": "2026-11-07",
         "threadId": "1a1b372b7f6012f4"
       },
-      "nextAction": "Verify shipping markets and exact permitted promotional channels."
+      "nextAction": "Verify shipping markets and exact permitted promotional channels.",
+      "advertiserId": "5824323",
+      "category": "beauty-hair-wigs",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 4319,
+          "productsPassingValidation": 1731,
+          "productsImported": 580,
+          "duplicateProductKeys": 1151,
+          "rejectedByReason": {
+            "missing_image_url": 2588
+          },
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "CN/USD",
+            "CN/EUR",
+            "CN/GBP"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / hair",
+          "productsImported": 580,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "2588 feed records rejected for missing image URL; imported records passed URL presence validation",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "rexing",
@@ -1334,7 +2090,50 @@
         "date": "2026-11-06",
         "threadId": "1a1b1a8f57b749a1"
       },
-      "nextAction": "Verify territory, tracking link, product feed and allowed media."
+      "nextAction": "Verify territory, tracking link, product feed and allowed media.",
+      "advertiserId": "5357356",
+      "category": "automotive-dashcams",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 182,
+          "productsPassingValidation": 182,
+          "productsImported": 182,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Automotive / dashcams",
+          "productsImported": 182,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "ecosmetics",
@@ -1362,7 +2161,50 @@
         "date": "2026-11-06",
         "threadId": "1a1b11b1cc5d0d14"
       },
-      "nextAction": "Verify fragrance brand availability, authenticity, countries shipped and approved creative assets."
+      "nextAction": "Verify fragrance brand availability, authenticity, countries shipped and approved creative assets.",
+      "advertiserId": "5384937",
+      "category": "beauty-cosmetics-skincare",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 42892,
+          "productsPassingValidation": 42892,
+          "productsImported": 42892,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / cosmetics / skincare",
+          "productsImported": 42892,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "abelssoft",
@@ -1392,7 +2234,51 @@
         "date": "2026-11-06",
         "threadId": "1a1afa83ee9730be"
       },
-      "nextAction": "Verify software catalogue, product claims, licence model and SEM restrictions."
+      "nextAction": "Verify software catalogue, product claims, licence model and SEM restrictions.",
+      "advertiserId": "6260179",
+      "category": "software-utilities",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 98,
+          "productsPassingValidation": 98,
+          "productsImported": 53,
+          "duplicateProductKeys": 45,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "DE/EUR",
+            "DE/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Software / utilities",
+          "productsImported": 53,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "24-7pressrelease",
@@ -1421,7 +2307,48 @@
         "date": "2026-11-06",
         "threadId": "1a1afa3ae321d023"
       },
-      "nextAction": "Check ZOVARO audience fit and retrieve CJ coded links before promotion."
+      "nextAction": "Check ZOVARO audience fit and retrieve CJ coded links before promotion.",
+      "advertiserId": "2898768",
+      "category": "services-press-release",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "no_product_feed",
+          "productsReceived": 0,
+          "productsPassingValidation": 0,
+          "productsImported": 0,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": []
+        },
+        "tracking": {
+          "clickUrlValidation": "Not verifiable: no product feed returned",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Services / press release",
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": false,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request/enable a permitted product feed or API and verify advertiser-specific deep links. Do not create placeholder products."
+      }
     },
     {
       "id": "fragranceshop",
@@ -1445,7 +2372,50 @@
         "date": "2026-11-06",
         "threadId": "1a1af9f225dd5d4d"
       },
-      "nextAction": "Verify brand assortment, authenticity, shipping countries and CJ links before adding perfumes."
+      "nextAction": "Verify brand assortment, authenticity, shipping countries and CJ links before adding perfumes.",
+      "advertiserId": "7287203",
+      "category": "beauty-fragrances-perfumes",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 6144,
+          "productsPassingValidation": 6144,
+          "productsImported": 5103,
+          "duplicateProductKeys": 1041,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "US/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / fragrances",
+          "productsImported": 5103,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "grovegear-garden",
@@ -1728,7 +2698,52 @@
       "contactedAt": "2026-11-12T00:24:14Z",
       "contactEvidence": "Gmail sent message 1a1cd240e8e60a0a",
       "emailDeliveryStatus": "sent",
-      "nextAction": "Await VivNetworks/CJ confirmation of Italy publisher eligibility, exact commission basis/exclusions, approved traffic sources, product feed/deep links, permitted assets and payout terms. Never use PPC traffic while the stated restriction remains in force."
+      "nextAction": "Await VivNetworks/CJ confirmation of Italy publisher eligibility, exact commission basis/exclusions, approved traffic sources, product feed/deep links, permitted assets and payout terms. Never use PPC traffic while the stated restriction remains in force.",
+      "advertiserId": "6275247",
+      "category": "multi-category-marketplace-poland",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced_partial_capped",
+          "productsReceived": 50000,
+          "productsPassingValidation": 49995,
+          "productsImported": 49981,
+          "duplicateProductKeys": 14,
+          "rejectedByReason": {
+            "missing_image_url": 5
+          },
+          "importCap": 50000,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "PL/PLN"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Multi-category marketplace / Poland",
+          "productsImported": 49981,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "5 feed records rejected for missing image URL; imported records passed URL presence validation",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Request pagination or a larger approved feed limit; verify country/brand eligibility and link attribution before expanding import."
+      }
     },
     {
       "id": "acme-tools",
@@ -2033,7 +3048,48 @@
         "conversionReporting": "CJ reporting access not inspected"
       },
       "nextAction": "Verify advertiser terms, exact commission/cookie, publisher and customer territories, approved feed-image scope, and CJ reporting. Do not use images outside the assets shared by Global Amore Mall. Exclude coupon codes CYOUNG, CYOUNGPLUS and LOREN15 because the welcome email says they are not commissionable. Test an approved deep link and attribution before promoting.",
-      "contactEvidence": "Welcome email subject: Welcome to Amorepacific Affiliate Program!; thread 1a1d3b9814d7b676"
+      "contactEvidence": "Welcome email subject: Welcome to Amorepacific Affiliate Program!; thread 1a1d3b9814d7b676",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 1550,
+          "productsPassingValidation": 1550,
+          "productsImported": 1439,
+          "duplicateProductKeys": 111,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "KR/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Beauty / Korean skincare",
+          "productsImported": 1439,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     },
     {
       "id": "baseus-us-amazon-marketplace",
@@ -2169,6 +3225,114 @@
       "feed": "No product feed/API stated on the official page.",
       "publisherRequirements": "Create a TradeDoubler publisher account, provide personal data and bank details, verify the website URL through a contact address supplied during onboarding, then apply to the Wolt advertiser campaign.",
       "nextAction": "Potentially relevant for food delivery, groceries, flowers, pet supplies and convenience. No public dedicated affiliate email found. Do not complete TradeDoubler onboarding automatically because it requires personal and banking details; owner must complete the secure publisher registration. Confirm Italy-based publisher eligibility, active Wolt markets, commission, cookie and payout terms before promotion."
+    },
+    {
+      "id": "padel-iberico-es",
+      "name": "Padel Iberico ES",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "sports-padel",
+      "source": "CJ joined advertiser diagnostics run 43519761281 (accountStatus Active; relationshipStatus joined)",
+      "commission": "Not verified in current authenticated CJ terms",
+      "cookie": "Not verified in current authenticated CJ terms",
+      "territories": [],
+      "nextAction": "Verify current advertiser-specific commission, cookie, publisher/customer territories, payout, deep links and approved media in CJ. Do not publish until all conditions are verified.",
+      "advertiserId": "7969352",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 1046,
+          "productsPassingValidation": 1046,
+          "productsImported": 1031,
+          "duplicateProductKeys": 15,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "ES/EUR"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Sports / padel",
+          "productsImported": 1031,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
+    },
+    {
+      "id": "kaiya-baby",
+      "name": "Kaiya Baby",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "baby-products",
+      "source": "CJ joined advertiser diagnostics run 43519761281 (accountStatus Active; relationshipStatus joined)",
+      "commission": "Not verified in current authenticated CJ terms",
+      "cookie": "Not verified in current authenticated CJ terms",
+      "territories": [],
+      "nextAction": "Verify current advertiser-specific commission, cookie, publisher/customer territories, payout, deep links and approved media in CJ. Do not publish until all conditions are verified.",
+      "advertiserId": "8022425",
+      "technicalAudit": {
+        "network": {
+          "accountStatus": "Active",
+          "relationshipStatus": "joined",
+          "checkedAt": "2026-11-13T22:48:25Z"
+        },
+        "feed": {
+          "status": "synced",
+          "productsReceived": 425,
+          "productsPassingValidation": 425,
+          "productsImported": 425,
+          "duplicateProductKeys": 0,
+          "rejectedByReason": {},
+          "importCap": null,
+          "lastSyncAt": "2026-11-13T22:48:25Z",
+          "feedCurrencies": [
+            "CN/USD"
+          ]
+        },
+        "tracking": {
+          "clickUrlValidation": "CJ click URLs present and passed the importer’s format/HTTPS validation for imported feed records",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "canonicalCategory": "Babies / baby products",
+          "productsImported": 425,
+          "publicStorefrontProductsByAdvertiser": null,
+          "publicStorefrontTotalProducts": 17051,
+          "storefrontEligible": true,
+          "visibilityNote": "Per-advertiser public visible count is not exposed in the latest sync log; do not infer it from imported count."
+        },
+        "dataQuality": {
+          "price": "Positive price required for imported records; live price refresh not independently tested",
+          "imageUrl": "Image URL presence passed importer validation for imported records",
+          "visualImageAudit": "Global audit is separate and not attributed per advertiser",
+          "availability": "Feed snapshot only; live stock availability not tested",
+          "territories": "Feed country/currency labels are not proof of customer delivery territory; confirm in advertiser terms."
+        },
+        "nextAction": "Run a controlled non-purchase click test only through the authorized partner workflow, verify reporting attribution, then verify advertiser-specific public product visibility and image rights."
+      }
     }
   ]
 }
