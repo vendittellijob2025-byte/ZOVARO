@@ -161,7 +161,7 @@
   const jobLocationStatus = $("jobLocationStatus");
   const jobCategoryInstruction = $("jobCategoryInstruction");
   const careerCategoryGrid = $("careerCategoryGrid");
-  const FALLBACK_CAREER_CATEGORIES = ["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Remote & Work From Home"].map(name => ({name}));
+  const FALLBACK_CAREER_CATEGORIES = ["Food & Hospitality","Construction & Skilled Trades","Manufacturing & Production","Transport & Logistics","Office & Administration","Business & Management","Retail & Customer Service","Cleaning & Sanitation","Security & Events","Healthcare & Medical","Education & Training","Finance & Accounting","Marketing & Communications","IT, Software & Data","Engineering & Technology","Agriculture & Farming","Beauty & Personal Care","Legal & Compliance","Arts, Media & Creative","Aviation & Aerospace","Maritime & Offshore","Real Estate & Property","Science & Research","Energy & Utilities","Environment & Sustainability","Sports & Recreation","Travel & Tourism","Public Sector & Government"].map(name => ({name}));
   let careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
   let locationSearchActive = false;
   let geoRequest = 0;
@@ -188,7 +188,15 @@
     [/beauty|personal care/i,"photo-1487412720507-e7ab37603c6f"],
     [/legal|compliance/i,"photo-1589829545856-d10d557cf95f"],
     [/arts|media|creative/i,"photo-1492619375914-88005aa9e8fb"],
-    [/remote|work from home/i,"photo-1498050108023-c5249f4df085"]
+    [/aviation|aerospace/i,"photo-1436491865332-7a61a109cc05"],
+    [/maritime|offshore/i,"photo-1510414842594-a61c69b5ae57"],
+    [/real estate|property/i,"photo-1560518883-ce09059ee 마"],
+    [/science|research/i,"photo-1532094349884-543bc11b234d"],
+    [/energy|utilities/i,"photo-1473341304170-971dccb5ac1e"],
+    [/environment|sustainability/i,"photo-1470071459604-3b5ec3a7fe05"],
+    [/sports|recreation/i,"photo-1461896836934-ffe607ba8211"],
+    [/travel|tourism/i,"photo-1488646953014-85cb44e25828"],
+    [/public sector|government/i,"photo-1529107386315-e1a2ed48a620"]
   ];
   function careerCategoryImage(name) {
     const match = CAREER_CATEGORY_PHOTOS.find(([pattern]) => pattern.test(String(name || "")));
@@ -214,7 +222,7 @@
     const target = normalizeCategory(category);
     return jobs.some(item => normalizeCategory(item.category || "") === target);
   }
-  function jobMatchesLocation(item, country, region = "", city = "") {
+  function jobMatchesLocation(item, country, region = "", city = "", workplace = "") {
     const eligibleCountries = Array.isArray(item.countries) ? item.countries : [];
     const itemCountry = normalizeLocation(item.country);
     const requestedCountry = normalizeLocation(country);
@@ -223,6 +231,7 @@
       eligibleCountries.some(value => /^(worldwide|any country|global)$/i.test(String(value))) ||
       /^(worldwide|remote worldwide|global)$/i.test(String(item.country || ""));
     if (!countryMatch) return false;
+    if (workplace && String(item.workplace || "").toLowerCase() !== workplace.toLowerCase()) return false;
     if (region) {
       const itemRegion = normalizeLocation(item.region);
       const requestedRegion = normalizeLocation(region);
@@ -273,7 +282,7 @@
         normalizeCategory(category).includes(normalizeCategory(item.category || ""));
       if (!categoryMatch) return false;
       if (!locationSearchActive) return true;
-      return jobMatchesLocation(item, selectedCountry, regionSelect?.value || "", selectedCity);
+      return jobMatchesLocation(item, selectedCountry, regionSelect?.value || "", selectedCity, $("jobWorkplaceFilter")?.value || "");
     });
     if (title) title.textContent = category;
     if (meta) meta.textContent = matches.length
@@ -386,7 +395,7 @@
     }
     locationSearchActive = true;
     const region = regionSelect?.value || "";
-    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city));
+    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city, $("jobWorkplaceFilter")?.value || ""));
     const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
     renderCareerCategoryTiles(available);
     if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
