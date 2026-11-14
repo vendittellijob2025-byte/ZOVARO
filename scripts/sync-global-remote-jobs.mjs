@@ -79,7 +79,8 @@ function countryName(value) {
 function eligibleCountries(geo) {
   const raw = String(geo ?? "").trim();
   const key = normal(raw);
-  if (!key || /anywhere|worldwide|global|any country|all countries|remote globally/.test(key)) return ["Worldwide"];
+  if (!key) return [];
+  if (/anywhere|worldwide|global|any country|all countries|remote globally/.test(key)) return ["Worldwide"];
   for (const [group, countries] of Object.entries(GEO_GROUPS)) {
     if (key === group || key.includes(group)) return countries;
   }
