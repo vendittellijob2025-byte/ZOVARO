@@ -567,7 +567,11 @@
     }
     $("jobDetailDescription").textContent = item.description || "Please follow the official application link for the full role description.";
     const actions=$("jobDetailActions");actions.replaceChildren();
-    if(item.applicationUrl) addSafeLink(actions,item.applicationUrl,"APPLY ON COMPANY WEBSITE");
+    if(item.applicationUrl) addSafeLink(
+      actions,
+      item.applicationUrl,
+      item.sourceType === "external-job-board" ? "VIEW ORIGINAL JOB & APPLY" : "APPLY ON COMPANY WEBSITE"
+    );
     else if(item.companyWebsite) addSafeLink(actions,item.companyWebsite,"VISIT OFFICIAL COMPANY WEBSITE");
     if(item.contactEmail){const mail=document.createElement("a");mail.href="mailto:"+item.contactEmail;mail.textContent="CONTACT EMPLOYER";actions.appendChild(mail);}
     const source=$("jobDetailSource");
