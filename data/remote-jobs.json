@@ -1,0 +1,16 @@
+{
+  "syncedAt": null,
+  "jobs": [],
+  "sources": [
+    {
+      "name": "Jobicy",
+      "status": "pending",
+      "jobCount": 0
+    },
+    {
+      "name": "Remote OK",
+      "status": "pending",
+      "jobCount": 0
+    }
+  ]
+}
