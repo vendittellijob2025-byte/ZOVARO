@@ -182,7 +182,7 @@
     [/beauty|personal care/i,"photo-1487412720507-e7ab37603c6f"],
     [/legal|compliance/i,"photo-1589829545856-d10d557cf95f"],
     [/arts|media|creative/i,"photo-1492619375914-88005aa9e8fb"],
-    [/remote|work from home/i,"photo- laptop"]
+    [/remote|work from home/i,"photo-1498050108023-c5249f4df085"]
   ];
   function careerCategoryImage(name) {
     const match = CAREER_CATEGORY_PHOTOS.find(([pattern]) => pattern.test(String(name || "")));
