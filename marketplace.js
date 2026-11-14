@@ -157,8 +157,8 @@
   const regionSelect = $("jobRegionFilter");
   const citySelect = $("jobCityFilter");
   const jobCategorySelect = $("jobCategoryFilter");
-  const careerCategorySelect = $("careerCategoryFilter");
   const careerSearchInput = $("careerGuideSearch");
+  let selectedCareerCategory = "";
   const careerGuidesGrid = $("careerGuidesGrid");
   const careerCategoryGrid = $("careerCategoryGrid");
   let careerGuideCards = [];
@@ -536,8 +536,6 @@
       if (!response.ok) throw new Error("Career guide directory unavailable.");
       const data = await response.json();
       const categories = data.categories || [];
-      setOptions(jobCategorySelect, categories.map(item => item.name), "All job categories");
-      setOptions(careerCategorySelect, categories.map(item => item.name), "All career categories");
       renderCareerCategoryTiles(categories);
       careerGuideCards = categories.flatMap(category => (category.roles || []).map(role => ({
         ...role, category: category.name
@@ -561,7 +559,7 @@
       tile.type = "button";
       tile.className = "career-category-card";
       tile.dataset.category = name;
-      tile.setAttribute("aria-pressed", careerCategorySelect?.value === name ? "true" : "false");
+      tile.setAttribute("aria-pressed", selectedCareerCategory === name ? "true" : "false");
       const image = document.createElement("img");
       image.src = careerCategoryImage(name);
       image.alt = "";
@@ -571,9 +569,9 @@
       addText(tile, "strong", "", name);
       addText(tile, "span", "career-category-count", count + (count === 1 ? " profession" : " professions"));
       tile.addEventListener("click", () => {
-        if (careerCategorySelect) careerCategorySelect.value = careerCategorySelect.value === name ? "" : name;
+        selectedCareerCategory = selectedCareerCategory === name ? "" : name;
         renderCareerGuides();
-        careerCategoryGrid.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === (careerCategorySelect?.value || "") ? "true" : "false"));
+        careerCategoryGrid.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === selectedCareerCategory ? "true" : "false"));
         careerCategoryGrid.scrollIntoView({behavior:"smooth",block:"nearest"});
       });
       careerCategoryGrid.appendChild(tile);
@@ -582,7 +580,7 @@
 
   function renderCareerGuides() {
     if (!careerGuidesGrid) return;
-    const category = careerCategorySelect?.value || "";
+    const category = selectedCareerCategory;
     const query = (careerSearchInput?.value || "").trim().toLowerCase();
     const matches = careerGuideCards.filter(role =>
       (!category || role.category === category) &&
@@ -613,38 +611,21 @@
     event.preventDefault();
     submitListing(event.currentTarget, "job", "jobFormStatus", "SUBMIT JOB FOR REVIEW");
   });
-  $("jobSearchButton")?.addEventListener("click", filterJobs);
-  $("jobLoadMore")?.addEventListener("click", () => loadListings("job", true));
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
-  $("jobSearchInput")?.addEventListener("input", filterJobs);
-  jobCategorySelect?.addEventListener("change", filterJobs);
-  careerCategorySelect?.addEventListener("change", () => {
-    renderCareerGuides();
-    careerCategoryGrid?.querySelectorAll(".career-category-card").forEach(card => card.setAttribute("aria-pressed", card.dataset.category === (careerCategorySelect?.value || "") ? "true" : "false"));
-  });
   careerSearchInput?.addEventListener("input", renderCareerGuides);
 
-  loadWorldCountries();
   loadCareerGuides();
-  loadListings("job").then(async () => {
-    await loadCuratedJobs();
-    const jobId = new URLSearchParams(window.location.search).get("job");
-    if (!jobId) return;
+  const jobId = new URLSearchParams(window.location.search).get("job");
+  if (jobId) {
     const view = $("lookingJobView");
     if (view) {
       document.querySelectorAll(".view").forEach(el=>el.classList.add("hidden"));
       view.classList.remove("hidden");
     }
-    const existing = jobItems.find(item=>item.id===jobId);
-    if(existing){openJobDetail(existing,false);return;}
-    try{
-      const response=await fetch(API+"?type=job&id="+encodeURIComponent(jobId),{cache:"no-store"});
-      if(!response.ok) throw new Error("Job not found");
-      const item=await response.json();
-      if(item && item.id) openJobDetail(item,false);
-    }catch{
-      const empty=$("jobListingsEmpty");if(empty){empty.textContent="This job offer is no longer available.";empty.classList.remove("hidden");}
-    }
-  });
+    fetch(API+"?type=job&id="+encodeURIComponent(jobId),{cache:"no-store"})
+      .then(response=>{if(!response.ok) throw new Error("Job not found");return response.json();})
+      .then(item=>{if(item && item.id) openJobDetail(item,false);})
+      .catch(()=>{const source=$("jobDetailSource");if(source) source.textContent="This job offer is no longer available.";});
+  }
   loadListings("product");
 })();
