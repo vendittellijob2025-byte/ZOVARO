@@ -8,6 +8,7 @@ on:
       - "scripts/audit-product-images.mjs"
       - "scripts/reclassify-catalog-categories.mjs"
       - "scripts/audit-category-quality.mjs"
+      - "scripts/test-product-category.mjs"
       - "lib/product-category.js"
       - "data/category-tree.json"
       - ".github/workflows/image-audit.yml"
@@ -66,7 +67,7 @@ jobs:
       - name: Analyse new and changed catalogue images
         run: node scripts/audit-product-images.mjs
 
-      - name: Apply high-confidence visual category corrections
+      - name: Reclassify catalog and verify category quality
         run: |
           node scripts/reclassify-catalog-categories.mjs
           node scripts/audit-category-quality.mjs
