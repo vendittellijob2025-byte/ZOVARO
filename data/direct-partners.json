@@ -1895,7 +1895,7 @@
       ],
       "publicCommission": "Published Global Rate Card: Business & Industrial 2.5%; Collectibles 3%; Electronics 2% (Computers/Tablets/Networking 1.5%); Fashion 4%; Home & Garden 3%; Lifestyle 3%; Media 3%; eBay Motors 4% (USD 100 cap); Vehicle Parts & Accessories 3%; Real Estate 1% (USD 100 cap); All Other 4%. Other per-transaction caps apply. Account-specific rates must be checked in EPN portal.",
       "cookie": "24 hours for standard Buy It Now qualifying transactions; last-click attribution. Auction and Best Offer events have additional rules.",
-      "payout": "Monthly; published threshold USD 10. Payment options include EFT/direct deposit and PayPal. Current published calendar states payment on the 10th for the month before the previous month; exact account-specific cycle to verify. Weekly payouts not indicated.",
+      "payout": "Monthly: EPN issues a positive prior-month balance only when the balance exceeds USD 10 or applicable banking fees, whichever is greater. The current agreement does not specify a fixed calendar day in the section reviewed. Weekly payout is not supported by the published terms. Payment method and account-specific settings require authenticated EPN portal verification.",
       "contact": {
         "website": "https://partnernetwork.ebay.com/",
         "applicationUrl": "https://partnernetwork.ebay.com/",
@@ -1912,7 +1912,7 @@
         "conversionReporting": "not connected"
       },
       "nextAction": "No authenticated EPN account, approval, campaign ID or developer credentials are available in connected access. Current official network agreement requires EPN acceptance before any promotional method is deployed. Current agreement provides monthly payment only when positive prior-month balance exceeds USD 10 or applicable bank fees, whichever is greater; no weekly payout. Fourteen public participating sites include Italy. Current agreement also restricts use of EPN Data in AI systems: no model training/benchmarking and no exposure to LLM services without prior written EPN approval and a specific written contract. Do not connect EPN transaction/portal data to ChatGPT or other LLMs until written approval. Next prerequisites: authenticate to EPN, verify application/account status, retrieve campaign ID, create eBay Developers app, obtain OAuth credentials, and request production Buy API access. Do not publish until approved and tracking is verified.",
-      "sourceChecked": "2026-11-12",
+      "sourceChecked": "2026-11-13",
       "accountStatus": "not verified; no authenticated EPN portal access or connected eBay account",
       "campaignIdStatus": "missing",
       "developerAppStatus": "not verified",
@@ -1935,7 +1935,7 @@
         "United Kingdom",
         "United States"
       ],
-      "publicPayoutTerms": "Monthly payment of positive prior-month balance when above USD 10 or applicable banking fees, whichever is greater; exact portal payout method and bank details require authenticated verification.",
+      "publicPayoutTerms": "Monthly: EPN issues a positive prior-month balance only when the balance exceeds USD 10 or applicable banking fees, whichever is greater. The current agreement does not specify a fixed calendar day in the section reviewed. Weekly payout is not supported by the published terms. Payment method and account-specific settings require authenticated EPN portal verification.",
       "publicAttributionTerms": "Buy It Now: qualifying click within 24 hours before purchase; auctions: bid within 24 hours after click and win within 10 days (subject to the additional auction rules)."
     },
     {
