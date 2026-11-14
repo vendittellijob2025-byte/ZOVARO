@@ -4916,6 +4916,267 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; only proceed if they provide a permitted ZOVARO-specific or approved network tracking arrangement. Do not count Amazon Associates links as direct partner approval."
+    },
+    {
+      "id": "sothebys-global-partnership",
+      "name": "Sotheby's",
+      "status": "contacted",
+      "programType": "Global commercial / media partnership enquiry",
+      "category": "Luxury; Art; Collectibles; Watches; Jewelry; Cars",
+      "sourceUrl": "https://www.sothebys.com/en/departments/global-partnerships",
+      "contact": {
+        "email": "Partnerships@sothebys.com",
+        "sourceUrl": "https://www.sothebys.com/en/departments/global-partnerships"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc422e931d98b",
+      "territories": [
+        "Global partnerships team; actual offer territories to confirm"
+      ],
+      "commission": "Not published; commercial model to negotiate",
+      "cookie": "Not applicable until referral method agreed",
+      "integration": {
+        "affiliateLink": "pending",
+        "leadAttribution": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; establish brand-approved listings, referral tracking, qualifying sale/enquiry, commercial terms and asset rights."
+    },
+    {
+      "id": "marley-spoon-affiliate",
+      "name": "Marley Spoon",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Food & Grocery; Meal Kits",
+      "sourceUrl": "https://marleyspoon.com/about/affiliate",
+      "contact": {
+        "email": "alperen.akdogan@marleyspoon.com",
+        "sourceUrl": "https://marleyspoon.com/about/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc423795fb5f1",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published in reviewed page",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher/customer country eligibility, commission, cookie, offer feed, tracking and assets."
+    },
+    {
+      "id": "wuuk-affiliate",
+      "name": "WUUK",
+      "status": "contacted",
+      "programType": "Direct affiliate programme via Kickbooster / ShareASale",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://wuuklabs.com/pages/affiliate-program",
+      "contact": {
+        "email": "collabs@wuuklabs.com",
+        "sourceUrl": "https://wuuklabs.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4241957610f",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published in reviewed page",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, supported markets, exact commission, attribution, feed and media rights."
+    },
+    {
+      "id": "simplisafe-uk-affiliate",
+      "name": "SimpliSafe UK",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Security & Safety; Smart Home",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/27387",
+      "contact": {
+        "email": "partnerships-uk@simplisafe.co.uk",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/27387"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc424d3703aac",
+      "territories": [
+        "UK programme contact; exact customer coverage pending"
+      ],
+      "commission": "Not published in reviewed listing",
+      "cookie": "Public Awin profile states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify current UK campaign terms, publisher eligibility, tracking, feed and approved assets."
+    },
+    {
+      "id": "bradford-exchange-affiliate",
+      "name": "The Bradford Exchange",
+      "status": "contacted",
+      "programType": "Partnerize affiliate programme",
+      "category": "Collectibles; Art; Gifts",
+      "sourceUrl": "https://www.ashtondrake.com/service/start-now.html",
+      "contact": {
+        "email": "affiliate@bradfordexchange.com",
+        "sourceUrl": "https://www.ashtondrake.com/service/start-now.html"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4252ae62633",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 10%; verify exact rate",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm programme eligibility, customer countries, product catalogue, tracking, assets and payout."
+    },
+    {
+      "id": "scientific-products-ltda",
+      "name": "Scientific Products Ltda",
+      "status": "contacted",
+      "programType": "Direct B2B referral / catalogue partnership enquiry",
+      "category": "Industrial & Scientific; Laboratory",
+      "sourceUrl": "https://www.spltda.com/contacto/",
+      "contact": {
+        "email": "sp@spltda.com",
+        "sourceUrl": "https://www.spltda.com/contacto/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc425a03d39db",
+      "territories": [
+        "Colombia; regional coverage to confirm"
+      ],
+      "commission": "Not published; direct referral agreement required",
+      "cookie": "Not applicable until tracking agreed",
+      "integration": {
+        "productFeed": "pending",
+        "referralTracking": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; agree catalogue, fulfilment countries, referral tracking, commission, product data and content permissions."
+    },
+    {
+      "id": "mughal-timepieces-affiliate",
+      "name": "Mughal Timepieces",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Luxury; Watches; Jewelry",
+      "sourceUrl": "https://www.mughaltimepieces.com/pages/affiliate-programme",
+      "contact": {
+        "email": "mughaltimepieces@gmail.com",
+        "sourceUrl": "https://www.mughaltimepieces.com/pages/affiliate-programme"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc42601002e66",
+      "territories": [
+        "UK, Pakistan, UAE, US and Canada are highlighted for creators; customer coverage to confirm"
+      ],
+      "commission": "Public page states 15% per sale",
+      "cookie": "Not stated",
+      "payout": "Public page states monthly PayPal or store credit; bank transfer not confirmed",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, customer countries, product catalogue, tracking, media rights and payout alternatives."
+    },
+    {
+      "id": "trustedbrands-b2b-network",
+      "name": "TrustedBrands LLC",
+      "status": "contacted",
+      "programType": "B2B supplier-network / referral integration enquiry",
+      "category": "Business; Wholesale; Industrial; Bulk Supply",
+      "sourceUrl": "https://trustedbrands.llc/apply/vendor",
+      "contact": {
+        "email": "sales@trustedbrands.llc",
+        "sourceUrl": "https://trustedbrands.llc/apply/vendor"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc42669d02fbf",
+      "territories": [
+        "US network; supplier and buyer coverage to confirm"
+      ],
+      "commission": "Not published; referral model to negotiate",
+      "cookie": "Not applicable until tracking agreed",
+      "integration": {
+        "supplierData": "pending",
+        "productFeed": "pending",
+        "referralTracking": "pending",
+        "imagePermission": "pending"
+      },
+      "nextAction": "Await reply; confirm supplier data access, external publisher eligibility, buyer referral tracking, commercial terms and product content rights."
+    },
+    {
+      "id": "coolblue-netherlands-affiliate",
+      "name": "Coolblue Netherlands",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Electronics; Appliances; Computers; Home",
+      "sourceUrl": "https://www.coolblue.nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf",
+      "contact": {
+        "email": "affiliate@coolblue.nl",
+        "sourceUrl": "https://www.coolblue.nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc429f4c4efa9",
+      "territories": [
+        "Netherlands; local customer delivery coverage to confirm"
+      ],
+      "commission": "Not verified in current account terms",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage."
+    },
+    {
+      "id": "coolblue-belgium-affiliate",
+      "name": "Coolblue Belgium",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Electronics; Appliances; Computers; Home",
+      "sourceUrl": "https://www.coolblue.be/nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf",
+      "contact": {
+        "email": "affiliate@coolblue.be",
+        "sourceUrl": "https://www.coolblue.be/nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc42a7bd1fd42",
+      "territories": [
+        "Belgium; local customer delivery coverage to confirm"
+      ],
+      "commission": "Not verified in current account terms",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage."
     }
   ]
 }
