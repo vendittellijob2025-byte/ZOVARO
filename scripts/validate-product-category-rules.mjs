@@ -34,6 +34,16 @@ const cases = [
   ["Automotive", "YITAMOTOR Projector LED DRL Headlights for 2002 Ram 1500", "Oedro"],
   ["Beauty", "Missha Aqua Sun X Magic Cushion Cover Lasting", "Stylevana Affiliate Program"],
   ["Automotive", "Nilight 3 Inch LED Light Pods for Offroad", "Nilight Led Light"],
+  ["Appliances", "Digital air fryer 6 quart"],
+  ["Books & Media", "Vintage road atlas book"],
+  ["Electronics", "USB-C portable computer monitor"],
+  ["Garden", "Garden hose sprinkler system"],
+  ["Health & Wellness", "Digital blood pressure monitor"],
+  ["Home & Living", "Ceramic table lamp for living room"],
+  ["Office & Technology", "A4 notebook and stationery set"],
+  ["Pets", "Premium dog food kibble"],
+  ["Tools & DIY", "Cordless drill and driver set"],
+  ["Toys & Games", "Wooden building blocks toy set"],
   ["Other", "Rexing Installation Service", "Rexing"]
 ];
 
