@@ -3,7 +3,7 @@ name: ZOVARO - Sync global remote jobs
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 */4 * * *"
+    - cron: "15 * * * *"
   push:
     branches:
       - main
