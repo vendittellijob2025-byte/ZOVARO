@@ -394,10 +394,11 @@
     } catch (error) {
       console.warn("ZOVARO global remote job feeds:",error.message);
     }
+    const nonCountryGroups = new Set(["worldwide","europe","apac","asia pacific","emea","north america","latin america","latam","south america","remote"]);
     let countries = uniqueSorted([
       ...FALLBACK_COUNTRIES,
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
-    ]);
+    ].filter(value => !nonCountryGroups.has(String(value || "").trim().toLowerCase())));
     try {
       const response = await fetch(GEO_API + "/countries/iso",{cache:"force-cache"});
       if (!response.ok) throw new Error("Country directory unavailable");
