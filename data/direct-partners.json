@@ -5177,6 +5177,763 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage."
+    },
+    {
+      "id": "hestan-culinary-affiliate",
+      "name": "Hestan Culinary",
+      "status": "contacted",
+      "programType": "Impact affiliate programme",
+      "category": "Home & Living; Kitchen; Cookware",
+      "sourceUrl": "https://hestanculinary.com/pages/affiliate-program",
+      "contact": {
+        "email": "affiliate@hestan.com",
+        "sourceUrl": "https://hestanculinary.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc432a10f0380",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Impact access, territories, rates, feed, tracking and approved assets."
+    },
+    {
+      "id": "zwilling-affiliate",
+      "name": "ZWILLING",
+      "status": "contacted",
+      "programType": "Rakuten / CJ affiliate programme",
+      "category": "Home & Living; Kitchen; Cookware",
+      "sourceUrl": "https://www.zwilling.com/ca/zwilling-affiliate-program.html",
+      "contact": {
+        "email": "affiliate@zwilling.ca",
+        "sourceUrl": "https://www.zwilling.com/ca/zwilling-affiliate-program.html"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43353ee78cf",
+      "territories": [
+        "Canada programme page; exact publisher/customer territories pending"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm correct network programme, country coverage, feed, tracking and assets."
+    },
+    {
+      "id": "greenpan-affiliate",
+      "name": "GreenPan",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Home & Living; Kitchen; Cookware",
+      "sourceUrl": "https://www.greenpan.us/pages/affiliate",
+      "contact": {
+        "email": "madison.oakley@cookware-co.com",
+        "sourceUrl": "https://www.greenpan.us/pages/affiliate"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc433c3340d87",
+      "territories": [
+        "US storefront; exact publisher/customer countries pending"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify programme eligibility, commission, feed, tracking and approved assets."
+    },
+    {
+      "id": "holabird-sports-affiliate",
+      "name": "Holabird Sports",
+      "status": "contacted",
+      "programType": "Partnerize affiliate programme",
+      "category": "Sports; Fitness; Footwear",
+      "sourceUrl": "https://www.holabirdsports.com/pages/affiliates",
+      "contact": {
+        "email": "affiliates@holabirdsports.com",
+        "sourceUrl": "https://www.holabirdsports.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43467231624",
+      "territories": [
+        "Primarily US customers; exact shipping coverage pending"
+      ],
+      "commission": "Public page states 5%",
+      "cookie": "Public page states 30-day return cookie",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, current rates, feed and approved content."
+    },
+    {
+      "id": "select-brands-affiliate",
+      "name": "Select Brands",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Appliances; Home & Living; Kitchen",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/122936",
+      "contact": {
+        "email": "creators@selectbrands.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/122936"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc434cbb2f627",
+      "territories": [
+        "US contiguous states, Alaska, Hawaii and US territories per public listing"
+      ],
+      "commission": "Public Awin listing states 5%",
+      "cookie": "Public Awin listing states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin eligibility, exact fulfilment zones, product feed, tracking and asset rights."
+    },
+    {
+      "id": "logitech-commerce-partnership",
+      "name": "Logitech",
+      "status": "contacted",
+      "programType": "Commerce / creator partnership enquiry",
+      "category": "Electronics; Computers; Gaming; Audio",
+      "sourceUrl": "https://www.logitech.com/",
+      "contact": {
+        "email": "creator-relations@logitech.com",
+        "sourceUrl": "https://www.logitech.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43564c35135",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published; affiliate programme route to confirm",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await referral to correct affiliate programme; do not treat as approved or commissionable until confirmed."
+    },
+    {
+      "id": "gigabyte-aorus-partnership",
+      "name": "Gigabyte AORUS",
+      "status": "contacted",
+      "programType": "Gaming / commerce partnership enquiry",
+      "category": "Gaming; Computers; Electronics",
+      "sourceUrl": "https://www.aorus.com/",
+      "contact": {
+        "email": "aorus_marketing@gigabyte.com",
+        "sourceUrl": "https://www.aorus.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4360c41a8da",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published; affiliate/referral arrangement to confirm",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await referral to a commerce/affiliate team; no products publishable until trackable agreement is verified."
+    },
+    {
+      "id": "nzxt-partnership",
+      "name": "NZXT",
+      "status": "contacted",
+      "programType": "Affiliate / sponsorship partnership enquiry",
+      "category": "Gaming; Computers; PC Hardware",
+      "sourceUrl": "https://nzxt.com/",
+      "contact": {
+        "email": "sponsorship@nzxt.com",
+        "sourceUrl": "https://nzxt.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc436cba441e5",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published; affiliate route to confirm",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await referral to publisher programme; confirm eligible platform, countries, catalogue and tracking."
+    },
+    {
+      "id": "cooler-master-partnership",
+      "name": "Cooler Master",
+      "status": "contacted",
+      "programType": "Gaming / commerce partnership enquiry",
+      "category": "Gaming; Computers; PC Hardware",
+      "sourceUrl": "https://www.coolermaster.com/",
+      "contact": {
+        "email": "marketing@coolermaster.com",
+        "sourceUrl": "https://www.coolermaster.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc437626db259",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published; affiliate/referral arrangement to confirm",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await referral to correct publisher/affiliate team; no listings until terms and attribution are approved."
+    },
+    {
+      "id": "mii-cosmetics-affiliate",
+      "name": "Mii Cosmetics",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Cosmetics; Makeup",
+      "sourceUrl": "https://miicosmetics.com/press-influencers-affiliates/",
+      "contact": {
+        "email": "influencers@miicosmetics.com",
+        "sourceUrl": "https://miicosmetics.com/press-influencers-affiliates/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43b64e978f0",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Competitive commission; exact terms pending approval",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher eligibility, countries, commission, feed, tracking and approved assets."
+    },
+    {
+      "id": "escentual-affiliate",
+      "name": "Escentual",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Beauty; Cosmetics; Fragrance",
+      "sourceUrl": "https://escentual.com/pages/affiliate-programme",
+      "contact": {
+        "email": "affiliates@escentual.com",
+        "sourceUrl": "https://escentual.com/pages/affiliate-programme"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43be96f60d9",
+      "territories": [
+        "UK shipping; international delivery charges published, exact programme markets pending"
+      ],
+      "commission": "Public page states 7.5% (2.5% on voucher/points sales)",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify Awin eligibility, countries, feed, approved images and exact commission terms."
+    },
+    {
+      "id": "hofdeco-affiliate",
+      "name": "Hofdeco",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Home & Living; Décor",
+      "sourceUrl": "https://www.hofdeco.com/pages/hofdeco-affiliate-program",
+      "contact": {
+        "email": "affiliate@hofdeco.com",
+        "sourceUrl": "https://www.hofdeco.com/pages/hofdeco-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43c4827e17a",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified",
+      "cookie": "Public page states 30 days",
+      "payout": "Public page states monthly PayPal only; asked if bank transfer is possible",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify publisher eligibility, customer countries, product feed, tracking and payout method."
+    },
+    {
+      "id": "vesta-sleep-affiliate",
+      "name": "Vesta Sleep",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Home & Living; Bedding",
+      "sourceUrl": "https://vesta-sleep.com/pages/affiliate-program",
+      "contact": {
+        "email": "pr@vesta-home.com",
+        "sourceUrl": "https://vesta-sleep.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43d05704f86",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Competitive commission; exact rate pending approval",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm affiliate application, supported markets, feed, tracking and asset permissions."
+    },
+    {
+      "id": "qbedding-affiliate",
+      "name": "Qbedding",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Home & Living; Bedding",
+      "sourceUrl": "https://qbedding.com/pages/affiliate-program",
+      "contact": {
+        "email": "help@qbedding.com",
+        "sourceUrl": "https://qbedding.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43db3bd983b",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm affiliate eligibility, customer countries, commission, feed and tracking."
+    },
+    {
+      "id": "hernest-affiliate",
+      "name": "HERNEST",
+      "status": "contacted",
+      "programType": "CJ affiliate programme",
+      "category": "Home & Living; Furniture; Décor",
+      "sourceUrl": "https://public.cj.com/signup/publisher?advertiserId=7389945",
+      "contact": {
+        "email": "affiliate@hernest.com",
+        "sourceUrl": "https://public.cj.com/signup/publisher?advertiserId=7389945"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43e47915b8c",
+      "advertiserId": "7389945",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public CJ page advertises up to 15%",
+      "cookie": "Public CJ page states 60 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply and submit CJ application; verify exact territory, feed, tracking and approval."
+    },
+    {
+      "id": "care-to-beauty-affiliate",
+      "name": "Care to Beauty",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Skincare; Cosmetics; Fragrance",
+      "sourceUrl": "https://www.caretobeauty.com/us/creators/application/",
+      "contact": {
+        "email": "social@caretobeauty.com",
+        "sourceUrl": "https://www.caretobeauty.com/us/creators/application/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43ee06a4917",
+      "territories": [
+        "US and UK storefronts; international customer coverage pending"
+      ],
+      "commission": "Not published in public application page",
+      "cookie": "Not published",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm manual application, eligible countries, commission, product feed and approved media."
+    },
+    {
+      "id": "cocokind-partnership",
+      "name": "cocokind",
+      "status": "contacted",
+      "programType": "Brand / commerce partnership enquiry",
+      "category": "Beauty; Skincare",
+      "sourceUrl": "https://www.cocokind.com/",
+      "contact": {
+        "email": "Uspartnerships@cocokind.com",
+        "sourceUrl": "https://www.cocokind.com/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc43f6bde7cec",
+      "territories": [
+        "US brand contact; customer markets pending"
+      ],
+      "commission": "Not published; affiliate route to confirm",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await referral to the appropriate commerce affiliate programme; do not count as approved until tracking and terms confirmed."
+    },
+    {
+      "id": "loccitane-affiliate",
+      "name": "L'Occitane en Provence",
+      "status": "contacted",
+      "programType": "Affiliate programme managed by Silverbean",
+      "category": "Beauty; Skincare; Wellbeing",
+      "sourceUrl": "https://uk.loccitane.com/affiliate-programme",
+      "contact": {
+        "email": "Loccitane@silverbean.com",
+        "sourceUrl": "https://uk.loccitane.com/affiliate-programme"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc443c34bb552",
+      "territories": [
+        "UK programme; other publisher/customer territories pending"
+      ],
+      "commission": "Public page advertises up to 10%",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm UK application, eligible markets, feed, tracking and payout terms."
+    },
+    {
+      "id": "hezoria-affiliate",
+      "name": "Hezoria",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Fragrance",
+      "sourceUrl": "https://hezoria.com/pages/affiliate-programme",
+      "contact": {
+        "email": "support@hezoria.com",
+        "sourceUrl": "https://hezoria.com/pages/affiliate-programme"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4443c46bf0d",
+      "territories": [
+        "United States shipping stated; other territories pending"
+      ],
+      "commission": "Individually agreed",
+      "cookie": "To be confirmed in written approval",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; agree exact rate, attribution window, territories, feed and payout before publication."
+    },
+    {
+      "id": "beauty-bay-affiliate",
+      "name": "BEAUTY BAY",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Beauty; Cosmetics; Skincare",
+      "sourceUrl": "https://careers.beautybay.com/fr/s/affiliates/",
+      "contact": {
+        "email": "affiliates@beautybay.com",
+        "sourceUrl": "https://careers.beautybay.com/fr/s/affiliates/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc444c3ce5b39",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not published in overview",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm Awin eligibility, countries, commission, feed, tracking and approved assets."
+    },
+    {
+      "id": "nava-beauty-affiliate",
+      "name": "NAVA BEAUTY",
+      "status": "contacted",
+      "programType": "Awin affiliate programme",
+      "category": "Beauty; Skincare; Fragrance",
+      "sourceUrl": "https://www.navabeauty.com/pages/affiliate-program",
+      "contact": {
+        "email": "partners@navabeauty.com",
+        "sourceUrl": "https://www.navabeauty.com/pages/affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc44567ba0721",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Competitive percentage; exact rate confirmed upon approval",
+      "cookie": "Standard Awin window; exact value to confirm in dashboard",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; verify exact rate, cookie, countries, feed and Awin approval."
+    },
+    {
+      "id": "ofra-cosmetics-affiliate",
+      "name": "OFRA Cosmetics",
+      "status": "contacted",
+      "programType": "Direct affiliate tracking programme",
+      "category": "Beauty; Makeup",
+      "sourceUrl": "https://ofracosmetics.com/pages/ofra-affiliate-program",
+      "contact": {
+        "email": "denise@ofracosmetics.com",
+        "sourceUrl": "https://ofracosmetics.com/pages/ofra-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc445db3141c2",
+      "territories": [
+        "US programme; non-US publisher eligibility and tax form to confirm"
+      ],
+      "commission": "Not published in reviewed page",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await response on non-US publisher and W-8BEN eligibility; do not submit an inapplicable W-9."
+    },
+    {
+      "id": "cranbourn-affiliate",
+      "name": "CRANBOURN",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Fragrance; Luxury",
+      "sourceUrl": "https://www.cranbourn.com/affiliates/",
+      "contact": {
+        "email": "enquiries@cranbourn.com",
+        "sourceUrl": "https://www.cranbourn.com/affiliates/"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc4462e7634e7",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states 10% baseline",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm eligible markets, feed, tracking, approved images and payout terms."
+    },
+    {
+      "id": "neoderma-affiliate",
+      "name": "Neoderma",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Skincare",
+      "sourceUrl": "https://help.neoderma.com/hc/en-us/article_attachments/360000716857",
+      "contact": {
+        "email": "affiliates@neoderma.com",
+        "sourceUrl": "https://help.neoderma.com/hc/en-us/article_attachments/360000716857"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc446c5d77d22",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "To confirm with affiliate manager",
+      "cookie": "To confirm with affiliate manager",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await current commission and qualifying actions, territory, cookie and payout details; review full programme terms."
+    },
+    {
+      "id": "yesstyle-affiliate",
+      "name": "YesStyle",
+      "status": "contacted",
+      "programType": "Affiliate / influencer publisher programme",
+      "category": "Beauty; Fashion; Lifestyle",
+      "sourceUrl": "https://www.yesstyle.com/influnecer-affiliate-program-description.pdf",
+      "contact": {
+        "email": "ys-bloggers@yesstyle.com",
+        "sourceUrl": "https://www.yesstyle.com/influnecer-affiliate-program-description.pdf"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc447302b82f1",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified in current programme document",
+      "cookie": "Not verified",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await correct publisher route, current network terms, countries, feed and tracking."
+    },
+    {
+      "id": "angeline-perfume-affiliate",
+      "name": "Angeline Perfume",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Fragrance",
+      "sourceUrl": "https://angeline-perfume.com/upload/Angeline%20Perfume%20Affiliate%20Program%201_de.pdf",
+      "contact": {
+        "email": "media@angeline-perfume.com",
+        "sourceUrl": "https://angeline-perfume.com/upload/Angeline%20Perfume%20Affiliate%20Program%201_de.pdf"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc44796f1ea0e",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Not verified in reviewed PDF",
+      "cookie": "Not verified",
+      "payout": "Public PDF mentions bank transfer and PayPal, monthly; verify current terms",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await confirmation of active programme, eligible countries, current commission, product data and tracking."
+    },
+    {
+      "id": "neostrata-exuviance-affiliate",
+      "name": "NeoStrata / Exuviance",
+      "status": "contacted",
+      "programType": "Affiliate programme",
+      "category": "Beauty; Skincare",
+      "sourceUrl": "https://www.exuviance.com/pages/join-our-affiliate-program",
+      "contact": {
+        "email": "affiliate@NeoStrata.com",
+        "sourceUrl": "https://www.exuviance.com/pages/join-our-affiliate-program"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc44bfea1492a",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page states 10% standard and 5% coupon/deal",
+      "cookie": "Public page states 30 days",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher and customer markets, exact terms, feed, tracking and approved assets."
+    },
+    {
+      "id": "ctzn-cosmetics-affiliate",
+      "name": "CTZN Cosmetics",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Makeup",
+      "sourceUrl": "https://www.ctzncosmetics.com/pages/affiliates",
+      "contact": {
+        "email": "affiliates@ctzncosmetics.com",
+        "sourceUrl": "https://www.ctzncosmetics.com/pages/affiliates"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc44c7c509af4",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "Public page advertises up to 15%",
+      "cookie": "Not stated",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply; confirm publisher eligibility, countries, tracking, assets and payout."
+    },
+    {
+      "id": "orena-fragrances-affiliate",
+      "name": "Orena Fragrances",
+      "status": "contacted",
+      "programType": "Direct affiliate programme",
+      "category": "Beauty; Fragrance",
+      "sourceUrl": "https://orenafragrances.com/pages/orena-affiliate-program-terms-conditions",
+      "contact": {
+        "email": "affiliates@orenafragrances.com",
+        "sourceUrl": "https://orenafragrances.com/pages/orena-affiliate-program-terms-conditions"
+      },
+      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "emailMessageId": "1a1dc44ce2ff0e8b",
+      "territories": [
+        "Not yet confirmed"
+      ],
+      "commission": "To confirm in written approval",
+      "cookie": "To confirm in written approval",
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await approval and written terms, eligible markets, commission, cookie, tracking and payout."
     }
   ]
 }
