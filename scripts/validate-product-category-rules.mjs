@@ -30,6 +30,10 @@ const cases = [
   ["Food & Grocery", "OSULLOC Original Milk Tea", "OSULLOC"],
   ["Industrial & Scientific", "Ender-5 Max 3D-Drucker", "Creality"],
   ["Travel", "Europe XXL Political and Road Map", "Maps International"],
+  ["Fashion", "Crochet Human Hair Miracle Knots Style for Boho Braids", "RSE- ISEE Hair, BGMgirl and WigFever"],
+  ["Automotive", "YITAMOTOR Projector LED DRL Headlights for 2002 Ram 1500", "Oedro"],
+  ["Beauty", "Missha Aqua Sun X Magic Cushion Cover Lasting", "Stylevana Affiliate Program"],
+  ["Automotive", "Nilight 3 Inch LED Light Pods for Offroad", "Nilight Led Light"],
   ["Other", "Rexing Installation Service", "Rexing"]
 ];
 
