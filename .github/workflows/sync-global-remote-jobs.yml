@@ -1,0 +1,60 @@
+name: ZOVARO - Sync global remote jobs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 */4 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sync-global-remote-jobs.mjs"
+      - "scripts/validate-global-job-feed.mjs"
+      - "marketplace.js"
+      - "data/career-guides.json"
+      - ".github/workflows/sync-global-remote-jobs.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zovaro-global-jobs-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync-global-remote-jobs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Check script syntax
+        run: |
+          node --check scripts/sync-global-remote-jobs.mjs
+          node --check scripts/validate-global-job-feed.mjs
+          node --check marketplace.js
+          node --check api/jobs.js
+      - name: Synchronize public global remote job sources
+        run: node scripts/sync-global-remote-jobs.mjs
+      - name: Validate source attribution, country eligibility and categories
+        run: node scripts/validate-global-job-feed.mjs
+      - name: Commit refreshed job listings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/remote-jobs.json
+          if git diff --cached --quiet; then
+            echo "No global job feed changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh attributed global remote job listings"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
