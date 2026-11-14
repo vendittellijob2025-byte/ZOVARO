@@ -34,7 +34,8 @@
     "CJ deactivation update 2026-11-13: Baseus US Amazon Marketplace advertiser 7641760 was deactivated (thread 1a1d2e44ffcbd668). The latest CJ sync excludes non-active/non-joined advertisers from storefront eligibility; Baseus products retained in the internal merged inventory are not selected for the public storefront while the advertiser is not currently joined/feed-eligible. Do not promote its links during deactivation.",
     "New partner research and outreach 2026-11-13: Click&Boat and YachtBooking.com were contacted on 2026-11-14T00:24Z using official affiliate/partner contacts. Catawiki and Boatbookings were added as prospects; no dedicated affiliate email was verified, so no email was sent. Thomann was added as a prospect but not contacted because its official programme requires at least 500 unique website visits/day or 5,000 social followers, neither of which has been verified for ZOVARO.",
     "B&H Photo affiliate enquiry was sent 2026-11-12T21:21:17Z to the official affiliate signup support address. Automatic reply received 2026-11-13T00:53:08Z asks applicants to allow 1-2 weeks; no programme acceptance or territory approval has been received.",
-    "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified."
+    "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified.",
+    "Food delivery research 2026-11-13: Wolt's official localized affiliate page confirms a publisher programme through TradeDoubler, with tracked links/ads/banners and consumer delivery coverage in 25 countries across Europe and Asia. The page does not publish rates, cookie, feed/API or publisher-country eligibility and requires personal data plus bank details during TradeDoubler registration. Added as prospect only; no application or email submitted. foodpanda's official Delivery Hero Partnerize partnership agreement confirms a programme framework, but does not by itself prove an active campaign, approval, rate or territory for Pakistan/Philippines."
   ],
   "prospects": [
     {
@@ -2152,6 +2153,22 @@
       "cookie": "14 days",
       "payout": "Automated invoicing/payment after EUR 50 commission is reached, per Thomann's official affiliate FAQ",
       "nextAction": "Do not apply or email until ZOVARO's qualifying audience is verified: Thomann requires at least 500 unique website visits per day or 5,000 social followers. Existing CJ click totals do not prove unique visits or follower counts. If the threshold is met, ask about Italy publisher eligibility, countries shipped, feed/widget access, creative permissions and payout details."
+    },
+    {
+      "id": "wolt-affiliate",
+      "name": "Wolt Affiliate Programme",
+      "status": "prospect",
+      "programType": "Food delivery, grocery and convenience affiliate programme",
+      "category": "food-delivery-grocery-affiliate",
+      "sourceUrl": "https://explore.wolt.com/en/hrv/affiliates",
+      "network": "TradeDoubler",
+      "publicMarkets": "Wolt states customers can order in 25 countries across Europe and Asia; this is customer-service coverage, not confirmed publisher eligibility.",
+      "commission": "Not published on the official Wolt affiliate page.",
+      "cookie": "Not stated on the official page.",
+      "tracking": "Unique affiliate links, ads and banners through TradeDoubler after approval.",
+      "feed": "No product feed/API stated on the official page.",
+      "publisherRequirements": "Create a TradeDoubler publisher account, provide personal data and bank details, verify the website URL through a contact address supplied during onboarding, then apply to the Wolt advertiser campaign.",
+      "nextAction": "Potentially relevant for food delivery, groceries, flowers, pet supplies and convenience. No public dedicated affiliate email found. Do not complete TradeDoubler onboarding automatically because it requires personal and banking details; owner must complete the secure publisher registration. Confirm Italy-based publisher eligibility, active Wolt markets, commission, cookie and payout terms before promotion."
     }
   ]
 }
