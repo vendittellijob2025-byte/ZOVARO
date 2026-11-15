@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-15T02:16:36.621Z",
-  "selectedProductCount": 19143,
-  "inventoryProductCount": 191237,
+  "generatedAt": "2026-11-15T02:33:23.662Z",
+  "selectedProductCount": 19233,
+  "inventoryProductCount": 191374,
   "uniqueAdvertiserCount": 20,
   "categories": [
     {
@@ -106,7 +106,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1556
+      "productCount": 1646
     },
     {
       "name": "Sports",
@@ -141,9 +141,9 @@
     }
   ],
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19143,
-    "withImages": 19143,
-    "withPositivePrices": 19143
+    "withTrackedHttpsLinks": 19233,
+    "withImages": 19233,
+    "withPositivePrices": 19233
   },
   "sources": [
     {
