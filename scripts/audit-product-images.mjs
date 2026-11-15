@@ -65,9 +65,29 @@ const VISUAL_CANDIDATES = [
   { label: "power drill, hand tools, screwdriver or workshop equipment", category: "Tools & DIY" },
   { label: "book, magazine, DVD or music record", category: "Books & Media" },
   { label: "office stationery, printer supplies or computer software", category: "Office & Technology" },
+  { label: "wheelchair, mobility scooter, rollator, walker or accessibility aid", category: "Accessible & Adaptive Living" },
+  { label: "adaptive bathroom equipment, grab bars, shower chair or accessibility device", category: "Accessible & Adaptive Living" },
+  { label: "sewing machine, fabric, yarn, knitting or textile craft supplies", category: "Arts, Crafts & Sewing" },
+  { label: "painting, drawing, beads, resin, model making or arts and crafts supplies", category: "Arts, Crafts & Sewing" },
+  { label: "wholesale bulk packaging, shipping cartons, pallets or commercial business supplies", category: "Business, Wholesale & Bulk Supply" },
+  { label: "solar panels, solar generator, inverter or renewable energy equipment", category: "Energy, Solar & Electric Mobility" },
+  { label: "portable power station, home battery storage or electric vehicle charging equipment", category: "Energy, Solar & Electric Mobility" },
+  { label: "restaurant meals, pizza, takeaway food or prepared meal delivery", category: "Food Delivery & Restaurant Orders" },
+  { label: "meal kits, grocery delivery or supermarket food order", category: "Food Delivery & Restaurant Orders" },
+  { label: "video game console, game controller, gaming headset or gaming computer", category: "Gaming" },
+  { label: "3D printer, industrial machinery, laboratory microscope or scientific equipment", category: "Industrial & Scientific" },
+  { label: "guitar, piano, synthesizer, drum kit or musical instrument", category: "Musical Instruments & Studio" },
+  { label: "luxury house, villa, apartment, commercial property or land real estate listing", category: "Real Estate" },
+  { label: "refurbished smartphone, certified refurbished laptop or second hand electronics", category: "Refurbished, Pre-Owned & Outlet" },
+  { label: "phone repair, appliance repair, computer repair or electronics recycling service", category: "Repair & Circular Economy" },
+  { label: "security camera, alarm system, smart lock, smoke detector or safety equipment", category: "Security & Safety" },
+  { label: "luxury watch, diamond jewelry, yacht, private jet, helicopter or luxury villa", category: "Luxury & Prestige" },
+  { label: "television, OLED smart TV, projector, soundbar or home cinema equipment", category: "TVs & Home Cinema" },
+  { label: "luxury yacht charter, private aircraft or helicopter charter", category: "Luxury & Prestige" },
+  { label: "designer handbag, haute couture clothing or luxury fashion accessory", category: "Luxury & Prestige" },
   { label: "suitcase, carry-on luggage, travel backpack or travel accessory", category: "Travel" }
 ];
-const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 350) || 350;
+const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 500) || 500;
 const BATCH_SIZE = Math.min(500, Math.max(1, requestedBatchSize));
 const MIN_BYTES = 8 * 1024;
 const MAX_BYTES = 12 * 1024 * 1024;
@@ -205,6 +225,43 @@ export function compareVisualCategory(expectedCategory, predictions) {
   };
 }
 
+
+function buildSubcategoryCandidates(taxonomy, category) {
+  const root = taxonomy.categories.find(item => item.name === category);
+  if (!root) return [];
+  const candidates = [];
+  function visit(nodes, path = []) {
+    for (const node of nodes || []) {
+      const name = typeof node === "string" ? node : node?.name;
+      if (!name || /^other$/i.test(name)) continue;
+      const nextPath = [...path, name];
+      const children = typeof node === "string" ? [] : (node.children || []);
+      if (children.length) visit(children, nextPath);
+      else candidates.push({ path: nextPath.join(" > "), label: "a product photo of " + nextPath.slice(-2).join(", ") + ", " + category });
+    }
+  }
+  visit(root.children || []);
+  return candidates;
+}
+
+export function compareVisualSubcategory(predictions, candidates) {
+  const byLabel = new Map(candidates.map(item => [item.label, item]));
+  const ranked = (Array.isArray(predictions) ? predictions : [])
+    .map(item => ({ candidate: byLabel.get(item.label), score: Number(item.score || 0) }))
+    .filter(item => item.candidate)
+    .sort((a, b) => b.score - a.score);
+  const first = ranked[0], second = ranked[1];
+  if (!first) return { status: "not_assessable" };
+  const margin = first.score - (second?.score || 0);
+  return {
+    status: first.score >= 0.22 && margin >= 0.035 ? "confident" : "ambiguous",
+    path: first.candidate.path,
+    confidence: Number(first.score.toFixed(3)),
+    margin: Number(margin.toFixed(3)),
+    alternatives: ranked.slice(0, 3).map(item => ({ path: item.candidate.path, score: Number(item.score.toFixed(3)) }))
+  };
+}
+
 function categoryMismatch(product, detections) {
   const expected = categoryFor({ name: product.advertiserName || "" }, product);
   const relevant = detections
@@ -245,7 +302,7 @@ async function loadReport() {
   }
 }
 
-async function analyseProduct(product, detector, classifier, RawImage) {
+async function analyseProduct(product, detector, classifier, RawImage, taxonomy) {
   const imageUrl = String(product.imageLink || "");
   const base = {
     key: [product.source || "", product.advertiserId || "", product.id || ""].join("|"),
@@ -281,13 +338,33 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     const visualCheck = compareVisualCategory(expectedCategory, visualPredictions);
     const objectCheck = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
     const mismatch = visualCheck.status === "not_assessable" ? objectCheck : visualCheck;
-    if (mismatch.status === "possible_mismatch") flags.push("possible_category_mismatch");
-    // A category disagreement, ambiguous visual result, or unassessable image
-    // is never treated as an automatic pass. It remains explicitly review-required.
-    const decision = flags.length || mismatch.status !== "consistent"
+    const visualAction = mismatch.status === "possible_mismatch" &&
+      Number(mismatch.confidence || 0) >= 0.34 && Number(mismatch.margin || 0) >= 0.08
+      ? "reclassify"
+      : (mismatch.status === "possible_mismatch" || mismatch.status === "ambiguous" ? "review" : "keep_text_category");
+    let visualSubcategory = { status: "not_assessable" };
+    const visualRoot = mismatch.detectedCategory || expectedCategory;
+    if (visualRoot && taxonomy.categories.some(item => item.name === visualRoot)) {
+      const candidates = buildSubcategoryCandidates(taxonomy, visualRoot);
+      if (candidates.length) visualSubcategory = compareVisualSubcategory(
+        await classifier(image, candidates.map(item => item.label)), candidates
+      );
+    }
+    if (mismatch.status === "possible_mismatch" && visualAction !== "reclassify") flags.push("possible_category_mismatch");
+    if (visualAction === "reclassify") flags.push("visual_category_reclassification");
+    const decision = flags.some(flag => flag !== "visual_category_reclassification") ||
+      (mismatch.status !== "consistent" && visualAction !== "reclassify" && mismatch.status !== "not_assessable")
       ? "review_required"
       : "pass";
-    return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck: mismatch };
+    const categoryCheck = {
+      ...mismatch,
+      visualAction,
+      visualSubcategoryPath: visualSubcategory.path || null,
+      visualSubcategoryConfidence: visualSubcategory.confidence || null,
+      visualSubcategoryMargin: visualSubcategory.margin || null,
+      visualSubcategoryAction: visualSubcategory.status === "confident" ? "apply" : "fallback_to_text"
+    };
+    return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck };
   } catch (error) {
     const reason = String(error.message || error).slice(0, 120);
     return {
@@ -320,12 +397,28 @@ async function main() {
       { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.27 }
     ]);
     if (ambiguous.status !== "ambiguous") throw new Error("Visual ambiguity self-test failed.");
+    const subcategory = compareVisualSubcategory([
+      { label: "a product photo of Lip Makeup, Makeup, Beauty", score: 0.71 },
+      { label: "a product photo of Face Cleansers, Skincare, Beauty", score: 0.12 }
+    ], [
+      { path: "Makeup > Lip Makeup", label: "a product photo of Lip Makeup, Makeup, Beauty" },
+      { path: "Skincare > Face Cleansers", label: "a product photo of Face Cleansers, Skincare, Beauty" }
+    ]);
+    if (subcategory.status !== "confident" || subcategory.path !== "Makeup > Lip Makeup") throw new Error("Visual subcategory self-test failed.");
+    const categoryCoverage = new Set(VISUAL_CANDIDATES.map(item => item.category));
+    const requiredRoots = ["Accessible & Adaptive Living","Appliances","Arts, Crafts & Sewing","Automotive","Babies","Beauty","Books & Media","Business, Wholesale & Bulk Supply","Electronics","Energy, Solar & Electric Mobility","Fashion","Food & Grocery","Food Delivery & Restaurant Orders","Gaming","Garden","Health & Wellness","Home & Living","Industrial & Scientific","Musical Instruments & Studio","Office & Technology","Pets","Real Estate","Refurbished, Pre-Owned & Outlet","Repair & Circular Economy","Security & Safety","Luxury & Prestige","Sports","Tools & DIY","Toys & Games","Travel","TVs & Home Cinema"];
+    const missingRoots = requiredRoots.filter(root => !categoryCoverage.has(root));
+    if (missingRoots.length) throw new Error("Visual classifier misses canonical categories: " + missingRoots.join(", "));
     console.log("Image audit self-tests passed.");
     return;
   }
 
   const catalog = JSON.parse(await fs.readFile(CATALOG_PATH, "utf8"));
   if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
+  const taxonomy = JSON.parse(await fs.readFile("data/category-tree.json", "utf8"));
+  if (!Array.isArray(taxonomy.categories) || taxonomy.categories.length !== 31) {
+    throw new Error("Expected all 31 canonical category roots before visual classification.");
+  }
   const report = await loadReport();
   const existing = new Map(report.results.map(item => [item.key, item]));
   const recheckDays = Math.max(1, Number(process.env.IMAGE_AUDIT_RECHECK_DAYS || 30) || 30);
@@ -365,7 +458,7 @@ async function main() {
   let passed = 0;
   let review = 0;
   for (let index = 0; index < batch.length; index += 1) {
-    const result = await analyseProduct(batch[index], detector, classifier, RawImage);
+    const result = await analyseProduct(batch[index], detector, classifier, RawImage, taxonomy);
     const previous = [...existing.values()].filter(item => item.metrics?.perceptualHash);
     const duplicate = result.metrics?.perceptualHash
       ? previous.find(item => item.key !== result.key &&
