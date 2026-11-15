@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-14T20:09:16-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -41,7 +41,9 @@
     "Partner outreach and inbox audit 2026-11-14: YH Charter's official partner page lists partners@yh-charter.com, a case-by-case yacht-charter referral programme, tiered first-charter and recurring commissions, UTM tracking links, API/widget access, high-resolution imagery and bank transfer or PayPal under agreement. A personalised enquiry was sent to partners@yh-charter.com (Gmail message/thread 1a1dc8f44bc5f116); no approval or live tracking exists. YATR was added as a prospect: its official page advertises $400-$500 per completed booking, 30-day tracking and monthly payout, but does not label the currency or state territories; no public affiliate email was found and an application draft was prepared. tectake was added as a retailAds prospect: official page advertises up to 7%, a 60-day cookie and a product feed; publisher/customer territories and payout terms remain unverified; no dedicated affiliate email was found and an application draft was prepared.",
     "Outreach quality control 2026-11-14: Gmail search for the last 24 hours returned at least 201 sent threads and 12 delivery-failure threads. Twelve affected recipient addresses have been marked bounced/do-not-retry in this registry. No further broad batch was sent during this run; only one new, individually verified official partnership contact (YH Charter) was emailed. Mii Cosmetics, SimpliSafe UK and Todson sent automated acknowledgements only; none is an approval.",
     "Correction 2026-11-14: the official tectake DE programme page links to RetailAds, whose current programme listing publicly identifies Romy Gröschl (romy.groeschl@tectake.de) as the affiliate contact. A personalised enquiry was sent to that address (Gmail thread 1a1dc98cd556b885). Current published terms: 7% standard, 4% voucher/cashback, 60-day cookie, weekly sales validation, and commission only on transactions from the German online shop. Weekly sales validation is not a weekly payout; payout terms remain undisclosed. The earlier no-email prospect draft for tectake is superseded and must not be sent.",
-    "CJ technical matrix 2026-11-14: the latest sync run 43652835775 found 26 Active/Joined advertisers, 20 with a positive feed and 6 without a positive feed. It received 225,717 feed records, 222,878 passed pre-dedup validation, 190,600 unique records passed, and 869 image-quality failures were excluded from the public selection. The run built 19,017 candidate public products but failed four category classifier tests before commit; the commit step was skipped, so no new products were published. The previous catalog snapshot contained 16,793 records. Per-advertiser feed/import counts and unverified public counts are in cjAudit.advertisers. All 190,600 candidate records had URL-format-valid CJ tracking links, but no live click or attribution test was performed. Category fixes are being prepared in PR #24; do not rerun/publish until the category tests pass."
+    "CJ technical matrix 2026-11-14: the latest sync run 43652835775 found 26 Active/Joined advertisers, 20 with a positive feed and 6 without a positive feed. It received 225,717 feed records, 222,878 passed pre-dedup validation, 190,600 unique records passed, and 869 image-quality failures were excluded from the public selection. The run built 19,017 candidate public products but failed four category classifier tests before commit; the commit step was skipped, so no new products were published. The previous catalog snapshot contained 16,793 records. Per-advertiser feed/import counts and unverified public counts are in cjAudit.advertisers. All 190,600 candidate records had URL-format-valid CJ tracking links, but no live click or attribution test was performed. Category fixes are being prepared in PR #24; do not rerun/publish until the category tests pass.",
+    "Operational update 2026-11-14: the YH Charter message to partners@yh-charter.com returned a 550 5.1.1 recipient-not-found delivery failure; the record is marked bounced and the address must not be retried. Gmail showed 13 delivery-failure notifications in the last 24 hours (the other 12 affected addresses were already marked bounced/do-not-retry). Mii Cosmetics, SimpliSafe UK and Todson provided automated acknowledgements/support routing only; no partner approval or substantive terms were received. No new partnership email was sent in this run: Wayfair's official affiliate page confirms a programme but publishes no affiliate contact, and its deliverypartners@wayfair.com address is specifically for transportation partnerships, so it was not misused.",
+    "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed."
   ],
   "prospects": [
     {
@@ -2926,7 +2928,7 @@
       "territories": [
         "EPN participating marketplaces: Australia, Austria, Belgium, Canada, France, Germany, Ireland, Italy, Netherlands, Poland, Spain, Switzerland, United Kingdom, United States; publisher-country eligibility not verified"
       ],
-      "publicCommission": "Published Global Rate Card: Business & Industrial 2.5%; Collectibles 3%; Electronics 2% (Computers/Tablets/Networking 1.5%); Fashion 4%; Home & Garden 3%; Lifestyle 3%; Media 3%; eBay Motors 4% (USD 100 cap); Vehicle Parts & Accessories 3%; Real Estate 1% (USD 100 cap); All Other 4%. Other per-transaction caps apply. Account-specific rates must be checked in EPN portal.",
+      "publicCommission": "Official Global Rate Card image (published with the 2026-09-24 Network Agreement): Business & Industrial 2.5% (USD 225 cap); Collectibles 3% (USD 550 cap); Electronics 2% (USD 550 cap), Computers/Tablets/Networking 1.5% (USD 550 cap); Fashion 4% (USD 550 cap); Home & Garden 3% (USD 550 cap); Lifestyle 3% (USD 550 cap); Media 3% (USD 550 cap); eBay Motors 4% (USD 100 cap); Vehicle Parts & Accessories 3% (USD 550 cap); Real Estate 1% (USD 100 cap); All Other 4% (USD 550 cap). Program Details and authenticated Partner Portal terms control; EPN may change rates on three days' notice.",
       "cookie": "24 hours for standard Buy It Now qualifying transactions; last-click attribution. Auction and Best Offer events have additional rules.",
       "payout": "Monthly: EPN issues a positive prior-month balance only when the balance exceeds USD 10 or applicable banking fees, whichever is greater. The current agreement does not specify a fixed calendar day in the section reviewed. Weekly payout is not supported by the published terms. Payment method and account-specific settings require authenticated EPN portal verification.",
       "contact": {
@@ -2939,19 +2941,23 @@
       "integration": {
         "affiliateLink": "not configured",
         "campaignId": "not found",
-        "browseApiOAuth": "not configured",
+        "browseApiOAuth": "not configured; Browse API requires an application access token via OAuth client-credentials flow",
         "inventoryFeed": "not approved or verified",
         "imagePermission": "pending",
-        "conversionReporting": "not connected"
+        "conversionReporting": "not connected",
+        "browseApiAccess": "not tested; no developer app credentials available",
+        "buyApiProgram": "not approved or verified; the EPN agreement defines this as a separate approved program",
+        "clickTested": false,
+        "attributionTested": false
       },
-      "nextAction": "No authenticated EPN account, approval, campaign ID or developer credentials are available in connected access. Current official network agreement requires EPN acceptance before any promotional method is deployed. Current agreement provides monthly payment only when positive prior-month balance exceeds USD 10 or applicable bank fees, whichever is greater; no weekly payout. Fourteen public participating sites include Italy. Current agreement also restricts use of EPN Data in AI systems: no model training/benchmarking and no exposure to LLM services without prior written EPN approval and a specific written contract. Do not connect EPN transaction/portal data to ChatGPT or other LLMs until written approval. Next prerequisites: authenticate to EPN, verify application/account status, retrieve campaign ID, create eBay Developers app, obtain OAuth credentials, and request production Buy API access. Do not publish until approved and tracking is verified.",
-      "sourceChecked": "2026-11-13",
-      "accountStatus": "not verified; no authenticated EPN portal access or connected eBay account",
-      "campaignIdStatus": "missing",
-      "developerAppStatus": "not verified",
-      "apiProductionApproval": "not obtained or verified",
-      "payoutSettingsStatus": "not verified in authenticated EPN portal",
-      "termsCheckedAt": "2026-11-13",
+      "nextAction": "Prerequisites before any integration: authenticate to the official EPN portal and verify whether an accepted ZOVARO account already exists; confirm publisher eligibility and participating marketplace access; obtain the 10-digit campaign ID; create/verify an eBay Developers app and OAuth client credentials; confirm/obtain acceptance into the separate Buy API Program or other written API agreement; obtain EPN's prior written approval for any software application or restricted promotional method; verify payout settings in the authenticated portal. The current agreement requires EPN acceptance before any promotional method, prohibits promotional content on eBay's own listings/About Me/Store/message boards, and requires prior written approval for email/electronic communication promotion. EPN Data is confidential: no AI training/benchmarking and no exposure to foundation models/LLMs without EPN's prior written approval and a specific written contract. Do not send EPN transaction/portal data to ChatGPT or other LLMs. Do not publish, generate links, or test attribution until approvals and tracking are verified.",
+      "sourceChecked": "2026-11-14",
+      "accountStatus": "Not verified; no authenticated EPN portal access or connected eBay account found in the available connections.",
+      "campaignIdStatus": "Missing; EPN campaign ID not found.",
+      "developerAppStatus": "Not verified; no eBay Developers application or OAuth client credentials found in Vercel environment names.",
+      "apiProductionApproval": "Not obtained or verified; no Browse API request was made.",
+      "payoutSettingsStatus": "Not verified in authenticated EPN Partner Portal.",
+      "termsCheckedAt": "2026-11-14",
       "officialMarkets": [
         "Australia",
         "Austria",
@@ -2968,8 +2974,8 @@
         "United Kingdom",
         "United States"
       ],
-      "publicPayoutTerms": "Monthly: EPN issues a positive prior-month balance only when the balance exceeds USD 10 or applicable banking fees, whichever is greater. The current agreement does not specify a fixed calendar day in the section reviewed. Weekly payout is not supported by the published terms. Payment method and account-specific settings require authenticated EPN portal verification.",
-      "publicAttributionTerms": "Buy It Now: qualifying click within 24 hours before purchase; auctions: bid within 24 hours after click and win within 10 days (subject to the additional auction rules)."
+      "publicPayoutTerms": "Monthly payment of positive prior-month balance only when it exceeds USD 10 (or equivalent) or applicable banking fees, whichever is greater. Published payout currencies include USD, GBP, EUR, AUD, CAD, NOK, ILS, SEK, SGD, DKK and HKD. Weekly payout is not supported by the published agreement. Payment method and account-specific payout settings remain unverified in an authenticated EPN portal.",
+      "publicAttributionTerms": "Buy It Now: qualifying affiliate click within 24 hours before purchase. Auctions: qualifying bid within 24 hours after click and win within 10 days, subject to Program Details. Last qualifying affiliate event generally receives credit; an advertiser's own last event can disqualify the affiliate. Browse API must receive affiliateCampaignId through X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl."
     },
     {
       "id": "ankerwork",
@@ -6348,13 +6354,14 @@
         "payout": "Bank transfer or PayPal is described on the partner overview; schedule is set in the agreement and weekly payment is not confirmed",
         "whiteLabel": "White-label booking widget listed at Gold tier (16–30 referrals)"
       },
-      "nextAction": "Await reply confirming publisher eligibility, destinations, exact commission tiers, cookie/attribution, API/widget terms, image licence, report cadence and payout schedule. No application approval, generated tracking link, feed access or live referral exists.",
+      "nextAction": "Do not retry the bounced address. If pursuing YH Charter, locate a different official partner contact or use the official partner form; do not claim any application or approval.",
       "sourceChecked": "2026-11-14",
       "sourceEvidence": "Official partner page https://www.yh-charter.com/partners/refer",
       "contactedAt": "2026-11-14T19:15:39-05:00",
       "emailMessageId": "1a1dc8f44bc5f116",
       "contactEvidence": "Gmail sent message/thread 1a1dc8f44bc5f116",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "bounced",
+      "deliveryFailure": "Gmail delivery status: 550 5.1.1 recipient address not found; do not retry this address."
     },
     {
       "id": "yatr-yacht-affiliate",
@@ -6412,6 +6419,37 @@
       "emailMessageId": "1a1dc98cd556b885",
       "contactEvidence": "Gmail sent message/thread 1a1dc98cd556b885",
       "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "wayfair-affiliate-program",
+      "name": "Wayfair Affiliate Program",
+      "status": "prospect",
+      "programType": "Official affiliate programme for home and furniture products",
+      "category": "Home & Living / Furniture / Homeware",
+      "territories": [
+        "Wayfair describes a global catalogue; publisher eligibility and supported storefront countries are not stated on the official page"
+      ],
+      "publicCommission": "Not stated on the official Wayfair Partner With Us page; must be confirmed through the affiliate onboarding channel",
+      "cookie": "Not stated on the official page",
+      "payout": "Not stated on the official page",
+      "contact": {
+        "website": "https://www.aboutwayfair.com/partner-with-us",
+        "applicationUrl": "https://www.aboutwayfair.com/partner-with-us",
+        "sourceUrl": "https://www.aboutwayfair.com/partner-with-us"
+      },
+      "integration": {
+        "affiliateLink": "not configured",
+        "feedApi": "not verified",
+        "tracking": "not generated",
+        "productsImported": 0,
+        "productsVisible": 0,
+        "clickTested": false,
+        "attributionTested": false,
+        "imagePermission": "not verified"
+      },
+      "sourceChecked": "2026-11-14",
+      "sourceEvidence": "Wayfair's official Partner With Us page confirms an Affiliate Program, more than two million products across global home categories, specialty retail brands and dedicated in-house affiliate management. The page does not publish publisher territories, commission, cookie, payout, feed/API terms or a dedicated affiliate email. The listed deliverypartners@wayfair.com contact is for transportation partners, not affiliate publishers, and was not used.",
+      "nextAction": "Find the official affiliate publisher application or an affiliate-specific contact through Wayfair's official programme channel; confirm publisher-country eligibility, commission, cookie, attribution, product feed/API, image licence, reporting and payout before applying or publishing."
     }
   ],
   "cjAudit": {
@@ -7239,14 +7277,14 @@
       "id": "yh-charter-referral",
       "name": "YH Charter",
       "category": "Luxury & Prestige / Yachts",
-      "status": "contacted; no approval",
+      "status": "email bounced; no approval",
       "trackingLinkStatus": "Not generated",
       "feedApiStatus": "API and booking widget advertised; access not granted",
       "productsImported": 0,
       "productsVisibleCount": 0,
       "clickTested": false,
       "attributionTested": false,
-      "nextAction": "Await reply; confirm terms, publisher eligibility, tracking, feed/widget licence and payout."
+      "nextAction": "Do not retry the bounced email address. Use only a different verified official partner contact or the official referral form; tracking, feed/API and attribution remain unverified."
     },
     {
       "id": "tectake-retailads-affiliate",
@@ -7273,6 +7311,19 @@
       "clickTested": false,
       "attributionTested": false,
       "nextAction": "Confirm country eligibility, reward currency and application requirements; submit only through the official form after required personal details are available."
+    },
+    {
+      "id": "wayfair-affiliate-program",
+      "name": "Wayfair Affiliate Program",
+      "category": "Home & Living / Furniture / Homeware",
+      "status": "prospect; official affiliate programme confirmed, no application",
+      "trackingLinkStatus": "Not generated",
+      "feedApiStatus": "Not verified; no publisher access or feed/API licence obtained",
+      "productsImported": 0,
+      "productsVisibleCount": 0,
+      "clickTested": false,
+      "attributionTested": false,
+      "nextAction": "Identify official publisher onboarding and confirm territories, feed/API, image permissions and payout. Do not use the transportation-partner email as an affiliate contact."
     }
   ]
 }
