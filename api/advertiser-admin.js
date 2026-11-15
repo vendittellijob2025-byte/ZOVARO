@@ -18,13 +18,9 @@ function verifySession(token, secret) {
   } catch { return false; }
 }
 async function readStore() {
-  try {
-    const blob = await get("advertiser-management/clients.json", { access: "private", useCache: false });
-    if (!blob || blob.statusCode !== 200 || !blob.stream) return { schema: "zovaro.advertisers.v1", clients: [], updated_at: null };
-    return JSON.parse(Buffer.from(await new Response(blob.stream).arrayBuffer()).toString("utf8"));
-  } catch {
-    return { schema: "zovaro.advertisers.v1", clients: [], updated_at: null };
-  }
+  const blob = await get("advertiser-management/clients.json", { access: "private", useCache: false });
+  if (!blob || blob.statusCode !== 200 || !blob.stream) return { schema: "zovaro.advertisers.v1", clients: [], updated_at: null };
+  return JSON.parse(Buffer.from(await new Response(blob.stream).arrayBuffer()).toString("utf8"));
 }
 async function writeStore(store) {
   store.updated_at = new Date().toISOString();
