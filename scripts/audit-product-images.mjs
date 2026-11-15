@@ -310,6 +310,7 @@ async function analyseProduct(product, detector, classifier, RawImage, taxonomy)
     title: String(product.englishTitle || product.title || "").slice(0, 180),
     category: String(product.englishCategory || product.category || ""),
     imageUrl,
+    visualClassifier: IMAGE_CLASSIFIER_ID,
     auditedAt: new Date().toISOString()
   };
   try {
@@ -430,6 +431,9 @@ async function main() {
     return product.imageLink && (
       !previous ||
       previous.imageUrl !== product.imageLink ||
+      previous.visualClassifier !== IMAGE_CLASSIFIER_ID ||
+      !previous.categoryCheck?.visualAction ||
+      !previous.categoryCheck?.visualSubcategoryAction ||
       !Number.isFinite(auditedAt) ||
       auditedAt < recheckBefore
     );
