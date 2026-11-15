@@ -37,7 +37,12 @@ function addMonths(dateString, count) {
   date.setUTCDate(Math.min(day, lastDay));
   return date.toISOString().slice(0, 10);
 }
-function addDays(dateString, count) {\n  const date = new Date(dateString + "T12:00:00.000Z");\n  date.setUTCDate(date.getUTCDate() + count);\n  return date.toISOString().slice(0, 10);\n}\nfunction paymentStatus(client, today) {
+function addDays(dateString, count) {
+  const date = new Date(dateString + "T12:00:00.000Z");
+  date.setUTCDate(date.getUTCDate() + count);
+  return date.toISOString().slice(0, 10);
+}
+function paymentStatus(client, today) {
   if (client.status !== "active") return client.status;
   if (client.plan !== "monthly") return "active";
   const due = client.next_payment_due;
@@ -59,8 +64,13 @@ export default async function handler(req, res) {
     try {
       const store = await readStore();
       const today = new Date().toISOString().slice(0, 10);
+      const month = today.slice(0, 7);
       const clients = store.clients.map(client => ({ ...client, payment_status: paymentStatus(client, today) }));
-      return res.status(200).json({ updated_at: store.updated_at, clients, generated_at: new Date().toISOString() });
+      const monthlyAudit = await get("advertiser-management/monthly-audits/" + month + ".json", { access: "private", useCache: false }).then(async blob => {
+        if (!blob || blob.statusCode !== 200 || !blob.stream) return null;
+        return JSON.parse(Buffer.from(await new Response(blob.stream).arrayBuffer()).toString("utf8"));
+      }).catch(() => null);
+      return res.status(200).json({ updated_at: store.updated_at, clients, monthly_audit: monthlyAudit, generated_at: new Date().toISOString() });
     } catch (error) {
       console.error("Advertiser store read failed:", error);
       return res.status(503).json({ error: "Impossibile leggere il registro inserzionisti." });
