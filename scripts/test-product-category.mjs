@@ -135,11 +135,11 @@ const cases = [
   ["Abelssoft StartupStar 2025", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["Abelssoft Undeleter 2025", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["Abelssoft WashAndGo 24", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
-  ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Fashion"],
+  ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Beauty"],
   ["Le Specs Air Heart Cat-Eye Sunglasses", "Fashion"],
 ["Rexing CPW-1 Wireless Apple CarPlay Adapter", "Electronics"],
   ["Rexing Smart Hardwire Kit with 360 Motion Detection", "Electronics"],
-  ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Fashion"],
+  ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Beauty"],
   ["UNice Sport-Friendly Glueless Curly Wig", "Beauty"],
   ["Chi Tea Tree Oil Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Clinique Travel Size Take The Day Off Cleansing Balm", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
@@ -224,6 +224,8 @@ const departmentCases = [
   ["Leather Ankle Boots", "Fashion", "Shoes > Boots"],
   ["Women's Sandals", "Fashion", "Shoes > Sandals"],
   ["Formal Oxford Shoes", "Fashion", "Shoes > Formal Shoes"],
+  ["DREAM PAIRS Faux Suede Moccasin Slippers", "Fashion", "Shoes > Slippers"],
+  ["BRUNO MARC Men s Classic Metallic Horsebit Loafers", "Fashion", "Shoes > Formal Shoes"],
   ["Single Shoe", "Fashion", "Shoes"],
   ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
   ["Baby Bottle with Silicone Nipple", "Babies", "Feeding & Nursing"],
@@ -287,7 +289,8 @@ for (const [category, path] of [
   ["Fashion", "Shoes > Sneakers"],
   ["Fashion", "Shoes > Boots"],
   ["Fashion", "Shoes > Sandals"],
-  ["Fashion", "Shoes > Formal Shoes"]
+  ["Fashion", "Shoes > Formal Shoes"],
+  ["Fashion", "Shoes > Slippers"]
 ]) {
   assert.equal(treeHasPath(category, path), true, "Missing browse-tree path: " + category + " > " + path);
 }
