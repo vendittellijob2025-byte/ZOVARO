@@ -27,9 +27,9 @@ for (const product of catalog.products) {
   const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
   const visualCheck = visualResults.get(key)?.categoryCheck;
   const nextCategory = visualCategoryOverride(visualCheck) || textCategory;
-  // Image-model disagreements are recorded by the image audit for review.
-  // They are never allowed to silently overwrite a category without matching
-  // product-title/description evidence.
+  // A visual override is accepted only when CLIP's top category clears the
+  // explicit confidence and margin thresholds in visualCategoryOverride().
+  // All lower-confidence disagreements remain review signals, not overrides.
   const previous = String(product.category || "");
   if (previous !== nextCategory) {
     changes[previous || "(empty)"] = (changes[previous || "(empty)"] || 0) + 1;
