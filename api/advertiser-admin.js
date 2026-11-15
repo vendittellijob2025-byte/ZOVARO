@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { get, put } from "@vercel/blob";
+import { get, list, put } from "@vercel/blob";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
@@ -18,6 +18,8 @@ function verifySession(token, secret) {
   } catch { return false; }
 }
 async function readStore() {
+  const existing = await list({ prefix: "advertiser-management/clients.json", limit: 1 });
+  if (!existing.blobs.length) return { schema: "zovaro.advertisers.v1", clients: [], updated_at: null };
   const blob = await get("advertiser-management/clients.json", { access: "private", useCache: false });
   if (!blob || blob.statusCode !== 200 || !blob.stream) return { schema: "zovaro.advertisers.v1", clients: [], updated_at: null };
   return JSON.parse(Buffer.from(await new Response(blob.stream).arrayBuffer()).toString("utf8"));
