@@ -43,7 +43,8 @@
     "Correction 2026-11-14: the official tectake DE programme page links to RetailAds, whose current programme listing publicly identifies Romy Gröschl (romy.groeschl@tectake.de) as the affiliate contact. A personalised enquiry was sent to that address (Gmail thread 1a1dc98cd556b885). Current published terms: 7% standard, 4% voucher/cashback, 60-day cookie, weekly sales validation, and commission only on transactions from the German online shop. Weekly sales validation is not a weekly payout; payout terms remain undisclosed. The earlier no-email prospect draft for tectake is superseded and must not be sent.",
     "CJ technical matrix 2026-11-14: the latest sync run 43652835775 found 26 Active/Joined advertisers, 20 with a positive feed and 6 without a positive feed. It received 225,717 feed records, 222,878 passed pre-dedup validation, 190,600 unique records passed, and 869 image-quality failures were excluded from the public selection. The run built 19,017 candidate public products but failed four category classifier tests before commit; the commit step was skipped, so no new products were published. The previous catalog snapshot contained 16,793 records. Per-advertiser feed/import counts and unverified public counts are in cjAudit.advertisers. All 190,600 candidate records had URL-format-valid CJ tracking links, but no live click or attribution test was performed. Category fixes are being prepared in PR #24; do not rerun/publish until the category tests pass.",
     "Operational update 2026-11-14: the YH Charter message to partners@yh-charter.com returned a 550 5.1.1 recipient-not-found delivery failure; the record is marked bounced and the address must not be retried. Gmail showed 13 delivery-failure notifications in the last 24 hours (the other 12 affected addresses were already marked bounced/do-not-retry). Mii Cosmetics, SimpliSafe UK and Todson provided automated acknowledgements/support routing only; no partner approval or substantive terms were received. No new partnership email was sent in this run: Wayfair's official affiliate page confirms a programme but publishes no affiliate contact, and its deliverypartners@wayfair.com address is specifically for transportation partnerships, so it was not misused.",
-    "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed."
+    "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed.",
+    "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run."
   ],
   "prospects": [
     {
@@ -396,7 +397,12 @@
       "sourceChecked": "2026-11-11",
       "contactedAt": "2026-11-14T23:20:28Z",
       "emailMessageId": "1a1dc5cbe9e8d577",
-      "contactEvidence": "Gmail sent thread 1a1dc5cbe9e8d577"
+      "contactEvidence": "Gmail sent thread 1a1dc5cbe9e8d577",
+      "lastEmailSentAt": "2026-11-14T23:20:28Z",
+      "lastEmailSubject": "ZOVARO Worldwide — FARFETCH global affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc5cbe9e8d577",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "mytheresa-affiliate",
@@ -423,7 +429,12 @@
       "sourceChecked": "2026-11-11",
       "contactedAt": "2026-11-14T23:20:30Z",
       "emailMessageId": "1a1dc5cc8cf7cdca",
-      "contactEvidence": "Gmail sent thread 1a1dc5cc8cf7cdca"
+      "contactEvidence": "Gmail sent thread 1a1dc5cc8cf7cdca",
+      "lastEmailSentAt": "2026-11-14T23:20:30Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Mytheresa affiliate publisher application enquiry",
+      "lastEmailThreadId": "1a1dc5cc8cf7cdca",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "cos-affiliate",
@@ -565,7 +576,12 @@
       "sourceChecked": "2026-11-11",
       "contactedAt": "2026-11-14T23:20:32Z",
       "emailMessageId": "1a1dc5cce54909d4",
-      "contactEvidence": "Gmail sent thread 1a1dc5cce54909d4"
+      "contactEvidence": "Gmail sent thread 1a1dc5cce54909d4",
+      "lastEmailSentAt": "2026-11-14T23:20:32Z",
+      "lastEmailSubject": "ZOVARO Worldwide — PlayStation Direct Partnerize publisher enquiry",
+      "lastEmailThreadId": "1a1dc5cce54909d4",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "jets-and-partners",
@@ -814,7 +830,12 @@
       "sourceEvidence": "Official GlobalFoodHub affiliate page.",
       "contactedAt": "2026-11-14T23:20:33Z",
       "emailMessageId": "1a1dc5cd51cffc84",
-      "contactEvidence": "Gmail sent thread 1a1dc5cd51cffc84"
+      "contactEvidence": "Gmail sent thread 1a1dc5cd51cffc84",
+      "lastEmailSentAt": "2026-11-14T23:20:33Z",
+      "lastEmailSubject": "ZOVARO Worldwide — GlobalFoodHub affiliate and grocery catalogue partnership",
+      "lastEmailThreadId": "1a1dc5cd51cffc84",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "foreo",
@@ -3414,7 +3435,7 @@
         "email": "partner@babytula.com",
         "sourceUrl": "https://babytula.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:44:28Z",
       "emailMessageId": "1a1dc3b44ccf14f5",
       "territories": [
         "Not yet confirmed"
@@ -3428,7 +3449,12 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; verify publisher/country eligibility, exact commission, feed/deep links, image permissions, conversion reporting and payout before publication.",
-      "formatCorrectionMessageId": "1a1dc3bcb0355f8b"
+      "formatCorrectionMessageId": "1a1dc3bcb0355f8b",
+      "lastEmailSentAt": "2026-11-14T22:44:28Z",
+      "lastEmailSubject": "Re: ZOVARO Worldwide — Baby Tula affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3b44ccf14f5",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "brandsmart-usa-affiliate",
@@ -3441,7 +3467,7 @@
         "email": "affiliate@bm1.brandsmart.com",
         "sourceUrl": "https://www.brandsmartusa.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:44:33Z",
       "emailMessageId": "1a1dc3b51594617d",
       "territories": [
         "US regional fulfilment; exact coverage to confirm"
@@ -3459,7 +3485,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Message blocked by recipient server (two delivery failures)",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:44:33Z",
+      "lastEmailSubject": "Re: ZOVARO Worldwide — BrandsMart affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3b51594617d",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "columbia-sportswear-affiliate",
@@ -3472,7 +3502,7 @@
         "email": "columbia@accelerationpartners.com",
         "sourceUrl": "https://www.columbiasportswear.co.uk/l/affiliate-program-columbia"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:44:39Z",
       "emailMessageId": "1a1dc3b5a175c575",
       "territories": [
         "UK programme page; international publisher eligibility pending"
@@ -3486,7 +3516,12 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; confirm application route, eligible territories, current terms, feed access, deep links and approved media.",
-      "formatCorrectionMessageId": "1a1dc3bf5872655f"
+      "formatCorrectionMessageId": "1a1dc3bf5872655f",
+      "lastEmailSentAt": "2026-11-14T22:44:39Z",
+      "lastEmailSubject": "Re: ZOVARO Worldwide — Columbia Sportswear affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3b5a175c575",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "petco-affiliate",
@@ -3499,7 +3534,7 @@
         "email": "petcoaffiliates@petco.com",
         "sourceUrl": "https://www.petco.com/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:44:41Z",
       "emailMessageId": "1a1dc3b617773b88",
       "territories": [
         "Not yet confirmed"
@@ -3513,7 +3548,12 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; verify publisher eligibility, supported countries/fulfilment, programme terms, feed, tracking and media permissions.",
-      "formatCorrectionMessageId": "1a1dc3bfe228fb05"
+      "formatCorrectionMessageId": "1a1dc3bfe228fb05",
+      "lastEmailSentAt": "2026-11-14T22:44:41Z",
+      "lastEmailSubject": "Re: ZOVARO Worldwide — Petco affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc3b617773b88",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "coastal-pet-affiliate",
@@ -3526,7 +3566,7 @@
         "email": "affiliates@coastalpet.com",
         "sourceUrl": "https://www.coastalpet.com/affiliates/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:17Z",
       "emailMessageId": "1a1dc3c88e5bc105",
       "territories": [
         "US qualified purchases per public page; other territories unconfirmed"
@@ -3539,7 +3579,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm application route, publisher eligibility, exact country restrictions, feed, tracking and approved product assets."
+      "nextAction": "Await reply; confirm application route, publisher eligibility, exact country restrictions, feed, tracking and approved product assets.",
+      "lastEmailSentAt": "2026-11-14T22:45:17Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Coastal Pet affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3c88e5bc105",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "la-coqueta-kids-affiliate",
@@ -3552,7 +3597,7 @@
         "email": "partnerships@lacoquetakids.com",
         "sourceUrl": "https://us.lacoquetakids.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:19Z",
       "emailMessageId": "1a1dc3c936b409d3",
       "territories": [
         "Not yet confirmed"
@@ -3565,7 +3610,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher and customer territory eligibility, current terms, product feed, deep links and media rights."
+      "nextAction": "Await reply; confirm publisher and customer territory eligibility, current terms, product feed, deep links and media rights.",
+      "lastEmailSentAt": "2026-11-14T22:45:19Z",
+      "lastEmailSubject": "ZOVARO Worldwide — La Coqueta Kids affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3c936b409d3",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "aecojoy-homeleader-affiliate",
@@ -3578,7 +3628,7 @@
         "email": "henry@advertisepurple.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/113628"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:21Z",
       "emailMessageId": "1a1dc3c9a69b25e0",
       "territories": [
         "30 global warehouses advertised; delivery and publisher territories need confirmation"
@@ -3591,7 +3641,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify current commission, territories, feed, tracking and image permissions."
+      "nextAction": "Await reply; verify current commission, territories, feed, tracking and image permissions.",
+      "lastEmailSentAt": "2026-11-14T22:45:21Z",
+      "lastEmailSubject": "ZOVARO Worldwide — AECOJOY affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3c9a69b25e0",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "garvee-affiliate",
@@ -3604,7 +3659,7 @@
         "email": "affiliate@garvee.com",
         "sourceUrl": "https://ui.awin.com/advertiser-terms/52725"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:24Z",
       "emailMessageId": "1a1dc3ca4c91d471",
       "territories": [
         "US delivery explicitly stated on programme terms; other territories unconfirmed"
@@ -3617,7 +3672,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm ZOVARO's Awin eligibility, supported customer territories, feed, tracking, approved assets and payout."
+      "nextAction": "Await reply; confirm ZOVARO's Awin eligibility, supported customer territories, feed, tracking, approved assets and payout.",
+      "lastEmailSentAt": "2026-11-14T22:45:24Z",
+      "lastEmailSubject": "ZOVARO Worldwide — GARVEE affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3ca4c91d471",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "husqvarna-affiliate",
@@ -3630,7 +3690,7 @@
         "email": "affiliates@husqvarnagroup.com",
         "sourceUrl": "https://www.husqvarna.com/id/learn-and-discover/press-room/husqvarna-affiliate-program/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:26Z",
       "emailMessageId": "1a1dc3cacd67de71",
       "territories": [
         "Not yet confirmed"
@@ -3643,7 +3703,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify current CJ advertiser programme, eligible countries, terms, feed, tracking and approved assets."
+      "nextAction": "Await reply; verify current CJ advertiser programme, eligible countries, terms, feed, tracking and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:45:26Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Husqvarna affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3cacd67de71",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "joyreal-toys-affiliate",
@@ -3656,7 +3721,7 @@
         "email": "bd@joyrealtoys.com",
         "sourceUrl": "https://joyrealtoys.com/pages/joyreal-toys-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:28Z",
       "emailMessageId": "1a1dc3cb4bba07e8",
       "territories": [
         "Not yet confirmed"
@@ -3670,7 +3735,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher and customer territories, commission, cookie, catalogue, tracking, image permission and whether bank transfer can be offered."
+      "nextAction": "Await reply; confirm publisher and customer territories, commission, cookie, catalogue, tracking, image permission and whether bank transfer can be offered.",
+      "lastEmailSentAt": "2026-11-14T22:45:28Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Joyreal Toys affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3cb4bba07e8",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "pro-breeze-affiliate",
@@ -3683,7 +3753,7 @@
         "email": "aoife@oneretailgroup.com",
         "sourceUrl": "https://probreeze.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:45:58Z",
       "emailMessageId": "1a1dc3d2a34abcdb",
       "territories": [
         "UK and international presence advertised; exact publisher and fulfilment territories pending"
@@ -3696,7 +3766,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm eligible countries, terms, feed, tracking and asset permissions."
+      "nextAction": "Await reply; confirm eligible countries, terms, feed, tracking and asset permissions.",
+      "lastEmailSentAt": "2026-11-14T22:45:58Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Pro Breeze affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d2a34abcdb",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "willit-affiliate",
@@ -3709,7 +3784,7 @@
         "email": "collab@willitsports.com",
         "sourceUrl": "https://www.willitsports.com/pages/willit-affiliates-creators"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:00Z",
       "emailMessageId": "1a1dc3d32b48bda9",
       "territories": [
         "Not yet confirmed"
@@ -3722,7 +3797,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin programme access, country coverage, product feed, tracking and approved media."
+      "nextAction": "Await reply; verify Awin programme access, country coverage, product feed, tracking and approved media.",
+      "lastEmailSentAt": "2026-11-14T22:46:00Z",
+      "lastEmailSubject": "ZOVARO Worldwide — WILLIT affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3d32b48bda9",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "velotric-affiliate",
@@ -3735,7 +3815,7 @@
         "email": "affiliate@velotric.bike",
         "sourceUrl": "https://www.velotricbike.com/pages/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:03Z",
       "emailMessageId": "1a1dc3d3c64eef11",
       "territories": [
         "Not yet confirmed"
@@ -3748,7 +3828,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm eligible territories, programme selection, feed, deep links and approved assets."
+      "nextAction": "Await reply; confirm eligible territories, programme selection, feed, deep links and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:46:03Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Velotric affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d3c64eef11",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "sorel-affiliate",
@@ -3761,7 +3846,7 @@
         "email": "sorel@accelerationpartners.com",
         "sourceUrl": "https://www.sorel.ch/en/l/affiliate-program-sorel"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:05Z",
       "emailMessageId": "1a1dc3d45d87604a",
       "territories": [
         "Not yet confirmed"
@@ -3774,7 +3859,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher/customer countries, feed, deep links, permitted images and programme terms."
+      "nextAction": "Await reply; verify publisher/customer countries, feed, deep links, permitted images and programme terms.",
+      "lastEmailSentAt": "2026-11-14T22:46:05Z",
+      "lastEmailSubject": "ZOVARO Worldwide — SOREL affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3d45d87604a",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "lenovo-north-america-affiliate",
@@ -3787,7 +3877,7 @@
         "email": "NA_affiliate@lenovo.com",
         "sourceUrl": "https://www.lenovo.com/us/en/landingpage/promotions/affiliate/affiliate-program/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:07Z",
       "emailMessageId": "1a1dc3d4f689e762",
       "territories": [
         "North America programme contact; customer and publisher territories pending"
@@ -3804,7 +3894,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Message blocked by recipient server",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:46:07Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Lenovo North America affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d4f689e762",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "rowenta-usa-affiliate",
@@ -3817,7 +3911,7 @@
         "email": "affiliates@rowentausa.com",
         "sourceUrl": "https://www.rowentausa.com/rowenta-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:10Z",
       "emailMessageId": "1a1dc3d586fa8ad1",
       "territories": [
         "Not yet confirmed"
@@ -3830,7 +3924,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm CJ advertiser status, eligible territories, commission, feed, tracking and assets."
+      "nextAction": "Await reply; confirm CJ advertiser status, eligible territories, commission, feed, tracking and assets.",
+      "lastEmailSentAt": "2026-11-14T22:46:10Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Rowenta affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3d586fa8ad1",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "saucony-eu-affiliate",
@@ -3843,7 +3942,7 @@
         "email": "Affiliates.EU@wwwinc.com",
         "sourceUrl": "https://www.saucony.com/ES/es_SE/content?caid=become-affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:12Z",
       "emailMessageId": "1a1dc3d636f7ce48",
       "territories": [
         "EU programme; exact publisher and customer countries pending"
@@ -3856,7 +3955,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Rakuten eligibility, exact countries, feed, links, assets and payout."
+      "nextAction": "Await reply; verify Rakuten eligibility, exact countries, feed, links, assets and payout.",
+      "lastEmailSentAt": "2026-11-14T22:46:12Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Saucony EU affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d636f7ce48",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "eskute-eu-affiliate",
@@ -3869,7 +3973,7 @@
         "email": "affiliate.uk@eskute.com",
         "sourceUrl": "https://eu.eskute.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:15Z",
       "emailMessageId": "1a1dc3d6d0cc8667",
       "territories": [
         "Europe; exact customer delivery countries pending"
@@ -3882,7 +3986,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher/customer country coverage, current rates, feed, tracking and approved media."
+      "nextAction": "Await reply; confirm publisher/customer country coverage, current rates, feed, tracking and approved media.",
+      "lastEmailSentAt": "2026-11-14T22:46:15Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Eskute EU affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d6d0cc8667",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "homsee-affiliate",
@@ -3895,7 +4004,7 @@
         "email": "Kurt@homsee.com",
         "sourceUrl": "https://homsee.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:17Z",
       "emailMessageId": "1a1dc3d73e5713ef",
       "advertiserId": "8027729",
       "territories": [
@@ -3909,7 +4018,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify advertiser status in CJ, exact terms, feed, click URLs, country restrictions and image permissions."
+      "nextAction": "Await reply; verify advertiser status in CJ, exact terms, feed, click URLs, country restrictions and image permissions.",
+      "lastEmailSentAt": "2026-11-14T22:46:17Z",
+      "lastEmailSubject": "ZOVARO Worldwide — HOMSEE affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d73e5713ef",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "corel-affiliate",
@@ -3922,7 +4036,7 @@
         "email": "affiliates@corel.com",
         "sourceUrl": "https://www.corel.com/en/affiliate/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:19Z",
       "emailMessageId": "1a1dc3d7c981025f",
       "territories": [
         "Not yet confirmed"
@@ -3935,7 +4049,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, supported countries, software product links, approved creatives and current payout terms."
+      "nextAction": "Await reply; confirm publisher eligibility, supported countries, software product links, approved creatives and current payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:46:19Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Corel affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3d7c981025f",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "guzzini-affiliate",
@@ -3948,7 +4067,7 @@
         "email": "guzzini@stratagem.agency",
         "sourceUrl": "https://us.guzzini.com/pages/become-an-affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:22Z",
       "emailMessageId": "1a1dc3d87c2c297e",
       "territories": [
         "US programme page; exact eligible customer markets pending"
@@ -3962,7 +4081,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher/customer territories, feed, tracking, image permission and payout method."
+      "nextAction": "Await reply; confirm publisher/customer territories, feed, tracking, image permission and payout method.",
+      "lastEmailSentAt": "2026-11-14T22:46:22Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Guzzini affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d87c2c297e",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "jomashop-affiliate",
@@ -3975,7 +4099,7 @@
         "email": "affiliate@jomashop.com",
         "sourceUrl": "https://help.jomashop.com/hc/en-us/articles/11923106976027-Affiliate-Program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:24Z",
       "emailMessageId": "1a1dc3d902ef7581",
       "territories": [
         "Global programme described; exact eligible countries pending"
@@ -3988,7 +4112,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify CJ advertiser status, eligible territories, product feed, tracking, brand permissions and payout."
+      "nextAction": "Await reply; verify CJ advertiser status, eligible territories, product feed, tracking, brand permissions and payout.",
+      "lastEmailSentAt": "2026-11-14T22:46:24Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Jomashop affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3d902ef7581",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "ao-uk-affiliate",
@@ -4001,7 +4130,7 @@
         "email": "affiliate@ao.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/19526"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:27Z",
       "emailMessageId": "1a1dc3d9a4bd2b97",
       "territories": [
         "UK retailer; customer delivery footprint to confirm"
@@ -4014,7 +4143,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, UK fulfilment coverage, feed, tracking, approved assets and payout terms."
+      "nextAction": "Await reply; confirm publisher eligibility, UK fulfilment coverage, feed, tracking, approved assets and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:46:27Z",
+      "lastEmailSubject": "ZOVARO Worldwide — AO.com affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3d9a4bd2b97",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "charles-keith-affiliate",
@@ -4027,7 +4161,7 @@
         "email": "affiliates@charleskeith.com",
         "sourceUrl": "https://www.charleskeith.com/us/information/about-us/affiliates.html"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:28Z",
       "emailMessageId": "1a1dc3da02ffddfa",
       "territories": [
         "Not yet confirmed"
@@ -4040,7 +4174,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm programme/network, publisher and customer countries, feed, tracking and approved content."
+      "nextAction": "Await reply; confirm programme/network, publisher and customer countries, feed, tracking and approved content.",
+      "lastEmailSentAt": "2026-11-14T22:46:28Z",
+      "lastEmailSubject": "ZOVARO Worldwide — CHARLES & KEITH affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3da02ffddfa",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "leisure-lakes-bikes-affiliate",
@@ -4053,7 +4192,7 @@
         "email": "affiliates@mediaworks.co.uk",
         "sourceUrl": "https://ui.awin.com/merchant-profile/6914"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:30Z",
       "emailMessageId": "1a1dc3da7dfcef9d",
       "territories": [
         "UK retailer; exact customer coverage pending"
@@ -4066,7 +4205,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, feed, tracking, image rights and payout."
+      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, feed, tracking, image rights and payout.",
+      "lastEmailSentAt": "2026-11-14T22:46:30Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Leisure Lakes Bikes affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3da7dfcef9d",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "tech21-affiliate",
@@ -4079,7 +4223,7 @@
         "email": "tech21@acquire.co.uk",
         "sourceUrl": "https://ui.awin.com/merchant-profile/6675"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:46:32Z",
       "emailMessageId": "1a1dc3db0682fb95",
       "territories": [
         "US and Canada programme per public Awin profile"
@@ -4096,7 +4240,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:46:32Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Tech21 affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3db0682fb95",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "accor-all-affiliate",
@@ -4109,7 +4257,7 @@
         "email": "contact.all.affiliation@accor.com",
         "sourceUrl": "https://all.accor.com/a/en/affiliate-program.html"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:10Z",
       "emailMessageId": "1a1dc3e4304a34b6",
       "territories": [
         "Not yet confirmed"
@@ -4122,7 +4270,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify CJ campaign terms, eligible countries, commission, hotel data, deep links and approved assets."
+      "nextAction": "Await reply; verify CJ campaign terms, eligible countries, commission, hotel data, deep links and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:47:10Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Accor affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e4304a34b6",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "advance-auto-parts-affiliate",
@@ -4135,7 +4288,7 @@
         "email": "advanceauto@gen3marketing.com",
         "sourceUrl": "https://shop.advanceautoparts.com/o/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:13Z",
       "emailMessageId": "1a1dc3e514e0b8db",
       "territories": [
         "US; retailer reports stores in 40 states"
@@ -4148,7 +4301,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Impact acceptance, delivery area, catalog feed, click tracking and image rights."
+      "nextAction": "Await reply; verify Impact acceptance, delivery area, catalog feed, click tracking and image rights.",
+      "lastEmailSentAt": "2026-11-14T22:47:13Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Advance Auto Parts affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3e514e0b8db",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "every-foods-affiliate",
@@ -4161,7 +4319,7 @@
         "email": "sponsoring@every-foods.com",
         "sourceUrl": "https://ambassador.every-foods.com/program-legal/terms"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:16Z",
       "emailMessageId": "1a1dc3e5b9c7ee79",
       "territories": [
         "Not yet confirmed"
@@ -4174,7 +4332,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm countries, product catalogue, tracking, commission, payout and approved assets. Follow disclosure and anti-spam rules."
+      "nextAction": "Await reply; confirm countries, product catalogue, tracking, commission, payout and approved assets. Follow disclosure and anti-spam rules.",
+      "lastEmailSentAt": "2026-11-14T22:47:16Z",
+      "lastEmailSubject": "ZOVARO Worldwide — every® Foods affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e5b9c7ee79",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "nh-hotels-affiliate",
@@ -4187,7 +4350,7 @@
         "email": "affiliate@nh-hotels.com",
         "sourceUrl": "https://www.nh-hotels.com/en/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:18Z",
       "emailMessageId": "1a1dc3e617b177d6",
       "territories": [
         "350+ hotels in 28 countries advertised; publisher eligibility to confirm"
@@ -4200,7 +4363,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify current affiliate network, commission, feed, customer coverage, deep links and media permissions."
+      "nextAction": "Await reply; verify current affiliate network, commission, feed, customer coverage, deep links and media permissions.",
+      "lastEmailSentAt": "2026-11-14T22:47:18Z",
+      "lastEmailSubject": "ZOVARO Worldwide — NH Hotels affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3e617b177d6",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "olivers-travels-affiliate",
@@ -4213,7 +4381,7 @@
         "email": "affiliates@oliverstravels.com",
         "sourceUrl": "https://www.oliverstravels.com/affiliates/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:20Z",
       "emailMessageId": "1a1dc3e6c82e2d20",
       "territories": [
         "Not yet confirmed"
@@ -4226,7 +4394,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify eligible territories, feed/catalogue, tracking, media rights and payout terms."
+      "nextAction": "Await reply; verify eligible territories, feed/catalogue, tracking, media rights and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:47:20Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Oliver's Travels affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e6c82e2d20",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "todson-affiliate",
@@ -4239,7 +4412,7 @@
         "email": "info@todson.com",
         "sourceUrl": "https://shop.todson.com/pages/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:22Z",
       "emailMessageId": "1a1dc3e73d5e4692",
       "territories": [
         "US programme; other markets unconfirmed"
@@ -4259,7 +4432,11 @@
         "type": "automated_acknowledgement",
         "summary": "Automated support response directs requests to a support portal; it is not an affiliate approval or partnership reply.",
         "evidence": "Gmail thread 1a1dc41987a55577"
-      }
+      },
+      "lastEmailSentAt": "2026-11-14T22:47:22Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Todson affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3e73d5e4692",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "nuby-affiliate",
@@ -4272,7 +4449,7 @@
         "email": "affiliates@nuby.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/71255"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:24Z",
       "emailMessageId": "1a1dc3e7b5dec020",
       "territories": [
         "Distributed in 155+ countries; programme customer territory needs confirmation"
@@ -4285,7 +4462,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin programme access, publisher/customer territories, current feed, tracking and approved imagery."
+      "nextAction": "Await reply; confirm Awin programme access, publisher/customer territories, current feed, tracking and approved imagery.",
+      "lastEmailSentAt": "2026-11-14T22:47:24Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Nûby affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e7b5dec020",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "little-baby-toys-affiliate",
@@ -4298,7 +4480,7 @@
         "email": "support@littlebabytoys.co",
         "sourceUrl": "https://littlebabytoys.co/media-partnerships/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:26Z",
       "emailMessageId": "1a1dc3e82bfb7f36",
       "territories": [
         "Not yet confirmed"
@@ -4311,7 +4493,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify dedicated affiliate programme, commission, countries, tracking, product data and image permissions."
+      "nextAction": "Await reply; verify dedicated affiliate programme, commission, countries, tracking, product data and image permissions.",
+      "lastEmailSentAt": "2026-11-14T22:47:26Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Little Baby Toys affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e82bfb7f36",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "insignia-luxury-affiliate",
@@ -4324,7 +4511,7 @@
         "email": "marketing@insignia.com",
         "sourceUrl": "https://insignia-com.insidev.tech/partner-with-us/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:29Z",
       "emailMessageId": "1a1dc3e8c2ad6602",
       "territories": [
         "Not yet confirmed"
@@ -4337,7 +4524,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm partner eligibility, referral attribution, qualifying enquiry process, territories, assets and payout terms."
+      "nextAction": "Await reply; confirm partner eligibility, referral attribution, qualifying enquiry process, territories, assets and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:47:29Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Insignia luxury partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e8c2ad6602",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "marriott-affiliate",
@@ -4350,7 +4542,7 @@
         "email": "affiliatemanager@marriott.com",
         "sourceUrl": "https://www.marriott.com/marriott/affiliateprogramfaq.mi"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:31Z",
       "emailMessageId": "1a1dc3e9617fa047",
       "territories": [
         "Global properties in 138 countries/territories; publisher eligibility to confirm"
@@ -4364,7 +4556,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Partnerize eligibility, commission, exact customer countries, hotel feed, approved creatives and payout method."
+      "nextAction": "Await reply; verify Partnerize eligibility, commission, exact customer countries, hotel feed, approved creatives and payout method.",
+      "lastEmailSentAt": "2026-11-14T22:47:31Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Marriott affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc3e9617fa047",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "luxury-hotels-group",
@@ -4377,7 +4574,7 @@
         "email": "info@luxuryhotels.group",
         "sourceUrl": "https://luxuryhotels.group/contact-us"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:47:40Z",
       "emailMessageId": "1a1dc3eb90409b16",
       "territories": [
         "300+ destinations advertised; exact inventory and coverage to confirm"
@@ -4390,7 +4587,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights."
+      "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights.",
+      "lastEmailSentAt": "2026-11-14T22:47:40Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Luxury Hotels Group listing and referral partnership",
+      "lastEmailThreadId": "1a1dc3eb90409b16",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "cricut-affiliate",
@@ -4403,7 +4605,7 @@
         "email": "cricut@accelerationpartners.com",
         "sourceUrl": "https://cricut.com/en-ca/partners"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:48:51Z",
       "emailMessageId": "1a1dc3fcfd72944e",
       "territories": [
         "Canada programme page; exact publisher and customer territories pending"
@@ -4416,7 +4618,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm programme eligibility, territories, feed, tracking and approved assets."
+      "nextAction": "Await reply; confirm programme eligibility, territories, feed, tracking and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:48:51Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Cricut affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3fcfd72944e",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "michaels-affiliate",
@@ -4429,7 +4636,7 @@
         "email": "CJ_Michaels@cj.com",
         "sourceUrl": "https://www.michaels.com/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:48:53Z",
       "emailMessageId": "1a1dc3fd47ccede4",
       "territories": [
         "Not yet confirmed"
@@ -4442,7 +4649,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify CJ application, countries, product feed, exact commission, exclusions and tracking."
+      "nextAction": "Await reply; verify CJ application, countries, product feed, exact commission, exclusions and tracking.",
+      "lastEmailSentAt": "2026-11-14T22:48:53Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Michaels affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc3fd47ccede4",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "allpowers-affiliate",
@@ -4455,7 +4667,7 @@
         "email": "marketing@allpowers.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/38934"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:48:55Z",
       "emailMessageId": "1a1dc3fdd25d3af6",
       "territories": [
         "International programme listing; exact eligible markets pending"
@@ -4468,7 +4680,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm current Awin programme access, territories, feed, tracking and approved media."
+      "nextAction": "Await reply; confirm current Awin programme access, territories, feed, tracking and approved media.",
+      "lastEmailSentAt": "2026-11-14T22:48:55Z",
+      "lastEmailSubject": "ZOVARO Worldwide — ALLPOWERS affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3fdd25d3af6",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "ecoflow-eu-affiliate",
@@ -4481,7 +4698,7 @@
         "email": "eu.affiliate@ecoflow.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/59181"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:48:58Z",
       "emailMessageId": "1a1dc3fe8f11a0f2",
       "territories": [
         "UK, EU, Germany, France, Spain and Italy named in public programme listing; confirm publisher eligibility"
@@ -4494,7 +4711,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify exact market eligibility, feed, links, asset permissions and current payout terms."
+      "nextAction": "Await reply; verify exact market eligibility, feed, links, asset permissions and current payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:48:58Z",
+      "lastEmailSubject": "ZOVARO Worldwide — EcoFlow EU affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc3fe8f11a0f2",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "easunpower-affiliate",
@@ -4507,7 +4729,7 @@
         "email": "avy@easunpower.com",
         "sourceUrl": "https://www.easunpower.com/pages/easunpower-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:48:59Z",
       "emailMessageId": "1a1dc3fef0c38ec8",
       "territories": [
         "Global brand claim; customer fulfilment territories pending"
@@ -4520,7 +4742,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify eligible countries, tracking method, feed, image permissions, payout and reporting."
+      "nextAction": "Await reply; verify eligible countries, tracking method, feed, image permissions, payout and reporting.",
+      "lastEmailSentAt": "2026-11-14T22:48:59Z",
+      "lastEmailSubject": "ZOVARO Worldwide — EASUNPOWER affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3fef0c38ec8",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "steelseries-affiliate",
@@ -4533,7 +4760,7 @@
         "email": "affiliates@steelseries.com",
         "sourceUrl": "https://steelseries.com/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:01Z",
       "emailMessageId": "1a1dc3ff49b9a74c",
       "territories": [
         "Not yet confirmed"
@@ -4546,7 +4773,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Public signup currently states closed; await reply on waitlist or future publisher route. Do not represent as active."
+      "nextAction": "Public signup currently states closed; await reply on waitlist or future publisher route. Do not represent as active.",
+      "lastEmailSentAt": "2026-11-14T22:49:01Z",
+      "lastEmailSubject": "ZOVARO Worldwide — SteelSeries affiliate programme enquiry",
+      "lastEmailThreadId": "1a1dc3ff49b9a74c",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "overland-solar-affiliate",
@@ -4559,7 +4791,7 @@
         "email": "affiliates@overlandsolar.com",
         "sourceUrl": "https://www.overlandsolar.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:02Z",
       "emailMessageId": "1a1dc3ffb3f4478b",
       "territories": [
         "Not yet confirmed"
@@ -4572,7 +4804,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher/customer territories, feed, tracking, approved assets and payout."
+      "nextAction": "Await reply; verify publisher/customer territories, feed, tracking, approved assets and payout.",
+      "lastEmailSentAt": "2026-11-14T22:49:02Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Overland Solar affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc3ffb3f4478b",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "growatt-portable-affiliate",
@@ -4585,7 +4822,7 @@
         "email": "marketing.pps@growatt.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/98001"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:04Z",
       "emailMessageId": "1a1dc40006cec3fc",
       "territories": [
         "Not yet confirmed"
@@ -4598,7 +4835,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify customer markets, current commission schedule, product feed, tracking and approved images."
+      "nextAction": "Await reply; verify customer markets, current commission schedule, product feed, tracking and approved images.",
+      "lastEmailSentAt": "2026-11-14T22:49:04Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Growatt Portable affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc40006cec3fc",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "mustar-musical-instruments",
@@ -4611,7 +4853,7 @@
         "email": "info@mustarmusic.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/116829"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:06Z",
       "emailMessageId": "1a1dc400904b51d4",
       "territories": [
         "US programme; other countries not confirmed"
@@ -4624,7 +4866,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin access, eligible territories, feed, deep links, assets and payout."
+      "nextAction": "Await reply; confirm Awin access, eligible territories, feed, deep links, assets and payout.",
+      "lastEmailSentAt": "2026-11-14T22:49:06Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Mustar musical instruments affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc400904b51d4",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "back-market-affiliate",
@@ -4637,7 +4884,7 @@
         "email": "affiliates@backmarket.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/18275"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:31Z",
       "emailMessageId": "1a1dc406a18be313",
       "territories": [
         "US programme listing and Spain programme reference; exact approved countries pending"
@@ -4651,7 +4898,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin programme access, eligible countries, current commission, feed, tracking and asset permissions."
+      "nextAction": "Await reply; confirm Awin programme access, eligible countries, current commission, feed, tracking and asset permissions.",
+      "lastEmailSentAt": "2026-11-14T22:49:31Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Back Market affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc406a18be313",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "balalah-mobility-affiliate",
@@ -4664,7 +4916,7 @@
         "email": "sales@balalah.com",
         "sourceUrl": "https://balalah.com/pages/become-an-affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:34Z",
       "emailMessageId": "1a1dc40748468595",
       "territories": [
         "Not yet confirmed"
@@ -4677,7 +4929,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; obtain written commission, eligible products, territories, promo code, reporting and payout terms."
+      "nextAction": "Await reply; obtain written commission, eligible products, territories, promo code, reporting and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:49:34Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Balalah mobility affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc40748468595",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "crazy-good-buy-affiliate",
@@ -4690,7 +4947,7 @@
         "email": "info@crazygoodbuy.com",
         "sourceUrl": "https://www.crazygoodbuy.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:36Z",
       "emailMessageId": "1a1dc407d339064a",
       "territories": [
         "US; public page says it serves customers across the US"
@@ -4703,7 +4960,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm commission, product categories, inventory data, tracking, approved images and payout."
+      "nextAction": "Await reply; confirm commission, product categories, inventory data, tracking, approved images and payout.",
+      "lastEmailSentAt": "2026-11-14T22:49:36Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Crazy Good Buy affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc407d339064a",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "rentari-real-estate-referral",
@@ -4716,7 +4978,7 @@
         "email": "info@rentari.ai",
         "sourceUrl": "https://acme-pm.rentari.ai/partners"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:38Z",
       "emailMessageId": "1a1dc408400e1155",
       "territories": [
         "Not yet confirmed"
@@ -4729,7 +4991,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; agree qualifying lead definition, territories, tracking, commission, payout and written agreement before referral activity."
+      "nextAction": "Await reply; agree qualifying lead definition, territories, tracking, commission, payout and written agreement before referral activity.",
+      "lastEmailSentAt": "2026-11-14T22:49:38Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Rentari real-estate referral partnership enquiry",
+      "lastEmailThreadId": "1a1dc408400e1155",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "oas-mobility-affiliate",
@@ -4742,7 +5009,7 @@
         "email": "contact@oasmobility.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile-terms/122024"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:40Z",
       "emailMessageId": "1a1dc408ac5c7aa0",
       "territories": [
         "US market; exact customer delivery areas pending"
@@ -4755,7 +5022,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher acceptance, product feed, tracking, image permission and customer delivery coverage."
+      "nextAction": "Await reply; verify publisher acceptance, product feed, tracking, image permission and customer delivery coverage.",
+      "lastEmailSentAt": "2026-11-14T22:49:40Z",
+      "lastEmailSubject": "ZOVARO Worldwide — OAS Mobility affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc408ac5c7aa0",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "techable-affiliate",
@@ -4768,7 +5040,7 @@
         "email": "support@techable.com",
         "sourceUrl": "https://techable.com/pages/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:49:42Z",
       "emailMessageId": "1a1dc4094888ca87",
       "territories": [
         "Not yet confirmed"
@@ -4781,7 +5053,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher eligibility, supported countries, exact commission, product catalog, deep links and approved assets."
+      "nextAction": "Await reply; verify publisher eligibility, supported countries, exact commission, product catalog, deep links and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:49:42Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Techable affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4094888ca87",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "polaroid-eu-affiliate",
@@ -4794,7 +5071,7 @@
         "email": "miles.galloway@scaledigital.co",
         "sourceUrl": "https://www.polaroid.com/en_ci/pages/polaroid-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:06Z",
       "emailMessageId": "1a1dc40f329472ef",
       "territories": [
         "EU page; exact publisher/customer countries pending"
@@ -4807,7 +5084,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify eligible territories, Impact access, feed, deep links and asset rights."
+      "nextAction": "Await reply; verify eligible territories, Impact access, feed, deep links and asset rights.",
+      "lastEmailSentAt": "2026-11-14T22:50:06Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Polaroid affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc40f329472ef",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "royal-rentals-affiliate",
@@ -4820,7 +5102,7 @@
         "email": "info@royalrentals.io",
         "sourceUrl": "https://royalrentals.io/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:08Z",
       "emailMessageId": "1a1dc40f94e4a029",
       "territories": [
         "Not yet confirmed"
@@ -4833,7 +5115,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; agree fleet/territory, completed-booking attribution, cancellation rules, commission and media permissions."
+      "nextAction": "Await reply; agree fleet/territory, completed-booking attribution, cancellation rules, commission and media permissions.",
+      "lastEmailSentAt": "2026-11-14T22:50:08Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Royal Rentals affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc40f94e4a029",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "biofargo-affiliate",
@@ -4846,7 +5133,7 @@
         "email": "contact@biofargo.com",
         "sourceUrl": "https://biofargo.com/pages/biofargo-affiliate-partner-lab-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:09Z",
       "emailMessageId": "1a1dc40fe9f800a2",
       "territories": [
         "Not yet confirmed"
@@ -4859,7 +5146,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, catalogue, tracking, approved scientific claims, compliance docs and payout."
+      "nextAction": "Await reply; confirm publisher eligibility, catalogue, tracking, approved scientific claims, compliance docs and payout.",
+      "lastEmailSentAt": "2026-11-14T22:50:09Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Biofargo scientific products affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc40fe9f800a2",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "arenti-affiliate",
@@ -4872,7 +5164,7 @@
         "email": "affiliate@arenti.nl",
         "sourceUrl": "https://arenti.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:12Z",
       "emailMessageId": "1a1dc410bb692ad7",
       "territories": [
         "Not yet confirmed"
@@ -4886,7 +5178,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin programme, eligible countries, feed, tracking, permitted content and payout details."
+      "nextAction": "Await reply; confirm Awin programme, eligible countries, feed, tracking, permitted content and payout details.",
+      "lastEmailSentAt": "2026-11-14T22:50:12Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Arenti affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc410bb692ad7",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "keldco-affiliate",
@@ -4899,7 +5196,7 @@
         "email": "affiliate@keldco.com",
         "sourceUrl": "https://keldco.com/pages/ambassador-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:15Z",
       "emailMessageId": "1a1dc4115693395f",
       "territories": [
         "Australia; exact delivery countries to confirm"
@@ -4912,7 +5209,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm platform publisher eligibility, countries, tracking, feed and payout terms."
+      "nextAction": "Await reply; confirm platform publisher eligibility, countries, tracking, feed and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:50:15Z",
+      "lastEmailSubject": "ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4115693395f",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "u-tec-ultraloq-affiliate",
@@ -4925,7 +5227,7 @@
         "email": "affiliate@xthings.com",
         "sourceUrl": "https://u-tec.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:17Z",
       "emailMessageId": "1a1dc411ed58dff1",
       "territories": [
         "Not yet confirmed"
@@ -4938,7 +5240,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm supported countries, current programme terms, feed, tracking and permitted assets."
+      "nextAction": "Await reply; confirm supported countries, current programme terms, feed, tracking and permitted assets.",
+      "lastEmailSentAt": "2026-11-14T22:50:17Z",
+      "lastEmailSubject": "ZOVARO Worldwide — U-tec / ULTRALOQ affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc411ed58dff1",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "wansview-affiliate",
@@ -4951,7 +5258,7 @@
         "email": "marketing@wansview.com",
         "sourceUrl": "https://www.wansview.com/Affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:19Z",
       "emailMessageId": "1a1dc4126308b777",
       "territories": [
         "Amazon US programme referenced; independent ZOVARO attribution not verified"
@@ -4964,7 +5271,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; only proceed if they provide a permitted ZOVARO-specific or approved network tracking arrangement. Do not count Amazon Associates links as direct partner approval."
+      "nextAction": "Await reply; only proceed if they provide a permitted ZOVARO-specific or approved network tracking arrangement. Do not count Amazon Associates links as direct partner approval.",
+      "lastEmailSentAt": "2026-11-14T22:50:19Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Wansview affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4126308b777",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "sothebys-global-partnership",
@@ -4977,7 +5289,7 @@
         "email": "Partnerships@sothebys.com",
         "sourceUrl": "https://www.sothebys.com/en/departments/global-partnerships"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:27Z",
       "emailMessageId": "1a1dc422e931d98b",
       "territories": [
         "Global partnerships team; actual offer territories to confirm"
@@ -4990,7 +5302,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; establish brand-approved listings, referral tracking, qualifying sale/enquiry, commercial terms and asset rights."
+      "nextAction": "Await reply; establish brand-approved listings, referral tracking, qualifying sale/enquiry, commercial terms and asset rights.",
+      "lastEmailSentAt": "2026-11-14T22:51:27Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Sotheby's global partnership enquiry",
+      "lastEmailThreadId": "1a1dc422e931d98b",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "marley-spoon-affiliate",
@@ -5003,7 +5320,7 @@
         "email": "alperen.akdogan@marleyspoon.com",
         "sourceUrl": "https://marleyspoon.com/about/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:29Z",
       "emailMessageId": "1a1dc423795fb5f1",
       "territories": [
         "Not yet confirmed"
@@ -5016,7 +5333,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher/customer country eligibility, commission, cookie, offer feed, tracking and assets."
+      "nextAction": "Await reply; confirm publisher/customer country eligibility, commission, cookie, offer feed, tracking and assets.",
+      "lastEmailSentAt": "2026-11-14T22:51:29Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Marley Spoon affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc423795fb5f1",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "wuuk-affiliate",
@@ -5029,7 +5351,7 @@
         "email": "collabs@wuuklabs.com",
         "sourceUrl": "https://wuuklabs.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:32Z",
       "emailMessageId": "1a1dc4241957610f",
       "territories": [
         "Not yet confirmed"
@@ -5042,7 +5364,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, supported markets, exact commission, attribution, feed and media rights."
+      "nextAction": "Await reply; confirm publisher eligibility, supported markets, exact commission, attribution, feed and media rights.",
+      "lastEmailSentAt": "2026-11-14T22:51:32Z",
+      "lastEmailSubject": "ZOVARO Worldwide — WUUK affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4241957610f",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "simplisafe-uk-affiliate",
@@ -5055,7 +5382,7 @@
         "email": "partnerships-uk@simplisafe.co.uk",
         "sourceUrl": "https://ui.awin.com/merchant-profile/27387"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:34Z",
       "emailMessageId": "1a1dc424d3703aac",
       "territories": [
         "UK programme contact; exact customer coverage pending"
@@ -5077,7 +5404,11 @@
         "summary": "Partnerships team says the enquiry is being reviewed and they will contact ZOVARO if there is an opportunity; no approval or terms provided.",
         "evidence": "Gmail thread 1a1dc424d3703aac",
         "type": "automated_acknowledgement"
-      }
+      },
+      "lastEmailSentAt": "2026-11-14T22:51:34Z",
+      "lastEmailSubject": "ZOVARO Worldwide — SimpliSafe UK affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc424d3703aac",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "bradford-exchange-affiliate",
@@ -5090,7 +5421,7 @@
         "email": "affiliate@bradfordexchange.com",
         "sourceUrl": "https://www.ashtondrake.com/service/start-now.html"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:36Z",
       "emailMessageId": "1a1dc4252ae62633",
       "territories": [
         "Not yet confirmed"
@@ -5103,7 +5434,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm programme eligibility, customer countries, product catalogue, tracking, assets and payout."
+      "nextAction": "Await reply; confirm programme eligibility, customer countries, product catalogue, tracking, assets and payout.",
+      "lastEmailSentAt": "2026-11-14T22:51:36Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Bradford Exchange affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc4252ae62633",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "scientific-products-ltda",
@@ -5116,7 +5452,7 @@
         "email": "sp@spltda.com",
         "sourceUrl": "https://www.spltda.com/contacto/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:38Z",
       "emailMessageId": "1a1dc425a03d39db",
       "territories": [
         "Colombia; regional coverage to confirm"
@@ -5129,7 +5465,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; agree catalogue, fulfilment countries, referral tracking, commission, product data and content permissions."
+      "nextAction": "Await reply; agree catalogue, fulfilment countries, referral tracking, commission, product data and content permissions.",
+      "lastEmailSentAt": "2026-11-14T22:51:38Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Scientific Products catalogue and referral partnership",
+      "lastEmailThreadId": "1a1dc425a03d39db",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "mughal-timepieces-affiliate",
@@ -5142,7 +5483,7 @@
         "email": "mughaltimepieces@gmail.com",
         "sourceUrl": "https://www.mughaltimepieces.com/pages/affiliate-programme"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:39Z",
       "emailMessageId": "1a1dc42601002e66",
       "territories": [
         "UK, Pakistan, UAE, US and Canada are highlighted for creators; customer coverage to confirm"
@@ -5160,7 +5501,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "550 5.1.1 address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:51:39Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Mughal Timepieces affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc42601002e66",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "trustedbrands-b2b-network",
@@ -5173,7 +5518,7 @@
         "email": "sales@trustedbrands.llc",
         "sourceUrl": "https://trustedbrands.llc/apply/vendor"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:41Z",
       "emailMessageId": "1a1dc42669d02fbf",
       "territories": [
         "US network; supplier and buyer coverage to confirm"
@@ -5186,7 +5531,12 @@
         "referralTracking": "pending",
         "imagePermission": "pending"
       },
-      "nextAction": "Await reply; confirm supplier data access, external publisher eligibility, buyer referral tracking, commercial terms and product content rights."
+      "nextAction": "Await reply; confirm supplier data access, external publisher eligibility, buyer referral tracking, commercial terms and product content rights.",
+      "lastEmailSentAt": "2026-11-14T22:51:41Z",
+      "lastEmailSubject": "ZOVARO Worldwide — B2B supplier discovery and referral partnership",
+      "lastEmailThreadId": "1a1dc42669d02fbf",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "coolblue-netherlands-affiliate",
@@ -5199,7 +5549,7 @@
         "email": "affiliate@coolblue.nl",
         "sourceUrl": "https://www.coolblue.nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:55Z",
       "emailMessageId": "1a1dc429f4c4efa9",
       "territories": [
         "Netherlands; local customer delivery coverage to confirm"
@@ -5212,7 +5562,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage."
+      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage.",
+      "lastEmailSentAt": "2026-11-14T22:51:55Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Coolblue Netherlands affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc429f4c4efa9",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "coolblue-belgium-affiliate",
@@ -5225,7 +5580,7 @@
         "email": "affiliate@coolblue.be",
         "sourceUrl": "https://www.coolblue.be/nl/download/acb68639e2feb168f7017734c3f8422c/affiliate_manual_en.pdf"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:58Z",
       "emailMessageId": "1a1dc42a7bd1fd42",
       "territories": [
         "Belgium; local customer delivery coverage to confirm"
@@ -5238,7 +5593,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage."
+      "nextAction": "Await reply; verify Awin eligibility, current commission, feed, tracking, approved images and delivery coverage.",
+      "lastEmailSentAt": "2026-11-14T22:51:58Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Coolblue Belgium affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc42a7bd1fd42",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "hestan-culinary-affiliate",
@@ -5251,7 +5611,7 @@
         "email": "affiliate@hestan.com",
         "sourceUrl": "https://hestanculinary.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:31Z",
       "emailMessageId": "1a1dc432a10f0380",
       "territories": [
         "Not yet confirmed"
@@ -5264,7 +5624,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Impact access, territories, rates, feed, tracking and approved assets."
+      "nextAction": "Await reply; confirm Impact access, territories, rates, feed, tracking and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:52:31Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Hestan Culinary affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc432a10f0380",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "zwilling-affiliate",
@@ -5277,7 +5642,7 @@
         "email": "affiliate@zwilling.ca",
         "sourceUrl": "https://www.zwilling.com/ca/zwilling-affiliate-program.html"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:34Z",
       "emailMessageId": "1a1dc43353ee78cf",
       "territories": [
         "Canada programme page; exact publisher/customer territories pending"
@@ -5294,7 +5659,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Message blocked by recipient server",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:52:34Z",
+      "lastEmailSubject": "ZOVARO Worldwide — ZWILLING affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43353ee78cf",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "greenpan-affiliate",
@@ -5307,7 +5676,7 @@
         "email": "madison.oakley@cookware-co.com",
         "sourceUrl": "https://www.greenpan.us/pages/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:36Z",
       "emailMessageId": "1a1dc433c3340d87",
       "territories": [
         "US storefront; exact publisher/customer countries pending"
@@ -5320,7 +5689,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify programme eligibility, commission, feed, tracking and approved assets."
+      "nextAction": "Await reply; verify programme eligibility, commission, feed, tracking and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:52:36Z",
+      "lastEmailSubject": "ZOVARO Worldwide — GreenPan affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc433c3340d87",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "holabird-sports-affiliate",
@@ -5333,7 +5707,7 @@
         "email": "affiliates@holabirdsports.com",
         "sourceUrl": "https://www.holabirdsports.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:39Z",
       "emailMessageId": "1a1dc43467231624",
       "territories": [
         "Primarily US customers; exact shipping coverage pending"
@@ -5346,7 +5720,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, current rates, feed and approved content."
+      "nextAction": "Await reply; confirm publisher eligibility, delivery countries, current rates, feed and approved content.",
+      "lastEmailSentAt": "2026-11-14T22:52:39Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Holabird Sports affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43467231624",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "select-brands-affiliate",
@@ -5359,7 +5738,7 @@
         "email": "creators@selectbrands.com",
         "sourceUrl": "https://ui.awin.com/merchant-profile/122936"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:40Z",
       "emailMessageId": "1a1dc434cbb2f627",
       "territories": [
         "US contiguous states, Alaska, Hawaii and US territories per public listing"
@@ -5372,7 +5751,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin eligibility, exact fulfilment zones, product feed, tracking and asset rights."
+      "nextAction": "Await reply; verify Awin eligibility, exact fulfilment zones, product feed, tracking and asset rights.",
+      "lastEmailSentAt": "2026-11-14T22:52:40Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Select Brands affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc434cbb2f627",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "logitech-commerce-partnership",
@@ -5385,7 +5769,7 @@
         "email": "creator-relations@logitech.com",
         "sourceUrl": "https://www.logitech.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:43Z",
       "emailMessageId": "1a1dc43564c35135",
       "territories": [
         "Not yet confirmed"
@@ -5402,7 +5786,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:52:43Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Logitech affiliate and commerce partnership enquiry",
+      "lastEmailThreadId": "1a1dc43564c35135",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "gigabyte-aorus-partnership",
@@ -5415,7 +5803,7 @@
         "email": "aorus_marketing@gigabyte.com",
         "sourceUrl": "https://www.aorus.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:45Z",
       "emailMessageId": "1a1dc4360c41a8da",
       "territories": [
         "Not yet confirmed"
@@ -5428,7 +5816,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await referral to a commerce/affiliate team; no products publishable until trackable agreement is verified."
+      "nextAction": "Await referral to a commerce/affiliate team; no products publishable until trackable agreement is verified.",
+      "lastEmailSentAt": "2026-11-14T22:52:45Z",
+      "lastEmailSubject": "ZOVARO Worldwide — AORUS affiliate and product partnership enquiry",
+      "lastEmailThreadId": "1a1dc4360c41a8da",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "nzxt-partnership",
@@ -5441,7 +5834,7 @@
         "email": "sponsorship@nzxt.com",
         "sourceUrl": "https://nzxt.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:48Z",
       "emailMessageId": "1a1dc436cba441e5",
       "territories": [
         "Not yet confirmed"
@@ -5458,7 +5851,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "550 5.1.1 address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:52:48Z",
+      "lastEmailSubject": "ZOVARO Worldwide — NZXT affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc436cba441e5",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "cooler-master-partnership",
@@ -5471,7 +5868,7 @@
         "email": "marketing@coolermaster.com",
         "sourceUrl": "https://www.coolermaster.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:52:51Z",
       "emailMessageId": "1a1dc437626db259",
       "territories": [
         "Not yet confirmed"
@@ -5484,7 +5881,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await referral to correct publisher/affiliate team; no listings until terms and attribution are approved."
+      "nextAction": "Await referral to correct publisher/affiliate team; no listings until terms and attribution are approved.",
+      "lastEmailSentAt": "2026-11-14T22:52:51Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Cooler Master affiliate and publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc437626db259",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "mii-cosmetics-affiliate",
@@ -5497,7 +5899,7 @@
         "email": "influencers@miicosmetics.com",
         "sourceUrl": "https://miicosmetics.com/press-influencers-affiliates/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:07Z",
       "emailMessageId": "1a1dc43b64e978f0",
       "territories": [
         "Not yet confirmed"
@@ -5519,7 +5921,11 @@
         "summary": "Automated acknowledgement says the enquiry was forwarded to the appropriate team; no approval or terms provided.",
         "evidence": "Gmail thread 1a1dc43b64e978f0",
         "type": "automated_acknowledgement"
-      }
+      },
+      "lastEmailSentAt": "2026-11-14T22:53:07Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Mii Cosmetics affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc43b64e978f0",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "escentual-affiliate",
@@ -5532,7 +5938,7 @@
         "email": "affiliates@escentual.com",
         "sourceUrl": "https://escentual.com/pages/affiliate-programme"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:09Z",
       "emailMessageId": "1a1dc43be96f60d9",
       "territories": [
         "UK shipping; international delivery charges published, exact programme markets pending"
@@ -5545,7 +5951,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin eligibility, countries, feed, approved images and exact commission terms."
+      "nextAction": "Await reply; verify Awin eligibility, countries, feed, approved images and exact commission terms.",
+      "lastEmailSentAt": "2026-11-14T22:53:09Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Escentual affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43be96f60d9",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "hofdeco-affiliate",
@@ -5558,7 +5969,7 @@
         "email": "affiliate@hofdeco.com",
         "sourceUrl": "https://www.hofdeco.com/pages/hofdeco-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:11Z",
       "emailMessageId": "1a1dc43c4827e17a",
       "territories": [
         "Not yet confirmed"
@@ -5572,7 +5983,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher eligibility, customer countries, product feed, tracking and payout method."
+      "nextAction": "Await reply; verify publisher eligibility, customer countries, product feed, tracking and payout method.",
+      "lastEmailSentAt": "2026-11-14T22:53:11Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Hofdeco affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43c4827e17a",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "vesta-sleep-affiliate",
@@ -5585,7 +6001,7 @@
         "email": "pr@vesta-home.com",
         "sourceUrl": "https://vesta-sleep.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:14Z",
       "emailMessageId": "1a1dc43d05704f86",
       "territories": [
         "Not yet confirmed"
@@ -5598,7 +6014,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm affiliate application, supported markets, feed, tracking and asset permissions."
+      "nextAction": "Await reply; confirm affiliate application, supported markets, feed, tracking and asset permissions.",
+      "lastEmailSentAt": "2026-11-14T22:53:14Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Vesta Sleep affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc43d05704f86",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "qbedding-affiliate",
@@ -5611,7 +6032,7 @@
         "email": "help@qbedding.com",
         "sourceUrl": "https://qbedding.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:16Z",
       "emailMessageId": "1a1dc43db3bd983b",
       "territories": [
         "Not yet confirmed"
@@ -5624,7 +6045,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm affiliate eligibility, customer countries, commission, feed and tracking."
+      "nextAction": "Await reply; confirm affiliate eligibility, customer countries, commission, feed and tracking.",
+      "lastEmailSentAt": "2026-11-14T22:53:16Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Qbedding affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43db3bd983b",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "hernest-affiliate",
@@ -5637,7 +6063,7 @@
         "email": "affiliate@hernest.com",
         "sourceUrl": "https://public.cj.com/signup/publisher?advertiserId=7389945"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:19Z",
       "emailMessageId": "1a1dc43e47915b8c",
       "advertiserId": "7389945",
       "territories": [
@@ -5651,7 +6077,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply and submit CJ application; verify exact territory, feed, tracking and approval."
+      "nextAction": "Await reply and submit CJ application; verify exact territory, feed, tracking and approval.",
+      "lastEmailSentAt": "2026-11-14T22:53:19Z",
+      "lastEmailSubject": "ZOVARO Worldwide — HERNEST affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc43e47915b8c",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "care-to-beauty-affiliate",
@@ -5664,7 +6095,7 @@
         "email": "social@caretobeauty.com",
         "sourceUrl": "https://www.caretobeauty.com/us/creators/application/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:21Z",
       "emailMessageId": "1a1dc43ee06a4917",
       "territories": [
         "US and UK storefronts; international customer coverage pending"
@@ -5677,7 +6108,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm manual application, eligible countries, commission, product feed and approved media."
+      "nextAction": "Await reply; confirm manual application, eligible countries, commission, product feed and approved media.",
+      "lastEmailSentAt": "2026-11-14T22:53:21Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Care to Beauty affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc43ee06a4917",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "cocokind-partnership",
@@ -5690,7 +6126,7 @@
         "email": "Uspartnerships@cocokind.com",
         "sourceUrl": "https://www.cocokind.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:24Z",
       "emailMessageId": "1a1dc43f6bde7cec",
       "territories": [
         "US brand contact; customer markets pending"
@@ -5707,7 +6143,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "550 5.1.1 address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:53:24Z",
+      "lastEmailSubject": "ZOVARO Worldwide — cocokind affiliate and commerce partnership enquiry",
+      "lastEmailThreadId": "1a1dc43f6bde7cec",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "loccitane-affiliate",
@@ -5720,7 +6160,7 @@
         "email": "Loccitane@silverbean.com",
         "sourceUrl": "https://uk.loccitane.com/affiliate-programme"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:42Z",
       "emailMessageId": "1a1dc443c34bb552",
       "territories": [
         "UK programme; other publisher/customer territories pending"
@@ -5733,7 +6173,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm UK application, eligible markets, feed, tracking and payout terms."
+      "nextAction": "Await reply; confirm UK application, eligible markets, feed, tracking and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:53:42Z",
+      "lastEmailSubject": "ZOVARO Worldwide — L'Occitane affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc443c34bb552",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "hezoria-affiliate",
@@ -5746,7 +6191,7 @@
         "email": "support@hezoria.com",
         "sourceUrl": "https://hezoria.com/pages/affiliate-programme"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:43Z",
       "emailMessageId": "1a1dc4443c46bf0d",
       "territories": [
         "United States shipping stated; other territories pending"
@@ -5759,7 +6204,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; agree exact rate, attribution window, territories, feed and payout before publication."
+      "nextAction": "Await reply; agree exact rate, attribution window, territories, feed and payout before publication.",
+      "lastEmailSentAt": "2026-11-14T22:53:43Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Hezoria fragrance affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4443c46bf0d",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "beauty-bay-affiliate",
@@ -5772,7 +6222,7 @@
         "email": "affiliates@beautybay.com",
         "sourceUrl": "https://careers.beautybay.com/fr/s/affiliates/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:46Z",
       "emailMessageId": "1a1dc444c3ce5b39",
       "territories": [
         "Not yet confirmed"
@@ -5785,7 +6235,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm Awin eligibility, countries, commission, feed, tracking and approved assets."
+      "nextAction": "Await reply; confirm Awin eligibility, countries, commission, feed, tracking and approved assets.",
+      "lastEmailSentAt": "2026-11-14T22:53:46Z",
+      "lastEmailSubject": "ZOVARO Worldwide — BEAUTY BAY affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc444c3ce5b39",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "nava-beauty-affiliate",
@@ -5798,7 +6253,7 @@
         "email": "partners@navabeauty.com",
         "sourceUrl": "https://www.navabeauty.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:48Z",
       "emailMessageId": "1a1dc44567ba0721",
       "territories": [
         "Not yet confirmed"
@@ -5811,7 +6266,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify exact rate, cookie, countries, feed and Awin approval."
+      "nextAction": "Await reply; verify exact rate, cookie, countries, feed and Awin approval.",
+      "lastEmailSentAt": "2026-11-14T22:53:48Z",
+      "lastEmailSubject": "ZOVARO Worldwide — NAVA BEAUTY affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc44567ba0721",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "ofra-cosmetics-affiliate",
@@ -5824,7 +6284,7 @@
         "email": "denise@ofracosmetics.com",
         "sourceUrl": "https://ofracosmetics.com/pages/ofra-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:50Z",
       "emailMessageId": "1a1dc445db3141c2",
       "territories": [
         "US programme; non-US publisher eligibility and tax form to confirm"
@@ -5837,7 +6297,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await response on non-US publisher and W-8BEN eligibility; do not submit an inapplicable W-9."
+      "nextAction": "Await response on non-US publisher and W-8BEN eligibility; do not submit an inapplicable W-9.",
+      "lastEmailSentAt": "2026-11-14T22:53:50Z",
+      "lastEmailSubject": "ZOVARO Worldwide — OFRA Cosmetics affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc445db3141c2",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "cranbourn-affiliate",
@@ -5850,7 +6315,7 @@
         "email": "enquiries@cranbourn.com",
         "sourceUrl": "https://www.cranbourn.com/affiliates/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:51Z",
       "emailMessageId": "1a1dc4462e7634e7",
       "territories": [
         "Not yet confirmed"
@@ -5863,7 +6328,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm eligible markets, feed, tracking, approved images and payout terms."
+      "nextAction": "Await reply; confirm eligible markets, feed, tracking, approved images and payout terms.",
+      "lastEmailSentAt": "2026-11-14T22:53:51Z",
+      "lastEmailSubject": "ZOVARO Worldwide — CRANBOURN affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc4462e7634e7",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "neoderma-affiliate",
@@ -5876,7 +6346,7 @@
         "email": "affiliates@neoderma.com",
         "sourceUrl": "https://help.neoderma.com/hc/en-us/article_attachments/360000716857"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:54Z",
       "emailMessageId": "1a1dc446c5d77d22",
       "territories": [
         "Not yet confirmed"
@@ -5889,7 +6359,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await current commission and qualifying actions, territory, cookie and payout details; review full programme terms."
+      "nextAction": "Await current commission and qualifying actions, territory, cookie and payout details; review full programme terms.",
+      "lastEmailSentAt": "2026-11-14T22:53:54Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Neoderma affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc446c5d77d22",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "yesstyle-affiliate",
@@ -5902,7 +6377,7 @@
         "email": "ys-bloggers@yesstyle.com",
         "sourceUrl": "https://www.yesstyle.com/influnecer-affiliate-program-description.pdf"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:55Z",
       "emailMessageId": "1a1dc447302b82f1",
       "territories": [
         "Not yet confirmed"
@@ -5915,7 +6390,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await correct publisher route, current network terms, countries, feed and tracking."
+      "nextAction": "Await correct publisher route, current network terms, countries, feed and tracking.",
+      "lastEmailSentAt": "2026-11-14T22:53:55Z",
+      "lastEmailSubject": "ZOVARO Worldwide — YesStyle affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1dc447302b82f1",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "angeline-perfume-affiliate",
@@ -5928,7 +6408,7 @@
         "email": "media@angeline-perfume.com",
         "sourceUrl": "https://angeline-perfume.com/upload/Angeline%20Perfume%20Affiliate%20Program%201_de.pdf"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:53:57Z",
       "emailMessageId": "1a1dc44796f1ea0e",
       "territories": [
         "Not yet confirmed"
@@ -5942,7 +6422,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await confirmation of active programme, eligible countries, current commission, product data and tracking."
+      "nextAction": "Await confirmation of active programme, eligible countries, current commission, product data and tracking.",
+      "lastEmailSentAt": "2026-11-14T22:53:57Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Angeline Perfume affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc44796f1ea0e",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "neostrata-exuviance-affiliate",
@@ -5955,7 +6440,7 @@
         "email": "affiliate@NeoStrata.com",
         "sourceUrl": "https://www.exuviance.com/pages/join-our-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:54:15Z",
       "emailMessageId": "1a1dc44bfea1492a",
       "territories": [
         "Not yet confirmed"
@@ -5972,7 +6457,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "Message blocked by recipient server",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:54:15Z",
+      "lastEmailSubject": "ZOVARO Worldwide — NeoStrata / Exuviance affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc44bfea1492a",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "ctzn-cosmetics-affiliate",
@@ -5985,7 +6474,7 @@
         "email": "affiliates@ctzncosmetics.com",
         "sourceUrl": "https://www.ctzncosmetics.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:54:17Z",
       "emailMessageId": "1a1dc44c7c509af4",
       "territories": [
         "Not yet confirmed"
@@ -6002,7 +6491,11 @@
       "deliveryStatus": "bounced",
       "bounceReason": "550 5.1.1 address not found",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:54:17Z",
+      "lastEmailSubject": "ZOVARO Worldwide — CTZN Cosmetics affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc44c7c509af4",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "orena-fragrances-affiliate",
@@ -6015,7 +6508,7 @@
         "email": "affiliates@orenafragrances.com",
         "sourceUrl": "https://orenafragrances.com/pages/orena-affiliate-program-terms-conditions"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:54:19Z",
       "emailMessageId": "1a1dc44ce2ff0e8b",
       "territories": [
         "Not yet confirmed"
@@ -6028,7 +6521,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await approval and written terms, eligible markets, commission, cookie, tracking and payout."
+      "nextAction": "Await approval and written terms, eligible markets, commission, cookie, tracking and payout.",
+      "lastEmailSentAt": "2026-11-14T22:54:19Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Orena Fragrances affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc44ce2ff0e8b",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "beddley-affiliate",
@@ -6041,7 +6539,7 @@
         "email": "affiliatemanager@beddley.com",
         "sourceUrl": "https://beddley.com/pages/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:45Z",
       "emailMessageId": "1a1dc418d35978ca",
       "advertiserId": "59169",
       "territories": [
@@ -6055,7 +6553,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply and application review. Check programme restrictions before any email marketing; do not send consumer email promotions without valid opt-in."
+      "nextAction": "Await reply and application review. Check programme restrictions before any email marketing; do not send consumer email promotions without valid opt-in.",
+      "lastEmailSentAt": "2026-11-14T22:50:45Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Beddley affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc418d35978ca",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "belle-and-june-affiliate",
@@ -6070,7 +6573,7 @@
         "email": "affiliatepartnerships@belleandjune.com",
         "sourceUrl": "https://www.belleandjune.com/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:48Z",
       "emailMessageId": "1a1dc4196a0e9451",
       "territories": [
         "US and international shipping advertised; exact publisher/customer markets pending"
@@ -6085,7 +6588,11 @@
       },
       "nextAction": "Do not resend to bounced address. Use official Impact application route or verify a different affiliate manager contact.",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:50:48Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Belle & June affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc4196a0e9451",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "linens-and-hutch-affiliate",
@@ -6098,7 +6605,7 @@
         "email": "affiliates@linensandhutch.com",
         "sourceUrl": "https://www.linensandhutch.com/pages/linens-hutch-affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:49Z",
       "emailMessageId": "1a1dc419c45a0804",
       "territories": [
         "Not yet confirmed"
@@ -6111,7 +6618,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Rakuten acceptance, countries, product catalogue, tracking and payout."
+      "nextAction": "Await reply; verify Rakuten acceptance, countries, product catalogue, tracking and payout.",
+      "lastEmailSentAt": "2026-11-14T22:50:49Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Linens & Hutch affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc419c45a0804",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "kathy-kuo-home-affiliate",
@@ -6124,7 +6636,7 @@
         "email": "affiliates@kathykuohome.com",
         "sourceUrl": "https://www.kathykuohome.com/affiliates"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:52Z",
       "emailMessageId": "1a1dc41a7baded4d",
       "territories": [
         "Not yet confirmed"
@@ -6137,7 +6649,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm programme/network, customer territories, product feed, tracking and approved imagery."
+      "nextAction": "Await reply; confirm programme/network, customer territories, product feed, tracking and approved imagery.",
+      "lastEmailSentAt": "2026-11-14T22:50:52Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Kathy Kuo Home affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41a7baded4d",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "honeypot-furniture-affiliate",
@@ -6150,7 +6667,7 @@
         "email": "kathleen.ciabo@honeypotfurniture.co.uk",
         "sourceUrl": "https://www.honeypotfurniture.co.uk/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:54Z",
       "emailMessageId": "1a1dc41aee856194",
       "territories": [
         "UK retailer; customer delivery markets to confirm"
@@ -6163,7 +6680,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm whether a trackable publisher programme is open, eligible countries, commission and product data."
+      "nextAction": "Await reply; confirm whether a trackable publisher programme is open, eligible countries, commission and product data.",
+      "lastEmailSentAt": "2026-11-14T22:50:54Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Honeypot Furniture affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41aee856194",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "bedsure-affiliate",
@@ -6176,7 +6698,7 @@
         "email": "affiliate@bedsurehome.com",
         "sourceUrl": "https://bedsurehome.com/pages/affiliate"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:56Z",
       "emailMessageId": "1a1dc41b62c6c89e",
       "territories": [
         "Not yet confirmed"
@@ -6189,7 +6711,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Awin application, supported countries, daily feed, tracking and approved product assets."
+      "nextAction": "Await reply; verify Awin application, supported countries, daily feed, tracking and approved product assets.",
+      "lastEmailSentAt": "2026-11-14T22:50:56Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Bedsure affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41b62c6c89e",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "heim-nest-affiliate",
@@ -6202,7 +6729,7 @@
         "email": "business@heimnest.com",
         "sourceUrl": "https://heimnest.com/pages/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:50:58Z",
       "emailMessageId": "1a1dc41bf57b4ee0",
       "territories": [
         "Not yet confirmed"
@@ -6215,7 +6742,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm eligible publisher/customer markets, product data, tracking, asset rights and payout."
+      "nextAction": "Await reply; confirm eligible publisher/customer markets, product data, tracking, asset rights and payout.",
+      "lastEmailSentAt": "2026-11-14T22:50:58Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Heim Nest affiliate publisher enquiry",
+      "lastEmailThreadId": "1a1dc41bf57b4ee0",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "king-arthur-baking-affiliate",
@@ -6228,7 +6760,7 @@
         "email": "affiliates@kingarthurbaking.com",
         "sourceUrl": "https://shop.kingarthurbaking.com/affiliate-program"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:00Z",
       "emailMessageId": "1a1dc41c58b9a529",
       "territories": [
         "US shipping only; international publisher eligibility possible if audience is primarily US"
@@ -6242,7 +6774,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Apply via Awin and disclose US fulfilment limits; confirm feed, exact terms and payout setup."
+      "nextAction": "Apply via Awin and disclose US fulfilment limits; confirm feed, exact terms and payout setup.",
+      "lastEmailSentAt": "2026-11-14T22:51:00Z",
+      "lastEmailSubject": "ZOVARO Worldwide — King Arthur Baking affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41c58b9a529",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "guitar-sale-affiliate",
@@ -6255,7 +6792,7 @@
         "email": "business@guitar.sale",
         "sourceUrl": "https://guitar.sale/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:02Z",
       "emailMessageId": "1a1dc41cf3350c98",
       "territories": [
         "Not yet confirmed"
@@ -6268,7 +6805,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm if independent publisher tracking is available, product catalogue and eligible customer markets."
+      "nextAction": "Await reply; confirm if independent publisher tracking is available, product catalogue and eligible customer markets.",
+      "lastEmailSentAt": "2026-11-14T22:51:02Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Guitar.Sale affiliate and product partnership enquiry",
+      "lastEmailThreadId": "1a1dc41cf3350c98",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "sunbasket-affiliate",
@@ -6283,7 +6825,7 @@
         "email": "partners@sunbasket.com",
         "sourceUrl": "https://sunbasket.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:05Z",
       "emailMessageId": "1a1dc41d8a852ded",
       "territories": [
         "US delivery regions; exact programme territories pending"
@@ -6298,7 +6840,11 @@
       },
       "nextAction": "Do not resend to bounced address. Find current affiliate network application or verified partnerships contact.",
       "emailDeliveryStatus": "bounced",
-      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address.",
+      "lastEmailSentAt": "2026-11-14T22:51:05Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Sunbasket affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41d8a852ded",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "wymans-food-affiliate",
@@ -6311,7 +6857,7 @@
         "email": "partnerships@wymans.com",
         "sourceUrl": "https://www.wymans.com/"
       },
-      "contactedAt": "2026-11-14T15:00:00-05:00",
+      "contactedAt": "2026-11-14T22:51:07Z",
       "emailMessageId": "1a1dc41e1992f19f",
       "territories": [
         "Not yet confirmed"
@@ -6324,7 +6870,12 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm direct affiliate capability, countries, catalogue, tracking and payout."
+      "nextAction": "Await reply; confirm direct affiliate capability, countries, catalogue, tracking and payout.",
+      "lastEmailSentAt": "2026-11-14T22:51:07Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Wyman's affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1dc41e1992f19f",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "emailDeliveryStatus": "sent"
     },
     {
       "id": "yh-charter-referral",
@@ -6361,7 +6912,11 @@
       "emailMessageId": "1a1dc8f44bc5f116",
       "contactEvidence": "Gmail sent message/thread 1a1dc8f44bc5f116",
       "emailDeliveryStatus": "bounced",
-      "deliveryFailure": "Gmail delivery status: 550 5.1.1 recipient address not found; do not retry this address."
+      "deliveryFailure": "Gmail delivery status: 550 5.1.1 recipient address not found; do not retry this address.",
+      "lastEmailSentAt": "2026-11-15T00:15:39Z",
+      "lastEmailSubject": "ZOVARO Worldwide — International yacht charter referral partnership",
+      "lastEmailThreadId": "1a1dc8f44bc5f116",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "yatr-yacht-affiliate",
@@ -6418,7 +6973,11 @@
       "contactedAt": "2026-11-14T19:26:03-05:00",
       "emailMessageId": "1a1dc98cd556b885",
       "contactEvidence": "Gmail sent message/thread 1a1dc98cd556b885",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "lastEmailSentAt": "2026-11-15T00:26:03Z",
+      "lastEmailSubject": "ZOVARO Worldwide — tectake DE affiliate publisher partnership",
+      "lastEmailThreadId": "1a1dc98cd556b885",
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
     },
     {
       "id": "wayfair-affiliate-program",
