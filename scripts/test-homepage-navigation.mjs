@@ -16,9 +16,14 @@ assert.match(html, /getElementById\("openJobs"\)/, "JOBS must remain reachable t
 assert.match(html, /go\("jobChoiceView"\)/, "the Jobs section must open only through explicit navigation");
 assert.match(html, /backFromJobChoice[\s\S]*?goBackToPreviousView\("homeView"\)/, "the Jobs back control must return through history");
 
-const inlineScripts = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)]
-  .map(match => match[1])
-  .filter(script => script.trim());
+const inlineScripts = [...html.matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)]
+  .filter(([, attributes, script]) => {
+    const type = attributes.match(/\\btype\\s*=\\s*["']([^"']+)["']/i)?.[1]?.toLowerCase();
+    const hasExternalSource = /\\bsrc\\s*=/.test(attributes);
+    const executableType = !type || ["text/javascript", "application/javascript", "module"].includes(type);
+    return !hasExternalSource && executableType && script.trim();
+  })
+  .map(([, , script]) => script);
 for (const script of inlineScripts) {
   new vm.Script(script, { filename: "index.html" });
 }
