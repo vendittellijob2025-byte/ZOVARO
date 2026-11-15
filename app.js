@@ -439,7 +439,6 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
       const sub = String(product.subcategory || "").trim();
       return sub === path || sub.startsWith(path + " > ");
     });
-    if (!selected.length) return "";
     return `
       <div class="category-node">
         <button type="button" class="category" data-tree-open="${esc(path)}">
@@ -476,7 +475,7 @@ function renderCategories() {
     ...zovaroCategoryTree.map(item => item?.name).filter(Boolean),
     ...products.map(product => categoryLabel(product.category)).filter(Boolean)
   ])]
-    .filter(category => category !== "Other" && categoryProductsFor(category).length > 0)
+    .filter(category => category !== "Other")
     .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
 
   const grid = $("#categoryGrid");
