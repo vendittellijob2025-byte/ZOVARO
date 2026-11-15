@@ -5,9 +5,10 @@ import { categoryFor, subcategoryFor } from "../lib/product-category.js";
 const advertiser = { name: "Toy Story Travel & Toys", parentCategory: "Travel", childCategory: "Toys" };
 const cases = [
   // Brand/model words are weak evidence: classify by what the product actually is.
+  // Wigs and extensions follow the explicit Beauty > Hair Care browse taxonomy.
   ["Baby Lips Moisturizing Lip Balm", "Beauty", { advertiser: { name: "Babies & Kids Store" } }],
   ["M2U Nyc Metallic Liquid Lip | Baby Coral (Light Peach) 0.21Oz", "Beauty"],
-  ["[From 20 Inches] 13x4 Bye Bye Slip Lace Frontal Water Wave Glueless Drawstring Wig", "Fashion", { description: "Product description mentions lipstick, mascara and beauty cosmetics as unrelated examples." }],
+  ["[From 20 Inches] 13x4 Bye Bye Slip Lace Frontal Water Wave Glueless Drawstring Wig", "Beauty", { description: "Product description mentions lipstick, mascara and beauty cosmetics as unrelated examples." }],
   ["Baby Doll Matte Liquid Lipstick", "Beauty", { advertiser: { name: "Baby Fashion Brand" } }],
   ["Baby Pink Waterproof Mascara", "Beauty", { advertiser: { name: "Babies Store" } }],
   ["Baby Glow Hydrating Face Cream", "Beauty", { advertiser: { name: "Baby & Kids Shop" } }],
