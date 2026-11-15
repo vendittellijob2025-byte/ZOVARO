@@ -31,9 +31,10 @@ for(const job of jobs){
   if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(job.verifiedAt||""))errors.push("Invalid verification date: "+job.id);
   if(!Array.isArray(job.countries)||!job.countries.length)errors.push("Missing eligible country list: "+job.id);
 }
-for(const id of ["jobCountryFilter","jobRegionFilter","jobCityFilter","jobWorkplaceFilter","jobLocationSearch","jobLocationStatus","careerCategoryGrid","careerCategoryResults","careerCategoryResultsTitle","careerCategoryResultsMeta","careerCategoryListings"]){
+for(const id of ["jobCountryFilter","jobCityFilter","jobWorkplaceFilter","jobLocationSearch","jobLocationStatus","careerCategoryGrid","careerCategoryResults","careerCategoryResultsTitle","careerCategoryResultsMeta","careerCategoryListings"]){
   if(!html.includes('id="'+id+'"'))errors.push("Missing jobs UI element: "+id);
 }
+if(html.includes('id="jobRegionFilter"')||/Region\s*\/\s*State/i.test(html))errors.push("The obsolete Region / State filter must not appear in JOBS UI.");
 if(!html.includes('id="homeView"')||!html.includes('id="openJobs"')||!html.includes('go("jobChoiceView")')||!html.includes('go("lookingJobView")'))errors.push("Missing homepage-to-JOBS navigation.");
 if(html.includes('new URLSearchParams(window.location.search).get("view")'))errors.push("A query parameter must not override the default homepage.");
 if(!html.includes('id="jobListingForm"')||!html.includes('name="category"'))errors.push("Employer job form does not capture a category.");
