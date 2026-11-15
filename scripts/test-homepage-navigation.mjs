@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import vm from "node:vm";
+const html = readFileSync("index.html", "utf8");
+assert.match(html, /function showView\\(viewId, options = \\{\\}\\)/);
+assert.match(html, /window\\.history\\.pushState\\(\\{ zovaroView: viewId \\}/);
+assert.match(html, /window\\.addEventListener\\("popstate"/);
+assert.match(html, /function goBackToPreviousView\\(/);
+assert.match(html, /initialUrl\\.searchParams\\.delete\\("view"\\)/);
+assert.match(html, /window\\.history\\.replaceState\\(\\{ zovaroView: "homeView" \\}/);
+assert.match(html, /showView\\("homeView", \\{ pushHistory: false \\}\\)/);
+assert.doesNotMatch(html, /searchParams\\.get\\("view"\\)/);
+assert.match(html, /getElementById\\("openJobs"\\)/);
+assert.match(html, /go\\("jobChoiceView"\\)/);
+assert.match(html, /backFromJobChoice[\\s\\S]*?goBackToPreviousView\\("homeView"\\)/);
+const scripts = [...html.matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)].filter(([, a, s]) => { const t=a.match(/\\btype\\s*=\\s*["']([^"']+)["']/i)?.[1]?.toLowerCase(); return !/\\bsrc\\s*=/.test(a) && (!t || ["text/javascript","application/javascript","module"].includes(t)) && s.trim(); }).map(([, ,s])=>s);
+for (const script of scripts) new vm.Script(script, { filename:"index.html" });
+console.log("Homepage navigation and inline script checks passed.");
