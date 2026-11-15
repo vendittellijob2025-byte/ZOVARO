@@ -55,7 +55,7 @@
     let loaded = 0;
     try {
       try {
-        const treeResponse = await fetch(CATEGORY_TREE_URL, { cache: "force-cache" });
+        const treeResponse = await fetch(CATEGORY_TREE_URL, { cache: "no-cache" });
         if (treeResponse.ok) {
           const categoryTree = await treeResponse.json();
           window.ZOVARO_CATEGORY_TREE = Array.isArray(categoryTree.categories) ? categoryTree.categories : [];
@@ -68,7 +68,7 @@
         console.warn("ZOVARO category tree:", treeError);
       }
 
-      const response = await fetch(CATALOG_URL, { cache: "force-cache" });
+      const response = await fetch(CATALOG_URL, { cache: "no-cache" });
       if (!response.ok) throw new Error("Catalog request failed: " + response.status);
       const catalog = await response.json();
       if (!catalog || !Array.isArray(catalog.products)) {
