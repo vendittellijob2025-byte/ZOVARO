@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14T20:28:00-05:00",
+  "updatedAt": "2026-11-14T20:34:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -2953,7 +2953,7 @@
       ],
       "publicCommission": "Official Global Rate Card image (published with the 2026-09-24 Network Agreement): Business & Industrial 2.5% (USD 225 cap); Collectibles 3% (USD 550 cap); Electronics 2% (USD 550 cap), Computers/Tablets/Networking 1.5% (USD 550 cap); Fashion 4% (USD 550 cap); Home & Garden 3% (USD 550 cap); Lifestyle 3% (USD 550 cap); Media 3% (USD 550 cap); eBay Motors 4% (USD 100 cap); Vehicle Parts & Accessories 3% (USD 550 cap); Real Estate 1% (USD 100 cap); All Other 4% (USD 550 cap). Program Details and authenticated Partner Portal terms control; EPN may change rates on three days' notice.",
       "cookie": "24 hours for standard Buy It Now qualifying transactions; last-click attribution. Auction and Best Offer events have additional rules.",
-      "payout": "Monthly: EPN issues a positive prior-month balance only when the balance exceeds USD 10 or applicable banking fees, whichever is greater. The current agreement does not specify a fixed calendar day in the section reviewed. Weekly payout is not supported by the published terms. Payment method and account-specific settings require authenticated EPN portal verification.",
+      "payout": "Monthly, public programme update says around the 22nd for the prior month; no numeric minimum confirmed in the current readable Network Agreement. Exact threshold and payment method require authenticated Partner Portal verification. PayPal fee: 2%, capped at USD 20/month; direct deposit/EFT excluded from that PayPal fee.",
       "contact": {
         "website": "https://partnernetwork.ebay.com/",
         "applicationUrl": "https://partnernetwork.ebay.com/",
