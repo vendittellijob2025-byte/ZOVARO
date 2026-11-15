@@ -91,7 +91,7 @@ const cases = [
   ["JetDrive 9 | Defragmentiert Deine Festplatte", "Office & Technology"],
   ["Mediatheken Downloader 2025 | Legal von ARD herunterladen", "Office & Technology"],
   ["Myova Myoplus Tablets 120Ct", "Health & Wellness"],
-  ["UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair", "Fashion"],
+  ["UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair", "Beauty"],
 ["Miracle Fruit Oil Miracle Fruit Seed Oil Treatment - 1.7Oz", "Beauty"],
   ["Naturemary Relaxing Blend Blooming Garden Escape Bath Teas", "Beauty"],
   ["Bougies La Francaise Scented Candle | Blue Garden", "Home & Living"],
@@ -104,7 +104,7 @@ const cases = [
   ["Klara Native Mountain Pepperleaf Exfoliant", "Beauty"],
   ["Cannuka Cbd Calming Eye Balm", "Beauty"],
   ["Tarte Maracuja Tinted Hydrator Honey Shade", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
-  ["UNice Honey Blonde Highlighted Body Wave Hair Bundles", "Fashion"],
+  ["UNice Honey Blonde Highlighted Body Wave Hair Bundles", "Beauty"],
   ["4on Totalgrip Paste 50 Ml Overgrips", "Sports", { advertiser: { name: "Padel Iberico ES" } }],
   ["Patchology Lip Service Gloss-To-Balm Treatment", "Beauty"],
   ["Farmhouse Fresh Honey Lavender Fine Sea Salt Body Scrub", "Beauty"],
@@ -256,6 +256,7 @@ assert.equal(subcategoryFor("Sports", { title: "Camiseta Head Tie Break Women", 
 assert.equal(subcategoryFor("Sports", { title: "Nox ML10 Pro Cup Padel Racket", advertiserName: "Padel Iberico ES" }), "Padel > Padel Rackets");
 assert.equal(subcategoryFor("Sports", { title: "Paletero Padel Bag", advertiserName: "Padel Iberico ES" }), "Padel > Padel Bags");
 assert.equal(categoryFor({ name: "Kaiya Baby" }, { title: "All Season Long Sleeve Sleep Sack" }), "Babies");
+assert.equal(subcategoryFor("Beauty", { title: "UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair" }), "Hair Care > Wigs & Hair Extensions");
 assert.equal(subcategoryFor("Babies", { title: "All Season Long Sleeve Sleep Sack", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Sleepwear");
 assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Snap Bodysuit", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Bodysuits");
 assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Jogger Pants", advertiserName: "Kaiya Baby" }), "Baby Clothing");
