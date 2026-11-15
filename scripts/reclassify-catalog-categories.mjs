@@ -1,10 +1,13 @@
 import fs from "node:fs/promises";
-import { categoryFor, subcategoryFor } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor, visualCategoryOverride, visualSubcategoryOverride } from "../lib/product-category.js";
 import { normalizeSubcategoryPath } from "../lib/category-taxonomy.js";
 
 const path = "data/catalog.json";
 const catalog = JSON.parse(await fs.readFile(path, "utf8"));
 const taxonomy = JSON.parse(await fs.readFile("data/category-tree.json", "utf8"));
+let imageReport = { results: [] };
+try { imageReport = JSON.parse(await fs.readFile("data/image-audit-report.json", "utf8")); } catch (error) { if (error.code !== "ENOENT") throw error; }
+const visualResults = new Map((imageReport.results || []).map(item => [item.key, item]));
 if (!Array.isArray(taxonomy.categories)) throw new Error("Canonical category taxonomy is missing.");
 if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
 
@@ -13,7 +16,7 @@ const examples = {};
 let changed = 0;
 for (const product of catalog.products) {
   if (!product || typeof product !== "object") continue;
-  const nextCategory = categoryFor(
+  const textCategory = categoryFor(
     {
       name: product.advertiserName || "",
       parentCategory: product.advertiserCategory || "",
@@ -21,6 +24,9 @@ for (const product of catalog.products) {
     },
     product
   );
+  const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
+  const visualCheck = visualResults.get(key)?.categoryCheck;
+  const nextCategory = visualCategoryOverride(visualCheck) || textCategory;
   // Image-model disagreements are recorded by the image audit for review.
   // They are never allowed to silently overwrite a category without matching
   // product-title/description evidence.
@@ -38,12 +44,17 @@ for (const product of catalog.products) {
     changed++;
   }
   product.englishCategory = nextCategory;
-  const proposedSubcategory = subcategoryFor(nextCategory, product);
+  const visualPath = visualSubcategoryOverride(visualCheck, nextCategory);
+  const proposedSubcategory = visualPath || subcategoryFor(nextCategory, product);
   product.subcategory = normalizeSubcategoryPath(nextCategory, proposedSubcategory, taxonomy);
+  if (visualCheck && visualCheck.visualAction === "reclassify") {
+    product.visualCategoryEvidence = { category: nextCategory, confidence: visualCheck.confidence, margin: visualCheck.margin, source: "CLIP zero-shot image classification", auditedAt: visualResults.get(key)?.auditedAt || null };
+  }
   product.englishSubcategory = product.subcategory;
 }
 await fs.writeFile(path, JSON.stringify(catalog), "utf8");
 console.log("Primary category audit completed for " + catalog.products.length + " catalog products.");
 console.log("Reclassified products: " + changed + ".");
+console.log("Products with confident image-root overrides: " + catalog.products.filter(product => product.visualCategoryEvidence?.source === "CLIP zero-shot image classification").length + ".");
 console.log("Previous category counts: " + JSON.stringify(changes));
 console.log("Reclassification examples: " + JSON.stringify(examples));
