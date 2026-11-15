@@ -1483,7 +1483,6 @@
           "children": [
             "Apartments & Condominiums",
             "Houses & Villas",
-            "Luxury Penthouses",
             "Country Houses & Estates",
             "New Developments",
             "Off-Market Residential Property"
@@ -1495,8 +1494,7 @@
             "Apartments for Rent",
             "Houses & Villas for Rent",
             "Holiday Homes & Short Stays",
-            "Serviced Apartments",
-            "Luxury Rentals"
+            "Serviced Apartments"
           ]
         },
         {
@@ -1522,8 +1520,6 @@
         {
           "name": "Special Properties",
           "children": [
-            "Castles & Historic Estates",
-            "Private Islands",
             "Farms & Vineyards",
             "Resorts & Retreats"
           ]
