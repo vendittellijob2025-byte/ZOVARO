@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: zovaro-catalog-sync-${{ github.ref }}
@@ -60,54 +61,20 @@ jobs:
       # The public free translation endpoint is rate-limited and must not block
       # importing valid affiliate products or saving the catalog.
 
-      - name: Commit updated compact catalog
-        env:
-          CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Open a review PR for the CJ catalog update
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: catalog/cj-feed-sync-review
+          base: main
+          delete-branch: false
+          commit-message: "chore: sync CJ catalog and English translations"
+          title: "Catalog: review CJ feed and translation update"
+          body: |
+            Automated CJ feed and translation output for human review.
 
-          git add data/catalog.json data/translation-cache.json data/category-coverage.json
-
-          if git diff --cached --quiet; then
-            echo "No catalog or translation changes."
-            exit 0
-          fi
-
-          git commit -m "chore: sync CJ catalog and English translations"
-
-          # Other repository updates can land while the large CJ feeds are
-          # downloading. If catalog.json conflicts during rebase, rebuild the
-          # catalog on top of the newest main instead of losing the feed sync.
-          for attempt in 1 2 3; do
-            git fetch origin "${GITHUB_REF_NAME}"
-
-            if git rebase "origin/${GITHUB_REF_NAME}"; then
-              if git push origin "HEAD:${GITHUB_REF_NAME}"; then
-                exit 0
-              fi
-              git rebase --abort || true
-            else
-              git rebase --abort || true
-            fi
-
-            if [ "$attempt" -lt 3 ]; then
-              echo "Push conflict on attempt $attempt; rebuilding catalog on latest branch."
-              git fetch origin "${GITHUB_REF_NAME}"
-              git reset --hard "origin/${GITHUB_REF_NAME}"
-              node scripts/sync-cj-advertisers.mjs
-              node scripts/reclassify-catalog-categories.mjs
-              node scripts/validate-product-category-rules.mjs
-              node scripts/audit-category-quality.mjs
-              node scripts/report-category-coverage.mjs
-              git add data/catalog.json data/translation-cache.json data/category-coverage.json
-              if git diff --cached --quiet; then
-                echo "Latest branch already contains the current catalog."
-                exit 0
-              fi
-              git commit -m "chore: sync CJ catalog and English translations"
-            fi
-          done
-
-          echo "Unable to push CJ catalog after three attempts."
-          exit 1
+            This workflow never pushes product data directly to main. Before merging, verify advertiser approval, feed/API licence, territorial eligibility, product categories, images and usage rights, affiliate URL generation, live click tests and attribution. A syntactically valid tracking URL is not proof of attribution. No automatic merge is configured.
+          add-paths: |
+            data/catalog.json
+            data/translation-cache.json
+            data/category-coverage.json
