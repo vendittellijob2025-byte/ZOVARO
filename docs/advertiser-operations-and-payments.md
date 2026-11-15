@@ -42,7 +42,7 @@ For every advertiser record, keep:
 - At each monthly due date, inspect the actual bank statement and reconcile the client/payment reference.
 - Only an administrator who has verified the cleared bank credit may select “Registra bonifico”.
 - Record one payment against the correct covered period. The next due date advances by one calendar month, clamping to the last day when necessary.
-- The register flags payment pending, due today/soon and overdue states. A client with an overdue instalment must be reviewed and the campaign paused according to the signed contract; do not automatically cancel or impose penalties without contract terms.
+- The register flags payment pending, due today/soon and overdue states. A scheduled Vercel audit runs on the first day of each month at 09:00 America/Bogota and stores a private report of monthly clients with instalments due or approaching within 31 days. The administrator dashboard displays the latest report.\n- The scheduled audit checks the internal ledger only; it cannot inspect the bank account or prove a transfer arrived. The administrator must compare the due list with the actual bank statement, record the cleared credit, and review unpaid/overdue clients. A client with an overdue instalment must be reviewed and the campaign paused according to the signed contract; do not automatically cancel or impose penalties without contract terms.
 - Annual prepayment is recorded once at US$99 and does not create monthly instalments.
 - Keep the original bank statement/invoice/contract in an authorised private accounting archive. Do not upload bank statements, IBANs, full transfer references or identity documents to GitHub.
 - Retain an auditable payment history; never overwrite a previous payment to make a missed instalment appear paid.
@@ -51,7 +51,7 @@ For every advertiser record, keep:
 
 - The administrator API requires the existing signed `zovaro_admin` cookie and the existing private Blob store.
 - The current implementation supports private client records, plan, signed-contract flag, initial/monthly payment ledger, manual bank-credit verification and computed due/overdue status.
-- It does NOT connect to the bank, automatically detect incoming transfers, issue invoices, sign contracts, email late-payment notices, create videos, or publish social posts.
+- It does NOT connect to the bank, automatically detect incoming transfers, issue invoices, sign contracts, email late-payment notices, create videos, or publish social posts. The monthly cron produces a private due-date audit only; it is not an automatic bank reconciliation.
 - Monthly due-state visibility is not a substitute for an actual bank reconciliation. Before claiming automated monthly checks, configure a secure accounting/bank integration or an authorised monthly reconciliation process and notification.
 - Before production activation, verify Vercel environment variables `ZOVARO_ADMIN_PASSWORD`, `ZOVARO_ADMIN_SESSION_SECRET`, and `BLOB_STORE_ID`; confirm private Blob access in the deployed environment; run authenticated and unauthenticated API tests; and confirm the page is not linked publicly.
 - Review data-protection requirements, retention/deletion, client consent, cross-border transfers and contract jurisdiction.
