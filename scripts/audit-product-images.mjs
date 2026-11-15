@@ -290,6 +290,7 @@ async function analyseProduct(product, detector, classifier, RawImage, taxonomy)
     const visualCheck = compareVisualCategory(expectedCategory, visualPredictions);
     const objectCheck = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
     const mismatch = visualCheck.status === "not_assessable" ? objectCheck : visualCheck;
+    if (visualCheck.status === "not_assessable") flags.push("visual_category_not_assessable");
     const visualAction = mismatch.status === "possible_mismatch" &&
       Number(mismatch.confidence || 0) >= 0.34 && Number(mismatch.margin || 0) >= 0.08
       ? "reclassify"
