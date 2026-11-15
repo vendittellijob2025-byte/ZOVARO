@@ -2308,7 +2308,7 @@ const views = [
 ];
 
 
-function showView(viewId){
+function showView(viewId, options = {}){
 
   views.forEach(
     id => {
@@ -2328,6 +2328,15 @@ function showView(viewId){
     }
   );
 
+  if(options.pushHistory !== false && window.history && typeof window.history.pushState === "function"){
+    const url = new URL(window.location.href);
+    url.searchParams.delete("view");
+    const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+    const currentView = window.history.state?.zovaroView;
+    if(currentView !== viewId){
+      window.history.pushState({ zovaroView: viewId }, "", nextUrl);
+    }
+  }
 
   window.scrollTo({
     top:0,
@@ -2335,6 +2344,25 @@ function showView(viewId){
   });
 
 }
+
+function goBackToPreviousView(fallbackView = "homeView"){
+  const currentView = window.history?.state?.zovaroView;
+  if(currentView && currentView !== "homeView" && typeof window.history.back === "function"){
+    window.history.back();
+    return;
+  }
+  showView(fallbackView, { pushHistory: false });
+}
+
+window.addEventListener("popstate", event => {
+  const viewId = event.state?.zovaroView;
+  showView(views.includes(viewId) ? viewId : "homeView", { pushHistory: false });
+});
+
+const initialUrl = new URL(window.location.href);
+initialUrl.searchParams.delete("view");
+window.history.replaceState({ zovaroView: "homeView" }, "", `${initialUrl.pathname}${initialUrl.search}${initialUrl.hash}`);
+showView("homeView", { pushHistory: false });
 
 
 function go(id){
@@ -2401,7 +2429,7 @@ document
   .getElementById("backFromShopChoice")
   .addEventListener(
     "click",
-    () => showView("homeView")
+    () => goBackToPreviousView("homeView")
   );
 
 
@@ -2409,7 +2437,7 @@ document
   .getElementById("backFromJobChoice")
   .addEventListener(
     "click",
-    () => showView("homeView")
+    () => goBackToPreviousView("homeView")
   );
 
 
@@ -2449,7 +2477,7 @@ document
   .getElementById("backFromBuy")
   .addEventListener(
     "click",
-    () => showView("buyConditionView")
+    () => goBackToPreviousView("buyConditionView")
   );
 
 
@@ -2457,7 +2485,7 @@ document
   .getElementById("backFromBuyCondition")
   .addEventListener(
     "click",
-    () => showView("shopChoiceView")
+    () => goBackToPreviousView("shopChoiceView")
   );
 
 
@@ -2481,7 +2509,7 @@ document
   .getElementById("backFromUsedProducts")
   .addEventListener(
     "click",
-    () => showView("buyConditionView")
+    () => goBackToPreviousView("buyConditionView")
   );
 
 
@@ -2489,7 +2517,7 @@ document
   .getElementById("backFromSell")
   .addEventListener(
     "click",
-    () => showView("shopChoiceView")
+    () => goBackToPreviousView("shopChoiceView")
   );
 
 
@@ -2497,7 +2525,7 @@ document
   .getElementById("backFromLookingJob")
   .addEventListener(
     "click",
-    () => showView("jobChoiceView")
+    () => goBackToPreviousView("jobChoiceView")
   );
 
 
@@ -2505,7 +2533,7 @@ document
   .getElementById("backFromOfferJob")
   .addEventListener(
     "click",
-    () => showView("jobChoiceView")
+    () => goBackToPreviousView("jobChoiceView")
   );
 
 
