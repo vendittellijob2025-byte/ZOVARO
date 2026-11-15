@@ -1,0 +1,38 @@
+name: Validate homepage routing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "scripts/test-homepage-navigation.mjs"
+      - ".github/workflows/validate-homepage-navigation.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "scripts/test-homepage-navigation.mjs"
+      - ".github/workflows/validate-homepage-navigation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Validate homepage routing and inline scripts
+        run: |
+          node --check scripts/test-homepage-navigation.mjs
+          node scripts/test-homepage-navigation.mjs
