@@ -41,14 +41,14 @@ function addMonths(dateString, count) {
   date.setUTCDate(Math.min(day, lastDay));
   return date.toISOString().slice(0, 10);
 }
-function paymentStatus(client, today) {
+function addDays(dateString, count) {\n  const date = new Date(dateString + "T12:00:00.000Z");\n  date.setUTCDate(date.getUTCDate() + count);\n  return date.toISOString().slice(0, 10);\n}\nfunction paymentStatus(client, today) {
   if (client.status !== "active") return client.status;
   if (client.plan !== "monthly") return "active";
   const due = client.next_payment_due;
   if (!due) return "payment_schedule_missing";
   if (due < today) return "overdue";
   if (due <= addMonths(today, 0)) return "due_today";
-  if (due <= addMonths(today, 0).slice(0, 7) + "-10") return "due_soon";
+  if (due <= addDays(today, 7)) return "due_soon";
   return "active";
 }
 export default async function handler(req, res) {
