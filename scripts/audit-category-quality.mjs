@@ -1,5 +1,6 @@
 import fs from "node:fs";
-import { categoryFor, visualCategoryOverride } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor, visualCategoryOverride, visualSubcategoryOverride } from "../lib/product-category.js";
+import { normalizeSubcategoryPath } from "../lib/category-taxonomy.js";
 
 const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
 const taxonomy = JSON.parse(fs.readFileSync("data/category-tree.json", "utf8"));
@@ -35,6 +36,16 @@ for (const product of catalog.products) {
   const acceptedCategory = visualCategoryOverride(visualCheck) || textExpected;
   const actual = String(product.category || "");
   const subcategory = String(product.subcategory || "");
+  const visualPath = visualSubcategoryOverride(visualCheck, acceptedCategory);
+  const proposedSubcategory = visualPath || subcategoryFor(acceptedCategory, product);
+  const expectedSubcategory = normalizeSubcategoryPath(acceptedCategory, proposedSubcategory, taxonomy);
+  if (subcategory !== expectedSubcategory) {
+    invalidSubcategoryPaths++;
+    if (invalidSubcategoryExamples.length < 25) invalidSubcategoryExamples.push({
+      id: product.id || "", title: product.title || "", category: actual,
+      subcategory, expectedSubcategory, reason: "subcategory_classifier_mismatch"
+    });
+  }
   if (!subcategory || subcategory === "Other" || actual === "Other") unclassifiedProducts++;
   const rootExists = taxonomyRoots.has(actual) || actual === "Other";
   const subcategoryValid = !subcategory || subcategory === "Other" || (() => {
