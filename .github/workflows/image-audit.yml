@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: zovaro-catalog-sync-${{ github.ref }}
@@ -72,41 +73,19 @@ jobs:
           node scripts/reclassify-catalog-categories.mjs
           node scripts/audit-category-quality.mjs
 
-      - name: Save image audit and corrected catalog
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/image-audit-report.json data/catalog.json
-          if git diff --cached --quiet; then
-            echo "No image-audit report or category changes to commit."
-          else
-            git commit -m "chore: update visual product audit and category corrections"
+      - name: Open a review PR for the image audit and corrected catalog
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: catalog/image-audit-review
+          base: main
+          delete-branch: false
+          commit-message: "chore: update visual product audit and category corrections"
+          title: "Catalog: review image audit and category corrections"
+          body: |
+            Automated image-audit and category-reclassification output for human review.
 
-            # Rebase over unrelated main-branch updates. Catalog writers share
-            # a concurrency group; if another writer still changes the catalog,
-            # refresh and rerun the audit instead of force-pushing stale data.
-            for attempt in 1 2 3; do
-              git fetch origin main
-              if git rebase origin/main && git push origin HEAD:main; then
-                exit 0
-              fi
-              git rebase --abort || true
-              if [ "$attempt" -lt 3 ]; then
-                echo "Push conflict on attempt $attempt; refreshing and rerunning image audit."
-                git fetch origin main
-                git reset --hard origin/main
-                node scripts/audit-product-images.mjs
-                node scripts/reclassify-catalog-categories.mjs
-                node scripts/audit-category-quality.mjs
-                git add data/image-audit-report.json data/catalog.json
-                if git diff --cached --quiet; then
-                  echo "Latest main already contains the audited catalog."
-                  exit 0
-                fi
-                git commit -m "chore: update visual product audit and category corrections"
-              fi
-            done
-
-            echo "Unable to save image audit after three attempts."
-            exit 1
-          fi
+            This workflow never pushes catalog or image-audit changes directly to main. Review image evidence, category paths, image rights, product eligibility and existing affiliate tracking before merging. No automatic merge is configured.
+          add-paths: |
+            data/image-audit-report.json
+            data/catalog.json
