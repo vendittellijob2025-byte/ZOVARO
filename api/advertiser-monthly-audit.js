@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { get, put } from "@vercel/blob";
+import { get, list, put } from "@vercel/blob";
 
 async function readJson(pathname) {
   const blob = await get(pathname, { access: "private", useCache: false });
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   }
   if (!process.env.BLOB_STORE_ID) return res.status(503).json({ error: "Private Blob store not configured" });
   try {
-    const store = await readJson("advertiser-management/clients.json") || { clients: [] };
+    const existing = await list({ prefix: "advertiser-management/clients.json", limit: 1 });\n    const store = existing.blobs.length ? await readJson("advertiser-management/clients.json") : { clients: [] };
     const today = new Date().toISOString().slice(0, 10);
     const horizon = addDays(today, 31);
     const due = (store.clients || []).filter(client =>
