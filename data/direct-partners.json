@@ -39,7 +39,8 @@
     "CJ technical matrix refreshed 2026-11-13 from sync run 43519761281: 26 advertisers have accountStatus Active and relationshipStatus joined. Technical audit now records advertiser IDs, feed status, received/passing/imported counts, deduplication and image-URL rejections, feed currency labels, URL-format validation, and explicit unknowns for test clicks, end-to-end attribution and advertiser-specific public visibility. 26 CJ advertisers are approved_on_network; none is automatically considered fully publishable solely from this sync. Latest public catalogue: 17,051 selected products; 192,165 feed products eligible before storefront selection; 0 category mismatches and 0 invalid subcategory paths in the 17,051-product audit. Latest image-audit batch: 250 processed, 14 passed, 236 marked for review, 15,243 remaining in queue. Feed currency/market labels are not proof of shipping territories.",
     "Food delivery and grocery research 2026-11-13: Uber's official Italian affiliate page confirms a free affiliate programme for eligible first Uber trips and first Uber Eats orders; commission depends on audience and publisher country, and acceptance is discretionary. Application form only; no public affiliate email, so no email or application submitted. Instacart's official current page confirms a free Impact programme with up to USD 10 CPA for qualifying new-customer orders, unique tracking/reporting, US/Canada-based traffic requirement and payout approximately 55 days after month-end once USD 10 is reached. No public affiliate email; added as prospect only, pending audience-geography verification.",
     "Partner outreach and inbox audit 2026-11-14: YH Charter's official partner page lists partners@yh-charter.com, a case-by-case yacht-charter referral programme, tiered first-charter and recurring commissions, UTM tracking links, API/widget access, high-resolution imagery and bank transfer or PayPal under agreement. A personalised enquiry was sent to partners@yh-charter.com (Gmail message/thread 1a1dc8f44bc5f116); no approval or live tracking exists. YATR was added as a prospect: its official page advertises $400-$500 per completed booking, 30-day tracking and monthly payout, but does not label the currency or state territories; no public affiliate email was found and an application draft was prepared. tectake was added as a retailAds prospect: official page advertises up to 7%, a 60-day cookie and a product feed; publisher/customer territories and payout terms remain unverified; no dedicated affiliate email was found and an application draft was prepared.",
-    "Outreach quality control 2026-11-14: Gmail search for the last 24 hours returned at least 201 sent threads and 12 delivery-failure threads. Twelve affected recipient addresses have been marked bounced/do-not-retry in this registry. No further broad batch was sent during this run; only one new, individually verified official partnership contact (YH Charter) was emailed. Mii Cosmetics, SimpliSafe UK and Todson sent automated acknowledgements only; none is an approval."
+    "Outreach quality control 2026-11-14: Gmail search for the last 24 hours returned at least 201 sent threads and 12 delivery-failure threads. Twelve affected recipient addresses have been marked bounced/do-not-retry in this registry. No further broad batch was sent during this run; only one new, individually verified official partnership contact (YH Charter) was emailed. Mii Cosmetics, SimpliSafe UK and Todson sent automated acknowledgements only; none is an approval.",
+    "Correction 2026-11-14: the official tectake DE programme page links to RetailAds, whose current programme listing publicly identifies Romy Gröschl (romy.groeschl@tectake.de) as the affiliate contact. A personalised enquiry was sent to that address (Gmail thread 1a1dc98cd556b885). Current published terms: 7% standard, 4% voucher/cashback, 60-day cookie, weekly sales validation, and commission only on transactions from the German online shop. Weekly sales validation is not a weekly payout; payout terms remain undisclosed. The earlier no-email prospect draft for tectake is superseded and must not be sent."
   ],
   "prospects": [
     {
@@ -6328,9 +6329,9 @@
         "Indonesia: Bali, Komodo, Banda and Raja Ampat",
         "Thailand",
         "Mediterranean",
-        "Caribbean; exact customer and publisher eligibility to confirm"
+        "Caribbean; publisher-country eligibility to confirm"
       ],
-      "publicCommission": "Tiered commission on the first charter plus recurring commission on repeat charters; exact rates are confirmed on application and in a signed agreement.",
+      "publicCommission": "First-charter commission plus recurring commission on repeat charters; exact rates are set on application/agreement and are not publicly stated.",
       "cookie": "Not stated on the public partner page; confirm.",
       "contact": {
         "email": "partners@yh-charter.com",
@@ -6338,16 +6339,18 @@
       },
       "applicationUrl": "https://www.yh-charter.com/partners/refer",
       "integration": {
-        "affiliateLink": "Custom UTM-enabled tracking links described; not generated for ZOVARO",
-        "inventoryFeed": "API and white-label booking widget advertised; access and licence pending approval",
-        "imagePermission": "Partner portal advertises high-resolution imagery; exact licence and reuse scope pending",
-        "conversionReporting": "Real-time partner dashboard and monthly performance reports described",
-        "payout": "Bank transfer or PayPal; schedule set in agreement"
+        "affiliateLink": "Custom UTM-enabled tracking links are available in the partner portal after approval; no ZOVARO link generated yet",
+        "attribution": "Custom UTM links described; cookie duration and detailed attribution rules not stated on the public page",
+        "productFeed": "API and booking-widget access described; documentation/access not obtained",
+        "imagePermission": "High-resolution yacht imagery is described as royalty-free in the partner portal; exact licence scope still to be checked",
+        "reporting": "Monthly performance reports at Bronze tier; real-time partner dashboard described",
+        "payout": "Bank transfer or PayPal is described on the partner overview; schedule is set in the agreement and weekly payment is not confirmed",
+        "whiteLabel": "White-label booking widget listed at Gold tier (16–30 referrals)"
       },
-      "nextAction": "Await reply confirming ZOVARO eligibility, destinations, exact first/repeat commission, attribution/cookie, API/widget/feed terms, image rights, reporting and payout. No application approval or live tracking exists.",
+      "nextAction": "Await reply confirming publisher eligibility, destinations, exact commission tiers, cookie/attribution, API/widget terms, image licence, report cadence and payout schedule. No application approval, generated tracking link, feed access or live referral exists.",
       "sourceChecked": "2026-11-14",
       "sourceEvidence": "Official partner page https://www.yh-charter.com/partners/refer",
-      "contactedAt": "2026-11-14T19:11:24-05:00",
+      "contactedAt": "2026-11-14T19:15:39-05:00",
       "emailMessageId": "1a1dc8f44bc5f116",
       "contactEvidence": "Gmail sent message/thread 1a1dc8f44bc5f116",
       "emailDeliveryStatus": "sent"
@@ -6379,24 +6382,35 @@
     {
       "id": "tectake-retailads-affiliate",
       "name": "tectake",
-      "status": "prospect",
-      "programType": "RetailAds affiliate publisher programme",
+      "status": "contacted",
+      "programType": "RetailAds affiliate publisher programme — tectake DE",
       "category": "Home & Living; Garden; Outdoor Living; DIY",
       "territories": [
-        "German storefront reviewed; publisher-country and customer delivery territories to confirm through retailAds"
+        "Germany only for commissionable transactions on the reviewed tectake DE programme; publisher-country eligibility not stated",
+        "Other tectake storefronts are listed in Austria, Belgium, Switzerland, Czechia, Denmark, Spain, France, Italy, Netherlands, Portugal, Sweden and the UK; separate affiliate programmes not verified"
       ],
-      "publicCommission": "Up to 7% for selected publisher models, as advertised on the official page; exact ZOVARO rate and eligible products require approval.",
-      "cookie": "60 days advertised",
-      "applicationUrl": "https://www.tectake.de/affiliate-programm",
+      "publicCommission": "7% standard sale commission; 4% for voucher and cashback publishers. The reviewed RetailAds programme pays commission only on transactions from the German online shop.",
+      "cookie": "60 days",
+      "applicationUrl": "https://www.retailads.net/de-de/publisher/partnerprogramme/tectake/",
       "integration": {
-        "affiliateLink": "RetailAds tracking links after publisher approval",
-        "productFeed": "Product data feed and deep links advertised after activation",
-        "imagePermission": "Advertising assets available after approval; exact image/brand licence to confirm",
-        "conversionReporting": "Network reporting; exact attribution details to confirm"
+        "affiliateLink": "RetailAds tracking link after publisher approval; not generated for ZOVARO",
+        "productFeed": "Product data feed advertised on the official tectake affiliate page; actual feed access not yet granted or tested",
+        "attribution": "60-day cookie; weekly sales validation. Click attribution not tested.",
+        "imagePermission": "RetailAds advertising materials are available after activation; exact product-image licence and reuse scope to confirm",
+        "reporting": "RetailAds publisher reporting; exact report fields and cadence to confirm",
+        "payout": "Not stated on the reviewed programme page; weekly sales validation is not a weekly payout."
       },
-      "nextAction": "Apply through the official retailAds route and confirm publisher eligibility, customer markets, exact rate, feed/API access, attribution, creative rights and payout terms. No dedicated public affiliate email found; an application text draft is prepared in Gmail.",
+      "nextAction": "Await reply from the official tectake affiliate contact confirming international publisher eligibility, DE-only scope, separate country programmes, feed access, asset permissions and payout terms. No RetailAds account, application or ZOVARO tracking link has been created.",
       "sourceChecked": "2026-11-14",
-      "sourceEvidence": "Official affiliate page https://www.tectake.de/affiliate-programm"
+      "sourceEvidence": "Official tectake affiliate page https://www.tectake.de/affiliate-programm and official RetailAds listing https://www.retailads.net/de-de/publisher/partnerprogramme/tectake/",
+      "contact": {
+        "email": "romy.groeschl@tectake.de",
+        "sourceUrl": "https://www.retailads.net/de-de/publisher/partnerprogramme/tectake/"
+      },
+      "contactedAt": "2026-11-14T19:26:03-05:00",
+      "emailMessageId": "1a1dc98cd556b885",
+      "contactEvidence": "Gmail sent message/thread 1a1dc98cd556b885",
+      "emailDeliveryStatus": "sent"
     }
   ]
 }
