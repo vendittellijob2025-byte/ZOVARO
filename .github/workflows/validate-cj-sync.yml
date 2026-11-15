@@ -48,7 +48,15 @@ on:
       - ".github/workflows/cj-commission-sync.yml"
       - ".github/workflows/validate-cj-sync.yml"
       - "scripts/audit-product-images.mjs"
+      - "scripts/audit-category-quality.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
+      - "scripts/test-product-category.mjs"
+      - "scripts/validate-product-category-rules.mjs"
+      - "lib/product-category.js"
+      - "lib/category-taxonomy.js"
+      - "data/category-tree.json"
       - ".github/workflows/image-audit.yml"
+      - ".github/workflows/validate-cj-sync.yml"
   pull_request:
     branches:
       - main
