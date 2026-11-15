@@ -116,7 +116,7 @@ export default async function handler(req, res) {
     if (!Number.isFinite(amount) || amount < expected - 0.01) return res.status(400).json({ error: "Importo inferiore alla quota prevista." });
     const paidAt = String(body.paid_at || new Date().toISOString()).slice(0, 30);
     const period = String(body.period || client.next_payment_due || client.start_date).slice(0, 10);
-    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(period)) return res.status(400).json({ error: "Periodo di pagamento non valido." });
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(period)) return res.status(400).json({ error: "Periodo di pagamento non valido." });
     if (client.payments.some(payment => payment.period === period)) return res.status(409).json({ error: "Esiste già un pagamento registrato per questo periodo." });
     client.payments.push({
       id: crypto.randomUUID(), amount_usd: Number(amount.toFixed(2)),
