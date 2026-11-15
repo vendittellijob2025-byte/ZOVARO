@@ -346,21 +346,68 @@
   }
   async function loadJobDirectory() {
     if (countrySelect) {
-      setOptions(countrySelect,FALLBACK_COUNTRIES,"Select a country");
+      setOptions(countrySelect, FALLBACK_COUNTRIES, "Select a country");
       countrySelect.disabled = false;
     }
+
     const seen = new Set();
+    const keyFor = item => String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
+
+    // Load the repository's verified open jobs first. This static source must
+    // render immediately and must not wait for the private marketplace API.
+    try {
+      const response = await fetch("/data/curated-jobs.json", { cache: "no-cache" });
+      if (!response.ok) throw new Error("Curated job directory HTTP " + response.status);
+      const source = await response.json();
+      (Array.isArray(source) ? source : source.jobs || [])
+        .filter(item => item && item.status === "open" && /^https:\/\//i.test(item.applicationUrl || ""))
+        .forEach(item => {
+          const key = keyFor(item);
+          if (!seen.has(key)) {
+            seen.add(key);
+            jobItems.push({ ...item, approvedAt: item.verifiedAt || null, isCurated: true });
+          }
+        });
+    } catch (error) {
+      console.warn("ZOVARO curated job directory:", error.message);
+    }
+
+    // Also include independently sourced global remote listings when present.
+    try {
+      const response = await fetch("/data/remote-jobs.json", { cache: "no-cache" });
+      if (response.ok) {
+        const feed = await response.json();
+        (Array.isArray(feed.jobs) ? feed.jobs : [])
+          .filter(item => item && item.status === "open" && item.sourceType === "external-job-board" && /^https:\/\//i.test(item.applicationUrl || ""))
+          .forEach(item => {
+            const key = keyFor(item);
+            if (!seen.has(key)) { seen.add(key); jobItems.push(item); }
+          });
+      }
+    } catch (error) {
+      console.warn("ZOVARO global remote job feeds:", error.message);
+    }
+
+    // Publish the verified local directory to the page before calling any
+    // slower external/private service.
+    renderAllOpenJobs();
+
+    // User-submitted listings are supplementary; a slow API must never hide
+    // the verified jobs already loaded above.
     let cursor = null;
     try {
       do {
-        const query = new URLSearchParams({type:"job"});
-        if (cursor) query.set("cursor",cursor);
-        const response = await fetch(API + "?" + query.toString(), {cache:"no-store"});
-        if (!response.ok) throw new Error("Job directory unavailable");
+        const query = new URLSearchParams({ type: "job" });
+        if (cursor) query.set("cursor", cursor);
+        const response = await fetch(API + "?" + query.toString(), {
+          cache: "no-store",
+          signal: AbortSignal.timeout(8000)
+        });
+        if (!response.ok) throw new Error("Job directory unavailable: " + response.status);
         const data = await response.json();
         const items = Array.isArray(data) ? data : [];
         items.forEach(item => {
-          const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
+          const key = keyFor(item);
           if (!seen.has(key)) { seen.add(key); jobItems.push(item); }
         });
         cursor = response.headers.get("X-Zovaro-Next-Cursor") || null;
@@ -368,41 +415,19 @@
     } catch (error) {
       console.warn("ZOVARO live job directory:", error.message);
     }
-    try {
-      const response = await fetch("/data/curated-jobs.json",{cache:"no-store"});
-      if (response.ok) {
-        const source = await response.json();
-        (Array.isArray(source) ? source : source.jobs || []).filter(item => item.status === "open").forEach(item => {
-          const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
-          if (!seen.has(key)) { seen.add(key); jobItems.push({...item,approvedAt:item.verifiedAt || null,isCurated:true}); }
-        });
-      }
-    } catch (error) {
-      console.warn("ZOVARO curated job directory:",error.message);
-    }
-    try {
-      const response = await fetch("/data/remote-jobs.json",{cache:"no-store"});
-      if (response.ok) {
-        const feed = await response.json();
-        (Array.isArray(feed.jobs) ? feed.jobs : [])
-          .filter(item => item && item.status === "open" && item.sourceType === "external-job-board")
-          .forEach(item => {
-            const key = String(item.id || JSON.stringify([item.title,item.company,item.country,item.city]));
-            if (!seen.has(key)) { seen.add(key); jobItems.push(item); }
-          });
-      }
-    } catch (error) {
-      console.warn("ZOVARO global remote job feeds:",error.message);
-    }
+
     const nonCountryGroups = new Set(["worldwide","europe","apac","asia pacific","emea","north america","latin america","latam","south america","remote"]);
-    let countries = uniqueSorted([
+    const countries = uniqueSorted([
       ...FALLBACK_COUNTRIES,
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
     ].filter(value => !nonCountryGroups.has(String(value || "").trim().toLowerCase())));
+
     if (countrySelect) {
-      setOptions(countrySelect,countries,"Select a country");
+      const selectedCountry = countrySelect.value;
+      setOptions(countrySelect, countries, "Select a country", selectedCountry);
       countrySelect.disabled = false;
     }
+    renderAllOpenJobs();
   }
   async function searchJobsByLocation() {
     const country = countrySelect?.value || "";
