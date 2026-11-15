@@ -6,68 +6,39 @@ const REPORT_PATH = "data/image-audit-report.json";
 const MODEL_ID = process.env.IMAGE_AUDIT_MODEL || "Xenova/yolos-tiny";
 const IMAGE_CLASSIFIER_ID = process.env.IMAGE_CLASSIFIER_MODEL || "Xenova/clip-vit-base-patch32";
 const VISUAL_CANDIDATES = [
-  { label: "lipstick, lip gloss, lip liner or lip balm makeup", category: "Beauty" },
-  { label: "mascara, eyeliner, eyeshadow or eyebrow makeup", category: "Beauty" },
-  { label: "foundation, concealer, blush or face powder makeup", category: "Beauty" },
-  { label: "nail polish, manicure or nail art product", category: "Beauty" },
-  { label: "makeup brushes, cosmetic sponges or beauty tools", category: "Beauty" },
-  { label: "facial cleanser, toner or micellar water skincare", category: "Beauty" },
-  { label: "face serum, moisturizer, eye cream or face mask skincare", category: "Beauty" },
-  { label: "sunscreen, sun protection or tanning skincare", category: "Beauty" },
-  { label: "shampoo, conditioner, hair mask or hair treatment", category: "Beauty" },
-  { label: "hair dryer, curling iron, straightener or styling tool", category: "Beauty" },
-  { label: "perfume, eau de parfum, cologne or body fragrance", category: "Beauty" },
-  { label: "body wash, shower gel, body lotion or deodorant", category: "Beauty" },
-  { label: "baby-specific lotion, baby oil, diaper cream or baby wash", category: "Babies" },
-  { label: "baby bottle, feeding nipple, breast pump or high chair", category: "Babies" },
-  { label: "baby stroller, infant car seat, baby carrier or baby monitor", category: "Babies" },
-  { label: "newborn clothing, baby bodysuit or infant apparel", category: "Babies" },
-  { label: "vitamins, minerals, multivitamins or dietary supplements", category: "Health & Wellness" },
-  { label: "protein powder, creatine, electrolyte or sports nutrition supplement", category: "Health & Wellness" },
-  { label: "blood pressure monitor, thermometer or pulse oximeter", category: "Health & Wellness" },
-  { label: "first aid bandages, medical dressing or wound care supplies", category: "Health & Wellness" },
-  { label: "dental care, toothbrush, toothpaste or oral hygiene product", category: "Health & Wellness" },
-  { label: "mobility aid, orthopedic brace or medical support device", category: "Health & Wellness" },
-  { label: "dumbbells, kettlebells, weights or strength training equipment", category: "Sports" },
-  { label: "treadmill, exercise bike, rowing machine or cardio equipment", category: "Sports" },
-  { label: "yoga mat, yoga block or pilates equipment", category: "Sports" },
-  { label: "tennis racket, padel racket, badminton racket or sports balls", category: "Sports" },
-  { label: "bicycle, cycling helmet, bike pump or cycling equipment", category: "Sports" },
-  { label: "camping tent, hiking backpack or outdoor recreation gear", category: "Sports" },
-  { label: "swimming, diving, surfing or water sports equipment", category: "Sports" },
-  { label: "women's dress, blouse, jeans or clothing", category: "Fashion" },
-  { label: "men's shirt, trousers, jacket or clothing", category: "Fashion" },
-  { label: "sneakers, boots, sandals or fashion footwear", category: "Fashion" },
-  { label: "handbag, wallet, backpack or fashion bag", category: "Fashion" },
-  { label: "jewelry, necklace, bracelet, ring or earrings", category: "Fashion" },
-  { label: "smartphone, tablet, laptop or computer", category: "Electronics" },
-  { label: "digital camera, camera lens, webcam or photography equipment", category: "Electronics" },
-  { label: "headphones, earbuds, speaker or microphone audio device", category: "Electronics" },
-  { label: "television, projector, streaming device or home theater", category: "Electronics" },
-  { label: "smartwatch, fitness tracker or wearable technology", category: "Electronics" },
-  { label: "car tire, alloy wheel, automotive mirror or replacement car part", category: "Automotive" },
-  { label: "car interior accessory, car seat cover, floor mat or roof rack", category: "Automotive" },
-  { label: "car battery, brake pad, headlight or engine component", category: "Automotive" },
-  { label: "car wash, automotive polish, engine oil or vehicle care product", category: "Automotive" },
-  { label: "kitchen appliance, coffee machine, blender or air fryer", category: "Appliances" },
-  { label: "vacuum cleaner, robot vacuum or floor cleaning appliance", category: "Appliances" },
-  { label: "sofa, chair, table, bed or household furniture", category: "Home & Living" },
-  { label: "cookware, kitchen utensils, plates, cups or tableware", category: "Home & Living" },
-  { label: "bedding, pillows, towels or bathroom accessories", category: "Home & Living" },
-  { label: "lamp, wall art, candle, vase or home decoration", category: "Home & Living" },
-  { label: "dog food, dog harness, dog bed or dog toy", category: "Pets" },
-  { label: "cat food, cat litter, cat bed or cat toy", category: "Pets" },
-  { label: "bird cage, aquarium, fish tank or small animal habitat", category: "Pets" },
-  { label: "building blocks, construction toy or model kit", category: "Toys & Games" },
-  { label: "doll, action figure, board game or puzzle", category: "Toys & Games" },
-  { label: "coffee, tea, snack, chocolate or packaged food", category: "Food & Grocery" },
-  { label: "plant seeds, flower pot, fertilizer or garden tools", category: "Garden" },
-  { label: "power drill, hand tools, screwdriver or workshop equipment", category: "Tools & DIY" },
-  { label: "book, magazine, DVD or music record", category: "Books & Media" },
-  { label: "office stationery, printer supplies or computer software", category: "Office & Technology" },
-  { label: "suitcase, carry-on luggage, travel backpack or travel accessory", category: "Travel" }
+  { label: "a photo of beauty products including makeup, cosmetics, skincare, perfume and hair care", category: "Beauty" },
+  { label: "a photo of baby products including infant clothing, diapers, feeding, strollers and nursery items", category: "Babies" },
+  { label: "a photo of medical equipment, wellness devices, vitamins and health supplements", category: "Health & Wellness" },
+  { label: "a photo of sports and fitness equipment, gym gear, athletic apparel and sporting goods", category: "Sports" },
+  { label: "a photo of fashion clothing, shoes, handbags, jewelry and accessories", category: "Fashion" },
+  { label: "a photo of electronic devices including smartphones, computers, cameras and audio equipment", category: "Electronics" },
+  { label: "a photo of automotive products including car parts, tires, vehicle accessories and replacement components", category: "Automotive" },
+  { label: "a photo of household appliances including kitchen appliances, laundry machines and vacuum cleaners", category: "Appliances" },
+  { label: "a photo of home and living products including furniture, cookware, bedding, lighting and home decor", category: "Home & Living" },
+  { label: "a photo of pet supplies including dog and cat food, pet beds, harnesses and animal accessories", category: "Pets" },
+  { label: "a photo of toys and games including dolls, building blocks, board games and puzzles", category: "Toys & Games" },
+  { label: "a photo of food and grocery products including packaged food, beverages, coffee, tea and snacks", category: "Food & Grocery" },
+  { label: "a photo of garden products including plants, seeds, pots, fertilizer and gardening tools", category: "Garden" },
+  { label: "a photo of tools and DIY products including power tools, hand tools, hardware and workshop equipment", category: "Tools & DIY" },
+  { label: "a photo of books and media including books, magazines, movies, music and records", category: "Books & Media" },
+  { label: "a photo of office and technology supplies including stationery, printers and computer software", category: "Office & Technology" },
+  { label: "a photo of travel products including suitcases, luggage, travel bags and travel accessories", category: "Travel" },
+  { label: "a photo of accessibility and adaptive living equipment including wheelchairs, mobility aids and accessible home devices", category: "Accessible & Adaptive Living" },
+  { label: "a photo of arts, crafts and sewing supplies including fabric, yarn, paints and sewing machines", category: "Arts, Crafts & Sewing" },
+  { label: "a photo of wholesale and business supplies including bulk packaging, shipping cartons and commercial goods", category: "Business, Wholesale & Bulk Supply" },
+  { label: "a photo of solar energy and electric mobility equipment including solar panels, batteries, power stations and EV chargers", category: "Energy, Solar & Electric Mobility" },
+  { label: "a photo of food delivery and restaurant orders including prepared meals, takeaway food and grocery delivery", category: "Food Delivery & Restaurant Orders" },
+  { label: "a photo of gaming products including video game consoles, controllers, gaming PCs and headsets", category: "Gaming" },
+  { label: "a photo of industrial and scientific equipment including 3D printers, laboratory instruments and machinery", category: "Industrial & Scientific" },
+  { label: "a photo of musical instruments and studio equipment including guitars, pianos, drums and audio interfaces", category: "Musical Instruments & Studio" },
+  { label: "a photo of real estate property listings including houses, apartments, villas, commercial properties and land", category: "Real Estate" },
+  { label: "a photo of refurbished, pre-owned and outlet products including renewed electronics and second hand goods", category: "Refurbished, Pre-Owned & Outlet" },
+  { label: "a photo of repair and circular economy services including device repair, appliance repair and recycling", category: "Repair & Circular Economy" },
+  { label: "a photo of security and safety products including surveillance cameras, alarms, smart locks and safety equipment", category: "Security & Safety" },
+  { label: "a photo of luxury and prestige goods including luxury watches, diamonds, yachts, private jets and exclusive properties", category: "Luxury & Prestige" },
+  { label: "a photo of televisions and home cinema products including OLED TVs, projectors, soundbars and AV equipment", category: "TVs & Home Cinema" }
 ];
-const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 350) || 350;
+const requestedBatchSize = Number(process.env.IMAGE_AUDIT_BATCH_SIZE || 500) || 500;
 const BATCH_SIZE = Math.min(500, Math.max(1, requestedBatchSize));
 const MIN_BYTES = 8 * 1024;
 const MAX_BYTES = 12 * 1024 * 1024;
@@ -205,6 +176,43 @@ export function compareVisualCategory(expectedCategory, predictions) {
   };
 }
 
+
+function buildSubcategoryCandidates(taxonomy, category) {
+  const root = taxonomy.categories.find(item => item.name === category);
+  if (!root) return [];
+  const candidates = [];
+  function visit(nodes, path = []) {
+    for (const node of nodes || []) {
+      const name = typeof node === "string" ? node : node?.name;
+      if (!name || /^other$/i.test(name)) continue;
+      const nextPath = [...path, name];
+      const children = typeof node === "string" ? [] : (node.children || []);
+      if (children.length) visit(children, nextPath);
+      else candidates.push({ path: nextPath.join(" > "), label: "a product photo of " + nextPath.slice(-2).join(", ") + ", " + category });
+    }
+  }
+  visit(root.children || []);
+  return candidates;
+}
+
+export function compareVisualSubcategory(predictions, candidates) {
+  const byLabel = new Map(candidates.map(item => [item.label, item]));
+  const ranked = (Array.isArray(predictions) ? predictions : [])
+    .map(item => ({ candidate: byLabel.get(item.label), score: Number(item.score || 0) }))
+    .filter(item => item.candidate)
+    .sort((a, b) => b.score - a.score);
+  const first = ranked[0], second = ranked[1];
+  if (!first) return { status: "not_assessable" };
+  const margin = first.score - (second?.score || 0);
+  return {
+    status: first.score >= 0.22 && margin >= 0.035 ? "confident" : "ambiguous",
+    path: first.candidate.path,
+    confidence: Number(first.score.toFixed(3)),
+    margin: Number(margin.toFixed(3)),
+    alternatives: ranked.slice(0, 3).map(item => ({ path: item.candidate.path, score: Number(item.score.toFixed(3)) }))
+  };
+}
+
 function categoryMismatch(product, detections) {
   const expected = categoryFor({ name: product.advertiserName || "" }, product);
   const relevant = detections
@@ -245,7 +253,7 @@ async function loadReport() {
   }
 }
 
-async function analyseProduct(product, detector, classifier, RawImage) {
+async function analyseProduct(product, detector, classifier, RawImage, taxonomy) {
   const imageUrl = String(product.imageLink || "");
   const base = {
     key: [product.source || "", product.advertiserId || "", product.id || ""].join("|"),
@@ -253,6 +261,7 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     title: String(product.englishTitle || product.title || "").slice(0, 180),
     category: String(product.englishCategory || product.category || ""),
     imageUrl,
+    visualClassifier: IMAGE_CLASSIFIER_ID,
     auditedAt: new Date().toISOString()
   };
   try {
@@ -281,13 +290,34 @@ async function analyseProduct(product, detector, classifier, RawImage) {
     const visualCheck = compareVisualCategory(expectedCategory, visualPredictions);
     const objectCheck = categoryMismatch({ ...product, __imageWidth: metrics.width, __imageHeight: metrics.height }, detections);
     const mismatch = visualCheck.status === "not_assessable" ? objectCheck : visualCheck;
-    if (mismatch.status === "possible_mismatch") flags.push("possible_category_mismatch");
-    // A category disagreement, ambiguous visual result, or unassessable image
-    // is never treated as an automatic pass. It remains explicitly review-required.
-    const decision = flags.length || mismatch.status !== "consistent"
+    if (visualCheck.status === "not_assessable") flags.push("visual_category_not_assessable");
+    const visualAction = mismatch.status === "possible_mismatch" &&
+      Number(mismatch.confidence || 0) >= 0.34 && Number(mismatch.margin || 0) >= 0.08
+      ? "reclassify"
+      : (mismatch.status === "possible_mismatch" || mismatch.status === "ambiguous" ? "review" : "keep_text_category");
+    let visualSubcategory = { status: "not_assessable" };
+    const visualRoot = mismatch.detectedCategory || expectedCategory;
+    if (visualRoot && taxonomy.categories.some(item => item.name === visualRoot)) {
+      const candidates = buildSubcategoryCandidates(taxonomy, visualRoot);
+      if (candidates.length) visualSubcategory = compareVisualSubcategory(
+        await classifier(image, candidates.map(item => item.label)), candidates
+      );
+    }
+    if (mismatch.status === "possible_mismatch" && visualAction !== "reclassify") flags.push("possible_category_mismatch");
+    if (visualAction === "reclassify") flags.push("visual_category_reclassification");
+    const decision = flags.some(flag => flag !== "visual_category_reclassification") ||
+      (mismatch.status !== "consistent" && visualAction !== "reclassify" && mismatch.status !== "not_assessable")
       ? "review_required"
       : "pass";
-    return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck: mismatch };
+    const categoryCheck = {
+      ...mismatch,
+      visualAction,
+      visualSubcategoryPath: visualSubcategory.path || null,
+      visualSubcategoryConfidence: visualSubcategory.confidence || null,
+      visualSubcategoryMargin: visualSubcategory.margin || null,
+      visualSubcategoryAction: visualSubcategory.status === "confident" ? "apply" : "fallback_to_text"
+    };
+    return { ...base, decision, flags, metrics: { ...metrics, bytes: buffer.byteLength }, detections, categoryCheck };
   } catch (error) {
     const reason = String(error.message || error).slice(0, 120);
     return {
@@ -311,21 +341,37 @@ async function main() {
     if (hashDistance("0000000000000000", "000000000000000f") !== 4) throw new Error("Perceptual hash self-test failed.");
     if (!qualityFlags(metrics, 1024).includes("image_file_too_small")) throw new Error("Quality flags self-test failed.");
     const mismatch = compareVisualCategory("Babies", [
-      { label: "lipstick, lip gloss, lip liner or lip balm makeup", score: 0.72 },
-      { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.11 }
+      { label: "a photo of beauty products including makeup, cosmetics, skincare, perfume and hair care", score: 0.72 },
+      { label: "a photo of baby products including infant clothing, diapers, feeding, strollers and nursery items", score: 0.11 }
     ]);
     if (mismatch.status !== "possible_mismatch" || mismatch.detectedCategory !== "Beauty") throw new Error("Visual category self-test failed.");
     const ambiguous = compareVisualCategory("Babies", [
-      { label: "lipstick, lip gloss, lip liner or lip balm makeup", score: 0.29 },
-      { label: "baby-specific lotion, baby oil, diaper cream or baby wash", score: 0.27 }
+      { label: "a photo of beauty products including makeup, cosmetics, skincare, perfume and hair care", score: 0.29 },
+      { label: "a photo of baby products including infant clothing, diapers, feeding, strollers and nursery items", score: 0.27 }
     ]);
     if (ambiguous.status !== "ambiguous") throw new Error("Visual ambiguity self-test failed.");
+    const subcategory = compareVisualSubcategory([
+      { label: "a product photo of Lip Makeup, Makeup, Beauty", score: 0.71 },
+      { label: "a product photo of Face Cleansers, Skincare, Beauty", score: 0.12 }
+    ], [
+      { path: "Makeup > Lip Makeup", label: "a product photo of Lip Makeup, Makeup, Beauty" },
+      { path: "Skincare > Face Cleansers", label: "a product photo of Face Cleansers, Skincare, Beauty" }
+    ]);
+    if (subcategory.status !== "confident" || subcategory.path !== "Makeup > Lip Makeup") throw new Error("Visual subcategory self-test failed.");
+    const categoryCoverage = new Set(VISUAL_CANDIDATES.map(item => item.category));
+    const requiredRoots = ["Accessible & Adaptive Living","Appliances","Arts, Crafts & Sewing","Automotive","Babies","Beauty","Books & Media","Business, Wholesale & Bulk Supply","Electronics","Energy, Solar & Electric Mobility","Fashion","Food & Grocery","Food Delivery & Restaurant Orders","Gaming","Garden","Health & Wellness","Home & Living","Industrial & Scientific","Musical Instruments & Studio","Office & Technology","Pets","Real Estate","Refurbished, Pre-Owned & Outlet","Repair & Circular Economy","Security & Safety","Luxury & Prestige","Sports","Tools & DIY","Toys & Games","Travel","TVs & Home Cinema"];
+    const missingRoots = requiredRoots.filter(root => !categoryCoverage.has(root));
+    if (missingRoots.length) throw new Error("Visual classifier misses canonical categories: " + missingRoots.join(", "));
     console.log("Image audit self-tests passed.");
     return;
   }
 
   const catalog = JSON.parse(await fs.readFile(CATALOG_PATH, "utf8"));
   if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
+  const taxonomy = JSON.parse(await fs.readFile("data/category-tree.json", "utf8"));
+  if (!Array.isArray(taxonomy.categories) || taxonomy.categories.length !== 31) {
+    throw new Error("Expected all 31 canonical category roots before visual classification.");
+  }
   const report = await loadReport();
   const existing = new Map(report.results.map(item => [item.key, item]));
   const recheckDays = Math.max(1, Number(process.env.IMAGE_AUDIT_RECHECK_DAYS || 30) || 30);
@@ -337,6 +383,9 @@ async function main() {
     return product.imageLink && (
       !previous ||
       previous.imageUrl !== product.imageLink ||
+      previous.visualClassifier !== IMAGE_CLASSIFIER_ID ||
+      !previous.categoryCheck?.visualAction ||
+      !previous.categoryCheck?.visualSubcategoryAction ||
       !Number.isFinite(auditedAt) ||
       auditedAt < recheckBefore
     );
@@ -365,7 +414,7 @@ async function main() {
   let passed = 0;
   let review = 0;
   for (let index = 0; index < batch.length; index += 1) {
-    const result = await analyseProduct(batch[index], detector, classifier, RawImage);
+    const result = await analyseProduct(batch[index], detector, classifier, RawImage, taxonomy);
     const previous = [...existing.values()].filter(item => item.metrics?.perceptualHash);
     const duplicate = result.metrics?.perceptualHash
       ? previous.find(item => item.key !== result.key &&

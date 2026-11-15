@@ -1,13 +1,14 @@
 import fs from "node:fs/promises";
 import assert from "node:assert/strict";
-import { categoryFor, subcategoryFor } from "../lib/product-category.js";
+import { categoryFor, subcategoryFor, visualCategoryOverride, visualSubcategoryOverride } from "../lib/product-category.js";
 
 const advertiser = { name: "Toy Story Travel & Toys", parentCategory: "Travel", childCategory: "Toys" };
 const cases = [
   // Brand/model words are weak evidence: classify by what the product actually is.
+  // Wigs and extensions follow the explicit Beauty > Hair Care browse taxonomy.
   ["Baby Lips Moisturizing Lip Balm", "Beauty", { advertiser: { name: "Babies & Kids Store" } }],
   ["M2U Nyc Metallic Liquid Lip | Baby Coral (Light Peach) 0.21Oz", "Beauty"],
-  ["[From 20 Inches] 13x4 Bye Bye Slip Lace Frontal Water Wave Glueless Drawstring Wig", "Fashion", { description: "Product description mentions lipstick, mascara and beauty cosmetics as unrelated examples." }],
+  ["[From 20 Inches] 13x4 Bye Bye Slip Lace Frontal Water Wave Glueless Drawstring Wig", "Beauty", { description: "Product description mentions lipstick, mascara and beauty cosmetics as unrelated examples." }],
   ["Baby Doll Matte Liquid Lipstick", "Beauty", { advertiser: { name: "Baby Fashion Brand" } }],
   ["Baby Pink Waterproof Mascara", "Beauty", { advertiser: { name: "Babies Store" } }],
   ["Baby Glow Hydrating Face Cream", "Beauty", { advertiser: { name: "Baby & Kids Shop" } }],
@@ -43,7 +44,7 @@ const cases = [
   ["Organic Ground Coffee", "Food & Grocery"],
   ["Dog Food Storage Container", "Pets"],
   ["Garden Hose", "Garden"],
-  ["Hair Extensions 20 Inch", "Fashion"],
+  ["Hair Extensions 20 Inch", "Beauty"],
   ["Unclassified Special Item", "Other", { advertiser: { name: "General Retailer" } }],
   ["Ahava Brightening Mud Mask Face Masks 1.7Oz", "Beauty"],
   ["Rude Return Of The Jeteye 35 Eyeshadows Palette - Book 4 1.34Oz", "Beauty"],
@@ -55,14 +56,14 @@ const cases = [
   ["Michael Kors Underwire Baby Doll Tankini Top In New Navy - S", "Fashion"],
   ["Rexing Rexing-MSD-64GB microSDXC UHS-3 Memory Card with Adapter", "Electronics"],
   ["Rexing M1S Monocular", "Electronics", { description: "4K IR Night Vision Digital Monocular with 8x Zoom" }],
-  ["UNice Deep Wave Malaysian Remy Hair 3 Bundles Deal", "Fashion"],
+  ["UNice Deep Wave Malaysian Remy Hair 3 Bundles Deal", "Beauty"],
   ["Premium High-Stretch Ice Silk Sleep Bonnet for Braids", "Fashion"],
   ["Safe for Sensitive Ears Starlight Spark Cubic Zirconia Stud Earrings", "Fashion"],
   ["UNice Bubble Gum Pink Wash Bag Makeup Bag", "Beauty"],
   ["Electric Curling Iron Wand Fast Heating", "Beauty"],
   ["UNice 8 Pairs 3D False Eyelashes Cat Eye", "Beauty"],
   ["Lace Tint Pen for Seamless Natural Hairline", "Beauty"],
-  ["UNice Skin Melt HD Lace Body Wave Human Hair Wig Camera Ready Styling", "Fashion"],
+  ["UNice Skin Melt HD Lace Body Wave Human Hair Wig Camera Ready Styling", "Beauty"],
   ["Vitajuwel Via Heat Tea Strainer", "Home & Living"],
   ["Rexing Installation Service", "Other"],
   ["Patchology Rose Hydrating Under Eye Masks - 5Pair", "Beauty"],
@@ -91,7 +92,7 @@ const cases = [
   ["JetDrive 9 | Defragmentiert Deine Festplatte", "Office & Technology"],
   ["Mediatheken Downloader 2025 | Legal von ARD herunterladen", "Office & Technology"],
   ["Myova Myoplus Tablets 120Ct", "Health & Wellness"],
-  ["UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair", "Fashion"],
+  ["UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair", "Beauty"],
 ["Miracle Fruit Oil Miracle Fruit Seed Oil Treatment - 1.7Oz", "Beauty"],
   ["Naturemary Relaxing Blend Blooming Garden Escape Bath Teas", "Beauty"],
   ["Bougies La Francaise Scented Candle | Blue Garden", "Home & Living"],
@@ -104,7 +105,7 @@ const cases = [
   ["Klara Native Mountain Pepperleaf Exfoliant", "Beauty"],
   ["Cannuka Cbd Calming Eye Balm", "Beauty"],
   ["Tarte Maracuja Tinted Hydrator Honey Shade", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
-  ["UNice Honey Blonde Highlighted Body Wave Hair Bundles", "Fashion"],
+  ["UNice Honey Blonde Highlighted Body Wave Hair Bundles", "Beauty"],
   ["4on Totalgrip Paste 50 Ml Overgrips", "Sports", { advertiser: { name: "Padel Iberico ES" } }],
   ["Patchology Lip Service Gloss-To-Balm Treatment", "Beauty"],
   ["Farmhouse Fresh Honey Lavender Fine Sea Salt Body Scrub", "Beauty"],
@@ -118,6 +119,8 @@ const cases = [
   ["Brocchi Travel Toiletry Bag | Black", "Fashion"],
   ["Bebe Silver Body Mist 8.4Oz", "Beauty"],
   ["Brocchi Foldable Dual-Power Mini Travel Dryer", "Beauty"],
+  ["Digital air fryer 6 quart", "Appliances"],
+  ["Ceramic table lamp for living room", "Home & Living"],
   ["Goomee The Markless Hair Loop Set | Holiday Edition", "Fashion"],
   ["Free People Next Vacation Top In - Xl | Ivory Combo", "Fashion"],
   ["Organic Cotton Drawstring Comfy Jogger Lightning Pants - Shell - 6-9 Months", "Babies", { advertiser: { name: "Kaiya Baby" } }],
@@ -132,16 +135,17 @@ const cases = [
   ["Abelssoft StartupStar 2025", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["Abelssoft Undeleter 2025", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
   ["Abelssoft WashAndGo 24", "Office & Technology", { advertiser: { name: "Abelssoft Int" } }],
-  ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Fashion"],
+  ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Beauty"],
   ["Le Specs Air Heart Cat-Eye Sunglasses", "Fashion"],
 ["Rexing CPW-1 Wireless Apple CarPlay Adapter", "Electronics"],
   ["Rexing Smart Hardwire Kit with 360 Motion Detection", "Electronics"],
-  ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Fashion"],
-  ["UNice Sport-Friendly Glueless Curly Wig", "Fashion"],
+  ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Beauty"],
+  ["UNice Sport-Friendly Glueless Curly Wig", "Beauty"],
   ["Chi Tea Tree Oil Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Clinique Travel Size Take The Day Off Cleansing Balm", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Style And Grace Travel Cup Gift Bath And Body Gift Sets", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Joe's Jeans The Hi Honey Skinny Ankle Jeans In Divine", "Fashion"],
+  ["Women's Drawstring Jogger Pants", "Fashion"],
   ["Lovery Almond Milk And Honey Body Butter", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Savannah Bee Company Whipped Honey Gift Set", "Food & Grocery"],
   ["Vacation Arizona Lip Balms 3Pc", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
@@ -220,6 +224,8 @@ const departmentCases = [
   ["Leather Ankle Boots", "Fashion", "Shoes > Boots"],
   ["Women's Sandals", "Fashion", "Shoes > Sandals"],
   ["Formal Oxford Shoes", "Fashion", "Shoes > Formal Shoes"],
+  ["DREAM PAIRS Faux Suede Moccasin Slippers", "Fashion", "Shoes > Slippers"],
+  ["BRUNO MARC Men s Classic Metallic Horsebit Loafers", "Fashion", "Shoes > Formal Shoes"],
   ["Single Shoe", "Fashion", "Shoes"],
   ["Men's Leather Wallet", "Fashion", "Bags & Luggage"],
   ["Baby Bottle with Silicone Nipple", "Babies", "Feeding & Nursing"],
@@ -253,6 +259,7 @@ assert.equal(subcategoryFor("Sports", { title: "Camiseta Head Tie Break Women", 
 assert.equal(subcategoryFor("Sports", { title: "Nox ML10 Pro Cup Padel Racket", advertiserName: "Padel Iberico ES" }), "Padel > Padel Rackets");
 assert.equal(subcategoryFor("Sports", { title: "Paletero Padel Bag", advertiserName: "Padel Iberico ES" }), "Padel > Padel Bags");
 assert.equal(categoryFor({ name: "Kaiya Baby" }, { title: "All Season Long Sleeve Sleep Sack" }), "Babies");
+assert.equal(subcategoryFor("Beauty", { title: "UNice Pre Cut Lace Natural Black Water Wave Hair No Baby Hair" }), "Hair Care > Wigs & Hair Extensions");
 assert.equal(subcategoryFor("Babies", { title: "All Season Long Sleeve Sleep Sack", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Sleepwear");
 assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Snap Bodysuit", advertiserName: "Kaiya Baby" }), "Baby Clothing > Baby Bodysuits");
 assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Jogger Pants", advertiserName: "Kaiya Baby" }), "Baby Clothing");
@@ -282,7 +289,8 @@ for (const [category, path] of [
   ["Fashion", "Shoes > Sneakers"],
   ["Fashion", "Shoes > Boots"],
   ["Fashion", "Shoes > Sandals"],
-  ["Fashion", "Shoes > Formal Shoes"]
+  ["Fashion", "Shoes > Formal Shoes"],
+  ["Fashion", "Shoes > Slippers"]
 ]) {
   assert.equal(treeHasPath(category, path), true, "Missing browse-tree path: " + category + " > " + path);
 }
@@ -292,3 +300,9 @@ for (const [title, category, subcategory] of [...autoCases, ...departmentCases])
 console.log("Amazon.it browse-tree path integrity passed (" + (autoCases.length + departmentCases.length) + " paths).");
 
 console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2 + departmentCases.length * 2) + " checks).");
+
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.62,margin:0.21}),"Beauty");
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"review",detectedCategory:"Beauty",confidence:0.62,margin:0.21}),null);
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.30,margin:0.03}),null);
+assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Beauty"),"Makeup > Lip Makeup");
+assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Fashion"),null);

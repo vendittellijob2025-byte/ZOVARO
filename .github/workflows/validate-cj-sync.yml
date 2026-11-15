@@ -36,11 +36,27 @@ on:
       - "terms.html"
       - "api/cj-commission-sync.js"
       - "data/catalog.json"
+      - "data/category-tree.json"
+      - "lib/product-category.js"
+      - "lib/category-taxonomy.js"
+      - "scripts/test-product-category.mjs"
+      - "scripts/validate-product-category-rules.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
+      - "scripts/audit-category-quality.mjs"
+      - "scripts/report-category-coverage.mjs"
       - ".github/workflows/cj-products.yml"
       - ".github/workflows/cj-commission-sync.yml"
       - ".github/workflows/validate-cj-sync.yml"
       - "scripts/audit-product-images.mjs"
+      - "scripts/audit-category-quality.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
+      - "scripts/test-product-category.mjs"
+      - "scripts/validate-product-category-rules.mjs"
+      - "lib/product-category.js"
+      - "lib/category-taxonomy.js"
+      - "data/category-tree.json"
       - ".github/workflows/image-audit.yml"
+      - ".github/workflows/validate-cj-sync.yml"
   pull_request:
     branches:
       - main
@@ -97,9 +113,11 @@ jobs:
           node --check lib/product-category.js
           node --check scripts/test-marketplace-moderation.mjs
           node --check scripts/test-product-category.mjs
+          node --check scripts/validate-product-category-rules.mjs
           node --check scripts/reclassify-catalog-categories.mjs
           node scripts/test-marketplace-moderation.mjs
           node scripts/test-product-category.mjs
+          node scripts/validate-product-category-rules.mjs
           node scripts/test-cj-tracking-hosts.mjs
           node --check marketplace.js
           node --check api/tiktok-direct-post.js

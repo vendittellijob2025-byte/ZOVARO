@@ -17,7 +17,7 @@ on:
       batch_size:
         description: Number of new or changed product images to inspect
         required: false
-        default: "350"
+        default: "500"
   schedule:
     - cron: "17 3,9,15,21 * * *"
 
@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 180
     env:
       HF_HOME: ${{ github.workspace }}/.cache/huggingface
-      IMAGE_AUDIT_BATCH_SIZE: ${{ inputs.batch_size || '350' }}
+      IMAGE_AUDIT_BATCH_SIZE: ${{ inputs.batch_size || '500' }}
     steps:
       - name: Checkout catalog
         uses: actions/checkout@v4
