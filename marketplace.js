@@ -120,11 +120,11 @@
         }
         const details = document.createElement("a");
         details.className = "job-open-details";
-        if (item.sourceType === "external-job-board" && /^https:\/\//i.test(item.applicationUrl || "")) {
+        if ((item.sourceType === "external-job-board" || item.isCurated || item.sourceType === "editorially-curated") && /^https:\/\//i.test(item.applicationUrl || "")) {
           details.href = item.applicationUrl;
           details.target = "_blank";
           details.rel = "noopener noreferrer";
-          details.textContent = "OPEN ORIGINAL JOB AD";
+          details.textContent = item.isCurated || item.sourceType === "editorially-curated" ? "OPEN EMPLOYER APPLICATION" : "OPEN ORIGINAL JOB AD";
         } else {
           details.href = "/job.html?id=" + encodeURIComponent(item.id || "");
           details.textContent = "VIEW FULL JOB DETAILS";
@@ -166,7 +166,6 @@
 
   const jobItems = [];
   const countrySelect = $("jobCountryFilter");
-  const regionSelect = $("jobRegionFilter");
   const citySelect = $("jobCityFilter");
   const citySuggestions = $("jobCitySuggestions");
   const searchJobsButton = $("jobLocationSearch");
@@ -234,21 +233,18 @@
     const target = normalizeCategory(category);
     return jobs.some(item => normalizeCategory(item.category || "") === target);
   }
-  function jobMatchesLocation(item, country, region = "", city = "", workplace = "") {
+  function jobMatchesLocation(item, country = "", city = "", workplace = "") {
     const eligibleCountries = Array.isArray(item.countries) ? item.countries : [];
-    const itemCountry = normalizeLocation(item.country);
     const requestedCountry = normalizeLocation(country);
-    const countryMatch = itemCountry === requestedCountry ||
-      eligibleCountries.some(value => normalizeLocation(value) === requestedCountry) ||
-      eligibleCountries.some(value => /^(worldwide|any country|global)$/i.test(String(value))) ||
-      /^(worldwide|remote worldwide|global)$/i.test(String(item.country || ""));
-    if (!countryMatch) return false;
-    if (workplace && String(item.workplace || "").toLowerCase() !== workplace.toLowerCase()) return false;
-    if (region) {
-      const itemRegion = normalizeLocation(item.region);
-      const requestedRegion = normalizeLocation(region);
-      if (itemRegion !== requestedRegion && !(item.workplace === "Remote" && /remote|worldwide|multiple/i.test(itemRegion))) return false;
+    if (requestedCountry) {
+      const itemCountry = normalizeLocation(item.country);
+      const countryMatch = itemCountry === requestedCountry ||
+        eligibleCountries.some(value => normalizeLocation(value) === requestedCountry) ||
+        eligibleCountries.some(value => /^(worldwide|any country|global)$/i.test(String(value))) ||
+        /^(worldwide|remote worldwide|global)$/i.test(String(item.country || ""));
+      if (!countryMatch) return false;
     }
+    if (workplace && String(item.workplace || "").toLowerCase() !== workplace.toLowerCase()) return false;
     if (!city) return true;
     const itemCity = normalizeLocation(item.city);
     const requestedCity = normalizeLocation(city);
@@ -294,7 +290,7 @@
         normalizeCategory(category).includes(normalizeCategory(item.category || ""));
       if (!categoryMatch) return false;
       if (!locationSearchActive) return true;
-      return jobMatchesLocation(item, selectedCountry, regionSelect?.value || "", selectedCity, $("jobWorkplaceFilter")?.value || "");
+      return jobMatchesLocation(item, selectedCountry, selectedCity, $("jobWorkplaceFilter")?.value || "");
     });
     if (title) title.textContent = category;
     if (meta) meta.textContent = matches.length
@@ -313,7 +309,6 @@
     locationSearchActive = false;
     if (countrySelect) countrySelect.value = "";
     if ($("jobWorkplaceFilter")) $("jobWorkplaceFilter").value = "";
-    if (regionSelect) { regionSelect.value = ""; regionSelect.disabled = true; setOptions(regionSelect, [], "All regions / states"); }
     if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
     if (citySuggestions) citySuggestions.replaceChildren();
     renderCareerCategoryTiles(careerCategories);
@@ -322,27 +317,33 @@
     document.querySelector("#lookingJobView .career-explorer")?.classList.remove("hidden");
     if (jobLocationStatus) jobLocationStatus.textContent = "All professional categories are shown. Choose a country and city to find available opportunities.";
   }
-  function populateRegions(country) {
-    const regions = uniqueSorted(jobItems
-      .filter(item => jobMatchesLocation(item, country))
-      .map(item => item.region)
-      .filter(value => value && !/remote|worldwide|multiple/i.test(value)));
-    if (regionSelect) {
-      setOptions(regionSelect, regions, "All regions / states");
-      regionSelect.disabled = false;
-    }
-  }
-  function populateCities(country, region = "") {
+  function populateCities(country) {
     if (citySuggestions) citySuggestions.replaceChildren();
     const suggestions = uniqueSorted(jobItems
-      .filter(item => jobMatchesLocation(item, country, region))
+      .filter(item => jobMatchesLocation(item, country))
       .map(item => item.city));
     suggestions.forEach(city => citySuggestions?.appendChild(new Option(city, city)));
     if (citySelect) {
       citySelect.value = "";
       citySelect.disabled = false;
-      citySelect.placeholder = suggestions.length ? "Type or select a city" : "Type a city";
+      citySelect.placeholder = suggestions.length ? "Optional — type or select a city" : "Optional city";
     }
+  }
+  function renderAvailableCareerCategories() {
+    const available = careerCategories.filter(category => categoryHasJobs(category.name, jobItems));
+    renderCareerCategoryTiles(available);
+    if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
+  }
+  function renderAllOpenJobs() {
+    const listings = $("careerAllJobListings");
+    const count = $("careerAllJobsCount");
+    const empty = $("careerAllJobsEmpty");
+    if (count) count.textContent = jobItems.length
+      ? jobItems.length + " currently open job offer" + (jobItems.length === 1 ? "" : "s") + "."
+      : "No active job offers are currently available.";
+    if (listings) renderListings(listings, jobItems, "job");
+    if (empty) empty.classList.toggle("hidden", jobItems.length > 0);
+    renderAvailableCareerCategories();
   }
   async function loadJobDirectory() {
     if (countrySelect) {
@@ -399,16 +400,6 @@
       ...FALLBACK_COUNTRIES,
       ...jobItems.flatMap(item => Array.isArray(item.countries) ? item.countries : [item.country])
     ].filter(value => !nonCountryGroups.has(String(value || "").trim().toLowerCase())));
-    try {
-      const response = await fetch(GEO_API + "/countries/iso",{cache:"force-cache"});
-      if (!response.ok) throw new Error("Country directory unavailable");
-      const body = await response.json();
-      if (body?.error) throw new Error(body.msg || "Country directory unavailable");
-      const worldwide = (Array.isArray(body.data) ? body.data : []).map(item => item?.name);
-      if (worldwide.length) countries = uniqueSorted([...countries,...worldwide]);
-    } catch (error) {
-      console.warn("ZOVARO country directory fallback:",error.message);
-    }
     if (countrySelect) {
       setOptions(countrySelect,countries,"Select a country");
       countrySelect.disabled = false;
@@ -417,17 +408,14 @@
   async function searchJobsByLocation() {
     const country = countrySelect?.value || "";
     const city = citySelect?.value || "";
-    if (!country || !city) {
-      if (jobLocationStatus) jobLocationStatus.textContent = "Select both a country and a city before searching.";
-      return;
-    }
-    locationSearchActive = true;
-    const region = regionSelect?.value || "";
     const workplace = $("jobWorkplaceFilter")?.value || "";
-    if (jobLocationStatus) jobLocationStatus.textContent = "Searching current ZOVARO listings and connected public job sources…";
-    if (country.toLowerCase() === "sweden") {
+    locationSearchActive = Boolean(country || city || workplace);
+    if (jobLocationStatus) jobLocationStatus.textContent = "Searching verified ZOVARO job offers…";
+
+    // The Swedish public feed is supplementary and requires a city/search term.
+    if (country.toLowerCase() === "sweden" && city.trim().length >= 2) {
       try {
-        const query = new URLSearchParams({ country: "Sweden", q: [city, region].filter(Boolean).join(" ") });
+        const query = new URLSearchParams({ country: "Sweden", q: city });
         const response = await fetch("/api/jobs?" + query.toString(), { cache: "no-store" });
         const result = await response.json();
         if (!response.ok) throw new Error(result.error || "Swedish job source unavailable.");
@@ -440,34 +428,48 @@
         });
       } catch (error) {
         console.warn("ZOVARO external Swedish job source:", error.message);
-        if (jobLocationStatus) jobLocationStatus.textContent = "The Swedish public source could not be reached. Showing existing ZOVARO listings only.";
       }
     }
-    const matches = jobItems.filter(item => jobMatchesLocation(item, country, region, city, workplace));
-    const available = careerCategories.filter(category => categoryHasJobs(category.name,matches));
+
+    const matches = jobItems.filter(item => jobMatchesLocation(item, country, city, workplace));
+    const available = careerCategories.filter(category => categoryHasJobs(category.name, matches));
     renderCareerCategoryTiles(available);
-    if (jobCategoryInstruction) jobCategoryInstruction.classList.toggle("hidden", available.length === 0);
-    if (jobLocationStatus) {
-      jobLocationStatus.textContent = available.length
-        ? available.length + " professional categories with active opportunities in " + city + ", " + country + "."
-        : "No verified job opportunities were found in " + city + ", " + country + ". Try another city or country.";
+
+    const results = $("careerCategoryResults");
+    const title = $("careerCategoryResultsTitle");
+    const meta = $("careerCategoryResultsMeta");
+    const listings = $("careerCategoryListings");
+    const empty = $("careerCategoryEmpty");
+    if (title) title.textContent = "JOB SEARCH RESULTS";
+    if (meta) {
+      const filters = [city, country, workplace].filter(Boolean).join(" · ");
+      meta.textContent = matches.length
+        ? matches.length + " open job offer" + (matches.length === 1 ? "" : "s") + (filters ? " matching " + filters : " worldwide") + "."
+        : "No verified job offers match these filters. Remove a filter or search another location.";
+    }
+    if (listings) renderListings(listings, matches, "job");
+    if (empty) {
+      empty.textContent = "No job offers match this search. Try selecting only a country, leaving the city empty, or clearing the workplace filter.";
+      empty.classList.toggle("hidden", matches.length > 0);
+    }
+    if (jobLocationStatus) jobLocationStatus.textContent = matches.length
+      ? matches.length + " job offers found. The listings are displayed below."
+      : "No job offers found for the selected filters.";
+    document.querySelector("#lookingJobView .career-explorer")?.classList.add("hidden");
+    if (results) {
+      results.classList.remove("hidden");
+      results.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
   countrySelect?.addEventListener("change",() => {
     const country = countrySelect.value;
     if (!country) {
-      if (regionSelect) { regionSelect.value = ""; regionSelect.disabled = true; setOptions(regionSelect, [], "All regions / states"); }
-      if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first"; }
+      if (citySelect) { citySelect.value = ""; citySelect.disabled = true; citySelect.placeholder = "Select a country first (optional)"; }
       if (citySuggestions) citySuggestions.replaceChildren();
       return;
     }
-    populateRegions(country);
     populateCities(country);
-    if (jobLocationStatus) jobLocationStatus.textContent = "Choose an optional region/state, then enter or select a city in " + country + ".";
-  });
-  regionSelect?.addEventListener("change", () => {
-    if (countrySelect?.value) populateCities(countrySelect.value, regionSelect.value);
-    if (citySelect) citySelect.value = "";
+    if (jobLocationStatus) jobLocationStatus.textContent = "City is optional. Search all open jobs in " + country + " or narrow by city.";
   });
   searchJobsButton?.addEventListener("click",searchJobsByLocation);
   $("backToCareerCategories")?.addEventListener("click",() => {
@@ -673,7 +675,7 @@
       careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
     }
     if (!careerCategories.length) careerCategories = FALLBACK_CAREER_CATEGORIES.slice();
-    renderCareerCategoryTiles(careerCategories);
+    renderAvailableCareerCategories();
   }
 
   function filterJobs() { applyJobFilters(); }
@@ -687,9 +689,9 @@
     submitListing(event.currentTarget, "job", "jobFormStatus", "SUBMIT JOB FOR REVIEW");
   });
   $("usedLoadMore")?.addEventListener("click", () => loadListings("product", true));
-  renderCareerCategoryTiles(careerCategories);
+  renderAvailableCareerCategories();
   loadCareerCategories();
-  loadJobDirectory();
+  loadJobDirectory().then(renderAllOpenJobs).catch(error => console.warn("ZOVARO job directory rendering:", error));
   const jobId = new URLSearchParams(window.location.search).get("job");
   if (jobId) {
     const view = $("lookingJobView");
