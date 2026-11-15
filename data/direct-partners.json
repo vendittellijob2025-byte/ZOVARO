@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14T20:09:16-05:00",
+  "updatedAt": "2026-11-14T20:28:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -44,7 +44,9 @@
     "CJ technical matrix 2026-11-14: the latest sync run 43652835775 found 26 Active/Joined advertisers, 20 with a positive feed and 6 without a positive feed. It received 225,717 feed records, 222,878 passed pre-dedup validation, 190,600 unique records passed, and 869 image-quality failures were excluded from the public selection. The run built 19,017 candidate public products but failed four category classifier tests before commit; the commit step was skipped, so no new products were published. The previous catalog snapshot contained 16,793 records. Per-advertiser feed/import counts and unverified public counts are in cjAudit.advertisers. All 190,600 candidate records had URL-format-valid CJ tracking links, but no live click or attribution test was performed. Category fixes are being prepared in PR #24; do not rerun/publish until the category tests pass.",
     "Operational update 2026-11-14: the YH Charter message to partners@yh-charter.com returned a 550 5.1.1 recipient-not-found delivery failure; the record is marked bounced and the address must not be retried. Gmail showed 13 delivery-failure notifications in the last 24 hours (the other 12 affected addresses were already marked bounced/do-not-retry). Mii Cosmetics, SimpliSafe UK and Todson provided automated acknowledgements/support routing only; no partner approval or substantive terms were received. No new partnership email was sent in this run: Wayfair's official affiliate page confirms a programme but publishes no affiliate contact, and its deliverypartners@wayfair.com address is specifically for transportation partnerships, so it was not misused.",
     "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed.",
-    "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run."
+    "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run.",
+    "EPN payout clarification 2026-11-14: current EPN programme update states monthly payment on or around the 22nd for the previous month; the current readable Network Agreement does not expose a numeric minimum threshold, so no USD 10 threshold is treated as confirmed. The same official update says PayPal payments incur a 2% transaction fee capped at USD 20/month; direct deposit/EFT is excluded from that PayPal fee. ZOVARO's EPN payout method and threshold remain unverified in the authenticated Partner Portal.",
+    "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run."
   ],
   "prospects": [
     {
@@ -2971,7 +2973,7 @@
         "clickTested": false,
         "attributionTested": false
       },
-      "nextAction": "Prerequisites before any integration: authenticate to the official EPN portal and verify whether an accepted ZOVARO account already exists; confirm publisher eligibility and participating marketplace access; obtain the 10-digit campaign ID; create/verify an eBay Developers app and OAuth client credentials; confirm/obtain acceptance into the separate Buy API Program or other written API agreement; obtain EPN's prior written approval for any software application or restricted promotional method; verify payout settings in the authenticated portal. The current agreement requires EPN acceptance before any promotional method, prohibits promotional content on eBay's own listings/About Me/Store/message boards, and requires prior written approval for email/electronic communication promotion. EPN Data is confidential: no AI training/benchmarking and no exposure to foundation models/LLMs without EPN's prior written approval and a specific written contract. Do not send EPN transaction/portal data to ChatGPT or other LLMs. Do not publish, generate links, or test attribution until approvals and tracking are verified.",
+      "nextAction": "Prerequisites before any integration: authenticate to the official EPN portal and verify whether an accepted ZOVARO account already exists; confirm publisher eligibility and participating marketplace access; obtain the 10-digit campaign ID; create/verify an eBay Developers app and OAuth client credentials; confirm/obtain acceptance into the separate Buy API Program or other written API agreement; obtain EPN's prior written approval for any software application, developer/API-generated promotional content or other restricted promotional method; verify payout method, threshold and payment instructions in the authenticated portal. The current agreement requires EPN acceptance before promotion, prohibits promotional content on eBay's own listings/About Me/Store/message boards, and requires prior written approval for email/electronic communication promotion. EPN Data is confidential: no AI training/benchmarking and no exposure to foundation models/LLMs without EPN's prior written approval and a specific written contract. Do not send EPN transaction/portal data to ChatGPT or other LLMs. Do not publish, generate links, or test attribution until approvals and tracking are verified.",
       "sourceChecked": "2026-11-14",
       "accountStatus": "Not verified; no authenticated EPN portal access or connected eBay account found in the available connections.",
       "campaignIdStatus": "Missing; EPN campaign ID not found.",
@@ -2995,8 +2997,10 @@
         "United Kingdom",
         "United States"
       ],
-      "publicPayoutTerms": "Monthly payment of positive prior-month balance only when it exceeds USD 10 (or equivalent) or applicable banking fees, whichever is greater. Published payout currencies include USD, GBP, EUR, AUD, CAD, NOK, ILS, SEK, SGD, DKK and HKD. Weekly payout is not supported by the published agreement. Payment method and account-specific payout settings remain unverified in an authenticated EPN portal.",
-      "publicAttributionTerms": "Buy It Now: qualifying affiliate click within 24 hours before purchase. Auctions: qualifying bid within 24 hours after click and win within 10 days, subject to Program Details. Last qualifying affiliate event generally receives credit; an advertiser's own last event can disqualify the affiliate. Browse API must receive affiliateCampaignId through X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl."
+      "publicPayoutTerms": "Public EPN programme update states monthly payment on or around the 22nd for the previous month. The current Network Agreement does not state a numeric minimum threshold in its readable text; exact threshold, payment method and account-specific settings must be verified in the authenticated Partner Portal. The official programme update says PayPal payments incur a 2% transaction fee capped at USD 20 per month; it does not apply to direct deposit/EFT. Weekly payout is not offered in the public terms.",
+      "publicAttributionTerms": "Buy It Now: qualifying affiliate click within 24 hours before purchase. Auctions: qualifying bid within 24 hours after click and win within 10 days, subject to Program Details. Last qualifying affiliate event generally receives credit; an advertiser's own last event can disqualify the affiliate. Browse API must receive affiliateCampaignId through X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl.",
+      "payoutFrequency": "monthly (public programme update: on or around the 22nd for the prior month)",
+      "payoutThreshold": "not stated in current readable public Network Agreement; authenticated Partner Portal check required"
     },
     {
       "id": "ankerwork",
@@ -4425,14 +4429,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Use the official support portal only if it provides a clearly appropriate business/affiliate route; do not treat the automated support acknowledgement as approval.",
-      "emailDeliveryStatus": "auto_acknowledged",
-      "response": {
-        "receivedAt": "2026-11-14T22:48:46Z",
-        "type": "automated_acknowledgement",
-        "summary": "Automated support response directs requests to a support portal; it is not an affiliate approval or partnership reply.",
-        "evidence": "Gmail thread 1a1dc41987a55577"
-      },
+      "nextAction": "Do not send partnership follow-ups to the general support inbox. Find an official business-development or affiliate contact before any further contact.",
+      "emailDeliveryStatus": "auto_reply_support_redirect",
+      "response": "Automated support response routed the enquiry to a general support/vendor portal; not a partnership acceptance or affiliate response.",
       "lastEmailSentAt": "2026-11-14T22:47:22Z",
       "lastEmailSubject": "ZOVARO Worldwide — Todson affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3e73d5e4692",
@@ -7883,6 +7882,20 @@
       "clickTested": false,
       "attributionTested": false,
       "nextAction": "Identify official publisher onboarding and confirm territories, feed/API, image permissions and payout. Do not use the transportation-partner email as an affiliate contact."
+    },
+    {
+      "id": "ebay-partner-network",
+      "name": "eBay Partner Network",
+      "category": "Marketplace / Multi-category",
+      "status": "prospect; EPN account approval not verified",
+      "trackingLinkStatus": "Not configured; campaign ID missing; no affiliate URL generated",
+      "feedApiStatus": "Browse API documentation verified; OAuth application access and separate Buy API/EPN promotional-method approvals not obtained",
+      "productsImported": 0,
+      "productsVisibleCount": 0,
+      "clickTested": false,
+      "attributionTested": false,
+      "blocker": "No authenticated EPN account access, campaign ID, eBay Developer app/OAuth credentials or Buy API approval. EPN data may not be sent to LLMs without prior written approval and a specific contract.",
+      "nextAction": "Verify the existing EPN account in the official portal; obtain campaign ID and eBay Developer app credentials; secure the required EPN/Buy API approvals; verify payout settings; only then test Browse API, itemAffiliateWebUrl and attribution."
     }
   ]
 }
