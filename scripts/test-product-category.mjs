@@ -142,6 +142,7 @@ const cases = [
   ["Clinique Travel Size Take The Day Off Cleansing Balm", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Style And Grace Travel Cup Gift Bath And Body Gift Sets", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Joe's Jeans The Hi Honey Skinny Ankle Jeans In Divine", "Fashion"],
+  ["Women's Drawstring Jogger Pants", "Fashion"],
   ["Lovery Almond Milk And Honey Body Butter", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Savannah Bee Company Whipped Honey Gift Set", "Food & Grocery"],
   ["Vacation Arizona Lip Balms 3Pc", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
