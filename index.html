@@ -1833,6 +1833,7 @@ footer{
     </div>
   </a>
 
+  <p id="shopCatalogStatus" class="jobs-results-meta" role="status" aria-live="polite">Loading verified product catalogue…</p>
   <div
     class="shop-categories category-grid"
     id="categoryGrid"
@@ -2111,12 +2112,8 @@ footer{
         <select id="jobCountryFilter"><option value="">Loading countries…</option></select>
       </div>
       <div class="form-group">
-        <label for="jobRegionFilter">REGION / STATE</label>
-        <select id="jobRegionFilter" disabled><option value="">All regions / states</option></select>
-      </div>
-      <div class="form-group">
         <label for="jobCityFilter">CITY</label>
-        <input id="jobCityFilter" type="text" list="jobCitySuggestions" disabled autocomplete="off" placeholder="Select a country first"><datalist id="jobCitySuggestions"></datalist>
+        <input id="jobCityFilter" type="text" list="jobCitySuggestions" disabled autocomplete="off" placeholder="Optional — select a country first"><datalist id="jobCitySuggestions"></datalist>
       </div>
       <div class="form-group">
         <label for="jobWorkplaceFilter">WORKPLACE</label>
@@ -2124,9 +2121,15 @@ footer{
       </div>
       <button type="button" class="form-submit" id="jobLocationSearch">SEARCH JOBS</button>
     </div>
-    <p id="jobLocationStatus" class="jobs-results-meta" role="status" aria-live="polite">All professional categories are shown. Choose a country and city to filter available opportunities.</p>
-    <p id="jobCategoryInstruction" class="job-category-instruction hidden">These are the available offers. Click the professional category that interests you and explore the opportunities listed.</p>
+    <p id="jobLocationStatus" class="jobs-results-meta" role="status" aria-live="polite">Open job offers are shown below. Country, city and workplace filters are optional.</p>
+    <p id="jobCategoryInstruction" class="job-category-instruction hidden">Browse the professional categories with active offers.</p>
     <div id="careerCategoryGrid" class="career-category-grid" aria-label="Job categories with available offers"></div>
+    <section class="career-open-listings" aria-labelledby="careerOpenJobsTitle">
+      <h3 id="careerOpenJobsTitle" class="choice-title">CURRENT OPEN JOBS</h3>
+      <p id="careerAllJobsCount" class="jobs-results-meta">Loading verified job offers…</p>
+      <div id="careerAllJobListings" class="marketplace-listings"></div>
+      <p id="careerAllJobsEmpty" class="marketplace-empty hidden">No active job offers are currently available. Please check again later.</p>
+    </section>
   </section>
   <section id="careerCategoryResults" class="career-category-results hidden" aria-live="polite">
     <button type="button" class="back-button" id="backToCareerCategories">← Back to categories</button>
@@ -2152,7 +2155,6 @@ footer{
     <div class="form-group"><label for="jobCategory">Job category</label><select id="jobCategory" name="category" required><option value="">Choose a job category</option><option>Food &amp; Hospitality</option><option>Construction &amp; Skilled Trades</option><option>Manufacturing &amp; Production</option><option>Transport &amp; Logistics</option><option>Office &amp; Administration</option><option>Business &amp; Management</option><option>Retail &amp; Customer Service</option><option>Cleaning &amp; Sanitation</option><option>Security &amp; Events</option><option>Healthcare &amp; Medical</option><option>Education &amp; Training</option><option>Finance &amp; Accounting</option><option>Marketing &amp; Communications</option><option>IT, Software &amp; Data</option><option>Engineering &amp; Technology</option><option>Agriculture &amp; Farming</option><option>Beauty &amp; Personal Care</option><option>Legal &amp; Compliance</option><option>Arts, Media &amp; Creative</option><option>Aviation &amp; Aerospace</option><option>Maritime &amp; Offshore</option><option>Real Estate &amp; Property</option><option>Science &amp; Research</option><option>Energy &amp; Utilities</option><option>Environment &amp; Sustainability</option><option>Sports &amp; Recreation</option><option>Travel &amp; Tourism</option><option>Public Sector &amp; Government</option></select></div>
     <div class="marketplace-fields">
       <div class="form-group"><label for="jobCountry">Country</label><input id="jobCountry" name="country" required maxlength="80" placeholder="Country" autocomplete="country-name"></div>
-      <div class="form-group"><label for="jobRegion">Region / State</label><input id="jobRegion" name="region" maxlength="100" placeholder="Region, state or province"></div>
     </div>
     <div class="form-group"><label for="jobCity">City</label><input id="jobCity" name="city" maxlength="100" placeholder="City or metropolitan area"></div>
     <div class="form-group"><label for="jobLocation">Location</label><input id="jobLocation" name="location" required maxlength="100" placeholder="City, country or Remote worldwide"></div>
