@@ -575,7 +575,7 @@
     const meta = $("jobDetailMeta");
     meta.replaceChildren();
     const entries = [
-      ["Country",item.country],["Region / State",item.region],["City",item.city],
+      ["Country",item.country],["City",item.city],
       ["Employment type",item.jobType],["Workplace",item.workplace],
       ["Compensation",item.salaryText],["Published / verified",item.approvedAt ? new Date(item.approvedAt).toLocaleDateString() : ""]
     ];
