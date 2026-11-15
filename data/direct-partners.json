@@ -37,7 +37,9 @@
     "eBay Partner Network official agreement reviewed 2026-11-13 (current page): 14 participating sites including Italy; EPN must accept the publisher before any promotional method is used; Buy It Now attribution is a qualifying click within 24 hours before purchase, auctions have separate bid/win rules; monthly payment of prior-month positive balance only when above USD 10 or applicable bank fees, whichever is greater. Agreement contains strict EPN Data restrictions: do not use EPN Data to train/benchmark AI systems or expose it to an LLM without prior written EPN approval and a specific written contract. EPN account approval, campaign ID, OAuth credentials, Buy API production access and payout setup remain unverified.",
     "Food delivery research 2026-11-13: Wolt's official localized affiliate page confirms a publisher programme through TradeDoubler, with tracked links/ads/banners and consumer delivery coverage in 25 countries across Europe and Asia. The page does not publish rates, cookie, feed/API or publisher-country eligibility and requires personal data plus bank details during TradeDoubler registration. Added as prospect only; no application or email submitted. foodpanda's official Delivery Hero Partnerize partnership agreement confirms a programme framework, but does not by itself prove an active campaign, approval, rate or territory for Pakistan/Philippines.",
     "CJ technical matrix refreshed 2026-11-13 from sync run 43519761281: 26 advertisers have accountStatus Active and relationshipStatus joined. Technical audit now records advertiser IDs, feed status, received/passing/imported counts, deduplication and image-URL rejections, feed currency labels, URL-format validation, and explicit unknowns for test clicks, end-to-end attribution and advertiser-specific public visibility. 26 CJ advertisers are approved_on_network; none is automatically considered fully publishable solely from this sync. Latest public catalogue: 17,051 selected products; 192,165 feed products eligible before storefront selection; 0 category mismatches and 0 invalid subcategory paths in the 17,051-product audit. Latest image-audit batch: 250 processed, 14 passed, 236 marked for review, 15,243 remaining in queue. Feed currency/market labels are not proof of shipping territories.",
-    "Food delivery and grocery research 2026-11-13: Uber's official Italian affiliate page confirms a free affiliate programme for eligible first Uber trips and first Uber Eats orders; commission depends on audience and publisher country, and acceptance is discretionary. Application form only; no public affiliate email, so no email or application submitted. Instacart's official current page confirms a free Impact programme with up to USD 10 CPA for qualifying new-customer orders, unique tracking/reporting, US/Canada-based traffic requirement and payout approximately 55 days after month-end once USD 10 is reached. No public affiliate email; added as prospect only, pending audience-geography verification."
+    "Food delivery and grocery research 2026-11-13: Uber's official Italian affiliate page confirms a free affiliate programme for eligible first Uber trips and first Uber Eats orders; commission depends on audience and publisher country, and acceptance is discretionary. Application form only; no public affiliate email, so no email or application submitted. Instacart's official current page confirms a free Impact programme with up to USD 10 CPA for qualifying new-customer orders, unique tracking/reporting, US/Canada-based traffic requirement and payout approximately 55 days after month-end once USD 10 is reached. No public affiliate email; added as prospect only, pending audience-geography verification.",
+    "Partner outreach and inbox audit 2026-11-14: YH Charter's official partner page lists partners@yh-charter.com, a case-by-case yacht-charter referral programme, tiered first-charter and recurring commissions, UTM tracking links, API/widget access, high-resolution imagery and bank transfer or PayPal under agreement. A personalised enquiry was sent to partners@yh-charter.com (Gmail message/thread 1a1dc8f44bc5f116); no approval or live tracking exists. YATR was added as a prospect: its official page advertises $400-$500 per completed booking, 30-day tracking and monthly payout, but does not label the currency or state territories; no public affiliate email was found and an application draft was prepared. tectake was added as a retailAds prospect: official page advertises up to 7%, a 60-day cookie and a product feed; publisher/customer territories and payout terms remain unverified; no dedicated affiliate email was found and an application draft was prepared.",
+    "Outreach quality control 2026-11-14: Gmail search for the last 24 hours returned at least 201 sent threads and 12 delivery-failure threads. Twelve affected recipient addresses have been marked bounced/do-not-retry in this registry. No further broad batch was sent during this run; only one new, individually verified official partnership contact (YH Charter) was emailed. Mii Cosmetics, SimpliSafe UK and Todson sent automated acknowledgements only; none is an approval."
   ],
   "prospects": [
     {
@@ -3447,7 +3449,9 @@
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "formatCorrectionMessageId": "1a1dc3bdd12fbeea",
       "deliveryStatus": "bounced",
-      "bounceReason": "Message blocked by recipient server (two delivery failures)"
+      "bounceReason": "Message blocked by recipient server (two delivery failures)",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "columbia-sportswear-affiliate",
@@ -3790,7 +3794,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "Message blocked by recipient server"
+      "bounceReason": "Message blocked by recipient server",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "rowenta-usa-affiliate",
@@ -4080,7 +4086,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "Address not found"
+      "bounceReason": "Address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "accor-all-affiliate",
@@ -4236,7 +4244,14 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm publisher eligibility, customer territory, feed, tracking, approved assets and payout."
+      "nextAction": "Use the official support portal only if it provides a clearly appropriate business/affiliate route; do not treat the automated support acknowledgement as approval.",
+      "emailDeliveryStatus": "auto_acknowledged",
+      "response": {
+        "receivedAt": "2026-11-14T22:48:46Z",
+        "type": "automated_acknowledgement",
+        "summary": "Automated support response directs requests to a support portal; it is not an affiliate approval or partnership reply.",
+        "evidence": "Gmail thread 1a1dc41987a55577"
+      }
     },
     {
       "id": "nuby-affiliate",
@@ -5045,14 +5060,15 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Wait for a substantive review outcome. Do not mark as approved or import products until eligibility, customer territories, commission, tracking, feed and asset permissions are confirmed.",
-      "emailDeliveryStatus": "replied",
+      "nextAction": "Await a substantive human response; do not mark as approved or import products until eligibility, territories, commission, tracking, feed and asset permissions are verified.",
+      "emailDeliveryStatus": "auto_acknowledged",
       "response": {
         "receivedAt": "2026-11-14T22:51:37Z",
         "contactName": "SimpliSafe Partnerships Team",
         "status": "under_review",
-        "summary": "The partnerships team acknowledged the enquiry and said it is being reviewed. This is not an approval and no commission, tracking, feed or asset terms have been granted.",
-        "evidence": "Gmail thread 1a1dc424d3703aac"
+        "summary": "Partnerships team says the enquiry is being reviewed and they will contact ZOVARO if there is an opportunity; no approval or terms provided.",
+        "evidence": "Gmail thread 1a1dc424d3703aac",
+        "type": "automated_acknowledgement"
       }
     },
     {
@@ -5134,7 +5150,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "550 5.1.1 address not found"
+      "bounceReason": "550 5.1.1 address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "trustedbrands-b2b-network",
@@ -5266,7 +5284,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "Message blocked by recipient server"
+      "bounceReason": "Message blocked by recipient server",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "greenpan-affiliate",
@@ -5372,7 +5392,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "Address not found"
+      "bounceReason": "Address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "gigabyte-aorus-partnership",
@@ -5426,7 +5448,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "550 5.1.1 address not found"
+      "bounceReason": "550 5.1.1 address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "cooler-master-partnership",
@@ -5478,14 +5502,15 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await a substantive human response. Do not mark as approved or import products until publisher eligibility, countries, commission, feed, tracking and approved assets are verified.",
-      "emailDeliveryStatus": "replied",
+      "nextAction": "Await a substantive human response; do not mark as approved or import products until eligibility, territories, commission, tracking, feed and asset permissions are verified.",
+      "emailDeliveryStatus": "auto_acknowledged",
       "response": {
         "receivedAt": "2026-11-14T22:53:11Z",
         "contactName": "Mii Cosmetics Influencer Team",
         "status": "automatic_acknowledgement",
-        "summary": "Automatic reply confirms the enquiry was forwarded to the appropriate team; no human approval or programme terms yet.",
-        "evidence": "Gmail thread 1a1dc43d042e560c"
+        "summary": "Automated acknowledgement says the enquiry was forwarded to the appropriate team; no approval or terms provided.",
+        "evidence": "Gmail thread 1a1dc43b64e978f0",
+        "type": "automated_acknowledgement"
       }
     },
     {
@@ -5672,7 +5697,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "550 5.1.1 address not found"
+      "bounceReason": "550 5.1.1 address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "loccitane-affiliate",
@@ -5935,7 +5962,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "Message blocked by recipient server"
+      "bounceReason": "Message blocked by recipient server",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "ctzn-cosmetics-affiliate",
@@ -5963,7 +5992,9 @@
       },
       "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
       "deliveryStatus": "bounced",
-      "bounceReason": "550 5.1.1 address not found"
+      "bounceReason": "550 5.1.1 address not found",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "orena-fragrances-affiliate",
@@ -6044,7 +6075,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Do not resend to bounced address. Use official Impact application route or verify a different affiliate manager contact."
+      "nextAction": "Do not resend to bounced address. Use official Impact application route or verify a different affiliate manager contact.",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "linens-and-hutch-affiliate",
@@ -6255,7 +6288,9 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Do not resend to bounced address. Find current affiliate network application or verified partnerships contact."
+      "nextAction": "Do not resend to bounced address. Find current affiliate network application or verified partnerships contact.",
+      "emailDeliveryStatus": "bounced",
+      "lastDeliveryFailure": "Delivery failure or recipient block confirmed on 2026-11-14. Do not retry this address."
     },
     {
       "id": "wymans-food-affiliate",
@@ -6282,6 +6317,86 @@
         "conversionReporting": "pending"
       },
       "nextAction": "Await reply; confirm direct affiliate capability, countries, catalogue, tracking and payout."
+    },
+    {
+      "id": "yh-charter-referral",
+      "name": "YH Charter",
+      "status": "contacted",
+      "programType": "Direct luxury yacht charter referral programme",
+      "category": "Luxury & Prestige — Yachts & Yacht Charter",
+      "territories": [
+        "Indonesia: Bali, Komodo, Banda and Raja Ampat",
+        "Thailand",
+        "Mediterranean",
+        "Caribbean; exact customer and publisher eligibility to confirm"
+      ],
+      "publicCommission": "Tiered commission on the first charter plus recurring commission on repeat charters; exact rates are confirmed on application and in a signed agreement.",
+      "cookie": "Not stated on the public partner page; confirm.",
+      "contact": {
+        "email": "partners@yh-charter.com",
+        "sourceUrl": "https://www.yh-charter.com/partners/refer"
+      },
+      "applicationUrl": "https://www.yh-charter.com/partners/refer",
+      "integration": {
+        "affiliateLink": "Custom UTM-enabled tracking links described; not generated for ZOVARO",
+        "inventoryFeed": "API and white-label booking widget advertised; access and licence pending approval",
+        "imagePermission": "Partner portal advertises high-resolution imagery; exact licence and reuse scope pending",
+        "conversionReporting": "Real-time partner dashboard and monthly performance reports described",
+        "payout": "Bank transfer or PayPal; schedule set in agreement"
+      },
+      "nextAction": "Await reply confirming ZOVARO eligibility, destinations, exact first/repeat commission, attribution/cookie, API/widget/feed terms, image rights, reporting and payout. No application approval or live tracking exists.",
+      "sourceChecked": "2026-11-14",
+      "sourceEvidence": "Official partner page https://www.yh-charter.com/partners/refer",
+      "contactedAt": "2026-11-14T19:11:24-05:00",
+      "emailMessageId": "1a1dc8f44bc5f116",
+      "contactEvidence": "Gmail sent message/thread 1a1dc8f44bc5f116",
+      "emailDeliveryStatus": "sent"
+    },
+    {
+      "id": "yatr-yacht-affiliate",
+      "name": "YATR",
+      "status": "prospect",
+      "programType": "Direct yacht charter affiliate programme",
+      "category": "Luxury & Prestige — Yachts & Yacht Charter",
+      "territories": [
+        "Not stated on the reviewed affiliate page; publisher and customer destination eligibility to confirm"
+      ],
+      "publicCommission": "Advertises $400–$500 per completed booking by referral tier; currency is not explicitly labelled on the reviewed page and must be confirmed.",
+      "cookie": "30 days advertised",
+      "applicationUrl": "https://yatr.co/affiliate",
+      "integration": {
+        "affiliateLink": "Unique referral link after approval",
+        "tracking": "30-day attribution advertised",
+        "conversionReporting": "Affiliate dashboard advertises real-time clicks, conversions, pending and paid commissions",
+        "feedAPI": "No catalogue feed or API described on the reviewed page",
+        "imagePermission": "Marketing asset licence and usage scope not stated"
+      },
+      "payout": "Monthly payouts advertised; threshold, currency and payment methods not stated on the reviewed page.",
+      "nextAction": "Use the official affiliate application form only after confirming international publisher eligibility, reward currency, qualifying booking rules and payout details. No public affiliate email found; an application text draft is prepared in Gmail.",
+      "sourceChecked": "2026-11-14",
+      "sourceEvidence": "Official affiliate page https://yatr.co/affiliate and FAQ https://yatr.co/affiliate-faq"
+    },
+    {
+      "id": "tectake-retailads-affiliate",
+      "name": "tectake",
+      "status": "prospect",
+      "programType": "RetailAds affiliate publisher programme",
+      "category": "Home & Living; Garden; Outdoor Living; DIY",
+      "territories": [
+        "German storefront reviewed; publisher-country and customer delivery territories to confirm through retailAds"
+      ],
+      "publicCommission": "Up to 7% for selected publisher models, as advertised on the official page; exact ZOVARO rate and eligible products require approval.",
+      "cookie": "60 days advertised",
+      "applicationUrl": "https://www.tectake.de/affiliate-programm",
+      "integration": {
+        "affiliateLink": "RetailAds tracking links after publisher approval",
+        "productFeed": "Product data feed and deep links advertised after activation",
+        "imagePermission": "Advertising assets available after approval; exact image/brand licence to confirm",
+        "conversionReporting": "Network reporting; exact attribution details to confirm"
+      },
+      "nextAction": "Apply through the official retailAds route and confirm publisher eligibility, customer markets, exact rate, feed/API access, attribution, creative rights and payout terms. No dedicated public affiliate email found; an application text draft is prepared in Gmail.",
+      "sourceChecked": "2026-11-14",
+      "sourceEvidence": "Official affiliate page https://www.tectake.de/affiliate-programm"
     }
   ]
 }
