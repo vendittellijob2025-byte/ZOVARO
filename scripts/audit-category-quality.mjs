@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { categoryFor } from "../lib/product-category.js";
+import { categoryFor, visualCategoryOverride } from "../lib/product-category.js";
 
 const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
 const taxonomy = JSON.parse(fs.readFileSync("data/category-tree.json", "utf8"));
@@ -8,6 +8,9 @@ const taxonomyRoots = new Set(taxonomy.categories.map(item => item.name));
 if (!Array.isArray(catalog.products)) throw new Error("Catalog products array is missing.");
 
 const BABY_INTENT_TITLE = /\b(for baby|baby (?:wash|shampoo|lotion|cream|oil|butter|balm|wipes|sunscreen|sun cream|perfume|fragrance|stroller|monitor|carrier|clothes|clothing)|diaper|newborn|infant|nursery|toddler|sleep sack)\b/i;
+let imageReport = { results: [] };
+try { imageReport = JSON.parse(fs.readFileSync("data/image-audit-report.json", "utf8")); } catch (error) { if (error.code !== "ENOENT") throw error; }
+const visualResults = new Map((imageReport.results || []).map(item => [item.key, item]));
 const distribution = new Map();
 const subcategoryDistribution = new Map();
 const examples = [];
@@ -19,7 +22,7 @@ const invalidSubcategoryExamples = [];
 
 for (const product of catalog.products) {
   if (!product || typeof product !== "object") continue;
-  const expected = categoryFor(
+  const textExpected = categoryFor(
     {
       name: product.advertiserName || "",
       parentCategory: product.advertiserCategory || "",
@@ -27,9 +30,9 @@ for (const product of catalog.products) {
     },
     product
   );
-  // The expected category is determined by product identity evidence.
-  // Image-model disagreement is a review signal, never an accepted override.
-  const acceptedCategory = expected;
+  const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
+  const visualCheck = visualResults.get(key)?.categoryCheck;
+  const acceptedCategory = visualCategoryOverride(visualCheck) || textExpected;
   const actual = String(product.category || "");
   const subcategory = String(product.subcategory || "");
   if (!subcategory || subcategory === "Other" || actual === "Other") unclassifiedProducts++;
@@ -67,7 +70,7 @@ for (const product of catalog.products) {
         actual,
         english,
         expected: acceptedCategory,
-        classifierCategory: expected
+        classifierCategory: textExpected
       });
     }
   }
@@ -81,6 +84,8 @@ console.log("Primary category consistency audit: " + JSON.stringify({
   examples,
   invalidSubcategoryPaths,
   unclassifiedProducts,
+  imageAuditedProducts: imageReport.results?.length || 0,
+  visualRootOverrides: catalog.products.filter(product => product.visualCategoryEvidence?.source === "CLIP zero-shot image classification").length,
   invalidSubcategoryExamples
 }));
 if (mismatches || invalidSubcategoryPaths) {
