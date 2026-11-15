@@ -118,6 +118,8 @@ const cases = [
   ["Brocchi Travel Toiletry Bag | Black", "Fashion"],
   ["Bebe Silver Body Mist 8.4Oz", "Beauty"],
   ["Brocchi Foldable Dual-Power Mini Travel Dryer", "Beauty"],
+  ["Digital air fryer 6 quart", "Appliances"],
+  ["Ceramic table lamp for living room", "Home & Living"],
   ["Goomee The Markless Hair Loop Set | Holiday Edition", "Fashion"],
   ["Free People Next Vacation Top In - Xl | Ivory Combo", "Fashion"],
   ["Organic Cotton Drawstring Comfy Jogger Lightning Pants - Shell - 6-9 Months", "Babies", { advertiser: { name: "Kaiya Baby" } }],
