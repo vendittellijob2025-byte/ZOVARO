@@ -42,6 +42,7 @@ const cases = [
   ["Health & Wellness", "Digital blood pressure monitor"],
   ["Home & Living", "Ceramic table lamp for living room"],
   ["Office & Technology", "A4 notebook and stationery set"],
+  ["Electronics", "Dell notebook computer 16 inch"],
   ["Pets", "Premium dog food kibble"],
   ["Tools & DIY", "Cordless drill and driver set"],
   ["Toys & Games", "Wooden building blocks toy set"],
