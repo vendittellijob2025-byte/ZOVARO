@@ -52,7 +52,7 @@ function wrap(value, max = 29) {
   if (line) lines.push(line);
   return lines.join("\n");
 }
-function clean(value, fallback = "Informazioni nella pagina ufficiale") {
+function clean(value, fallback = "See the official employer website") {
   return asciiText(value || fallback);
 }
 async function textFile(name, value) {
@@ -141,39 +141,47 @@ await fs.mkdir(OUT_DIR, { recursive: true });
 const scenes = [];
 scenes.push(await renderScene("intro", 4, [
   { text: "ZOVARO JOBS WORLDWIDE", size: 64, y: 700, bold: true },
-  { text: "ANNUNCI DI LAVORO REALI", size: 46, y: 900, bold: true, color: "0x38BDF8" },
-  { text: "OPPORTUNITÀ PUBBLICATE DA AZIENDE", size: 30, y: 1040 }
+  { text: "REAL JOB OPENINGS", size: 46, y: 900, bold: true, color: "0x38BDF8" },
+  { text: "OPPORTUNITIES FROM EMPLOYERS", size: 30, y: 1040 }
 ]));
 for (let i = 0; i < selected.length; i++) {
   const job = selected[i];
-  let location = clean(job.location || job.country, "Località indicata nell'annuncio");
+  let location = clean(job.location || job.country, "Location stated in the job listing");
   if (job.company === "Kodalab") location = "Remote | Latin America (eligible countries not specified)";
   if (job.company === "Puffy") location = "Remote | Worldwide via Employer of Record";
-  const contract = clean(job.jobType, "Dettagli nella pagina aziendale");
+  const contract = clean(job.jobType, "See employer website for details");
   const salary = job.company === "Puffy"
     ? "Up to USD 143,000/year (base + bonus)"
     : job.salaryText
       ? "Salary: " + clean(job.salaryText)
       : "Salary not published by employer";
-  const verified = `FONTE AZIENDALE CONTROLLATA: ${job.verifiedAt}`;
+  const verified = `EMPLOYER SOURCE CHECKED: ${job.verifiedAt}`;
   scenes.push(await renderScene(`job-${i+1}`, 8, [
-    { text: `ANNUNCIO ${i+1} / 4`, size: 28, y: 500, bold: true, color: "0x38BDF8" },
+    { text: `JOB OPENING ${i+1} / 4`, size: 28, y: 500, bold: true, color: "0x38BDF8" },
     { text: wrap(job.title, 27), size: 56, y: 620, bold: true },
     { text: clean(job.company), size: 40, y: 900, bold: true, color: "0x38BDF8" },
     { text: wrap(location, 34), size: 32, y: 1030 },
     { text: wrap(contract, 34), size: 30, y: 1190 },
     { text: wrap(salary, 43), size: 26, y: 1320 },
     { text: verified, size: 24, y: 1510, bold: true },
-    { text: "CANDIDATURA SULLA PAGINA UFFICIALE", size: 25, y: 1605, bold: true, color: "0x38BDF8" }
+    { text: "APPLY ON THE EMPLOYER'S OFFICIAL WEBSITE", size: 25, y: 1605, bold: true, color: "0x38BDF8" }
   ]));
 }
-scenes.push(await renderScene("outro", 4, [
-  { text: "IL TUO PROSSIMO LAVORO", size: 54, y: 720, bold: true },
-  { text: "POTREBBE ESSERE QUI", size: 54, y: 830, bold: true, color: "0x38BDF8" },
-  { text: "SCOPRI GLI ANNUNCI SU", size: 34, y: 1060 },
-  { text: "ZOVARO.VERCEL.APP", size: 48, y: 1170, bold: true },
-  { text: "Controlla sempre requisiti e disponibilità sul sito del datore di lavoro.", size: 24, y: 1450 }
-]));
+async function renderOutro() {
+  const output = path.join(OUT_DIR, "scene-outro.mp4");
+  await ffmpeg([
+    "-y",
+    "-loop", "1", "-framerate", String(FPS), "-i", BACKGROUND,
+    "-loop", "1", "-framerate", String(FPS), "-i", LOGO,
+    "-t", "4",
+    "-filter_complex",
+    "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,drawbox=x=0:y=0:w=1080:h=1920:color=0x06142A@0.35:t=fill[bg];[1:v]scale=760:-1,format=rgba,fade=t=out:st=2.5:d=1.5:alpha=1[logo];[bg][logo]overlay=(W-w)/2:(H-h)/2:shortest=1,format=yuv420p[outv]",
+    "-map", "[outv]", "-r", String(FPS), "-an",
+    "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", output
+  ]);
+  return output;
+}
+scenes.push(await renderOutro());
 
 const concatFile = path.join(OUT_DIR, "concat.txt");
 await fs.writeFile(concatFile, scenes.map(file => `file '${path.basename(file)}'`).join("\n"), "utf8");
