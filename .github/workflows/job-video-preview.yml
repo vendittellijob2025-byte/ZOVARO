@@ -1,0 +1,58 @@
+name: ZOVARO - Generate JOB promo preview
+
+on:
+  push:
+    branches:
+      - feature/job-video-preview
+    paths:
+      - "scripts/create-job-video-preview.mjs"
+      - ".github/workflows/job-video-preview.yml"
+      - "data/curated-jobs.json"
+      - "assets/job-visual.png"
+      - "assets/zovaro-logo.png"
+      - "public/audio/solo audio promo zovaro job.mp3"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zovaro-job-video-preview
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Generate 40-second JOB promo video
+        run: node scripts/create-job-video-preview.mjs
+
+      - name: Verify MP4 format and duration
+        run: |
+          test -s job-video-preview.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 job-video-preview.mp4 | grep -qx '1080x1920'
+          DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 job-video-preview.mp4)"
+          node -e 'const d=Number(process.argv[1]); if (!Number.isFinite(d) || d < 39 || d > 41) process.exit(1); console.log("Verified JOB preview duration: " + d.toFixed(2) + " seconds.");' "$DURATION"
+
+      - name: Upload JOB preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zovaro-job-video-preview
+          path: |
+            job-video-preview.mp4
+            .zovaro-job-video/scene-*.mp4
+          if-no-files-found: error
+          retention-days: 14
