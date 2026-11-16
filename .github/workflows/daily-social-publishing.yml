@@ -2,6 +2,11 @@ name: ZOVARO - Generate and publish 8 daily social videos
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-social-publishing.yml"
+      - "scripts/publish-daily-buffer-videos.mjs"
   schedule:
     - cron: "0 11 * * *"
 
