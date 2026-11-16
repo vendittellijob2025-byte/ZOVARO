@@ -29,7 +29,8 @@ for(const channel of [tt,ig]){
   for(let i=0;i<videos.length;i++){
     const [label,,caption]=videos[i];
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
-    const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue,assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
+    const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel}}":"";
+    const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue"+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
     try{
       const d=await gql(query,"create post "+label+" "+channel.name);
       const result=d?.createPost;
@@ -45,4 +46,5 @@ for(const channel of [tt,ig]){
 }
 console.log(JSON.stringify({date:day,release:release.html_url,results},null,2));
 if(failures)process.exitCode=1;
-console.log(JSON.stringify({date:day,release:release.html_url,channels:[tt.name,ig.name],postsCreated:media.length*2},null,2));
+const queued=results.filter(x=>x.status==="queued").length;
+console.log(JSON.stringify({date:day,release:release.html_url,channels:[tt.name,ig.name],queued,failed:failures,generatedNewVideos:3,reusedAdvertiserVideo:1},null,2));
