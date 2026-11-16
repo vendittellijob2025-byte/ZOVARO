@@ -82,8 +82,12 @@ export default async function handler(req, res) {
       { access: "private", addRandomSuffix: false, contentType: "application/json" }
     );
   } catch (error) {
-    console.error("ZOVARO click tracking storage error:", error);
-    return res.status(503).json({ error: "Tracking unavailable; redirect cancelled" });
+    // Keep the affiliate journey working if ZOVARO's own event store is
+    // temporarily unavailable. The destination remains the validated
+    // affiliate tracking URL, so the partner can still attribute the sale.
+    // ZOVARO's internal click counter will miss this event until storage
+    // is restored; never block the user's outbound click because of logging.
+    console.error("ZOVARO click tracking storage unavailable; redirecting:", error);
   }
 
   res.setHeader("Cache-Control", "no-store");
