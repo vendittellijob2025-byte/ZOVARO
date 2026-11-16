@@ -235,36 +235,11 @@ textarea{
     url("assets/job-visual.png")
 }
 
-.wish-card{
-  grid-column:1/-1;
-  min-height:235px;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(2,8,22,.99) 0%,
-      rgba(2,8,22,.94) 24%,
-      rgba(2,8,22,.72) 44%,
-      rgba(2,8,22,.34) 65%,
-      rgba(2,8,22,.08)
-    ),
-    url("assets/wish-visual.png")
+.main-card-content{
+  width:100%;position:relative;z-index:2;text-align:left
 }
 
-.main-card-content,
-.wish-card-content{
-  width:100%;
-  position:relative;
-  z-index:2;
-  text-align:left
-}
-
-.main-card-copy{
-  width:min(62%,470px)
-}
-
-.wish-card-copy{
-  width:min(64%,700px)
-}
+.main-card-copy{width:min(62%,470px)}
 
 .main-card-brand{
   margin:0 0 5px;
@@ -363,105 +338,6 @@ textarea{
 .luxury-feature-cta{display:inline-flex;margin-top:19px;padding:12px 19px;border-radius:999px;background:linear-gradient(135deg,#f6dfa1,#bd8b31);color:#171006;font-size:11px;font-weight:900;letter-spacing:.13em}
 @media(max-width:820px){.luxury-feature{min-height:390px;background-position:62% center}.luxury-feature-content{max-width:100%}.luxury-feature-title{font-size:clamp(36px,9vw,54px)}.luxury-feature-copy{max-width:88%}}
 @media(max-width:480px){.luxury-feature{min-height:420px;padding:26px 20px}.luxury-feature:before{inset:6px}.luxury-feature-copy{max-width:100%;font-size:15px}.luxury-feature-tags span{font-size:9px;padding:6px 8px}}
-
-/* =========================
-   MAKE A WISH
-   ========================= */
-
-.wish-kicker{
-  display:block;
-  margin-bottom:5px;
-  color:#4fddff;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.18em
-}
-
-.wish-title{
-  margin:0;
-  font-family:"Space Grotesk",sans-serif;
-  font-size:clamp(34px,5vw,54px);
-  line-height:.9
-}
-
-.wish-description{
-  margin:10px 0 0;
-  color:#b7cbe0;
-  font-size:12px;
-  line-height:1.45
-}
-
-.wish-form{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto;
-  gap:10px;
-  margin-top:13px;
-  max-width:700px
-}
-
-.wish-input{
-  width:100%;
-  min-height:45px;
-  padding:12px 15px;
-  border:1px solid rgba(91,185,233,.38);
-  border-radius:11px;
-  background:rgba(1,9,22,.78);
-  color:#fff;
-  outline:none;
-  font-size:13px
-}
-
-.wish-input::placeholder{
-  color:#7590ad
-}
-
-.wish-input:focus{
-  border-color:rgba(52,215,255,.9);
-  box-shadow:0 0 0 3px rgba(0,183,255,.08)
-}
-
-.wish-submit{
-  min-width:118px;
-  min-height:45px;
-  padding:0 18px;
-  border:1px solid rgba(255,203,76,.7);
-  border-radius:11px;
-  background:linear-gradient(135deg,#ffcc54,#1fbfff);
-  color:#071120;
-  cursor:pointer;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.08em
-}
-
-.wish-foot{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  margin-top:9px
-}
-
-.wish-lamp{
-  width:29px;
-  height:29px;
-  flex:0 0 29px;
-  filter:drop-shadow(0 0 9px rgba(255,205,78,.28))
-}
-
-.wish-help{
-  margin:0;
-  color:#91a8c2;
-  font-size:10px;
-  line-height:1.4
-}
-
-.wish-status{
-  min-height:15px;
-  margin:7px 0 0;
-  color:#57ddff;
-  font-size:10px
-}
-
 
 /* =========================
    SECOND LEVEL
@@ -1074,24 +950,6 @@ footer{
     font-size:14px
   }
 
-  .wish-card{
-    min-height:270px;
-    background-position:88% center;
-    background-size:auto 100%
-  }
-
-  .wish-card-copy{
-    width:70%
-  }
-
-  .wish-form{
-    grid-template-columns:1fr
-  }
-
-  .wish-submit{
-    min-height:45px
-  }
-
   .shop-search{
     grid-template-columns:minmax(0,1fr) 52px
   }
@@ -1139,24 +997,6 @@ footer{
 
   .main-card-description{
     font-size:13px
-  }
-
-  .wish-card{
-    min-height:300px;
-    background-position:88% center;
-    background-size:auto 100%
-  }
-
-  .wish-card-copy{
-    width:80%
-  }
-
-  .wish-form{
-    grid-template-columns:1fr
-  }
-
-  .wish-submit{
-    min-height:45px
   }
 
   .shop-search{
@@ -1307,6 +1147,78 @@ footer{
 
 
 .job-category-instruction{margin:8px 0 18px;padding:14px 18px;border:1px solid rgba(53,216,255,.35);border-radius:12px;background:linear-gradient(110deg,rgba(0,135,255,.12),rgba(4,18,38,.78));color:#dff5ff;font-size:14px;line-height:1.6;text-align:center;font-weight:600}
+
+/* ZOVARO AI discovery assistant */
+.zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:20px;background:rgba(2,8,22,.78);backdrop-filter:blur(12px)}
+.zovaro-ai-panel{position:relative;width:min(760px,100%);padding:clamp(22px,4vw,42px);border:1px solid rgba(71,190,255,.45);border-radius:28px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.22),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 45px rgba(35,173,255,.12);color:#f5f9ff;text-align:center}
+.zovaro-ai-flags{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;max-width:590px;margin:0 auto 22px}
+.zovaro-ai-flags span{display:inline-flex;align-items:center;justify-content:center;font-size:21px;line-height:1;width:29px;height:25px;border-radius:5px;background:rgba(255,255,255,.06);box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.zovaro-ai-chat[hidden]{display:none!important}
+.zovaro-ai-close{position:absolute;top:14px;right:16px;width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:24px;cursor:pointer}
+.zovaro-ai-kicker{color:#67dcff;font-size:11px;font-weight:900;letter-spacing:.2em}
+.zovaro-ai-face{position:relative;width:112px;height:112px;margin:12px auto 18px;border:2px solid #4bd5ff;border-radius:50%;background:linear-gradient(145deg,#e8f8ff,#80cfff 55%,#267ed0);box-shadow:0 0 32px rgba(53,194,255,.35);display:flex;align-items:center;justify-content:center;gap:17px}
+.zovaro-ai-eye{width:10px;height:15px;border-radius:50%;background:#10243e;position:absolute;top:37px}
+.zovaro-ai-eye.left{left:32px}.zovaro-ai-eye.right{right:32px}
+.zovaro-ai-mouth{position:absolute;top:61px;width:24px;height:13px;border-radius:50%;background:#142c48;animation:zovaroTalk .72s infinite ease-in-out}
+@keyframes zovaroTalk{0%,100%{height:4px;width:20px}50%{height:18px;width:17px}}
+.zovaro-ai-bubble{position:relative;max-width:540px;margin:0 auto 22px;padding:17px 22px;border:1px solid rgba(95,206,255,.48);border-radius:22px;background:rgba(13,43,72,.88);color:#fff;font-size:clamp(18px,3vw,25px);font-weight:800;line-height:1.3;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.zovaro-ai-bubble:after{content:"";position:absolute;top:-9px;left:calc(50% - 9px);width:16px;height:16px;transform:rotate(45deg);background:#123454;border-left:1px solid rgba(95,206,255,.48);border-top:1px solid rgba(95,206,255,.48)}
+.zovaro-ai-sub{max-width:560px;margin:0 auto 20px;color:#b8cbe0;font-size:14px;line-height:1.55}
+.zovaro-ai-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;max-width:650px;margin:0 auto}
+.zovaro-ai-input{min-width:0;min-height:54px;padding:14px 17px;border:1px solid rgba(111,187,235,.48);border-radius:14px;background:#071321;color:#fff;font:inherit;outline:none}
+.zovaro-ai-input:focus{border-color:#53d5ff;box-shadow:0 0 0 3px rgba(53,194,255,.13)}
+.zovaro-ai-submit{min-height:54px;padding:0 22px;border:0;border-radius:14px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zovaro-ai-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:18px auto 0}
+.zovaro-ai-chip{padding:9px 14px;border:1px solid rgba(118,179,220,.32);border-radius:999px;background:rgba(255,255,255,.06);color:#dcecff;font-size:12px;cursor:pointer}
+.zovaro-ai-note{margin:18px 0 0;color:#7f9bb8;font-size:11px}
+@media(max-width:560px){.zovaro-ai-form{grid-template-columns:1fr}.zovaro-ai-submit{width:100%}.zovaro-ai-panel{padding:28px 18px}.zovaro-ai-face{width:96px;height:96px}}
+
+
+.zovaro-ai-backdrop[hidden],.zovaro-ai-thinking[hidden]{display:none!important}
+.zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:16px;background:rgba(2,8,22,.82);backdrop-filter:blur(12px)}
+.zovaro-ai-panel{position:relative;width:min(780px,100%);max-height:min(92vh,900px);overflow:auto;padding:clamp(18px,3.5vw,34px);border:1px solid rgba(71,190,255,.45);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.22),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 45px rgba(35,173,255,.12);color:#f5f9ff}
+.zovaro-ai-close{position:absolute;top:12px;right:13px;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
+.zovaro-ai-kicker{color:#67dcff;text-align:center;font-size:10px;font-weight:900;letter-spacing:.2em}
+.zovaro-ai-head{display:flex;align-items:center;justify-content:center;gap:18px;margin:12px auto}
+.zovaro-ai-face{position:relative;flex:0 0 84px;width:84px;height:84px;border:2px solid #4bd5ff;border-radius:50%;background:linear-gradient(145deg,#e8f8ff,#80cfff 55%,#267ed0);box-shadow:0 0 28px rgba(53,194,255,.35)}
+.zovaro-ai-eye{position:absolute;top:28px;width:8px;height:12px;border-radius:50%;background:#10243e}.zovaro-ai-eye.left{left:23px}.zovaro-ai-eye.right{right:23px}
+.zovaro-ai-mouth{position:absolute;top:48px;left:calc(50% - 9px);width:18px;height:8px;border-radius:50%;background:#142c48;animation:zovaroTalk .72s infinite ease-in-out}
+@keyframes zovaroTalk{0%,100%{height:3px;width:18px}50%{height:15px;width:14px}}
+.zovaro-ai-bubble{position:relative;max-width:490px;padding:14px 18px;border:1px solid rgba(95,206,255,.48);border-radius:20px;background:rgba(13,43,72,.88);color:#fff;font-size:clamp(17px,2.6vw,22px);font-weight:800;line-height:1.3}
+.zovaro-ai-bubble:before{content:"";position:absolute;left:-7px;top:32px;width:12px;height:12px;transform:rotate(45deg);background:#123454;border-left:1px solid rgba(95,206,255,.48);border-bottom:1px solid rgba(95,206,255,.48)}
+.zovaro-ai-sub{max-width:620px;margin:0 auto 14px;color:#b8cbe0;text-align:center;font-size:13px;line-height:1.5}
+.zovaro-ai-chat{display:flex;flex-direction:column;gap:9px;max-height:230px;overflow:auto;padding:12px;border:1px solid rgba(112,174,216,.18);border-radius:16px;background:rgba(1,9,22,.42)}
+.zovaro-ai-message{max-width:88%;padding:10px 13px;border-radius:15px;font-size:13px;line-height:1.45;white-space:pre-wrap}
+.zovaro-ai-message.assistant{align-self:flex-start;background:#173657;color:#eef8ff;border-bottom-left-radius:4px}
+.zovaro-ai-message.user{align-self:flex-end;background:#d5f3ff;color:#09213a;border-bottom-right-radius:4px}
+.zovaro-ai-thinking{margin:10px 2px;color:#74dfff;font-size:12px;animation:zovaroPulse 1s infinite alternate}
+@keyframes zovaroPulse{to{opacity:.45}}
+.zovaro-ai-suggestions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.zovaro-ai-chip{padding:8px 11px;border:1px solid rgba(118,179,220,.36);border-radius:999px;background:rgba(255,255,255,.06);color:#dcecff;font-size:11px;cursor:pointer}
+.zovaro-ai-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.zovaro-ai-input{min-width:0;min-height:48px;padding:12px 14px;border:1px solid rgba(111,187,235,.48);border-radius:12px;background:#071321;color:#fff;font:inherit;font-size:14px;outline:none}
+.zovaro-ai-input:focus{border-color:#53d5ff;box-shadow:0 0 0 3px rgba(53,194,255,.13)}
+.zovaro-ai-submit{min-height:48px;padding:0 18px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zovaro-ai-actions{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.zovaro-ai-search-now,.zovaro-ai-reset{border:0;background:transparent;color:#67dcff;font-size:12px;font-weight:800;cursor:pointer}
+.zovaro-ai-reset{color:#a8bdd2}
+.zovaro-ai-note{margin:13px 0 0;color:#7f9bb8;font-size:10px;line-height:1.4;text-align:center}
+@media(max-width:560px){.zovaro-ai-panel{padding:23px 14px}.zovaro-ai-head{gap:10px}.zovaro-ai-face{flex-basis:68px;width:68px;height:68px}.zovaro-ai-eye{top:22px}.zovaro-ai-eye.left{left:18px}.zovaro-ai-eye.right{right:18px}.zovaro-ai-mouth{top:40px}.zovaro-ai-form{grid-template-columns:1fr}.zovaro-ai-submit{width:100%}.zovaro-ai-chat{max-height:190px}.zovaro-ai-actions{flex-wrap:wrap}}
+
+
+/* ZOVARO advertiser service */
+.zv-advertiser{margin:28px 0 12px;padding:clamp(22px,4vw,38px);border:1px solid rgba(79,194,255,.48);border-radius:24px;background:radial-gradient(circle at 90% 0%,rgba(15,137,232,.18),transparent 38%),linear-gradient(145deg,#0b1e36,#06101f);box-shadow:0 18px 50px rgba(0,0,0,.24)}
+.zv-ad-head{text-align:center;max-width:760px;margin:0 auto 22px}.zv-ad-kicker{color:#6bdcff;font-size:10px;font-weight:900;letter-spacing:.2em}.zv-ad-title{margin:9px 0;font:700 clamp(27px,5vw,43px)/1.05 "Space Grotesk",sans-serif}.zv-ad-copy{color:#b8cbe0;line-height:1.6;font-size:14px}
+.zv-ad-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:660px;margin:20px auto}
+.zv-ad-plan{padding:17px;border:1px solid rgba(91,185,233,.3);border-radius:16px;background:rgba(3,13,27,.7);text-align:center}
+.zv-ad-plan strong{display:block;color:#fff;font:700 30px "Space Grotesk",sans-serif}.zv-ad-plan span{color:#9bb6d1;font-size:12px}
+.zv-ad-form{max-width:760px;margin:20px auto 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.zv-ad-form label{display:block;color:#c8d9eb;font-size:12px}.zv-ad-form input,.zv-ad-form select,.zv-ad-form textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid rgba(103,167,215,.4);border-radius:10px;background:#061426;color:#fff;font:inherit}
+.zv-ad-form textarea{min-height:100px;resize:vertical}.zv-ad-wide{grid-column:1/-1}
+.zv-ad-submit{min-height:48px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zv-ad-foot{margin:12px auto 0;max-width:760px;color:#819bb6;text-align:center;font-size:10px;line-height:1.5}
+@media(max-width:560px){.zv-ad-plans,.zv-ad-form{grid-template-columns:1fr}.zv-ad-wide{grid-column:auto}}
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 </head>
@@ -1443,171 +1355,35 @@ footer{
       </div>
     </a>
 
-    <section
-      class="main-card wish-card"
-      aria-labelledby="wishTitle"
-    >
+    </div>
 
-      <div class="wish-card-content">
-
-        <div class="wish-card-copy">
-
-          <span class="wish-kicker">
-            ZOVARO SMART REQUEST
-          </span>
-
-          <h2
-            class="wish-title"
-            id="wishTitle"
-          >
-            MAKE A WISH
-          </h2>
-
-          <p class="wish-description">
-            Tell ZOVARO exactly what you are looking for —
-            a product to buy, a job to find, a job to offer,
-            or something you want to sell.
-          </p>
-
-
-          <form
-            class="wish-form"
-            id="wishForm"
-          >
-
-            <input
-              class="wish-input"
-              id="wishInput"
-              type="text"
-              autocomplete="off"
-              maxlength="300"
-              placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
-            >
-
-            <button
-              class="wish-submit"
-              type="submit"
-            >
-              SEND WISH
-            </button>
-
-          </form>
-
-
-          <div class="wish-foot">
-
-            <svg
-              class="wish-lamp"
-              viewBox="0 0 64 64"
-              role="img"
-              aria-label="Wish lamp"
-            >
-
-              <defs>
-
-                <linearGradient
-                  id="wishLampGradient"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-
-                  <stop
-                    offset="0%"
-                    stop-color="#FFD86A"
-                  />
-
-                  <stop
-                    offset="48%"
-                    stop-color="#35D6FF"
-                  />
-
-                  <stop
-                    offset="100%"
-                    stop-color="#087CFF"
-                  />
-
-                </linearGradient>
-
-
-                <filter
-                  id="wishGlow"
-                  x="-50%"
-                  y="-50%"
-                  width="200%"
-                  height="200%"
-                >
-
-                  <feGaussianBlur
-                    stdDeviation="2"
-                    result="blur"
-                  />
-
-                  <feMerge>
-
-                    <feMergeNode
-                      in="blur"
-                    />
-
-                    <feMergeNode
-                      in="SourceGraphic"
-                    />
-
-                  </feMerge>
-
-                </filter>
-
-              </defs>
-
-
-              <path
-                d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
-                fill="rgba(255,216,106,.12)"
-                stroke="url(#wishLampGradient)"
-                stroke-width="2.4"
-                filter="url(#wishGlow)"
-              />
-
-              <path
-                d="M27 48h10M28.5 53h7M31 58h2"
-                stroke="#FFD86A"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
-                stroke="#FFD86A"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              />
-
-            </svg>
-
-
-            <p class="wish-help">
-              One sentence is enough.
-              ZOVARO's smart matching system
-              will be connected next.
-            </p>
-
-          </div>
-
-
-          <p
-            class="wish-status"
-            id="wishStatus"
-            aria-live="polite"
-          ></p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </div>
+  <section class="zv-advertiser" id="advertiserService" aria-labelledby="zvAdTitle">
+    <div class="zv-ad-head">
+      <span class="zv-ad-kicker">ZOVARO WORLDWIDE · ADVERTISING SERVICE</span>
+      <h2 class="zv-ad-title" id="zvAdTitle">Promote your business worldwide.</h2>
+      <p class="zv-ad-copy">Promote products, services, shops, restaurants, activities, sales and rentals worldwide through ZOVARO Worldwide. Every advertising plan includes promotion across all official ZOVARO Worldwide social media channels, with 3 posts per day throughout the selected monthly or annual campaign, plus a promotional banner displayed on the official ZOVARO Worldwide website for the same campaign period. Send a request and our team will contact you to review the content, schedule and next steps.</p>
+    </div>
+    <div class="zv-ad-plans">
+      <div class="zv-ad-plan"><strong>US$9.99</strong><span>per month · 12-month plan</span></div>
+      <div class="zv-ad-plan"><strong>US$99</strong><span>12 months · paid once</span></div>
+    </div>
+    <form class="zv-ad-form" id="zvAdvertiserForm">
+      <label>Business / contact name<input name="business" required maxlength="140" autocomplete="organization"></label>
+      <label>Email address<input name="email" type="email" required autocomplete="email"></label>
+      <label>Country<input name="country" required maxlength="80" autocomplete="country-name"></label>
+      <label>Website or social profile<input name="website" type="url" maxlength="240" placeholder="https://"></label>
+      <label>What do you want to promote?
+        <select name="category" required>
+          <option value="">Select a category</option><option>Products / online shop</option><option>Services / professionals</option><option>Restaurant / food delivery</option><option>Business / local activity</option><option>Property / rentals / sales</option><option>Vehicles / luxury / charter</option><option>Jobs / recruitment</option><option>Other</option>
+        </select>
+      </label>
+      <label>Preferred plan<select name="plan" required><option value="US$9.99 per month for 12 months">US$9.99 per month · 12 months</option><option value="US$99 for 12 months, paid once">US$99 · 12 months paid once</option></select></label>
+      <label class="zv-ad-wide">Describe what you want to advertise<textarea name="description" required maxlength="1800" placeholder="Tell us about your business, products or services, target countries and the promotion you need."></textarea></label>
+      <button class="zv-ad-submit zv-ad-wide" type="submit">REQUEST ADVERTISING SERVICE</button>
+    </form>
+    <p class="zv-ad-foot">Submitting this request does not activate a paid campaign or charge you. It opens an email addressed to ZOVARO so the details can be reviewed and confirmed. ZOVARO is an advertising and discovery intermediary; third-party sellers remain responsible for their own products, orders and customer service.</p>
+    <p class="zv-ad-foot" id="zvAdStatus" role="status" aria-live="polite"></p>
+  </section>
 
 </section>
 
@@ -2538,86 +2314,6 @@ document
 
 
 /* =====================================================
-   MAKE A WISH
-   ===================================================== */
-
-const wishForm =
-  document.getElementById(
-    "wishForm"
-  );
-
-
-const wishInput =
-  document.getElementById(
-    "wishInput"
-  );
-
-
-const wishStatus =
-  document.getElementById(
-    "wishStatus"
-  );
-
-
-if(
-  wishForm &&
-  wishInput &&
-  wishStatus
-){
-
-  const savedWish =
-    localStorage.getItem(
-      "zovaroWish"
-    );
-
-
-  if(savedWish){
-
-    wishInput.value =
-      savedWish;
-
-  }
-
-
-  wishForm.addEventListener(
-    "submit",
-    event => {
-
-      event.preventDefault();
-
-
-      const wish =
-        wishInput.value.trim();
-
-
-      if(!wish){
-
-        wishStatus.textContent =
-          "Please describe your wish first.";
-
-        wishInput.focus();
-
-        return;
-
-      }
-
-
-      localStorage.setItem(
-        "zovaroWish",
-        wish
-      );
-
-
-      wishStatus.textContent =
-        "Wish saved. The ZOVARO smart matching system will be connected next.";
-
-    }
-  );
-
-}
-
-
-/* =====================================================
    USED PRODUCTS SEARCH AND CATEGORIES
    ===================================================== */
 
@@ -2903,5 +2599,128 @@ document
 </script>
 
 
+
+
+<div class="zovaro-ai-backdrop" id="zovaroAiBackdrop" role="dialog" aria-modal="true" aria-labelledby="zovaroAiTitle">
+  <section class="zovaro-ai-panel">
+    <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
+    <div class="zovaro-ai-bubble" id="zovaroAiTitle">Write your language...</div>
+    <div class="zovaro-ai-flags" aria-label="Languages from around the world">
+      <span title="English">🇬🇧</span><span title="United States">🇺🇸</span><span title="Italy">🇮🇹</span><span title="Spain">🇪🇸</span><span title="France">🇫🇷</span><span title="Germany">🇩🇪</span><span title="Portugal">🇵🇹</span><span title="Brazil">🇧🇷</span><span title="Mexico">🇲🇽</span><span title="Colombia">🇨🇴</span><span title="Argentina">🇦🇷</span><span title="Japan">🇯🇵</span><span title="China">🇨🇳</span><span title="South Korea">🇰🇷</span><span title="India">🇮🇳</span><span title="Pakistan">🇵🇰</span><span title="Turkey">🇹🇷</span><span title="Saudi Arabia">🇸🇦</span><span title="United Arab Emirates">🇦🇪</span><span title="Egypt">🇪🇬</span><span title="Nigeria">🇳🇬</span><span title="South Africa">🇿🇦</span><span title="Russia">🇷🇺</span><span title="Ukraine">🇺🇦</span><span title="Poland">🇵🇱</span><span title="Netherlands">🇳🇱</span><span title="Sweden">🇸🇪</span><span title="Greece">🇬🇷</span><span title="Thailand">🇹🇭</span><span title="Indonesia">🇮🇩</span><span title="Vietnam">🇻🇳</span><span title="Australia">🇦🇺</span><span title="Canada">🇨🇦</span><span title="Switzerland">🇨🇭</span><span title="Ireland">🇮🇪</span><span title="Romania">🇷🇴</span><span title="Israel">🇮🇱</span><span title="Kenya">🇰🇪</span><span title="Morocco">🇲🇦</span><span title="Chile">🇨🇱</span><span title="Peru">🇵🇪</span><span title="New Zealand">🇳🇿</span>
+    </div>
+    <div class="zovaro-ai-chat" id="zovaroAiChat" aria-live="polite" hidden></div>
+    <div class="zovaro-ai-thinking" id="zovaroAiThinking" hidden>Searching...</div>
+    <div class="zovaro-ai-suggestions" id="zovaroAiSuggestions" aria-label="Suggestions" hidden></div>
+    <form class="zovaro-ai-form" id="zovaroAiForm">
+      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Tell us what you are looking for..." aria-label="Describe what you are looking for in your language" required>
+      <button class="zovaro-ai-submit" type="submit" id="zovaroAiSend">SEARCH →</button>
+    </form>
+    <div class="zovaro-ai-actions" hidden><button type="button" class="zovaro-ai-search-now" id="zovaroAiSearchNow">Search now</button><button type="button" class="zovaro-ai-reset" id="zovaroAiReset">New search</button></div>
+    <p class="zovaro-ai-note" id="zovaroAiNote" hidden>ZOVARO only displays results available from connected sources. If a category is not yet integrated, we will tell you clearly.</p>
+  </section>
+</div>
+<script>
+(function(){
+  const backdrop=document.getElementById("zovaroAiBackdrop");
+  const form=document.getElementById("zovaroAiForm");
+  const input=document.getElementById("zovaroAiInput");
+  const close=document.getElementById("zovaroAiClose");
+  const chat=document.getElementById("zovaroAiChat");
+  const thinking=document.getElementById("zovaroAiThinking");
+  const suggestions=document.getElementById("zovaroAiSuggestions");
+  const searchNow=document.getElementById("zovaroAiSearchNow");
+  const reset=document.getElementById("zovaroAiReset");
+  if(!backdrop||!form||!input||!close||!chat)return;
+  let original="",kind="general",answers=[],step=0,idleTimer=null;
+  const hide=()=>{backdrop.hidden=true;document.body.style.overflow="";};
+  const show=()=>{backdrop.hidden=false;document.body.style.overflow="hidden";input.focus();};
+  const addMessage=(text,who="assistant")=>{const el=document.createElement("div");el.className="zovaro-ai-message "+who;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;};
+  const setSuggestions=(items)=>{suggestions.replaceChildren();items.forEach(label=>{const b=document.createElement("button");b.type="button";b.className="zovaro-ai-chip";b.textContent=label;b.addEventListener("click",()=>{input.value=label;form.requestSubmit();});suggestions.appendChild(b);});};
+  const detect=(q)=>{
+    if(/\b(job|work|lavor|impieg|assunzion|stipend|remote|remoto|da casa|work from home|macella|saldator|infermier|developer)\b/.test(q))return "job";
+    if(/\b(casa|appartament|villa|immobil|affitt|rent|house|apartment|property|terreno)\b/.test(q))return "home";
+    if(/\b(hotel|albergo|resort|crocier|cruise|vacanz|viaggio|volo|flight|charter|travel)\b/.test(q))return "travel";
+    if(/\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery)\b/.test(q))return "food";
+    if(/\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|lusso|luxury|castello|isola privata)\b/.test(q))return "luxury";
+    if(/\b(usato|usata|second hand|used|ricondizionat|refurbished|di seconda mano)\b/.test(q))return "used";
+    return "product";
+  };
+  const launch=(query, category)=>{
+    const q=String(query||"").trim();
+    hide();
+    if(category==="job"){
+      if(typeof showView==="function")showView("lookingJobView");
+      const low=q.toLowerCase();
+      const country=document.getElementById("jobCountryFilter");
+      const city=document.getElementById("jobCityFilter");
+      const workplace=document.getElementById("jobWorkplaceFilter");
+      const remote=/remote|remoto|da casa|work from home/.test(low);
+      if(workplace&&remote)workplace.value="Remote";
+      if(city){
+        const match=q.match(/(?:\ba\s+|\bin\s+|\bnear\s+|\bvicino a\s+)([A-ZÀ-Ü][\wÀ-ÿ' -]{2,30})/);
+        if(match){city.disabled=false;city.value=match[1].trim();}
+      }
+      const status=document.getElementById("jobLocationStatus");
+      if(status)status.textContent="Search started for: "+q+". Results are based on verified job listings available on ZOVARO.";
+      const search=document.getElementById("jobLocationSearch");
+      if(search)search.click();
+      return;
+    }
+    if(category==="used"){
+      if(typeof showView==="function")showView("usedProductsView");
+      const field=document.getElementById("usedSearchInput"),form=document.getElementById("usedSearchForm");
+      if(field&&form){field.value=q;form.requestSubmit();}
+      return;
+    }
+    if(category==="product"){
+      if(typeof showView==="function")showView("buyProductsView");
+      const field=document.getElementById("searchInput"),form=document.getElementById("searchForm");
+      if(field&&form){field.value=q;form.requestSubmit();}
+      return;
+    }
+    const messages={
+      home:"Property search is not yet connected to a verified listings database. We will not show invented results.",
+      travel:"Travel and accommodation offers are not yet connected to verified providers. We will not show invented results.",
+      food:"Restaurant and food delivery services are not yet connected to verified partners in your area.",
+      luxury:"Luxury search still requires verified inventories and intermediary integrations."
+    };
+    addMessage(messages[category]||"This category does not yet have a verified results source on ZOVARO.");
+  };
+  const start=(query)=>{
+    const q=String(query||"").trim();
+    if(!q)return;
+    original=q;kind=detect(q.toLowerCase());answers=[];step=0;
+    chat.replaceChildren();addMessage(q,"user");
+    thinking.hidden=false;setSuggestions([]);
+    window.setTimeout(()=>{
+      thinking.hidden=true;
+      addMessage("Searching ZOVARO sources now...");
+      launch(q,kind);
+    },250);
+  };
+  close.addEventListener("click",hide);
+  backdrop.addEventListener("click",e=>{if(e.target===backdrop)hide();});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)hide();});
+  form.addEventListener("submit",e=>{e.preventDefault();start(input.value.trim());});
+  searchNow.addEventListener("click",()=>{start(input.value.trim()||original);});
+  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Tell us what you are looking for. Search starts immediately, with no follow-up questions.");setSuggestions([]);input.value="";input.focus();});
+
+  show();
+})();
+
+document.getElementById("zvAdvertiserForm")?.addEventListener("submit", event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const data = new FormData(form);
+  const fields = ["business","email","country","website","category","plan","description"];
+  const labels = {business:"Business / contact",email:"Email",country:"Country",website:"Website / social",category:"Category",plan:"Plan",description:"Description"};
+  const body = fields.map(key => labels[key] + ": " + (data.get(key) || "—")).join("\\n\\n");
+  const subject = "ZOVARO Worldwide - Advertising service request";
+  const mailto = "mailto:vendittellijob2025@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  document.getElementById("zvAdStatus").textContent = "Your email application will open with the request ready to send. The request is not submitted until you press Send in your email app.";
+  window.location.href = mailto;
+});
+
+</script>
 </body>
 </html>
