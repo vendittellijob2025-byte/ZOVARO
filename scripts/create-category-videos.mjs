@@ -126,22 +126,6 @@ results.push(await makeVideo({
   caption:"Explore current employer-published openings and career paths on ZOVARO JOBS Worldwide. Browse without registration and apply through the employer's official channel. https://zovaro.vercel.app/?view=jobs",
   hashtags:["#ZOVARO","#Jobs","#CareerOpportunities","#RemoteJobs"]
 }));
-results.push(await makeVideo({
-  name:"ZOVARO-REMOTE-CAREERS",
-  background:"assets/job-visual.png",
-  music:MUSIC_DEFAULT,
-  scenes:remoteScenes,
-  caption:"Discover Remote & Work From Home career paths on ZOVARO JOBS Worldwide. Career guides are informational; live vacancies are listed separately and linked to their employers. https://zovaro.vercel.app/?view=jobs",
-  hashtags:["#ZOVARO","#RemoteWork","#WorkFromHome","#DigitalCareers"]
-}));
-results.push(await makeVideo({
-  name:"ZOVARO-INDUSTRY-CAREERS",
-  background:"assets/job-visual.png",
-  music:MUSIC_DEFAULT,
-  scenes:industryScenes,
-  caption:"Explore construction, manufacturing, skilled trades and transport career paths on ZOVARO JOBS Worldwide. These are career guides; live vacancies are listed separately. https://zovaro.vercel.app/?view=jobs",
-  hashtags:["#ZOVARO","#HospitalityJobs","#ConstructionJobs","#SkilledTrades"]
-}));
 if (await fs.access(MUSIC_LUXURY).then(()=>true).catch(()=>false)) {
   results.push(await makeVideo({
     name:"ZOVARO-LUXURY-DAILY",
