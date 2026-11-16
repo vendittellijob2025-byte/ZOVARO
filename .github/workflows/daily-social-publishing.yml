@@ -1,4 +1,4 @@
-name: ZOVARO - Generate and publish 4 daily social videos
+name: ZOVARO - Generate 3 and publish 4 daily social videos
 
 on:
   workflow_dispatch:
@@ -35,9 +35,9 @@ jobs:
           node scripts/create-promotion.mjs
           mkdir -p zovaro-shop-videos
           SELECTED_PRODUCTS_PATH=".zovaro-shop-batches/products-1.json" VIDEO_OUTPUT_PATH="data/tiktok-video.mp4" node scripts/create-tiktok-video.mjs
-      - name: Generate three JOB videos and LUXURY video
+      - name: Generate one JOB and one LUXURY video
         run: node scripts/create-category-videos.mjs zovaro-social-videos
-      - name: Verify exactly four daily videos
+      - name: Verify exactly three generated videos
         run: |
           test -s data/tiktok-video.mp4
           test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
