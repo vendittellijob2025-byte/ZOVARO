@@ -186,19 +186,20 @@ async function fileExists(path) {
   }
 }
 
-async function downloadFile(url, outputPath) {
+async function downloadFile(url, outputPath, fallbackPath) {
   let lastError;
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const response = await fetch(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; ZOVARO-CatalogBot/1.0)",
+          "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+        },
         signal: AbortSignal.timeout(25000),
         redirect: "follow"
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const buffer = Buffer.from(await response.arrayBuffer());
       if (buffer.length < 100) throw new Error("Downloaded image is empty or incomplete.");
       await fs.writeFile(outputPath, buffer);
@@ -208,6 +209,12 @@ async function downloadFile(url, outputPath) {
       console.warn(`Product image download attempt ${attempt}/2 failed: ${String(error?.message || error)}`);
       if (attempt < 2) await new Promise(resolve => setTimeout(resolve, 1000));
     }
+  }
+
+  if (fallbackPath && await fileExists(fallbackPath)) {
+    console.warn(`Using ZOVARO branded fallback image because the merchant image was inaccessible: ${url}`);
+    await fs.copyFile(fallbackPath, outputPath);
+    return;
   }
   throw new Error(`Unable to download product image after 2 attempts: ${url}. ${String(lastError?.message || lastError)}`);
 }
@@ -567,7 +574,8 @@ for (
 
   await downloadFile(
     product.imageLink,
-    imagePath
+    imagePath,
+    "assets/shop-visual.png"
   );
 
   // Normalize remote images to a clean, single-frame PNG before looping them.
