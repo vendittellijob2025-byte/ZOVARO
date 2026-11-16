@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-16T13:08:21.206Z",
-  "selectedProductCount": 19285,
-  "inventoryProductCount": 191263,
+  "generatedAt": "2026-11-16T22:00:12.377Z",
+  "selectedProductCount": 19319,
+  "inventoryProductCount": 191310,
   "uniqueAdvertiserCount": 20,
   "categories": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 833
+      "productCount": 843
     },
     {
       "name": "Automotive",
@@ -26,11 +26,11 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1854
+      "productCount": 1853
     },
     {
       "name": "Books & Media",
-      "productCount": 1350
+      "productCount": 1355
     },
     {
       "name": "Business, Wholesale & Bulk Supply",
@@ -38,11 +38,11 @@
     },
     {
       "name": "Electronics",
-      "productCount": 318
+      "productCount": 325
     },
     {
       "name": "Energy, Solar & Electric Mobility",
-      "productCount": 5
+      "productCount": 6
     },
     {
       "name": "Fashion",
@@ -58,7 +58,7 @@
     },
     {
       "name": "Gaming",
-      "productCount": 96
+      "productCount": 98
     },
     {
       "name": "Garden",
@@ -66,7 +66,7 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1150
+      "productCount": 1152
     },
     {
       "name": "Home & Living",
@@ -78,15 +78,15 @@
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 291
+      "productCount": 293
     },
     {
       "name": "Office & Technology",
-      "productCount": 50
+      "productCount": 46
     },
     {
       "name": "Pets",
-      "productCount": 183
+      "productCount": 185
     },
     {
       "name": "Real Estate",
@@ -106,7 +106,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1685
+      "productCount": 1687
     },
     {
       "name": "Sports",
@@ -114,11 +114,11 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 181
+      "productCount": 182
     },
     {
       "name": "Toys & Games",
-      "productCount": 288
+      "productCount": 291
     },
     {
       "name": "Travel",
@@ -126,24 +126,24 @@
     },
     {
       "name": "TVs & Home Cinema",
-      "productCount": 200
+      "productCount": 203
     }
   ],
   "nonEmptyCategoryCount": 30,
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1834,
+  "otherProductCount": 1833,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1834
+      "count": 1833
     }
   ],
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19285,
-    "withImages": 19285,
-    "withPositivePrices": 19285
+    "withTrackedHttpsLinks": 19319,
+    "withImages": 19319,
+    "withPositivePrices": 19319
   },
   "sources": [
     {
