@@ -1,0 +1,32 @@
+name: ZOVARO - Apply fixed daily Buffer schedule
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/apply-fixed-buffer-schedule.yml"
+      - "scripts/reschedule-zovaro-buffer-posts.mjs"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zovaro-fixed-buffer-schedule
+  cancel-in-progress: false
+
+jobs:
+  reschedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Reschedule the eight existing posts without creating duplicates
+        env:
+          BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
+        run: node scripts/reschedule-zovaro-buffer-posts.mjs
