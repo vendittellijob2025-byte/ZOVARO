@@ -67,7 +67,7 @@ function drawText(file, size, y, bold = false, color = "white") {
 async function renderScene(index, duration, lines) {
   const renderLines = [];
   for (const line of lines) {
-    const parts = String(line.text).split("\\n");
+    const parts = String(line.text).split(/\n/);
     for (let part = 0; part < parts.length; part++) {
       renderLines.push({
         ...line,
