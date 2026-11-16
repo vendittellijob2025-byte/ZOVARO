@@ -1,10 +1,9 @@
-name: ZOVARO - PAUSED JOBS and LUXURY video generation
+name: ZOVARO - Daily JOBS and LUXURY video generation
 
-# JOBS and LUXURY video creation is intentionally paused until the user
-# provides the requested specifications. Do not restore scheduled or push
-# triggers without explicit user approval.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "30 7 * * *"
 
 permissions:
   contents: read
@@ -15,8 +14,39 @@ concurrency:
 
 jobs:
   generate:
-    if: ${{ false }}
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Explain pause
-        run: echo "JOBS and LUXURY video generation is paused by user request."
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Generate three JOB videos and LUXURY when approved audio is present
+        run: node scripts/create-category-videos.mjs zovaro-social-videos
+
+      - name: Verify generated videos
+        run: |
+          test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
+          test -s zovaro-social-videos/ZOVARO-REMOTE-CAREERS.mp4
+          test -s zovaro-social-videos/ZOVARO-INDUSTRY-CAREERS.mp4
+          for FILE in zovaro-social-videos/*.mp4; do
+            test -s "$FILE"
+            ffprobe -v error -show_entries format=duration -of csv=p=0 "$FILE"
+          done
+
+      - name: Upload JOBS and available LUXURY video artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: zovaro-daily-jobs-luxury
+          path: zovaro-social-videos/
+          if-no-files-found: error
+          retention-days: 14
