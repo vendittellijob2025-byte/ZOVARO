@@ -2606,14 +2606,14 @@ document
       <div class="zovaro-ai-face" aria-hidden="true"><span class="zovaro-ai-eye left"></span><span class="zovaro-ai-eye right"></span><span class="zovaro-ai-mouth"></span></div>
       <div class="zovaro-ai-bubble" id="zovaroAiTitle">Dimmi cosa ti serve! ZOVARO ti aiuta a trovarlo.</div>
     </div>
-    <p class="zovaro-ai-sub">Descrivi liberamente quello che cerchi. Ti farò solo le domande utili per capire bene la tua richiesta.</p>
+    <p class="zovaro-ai-sub">Scrivi nella lingua che preferisci e descrivi direttamente ciò che cerchi. La ricerca parte subito.</p>
     <div class="zovaro-ai-chat" id="zovaroAiChat" aria-live="polite">
-      <div class="zovaro-ai-message assistant">Ciao! Cerchi un lavoro, un prodotto, una casa, cibo a domicilio, un viaggio o qualcosa di esclusivo? Raccontami tutto quello che sai già.</div>
+      <div class="zovaro-ai-message assistant">Ciao! In quale lingua preferisci scrivere? Puoi indicare italiano, español, English o un'altra lingua. ZOVARO cercherà di seguirti nella lingua che scegli. Se vuoi, puoi anche iniziare subito a descrivere ciò che cerchi: non devi rispondere a domande prima della ricerca.</div>
     </div>
     <div class="zovaro-ai-thinking" id="zovaroAiThinking" hidden>Sto pensando a quali dettagli possono aiutarti…</div>
     <div class="zovaro-ai-suggestions" id="zovaroAiSuggestions" aria-label="Suggested answers"></div>
     <form class="zovaro-ai-form" id="zovaroAiForm">
-      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Scrivi qui cosa stai cercando..." aria-label="Describe what you are looking for" required>
+      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Scrivi nella tua lingua cosa stai cercando..." aria-label="Describe what you are looking for" required>
       <button class="zovaro-ai-submit" type="submit" id="zovaroAiSend">INVIA →</button>
     </form>
     <div class="zovaro-ai-actions"><button type="button" class="zovaro-ai-search-now" id="zovaroAiSearchNow">Ho finito: cerca adesso</button><button type="button" class="zovaro-ai-reset" id="zovaroAiReset">Nuova ricerca</button></div>
@@ -2704,14 +2704,8 @@ document
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)hide();});
   form.addEventListener("submit",e=>{e.preventDefault();start(input.value.trim());});
   searchNow.addEventListener("click",()=>{start(input.value.trim()||original);});
-  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Scrivi cosa stai cercando: avvierò subito la ricerca senza domande intermedie.");setSuggestions([]);input.value="";input.focus();});
-  input.addEventListener("input",()=>{
-    if(!original||!input.value.trim())return;
-    thinking.hidden=false;
-    if(idleTimer)window.clearTimeout(idleTimer);
-    idleTimer=window.setTimeout(()=>{thinking.hidden=true;addMessage(idleHints[kind]||idleHints.general);},1800);
-  });
-  suggestions.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.textContent==="Cerca con questi dettagli"){launch();return;}send(b.textContent);});
+  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Scrivi nella lingua che preferisci: avvierò subito la ricerca senza domande intermedie.");setSuggestions([]);input.value="";input.focus();});
+
   show();
 })();
 
