@@ -33,10 +33,12 @@
 
   const show = () => {
     backdrop.hidden = false;
+    reopen.classList.remove("visible");
     document.body.style.overflow = "hidden";
   };
   const hide = () => {
     backdrop.hidden = true;
+    reopen.classList.add("visible");
     document.body.style.overflow = "";
   };
   const addMessage = (text, who) => {
@@ -90,6 +92,7 @@
     if (!q) return;
     addMessage(q, "user");
     status.textContent = t.searching;
+    hide();
 
     const isJob = /\b(job|jobs|work|career|employment|lavoro|lavorare|impiego|empleo|trabajo|trabajar|emploi|stellenangebot|vaga|trabalho|وظيفة|работа)\b/i.test(q);
     if (isJob) {
