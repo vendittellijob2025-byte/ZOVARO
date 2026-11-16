@@ -12,7 +12,7 @@ const day=bogotaDate().replaceAll("-","");
 const targetDate=bogotaDate(1);
 const slots=["08:00","12:00","17:00","21:00"];
 const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
-const tag="zovaro-social-"+day;
+const tag="zovaro-social-"+day+"-"+(process.env.GITHUB_RUN_ID||"manual")+"-"+(process.env.GITHUB_RUN_ATTEMPT||"1");
 const videos=[
 ["SHOP · Daily discoveries","data/tiktok-video.mp4","Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"],
 ["JOBS · Daily opportunities","zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4","Explore employer-published job openings on ZOVARO JOBS. https://zovaro.vercel.app/?view=jobs #ZOVARO #Jobs"],
