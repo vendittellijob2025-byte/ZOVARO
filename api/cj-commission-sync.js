@@ -318,7 +318,9 @@ export default async function handler(req, res) {
 
     if (batchRecords.length) {
       await writeJsonBlob(
-        "cj-commissions/records/batches/" + Date.now() + ".json",
+        "cj-commissions/records/batches/batch-" +
+          batchRecords[0].commission_id + "-" +
+          batchRecords[batchRecords.length - 1].commission_id + ".json",
         {
           schema: "zovaro.cj-commission-batch.v1",
           created_at: new Date().toISOString(),
