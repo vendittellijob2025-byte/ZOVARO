@@ -1170,6 +1170,38 @@ footer{
 .zovaro-ai-note{margin:18px 0 0;color:#7f9bb8;font-size:11px}
 @media(max-width:560px){.zovaro-ai-form{grid-template-columns:1fr}.zovaro-ai-submit{width:100%}.zovaro-ai-panel{padding:28px 18px}.zovaro-ai-face{width:96px;height:96px}}
 
+
+.zovaro-ai-backdrop[hidden],.zovaro-ai-thinking[hidden]{display:none!important}
+.zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:16px;background:rgba(2,8,22,.82);backdrop-filter:blur(12px)}
+.zovaro-ai-panel{position:relative;width:min(780px,100%);max-height:min(92vh,900px);overflow:auto;padding:clamp(18px,3.5vw,34px);border:1px solid rgba(71,190,255,.45);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.22),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 45px rgba(35,173,255,.12);color:#f5f9ff}
+.zovaro-ai-close{position:absolute;top:12px;right:13px;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
+.zovaro-ai-kicker{color:#67dcff;text-align:center;font-size:10px;font-weight:900;letter-spacing:.2em}
+.zovaro-ai-head{display:flex;align-items:center;justify-content:center;gap:18px;margin:12px auto}
+.zovaro-ai-face{position:relative;flex:0 0 84px;width:84px;height:84px;border:2px solid #4bd5ff;border-radius:50%;background:linear-gradient(145deg,#e8f8ff,#80cfff 55%,#267ed0);box-shadow:0 0 28px rgba(53,194,255,.35)}
+.zovaro-ai-eye{position:absolute;top:28px;width:8px;height:12px;border-radius:50%;background:#10243e}.zovaro-ai-eye.left{left:23px}.zovaro-ai-eye.right{right:23px}
+.zovaro-ai-mouth{position:absolute;top:48px;left:calc(50% - 9px);width:18px;height:8px;border-radius:50%;background:#142c48;animation:zovaroTalk .72s infinite ease-in-out}
+@keyframes zovaroTalk{0%,100%{height:3px;width:18px}50%{height:15px;width:14px}}
+.zovaro-ai-bubble{position:relative;max-width:490px;padding:14px 18px;border:1px solid rgba(95,206,255,.48);border-radius:20px;background:rgba(13,43,72,.88);color:#fff;font-size:clamp(17px,2.6vw,22px);font-weight:800;line-height:1.3}
+.zovaro-ai-bubble:before{content:"";position:absolute;left:-7px;top:32px;width:12px;height:12px;transform:rotate(45deg);background:#123454;border-left:1px solid rgba(95,206,255,.48);border-bottom:1px solid rgba(95,206,255,.48)}
+.zovaro-ai-sub{max-width:620px;margin:0 auto 14px;color:#b8cbe0;text-align:center;font-size:13px;line-height:1.5}
+.zovaro-ai-chat{display:flex;flex-direction:column;gap:9px;max-height:230px;overflow:auto;padding:12px;border:1px solid rgba(112,174,216,.18);border-radius:16px;background:rgba(1,9,22,.42)}
+.zovaro-ai-message{max-width:88%;padding:10px 13px;border-radius:15px;font-size:13px;line-height:1.45;white-space:pre-wrap}
+.zovaro-ai-message.assistant{align-self:flex-start;background:#173657;color:#eef8ff;border-bottom-left-radius:4px}
+.zovaro-ai-message.user{align-self:flex-end;background:#d5f3ff;color:#09213a;border-bottom-right-radius:4px}
+.zovaro-ai-thinking{margin:10px 2px;color:#74dfff;font-size:12px;animation:zovaroPulse 1s infinite alternate}
+@keyframes zovaroPulse{to{opacity:.45}}
+.zovaro-ai-suggestions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.zovaro-ai-chip{padding:8px 11px;border:1px solid rgba(118,179,220,.36);border-radius:999px;background:rgba(255,255,255,.06);color:#dcecff;font-size:11px;cursor:pointer}
+.zovaro-ai-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.zovaro-ai-input{min-width:0;min-height:48px;padding:12px 14px;border:1px solid rgba(111,187,235,.48);border-radius:12px;background:#071321;color:#fff;font:inherit;font-size:14px;outline:none}
+.zovaro-ai-input:focus{border-color:#53d5ff;box-shadow:0 0 0 3px rgba(53,194,255,.13)}
+.zovaro-ai-submit{min-height:48px;padding:0 18px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zovaro-ai-actions{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.zovaro-ai-search-now,.zovaro-ai-reset{border:0;background:transparent;color:#67dcff;font-size:12px;font-weight:800;cursor:pointer}
+.zovaro-ai-reset{color:#a8bdd2}
+.zovaro-ai-note{margin:13px 0 0;color:#7f9bb8;font-size:10px;line-height:1.4;text-align:center}
+@media(max-width:560px){.zovaro-ai-panel{padding:23px 14px}.zovaro-ai-head{gap:10px}.zovaro-ai-face{flex-basis:68px;width:68px;height:68px}.zovaro-ai-eye{top:22px}.zovaro-ai-eye.left{left:18px}.zovaro-ai-eye.right{right:18px}.zovaro-ai-mouth{top:40px}.zovaro-ai-form{grid-template-columns:1fr}.zovaro-ai-submit{width:100%}.zovaro-ai-chat{max-height:190px}.zovaro-ai-actions{flex-wrap:wrap}}
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 </head>
@@ -2523,24 +2555,27 @@ document
 
 
 
+
 <div class="zovaro-ai-backdrop" id="zovaroAiBackdrop" role="dialog" aria-modal="true" aria-labelledby="zovaroAiTitle">
   <section class="zovaro-ai-panel">
     <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
     <div class="zovaro-ai-kicker">ZOVARO AI DISCOVERY</div>
-    <div class="zovaro-ai-face" aria-hidden="true"><span class="zovaro-ai-eye left"></span><span class="zovaro-ai-eye right"></span><span class="zovaro-ai-mouth"></span></div>
-    <div class="zovaro-ai-bubble" id="zovaroAiTitle">Dimmi cosa ti serve! ZOVARO te lo trova.</div>
-    <p class="zovaro-ai-sub">Lavoro, prodotti da comprare, articoli nuovi o usati e opportunità speciali. Descrivi quello che cerchi con tutti i dettagli che vuoi.</p>
-    <form class="zovaro-ai-form" id="zovaroAiForm">
-      <input class="zovaro-ai-input" id="zovaroAiInput" type="search" maxlength="500" autocomplete="off" placeholder="Es. Cerco un laptop usato, 32 GB RAM, massimo 700 €..." aria-label="Describe what you are looking for" required>
-      <button class="zovaro-ai-submit" type="submit">TROVA PER ME →</button>
-    </form>
-    <div class="zovaro-ai-chips">
-      <button class="zovaro-ai-chip" type="button" data-ai-prompt="Cerco un lavoro da remoto a tempo pieno">💼 Lavoro</button>
-      <button class="zovaro-ai-chip" type="button" data-ai-prompt="Cerco un prodotto nuovo da comprare">🛍️ Nuovo</button>
-      <button class="zovaro-ai-chip" type="button" data-ai-prompt="Cerco un prodotto usato o ricondizionato">♻️ Usato</button>
-      <button class="zovaro-ai-chip" type="button" data-ai-prompt="Cerco offerte di lusso e prestigio">✦ Luxury</button>
+    <div class="zovaro-ai-head">
+      <div class="zovaro-ai-face" aria-hidden="true"><span class="zovaro-ai-eye left"></span><span class="zovaro-ai-eye right"></span><span class="zovaro-ai-mouth"></span></div>
+      <div class="zovaro-ai-bubble" id="zovaroAiTitle">Dimmi cosa ti serve! ZOVARO ti aiuta a trovarlo.</div>
     </div>
-    <p class="zovaro-ai-note">I risultati dipendono dai cataloghi e dalle offerte effettivamente disponibili su ZOVARO.</p>
+    <p class="zovaro-ai-sub">Descrivi liberamente quello che cerchi. Ti farò solo le domande utili per capire bene la tua richiesta.</p>
+    <div class="zovaro-ai-chat" id="zovaroAiChat" aria-live="polite">
+      <div class="zovaro-ai-message assistant">Ciao! Cerchi un lavoro, un prodotto, una casa, cibo a domicilio, un viaggio o qualcosa di esclusivo? Raccontami tutto quello che sai già.</div>
+    </div>
+    <div class="zovaro-ai-thinking" id="zovaroAiThinking" hidden>Sto pensando a quali dettagli possono aiutarti…</div>
+    <div class="zovaro-ai-suggestions" id="zovaroAiSuggestions" aria-label="Suggested answers"></div>
+    <form class="zovaro-ai-form" id="zovaroAiForm">
+      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Scrivi qui cosa stai cercando..." aria-label="Describe what you are looking for" required>
+      <button class="zovaro-ai-submit" type="submit" id="zovaroAiSend">INVIA →</button>
+    </form>
+    <div class="zovaro-ai-actions"><button type="button" class="zovaro-ai-search-now" id="zovaroAiSearchNow">Ho finito: cerca adesso</button><button type="button" class="zovaro-ai-reset" id="zovaroAiReset">Nuova ricerca</button></div>
+    <p class="zovaro-ai-note" id="zovaroAiNote">ZOVARO mostra soltanto risultati realmente presenti nelle fonti collegate. Se una categoria non è ancora integrata, te lo diremo chiaramente.</p>
   </section>
 </div>
 <script>
@@ -2549,39 +2584,143 @@ document
   const form=document.getElementById("zovaroAiForm");
   const input=document.getElementById("zovaroAiInput");
   const close=document.getElementById("zovaroAiClose");
-  if(!backdrop||!form||!input||!close)return;
+  const chat=document.getElementById("zovaroAiChat");
+  const thinking=document.getElementById("zovaroAiThinking");
+  const suggestions=document.getElementById("zovaroAiSuggestions");
+  const searchNow=document.getElementById("zovaroAiSearchNow");
+  const reset=document.getElementById("zovaroAiReset");
+  if(!backdrop||!form||!input||!close||!chat)return;
+  let original="",kind="general",answers=[],step=0,idleTimer=null;
   const hide=()=>{backdrop.hidden=true;document.body.style.overflow="";};
   const show=()=>{backdrop.hidden=false;document.body.style.overflow="hidden";input.focus();};
+  const addMessage=(text,who="assistant")=>{const el=document.createElement("div");el.className="zovaro-ai-message "+who;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;};
+  const setSuggestions=(items)=>{suggestions.replaceChildren();items.forEach(label=>{const b=document.createElement("button");b.type="button";b.className="zovaro-ai-chip";b.textContent=label;b.addEventListener("click",()=>{input.value=label;form.requestSubmit();});suggestions.appendChild(b);});};
+  const detect=(q)=>{
+    if(/\b(lavor|job|impieg|macella|saldator|infermier|developer|remote work|remoto|assunzion)\b/.test(q))return "job";
+    if(/\b(casa|appartament|villa|immobil|affitt|vendita|rent|house|apartment|property)\b/.test(q))return "home";
+    if(/\b(hotel|albergo|resort|villaggio turist|crocier|cruise|vacanz|viaggio|volo|flight|charter)\b/.test(q))return "travel";
+    if(/\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery)\b/.test(q))return "food";
+    if(/\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|opera d'arte|arte|quadro|lusso|luxury|charter privat)\b/.test(q))return "luxury";
+    if(/\b(usato|usata|second hand|used|ricondizionat|refurbished)\b/.test(q))return "used";
+    if(/\b(prodotto|comprare|acquist|tostapane|telefono|computer|laptop|frigorifero|orologio|scarpe|vestito|oggetto)\b/.test(q))return "product";
+    return "general";
+  };
+  const flows={
+    job:[
+      ["Che professione o mansione cerchi esattamente? (Per esempio: macellaio, cuoco, tecnico, programmatore) ",["Macellaio","Cuoco","Tecnico","Assistenza clienti"]],
+      ["In quale paese e città vorresti lavorare? Oppure cerchi esclusivamente un lavoro da remoto da casa?",["Solo da remoto","Italia","Spagna","Qualsiasi paese, da remoto"]],
+      ["Che tipo di contratto e quale retribuzione minima desideri?",["Tempo pieno e stipendio fisso","Part-time","Contratto a tempo indeterminato","Valuto diverse formule"]]
+    ],
+    home:[
+      ["Vuoi affittare o acquistare? E in quale città, zona o paese?",["In affitto","In vendita","In qualsiasi zona della città"]],
+      ["Qual è il budget massimo e in quale valuta? Se acquisto, indica anche la fascia di prezzo.",["Fino a 500 al mese","500–1.000 al mese","1.000–2.000 al mese","Da definire"]],
+      ["Quante camere o locali ti servono? Hai altre caratteristiche indispensabili?",["1 camera","2 camere","3 o più camere","Indifferente"]]
+    ],
+    travel:[
+      ["Qual è la destinazione e che tipo di soggiorno o viaggio desideri: hotel, resort, villaggio turistico o crociera?",["Hotel","Resort","Villaggio turistico","Crociera"]],
+      ["Quali sono le date di partenza e rientro? Se sei flessibile, indica il periodo.",["Date flessibili","Questo mese","Il prossimo mese","Devo ancora decidere"]],
+      ["Quante persone viaggiano e qual è il budget totale o per notte?",["1 persona","2 persone","Famiglia","Gruppo / più persone"]]
+    ],
+    food:[
+      ["Che cosa desideri ordinare e quale cucina preferisci?",["Pizza","Cucina italiana","Cibo locale","Spesa / supermercato"]],
+      ["Dove deve essere effettuata la consegna? Indica città e quartiere o CAP.",["Consegna al mio indirizzo","Centro città","Indicherò la zona"]],
+      ["Qual è il budget e ci sono allergie o preferenze alimentari da rispettare?",["Economico","Budget medio","Nessun limite preciso","Ho esigenze alimentari"]]
+    ],
+    luxury:[
+      ["Che cosa cerchi esattamente: acquisto, noleggio o charter? Specifica modello, marca o tipologia.",["Acquisto","Noleggio","Charter","Sto valutando"]],
+      ["In quale paese o destinazione deve trovarsi o essere disponibile?",["Europa","Stati Uniti","Medio Oriente","A livello internazionale"]],
+      ["Qual è il budget indicativo e quando ti serve?",["Meno di 10.000","10.000–100.000","100.000–1 milione","Oltre 1 milione / da definire"]]
+    ],
+    used:[
+      ["Quale oggetto cerchi e quali caratteristiche o modello deve avere?",["Telefono","Computer","Arredamento","Auto / moto"]],
+      ["Qual è il prezzo massimo e in quale paese o città lo cerchi?",["Prezzo più basso possibile","Indicherò il budget","Qualsiasi località con spedizione"]],
+      ["Accetti anche prodotti ricondizionati certificati? Quali condizioni minime?",["Solo ottime condizioni","Ricondizionato certificato","Anche da riparare"]]
+    ],
+    product:[
+      ["Quali caratteristiche, marca, modello o dimensioni deve avere? Più dettagli aggiungi, meglio possiamo filtrare.",["Marca precisa","Caratteristiche tecniche","Il miglior rapporto qualità/prezzo"]],
+      ["Qual è il prezzo massimo e in quale valuta?",["Meno di 50","50–200","200–1.000","Oltre 1.000 / da definire"]],
+      ["Lo vuoi nuovo o valuti anche usato e ricondizionato? In quale paese deve essere acquistabile?",["Solo nuovo","Anche usato","Anche ricondizionato","Qualsiasi condizione"]]
+    ],
+    general:[
+      ["Puoi specificare meglio la categoria, il tipo di servizio o l'oggetto che ti serve?",["Lavoro","Casa / immobile","Viaggio / hotel / crociera","Prodotto da comprare","Cibo a domicilio","Luxury"]],
+      ["Dove deve essere disponibile e qual è il tuo budget indicativo?",["Nella mia città","In un paese specifico","Ovunque / online","Devo ancora decidere"]]
+    ]
+  };
+  const idleHints={
+    job:"Ad esempio: macellaio a Milano, full-time con stipendio fisso; oppure assistenza clienti completamente da remoto.",
+    home:"Ad esempio: appartamento in affitto a Valencia, due camere, massimo 900 € al mese.",
+    travel:"Ad esempio: resort per due persone a Tenerife, una settimana a luglio, budget 1.500 €.",
+    food:"Ad esempio: pizza napoletana a domicilio nel centro di Cali, per due persone.",
+    luxury:"Ad esempio: charter di jet privato da Milano a Dubai, 6 passeggeri, date flessibili.",
+    product:"Ad esempio: tostapane a due fessure, acciaio inox, nuovo, massimo 40 €.",
+    used:"Ad esempio: iPhone 15 usato, batteria sopra il 90%, massimo 500 €.",
+    general:"Aggiungi marca o modello, località, prezzo, date, dimensioni o altre caratteristiche importanti."
+  };
+  const askNext=()=>{
+    const list=flows[kind]||flows.general;
+    if(step>=list.length){setSuggestions(["Cerca con questi dettagli"]);return;}
+    const [question,choices]=list[step];
+    window.setTimeout(()=>{thinking.hidden=true;addMessage(question);setSuggestions(choices);},450);
+  };
+  const finalQuery=()=>[original,...answers].filter(Boolean).join(" | ");
+  const launch=()=>{
+    const q=finalQuery();
+    hide();
+    if(kind==="job"){
+      if(typeof showView==="function")showView("lookingJobView");
+      const country=document.getElementById("jobCountryFilter"),city=document.getElementById("jobCityFilter"),workplace=document.getElementById("jobWorkplaceFilter");
+      const low=q.toLowerCase();
+      const remote=/remote|remoto|da casa|work from home/.test(low);
+      if(workplace&&remote)workplace.value="Remote";
+      const jobText=document.getElementById("jobLocationStatus");
+      if(jobText)jobText.textContent="Richiesta ZOVARO: "+q+" — seleziona il paese se non è stato riconosciuto automaticamente, poi avvia la ricerca.";
+      if(city){const match=q.match(/(?:a|in|near|vicino a)\s+([A-ZÀ-Ü][\wÀ-ÿ' -]{2,30})/);if(match)city.value=match[1].trim();}
+      if(country&&country.options.length===0)country.disabled=false;
+      return;
+    }
+    if(kind==="used"){
+      if(typeof showView==="function")showView("usedProductsView");
+      const field=document.getElementById("usedSearchInput"),f=document.getElementById("usedSearchForm");
+      if(field&&f){field.value=q;f.requestSubmit();}
+      return;
+    }
+    if(kind==="product"||kind==="general"){
+      if(typeof showView==="function")showView("buyProductsView");
+      const field=document.getElementById("searchInput"),f=document.getElementById("searchForm");
+      if(field&&f){field.value=q;f.requestSubmit();}
+      return;
+    }
+    const message=kind==="home"?"La ricerca immobiliare dedicata (affitti e vendite) non è ancora collegata al catalogo ZOVARO. La richiesta è stata preparata, ma non ti mostrerò annunci inventati.":"Questa categoria richiede ancora l'integrazione di fornitori e disponibilità verificati nel catalogo ZOVARO. La richiesta è completa, ma al momento non posso garantire risultati per questa categoria.";
+    alert(message+"\n\nRichiesta: "+q);
+  };
+  const start=(query)=>{
+    original=query;kind=detect(query.toLowerCase());answers=[];step=0;
+    chat.replaceChildren();addMessage(query,"user");
+    thinking.hidden=false;setSuggestions([]);
+    window.setTimeout(askNext,950);
+  };
+  const send=(value)=>{
+    const answer=String(value||input.value).trim();if(!answer)return;
+    input.value="";addMessage(answer,"user");answers.push(answer);step++;
+    thinking.hidden=false;setSuggestions([]);
+    if(step<(flows[kind]||flows.general).length)askNext();
+    else window.setTimeout(()=>{thinking.hidden=false;window.setTimeout(()=>{thinking.hidden=true;addMessage("Perfetto. Ho raccolto i dettagli principali. Puoi aggiungere altre informazioni oppure avviare la ricerca.");setSuggestions(["Cerca con questi dettagli"]);},900);},300);
+  };
   close.addEventListener("click",hide);
   backdrop.addEventListener("click",e=>{if(e.target===backdrop)hide();});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)hide();});
-  document.querySelectorAll("[data-ai-prompt]").forEach(button=>button.addEventListener("click",()=>{input.value=button.dataset.aiPrompt;input.focus();}));
-  form.addEventListener("submit",e=>{
-    e.preventDefault();
-    const query=input.value.trim();
-    if(!query)return;
-    const q=query.toLowerCase();
-    const isUsed=/\b(usato|usata|second hand|used|ricondizionato|refurbished)\b/.test(q);
-    const isJob=/\b(lavoro|job|impiego|assunzion|work|remote|remoto|stipendio|salary)\b/.test(q);
-    hide();
-    if(isJob){
-      const jobsLink=document.querySelector('[data-view="jobsView"],[data-target="jobsView"],a[href="#jobsView"]');
-      if(jobsLink){jobsLink.click();}
-      else{
-        const jobs=document.getElementById("jobsView")||document.getElementById("careerView");
-        if(jobs)jobs.scrollIntoView({behavior:"smooth",block:"start"});
-      }
-      const jobSearch=document.querySelector("#careerExplorerSearch input,#jobSearchInput,input[name='keyword']");
-      if(jobSearch){jobSearch.value=query;jobSearch.dispatchEvent(new Event("input",{bubbles:true}));}
-      return;
-    }
-    const targetForm=document.getElementById(isUsed?"usedSearchForm":"searchForm");
-    const targetInput=document.getElementById(isUsed?"usedSearchInput":"searchInput");
-    if(targetForm&&targetInput){targetInput.value=query;targetForm.dispatchEvent(new Event("submit",{bubbles:true,cancelable:true}));}
+  form.addEventListener("submit",e=>{e.preventDefault();if(!original)start(input.value.trim());else send(input.value);});
+  searchNow.addEventListener("click",()=>{if(!original){addMessage("Prima descrivimi cosa stai cercando.","assistant");return;}launch();});
+  reset.addEventListener("click",()=>{original="";kind="general";answers=[];step=0;chat.replaceChildren();addMessage("Nuova ricerca! Dimmi cosa ti serve e ti farò le domande giuste.");setSuggestions([]);input.value="";input.focus();});
+  input.addEventListener("input",()=>{
+    if(!original||!input.value.trim())return;
+    thinking.hidden=false;
+    if(idleTimer)window.clearTimeout(idleTimer);
+    idleTimer=window.setTimeout(()=>{thinking.hidden=true;addMessage(idleHints[kind]||idleHints.general);},1800);
   });
+  suggestions.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.textContent==="Cerca con questi dettagli"){launch();return;}send(b.textContent);});
   show();
 })();
 </script>
-
 </body>
 </html>
