@@ -1,0 +1,31 @@
+name: ZOVARO - Restart clean Buffer queues
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/restart-clean-buffer-queues.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zovaro-clean-buffer-restart
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Publish four videos to both clean Buffer queues
+        env:
+          BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
+        run: node scripts/publish-clean-buffer-queues.mjs
