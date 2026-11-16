@@ -9,6 +9,7 @@ on:
       - "scripts/publish-daily-buffer-videos.mjs"
       - "scripts/select-product.mjs"
       - "scripts/create-tiktok-video.mjs"
+      - "scripts/preflight-product-images.mjs"
   schedule:
     - cron: "0 11 * * *"
 
@@ -37,6 +38,7 @@ jobs:
       - name: Generate three SHOP videos
         run: |
           node scripts/select-product.mjs
+          node scripts/preflight-product-images.mjs
           node scripts/split-selected-products.mjs
           node scripts/create-promotion.mjs
           mkdir -p zovaro-shop-videos
