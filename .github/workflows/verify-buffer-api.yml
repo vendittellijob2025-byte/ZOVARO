@@ -1,0 +1,32 @@
+name: ZOVARO - Verify Buffer API
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - feature/buffer-api-verification
+    paths:
+      - '.github/workflows/verify-buffer-api.yml'
+      - 'scripts/verify-buffer-api.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-buffer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify Buffer API and connected channels
+        env:
+          BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
+        run: node scripts/verify-buffer-api.mjs
