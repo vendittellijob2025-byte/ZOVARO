@@ -12,7 +12,7 @@ const ids=[
  ["Instagram","LUXURY","6afadb710c2af02527d40df4",2],
  ["Instagram","INSERZIONISTI","6afadb710b49b20d0d078a69",3]
 ];
-async function gql(query,label){const r=await fetch("https://api.buffer.com",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+token},body:JSON.stringify({query}),signal:AbortSignal.timeout(60000)});const d=await r.json().catch(()=>({}));if(!r.ok||d.errors?.length)throw new Error(label+": "+JSON.stringify(d.errors||d));return d.data;}
+async function gql(query,label,variables){const r=await fetch("https://api.buffer.com",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+token},body:JSON.stringify({query,variables}),signal:AbortSignal.timeout(60000)});const d=await r.json().catch(()=>({}));if(!r.ok||d.errors?.length)throw new Error(label+": "+JSON.stringify(d.errors||d));return d.data;}
 const orgData=await gql("query { account { organizations { id } } }","organizations");
 const org=orgData?.account?.organizations?.[0];
 if(!org) throw new Error("No Buffer organization found.");
@@ -21,7 +21,23 @@ const tt=channelsData.channels.find(c=>c.service?.toLowerCase()==="tiktok"&&c.na
 const ig=channelsData.channels.find(c=>c.service?.toLowerCase()==="instagram"&&c.name==="zovaroworldwide");
 if(!tt||!ig) throw new Error("Expected ZOVARO TikTok and Instagram channels not found.");
 const channelIds=[tt.id,ig.id];
-const queryPosts='query { posts(first:100,input:{organizationId:"'+org.id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text channelId assets { source mimeType ... on VideoAsset { video { thumbnailOffset title } } } metadata { __typename ... on InstagramPostMetadata { type shouldShareToFeed } } } } }';
+const queryPosts=`
+query {
+  posts(first:100,input:{organizationId:"${org.id}",filter:{channelIds:${JSON.stringify(channelIds)}}}) {
+    edges {
+      node {
+        id
+        text
+        channelId
+        assets {
+          source
+          mimeType
+          ... on VideoAsset { video { thumbnailOffset title } }
+        }
+      }
+    }
+  }
+}`;
 const postsData=await gql(queryPosts,"read existing posts");
 const posts=postsData?.posts?.edges?.map(e=>e.node)||[];
 const results=[];
@@ -34,9 +50,10 @@ for(const [channel,label,id,index] of ids){
    return {video:{url:a.source,metadata:{thumbnailOffset:a.video?.thumbnailOffset??2000}}};
  });
  const dueAt=new Date(targetDate+"T"+slots[index]+":00-05:00").toISOString();
- const metadata=channel==="Instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
- const query="mutation { editPost(input:{id:"+JSON.stringify(id)+",text:"+JSON.stringify(post.text)+",assets:"+JSON.stringify(assets).replace(/"video":/g,"video:").replace(/"url":/g,"url:").replace(/"metadata":/g,"metadata:").replace(/"thumbnailOffset":/g,"thumbnailOffset:")+",mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+metadata+"}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
- const d=await gql(query,"reschedule "+channel+" "+label);
+ const input={id,text:post.text,assets,mode:"customScheduled",dueAt};
+ if(channel==="Instagram") input.metadata={instagram:{type:"reel",shouldShareToFeed:true}};
+ const mutation="mutation EditPost($input: EditPostInput!) { editPost(input:$input) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
+ const d=await gql(mutation,"reschedule "+channel+" "+label,{input});
  const result=d?.editPost;
  if(!result?.post?.id) throw new Error("Buffer did not confirm "+channel+" "+label+": "+JSON.stringify(result));
  console.log("RESCHEDULED",channel,label,result.post.id,result.post.dueAt);
