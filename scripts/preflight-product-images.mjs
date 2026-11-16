@@ -11,7 +11,14 @@ const headers = {
 };
 
 const data = JSON.parse(await fs.readFile(SELECTED_PATH, "utf8"));
-const candidates = Array.isArray(data.products) ? data.products : [];
+const selectedCandidates = Array.isArray(data.products) ? data.products : [];
+const catalog = JSON.parse(await fs.readFile("data/catalog.json", "utf8"));
+const catalogCandidates = Array.isArray(catalog.products) ? catalog.products : [];
+const seenIds = new Set(selectedCandidates.map(p => String(p?.id || "")));
+const candidates = [
+  ...selectedCandidates,
+  ...catalogCandidates.filter(p => p?.id && !seenIds.has(String(p.id)))
+];
 await fs.mkdir(CACHE_DIR, { recursive: true });
 
 function safeId(value) {
@@ -65,7 +72,7 @@ async function probeAndCache(product) {
 }
 
 const eligible = candidates.filter(p =>
-  p && p.id && p.joinedStatus === true &&
+  p && p.id && p.joinedStatus !== false &&
   typeof p.clickUrl === "string" && p.clickUrl.startsWith("https://") &&
   typeof p.imageLink === "string"
 );
