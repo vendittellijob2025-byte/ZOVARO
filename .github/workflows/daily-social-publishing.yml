@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/daily-social-publishing.yml"
       - "scripts/publish-daily-buffer-videos.mjs"
+      - "scripts/select-product.mjs"
   schedule:
     - cron: "0 11 * * *"
 
@@ -27,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
       - name: Install FFmpeg
         run: |
           sudo apt-get update
