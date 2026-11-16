@@ -2,7 +2,16 @@ import fs from "node:fs/promises";
 const token=process.env.GITHUB_TOKEN, bufferToken=process.env.BUFFER_API_TOKEN;
 const [owner,name]=(process.env.GITHUB_REPOSITORY||"").split("/");
 if(!token||!bufferToken||!owner||!name) throw new Error("Missing GitHub or Buffer publishing credentials.");
-const day=new Date().toISOString().slice(0,10).replaceAll("-","");
+function bogotaDate(offsetDays=0){
+  const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Bogota",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+  const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));
+  const d=new Date(Date.UTC(Number(p.year),Number(p.month)-1,Number(p.day)+offsetDays));
+  return d.toISOString().slice(0,10);
+}
+const day=bogotaDate().replaceAll("-","");
+const targetDate=bogotaDate(1);
+const slots=["08:00","12:00","17:00","21:00"];
+const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
 const tag="zovaro-social-"+day;
 const videos=[
 ["SHOP · Daily discoveries","data/tiktok-video.mp4","Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"],
@@ -20,6 +29,9 @@ const tt=channels.find(c=>c.service?.toLowerCase()==="tiktok"&&c.name==="zovaro_
 const ig=channels.find(c=>c.service?.toLowerCase()==="instagram"&&c.name==="zovaroworldwide");
 if(!tt||!ig)throw new Error("Expected ZOVARO TikTok and Instagram channels not found.");
 if(tt.isQueuePaused||ig.isQueuePaused)throw new Error("A ZOVARO Buffer queue is paused.");
+const channelIds=[tt.id,ig.id];
+const existingData=await gql('query { posts(first:100,input:{organizationId:"'+orgs[0].id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text dueAt channelId } } pageInfo { hasNextPage endCursor } } }',"existing scheduled posts");
+const existing=existingData?.posts?.edges?.map(e=>e.node)||[];
 let release=await gh("/repos/"+owner+"/"+name+"/releases/tags/"+tag).catch(()=>null);
 if(!release)release=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({tag_name:tag,name:"ZOVARO daily social videos "+day,body:"Daily generated ZOVARO social media videos. Public media links for Buffer."})});
 const media=[];
@@ -29,22 +41,25 @@ for(const channel of [tt,ig]){
   for(let i=0;i<videos.length;i++){
     const [label,,caption]=videos[i];
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
-    const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel}}":"";
-    const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue"+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
+    const dueAt=dueAtFor(slots[i]);
+    const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt);
+    if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
+    const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
+    const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
     try{
-      const d=await gql(query,"create post "+label+" "+channel.name);
+      const d=await gql(query,"schedule "+label+" "+channel.name);
       const result=d?.createPost;
       if(!result?.post?.id)throw new Error(result?.message||JSON.stringify(result));
-      console.log("QUEUED",channel.name,label,result.post.id);
-      results.push({channel:channel.name,label,status:"queued",id:result.post.id});
+      console.log("SCHEDULED",channel.name,label,result.post.id,result.post.dueAt);
+      results.push({channel:channel.name,label,status:"scheduled",id:result.post.id,dueAt:result.post.dueAt});
     }catch(error){
       failures++;
-      console.error("NOT QUEUED",channel.name,label,error.message);
-      results.push({channel:channel.name,label,status:"not_queued",error:error.message});
+      console.error("NOT SCHEDULED",channel.name,label,error.message);
+      results.push({channel:channel.name,label,status:"not_scheduled",error:error.message});
     }
   }
 }
-console.log(JSON.stringify({date:day,release:release.html_url,results},null,2));
+console.log(JSON.stringify({localDate:day,targetDate,timezone:"America/Bogota",slots,release:release.html_url,results},null,2));
 if(failures)process.exitCode=1;
-const queued=results.filter(x=>x.status==="queued").length;
-console.log(JSON.stringify({date:day,release:release.html_url,channels:[tt.name,ig.name],queued,failed:failures,generatedNewVideos:3,reusedAdvertiserVideo:1},null,2));
+const scheduled=results.filter(x=>x.status==="scheduled"||x.status==="already_scheduled").length;
+console.log(JSON.stringify({targetDate,timezone:"America/Bogota",channels:[tt.name,ig.name],scheduled,failed:failures,generatedNewVideos:3,reusedAdvertiserVideo:1},null,2));
