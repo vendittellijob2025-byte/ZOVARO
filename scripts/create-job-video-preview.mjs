@@ -147,7 +147,7 @@ scenes.push(await renderScene("outro", 4, [
 ]));
 
 const concatFile = path.join(OUT_DIR, "concat.txt");
-await fs.writeFile(concatFile, scenes.map(file => `file '${path.relative(process.cwd(), file)}'`).join("\n"), "utf8");
+await fs.writeFile(concatFile, scenes.map(file => `file '${path.basename(file)}'`).join("\n"), "utf8");
 const silentVideo = path.join(OUT_DIR, "video-silent.mp4");
 await ffmpeg(["-y","-f","concat","-safe","0","-i",concatFile,"-c","copy",silentVideo]);
 await ffmpeg([
