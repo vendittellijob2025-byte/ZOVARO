@@ -9,7 +9,7 @@ const OUTPUT = process.argv[2] || "zovaro-social-videos";
 const WIDTH = 1080, HEIGHT = 1920, DURATION = 40, FPS = 30;
 const FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf";
 const MUSIC_DEFAULT = "assets/ZOVARO_AFFILIATE.MP3";
-const MUSIC_LUXURY = "assets/ZOVARO_LUXURY.MP3";
+const MUSIC_LUXURY = "assets/ZOVARO_LUXURY_PROMO_SOLOAUDIO.mp3";
 const LOGO = "assets/zovaro-logo.png";
 
 const jobs = JSON.parse(await fs.readFile("data/curated-jobs.json","utf8"));
@@ -142,14 +142,18 @@ results.push(await makeVideo({
   caption:"Explore construction, manufacturing, skilled trades and transport career paths on ZOVARO JOBS Worldwide. These are career guides; live vacancies are listed separately. https://zovaro.vercel.app/?view=jobs",
   hashtags:["#ZOVARO","#HospitalityJobs","#ConstructionJobs","#SkilledTrades"]
 }));
-results.push(await makeVideo({
-  name:"ZOVARO-LUXURY-DAILY",
-  background:"assets/Offerte Esclusive di Lusso Dorato.png",
-  music:MUSIC_LUXURY,
-  scenes:luxuryScenes,
-  caption:"Discover the world of luxury on ZOVARO — luxury cars, yachts, private aviation, villas, estates and watches. Explore the categories and curated opportunities. https://zovaro.vercel.app/",
-  hashtags:["#ZOVARO","#LuxuryLifestyle","#Yachts","#PrivateJets","#LuxuryCars"]
-}));
+if (await fs.access(MUSIC_LUXURY).then(()=>true).catch(()=>false)) {
+  results.push(await makeVideo({
+    name:"ZOVARO-LUXURY-DAILY",
+    background:"assets/Offerte Esclusive di Lusso Dorato.png",
+    music:MUSIC_LUXURY,
+    scenes:luxuryScenes,
+    caption:"Discover the world of luxury on ZOVARO — luxury cars, yachts, private aviation, villas, estates and watches. Explore the categories and curated opportunities. https://zovaro.vercel.app/",
+    hashtags:["#ZOVARO","#LuxuryLifestyle","#Yachts","#PrivateJets","#LuxuryCars"]
+  }));
+} else {
+  console.log("LUXURY video skipped: approved audio file is not yet present at "+MUSIC_LUXURY);
+}
 await fs.rm(temp,{recursive:true,force:true});
 await fs.writeFile(path.join(OUTPUT,"captions.json"),JSON.stringify({
   createdAt:new Date().toISOString(),
