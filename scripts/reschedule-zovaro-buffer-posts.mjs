@@ -21,7 +21,7 @@ const tt=channelsData.channels.find(c=>c.service?.toLowerCase()==="tiktok"&&c.na
 const ig=channelsData.channels.find(c=>c.service?.toLowerCase()==="instagram"&&c.name==="zovaroworldwide");
 if(!tt||!ig) throw new Error("Expected ZOVARO TikTok and Instagram channels not found.");
 const channelIds=[tt.id,ig.id];
-const queryPosts='query { posts(first:100,input:{organizationId:"'+org.id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text channelId assets { source mimeType ... on VideoAsset { video { thumbnailOffset title } } } metadata { __typename ... on InstagramPostMetadata { type shouldShareToFeed } } } pageInfo { hasNextPage endCursor } } }';
+const queryPosts='query { posts(first:100,input:{organizationId:"'+org.id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text channelId assets { source mimeType ... on VideoAsset { video { thumbnailOffset title } } } metadata { __typename ... on InstagramPostMetadata { type shouldShareToFeed } } } } }';
 const postsData=await gql(queryPosts,"read existing posts");
 const posts=postsData?.posts?.edges?.map(e=>e.node)||[];
 const results=[];
