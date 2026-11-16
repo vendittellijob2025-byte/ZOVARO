@@ -38,7 +38,11 @@ async function collectLatest(prefix, limit) {
       return null;
     }
   }));
-  return entries.filter(Boolean);
+  // CJ commissions are now stored as one batch per sync, not one Blob per
+  // commission. Flatten batches while continuing to read legacy single records.
+  return entries.filter(Boolean).flatMap(entry =>
+    Array.isArray(entry.records) ? entry.records : [entry]
+  );
 }
 
 export default async function handler(req, res) {
