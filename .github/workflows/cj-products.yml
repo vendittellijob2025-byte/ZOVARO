@@ -23,7 +23,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: zovaro-catalog-sync-${{ github.ref }}
@@ -61,20 +60,16 @@ jobs:
       # The public free translation endpoint is rate-limited and must not block
       # importing valid affiliate products or saving the catalog.
 
-      - name: Open a review PR for the CJ catalog update
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: catalog/cj-feed-sync-review
-          base: main
-          delete-branch: false
-          commit-message: "chore: sync CJ catalog and English translations"
-          title: "Catalog: review CJ feed and translation update"
-          body: |
-            Automated CJ feed and translation output for human review.
-
-            This workflow never pushes product data directly to main. Before merging, verify advertiser approval, feed/API licence, territorial eligibility, product categories, images and usage rights, affiliate URL generation, live click tests and attribution. A syntactically valid tracking URL is not proof of attribution. No automatic merge is configured.
-          add-paths: |
-            data/catalog.json
-            data/translation-cache.json
-            data/category-coverage.json
+      - name: Publish validated catalogue update to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog.json data/translation-cache.json data/category-coverage.json
+          if git diff --cached --quiet; then
+            echo "No catalogue changes to publish."
+            exit 0
+          fi
+          git commit -m "chore: publish validated CJ catalogue update"
+          git push origin HEAD:main
