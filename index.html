@@ -2638,127 +2638,73 @@ document
   const addMessage=(text,who="assistant")=>{const el=document.createElement("div");el.className="zovaro-ai-message "+who;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;};
   const setSuggestions=(items)=>{suggestions.replaceChildren();items.forEach(label=>{const b=document.createElement("button");b.type="button";b.className="zovaro-ai-chip";b.textContent=label;b.addEventListener("click",()=>{input.value=label;form.requestSubmit();});suggestions.appendChild(b);});};
   const detect=(q)=>{
-    // Intent-first detection, followed by a universal fallback for any product, service or specialist request.
-    if(/\b(cerco lavoro|cercare lavoro|lavorare|assunzion|job|impiego|macella|saldator|infermier|developer|remote work|remoto|da casa|work from home|stipendio)\b/.test(q))return "job";
-    if(/\b(casa|appartament|villa|immobil|affitt|vendita|rent|house|apartment|property|terreno|ufficio in affitto)\b/.test(q))return "home";
-    if(/\b(hotel|albergo|resort|villaggio turist|crocier|cruise|vacanz|viaggio|volo|flight|charter|campeggio|ostello|bungalow)\b/.test(q))return "travel";
-    if(/\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery|panetteria|macelleria|farmacia a domicilio)\b/.test(q))return "food";
-    if(/\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|opera d'arte|arte|quadro|lusso|luxury|charter privat|castello|isola privata)\b/.test(q))return "luxury";
-    if(/\b(usato|usata|second hand|used|ricondizionat|refurbished|di seconda mano)\b/.test(q))return "used";
-    if(/\b(prodotto|comprare|acquist|tostapane|telefono|computer|laptop|frigorifero|orologio|scarpe|vestito|oggetto|strumento|ricambio|accessorio|macchina|auto|moto|bicicletta|barca|strumento musicale|pianoforte|chitarra|animale|cane|gatto|servizio|riparazione|corso|assicurazione)\b/.test(q))return "product";
-    return "universal";
+    if(/\\b(job|work|lavor|impieg|assunzion|stipend|remote|remoto|da casa|work from home|macella|saldator|infermier|developer)\\b/.test(q))return "job";
+    if(/\\b(casa|appartament|villa|immobil|affitt|rent|house|apartment|property|terreno)\\b/.test(q))return "home";
+    if(/\\b(hotel|albergo|resort|crocier|cruise|vacanz|viaggio|volo|flight|charter|travel)\\b/.test(q))return "travel";
+    if(/\\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery)\\b/.test(q))return "food";
+    if(/\\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|lusso|luxury|castello|isola privata)\\b/.test(q))return "luxury";
+    if(/\\b(usato|usata|second hand|used|ricondizionat|refurbished|di seconda mano)\\b/.test(q))return "used";
+    return "product";
   };
-  const flows={
-    job:[
-      ["Che professione o mansione cerchi esattamente? Indica anche livello di esperienza e competenze.",["Macellaio","Cuoco","Tecnico","Assistenza clienti"]],
-      ["In quale paese, città o zona vorresti lavorare? Oppure cerchi esclusivamente un lavoro da remoto da casa?",["Solo da remoto","Italia","Spagna","Qualsiasi paese, da remoto"]],
-      ["Che contratto, orario e retribuzione minima desideri? Indica la valuta.",["Tempo pieno e stipendio fisso","Part-time","Tempo indeterminato","Valuto diverse formule"]]
-    ],
-    home:[
-      ["Vuoi affittare, acquistare o vendere? In quale paese, città e quartiere?",["In affitto","In vendita / acquistare","Voglio vendere","Qualsiasi zona"]],
-      ["Qual è il budget o prezzo richiesto? Specifica valuta e, per l'affitto, se mensile o annuale.",["Fino a 500 al mese","500–1.000 al mese","1.000–2.000 al mese","Da definire"]],
-      ["Quante camere o locali ti servono? Indica metratura, arredamento, servizi e caratteristiche indispensabili.",["1 camera","2 camere","3 o più camere","Indifferente"]]
-    ],
-    travel:[
-      ["Qual è la destinazione e che tipo di viaggio o soggiorno desideri: hotel, resort, villaggio turistico, crociera o altro?",["Hotel","Resort","Villaggio turistico","Crociera"]],
-      ["Quali sono le date di partenza e rientro? Indica anche la flessibilità.",["Date flessibili","Questo mese","Il prossimo mese","Devo ancora decidere"]],
-      ["Quante persone viaggiano, che sistemazione preferisci e qual è il budget totale o per notte?",["1 persona","2 persone","Famiglia","Gruppo / più persone"]]
-    ],
-    food:[
-      ["Che cosa desideri ordinare o ricevere? Specifica piatto, cucina, negozio o tipo di spesa.",["Pizza","Cucina italiana","Cibo locale","Spesa / supermercato"]],
-      ["Dove deve essere effettuata la consegna? Indica paese, città, quartiere o CAP.",["Consegna al mio indirizzo","Centro città","Indicherò la zona"]],
-      ["Qual è il budget e quando desideri la consegna? Hai allergie o preferenze alimentari da rispettare?",["Economico","Budget medio","Nessun limite preciso","Ho esigenze alimentari"]]
-    ],
-    luxury:[
-      ["Che cosa cerchi esattamente e vuoi acquistare, noleggiare o prenotare un charter? Specifica marca, modello o caratteristiche.",["Acquisto","Noleggio","Charter","Sto valutando"]],
-      ["In quale paese o destinazione deve trovarsi o essere disponibile? Serve consegna, trasferimento o servizio sul posto?",["Europa","Stati Uniti","Medio Oriente","A livello internazionale"]],
-      ["Qual è il budget indicativo, la valuta e quando ti serve?",["Meno di 10.000","10.000–100.000","100.000–1 milione","Oltre 1 milione / da definire"]]
-    ],
-    used:[
-      ["Quale articolo, marca, modello o versione cerchi? Descrivi caratteristiche e condizioni minime accettabili.",["Telefono","Computer","Arredamento","Auto / moto"]],
-      ["Qual è il prezzo massimo e in quale paese o città lo cerchi? Accetti la spedizione?",["Prezzo più basso possibile","Indicherò il budget","Solo vicino a me","Anche con spedizione"]],
-      ["Accetti prodotti ricondizionati certificati o articoli da riparare? Quali prove o garanzie richiedi?",["Solo ottime condizioni","Ricondizionato certificato","Anche da riparare"]]
-    ],
-    product:[
-      ["Descrivi esattamente l'articolo o servizio: marca, modello, misure, materiale, specifiche, quantità e uso previsto.",["Marca e modello precisi","Caratteristiche tecniche","Miglior rapporto qualità/prezzo"]],
-      ["Qual è il prezzo massimo, la valuta e la quantità? Dove deve essere acquistabile o consegnato?",["Meno di 50","50–200","200–1.000","Oltre 1.000 / da definire"]],
-      ["Lo vuoi nuovo, usato, ricondizionato, in affitto o a noleggio? Hai preferenze su venditore, garanzia o tempi?",["Solo nuovo","Anche usato","Anche ricondizionato","Valuto noleggio / affitto"]]
-    ],
-    universal:[
-      ["Che cosa stai cercando esattamente? Può essere qualsiasi oggetto, prodotto, professione, attività, servizio, esperienza o bene: descrivilo con parole tue.",["Un oggetto o prodotto","Un lavoro o professionista","Un servizio o un'attività","Un'esperienza o un viaggio"]],
-      ["Quali caratteristiche lo rendono adatto a te? Indica marca, modello, misure, materiali, competenze, quantità, prestazioni o requisiti, se pertinenti.",["Ho una marca o un modello preciso","Mi interessano le caratteristiche","Cerco una soluzione equivalente"]],
-      ["Dove deve essere disponibile: paese, città, quartiere, vicino a te oppure online/in tutto il mondo?",["Nella mia città","In un paese specifico","Online / internazionale","La località è indifferente"]],
-      ["Qual è il budget massimo o la retribuzione desiderata? Indica la valuta; se non hai un limite, scrivi 'flessibile'.",["Budget economico","Budget medio","Budget flessibile","Voglio il prezzo migliore"]],
-      ["Preferisci acquistare, affittare, noleggiare, prenotare o ricevere un servizio? Nuovo, usato o qualsiasi condizione?",["Acquisto","Affitto / noleggio","Prenotazione / servizio","Qualsiasi opzione adatta"]],
-      ["Quando ti serve e quali sono le 2–3 condizioni assolutamente indispensabili?",["Il prima possibile","Entro un mese","Date flessibili","Nessuna urgenza"]]
-    ]
-  };
-  const idleHints={
-    job:"Ad esempio: macellaio a Milano, full-time con stipendio fisso; oppure assistenza clienti completamente da remoto.",
-    home:"Ad esempio: appartamento in affitto a Valencia, due camere, massimo 900 € al mese.",
-    travel:"Ad esempio: resort per due persone a Tenerife, una settimana a luglio, budget 1.500 €.",
-    food:"Ad esempio: pizza napoletana a domicilio nel centro di Cali, per due persone.",
-    luxury:"Ad esempio: charter di jet privato da Milano a Dubai, 6 passeggeri, date flessibili.",
-    product:"Ad esempio: tostapane a due fessure, acciaio inox, nuovo, massimo 40 €.",
-    used:"Ad esempio: iPhone 15 usato, batteria sopra il 90%, massimo 500 €.",
-    universal:"Per qualunque richiesta, aggiungi dettagli tecnici o pratici, località, prezzo, quantità, tempi e requisiti indispensabili."
-  };
-  const askNext=()=>{
-    const list=flows[kind]||flows.universal;
-    if(step>=list.length){setSuggestions(["Cerca con questi dettagli"]);return;}
-    const [question,choices]=list[step];
-    window.setTimeout(()=>{thinking.hidden=true;addMessage(question);setSuggestions(choices);},450);
-  };
-  const finalQuery=()=>[original,...answers].filter(Boolean).join(" | ");
-  const launch=()=>{
-    const q=finalQuery();
+  const launch=(query, category)=>{
+    const q=String(query||"").trim();
     hide();
-    if(kind==="job"){
+    if(category==="job"){
       if(typeof showView==="function")showView("lookingJobView");
-      const country=document.getElementById("jobCountryFilter"),city=document.getElementById("jobCityFilter"),workplace=document.getElementById("jobWorkplaceFilter");
       const low=q.toLowerCase();
+      const country=document.getElementById("jobCountryFilter");
+      const city=document.getElementById("jobCityFilter");
+      const workplace=document.getElementById("jobWorkplaceFilter");
       const remote=/remote|remoto|da casa|work from home/.test(low);
       if(workplace&&remote)workplace.value="Remote";
-      const jobText=document.getElementById("jobLocationStatus");
-      if(jobText)jobText.textContent="Richiesta ZOVARO: "+q+" — seleziona il paese se non è stato riconosciuto automaticamente, poi avvia la ricerca.";
-      if(city){const match=q.match(/(?:a|in|near|vicino a)\s+([A-ZÀ-Ü][\wÀ-ÿ' -]{2,30})/);if(match)city.value=match[1].trim();}
-      if(country&&country.options.length===0)country.disabled=false;
+      if(city){
+        const match=q.match(/(?:\\ba\\s+|\\bin\\s+|\\bnear\\s+|\\bvicino a\\s+)([A-ZÀ-Ü][\\wÀ-ÿ' -]{2,30})/);
+        if(match){city.disabled=false;city.value=match[1].trim();}
+      }
+      const status=document.getElementById("jobLocationStatus");
+      if(status)status.textContent="Ricerca avviata per: "+q+". Risultati basati sulle offerte di lavoro verificate presenti su ZOVARO.";
+      const search=document.getElementById("jobLocationSearch");
+      if(search)search.click();
       return;
     }
-    if(kind==="used"){
+    if(category==="used"){
       if(typeof showView==="function")showView("usedProductsView");
-      const field=document.getElementById("usedSearchInput"),f=document.getElementById("usedSearchForm");
-      if(field&&f){field.value=q;f.requestSubmit();}
+      const field=document.getElementById("usedSearchInput"),form=document.getElementById("usedSearchForm");
+      if(field&&form){field.value=q;form.requestSubmit();}
       return;
     }
-    if(kind==="product"||kind==="general"){
+    if(category==="product"){
       if(typeof showView==="function")showView("buyProductsView");
-      const field=document.getElementById("searchInput"),f=document.getElementById("searchForm");
-      if(field&&f){field.value=q;f.requestSubmit();}
+      const field=document.getElementById("searchInput"),form=document.getElementById("searchForm");
+      if(field&&form){field.value=q;form.requestSubmit();}
       return;
     }
-    const message=kind==="home"?"La ricerca immobiliare dedicata (affitti e vendite) non è ancora collegata al catalogo ZOVARO. La richiesta è stata preparata, ma non ti mostrerò annunci inventati.":"Questa categoria richiede ancora l'integrazione di fornitori e disponibilità verificati nel catalogo ZOVARO. La richiesta è completa, ma al momento non posso garantire risultati per questa categoria.";
-    alert(message+"\n\nRichiesta: "+q);
+    const messages={
+      home:"La ricerca immobiliare non è ancora collegata a un archivio verificato di annunci. Non ti mostro risultati inventati.",
+      travel:"Le offerte di viaggio e soggiorno non sono ancora collegate a fornitori verificati. Non ti mostro risultati inventati.",
+      food:"I servizi di ristorazione e consegna non sono ancora collegati a partner verificati nella tua zona.",
+      luxury:"La ricerca Luxury richiede ancora l'integrazione di inventari e intermediari verificati."
+    };
+    addMessage(messages[category]||"Questa categoria non dispone ancora di una fonte di risultati verificati su ZOVARO.");
   };
   const start=(query)=>{
-    original=query;kind=detect(query.toLowerCase());answers=[];step=0;
-    chat.replaceChildren();addMessage(query,"user");
+    const q=String(query||"").trim();
+    if(!q)return;
+    original=q;kind=detect(q.toLowerCase());answers=[];step=0;
+    chat.replaceChildren();addMessage(q,"user");
     thinking.hidden=false;setSuggestions([]);
-    window.setTimeout(askNext,950);
-  };
-  const send=(value)=>{
-    const answer=String(value||input.value).trim();if(!answer)return;
-    input.value="";addMessage(answer,"user");answers.push(answer);step++;
-    thinking.hidden=false;setSuggestions([]);
-    if(step<(flows[kind]||flows.universal).length)askNext();
-    else window.setTimeout(()=>{thinking.hidden=false;window.setTimeout(()=>{thinking.hidden=true;addMessage("Perfetto. Ho raccolto i dettagli principali. Puoi aggiungere altre informazioni oppure avviare la ricerca.");setSuggestions(["Cerca con questi dettagli"]);},900);},300);
+    window.setTimeout(()=>{
+      thinking.hidden=true;
+      addMessage("Sto cercando direttamente nel catalogo ZOVARO…");
+      launch(q,kind);
+    },250);
   };
   close.addEventListener("click",hide);
   backdrop.addEventListener("click",e=>{if(e.target===backdrop)hide();});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)hide();});
-  form.addEventListener("submit",e=>{e.preventDefault();if(!original)start(input.value.trim());else send(input.value);});
-  searchNow.addEventListener("click",()=>{if(!original){addMessage("Prima descrivimi cosa stai cercando.","assistant");return;}launch();});
-  reset.addEventListener("click",()=>{original="";kind="universal";answers=[];step=0;chat.replaceChildren();addMessage("Nuova ricerca! Dimmi cosa ti serve e ti farò le domande giuste.");setSuggestions([]);input.value="";input.focus();});
+  form.addEventListener("submit",e=>{e.preventDefault();start(input.value.trim());});
+  searchNow.addEventListener("click",()=>{start(input.value.trim()||original);});
+  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Scrivi cosa stai cercando: avvierò subito la ricerca senza domande intermedie.");setSuggestions([]);input.value="";input.focus();});
   input.addEventListener("input",()=>{
     if(!original||!input.value.trim())return;
     thinking.hidden=false;
