@@ -26,10 +26,10 @@ const posts=[
  {label:"ADVERTISERS",url:base+"08-ZOVARO-ADVERTISERS-DAILY.mp4",text:"Promote your business worldwide on ZOVARO: US$9.99/month or US$99/year. Details: https://zovaro.vercel.app/ #ZOVARO #Advertise"}
 ];
 const results=[];
-for(const channel of [tt,ig]){
+for(const channel of [ig]){
  for(const p of posts){
   const caption=channel.service.toLowerCase()==="tiktok"?p.text.slice(0,150):p.text;
-  const meta=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel}}":"";
+  const meta=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
   const query="mutation { createPost(input:{text:"+JSON.stringify(caption)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue"+meta+",assets:[{video:{url:"+JSON.stringify(p.url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
   const data=await gql(query,"create "+p.label+" on "+channel.name);
   const post=data?.createPost;
