@@ -1,6 +1,6 @@
 // Optional conversational assistant. Disabled until the owner enables it in Vercel.
 const MAX_QUERY_LENGTH = 700;
-const clean = value => String(value ?? "").replace(/[\\u0000-\\u001f\\u007f]/g, " ").trim().slice(0, MAX_QUERY_LENGTH);
+const clean = value => String(value ?? "").replace(/[\x00-\x1F\x7F]/g, " ").trim().slice(0, MAX_QUERY_LENGTH);
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
