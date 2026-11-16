@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "30 7 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/daily-category-videos.yml"
+      - "scripts/create-category-videos.mjs"
 
 permissions:
   contents: read
