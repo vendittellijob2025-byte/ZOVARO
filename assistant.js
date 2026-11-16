@@ -18,6 +18,7 @@
   const send = document.getElementById("zovaroAiSend");
   const status = document.getElementById("zovaroAiStatus");
   let language = "en";
+  let selectedLanguage = false;
 
   const copy = {
     en: { title: "ZOVARO AI ASSISTANT", welcome: "Hello! I'm ZOVARO. What do you need? Tell me as precisely as you can and I'll search the available ZOVARO listings.", placeholder: "Tell me what you need…", send: "SEARCH", searching: "I'm searching the available ZOVARO listings…", empty: "I couldn't find matching products in the currently connected catalogue. Try describing the item differently.", jobs: "I've opened the real job listings available on ZOVARO. Use the location filters to narrow the results.", close: "Close assistant", choose: "Choose your language" },
@@ -52,6 +53,7 @@
 
   function chooseLanguage(code) {
     language = copy[code] ? code : "en";
+    selectedLanguage = true;
     const t = copy[language];
     languageScreen.hidden = true;
     chatScreen.hidden = false;
@@ -88,16 +90,40 @@
     return ranked.map(item => item.product);
   }
 
-  function runSearch(query) {
+  async function runSearch(query) {
     const t = copy[language];
     const q = query.trim();
     if (!q) return;
     addMessage(q, "user");
     status.textContent = t.searching;
-    hide();
+
+    let aiReply = "";
+    try {
+      const response = await fetch("/api/assistant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: q,
+          language,
+          catalogue: searchProducts(q).slice(0, 12).map(product => ({
+            name: product.name, category: product.category, subcategory: product.subcategory,
+            brand: product.brand, merchant: product.merchant, price: product.price,
+            currency: product.currency, description: product.description
+          }))
+        })
+      });
+      if (response.ok) {
+        const payload = await response.json();
+        if (payload.enabled && payload.reply) aiReply = payload.reply;
+      }
+    } catch (error) {
+      console.warn("ZOVARO AI service unavailable; using connected catalogue search.", error);
+    }
+    if (aiReply) addMessage(aiReply, "assistant");
 
     const isJob = /\b(job|jobs|work|career|employment|lavoro|lavorare|impiego|empleo|trabajo|trabajar|emploi|stellenangebot|vaga|trabalho|وظيفة|работа)\b/i.test(q);
     if (isJob) {
+      hide();
       if (typeof window.showView === "function") window.showView("lookingJobView");
       const jobStatus = document.getElementById("jobLocationStatus");
       if (jobStatus) jobStatus.textContent = t.jobs;
@@ -108,6 +134,7 @@
     }
 
     const results = searchProducts(q);
+    hide();
     if (typeof window.showView === "function") window.showView("buyProductsView");
     window.requestAnimationFrame(() => {
       if (typeof window.showResults === "function") {
@@ -130,6 +157,12 @@
     if (event.key === "Escape" && !backdrop.hidden) hide();
   });
   reopen.addEventListener("click", () => {
+    if (!selectedLanguage) {
+      languageScreen.hidden = false;
+      chatScreen.hidden = true;
+      show();
+      return;
+    }
     languageScreen.hidden = true;
     chatScreen.hidden = false;
     const t = copy[language];
