@@ -24,5 +24,25 @@ let release=await gh("/repos/"+owner+"/"+name+"/releases/tags/"+tag).catch(()=>n
 if(!release)release=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({tag_name:tag,name:"ZOVARO daily social videos "+day,body:"Daily generated ZOVARO social media videos. Public media links for Buffer."})});
 const media=[];
 for(let i=0;i<videos.length;i++){const [label,file,,existingUrl]=videos[i];if(existingUrl){media.push({label,url:existingUrl});continue;}const filename="daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();const bytes=await fs.readFile(file);const r=await fetch("https://uploads.github.com/repos/"+owner+"/"+name+"/releases/"+release.id+"/assets?name="+encodeURIComponent(filename),{method:"POST",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json","Content-Type":"video/mp4"},body:bytes,signal:AbortSignal.timeout(240000)});const asset=await r.json().catch(()=>({}));if(!r.ok)throw new Error("Release upload failed: "+JSON.stringify(asset));media.push({label,url:asset.browser_download_url});}
-for(const channel of [tt,ig]){for(let i=0;i<videos.length;i++){const [label,,caption]=videos[i];const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;const input={text,channelId:channel.id,schedulingType:"automatic",mode:"addToQueue",assets:[{video:{url:media[i].url,metadata:{thumbnailOffset:2000}}}]};const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue,assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";const d=await gql(query,"create post "+label+" "+channel.name);const p=d?.createPost;if(!p?.post?.id)throw new Error("Buffer rejected "+label+" on "+channel.name+": "+(p?.message||JSON.stringify(p)));console.log("QUEUED",channel.name,label,p.post.id);}}
+const results=[];let failures=0;
+for(const channel of [tt,ig]){
+  for(let i=0;i<videos.length;i++){
+    const [label,,caption]=videos[i];
+    const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
+    const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:addToQueue,assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
+    try{
+      const d=await gql(query,"create post "+label+" "+channel.name);
+      const result=d?.createPost;
+      if(!result?.post?.id)throw new Error(result?.message||JSON.stringify(result));
+      console.log("QUEUED",channel.name,label,result.post.id);
+      results.push({channel:channel.name,label,status:"queued",id:result.post.id});
+    }catch(error){
+      failures++;
+      console.error("NOT QUEUED",channel.name,label,error.message);
+      results.push({channel:channel.name,label,status:"not_queued",error:error.message});
+    }
+  }
+}
+console.log(JSON.stringify({date:day,release:release.html_url,results},null,2));
+if(failures)process.exitCode=1;
 console.log(JSON.stringify({date:day,release:release.html_url,channels:[tt.name,ig.name],postsCreated:media.length*2},null,2));
