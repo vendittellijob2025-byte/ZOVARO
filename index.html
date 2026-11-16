@@ -1151,6 +1151,9 @@ footer{
 /* ZOVARO AI discovery assistant */
 .zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:20px;background:rgba(2,8,22,.78);backdrop-filter:blur(12px)}
 .zovaro-ai-panel{position:relative;width:min(760px,100%);padding:clamp(22px,4vw,42px);border:1px solid rgba(71,190,255,.45);border-radius:28px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.22),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.55),0 0 45px rgba(35,173,255,.12);color:#f5f9ff;text-align:center}
+.zovaro-ai-flags{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;max-width:590px;margin:0 auto 22px}
+.zovaro-ai-flags span{display:inline-flex;align-items:center;justify-content:center;font-size:21px;line-height:1;width:29px;height:25px;border-radius:5px;background:rgba(255,255,255,.06);box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.zovaro-ai-chat[hidden]{display:none!important}
 .zovaro-ai-close{position:absolute;top:14px;right:16px;width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:24px;cursor:pointer}
 .zovaro-ai-kicker{color:#67dcff;font-size:11px;font-weight:900;letter-spacing:.2em}
 .zovaro-ai-face{position:relative;width:112px;height:112px;margin:12px auto 18px;border:2px solid #4bd5ff;border-radius:50%;background:linear-gradient(145deg,#e8f8ff,#80cfff 55%,#267ed0);box-shadow:0 0 32px rgba(53,194,255,.35);display:flex;align-items:center;justify-content:center;gap:17px}
@@ -2601,23 +2604,19 @@ document
 <div class="zovaro-ai-backdrop" id="zovaroAiBackdrop" role="dialog" aria-modal="true" aria-labelledby="zovaroAiTitle">
   <section class="zovaro-ai-panel">
     <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
-    <div class="zovaro-ai-kicker">ZOVARO AI DISCOVERY</div>
-    <div class="zovaro-ai-head">
-      <div class="zovaro-ai-face" aria-hidden="true"><span class="zovaro-ai-eye left"></span><span class="zovaro-ai-eye right"></span><span class="zovaro-ai-mouth"></span></div>
-      <div class="zovaro-ai-bubble" id="zovaroAiTitle">Dimmi cosa ti serve! ZOVARO ti aiuta a trovarlo.</div>
+    <div class="zovaro-ai-bubble" id="zovaroAiTitle">Write your language...</div>
+    <div class="zovaro-ai-flags" aria-label="Languages from around the world">
+      <span title="English">🇬🇧</span><span title="United States">🇺🇸</span><span title="Italy">🇮🇹</span><span title="Spain">🇪🇸</span><span title="France">🇫🇷</span><span title="Germany">🇩🇪</span><span title="Portugal">🇵🇹</span><span title="Brazil">🇧🇷</span><span title="Mexico">🇲🇽</span><span title="Colombia">🇨🇴</span><span title="Argentina">🇦🇷</span><span title="Japan">🇯🇵</span><span title="China">🇨🇳</span><span title="South Korea">🇰🇷</span><span title="India">🇮🇳</span><span title="Pakistan">🇵🇰</span><span title="Turkey">🇹🇷</span><span title="Saudi Arabia">🇸🇦</span><span title="United Arab Emirates">🇦🇪</span><span title="Egypt">🇪🇬</span><span title="Nigeria">🇳🇬</span><span title="South Africa">🇿🇦</span><span title="Russia">🇷🇺</span><span title="Ukraine">🇺🇦</span><span title="Poland">🇵🇱</span><span title="Netherlands">🇳🇱</span><span title="Sweden">🇸🇪</span><span title="Greece">🇬🇷</span><span title="Thailand">🇹🇭</span><span title="Indonesia">🇮🇩</span><span title="Vietnam">🇻🇳</span><span title="Australia">🇦🇺</span><span title="Canada">🇨🇦</span><span title="Switzerland">🇨🇭</span><span title="Ireland">🇮🇪</span><span title="Romania">🇷🇴</span><span title="Israel">🇮🇱</span><span title="Kenya">🇰🇪</span><span title="Morocco">🇲🇦</span><span title="Chile">🇨🇱</span><span title="Peru">🇵🇪</span><span title="New Zealand">🇳🇿</span>
     </div>
-    <p class="zovaro-ai-sub">Scrivi nella lingua che preferisci e descrivi direttamente ciò che cerchi. La ricerca parte subito.</p>
-    <div class="zovaro-ai-chat" id="zovaroAiChat" aria-live="polite">
-      <div class="zovaro-ai-message assistant">Ciao! In quale lingua preferisci scrivere? Puoi indicare italiano, español, English o un'altra lingua. ZOVARO cercherà di seguirti nella lingua che scegli. Se vuoi, puoi anche iniziare subito a descrivere ciò che cerchi: non devi rispondere a domande prima della ricerca.</div>
-    </div>
-    <div class="zovaro-ai-thinking" id="zovaroAiThinking" hidden>Sto pensando a quali dettagli possono aiutarti…</div>
-    <div class="zovaro-ai-suggestions" id="zovaroAiSuggestions" aria-label="Suggested answers"></div>
+    <div class="zovaro-ai-chat" id="zovaroAiChat" aria-live="polite" hidden></div>
+    <div class="zovaro-ai-thinking" id="zovaroAiThinking" hidden>Searching...</div>
+    <div class="zovaro-ai-suggestions" id="zovaroAiSuggestions" aria-label="Suggestions"></div>
     <form class="zovaro-ai-form" id="zovaroAiForm">
-      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Scrivi nella tua lingua cosa stai cercando..." aria-label="Describe what you are looking for" required>
-      <button class="zovaro-ai-submit" type="submit" id="zovaroAiSend">INVIA →</button>
+      <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Tell us what you are looking for..." aria-label="Describe what you are looking for in your language" required>
+      <button class="zovaro-ai-submit" type="submit" id="zovaroAiSend">SEARCH →</button>
     </form>
-    <div class="zovaro-ai-actions"><button type="button" class="zovaro-ai-search-now" id="zovaroAiSearchNow">Ho finito: cerca adesso</button><button type="button" class="zovaro-ai-reset" id="zovaroAiReset">Nuova ricerca</button></div>
-    <p class="zovaro-ai-note" id="zovaroAiNote">ZOVARO mostra soltanto risultati realmente presenti nelle fonti collegate. Se una categoria non è ancora integrata, te lo diremo chiaramente.</p>
+    <div class="zovaro-ai-actions"><button type="button" class="zovaro-ai-search-now" id="zovaroAiSearchNow">Search now</button><button type="button" class="zovaro-ai-reset" id="zovaroAiReset">New search</button></div>
+    <p class="zovaro-ai-note" id="zovaroAiNote">ZOVARO only displays results available from connected sources. If a category is not yet integrated, we will tell you clearly.</p>
   </section>
 </div>
 <script>
@@ -2662,7 +2661,7 @@ document
         if(match){city.disabled=false;city.value=match[1].trim();}
       }
       const status=document.getElementById("jobLocationStatus");
-      if(status)status.textContent="Ricerca avviata per: "+q+". Risultati basati sulle offerte di lavoro verificate presenti su ZOVARO.";
+      if(status)status.textContent="Search started for: "+q+". Results are based on verified job listings available on ZOVARO.";
       const search=document.getElementById("jobLocationSearch");
       if(search)search.click();
       return;
@@ -2680,12 +2679,12 @@ document
       return;
     }
     const messages={
-      home:"La ricerca immobiliare non è ancora collegata a un archivio verificato di annunci. Non ti mostro risultati inventati.",
-      travel:"Le offerte di viaggio e soggiorno non sono ancora collegate a fornitori verificati. Non ti mostro risultati inventati.",
-      food:"I servizi di ristorazione e consegna non sono ancora collegati a partner verificati nella tua zona.",
-      luxury:"La ricerca Luxury richiede ancora l'integrazione di inventari e intermediari verificati."
+      home:"Property search is not yet connected to a verified listings database. We will not show invented results.",
+      travel:"Travel and accommodation offers are not yet connected to verified providers. We will not show invented results.",
+      food:"Restaurant and food delivery services are not yet connected to verified partners in your area.",
+      luxury:"Luxury search still requires verified inventories and intermediary integrations."
     };
-    addMessage(messages[category]||"Questa categoria non dispone ancora di una fonte di risultati verificati su ZOVARO.");
+    addMessage(messages[category]||"This category does not yet have a verified results source on ZOVARO.");
   };
   const start=(query)=>{
     const q=String(query||"").trim();
@@ -2695,7 +2694,7 @@ document
     thinking.hidden=false;setSuggestions([]);
     window.setTimeout(()=>{
       thinking.hidden=true;
-      addMessage("Sto cercando direttamente nel catalogo ZOVARO…");
+      addMessage("Searching ZOVARO sources now...");
       launch(q,kind);
     },250);
   };
@@ -2704,7 +2703,7 @@ document
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)hide();});
   form.addEventListener("submit",e=>{e.preventDefault();start(input.value.trim());});
   searchNow.addEventListener("click",()=>{start(input.value.trim()||original);});
-  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Scrivi nella lingua che preferisci: avvierò subito la ricerca senza domande intermedie.");setSuggestions([]);input.value="";input.focus();});
+  reset.addEventListener("click",()=>{original="";kind="";answers=[];step=0;chat.replaceChildren();addMessage("Tell us what you are looking for. Search starts immediately, with no follow-up questions.");setSuggestions([]);input.value="";input.focus();});
 
   show();
 })();
