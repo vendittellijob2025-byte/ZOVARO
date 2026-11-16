@@ -72,7 +72,7 @@
   });
 
   function searchProducts(query) {
-    const all = Array.isArray(window.PRODUCTS) ? window.PRODUCTS : [];
+    const all = typeof PRODUCTS !== "undefined" && Array.isArray(PRODUCTS) ? PRODUCTS : [];
     const stop = new Set(["the","and","for","with","from","that","this","what","need","want","cerco","cerca","per","con","una","uno","che","del","della","delle","de","la","el","los","las","para","por","que","un","una","je","le","les","des","und","der","die","das","ein","eine"]);
     const tokens = query.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").match(/[a-z0-9]+/g) || [];
     const useful = [...new Set(tokens.filter(token => token.length > 2 && !stop.has(token)))];
