@@ -2,6 +2,12 @@ name: ZOVARO - Verify Buffer API
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/buffer-api-verification
+    paths:
+      - '.github/workflows/verify-buffer-api.yml'
+      - 'scripts/verify-buffer-api.mjs'
 
 permissions:
   contents: read
