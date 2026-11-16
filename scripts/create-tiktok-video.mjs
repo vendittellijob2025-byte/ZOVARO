@@ -572,11 +572,12 @@ for (
     `Downloading product image ${index + 1}`
   );
 
-  await downloadFile(
-    product.imageLink,
-    imagePath,
-    "assets/shop-visual.png"
-  );
+  if (product.preflightImagePath && await fileExists(product.preflightImagePath)) {
+    await fs.copyFile(product.preflightImagePath, imagePath);
+    console.log(`Using preflight-approved cached image for product ${index + 1}`);
+  } else {
+    throw new Error(`Product image did not pass preflight: ${name}. Video generation stopped before using an unverified image.`);
+  }
 
   // Normalize remote images to a clean, single-frame PNG before looping them.
   // This handles animated GIFs and malformed JPEG metadata consistently.
