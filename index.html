@@ -1307,6 +1307,35 @@ footer{
 
 
 .job-category-instruction{margin:8px 0 18px;padding:14px 18px;border:1px solid rgba(53,216,255,.35);border-radius:12px;background:linear-gradient(110deg,rgba(0,135,255,.12),rgba(4,18,38,.78));color:#dff5ff;font-size:14px;line-height:1.6;text-align:center;font-weight:600}
+
+/* ZOVARO AI language gate and homepage assistant */
+.zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:16px;background:rgba(2,8,22,.84);backdrop-filter:blur(12px)}
+.zovaro-ai-backdrop[hidden],.zovaro-ai-screen[hidden]{display:none!important}
+.zovaro-ai-panel{position:relative;width:min(760px,100%);max-height:92vh;overflow:auto;padding:clamp(22px,4vw,38px);border:1px solid rgba(71,190,255,.5);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.24),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.6),0 0 45px rgba(35,173,255,.16);color:#f5f9ff;text-align:center}
+.zovaro-ai-close{position:absolute;top:12px;right:13px;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
+.zovaro-ai-kicker{color:#67dcff;font-size:10px;font-weight:900;letter-spacing:.2em}
+.zovaro-ai-title{margin:12px 42px 10px;font:700 clamp(22px,4vw,30px)/1.1 "Space Grotesk",sans-serif}
+.zovaro-ai-intro{max-width:570px;margin:0 auto 22px;color:#b8cbe0;font-size:14px;line-height:1.6}
+.zovaro-ai-flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(76px,1fr));gap:9px;max-width:620px;margin:0 auto}
+.zovaro-ai-language{min-height:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid rgba(118,179,220,.28);border-radius:12px;background:rgba(255,255,255,.055);color:#e8f5ff;cursor:pointer}
+.zovaro-ai-language:hover,.zovaro-ai-language:focus-visible{border-color:#53d5ff;background:rgba(0,145,255,.16);outline:none}
+.zovaro-ai-language span{font-size:23px;line-height:1}
+.zovaro-ai-language small{font-size:10px;font-weight:700}
+.zovaro-ai-chatbox{display:flex;flex-direction:column;gap:12px;text-align:left}
+.zovaro-ai-welcome{padding:15px 17px;border:1px solid rgba(95,206,255,.38);border-radius:17px;background:rgba(13,43,72,.88);color:#fff;font-size:15px;line-height:1.55}
+.zovaro-ai-messages{display:flex;flex-direction:column;gap:8px;max-height:210px;overflow:auto}
+.zovaro-ai-message{max-width:90%;margin:0;padding:10px 13px;border-radius:14px;font-size:13px;line-height:1.5;white-space:pre-wrap}
+.zovaro-ai-message.assistant{align-self:flex-start;background:#173657;color:#eef8ff}
+.zovaro-ai-message.user{align-self:flex-end;background:#d5f3ff;color:#09213a}
+.zovaro-ai-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px}
+.zovaro-ai-input{min-width:0;min-height:52px;padding:13px 15px;border:1px solid rgba(111,187,235,.48);border-radius:12px;background:#071321;color:#fff;font:inherit;outline:none}
+.zovaro-ai-input:focus{border-color:#53d5ff;box-shadow:0 0 0 3px rgba(53,194,255,.13)}
+.zovaro-ai-submit{min-height:52px;padding:0 20px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zovaro-ai-status{min-height:18px;margin:0;color:#82dfff;font-size:11px;line-height:1.5}
+.zovaro-ai-reopen{position:fixed;right:18px;bottom:18px;z-index:999;display:none;padding:12px 17px;border:1px solid rgba(71,190,255,.55);border-radius:999px;background:#0b2440;color:#eaf8ff;font-size:12px;font-weight:800;box-shadow:0 8px 30px rgba(0,0,0,.3);cursor:pointer}
+.zovaro-ai-reopen.visible{display:block}
+@media(max-width:560px){.zovaro-ai-panel{padding:24px 15px}.zovaro-ai-flags{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.zovaro-ai-language{min-height:62px}.zovaro-ai-form{grid-template-columns:1fr}.zovaro-ai-submit{width:100%}}
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 </head>
@@ -1443,169 +1472,7 @@ footer{
       </div>
     </a>
 
-    <section
-      class="main-card wish-card"
-      aria-labelledby="wishTitle"
-    >
-
-      <div class="wish-card-content">
-
-        <div class="wish-card-copy">
-
-          <span class="wish-kicker">
-            ZOVARO SMART REQUEST
-          </span>
-
-          <h2
-            class="wish-title"
-            id="wishTitle"
-          >
-            MAKE A WISH
-          </h2>
-
-          <p class="wish-description">
-            Tell ZOVARO exactly what you are looking for —
-            a product to buy, a job to find, a job to offer,
-            or something you want to sell.
-          </p>
-
-
-          <form
-            class="wish-form"
-            id="wishForm"
-          >
-
-            <input
-              class="wish-input"
-              id="wishInput"
-              type="text"
-              autocomplete="off"
-              maxlength="300"
-              placeholder="Example: I am looking for a remote customer support job, a padel racket, children's clothes, or I want to offer a baker job in Germany."
-            >
-
-            <button
-              class="wish-submit"
-              type="submit"
-            >
-              SEND WISH
-            </button>
-
-          </form>
-
-
-          <div class="wish-foot">
-
-            <svg
-              class="wish-lamp"
-              viewBox="0 0 64 64"
-              role="img"
-              aria-label="Wish lamp"
-            >
-
-              <defs>
-
-                <linearGradient
-                  id="wishLampGradient"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-
-                  <stop
-                    offset="0%"
-                    stop-color="#FFD86A"
-                  />
-
-                  <stop
-                    offset="48%"
-                    stop-color="#35D6FF"
-                  />
-
-                  <stop
-                    offset="100%"
-                    stop-color="#087CFF"
-                  />
-
-                </linearGradient>
-
-
-                <filter
-                  id="wishGlow"
-                  x="-50%"
-                  y="-50%"
-                  width="200%"
-                  height="200%"
-                >
-
-                  <feGaussianBlur
-                    stdDeviation="2"
-                    result="blur"
-                  />
-
-                  <feMerge>
-
-                    <feMergeNode
-                      in="blur"
-                    />
-
-                    <feMergeNode
-                      in="SourceGraphic"
-                    />
-
-                  </feMerge>
-
-                </filter>
-
-              </defs>
-
-
-              <path
-                d="M32 8c-10.6 0-19 8-19 18.1 0 7.2 3.9 11.7 8.1 15.5 2.3 2.1 3.6 4.2 3.8 6.8h14.2c.2-2.6 1.5-4.7 3.8-6.8C47.1 37.8 51 33.3 51 26.1 51 16 42.6 8 32 8Z"
-                fill="rgba(255,216,106,.12)"
-                stroke="url(#wishLampGradient)"
-                stroke-width="2.4"
-                filter="url(#wishGlow)"
-              />
-
-              <path
-                d="M27 48h10M28.5 53h7M31 58h2"
-                stroke="#FFD86A"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M20 4v5M44 4v5M8 20h6M50 20h6M14 9l4 4M50 9l-4 4"
-                stroke="#FFD86A"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              />
-
-            </svg>
-
-
-            <p class="wish-help">
-              One sentence is enough.
-              ZOVARO's smart matching system
-              will be connected next.
-            </p>
-
-          </div>
-
-
-          <p
-            class="wish-status"
-            id="wishStatus"
-            aria-live="polite"
-          ></p>
-
-        </div>
-
-      </div>
-
-    </section>
+    
 
   </div>
 
@@ -2903,5 +2770,48 @@ document
 </script>
 
 
+
+<div class="zovaro-ai-backdrop" id="zovaroAiBackdrop" role="dialog" aria-modal="true" aria-labelledby="zovaroAiTitle" hidden>
+  <section class="zovaro-ai-panel">
+    <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
+    <div id="zovaroAiLanguages" class="zovaro-ai-screen">
+      <div class="zovaro-ai-kicker">ZOVARO WORLDWIDE</div>
+      <h2 class="zovaro-ai-title" id="zovaroAiTitle">CHOOSE YOUR LANGUAGE</h2>
+      <p class="zovaro-ai-intro">Select your country's flag. ZOVARO's assistant will then ask what you need and search the connected listings.</p>
+      <div class="zovaro-ai-flags" aria-label="Choose interface language">
+        <button type="button" class="zovaro-ai-language" data-zv-language="en"><span>🇬🇧</span><small>English</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="en"><span>🇺🇸</span><small>English (US)</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="it"><span>🇮🇹</span><small>Italiano</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="es"><span>🇪🇸</span><small>Español</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="fr"><span>🇫🇷</span><small>Français</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="de"><span>🇩🇪</span><small>Deutsch</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="pt"><span>🇵🇹</span><small>Português</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="pt"><span>🇧🇷</span><small>Português (BR)</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="es"><span>🇨🇴</span><small>Español (CO)</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="es"><span>🇲🇽</span><small>Español (MX)</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="ar"><span>🇸🇦</span><small>العربية</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="hi"><span>🇮🇳</span><small>हिन्दी</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="zh"><span>🇨🇳</span><small>中文</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="ja"><span>🇯🇵</span><small>日本語</small></button>
+      </div>
+    </div>
+    <div id="zovaroAiChatScreen" class="zovaro-ai-screen" hidden>
+      <div class="zovaro-ai-kicker">ZOVARO WORLDWIDE · SMART DISCOVERY</div>
+      <h2 class="zovaro-ai-title" id="zovaroAiChatTitle">ZOVARO AI ASSISTANT</h2>
+      <div class="zovaro-ai-chatbox">
+        <div class="zovaro-ai-welcome" id="zovaroAiWelcome"></div>
+        <div class="zovaro-ai-messages" id="zovaroAiMessages" aria-live="polite"></div>
+        <form class="zovaro-ai-form" id="zovaroAiForm">
+          <input class="zovaro-ai-input" id="zovaroAiInput" type="text" maxlength="700" autocomplete="off" placeholder="Tell me what you need…" required>
+          <button class="zovaro-ai-submit" id="zovaroAiSend" type="submit">SEARCH</button>
+        </form>
+        <p class="zovaro-ai-status" id="zovaroAiStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</div>
+<button type="button" class="zovaro-ai-reopen" id="zovaroAiReopen">ASK ZOVARO AI</button>
+
+<script src="assistant.js"></script>
 </body>
 </html>
