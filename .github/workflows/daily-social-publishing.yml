@@ -8,6 +8,7 @@ on:
       - ".github/workflows/daily-social-publishing.yml"
       - "scripts/publish-daily-buffer-videos.mjs"
       - "scripts/select-product.mjs"
+      - "scripts/create-tiktok-video.mjs"
   schedule:
     - cron: "0 11 * * *"
 
