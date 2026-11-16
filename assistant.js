@@ -8,6 +8,7 @@
   const chatScreen = document.getElementById("zovaroAiChatScreen");
   const languageButtons = backdrop.querySelectorAll("[data-zv-language]");
   const title = document.getElementById("zovaroAiTitle");
+  const chatTitle = document.getElementById("zovaroAiChatTitle");
   const welcome = document.getElementById("zovaroAiWelcome");
   const input = document.getElementById("zovaroAiInput");
   const form = document.getElementById("zovaroAiForm");
@@ -54,7 +55,8 @@
     const t = copy[language];
     languageScreen.hidden = true;
     chatScreen.hidden = false;
-    title.textContent = t.title;
+    title.textContent = t.choose;
+    chatTitle.textContent = t.title;
     welcome.textContent = t.welcome;
     input.placeholder = t.placeholder;
     input.setAttribute("aria-label", t.placeholder);
@@ -131,7 +133,8 @@
     languageScreen.hidden = true;
     chatScreen.hidden = false;
     const t = copy[language];
-    title.textContent = t.title;
+    title.textContent = t.choose;
+    chatTitle.textContent = t.title;
     welcome.textContent = t.welcome;
     show();
     input.focus();
