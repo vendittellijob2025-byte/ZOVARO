@@ -65,17 +65,30 @@ function drawText(file, size, y, bold = false, color = "white") {
   return `drawtext=fontfile=${font}:textfile=${file}:fontcolor=${color}:fontsize=${size}:line_spacing=12:x=(w-text_w)/2:y=${y}:box=1:boxcolor=0x06142A@0.88:boxborderw=24`;
 }
 async function renderScene(index, duration, lines) {
+  const renderLines = [];
+  for (const line of lines) {
+    const parts = String(line.text).split("\\n");
+    for (let part = 0; part < parts.length; part++) {
+      renderLines.push({
+        ...line,
+        text: parts[part],
+        y: line.y + part * (line.size + 12)
+      });
+    }
+  }
   const files = [];
-  for (let i = 0; i < lines.length; i++) files.push(await textFile(`scene-${index}-${i}`, lines[i].text));
+  for (let i = 0; i < renderLines.length; i++) {
+    files.push(await textFile(`scene-${index}-${i}`, renderLines[i].text));
+  }
   const filters = [
     "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,drawbox=x=0:y=0:w=1080:h=1920:color=0x06142A@0.43:t=fill[bg]",
     "[1:v]scale=330:-1[logo]",
     "[bg][logo]overlay=(W-w)/2:85,drawbox=x=62:y=420:w=956:h=1320:color=0x06142A@0.68:t=fill:replace=0,drawbox=x=62:y=420:w=956:h=1320:color=0x38BDF8@0.95:t=5[v0]"
   ];
   let current = "v0";
-  for (let i = 0; i < lines.length; i++) {
+  for (let i = 0; i < renderLines.length; i++) {
     const next = `v${i+1}`;
-    filters.push(`[${current}]${drawText(files[i], lines[i].size, lines[i].y, !!lines[i].bold, lines[i].color || "white")}` + `[${next}]`);
+    filters.push(`[${current}]${drawText(files[i], renderLines[i].size, renderLines[i].y, !!renderLines[i].bold, renderLines[i].color || "white")}` + `[${next}]`);
     current = next;
   }
   filters.push(`[${current}]format=yuv420p[outv]`);
