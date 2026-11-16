@@ -62,7 +62,7 @@ async function textFile(name, value) {
 }
 function drawText(file, size, y, bold = false, color = "white") {
   const font = bold ? FONT_BOLD : FONT;
-  return `drawtext=fontfile=${font}:textfile=${file}:fontcolor=${color}:fontsize=${size}:line_spacing=12:x=(w-text_w)/2:y=${y}:box=1:boxcolor=0x06142A@0.88:boxborderw=24`;
+  return `drawtext=fontfile=${font}:textfile=${file}:fontcolor=${color}:fontsize=${size}:line_spacing=12:x=(w-text_w)/2:y=${y}`;
 }
 async function renderScene(index, duration, lines) {
   const renderLines = [];
@@ -146,9 +146,15 @@ scenes.push(await renderScene("intro", 4, [
 ]));
 for (let i = 0; i < selected.length; i++) {
   const job = selected[i];
-  const location = clean(job.location || job.country, "Località indicata nell'annuncio");
+  let location = clean(job.location || job.country, "Località indicata nell'annuncio");
+  if (job.company === "Kodalab") location = "Remote | Latin America (eligible countries not specified)";
+  if (job.company === "Puffy") location = "Remote | Worldwide via Employer of Record";
   const contract = clean(job.jobType, "Dettagli nella pagina aziendale");
-  const salary = job.salaryText ? "Retribuzione: " + clean(job.salaryText) : "Retribuzione non indicata - consulta la pagina ufficiale";
+  const salary = job.company === "Puffy"
+    ? "Up to USD 143,000/year (base + bonus)"
+    : job.salaryText
+      ? "Salary: " + clean(job.salaryText)
+      : "Salary not published by employer";
   const verified = `FONTE AZIENDALE CONTROLLATA: ${job.verifiedAt}`;
   scenes.push(await renderScene(`job-${i+1}`, 8, [
     { text: `ANNUNCIO ${i+1} / 4`, size: 28, y: 500, bold: true, color: "0x38BDF8" },
@@ -156,7 +162,7 @@ for (let i = 0; i < selected.length; i++) {
     { text: clean(job.company), size: 40, y: 900, bold: true, color: "0x38BDF8" },
     { text: wrap(location, 34), size: 32, y: 1030 },
     { text: wrap(contract, 34), size: 30, y: 1190 },
-    { text: wrap(salary, 43), size: 24, y: 1320 },
+    { text: wrap(salary, 43), size: 26, y: 1320 },
     { text: verified, size: 24, y: 1510, bold: true },
     { text: "CANDIDATURA SULLA PAGINA UFFICIALE", size: 25, y: 1605, bold: true, color: "0x38BDF8" }
   ]));
