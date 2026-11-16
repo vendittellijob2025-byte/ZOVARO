@@ -267,6 +267,7 @@ export default async function handler(req, res) {
     let savedCount = 0;
     let saleCount = 0;
     let leadCount = 0;
+    const batchRecords = [];
     let complete = false;
 
     while (!complete) {
@@ -289,10 +290,11 @@ export default async function handler(req, res) {
 
       for (const sourceRecord of records) {
         const record = normalizeRecord(sourceRecord);
-        await writeJsonBlob(
-          "cj-commissions/records/" + record.commission_id + ".json",
-          record
-        );
+        // Keep each commission record in memory for this bounded sync run,
+        // then persist the complete batch in one Blob write. This avoids one
+        // advanced storage operation per commission and allows safe re-fetch
+        // from the previous cursor if the batch write fails.
+        batchRecords.push(record);
         savedCount += 1;
         if (record.event_type === "cj_sale") saleCount += 1;
         if (record.event_type === "cj_lead") leadCount += 1;
@@ -312,6 +314,17 @@ export default async function handler(req, res) {
         if (nextCursor) latestCursor = nextCursor;
         complete = true;
       }
+    }
+
+    if (batchRecords.length) {
+      await writeJsonBlob(
+        "cj-commissions/records/batches/" + Date.now() + ".json",
+        {
+          schema: "zovaro.cj-commission-batch.v1",
+          created_at: new Date().toISOString(),
+          records: batchRecords
+        }
+      );
     }
 
     const state = {
