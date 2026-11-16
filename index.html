@@ -2638,12 +2638,12 @@ document
   const addMessage=(text,who="assistant")=>{const el=document.createElement("div");el.className="zovaro-ai-message "+who;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;};
   const setSuggestions=(items)=>{suggestions.replaceChildren();items.forEach(label=>{const b=document.createElement("button");b.type="button";b.className="zovaro-ai-chip";b.textContent=label;b.addEventListener("click",()=>{input.value=label;form.requestSubmit();});suggestions.appendChild(b);});};
   const detect=(q)=>{
-    if(/\\b(job|work|lavor|impieg|assunzion|stipend|remote|remoto|da casa|work from home|macella|saldator|infermier|developer)\\b/.test(q))return "job";
-    if(/\\b(casa|appartament|villa|immobil|affitt|rent|house|apartment|property|terreno)\\b/.test(q))return "home";
-    if(/\\b(hotel|albergo|resort|crocier|cruise|vacanz|viaggio|volo|flight|charter|travel)\\b/.test(q))return "travel";
-    if(/\\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery)\\b/.test(q))return "food";
-    if(/\\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|lusso|luxury|castello|isola privata)\\b/.test(q))return "luxury";
-    if(/\\b(usato|usata|second hand|used|ricondizionat|refurbished|di seconda mano)\\b/.test(q))return "used";
+    if(/\b(job|work|lavor|impieg|assunzion|stipend|remote|remoto|da casa|work from home|macella|saldator|infermier|developer)\b/.test(q))return "job";
+    if(/\b(casa|appartament|villa|immobil|affitt|rent|house|apartment|property|terreno)\b/.test(q))return "home";
+    if(/\b(hotel|albergo|resort|crocier|cruise|vacanz|viaggio|volo|flight|charter|travel)\b/.test(q))return "travel";
+    if(/\b(cibo|pasto|pizza|ristorant|spesa|supermercat|delivery|domicilio|food|grocery)\b/.test(q))return "food";
+    if(/\b(jet privat|elicotter|yacht|supercar|ferrari|lamborghini|rolex|patek|lusso|luxury|castello|isola privata)\b/.test(q))return "luxury";
+    if(/\b(usato|usata|second hand|used|ricondizionat|refurbished|di seconda mano)\b/.test(q))return "used";
     return "product";
   };
   const launch=(query, category)=>{
@@ -2658,7 +2658,7 @@ document
       const remote=/remote|remoto|da casa|work from home/.test(low);
       if(workplace&&remote)workplace.value="Remote";
       if(city){
-        const match=q.match(/(?:\\ba\\s+|\\bin\\s+|\\bnear\\s+|\\bvicino a\\s+)([A-ZÀ-Ü][\\wÀ-ÿ' -]{2,30})/);
+        const match=q.match(/(?:\ba\s+|\bin\s+|\bnear\s+|\bvicino a\s+)([A-ZÀ-Ü][\wÀ-ÿ' -]{2,30})/);
         if(match){city.disabled=false;city.value=match[1].trim();}
       }
       const status=document.getElementById("jobLocationStatus");
