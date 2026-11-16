@@ -75,7 +75,7 @@ Example body:
 
 Accepted statuses: `lead`, `contacted`, `appointment`, `visited`, `offer`, `closed_won`, `closed_lost`, `cancelled`.
 
-A valid signature authenticates the partner source; it does not independently prove the underlying sale. The endpoint currently appends each accepted event as a private Blob object. It does not yet enforce event-ID uniqueness or prevent duplicate business events.
+A valid signature authenticates the partner source; it does not independently prove the underlying sale. Accepted partner conversion updates are stored as private Blob objects; if storage is unavailable, the endpoint returns an error rather than falsely acknowledging durable storage. Outbound affiliate clicks are deliberately not written one-by-one to Blob: the endpoint emits a structured runtime log instead, preserving redirects and avoiding high-volume Blob operations. CJ/partner reporting remains the attribution source; ZOVARO's persistent click counter is paused until a quota-safe aggregated analytics store is configured.
 
 ## Protected admin dashboard
 
