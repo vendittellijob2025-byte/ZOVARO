@@ -1,5 +1,4 @@
 import crypto from "node:crypto";
-import { put } from "@vercel/blob";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
@@ -75,20 +74,14 @@ export default async function handler(req, res) {
     occurred_at: new Date().toISOString()
   };
 
-  try {
-    await put(
-      `lead-sales/events/clicks/${eventId}.json`,
-      JSON.stringify(event),
-      { access: "private", addRandomSuffix: false, contentType: "application/json" }
-    );
-  } catch (error) {
-    // Keep the affiliate journey working if ZOVARO's own event store is
-    // temporarily unavailable. The destination remains the validated
-    // affiliate tracking URL, so the partner can still attribute the sale.
-    // ZOVARO's internal click counter will miss this event until storage
-    // is restored; never block the user's outbound click because of logging.
-    console.error("ZOVARO click tracking storage unavailable; redirecting:", error);
-  }
+  // Do not create one Blob object for every outbound click. This high-volume
+  // write exhausted the Hobby advanced-operation allowance and is not needed
+  // for affiliate attribution: the validated destination is the partner's
+  // tracking URL, and the affiliate network records its own click report.
+  // Keep a structured runtime log for diagnostics without depending on storage.
+  // The ZOVARO private click counter is intentionally paused until a
+  // quota-safe aggregated analytics store is configured.
+  console.info("ZOVARO outbound affiliate click", JSON.stringify(event));
 
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Referrer-Policy", "no-referrer");
