@@ -30,8 +30,18 @@ async function probeDuration(file) {
   const { stdout } = await runFile("ffprobe", ["-v","error","-show_entries","format=duration","-of","default=noprint_wrappers=1:nokey=1",file]);
   return Number(stdout.trim());
 }
+function asciiText(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[’‘]/g, "'")
+    .replace(/[–—]/g, "-")
+    .replace(/[·•]/g, " | ")
+    .replace(/[^\x20-\x7E]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 function wrap(value, max = 29) {
-  const words = String(value || "").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+  const words = asciiText(value).split(" ").filter(Boolean);
   const lines = [];
   let line = "";
   for (const word of words) {
@@ -43,7 +53,7 @@ function wrap(value, max = 29) {
   return lines.join("\n");
 }
 function clean(value, fallback = "Informazioni nella pagina ufficiale") {
-  return String(value || fallback).replace(/[\r\n]+/g, " ").replace(/\s+/g, " ").trim();
+  return asciiText(value || fallback);
 }
 async function textFile(name, value) {
   const file = path.join(OUT_DIR, name + ".txt");
@@ -125,7 +135,7 @@ for (let i = 0; i < selected.length; i++) {
   const job = selected[i];
   const location = clean(job.location || job.country, "Località indicata nell'annuncio");
   const contract = clean(job.jobType, "Dettagli nella pagina aziendale");
-  const salary = job.salaryText ? clean(job.salaryText) : "Retribuzione: consulta l'annuncio ufficiale";
+  const salary = job.salaryText ? "Retribuzione: " + clean(job.salaryText) : "Retribuzione non indicata - consulta la pagina ufficiale";
   const verified = `FONTE AZIENDALE CONTROLLATA: ${job.verifiedAt}`;
   scenes.push(await renderScene(`job-${i+1}`, 8, [
     { text: `ANNUNCIO ${i+1} / 4`, size: 28, y: 500, bold: true, color: "0x38BDF8" },
@@ -133,7 +143,7 @@ for (let i = 0; i < selected.length; i++) {
     { text: clean(job.company), size: 40, y: 900, bold: true, color: "0x38BDF8" },
     { text: wrap(location, 34), size: 32, y: 1030 },
     { text: wrap(contract, 34), size: 30, y: 1190 },
-    { text: wrap(salary, 34), size: 27, y: 1320 },
+    { text: wrap(salary, 43), size: 24, y: 1320 },
     { text: verified, size: 24, y: 1510, bold: true },
     { text: "CANDIDATURA SULLA PAGINA UFFICIALE", size: 25, y: 1605, bold: true, color: "0x38BDF8" }
   ]));
