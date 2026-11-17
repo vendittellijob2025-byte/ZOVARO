@@ -48,7 +48,9 @@
     "EPN payout clarification 2026-11-14: current EPN programme update states monthly payment on or around the 22nd for the previous month; the current readable Network Agreement does not expose a numeric minimum threshold, so no USD 10 threshold is treated as confirmed. The same official update says PayPal payments incur a 2% transaction fee capped at USD 20/month; direct deposit/EFT is excluded from that PayPal fee. ZOVARO's EPN payout method and threshold remain unverified in the authenticated Partner Portal.",
     "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run.",
     "Daily audit 2026-11-16: four additional CJ advertiser welcome emails recorded as approved_on_network (The Fragrance Outlet, Perfumania.com, AdBlocker Ultimate, FRP Moto). Their advertiser IDs were not present in the welcome emails; tracking links, feed/API access, product imports, public visibility and end-to-end attribution remain unverified. Two new Food & Grocery outreach emails were sent to Epicure and Vignoli using business emails published on their official affiliate pages; neither is an approved or active ZOVARO partner pending reply and verification.",
-    "Daily audit 2026-11-16: Advance Auto Parts replied that its programme supports US customers/traffic only, uses last-click attribution, and pays through Impact's configured schedule; direct or weekly bank transfer is not available. Further review requires verified US audience metrics and an Impact publisher ID, neither currently available. A direct publisher enquiry was sent to Quicklly using the contact published on its Awin merchant profile; ZOVARO has not joined or paid for Awin."
+    "Daily audit 2026-11-16: Advance Auto Parts replied that its programme supports US customers/traffic only, uses last-click attribution, and pays through Impact's configured schedule; direct or weekly bank transfer is not available. Further review requires verified US audience metrics and an Impact publisher ID, neither currently available. A direct publisher enquiry was sent to Quicklly using the contact published on its Awin merchant profile; ZOVARO has not joined or paid for Awin.",
+    "Daily audit 2026-11-16: KeldCo replied with 10% commission, bi-weekly payout and AUD $200 threshold; it requests verified audience/traffic metrics. ZOVARO sent a factual reply, explicitly withholding unverified reach estimates and declining to promise paid traffic or sales. Luxury Hotels Group confirmed it does not offer tracked affiliate/referral commissions and proposed only a franchise route; that route is not pursued. Mii Cosmetics and SimpliSafe UK sent automated acknowledgements only; Todson routed the message to general support, not an affiliate team. iHerb's automated message confirms receipt only, not approval.",
+    "CJ Commission Reconciliation workflow run 43877498197 failed on 2026-11-16: the production endpoint /api/cj-commission-sync returned HTTP 500 on three attempts. No successful commission reconciliation is verified; investigate the endpoint/storage path before relying on commission totals."
   ],
   "prospects": [
     {
@@ -4434,7 +4436,7 @@
     {
       "id": "todson-affiliate",
       "name": "Todson",
-      "status": "contacted",
+      "status": "responded",
       "programType": "AvantLink affiliate programme",
       "category": "Sports; Cycling; Outdoor",
       "sourceUrl": "https://shop.todson.com/pages/affiliate",
@@ -4455,13 +4457,20 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Do not send partnership follow-ups to the general support inbox. Find an official business-development or affiliate contact before any further contact.",
+      "nextAction": "Do not submit a general support ticket or send repeated follow-ups. Find an official affiliate/business-development contact before any further outreach.",
       "emailDeliveryStatus": "auto_reply_support_redirect",
-      "response": "Automated support response routed the enquiry to a general support/vendor portal; not a partnership acceptance or affiliate response.",
+      "response": {
+        "receivedAt": "2026-11-14T22:48:46Z",
+        "contactName": "Todson Support Team",
+        "evidence": "Gmail thread 1a1dc41987a55577",
+        "type": "automated_support_redirect",
+        "summary": "Automated general-support response directs enquiries to a Zendesk ticket form; not an affiliate acceptance or publisher response."
+      },
       "lastEmailSentAt": "2026-11-14T22:47:22Z",
       "lastEmailSubject": "ZOVARO Worldwide — Todson affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3e73d5e4692",
-      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "responseCheckedAt": "2026-11-16"
     },
     {
       "id": "nuby-affiliate",
@@ -4591,7 +4600,7 @@
     {
       "id": "luxury-hotels-group",
       "name": "Luxury Hotels Group",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Direct referral / listing partnership enquiry",
       "category": "Luxury; Travel; Hotels; Property; Yachts; Private Jets",
       "sourceUrl": "https://luxuryhotels.group/contact-us",
@@ -4612,12 +4621,19 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights.",
+      "nextAction": "Close this prospect for affiliate/referral purposes. Do not pursue a franchise, purchase, territory or other binding commercial arrangement.",
       "lastEmailSentAt": "2026-11-14T22:47:40Z",
       "lastEmailSubject": "ZOVARO Worldwide — Luxury Hotels Group listing and referral partnership",
       "lastEmailThreadId": "1a1dc3eb90409b16",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "response": {
+        "receivedAt": "2026-11-16T12:23:36Z",
+        "email": "info@luxuryhotels.group",
+        "evidence": "Gmail thread 1a1dc3eb90409b16",
+        "summary": "Company explicitly states it does not offer the tracked referral or commission-based affiliate arrangement requested. It offered only a territorial franchise discussion.",
+        "decision": "Not eligible for ZOVARO affiliate/referral model; franchise route not pursued."
+      }
     },
     {
       "id": "cricut-affiliate",
@@ -5213,7 +5229,7 @@
     {
       "id": "keldco-affiliate",
       "name": "KeldCo",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Direct ambassador affiliate programme",
       "category": "Security & Safety; Smart Home",
       "sourceUrl": "https://keldco.com/pages/ambassador-affiliate-program",
@@ -5226,7 +5242,7 @@
       "territories": [
         "Australia; exact delivery countries to confirm"
       ],
-      "commission": "Public page states minimum 10%",
+      "commission": "10% standard commission on qualifying sales through a unique tracking link, confirmed by affiliate manager",
       "cookie": "Not stated",
       "integration": {
         "affiliateLink": "pending",
@@ -5234,12 +5250,40 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm platform publisher eligibility, countries, tracking, feed and payout terms.",
+      "nextAction": "Await KeldCo's programme guidelines and a response on countries, cookie, tracking, feed/API, image licence and payout method. No application, product import or publication until the missing traffic/territory requirements and programme terms are reviewed.",
       "lastEmailSentAt": "2026-11-14T22:50:15Z",
       "lastEmailSubject": "ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
       "lastEmailThreadId": "1a1dc4115693395f",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "payout": "Bi-weekly payout schedule; AUD $200 minimum threshold. Payment method not yet confirmed; weekly transfer not offered in the terms supplied.",
+      "terms": {
+        "restrictions": "Paid Google Ads and Microsoft Ads prohibited; bidding on KeldCo brand prohibited; paid Meta/TikTok social advertising permitted by partner, but ZOVARO has no paid-ad spend authorised."
+      },
+      "response": {
+        "receivedAt": "2026-11-16T11:35:06Z",
+        "contactName": "Kate",
+        "role": "KeldCo Collaboration & Affiliate Manager",
+        "email": "kate@keldco.com",
+        "evidence": "Gmail thread 1a1dc4115693395f",
+        "commission": "10% on qualifying sales via unique tracking link",
+        "payout": "Bi-weekly; AUD $200 threshold; payout method and currency conversion fees not confirmed",
+        "territories": "Not answered in reply; country eligibility still requires confirmation",
+        "requestedForReview": [
+          "Website URL",
+          "Main customer countries and audience demographics",
+          "Estimated monthly traffic or audience reach",
+          "Primary promotional and traffic sources",
+          "How products would be featured"
+        ],
+        "blocker": "ZOVARO does not yet have validated monthly traffic, customer-country share or demographic metrics; do not invent estimates."
+      },
+      "lastResponseAt": "2026-11-16T11:35:06Z",
+      "lastResponseThreadId": "1a1dc4115693395f",
+      "followUpSentAt": "2026-11-16",
+      "followUpThreadId": "1a1e6e0d07d1ba4f",
+      "followUpSubject": "Re: ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
+      "followUpSummary": "Sent factual reply with website, intermediary model and organic promotion plan; explicitly stated that monthly traffic and audience-country/demographic data are not yet verified, and no paid ads or sales volumes were promised. Requested cookie, attribution, territory, feed/API, image permissions and payout method confirmation."
     },
     {
       "id": "u-tec-ultraloq-affiliate",
@@ -5399,7 +5443,7 @@
     {
       "id": "simplisafe-uk-affiliate",
       "name": "SimpliSafe UK",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Awin affiliate programme",
       "category": "Security & Safety; Smart Home",
       "sourceUrl": "https://ui.awin.com/merchant-profile/27387",
@@ -5420,20 +5464,20 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await a substantive human response; do not mark as approved or import products until eligibility, territories, commission, tracking, feed and asset permissions are verified.",
+      "nextAction": "Wait for a substantive human response; do not treat the acknowledgement as network approval or catalogue activation.",
       "emailDeliveryStatus": "auto_acknowledged",
       "response": {
         "receivedAt": "2026-11-14T22:51:37Z",
         "contactName": "SimpliSafe Partnerships Team",
-        "status": "under_review",
-        "summary": "Partnerships team says the enquiry is being reviewed and they will contact ZOVARO if there is an opportunity; no approval or terms provided.",
         "evidence": "Gmail thread 1a1dc424d3703aac",
-        "type": "automated_acknowledgement"
+        "type": "automated_acknowledgement",
+        "summary": "Automated reply says the team is reviewing the enquiry and will contact ZOVARO if there is an opportunity; no approval or terms provided."
       },
       "lastEmailSentAt": "2026-11-14T22:51:34Z",
       "lastEmailSubject": "ZOVARO Worldwide — SimpliSafe UK affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc424d3703aac",
-      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "responseCheckedAt": "2026-11-16"
     },
     {
       "id": "bradford-exchange-affiliate",
@@ -5916,7 +5960,7 @@
     {
       "id": "mii-cosmetics-affiliate",
       "name": "Mii Cosmetics",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Direct affiliate programme",
       "category": "Beauty; Cosmetics; Makeup",
       "sourceUrl": "https://miicosmetics.com/press-influencers-affiliates/",
@@ -5937,20 +5981,20 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await a substantive human response; do not mark as approved or import products until eligibility, territories, commission, tracking, feed and asset permissions are verified.",
+      "nextAction": "Wait for a substantive human response; do not mark approved or import products.",
       "emailDeliveryStatus": "auto_acknowledged",
       "response": {
         "receivedAt": "2026-11-14T22:53:11Z",
         "contactName": "Mii Cosmetics Influencer Team",
-        "status": "automatic_acknowledgement",
-        "summary": "Automated acknowledgement says the enquiry was forwarded to the appropriate team; no approval or terms provided.",
-        "evidence": "Gmail thread 1a1dc43b64e978f0",
-        "type": "automated_acknowledgement"
+        "evidence": "Gmail thread 1a1dc43d042e560c",
+        "type": "automated_acknowledgement",
+        "summary": "Automated reply says the enquiry was forwarded to the appropriate team; no approval or commercial terms provided."
       },
       "lastEmailSentAt": "2026-11-14T22:53:07Z",
       "lastEmailSubject": "ZOVARO Worldwide — Mii Cosmetics affiliate partnership enquiry",
       "lastEmailThreadId": "1a1dc43b64e978f0",
-      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "responseCheckedAt": "2026-11-16"
     },
     {
       "id": "escentual-affiliate",
@@ -7363,6 +7407,43 @@
       "lastEmailThreadId": "1a1e6dea99bc2e53",
       "outreachSummary": "Personalized inquiry asking whether Quicklly offers a direct, no-fee publisher/referral route outside Awin and requesting territories, current terms, tracking, reporting, feed/API, asset permissions and payout details. No agreement or sales volume promised.",
       "nextAction": "Await reply. Do not activate or pay for Awin; no direct partnership, tracking link, feed access or ZOVARO catalogue listing is confirmed."
+    },
+    {
+      "id": "iherb-affiliate",
+      "name": "iHerb Affiliate Programme",
+      "status": "responded",
+      "programType": "Affiliate programmes via CJ, Impact, Partnerize and regional networks; publisher-specific access not verified",
+      "category": "Health & Wellness; Beauty; Personal Care; Grocery",
+      "sourceUrl": "https://www.iherb.com/info/affiliates",
+      "contact": {
+        "email": "affiliates@iherb.com",
+        "sourceUrl": "https://www.iherb.com/info/affiliates"
+      },
+      "territories": [
+        "International publisher eligibility and customer markets require confirmation"
+      ],
+      "commission": "Not confirmed for ZOVARO",
+      "cookie": "Not confirmed",
+      "integration": {
+        "affiliateLink": "not generated",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "not verified"
+      },
+      "contactedAt": "2026-11-16T03:29:39Z",
+      "emailMessageId": "1a1e2673fc698aa0",
+      "lastEmailSentAt": "2026-11-16T03:29:39Z",
+      "lastEmailSubject": "ZOVARO Worldwide — iHerb affiliate publisher application and product feed access",
+      "lastEmailThreadId": "1a1e2673fc698aa0",
+      "emailDeliveryStatus": "auto_acknowledged",
+      "response": {
+        "receivedAt": "2026-11-16T03:29:45Z",
+        "email": "affiliates@iherb.com",
+        "evidence": "Gmail thread 1a1e26758e9f7dfd",
+        "type": "automated_acknowledgement",
+        "summary": "Automated response confirms the email was received and points to iHerb's affiliate information and support channels; no human reply, approval or terms supplied."
+      },
+      "nextAction": "Wait for a substantive response and determine the appropriate affiliate network for ZOVARO; do not apply, import or publish until eligibility, tracking, feed and image permissions are confirmed."
     }
   ],
   "cjAudit": {
