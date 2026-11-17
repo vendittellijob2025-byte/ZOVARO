@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-17T03:22:30.824Z",
-  "selectedProductCount": 19319,
-  "inventoryProductCount": 191310,
-  "uniqueAdvertiserCount": 20,
+  "generatedAt": "2026-11-17T07:53:37.364Z",
+  "selectedProductCount": 19379,
+  "inventoryProductCount": 201564,
+  "uniqueAdvertiserCount": 24,
   "categories": [
     {
       "name": "Accessible & Adaptive Living",
@@ -18,15 +18,15 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1776
+      "productCount": 1819
     },
     {
       "name": "Babies",
-      "productCount": 714
+      "productCount": 725
     },
     {
       "name": "Beauty",
-      "productCount": 1853
+      "productCount": 1873
     },
     {
       "name": "Books & Media",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 324
+      "productCount": 323
     },
     {
       "name": "Energy, Solar & Electric Mobility",
@@ -46,11 +46,11 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1765
+      "productCount": 1763
     },
     {
       "name": "Food & Grocery",
-      "productCount": 248
+      "productCount": 249
     },
     {
       "name": "Food Delivery & Restaurant Orders",
@@ -62,15 +62,15 @@
     },
     {
       "name": "Garden",
-      "productCount": 1
+      "productCount": 2
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1152
+      "productCount": 1177
     },
     {
       "name": "Home & Living",
-      "productCount": 563
+      "productCount": 564
     },
     {
       "name": "Industrial & Scientific",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 46
+      "productCount": 49
     },
     {
       "name": "Pets",
@@ -94,11 +94,11 @@
     },
     {
       "name": "Refurbished, Pre-Owned & Outlet",
-      "productCount": 1
+      "productCount": 3
     },
     {
       "name": "Repair & Circular Economy",
-      "productCount": 1
+      "productCount": 3
     },
     {
       "name": "Security & Safety",
@@ -106,23 +106,23 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1687
+      "productCount": 1698
     },
     {
       "name": "Sports",
-      "productCount": 1802
+      "productCount": 1813
     },
     {
       "name": "Tools & DIY",
-      "productCount": 182
+      "productCount": 183
     },
     {
       "name": "Toys & Games",
-      "productCount": 291
+      "productCount": 293
     },
     {
       "name": "Travel",
-      "productCount": 145
+      "productCount": 146
     },
     {
       "name": "TVs & Home Cinema",
@@ -133,17 +133,17 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1833,
+  "otherProductCount": 1761,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1833
+      "count": 1761
     }
   ],
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19319,
-    "withImages": 19319,
-    "withPositivePrices": 19319
+    "withTrackedHttpsLinks": 19379,
+    "withImages": 19379,
+    "withPositivePrices": 19379
   },
   "sources": [
     {
