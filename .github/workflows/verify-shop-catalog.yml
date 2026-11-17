@@ -16,6 +16,7 @@ on:
       - "scripts/validate-product-category-rules.mjs"
       - "scripts/report-category-coverage.mjs"
       - "scripts/audit-category-quality.mjs"
+      - "scripts/test-product-category.mjs"
       - ".github/workflows/verify-shop-catalog.yml"
 
 permissions:
@@ -49,10 +50,13 @@ jobs:
           node --check scripts/validate-product-category-rules.mjs
           node --check scripts/report-category-coverage.mjs
           node --check scripts/audit-category-quality.mjs
+          node --check scripts/test-product-category.mjs
       - name: Reclassify existing products using primary product identity
         run: node scripts/reclassify-catalog-categories.mjs
       - name: Validate all 31 canonical category roots and collision examples
         run: node scripts/validate-product-category-rules.mjs
+      - name: Test product identity and category collision rules
+        run: node scripts/test-product-category.mjs
       - name: Audit category paths and product quality
         run: node scripts/audit-category-quality.mjs
       - name: Generate category coverage report
