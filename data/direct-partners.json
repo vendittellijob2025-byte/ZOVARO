@@ -50,7 +50,8 @@
     "Daily audit 2026-11-16: four additional CJ advertiser welcome emails recorded as approved_on_network (The Fragrance Outlet, Perfumania.com, AdBlocker Ultimate, FRP Moto). Their advertiser IDs were not present in the welcome emails; tracking links, feed/API access, product imports, public visibility and end-to-end attribution remain unverified. Two new Food & Grocery outreach emails were sent to Epicure and Vignoli using business emails published on their official affiliate pages; neither is an approved or active ZOVARO partner pending reply and verification.",
     "Daily audit 2026-11-16: Advance Auto Parts replied that its programme supports US customers/traffic only, uses last-click attribution, and pays through Impact's configured schedule; direct or weekly bank transfer is not available. Further review requires verified US audience metrics and an Impact publisher ID, neither currently available. A direct publisher enquiry was sent to Quicklly using the contact published on its Awin merchant profile; ZOVARO has not joined or paid for Awin.",
     "Daily audit 2026-11-16: KeldCo replied with 10% commission, bi-weekly payout and AUD $200 threshold; it requests verified audience/traffic metrics. ZOVARO sent a factual reply, explicitly withholding unverified reach estimates and declining to promise paid traffic or sales. Luxury Hotels Group confirmed it does not offer tracked affiliate/referral commissions and proposed only a franchise route; that route is not pursued. Mii Cosmetics and SimpliSafe UK sent automated acknowledgements only; Todson routed the message to general support, not an affiliate team. iHerb's automated message confirms receipt only, not approval.",
-    "CJ Commission Reconciliation workflow run 43877498197 failed on 2026-11-16: the production endpoint /api/cj-commission-sync returned HTTP 500 on three attempts. No successful commission reconciliation is verified; investigate the endpoint/storage path before relying on commission totals."
+    "CJ Commission Reconciliation workflow run 43877498197 failed on 2026-11-16: the production endpoint /api/cj-commission-sync returned HTTP 500 on three attempts. No successful commission reconciliation is verified; investigate the endpoint/storage path before relying on commission totals.",
+    "eBay EPN audit 2026-11-16: official EPN and eBay Developers documentation reviewed. No authenticated EPN account status, campaign ID, OAuth application or payout settings could be verified. Browse API integration remains blocked pending legitimate EPN membership, 10-digit campaign ID, secure OAuth credentials and any required Buy API approval. No direct seller agreements or eBay product imports were created."
   ],
   "prospects": [
     {
@@ -2977,14 +2978,14 @@
         "clickTested": false,
         "attributionTested": false
       },
-      "nextAction": "Prerequisites before any integration: authenticate to the official EPN portal and verify whether an accepted ZOVARO account already exists; confirm publisher eligibility and participating marketplace access; obtain the 10-digit campaign ID; create/verify an eBay Developers app and OAuth client credentials; confirm/obtain acceptance into the separate Buy API Program or other written API agreement; obtain EPN's prior written approval for any software application, developer/API-generated promotional content or other restricted promotional method; verify payout method, threshold and payment instructions in the authenticated portal. The current agreement requires EPN acceptance before promotion, prohibits promotional content on eBay's own listings/About Me/Store/message boards, and requires prior written approval for email/electronic communication promotion. EPN Data is confidential: no AI training/benchmarking and no exposure to foundation models/LLMs without EPN's prior written approval and a specific written contract. Do not send EPN transaction/portal data to ChatGPT or other LLMs. Do not publish, generate links, or test attribution until approvals and tracking are verified.",
-      "sourceChecked": "2026-11-14",
-      "accountStatus": "Not verified; no authenticated EPN portal access or connected eBay account found in the available connections.",
-      "campaignIdStatus": "Missing; EPN campaign ID not found.",
-      "developerAppStatus": "Not verified; no eBay Developers application or OAuth client credentials found in Vercel environment names.",
-      "apiProductionApproval": "Not obtained or verified; no Browse API request was made.",
-      "payoutSettingsStatus": "Not verified in authenticated EPN Partner Portal.",
-      "termsCheckedAt": "2026-11-14",
+      "nextAction": "Authenticate only through the official EPN portal and eBay Developers account. Verify existing ZOVARO account/application status, publisher eligibility and participating marketplaces; obtain the 10-digit campaign ID and create/verify the OAuth application through the secure dashboard; confirm any separate Buy API approval, current rate card, attribution and payout settings. Browse API requires a client-credentials OAuth token and the affiliateCampaignId in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. Do not generate or publish EPN links or run API tests until legitimate access and approvals are verified.",
+      "sourceChecked": "2026-11-16",
+      "accountStatus": "Not verified: no authenticated EPN Partner Portal session or connected eBay account access is available in this run; no conclusion that an account does not exist.",
+      "campaignIdStatus": "Missing from available records; official Browse API requires a 10-digit EPN campaign ID.",
+      "developerAppStatus": "Not verified: no eBay Developer application/OAuth client credentials or token available; no credentials requested or exposed.",
+      "apiProductionApproval": "Not verified: EPN membership is required for affiliate Buy API use; any separate Buy API/production approval must be confirmed in the developer account.",
+      "payoutSettingsStatus": "Not verified in authenticated EPN Partner Portal; do not assume shared payout settings with CJ, Impact or other networks.",
+      "termsCheckedAt": "2026-11-16",
       "officialMarkets": [
         "Australia",
         "Austria",
@@ -3004,7 +3005,8 @@
       "publicPayoutTerms": "Public EPN programme update states monthly payment on or around the 22nd for the previous month. The current Network Agreement does not state a numeric minimum threshold in its readable text; exact threshold, payment method and account-specific settings must be verified in the authenticated Partner Portal. The official programme update says PayPal payments incur a 2% transaction fee capped at USD 20 per month; it does not apply to direct deposit/EFT. Weekly payout is not offered in the public terms.",
       "publicAttributionTerms": "Buy It Now: qualifying affiliate click within 24 hours before purchase. Auctions: qualifying bid within 24 hours after click and win within 10 days, subject to Program Details. Last qualifying affiliate event generally receives credit; an advertiser's own last event can disqualify the affiliate. Browse API must receive affiliateCampaignId through X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl.",
       "payoutFrequency": "monthly (public programme update: on or around the 22nd for the prior month)",
-      "payoutThreshold": "not stated in current readable public Network Agreement; authenticated Partner Portal check required"
+      "payoutThreshold": "not stated in current readable public Network Agreement; authenticated Partner Portal check required",
+      "lastAuditNote": "2026-11-16 official documentation check: EPN Network Agreement current version published 2026-09-24; Browse API documentation confirms campaignId is a 10-digit value and OAuth client-credentials access is required. No authenticated account or API access was available; no API call or account-status claim made."
     },
     {
       "id": "ankerwork",
