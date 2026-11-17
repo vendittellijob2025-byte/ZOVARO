@@ -47,7 +47,8 @@
     "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run.",
     "EPN payout clarification 2026-11-14: current EPN programme update states monthly payment on or around the 22nd for the previous month; the current readable Network Agreement does not expose a numeric minimum threshold, so no USD 10 threshold is treated as confirmed. The same official update says PayPal payments incur a 2% transaction fee capped at USD 20/month; direct deposit/EFT is excluded from that PayPal fee. ZOVARO's EPN payout method and threshold remain unverified in the authenticated Partner Portal.",
     "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run.",
-    "Daily audit 2026-11-16: four additional CJ advertiser welcome emails recorded as approved_on_network (The Fragrance Outlet, Perfumania.com, AdBlocker Ultimate, FRP Moto). Their advertiser IDs were not present in the welcome emails; tracking links, feed/API access, product imports, public visibility and end-to-end attribution remain unverified. Two new Food & Grocery outreach emails were sent to Epicure and Vignoli using business emails published on their official affiliate pages; neither is an approved or active ZOVARO partner pending reply and verification."
+    "Daily audit 2026-11-16: four additional CJ advertiser welcome emails recorded as approved_on_network (The Fragrance Outlet, Perfumania.com, AdBlocker Ultimate, FRP Moto). Their advertiser IDs were not present in the welcome emails; tracking links, feed/API access, product imports, public visibility and end-to-end attribution remain unverified. Two new Food & Grocery outreach emails were sent to Epicure and Vignoli using business emails published on their official affiliate pages; neither is an approved or active ZOVARO partner pending reply and verification.",
+    "Daily audit 2026-11-16: Advance Auto Parts replied that its programme supports US customers/traffic only, uses last-click attribution, and pays through Impact's configured schedule; direct or weekly bank transfer is not available. Further review requires verified US audience metrics and an Impact publisher ID, neither currently available. A direct publisher enquiry was sent to Quicklly using the contact published on its Awin merchant profile; ZOVARO has not joined or paid for Awin."
   ],
   "prospects": [
     {
@@ -4285,7 +4286,7 @@
     {
       "id": "advance-auto-parts-affiliate",
       "name": "Advance Auto Parts",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Impact affiliate programme",
       "category": "Automotive; Auto Parts",
       "sourceUrl": "https://shop.advanceautoparts.com/o/affiliates",
@@ -4296,7 +4297,7 @@
       "contactedAt": "2026-11-14T22:47:13Z",
       "emailMessageId": "1a1dc3e514e0b8db",
       "territories": [
-        "US; retailer reports stores in 40 states"
+        "US customers and US traffic only, confirmed by affiliate manager on 2026-11-16"
       ],
       "commission": "Public page advertises up to 10%; verify actual qualifying rate",
       "cookie": "Public page describes a 30-day return window; attribution details to verify",
@@ -4306,12 +4307,36 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Impact acceptance, delivery area, catalog feed, click tracking and image rights.",
+      "nextAction": "Partner response received. Do not proceed with application or promise US reach until verified monthly traffic, US audience share and an Impact publisher ID are available. Weekly bank transfer is expressly unavailable; feed, deep links, creative rights and attribution testing remain unverified.",
       "lastEmailSentAt": "2026-11-14T22:47:13Z",
       "lastEmailSubject": "ZOVARO Worldwide — Advance Auto Parts affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3e514e0b8db",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "attribution": "Last click, confirmed by affiliate manager",
+      "payout": "Commissions paid through the Impact account payment schedule; direct or weekly bank transfer is not available and no exceptions are offered. Exact threshold/currency/fees not confirmed.",
+      "response": {
+        "receivedAt": "2026-11-16T14:42:12Z",
+        "contactName": "Danielle Hernandez",
+        "role": "Senior Affiliate Manager",
+        "email": "dhernandez@gen3marketing.com",
+        "evidence": "Gmail thread 1a1dc3e514e0b8db",
+        "territories": "US customers and US traffic only",
+        "attribution": "Last click",
+        "payout": "Impact account payment schedule; no direct or weekly bank transfer; no exceptions",
+        "requestedForReview": [
+          "Company overview and location",
+          "Website/platform example pages or screenshots",
+          "Traffic sources and promotional methods",
+          "Monthly traffic and share of US audience",
+          "Impact publisher ID, if already applied"
+        ],
+        "applicationStatus": "No Impact publisher ID or application submission verified",
+        "blocker": "ZOVARO does not yet have verified monthly traffic or US audience-share figures, and no Impact publisher ID was provided. Do not invent these metrics."
+      },
+      "lastResponseAt": "2026-11-16T14:42:12Z",
+      "lastResponseThreadId": "1a1dc3e514e0b8db",
+      "sourceChecked": "2026-11-16"
     },
     {
       "id": "every-foods-affiliate",
@@ -7300,6 +7325,44 @@
       "lastEmailThreadId": "1a1e6dd68e79d346",
       "outreachSummary": "Personalized initial proposal asking about territories, cookie/attribution, feed/API, creative rights, reporting and payout. Asked whether weekly bank transfer and a lower/no threshold could be considered; the public $100 threshold is not represented as changed or agreed.",
       "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed."
+    },
+    {
+      "id": "quicklly-direct-publisher-enquiry",
+      "name": "Quicklly",
+      "status": "contacted",
+      "programType": "Awin affiliate listing; ZOVARO has queried a direct publisher/referral route outside Awin",
+      "category": "Food & Grocery / Grocery Delivery / Restaurant Meals / Meal Kits",
+      "territories": [
+        "Awin listing describes delivery in selected US metro areas including Chicago, San Francisco/Bay Area, New Jersey and New York; current city coverage and international publisher eligibility require confirmation"
+      ],
+      "publicCommission": "10% per sale advertised on the Awin merchant listing; direct terms not confirmed",
+      "cookie": "90 days advertised on the Awin merchant listing",
+      "payout": "Automatic payouts advertised on the Awin listing; method, currency, threshold and schedule not specified",
+      "contact": {
+        "email": "partnership@quicklly.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/95889"
+      },
+      "integration": {
+        "affiliateLink": "not configured; no Awin access or direct tracking link",
+        "feedApi": "Awin listing says datafeed coming soon; actual access not available",
+        "tracking": "not generated",
+        "productsImported": 0,
+        "productsVisible": 0,
+        "clickTested": false,
+        "attributionTested": false,
+        "imagePermission": "not verified"
+      },
+      "sourceChecked": "2026-11-16",
+      "sourceEvidence": "Awin's official Quicklly merchant profile (ID 95889) lists 10% per sale, 90-day cookie, automatic payouts and a datafeed marked coming soon. It describes selected US metropolitan delivery markets and publishes partnership@quicklly.com for inquiries. Awin participation itself is not activated for ZOVARO.",
+      "contactedAt": "2026-11-16",
+      "contactEvidence": "Gmail sent thread 1a1e6dea99bc2e53",
+      "emailMessageId": "1a1e6dea99bc2e53",
+      "emailDeliveryStatus": "sent",
+      "lastEmailSentAt": "2026-11-16",
+      "lastEmailSubject": "ZOVARO Worldwide — direct food & grocery publisher partnership enquiry",
+      "lastEmailThreadId": "1a1e6dea99bc2e53",
+      "outreachSummary": "Personalized inquiry asking whether Quicklly offers a direct, no-fee publisher/referral route outside Awin and requesting territories, current terms, tracking, reporting, feed/API, asset permissions and payout details. No agreement or sales volume promised.",
+      "nextAction": "Await reply. Do not activate or pay for Awin; no direct partnership, tracking link, feed access or ZOVARO catalogue listing is confirmed."
     }
   ],
   "cjAudit": {
