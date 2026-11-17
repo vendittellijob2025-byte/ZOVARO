@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14T20:34:00-05:00",
+  "updatedAt": "2026-11-16T19:14:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -46,7 +46,8 @@
     "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed.",
     "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run.",
     "EPN payout clarification 2026-11-14: current EPN programme update states monthly payment on or around the 22nd for the previous month; the current readable Network Agreement does not expose a numeric minimum threshold, so no USD 10 threshold is treated as confirmed. The same official update says PayPal payments incur a 2% transaction fee capped at USD 20/month; direct deposit/EFT is excluded from that PayPal fee. ZOVARO's EPN payout method and threshold remain unverified in the authenticated Partner Portal.",
-    "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run."
+    "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run.",
+    "Daily audit 2026-11-16: four additional CJ advertiser welcome emails recorded as approved_on_network (The Fragrance Outlet, Perfumania.com, AdBlocker Ultimate, FRP Moto). Their advertiser IDs were not present in the welcome emails; tracking links, feed/API access, product imports, public visibility and end-to-end attribution remain unverified. Two new Food & Grocery outreach emails were sent to Epicure and Vignoli using business emails published on their official affiliate pages; neither is an approved or active ZOVARO partner pending reply and verification."
   ],
   "prospects": [
     {
@@ -7008,6 +7009,297 @@
       "sourceChecked": "2026-11-14",
       "sourceEvidence": "Wayfair's official Partner With Us page confirms an Affiliate Program, more than two million products across global home categories, specialty retail brands and dedicated in-house affiliate management. The page does not publish publisher territories, commission, cookie, payout, feed/API terms or a dedicated affiliate email. The listed deliverypartners@wayfair.com contact is for transportation partners, not affiliate publishers, and was not used.",
       "nextAction": "Find the official affiliate publisher application or an affiliate-specific contact through Wayfair's official programme channel; confirm publisher-country eligibility, commission, cookie, attribution, product feed/API, image licence, reporting and payout before applying or publishing."
+    },
+    {
+      "id": "fragrance-outlet-cj",
+      "name": "The Fragrance Outlet",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate fragrance retailer programme",
+      "category": "Beauty / Fragrances & Perfumes",
+      "territories": [
+        "Not stated in the CJ welcome email; publisher eligibility and customer shipping markets require confirmation"
+      ],
+      "publicCommission": "Not stated in the welcome email; verify in CJ programme terms",
+      "contact": {
+        "email": "hilda.rodriguez@fragranceoutlet.com",
+        "name": "Hilda Rodriguez",
+        "role": "Digital Marketing Manager",
+        "network": "CJ Affiliate"
+      },
+      "terms": {
+        "restrictions": "No prohibited trademark bidding; direct linking from paid search advertisements is not permitted."
+      },
+      "integration": {
+        "affiliateLink": "CJ link generation and live validation pending",
+        "inventoryFeed": "Advertiser says product feeds are available when available; ZOVARO feed access not verified",
+        "imagePermission": "Creative assets when available; exact reuse licence not verified",
+        "conversionReporting": "CJ reporting access not verified"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-16",
+        "emailSubject": "Welcome to the Fragrance Outlet Affiliate Program",
+        "threadId": "1a1e5169c5697fa9"
+      },
+      "advertiserId": null,
+      "technicalAudit": {
+        "network": {
+          "relationshipStatus": "approved_on_network by CJ welcome email",
+          "advertiserId": "not provided in welcome email",
+          "checkedAt": "2026-11-16"
+        },
+        "feed": {
+          "status": "not_verified",
+          "productsImported": 0
+        },
+        "tracking": {
+          "clickUrlValidation": "not_verified",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "storefrontEligible": false,
+          "visibilityNote": "No evidence of products imported or published for this new approval."
+        }
+      },
+      "nextAction": "Retrieve the advertiser ID and current programme terms in CJ; verify market eligibility, link generation, feed access, creative rights and attribution before importing or publishing."
+    },
+    {
+      "id": "perfumania-cj",
+      "name": "Perfumania.com",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate fragrance retailer programme",
+      "category": "Beauty / Fragrances & Perfumes",
+      "territories": [
+        "Not stated in the CJ welcome email; publisher eligibility and shipping markets require confirmation"
+      ],
+      "publicCommission": "4% per sale, as stated in the CJ welcome email",
+      "contact": {
+        "network": "CJ Affiliate"
+      },
+      "terms": {
+        "restrictions": "Do not bid on Perfumania trademarks or variants; publishers may not call themselves 'Official Site' in search campaigns."
+      },
+      "integration": {
+        "affiliateLink": "CJ link generation and live validation pending",
+        "inventoryFeed": "Not stated in the welcome email; access not verified",
+        "imagePermission": "Not stated; verify permitted advertiser assets",
+        "conversionReporting": "CJ reporting access not verified"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-16",
+        "emailSubject": "Welcome to Perfumania.com's Affiliate Program!",
+        "threadId": "1a1e4b193d4207ed"
+      },
+      "advertiserId": null,
+      "technicalAudit": {
+        "network": {
+          "relationshipStatus": "approved_on_network by CJ welcome email",
+          "advertiserId": "not provided in welcome email",
+          "checkedAt": "2026-11-16"
+        },
+        "feed": {
+          "status": "not_verified",
+          "productsImported": 0
+        },
+        "tracking": {
+          "clickUrlValidation": "not_verified",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "storefrontEligible": false,
+          "visibilityNote": "No evidence of products imported or published for this new approval."
+        }
+      },
+      "nextAction": "Retrieve the advertiser ID and current CJ terms; confirm cookie, territories, feed, creative rights, payout and tracking before any catalogue work."
+    },
+    {
+      "id": "adblocker-ultimate-cj",
+      "name": "AdBlocker Ultimate",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate software subscription programme",
+      "category": "Software / Privacy & Security Utilities",
+      "territories": [
+        "Not stated in the CJ welcome email; publisher and customer territories require confirmation"
+      ],
+      "publicCommission": "38%, as stated in the CJ welcome email",
+      "cookie": "30 days",
+      "contact": {
+        "email": "podpora+adblockultimate.net@vivnetworks.com",
+        "network": "CJ Affiliate"
+      },
+      "terms": {
+        "restrictions": "Brand SEM and direct PPC are not allowed; generic tech/editorial content promotion is permitted without advertiser branding in PPC ads."
+      },
+      "integration": {
+        "affiliateLink": "CJ link generation and live validation pending",
+        "inventoryFeed": "Not stated; no feed/API access verified",
+        "imagePermission": "Not stated; verify advertiser creative licence",
+        "conversionReporting": "CJ reporting access not verified"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-16",
+        "emailSubject": "Welcome to the affiliate account AdBlocker Ultimate!",
+        "threadId": "1a1e45f20d03a77d"
+      },
+      "advertiserId": null,
+      "technicalAudit": {
+        "network": {
+          "relationshipStatus": "approved_on_network by CJ welcome email",
+          "advertiserId": "not provided in welcome email",
+          "checkedAt": "2026-11-16"
+        },
+        "feed": {
+          "status": "not_verified",
+          "productsImported": 0
+        },
+        "tracking": {
+          "clickUrlValidation": "not_verified",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "storefrontEligible": false,
+          "visibilityNote": "No evidence of products imported or published for this new approval."
+        }
+      },
+      "nextAction": "Retrieve advertiser ID and CJ tracking links; verify customer territories, subscription terms, permitted creatives and attribution before promoting."
+    },
+    {
+      "id": "frp-moto-cj",
+      "name": "FRP Moto",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate powersports and mini-bike retailer programme",
+      "category": "Automotive / Motorcycles / Powersports",
+      "territories": [
+        "The welcome email describes a US-focused customer audience; formal publisher eligibility and shipping territories are not stated"
+      ],
+      "publicCommission": "6% per sale, as stated in the CJ welcome email",
+      "cookie": "45 days",
+      "contact": {
+        "email": "jingchen.guan@bentu.online",
+        "network": "CJ Affiliate"
+      },
+      "terms": {
+        "restrictions": "Use generic non-branded keywords only; no bidding on FRP/FRP Moto/product trademarks, domain names or variations."
+      },
+      "integration": {
+        "affiliateLink": "CJ link generation and live validation pending",
+        "inventoryFeed": "Not stated; no feed/API access verified",
+        "imagePermission": "Text links, banners, product information and images are advertised as available in CJ; ZOVARO account access and exact reuse scope not verified",
+        "conversionReporting": "CJ reporting access not verified"
+      },
+      "approvalEvidence": {
+        "date": "2026-11-16",
+        "emailSubject": "Welcome to the FRP Moto Affiliate Program",
+        "threadId": "1a1e348023be6f17"
+      },
+      "advertiserId": null,
+      "technicalAudit": {
+        "network": {
+          "relationshipStatus": "approved_on_network by CJ welcome email",
+          "advertiserId": "not provided in welcome email",
+          "checkedAt": "2026-11-16"
+        },
+        "feed": {
+          "status": "not_verified",
+          "productsImported": 0
+        },
+        "tracking": {
+          "clickUrlValidation": "not_verified",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "storefrontEligible": false,
+          "visibilityNote": "No evidence of products imported or published for this new approval."
+        }
+      },
+      "nextAction": "Retrieve advertiser ID and current CJ programme terms; confirm publisher/customer territory, deep links, feed/API, image permissions and attribution before catalogue publication."
+    },
+    {
+      "id": "epicure-food-affiliate",
+      "name": "Epicure Affiliates & Creators",
+      "status": "contacted",
+      "programType": "Direct brand affiliate programme",
+      "category": "Food & Grocery / Meal Kits / Food Products",
+      "territories": [
+        "Official storefront selector lists United States and Canada; publisher eligibility and customer delivery coverage require confirmation"
+      ],
+      "publicCommission": "15–20% per sale advertised on the official affiliate page; subject to confirmation",
+      "cookie": "Not stated on the official page",
+      "payout": "Not stated on the official page",
+      "contact": {
+        "email": "affiliates@epicure.com",
+        "sourceUrl": "https://epicure.com/en-us/pages/affiliates"
+      },
+      "integration": {
+        "affiliateLink": "not configured; application/onboarding pending",
+        "feedApi": "not stated or verified",
+        "tracking": "not generated",
+        "productsImported": 0,
+        "productsVisible": 0,
+        "clickTested": false,
+        "attributionTested": false,
+        "imagePermission": "not verified"
+      },
+      "sourceChecked": "2026-11-16",
+      "sourceEvidence": "Official Epicure Affiliates & Creators page confirms a free-to-join affiliate programme, a published 15–20% commission range, custom links and the public affiliate contact affiliates@epicure.com. Storefront selector shows United States and Canada; publisher eligibility and delivery coverage still require confirmation.",
+      "contactedAt": "2026-11-16",
+      "contactEvidence": "Gmail sent thread 1a1e6dd634eecc5c",
+      "emailMessageId": "1a1e6dd634eecc5c",
+      "emailDeliveryStatus": "sent",
+      "lastEmailSentAt": "2026-11-16",
+      "lastEmailSubject": "ZOVARO Worldwide — international food affiliate partnership enquiry",
+      "lastEmailThreadId": "1a1e6dd634eecc5c",
+      "outreachSummary": "Personalized initial proposal asking about international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative rights, reporting and payout. Weekly bank transfer/no threshold requested, not agreed; no sales volume promised.",
+      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed."
+    },
+    {
+      "id": "vignoli-food-affiliate",
+      "name": "Vignoli Foods Affiliate Program",
+      "status": "contacted",
+      "programType": "Direct brand affiliate programme",
+      "category": "Food & Grocery / Olive Oil / Vinegar / Specialty Foods",
+      "territories": [
+        "US business address shown on official page; publisher eligibility and customer shipping countries not stated"
+      ],
+      "publicCommission": "10% per sale advertised on the official page",
+      "cookie": "Not stated on the official page",
+      "payout": "Official page states payout when $100 has been earned; frequency and payment method not stated",
+      "contact": {
+        "email": "info@vignolifood.com",
+        "sourceUrl": "https://vignolifood.com/pages/vignoli-affiliate-program"
+      },
+      "integration": {
+        "affiliateLink": "not configured; application/onboarding pending",
+        "feedApi": "not stated or verified",
+        "tracking": "not generated",
+        "productsImported": 0,
+        "productsVisible": 0,
+        "clickTested": false,
+        "attributionTested": false,
+        "imagePermission": "Downloadable creative assets advertised; exact licence not verified"
+      },
+      "sourceChecked": "2026-11-16",
+      "sourceEvidence": "Official Vignoli Foods affiliate page advertises 10% commission, customized links/coupons, downloadable creative assets and a $100 earned-payout threshold; it publishes info@vignolifood.com as a contact. International publisher and shipping eligibility, cookie, feed/API and payout frequency are not stated.",
+      "contactedAt": "2026-11-16",
+      "contactEvidence": "Gmail sent thread 1a1e6dd68e79d346",
+      "emailMessageId": "1a1e6dd68e79d346",
+      "emailDeliveryStatus": "sent",
+      "lastEmailSentAt": "2026-11-16",
+      "lastEmailSubject": "ZOVARO Worldwide — Vignoli affiliate publisher partnership enquiry",
+      "lastEmailThreadId": "1a1e6dd68e79d346",
+      "outreachSummary": "Personalized initial proposal asking about territories, cookie/attribution, feed/API, creative rights, reporting and payout. Asked whether weekly bank transfer and a lower/no threshold could be considered; the public $100 threshold is not represented as changed or agreed.",
+      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed."
     }
   ],
   "cjAudit": {
