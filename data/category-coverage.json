@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T22:00:12.377Z",
+  "generatedAt": "2026-11-17T03:22:30.824Z",
   "selectedProductCount": 19319,
   "inventoryProductCount": 191310,
   "uniqueAdvertiserCount": 20,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 325
+      "productCount": 324
     },
     {
       "name": "Energy, Solar & Electric Mobility",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 293
+      "productCount": 294
     },
     {
       "name": "Office & Technology",
