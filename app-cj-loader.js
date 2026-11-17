@@ -93,10 +93,16 @@
           typeof product.clickUrl === "string" && product.clickUrl.trim().startsWith("https://");
       });
 
+      // Do not expose unclassified inventory in customer-facing search or category results.
+      // The source catalog retains these products for later reclassification; they are not deleted.
+      const unclassifiedCount = eligible.filter(product =>
+        String(product.englishCategory || product.category || "").trim().toLowerCase() === "other"
+      ).length;
+
       const affiliateProducts = eligible
         .map(normalizeProduct)
         .filter(product => {
-          if (!product.name || !product.category || !product.image || product.price === null) return false;
+          if (!product.name || !product.category || product.category.trim().toLowerCase() === "other" || !product.image || product.price === null) return false;
           try {
             return new URL(product.image).protocol === "https:";
           } catch {
@@ -107,7 +113,7 @@
       if (affiliateProducts.length) {
         PRODUCTS.splice(0, PRODUCTS.length, ...affiliateProducts);
         loaded = affiliateProducts.length;
-        setStatus(loaded.toLocaleString() + " verified affiliate products loaded.");
+        setStatus(loaded.toLocaleString() + " verified affiliate products loaded." + (unclassifiedCount ? " · " + unclassifiedCount.toLocaleString() + " unclassified items withheld pending review." : ""));
       } else {
         setStatus("Product feed loaded, but no items passed the affiliate, image and price checks. Categories remain available.");
         console.warn("ZOVARO CJ loader: catalog contained no eligible products.", {
