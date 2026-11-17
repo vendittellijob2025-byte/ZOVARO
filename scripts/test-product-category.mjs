@@ -31,7 +31,12 @@ const cases = [
   ["Leather Travel Suitcase", "Travel"],
   ["Baby Stroller", "Babies"],
   ["Baby Doll", "Toys & Games"],
-  ["Dog Toy", "Toys & Games"],
+  ["Dog Toy", "Pets"],
+  ["Dog Toy with Rope", "Pets"],
+  ["Cat Toy with Feather", "Pets"],
+  ["Puppy Chew Toy", "Pets"],
+  ["Dog Treats Chicken Recipe", "Pets"],
+  ["Cat Litter Clumping Formula", "Pets"],
   ["Travel Mug", "Home & Living"],
   ["Office Chair", "Home & Living"],
   ["Digital Camera Bag", "Electronics"],
@@ -268,12 +273,7 @@ const categoryTree = JSON.parse(await fs.readFile(new URL("../data/category-tree
 function treeHasPath(categoryName, path) {
   const root = categoryTree.categories.find(item => item.name === categoryName);
   if (!root) return false;
-  let nodes = root.children || [  ["Dog Toy with Rope", "Pets"],
-  ["Catnip Interactive Toy for Indoor Cats", "Pets"],
-  ["Puppy Chew Toy", "Pets"],
-  ["Dog Treats Chicken Recipe", "Pets"],
-  ["Cat Litter Clumping Formula", "Pets"],
-];
+  let nodes = root.children || [];
   for (const part of path.split(" > ")) {
     const node = nodes.find(item => (typeof item === "string" ? item : item.name) === part);
     if (!node) return false;
