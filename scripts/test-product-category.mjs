@@ -268,7 +268,12 @@ const categoryTree = JSON.parse(await fs.readFile(new URL("../data/category-tree
 function treeHasPath(categoryName, path) {
   const root = categoryTree.categories.find(item => item.name === categoryName);
   if (!root) return false;
-  let nodes = root.children || [];
+  let nodes = root.children || [  ["Dog Toy with Rope", "Pets"],
+  ["Catnip Interactive Toy for Indoor Cats", "Pets"],
+  ["Puppy Chew Toy", "Pets"],
+  ["Dog Treats Chicken Recipe", "Pets"],
+  ["Cat Litter Clumping Formula", "Pets"],
+];
   for (const part of path.split(" > ")) {
     const node = nodes.find(item => (typeof item === "string" ? item : item.name) === part);
     if (!node) return false;
