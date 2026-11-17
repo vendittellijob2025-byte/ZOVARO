@@ -461,7 +461,7 @@ function renderCategoryLevel(category, nodes, parentPath = "", level = 0) {
     </button>
     ${unclassified.length ? `
       <button type="button" class="category" data-tree-unclassified>
-        <strong>Other / More products</strong>
+        <strong>More products</strong>
         <span class="category-count">${unclassified.length} products</span>
       </button>` : ""}
     ${childrenHtml || '<p class="category-empty">No subcategories available yet.</p>'}
