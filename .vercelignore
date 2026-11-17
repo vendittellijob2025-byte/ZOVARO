@@ -5,3 +5,5 @@ data/promotion.json
 data/image-audit-report.json
 data/translation-cache.json
 data/partner-opportunities.json
+# Keep the disabled AI endpoint out of Hobby deployments (12-function limit); client-side catalog search remains available.
+api/assistant.js
