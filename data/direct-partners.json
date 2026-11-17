@@ -7324,7 +7324,7 @@
         "imagePermission": "not verified"
       },
       "sourceChecked": "2026-11-16",
-      "sourceEvidence": "Official Epicure Affiliates & Creators page confirms a free-to-join affiliate programme, a published 15–20% commission range, custom links and the public affiliate contact affiliates@epicure.com. Storefront selector shows United States and Canada; publisher eligibility and delivery coverage still require confirmation.",
+      "sourceEvidence": "Official Epicure Affiliates & Creators page confirms a free-to-join programme, 15–20% commission, public contact affiliates@epicure.com, and a USD 250 customer-sales requirement over 6 months to remain eligible. Store selector lists United States and Canada; publisher eligibility and customer delivery coverage still require confirmation.",
       "contactedAt": "2026-11-16",
       "contactEvidence": "Gmail sent thread 1a1e6dd634eecc5c",
       "emailMessageId": "1a1e6dd634eecc5c",
@@ -7333,7 +7333,8 @@
       "lastEmailSubject": "ZOVARO Worldwide — international food affiliate partnership enquiry",
       "lastEmailThreadId": "1a1e6dd634eecc5c",
       "outreachSummary": "Personalized initial proposal asking about international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative rights, reporting and payout. Weekly bank transfer/no threshold requested, not agreed; no sales volume promised.",
-      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed."
+      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed.",
+      "requirements": "Free to join; official page states affiliates must generate USD 250 in customer sales over a 6-month period to remain eligible for ongoing commissions and personal-order discount."
     },
     {
       "id": "vignoli-food-affiliate",
@@ -7362,7 +7363,7 @@
         "imagePermission": "Downloadable creative assets advertised; exact licence not verified"
       },
       "sourceChecked": "2026-11-16",
-      "sourceEvidence": "Official Vignoli Foods affiliate page advertises 10% commission, customized links/coupons, downloadable creative assets and a $100 earned-payout threshold; it publishes info@vignolifood.com as a contact. International publisher and shipping eligibility, cookie, feed/API and payout frequency are not stated.",
+      "sourceEvidence": "Official Vignoli Foods affiliate page advertises 10% commission, payout when USD 100 has been earned, customized coupons/links, downloadable creative assets and the public contact info@vignolifood.com. Publisher/customer territories, cookie, feed/API and payout frequency are not stated.",
       "contactedAt": "2026-11-16",
       "contactEvidence": "Gmail sent thread 1a1e6dd68e79d346",
       "emailMessageId": "1a1e6dd68e79d346",
@@ -7371,7 +7372,8 @@
       "lastEmailSubject": "ZOVARO Worldwide — Vignoli affiliate publisher partnership enquiry",
       "lastEmailThreadId": "1a1e6dd68e79d346",
       "outreachSummary": "Personalized initial proposal asking about territories, cookie/attribution, feed/API, creative rights, reporting and payout. Asked whether weekly bank transfer and a lower/no threshold could be considered; the public $100 threshold is not represented as changed or agreed.",
-      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed."
+      "nextAction": "Await reply; do not apply, import products or publish assets until eligibility, tracking, permissions and payout are confirmed.",
+      "requirements": "Official page provides customized coupons/links and downloadable creative assets; payout is stated to occur when USD 100 has been earned. No cookie duration, publisher territory or payout frequency is published."
     },
     {
       "id": "quicklly-direct-publisher-enquiry",
@@ -7380,9 +7382,9 @@
       "programType": "Awin affiliate listing; ZOVARO has queried a direct publisher/referral route outside Awin",
       "category": "Food & Grocery / Grocery Delivery / Restaurant Meals / Meal Kits",
       "territories": [
-        "Awin listing describes delivery in selected US metro areas including Chicago, San Francisco/Bay Area, New Jersey and New York; current city coverage and international publisher eligibility require confirmation"
+        "Awin profile describes grocery/restaurant delivery in Greater Chicago, San Francisco/Bay Area, New Jersey and New York; meal kits are delivered across the US; current city coverage and international publisher eligibility require confirmation"
       ],
-      "publicCommission": "10% per sale advertised on the Awin merchant listing; direct terms not confirmed",
+      "publicCommission": "10% per sale advertised on Awin merchant profile; AOV USD 65 shown; direct terms not confirmed",
       "cookie": "90 days advertised on the Awin merchant listing",
       "payout": "Automatic payouts advertised on the Awin listing; method, currency, threshold and schedule not specified",
       "contact": {
@@ -7400,7 +7402,7 @@
         "imagePermission": "not verified"
       },
       "sourceChecked": "2026-11-16",
-      "sourceEvidence": "Awin's official Quicklly merchant profile (ID 95889) lists 10% per sale, 90-day cookie, automatic payouts and a datafeed marked coming soon. It describes selected US metropolitan delivery markets and publishes partnership@quicklly.com for inquiries. Awin participation itself is not activated for ZOVARO.",
+      "sourceEvidence": "Awin's official Quicklly merchant profile (ID 95889) lists 10% commission, 90-day cookie, USD 65 average order value, automatic payouts and a datafeed marked coming soon. It describes grocery/restaurant delivery in Greater Chicago, San Francisco/Bay Area, New Jersey and New York, with meal kits delivered across the US, and publishes partnership@quicklly.com. Awin participation itself is not activated for ZOVARO.",
       "contactedAt": "2026-11-16",
       "contactEvidence": "Gmail sent thread 1a1e6dea99bc2e53",
       "emailMessageId": "1a1e6dea99bc2e53",
