@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-18T02:16:02.966Z",
-  "selectedProductCount": 19385,
-  "inventoryProductCount": 200762,
+  "generatedAt": "2026-11-18T07:23:12.404Z",
+  "selectedProductCount": 19391,
+  "inventoryProductCount": 201073,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "name": "Babies",
-      "productCount": 725
+      "productCount": 726
     },
     {
       "name": "Beauty",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 327
+      "productCount": 325
     },
     {
       "name": "Energy, Solar & Electric Mobility",
@@ -66,7 +66,7 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1178
+      "productCount": 1182
     },
     {
       "name": "Home & Living",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 46
+      "productCount": 48
     },
     {
       "name": "Pets",
@@ -106,7 +106,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1699
+      "productCount": 1700
     },
     {
       "name": "Sports",
@@ -122,7 +122,7 @@
     },
     {
       "name": "Travel",
-      "productCount": 146
+      "productCount": 145
     },
     {
       "name": "TVs & Home Cinema",
@@ -133,17 +133,17 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1756,
+  "otherProductCount": 1757,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1756
+      "count": 1757
     }
   ],
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19385,
-    "withImages": 19385,
-    "withPositivePrices": 19385
+    "withTrackedHttpsLinks": 19391,
+    "withImages": 19391,
+    "withPositivePrices": 19391
   },
   "sources": [
     {
