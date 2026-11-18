@@ -51,6 +51,18 @@ for (const product of catalog.products) {
     product.visualCategoryEvidence = { category: nextCategory, confidence: visualCheck.confidence, margin: visualCheck.margin, source: "CLIP zero-shot image classification", auditedAt: visualResults.get(key)?.auditedAt || null };
   }
   product.englishSubcategory = product.subcategory;
+  // Do not label a product Amazon-verified without a real browse-path/node match.
+  // Keep uncertain entries visible to the audit pipeline instead of guessing.
+  product.amazonBrowsePath = product.amazonBrowsePath || "";
+  product.amazonBrowseNodeId = product.amazonBrowseNodeId || "";
+  product.amazonReferenceStatus = product.amazonBrowseNodeId || product.amazonBrowsePath
+    ? "amazon_reference_recorded"
+    : "pending_amazon_reference";
+  product.classificationStatus = product.category === "Other" || product.subcategory === "Other"
+    ? "needs_classification"
+    : "provisional";
+  product.classificationBasis = product.classificationBasis ||
+    "Existing ZOVARO product classifier; Amazon browse-path verification still required";
 }
 await fs.writeFile(path, JSON.stringify(catalog), "utf8");
 console.log("Primary category audit completed for " + catalog.products.length + " catalog products.");
