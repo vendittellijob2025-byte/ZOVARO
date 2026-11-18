@@ -1403,6 +1403,7 @@ footer{
 .zv-eye-lid-right{left:54.3%;animation-delay:.04s}
 .zv-mouth-mask{position:absolute;z-index:2;left:44.8%;top:31.2%;width:14%;height:4.2%;border-radius:50%;background:#07182c;opacity:0;animation:zvRobotSerious 11s ease-in-out infinite;pointer-events:none}
 .zv-mouth-line{position:absolute;z-index:3;left:47.1%;top:33.1%;width:9.5%;height:1.1%;border-radius:50%;background:#b8eaff;opacity:0;animation:zvRobotSerious 11s ease-in-out infinite;pointer-events:none}
+@keyframes zvRobotBlink{0%,42%,50%,100%{opacity:0;transform:scaleY(.05)}46%{opacity:.98;transform:scaleY(1)}}
 @keyframes zvRobotTilt{0%,100%{rotate:0deg}24%{rotate:-1.3deg}50%{rotate:0deg}76%{rotate:1.1deg}}
 @keyframes zvRobotSerious{0%,54%,100%{opacity:0}62%,80%{opacity:.96}88%{opacity:0}}
 .zovaro-ai-request-form{margin-top:14px;padding-top:12px;border-top:1px solid rgba(91,210,255,.18)}
@@ -2862,7 +2863,7 @@ document
     <div id="zovaroAiLanguages" class="zovaro-ai-screen">
       <div class="zovaro-ai-robot-stage">
         <div class="zovaro-ai-avatar-wrap" aria-label="ZOVARO Worldwide 3D white and blue robot assistant">
-          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar-v2.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
+          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
           <span class="zv-eye-lid zv-eye-lid-left" aria-hidden="true"></span>
           <span class="zv-eye-lid zv-eye-lid-right" aria-hidden="true"></span>
           <span class="zv-mouth-mask" aria-hidden="true"></span>
@@ -2895,7 +2896,7 @@ document
     <div id="zovaroAiWelcomeScreen" class="zovaro-ai-screen" hidden>
       <div class="zovaro-ai-robot-stage">
         <div class="zovaro-ai-avatar-wrap" aria-label="ZOVARO Worldwide 3D white and blue robot assistant">
-          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar-v2.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
+          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
           <span class="zv-eye-lid zv-eye-lid-left" aria-hidden="true"></span>
           <span class="zv-eye-lid zv-eye-lid-right" aria-hidden="true"></span>
           <span class="zv-mouth-mask" aria-hidden="true"></span>
