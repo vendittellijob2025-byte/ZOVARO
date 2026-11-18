@@ -880,7 +880,7 @@ function scoreProductSearch(product, queryVariants) {
     product.englishSubcategory, product.merchant, product.advertiserName
   ];
   const primaryText = normalizeSearchText(primaryFields.join(" "));
-  const primaryWords = new Set(primaryText.split(/\\s+/));
+  const primaryWords = new Set(primaryText.split(/\s+/));
   const descriptionText = normalizeSearchText(product.description || product.englishDescription || "");
   let best = 0;
 
@@ -891,10 +891,10 @@ function scoreProductSearch(product, queryVariants) {
       best = Math.max(best, 120 + normalized.length);
       continue;
     }
-    const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
+    const queryWords = normalized.split(/\s+/).filter(word => word.length > 1);
     if (!queryWords.length) continue;
     const alternativesByWord = queryWords.map(word => [
-      word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)
+      word, ...(SEARCH_SYNONYMS[word] || "").split(/\s+/).filter(Boolean)
     ]);
     const matchedPrimary = alternativesByWord.filter(alternatives =>
       alternatives.some(alternative => primaryWords.has(alternative))
