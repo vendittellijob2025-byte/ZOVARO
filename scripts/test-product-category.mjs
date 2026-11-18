@@ -322,9 +322,11 @@ const subcategoryCases = [
   ["Sports", "Nike Court Tennis Shoes", "Tennis > Tennis Shoes"],
   ["Sports", "Adidas Men's Tennis Sneakers", "Tennis > Tennis Shoes"],
   ["Fashion", "Reebok Classic Leather Sneakers", "Shoes > Sneakers"],
-  ["Fashion", "Adidas Men's T-Shirt", "Clothing > T-Shirts & Tops"],
-  ["Fashion", "Nike Women's Running Leggings", "Clothing > Activewear"],
-  ["Fashion", "Men's Denim Jeans", "Men's Clothing"]
+  ["Fashion", "Cotton T-Shirt", "Clothing > T-Shirts & Tops"],
+  ["Fashion", "Nike Women's Running Leggings", "Women's Clothing"],
+  ["Fashion", "Men's Denim Jeans", "Men's Clothing"],
+  ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
+  ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"]
 ];
 const taxonomy = JSON.parse(fs.readFileSync("data/category-tree.json", "utf8"));
 const subcategoryFailures = [];
