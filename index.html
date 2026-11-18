@@ -1424,6 +1424,27 @@ footer{
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ea9eaba70f644bafa4aa331aa39eed1e"}'></script>
 <!-- End Cloudflare Web Analytics -->
+
+<style>
+/* Persistent navigation controls */
+.zovaro-home-button{
+  position:fixed;left:18px;bottom:18px;z-index:9997;
+  display:none;align-items:center;gap:9px;
+  padding:12px 17px;border:1px solid rgba(71,190,255,.62);
+  border-radius:999px;background:#0b2440;color:#eaf8ff;
+  font-size:12px;font-weight:800;letter-spacing:.02em;
+  box-shadow:0 8px 30px rgba(0,0,0,.3);cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.zovaro-home-button.visible{display:inline-flex}
+.zovaro-home-button:hover{background:#123b63;transform:translateY(-2px)}
+.zovaro-home-button .zovaro-home-icon{font-size:16px;line-height:1}
+@media(max-width:650px){
+  .zovaro-home-button{left:10px;bottom:12px;padding:11px 13px;font-size:11px}
+  .zovaro-ai-reopen{right:10px!important;bottom:12px!important;padding:11px 13px!important;font-size:11px!important}
+}
+</style>
+
 </head>
 
 
@@ -2917,7 +2938,8 @@ document
     </div>
   </section>
 </div>
-<button type="button" class="zovaro-ai-reopen" id="zovaroAiReopen">🌐 <span id="zovaroAiReopenLabel">Choose language</span></button>
+<button type="button" class="zovaro-ai-reopen" id="zovaroAiReopen">✨ <span id="zovaroAiReopenLabel">Need AI Search?</span></button>
+<button type="button" class="zovaro-home-button" id="zovaroHomeButton" aria-label="Home"><span class="zovaro-home-icon" aria-hidden="true">⌂</span><span id="zovaroHomeButtonLabel">Home</span></button>
 
 <script src="assistant.js"></script>
 
