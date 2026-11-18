@@ -774,58 +774,155 @@ function closeModal() {
    SEARCH
    ========================================================= */
 
-$("#searchForm").addEventListener(
-  "submit",
-  event => {
-
-    event.preventDefault();
-
-    const q =
-      $("#searchInput")
-        .value
-        .trim()
-        .toLowerCase();
-
-    if (!q) {
-
-      showResults(
-        PRODUCTS.filter(
-          p =>
-            p.type ===
-            "trending"
-        ),
-        "Popular Discoveries"
-      );
-
-      return;
-    }
-
-    const found =
-      PRODUCTS.filter(
-        p =>
-          `
-          ${p.name}
-          ${p.category}
-          ${p.merchant}
-          ${p.description}
-          `
-            .toLowerCase()
-            .includes(q)
-      );
-
-    showResults(
-      found,
-      "Search results",
-      `Showing ${
-        found.length
-      } match${
-        found.length === 1
-          ? ""
-          : "es"
-      } for “${esc(q)}”`
-    );
+async function translateSearchQuery(query) {
+  const language = (localStorage.getItem("zovaroWorldwideLanguage") || document.documentElement.lang || "en").toLowerCase();
+  if (!language || language === "en") return query;
+  try {
+    const url = new URL("https://api.mymemory.translated.net/get");
+    url.searchParams.set("q", query.slice(0, 500));
+    url.searchParams.set("langpair", language + "|en");
+    const response = await fetch(url.toString(), { headers: { "Accept": "application/json" }, signal: AbortSignal.timeout(4500) });
+    if (!response.ok) return query;
+    const data = await response.json();
+    const translated = String(data?.responseData?.translatedText || "").trim();
+    if (!translated || translated.toLowerCase() === query.toLowerCase()) return query;
+    return translated;
+  } catch {
+    return query;
   }
-);
+}
+
+const SEARCH_SYNONYMS = Object.freeze({
+  "profumi":"perfume perfumes fragrance fragrances parfum parfums",
+  "profumo":"perfume fragrance parfum",
+  "fragranze":"fragrance fragrances perfume",
+  "scarpe":"shoes footwear sneakers",
+  "scarpa":"shoe footwear",
+  "cellulare":"phone smartphone mobile",
+  "cellulari":"phones smartphones mobiles",
+  "telefono":"phone smartphone",
+  "telefoni":"phones smartphones",
+  "computer":"computer laptop desktop pc",
+  "portatile":"laptop notebook",
+  "portatili":"laptops notebooks",
+  "televisore":"tv television",
+  "televisori":"tv televisions",
+  "orologio":"watch wristwatch",
+  "orologi":"watches wristwatches",
+  "borsa":"bag handbag",
+  "borse":"bags handbags",
+  "vestiti":"clothing apparel clothes",
+  "abbigliamento":"clothing apparel fashion",
+  "trucco":"makeup cosmetics",
+  "cosmetici":"cosmetics beauty",
+  "cosmetico":"cosmetic beauty",
+  "bellezza":"beauty cosmetics",
+  "giocattoli":"toys",
+  "giocattolo":"toy",
+  "mobili":"furniture",
+  "mobile":"furniture",
+  "cucina":"kitchen",
+  "elettrodomestici":"appliances home appliance",
+  "auto":"car automobile automotive",
+  "accessori":"accessories",
+  "giardino":"garden gardening",
+  "attrezzi":"tools",
+  "bicicletta":"bicycle bike",
+  "biciclette":"bicycles bikes",
+  "libri":"books",
+  "libro":"book",
+  "perfumes":"perfume fragrance fragrances",
+  "parfum":"perfume fragrance",
+  "chaussures":"shoes footwear",
+  "parfums":"perfume fragrance",
+  "zapatos":"shoes footwear",
+  "perfume":"perfume fragrance fragrances",
+  "fragancias":"fragrance perfume",
+  "ropa":"clothing apparel",
+  "bolsos":"bags handbags",
+  "maquillaje":"makeup cosmetics",
+  "belleza":"beauty cosmetics",
+  "schuhe":"shoes footwear",
+  "duft":"perfume fragrance",
+  "parfüm":"perfume fragrance",
+  "kleidung":"clothing apparel",
+  "taschen":"bags handbags",
+  "parfum":"perfume fragrance",
+  "香水":"perfume fragrance",
+  "靴":"shoes footwear",
+  "化妆品":"cosmetics beauty"
+});
+
+function normalizeSearchText(value) {
+  return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+function expandSearchTerms(query) {
+  const terms = normalizeSearchText(query).split(/\s+/).filter(term => term.length > 1);
+  const expanded = new Set(terms);
+  for (const term of terms) {
+    const synonyms = SEARCH_SYNONYMS[term];
+    if (synonyms) synonyms.split(/\s+/).forEach(word => expanded.add(word));
+  }
+  return [...expanded];
+}
+
+function scoreProductSearch(product, queryVariants) {
+  const fields = [
+    product.name, product.brand, product.category, product.subcategory,
+    product.merchant, product.description, product.network
+  ];
+  const text = normalizeSearchText(fields.join(" "));
+  const normalizedFields = fields.map(normalizeSearchText);
+  let best = 0;
+  for (const query of queryVariants) {
+    const normalized = normalizeSearchText(query);
+    if (!normalized) continue;
+    if (text.includes(normalized)) best = Math.max(best, 100 + normalized.length);
+    const terms = expandSearchTerms(normalized);
+    const meaningful = terms.filter(term => term.length > 1);
+    const matched = meaningful.filter(term => text.split(" ").includes(term));
+    const originalTerms = normalized.split(" ").filter(term => term.length > 1);
+    const originalMatched = originalTerms.filter(term => text.split(" ").includes(term));
+    if (originalTerms.length && originalMatched.length === originalTerms.length) {
+      best = Math.max(best, 80 + originalMatched.length);
+    } else if (meaningful.length && matched.length >= Math.max(1, Math.ceil(originalTerms.length * 0.7))) {
+      best = Math.max(best, 35 + matched.length);
+    }
+  }
+  return best;
+}
+
+$("#searchForm").addEventListener("submit", async event => {
+  event.preventDefault();
+  const input = $("#searchInput");
+  const q = input.value.trim();
+  if (!q) {
+    showResults(PRODUCTS.filter(p => p.type === "trending"), "Popular Discoveries");
+    return;
+  }
+
+  const button = $("#searchForm button[type='submit']");
+  const previousLabel = button?.textContent;
+  if (button) { button.disabled = true; button.textContent = "…"; }
+
+  const translated = await translateSearchQuery(q);
+  const queryVariants = [...new Set([q, translated, ...expandSearchTerms(q)])];
+  const scored = PRODUCTS
+    .map(product => ({ product, score: scoreProductSearch(product, queryVariants) }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score || String(a.product.name || "").localeCompare(String(b.product.name || "")));
+  const found = scored.map(item => item.product);
+
+  if (button) { button.disabled = false; button.textContent = previousLabel || "SEARCH"; }
+  showResults(
+    found,
+    "Search results",
+    found.length
+      ? `Showing all ${found.length.toLocaleString()} relevant catalog references for “${esc(q)}”${translated.toLowerCase() !== q.toLowerCase() ? " · translated search" : ""}`
+      : `No matching products were found in the currently imported partner catalog for “${esc(q)}”. Try another wording or category.`
+  );
+});
 
 
 /* =========================================================
