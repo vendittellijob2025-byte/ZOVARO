@@ -939,6 +939,52 @@ function tokenizeSearchQuery(query) {
     .filter(token => token.length > 1 && !SEARCH_STOP_WORDS.has(token));
 }
 
+const SEARCH_INTENT_EXCLUSIONS = [
+  {
+    terms:["tv","television","televisions","televisore","televisori"],
+    exclude:["projector","projectors","antenna","amplifier","mount","mounts","stand","stands","remote","remote control","cable","cables","adapter","adapters","power supply","replacement","wall bracket","screen protector"]
+  },
+  {
+    terms:["phone","phones","smartphone","smartphones","cellulare","cellulari","telefono","telefoni"],
+    exclude:["mount","mounts","holder","holders","clamp","case","cases","cover","covers","charger","chargers","cable","cables","screen protector","battery","batteries","repair","replacement","parts","web development","projector","tripod"]
+  },
+  {
+    terms:["computer","computers","pc","laptop","laptops","notebook","notebooks","desktop","desktops"],
+    exclude:["keyboard","keyboards","mouse","mice","power bank","powerbank","charger","chargers","cable","cables","sticker","stickers","case","cases","sleeve","sleeves","stand","stands","dock","docking station","memory","ram","ssd","hard drive","adapter","adapters","replacement","parts"]
+  },
+  {
+    terms:["shoe","shoes","footwear","sneaker","sneakers","scarpa","scarpe"],
+    exclude:["blusher","blush","cosmetic","cosmetics","makeup","eyeshadow","nail polish","lipstick","shade"]
+  }
+];
+
+function hasWholePhrase(text, phrase) {
+  return (" " + text + " ").includes(" " + normalizeSearchText(phrase) + " ");
+}
+
+function violatesSearchIntent(product, queryTokens) {
+  const title = normalizeSearchText([
+    product.name, product.title, product.englishTitle, product.brand
+  ].join(" "));
+  const taxonomy = normalizeSearchText([
+    product.category, product.englishCategory,
+    product.subcategory, product.englishSubcategory
+  ].join(" "));
+  const identity = title + " " + taxonomy;
+  for (const intent of SEARCH_INTENT_EXCLUSIONS) {
+    const requested = intent.terms.some(term => queryTokens.includes(term) ||
+      queryTokens.some(token => searchTokenForms(token).includes(term)));
+    if (!requested) continue;
+    // An explicitly requested accessory remains searchable (e.g. "phone case").
+    const accessoryExplicitlyRequested = intent.exclude.some(term =>
+      queryTokens.some(token => hasWholePhrase(token, term))
+    );
+    if (accessoryExplicitlyRequested) continue;
+    if (intent.exclude.some(term => hasWholePhrase(identity, term))) return true;
+  }
+  return false;
+}
+
 function scoreProductSearch(product, queryVariants) {
   // Search the complete imported catalogue, but match against product identity
   // and the assigned taxonomy. Merchant names and free-form descriptions do
