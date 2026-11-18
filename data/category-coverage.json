@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T23:42:00.492Z",
+  "generatedAt": "2026-11-18T23:59:28.366Z",
   "selectedProductCount": 19405,
   "inventoryProductCount": 200985,
   "uniqueAdvertiserCount": 24,
@@ -3012,6 +3012,84 @@
       "productCount": 1768,
       "unclassifiedProductCount": 693,
       "browseTree": [
+        {
+          "name": "Clothing",
+          "path": "Clothing",
+          "productCount": 0,
+          "directProductCount": 0,
+          "children": [
+            {
+              "name": "Dresses",
+              "path": "Clothing > Dresses",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "T-Shirts & Tops",
+              "path": "Clothing > T-Shirts & Tops",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Shirts & Blouses",
+              "path": "Clothing > Shirts & Blouses",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Jeans & Trousers",
+              "path": "Clothing > Jeans & Trousers",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Shorts",
+              "path": "Clothing > Shorts",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Jackets & Coats",
+              "path": "Clothing > Jackets & Coats",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Sweatshirts & Hoodies",
+              "path": "Clothing > Sweatshirts & Hoodies",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Activewear",
+              "path": "Clothing > Activewear",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Underwear & Sleepwear",
+              "path": "Clothing > Underwear & Sleepwear",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Socks",
+              "path": "Clothing > Socks",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            }
+          ]
+        },
         {
           "name": "Women's Clothing",
           "path": "Women's Clothing",
@@ -8949,6 +9027,13 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Tennis Shoes",
+              "path": "Tennis > Tennis Shoes",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
             }
           ]
         },
@@ -9836,9 +9921,9 @@
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1337,
+    "taxonomyNodeCount": 1349,
     "usedTaxonomyNodeCount": 203,
-    "emptyTaxonomyNodeCount": 1134,
+    "emptyTaxonomyNodeCount": 1146,
     "productsWithKnownSubcategory": 11993,
     "productsWithInvalidSubcategory": 0,
     "productsWithoutSubcategory": 7412,
