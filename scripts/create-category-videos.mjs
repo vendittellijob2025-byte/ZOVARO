@@ -9,6 +9,7 @@ const OUTPUT = process.argv[2] || "zovaro-social-videos";
 const WIDTH = 1080, HEIGHT = 1920, DURATION = 40, FPS = 30;
 const FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf";
 const MUSIC_DEFAULT = "assets/ZOVARO_AFFILIATE.MP3";
+const MUSIC_JOB = "assets/solo audio promo zovaro job.mp3";
 const MUSIC_LUXURY = "assets/ZOVARO_LUXURY_PROMO_SOLOAUDIO.mp3";
 const LOGO = "assets/zovaro-logo.png";
 
@@ -121,7 +122,7 @@ const results=[];
 results.push(await makeVideo({
   name:"ZOVARO-JOBS-DAILY",
   background:"assets/job-visual.png",
-  music:MUSIC_DEFAULT,
+  music:MUSIC_JOB,
   scenes:jobScenes,
   caption:"Explore current employer-published openings and career paths on ZOVARO JOBS Worldwide. Browse without registration and apply through the employer's official channel. https://zovaro.vercel.app/?view=jobs",
   hashtags:["#ZOVARO","#Jobs","#CareerOpportunities","#RemoteJobs"]
