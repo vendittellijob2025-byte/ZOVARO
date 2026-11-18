@@ -311,3 +311,26 @@ assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"re
 assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.30,margin:0.03}),null);
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Beauty"),"Makeup > Lip Makeup");
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Fashion"),null);
+
+
+const subcategoryCases = [
+  ["Gaming", "PlayStation 5 Slim Console", "Consoles > PlayStation"],
+  ["Gaming", "Xbox Series X Console", "Consoles > Xbox"],
+  ["Electronics", "Samsung Galaxy S26 Smartphone", "Phones & Tablets > Smartphones"],
+  ["Electronics", "Apple iPhone 17 Pro", "Phones & Tablets > Smartphones"],
+  ["Electronics", "Apple iPad Air Tablet", "Phones & Tablets > Tablets"],
+  ["Sports", "Nike Court Tennis Shoes", "Tennis > Tennis Shoes"],
+  ["Sports", "Adidas Men's Tennis Sneakers", "Tennis > Tennis Shoes"],
+  ["Fashion", "Reebok Classic Leather Sneakers", "Shoes > Sneakers"],
+  ["Fashion", "Adidas Men's T-Shirt", "Clothing > T-Shirts & Tops"],
+  ["Fashion", "Nike Women's Running Leggings", "Clothing > Activewear"],
+  ["Fashion", "Men's Denim Jeans", "Men's Clothing"]
+];
+const taxonomy = JSON.parse(fs.readFileSync("data/category-tree.json", "utf8"));
+const subcategoryFailures = [];
+for (const [category, title, expected] of subcategoryCases) {
+  const actual = subcategoryFor(category, { title, englishTitle: title });
+  if (actual !== expected) subcategoryFailures.push({ category, title, expected, actual });
+}
+console.log(JSON.stringify({ subcategoryTestCount: subcategoryCases.length, subcategoryFailures }, null, 2));
+if (subcategoryFailures.length) throw new Error("Product subcategory tests failed: " + subcategoryFailures.length);
