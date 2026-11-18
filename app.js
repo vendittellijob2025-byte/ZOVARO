@@ -1002,6 +1002,7 @@ function scoreProductSearch(product, queryVariants) {
 
   for (const query of queryVariants) {
     const tokens = tokenizeSearchQuery(query);
+    // Apply product-type exclusions before scoring any title/category match.
     if (!tokens.length || violatesSearchIntent(product, tokens)) continue;
     const checks = tokens.map(token => {
       const forms = searchTokenForms(token);
