@@ -127,8 +127,8 @@
 
     if (/\b(job|jobs|work|career|employment|lavoro|lavori|impiego|assumere|trabajo|empleo|emploi|travail|arbeit|stelle|وظيفة|काम|工作|求人)\b/.test(normalized)) {
       const hiring = /\b(hire|hiring|cerco personale|assumere|contratar|recruit|recruter|einstellen)\b/.test(normalized);
-      document.getElementById(hiring ? "openOfferJob" : "openLookingJob")?.click();
       document.getElementById("openJobs")?.click();
+      window.setTimeout(() => document.getElementById(hiring ? "openOfferJob" : "openLookingJob")?.click(), 80);
       return;
     }
 
