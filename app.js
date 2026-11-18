@@ -874,6 +874,20 @@ function expandSearchTerms(query) {
 }
 
 function scoreProductSearch(product, queryVariants) {
+  const normalizedQueries = queryVariants.map(normalizeSearchText);
+  const broadPhoneIntent = normalizedQueries.some(query => {
+    const words = query.split(/\s+/).filter(Boolean);
+    return words.length > 0 &&
+      words.every(word => ["cellulare","cellulari","telefono","telefoni","phone","phones","smartphone","smartphones","mobile","mobiles","cell","cells"].includes(word));
+  });
+  if (broadPhoneIntent) {
+    const productIdentity = normalizeSearchText([
+      product.name, product.title, product.englishTitle, product.brand
+    ].join(" "));
+    const phoneAccessory = /\b(case|cover|mount|holder|clamp|adapter|charger|charging|cable|screen protector|earbuds|headphones|headset|stand|dock|tripod|carplay|replacement|repair|battery|lens|grip)\b/.test(productIdentity);
+    const actualPhone = /\b(iphone|galaxy|pixel|smartphone|mobile phone|cell phone|oneplus|xiaomi|redmi|motorola|oppo|vivo|huawei|honor|nokia|xperia|zenfone|realme|nothing phone|phone)\b/.test(productIdentity);
+    if (phoneAccessory || !actualPhone) return 0;
+  }
   const primaryFields = [
     product.name, product.title, product.englishTitle, product.brand,
     product.category, product.englishCategory, product.subcategory,
