@@ -881,6 +881,7 @@ function scoreProductSearch(product, queryVariants) {
   ];
   const primaryText = normalizeSearchText(primaryFields.join(" "));
   const primaryWords = new Set(primaryText.split(/\\s+/));
+  const descriptionText = normalizeSearchText(product.description || product.englishDescription || "");
   let best = 0;
 
   for (const query of queryVariants) {
@@ -892,12 +893,28 @@ function scoreProductSearch(product, queryVariants) {
     }
     const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
     if (!queryWords.length) continue;
-    const matchedWords = queryWords.filter(word => {
-      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
-      return alternatives.some(alternative => primaryWords.has(alternative));
-    });
-    if (matchedWords.length === queryWords.length) {
-      best = Math.max(best, 90 + matchedWords.length);
+    const alternativesByWord = queryWords.map(word => [
+      word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)
+    ]);
+    const matchedPrimary = alternativesByWord.filter(alternatives =>
+      alternatives.some(alternative => primaryWords.has(alternative))
+    ).length;
+    if (matchedPrimary === queryWords.length) {
+      best = Math.max(best, 90 + matchedPrimary);
+      continue;
+    }
+
+    // For a single category/product word, allow the description as a fallback
+    // (useful when partner feeds place the translated term in product copy).
+    // Multi-word model searches remain title/category strict to avoid accessory hits.
+    const phoneIntent = alternativesByWord.some(alternatives =>
+      alternatives.some(term => ["phone","phones","smartphone","smartphones","mobile","mobiles","iphone"].includes(term))
+    );
+    if (queryWords.length === 1 && !phoneIntent) {
+      const alternatives = alternativesByWord[0];
+      if (alternatives.some(alternative => descriptionText.split(" ").includes(alternative))) {
+        best = Math.max(best, 45);
+      }
     }
   }
   return best;
