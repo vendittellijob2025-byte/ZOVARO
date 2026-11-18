@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-18T15:13:29.802Z",
-  "selectedProductCount": 19391,
-  "inventoryProductCount": 201073,
+  "generatedAt": "2026-11-18T20:29:46.958Z",
+  "selectedProductCount": 19405,
+  "inventoryProductCount": 201045,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -22,11 +22,11 @@
     },
     {
       "name": "Babies",
-      "productCount": 726
+      "productCount": 728
     },
     {
       "name": "Beauty",
-      "productCount": 1878
+      "productCount": 1876
     },
     {
       "name": "Books & Media",
@@ -38,15 +38,15 @@
     },
     {
       "name": "Electronics",
-      "productCount": 325
+      "productCount": 330
     },
     {
       "name": "Energy, Solar & Electric Mobility",
-      "productCount": 7
+      "productCount": 8
     },
     {
       "name": "Fashion",
-      "productCount": 1764
+      "productCount": 1768
     },
     {
       "name": "Food & Grocery",
@@ -66,11 +66,11 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1182
+      "productCount": 1186
     },
     {
       "name": "Home & Living",
-      "productCount": 564
+      "productCount": 565
     },
     {
       "name": "Industrial & Scientific",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 48
+      "productCount": 46
     },
     {
       "name": "Pets",
@@ -106,7 +106,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1700
+      "productCount": 1702
     },
     {
       "name": "Sports",
@@ -122,7 +122,7 @@
     },
     {
       "name": "Travel",
-      "productCount": 145
+      "productCount": 146
     },
     {
       "name": "TVs & Home Cinema",
@@ -133,17 +133,17 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1757,
+  "otherProductCount": 1755,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1757
+      "count": 1755
     }
   ],
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19391,
-    "withImages": 19391,
-    "withPositivePrices": 19391
+    "withTrackedHttpsLinks": 19405,
+    "withImages": 19405,
+    "withPositivePrices": 19405
   },
   "sources": [
     {
