@@ -1350,9 +1350,9 @@ footer{
 .zovaro-ai-title{margin:12px 42px 10px;font:700 clamp(22px,4vw,30px)/1.1 "Space Grotesk",sans-serif}
 .zovaro-ai-intro{max-width:570px;margin:0 auto 22px;color:#b8cbe0;font-size:14px;line-height:1.6}
 .zovaro-ai-flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(76px,1fr));gap:9px;max-width:620px;margin:0 auto}
-.zovaro-ai-language{min-height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid rgba(118,179,220,.28);border-radius:12px;background:rgba(255,255,255,.055);color:#e8f5ff;cursor:pointer}
+.zovaro-ai-language{min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px solid rgba(118,179,220,.28);border-radius:12px;background:rgba(255,255,255,.055);color:#e8f5ff;cursor:pointer}
 .zovaro-ai-language:hover,.zovaro-ai-language:focus-visible{border-color:#53d5ff;background:rgba(0,145,255,.16);outline:none}
-.zovaro-ai-flag-image{display:block;width:32px;height:24px;object-fit:cover;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.35);flex:0 0 auto}
+.zovaro-ai-flag-image{display:block;width:22px;height:16px;object-fit:cover;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.35);flex:0 0 auto}
 .zovaro-ai-language small{font-size:10px;font-weight:700}
 .zovaro-ai-chatbox{display:flex;flex-direction:column;gap:12px;text-align:left}
 .zovaro-ai-welcome{padding:15px 17px;border:1px solid rgba(95,206,255,.38);border-radius:17px;background:rgba(13,43,72,.88);color:#fff;font-size:15px;line-height:1.55}
@@ -2878,19 +2878,17 @@ document
       <p class="zovaro-ai-language-hint" id="zovaroAiLanguageHint">Select a flag to continue in your language.</p>
       <div class="zovaro-ai-flags" aria-label="Choose interface language">
         <button type="button" class="zovaro-ai-language" data-zv-language="en"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/gb.png" alt=""><small>English</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="en"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/us.png" alt=""><small>English (US)</small></button>
         <button type="button" class="zovaro-ai-language" data-zv-language="it"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/it.png" alt=""><small>Italiano</small></button>
         <button type="button" class="zovaro-ai-language" data-zv-language="es"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/es.png" alt=""><small>Español</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="fr"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/fr.png" alt=""><small>Français</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="de"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/de.png" alt=""><small>Deutsch</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="pt"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/pt.png" alt=""><small>Português</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="pt"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/br.png" alt=""><small>Português (BR)</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="es"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/co.png" alt=""><small>Español (CO)</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="es"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/mx.png" alt=""><small>Español (MX)</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="ar"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/sa.png" alt=""><small>العربية</small></button>
-        <button type="button" class="zovaro-ai-language" data-zv-language="hi"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/in.png" alt=""><small>हिन्दी</small></button>
         <button type="button" class="zovaro-ai-language" data-zv-language="zh"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/cn.png" alt=""><small>中文</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="hi"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/in.png" alt=""><small>हिन्दी</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="ar"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/sa.png" alt=""><small>العربية</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="fr"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/fr.png" alt=""><small>Français</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="pt"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/pt.png" alt=""><small>Português</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="ru"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/ru.png" alt=""><small>Русский</small></button>
         <button type="button" class="zovaro-ai-language" data-zv-language="ja"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/jp.png" alt=""><small>日本語</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="de"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/de.png" alt=""><small>Deutsch</small></button>
+        <button type="button" class="zovaro-ai-language" data-zv-language="ko"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/kr.png" alt=""><small>한국어</small></button>
       </div>
     </div>
     <div id="zovaroAiWelcomeScreen" class="zovaro-ai-screen" hidden>
