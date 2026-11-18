@@ -264,8 +264,15 @@
     if (event.key === "Escape" && !backdrop.hidden) closeWelcome();
   });
 
-  let savedLanguage = "";
-  try { savedLanguage = localStorage.getItem(STORAGE_KEY) || ""; } catch (_) {}
-  if (savedLanguage && copy[savedLanguage]) showWelcome(savedLanguage);
-  else showLanguagePicker();
+  // Every fresh visit starts in English, regardless of the language saved
+  // during a previous visit. The visitor can choose another language below.
+  applyHomepageLanguage("en");
+  applyRequestLanguage("en");
+  const initialCopy = getCopy("en");
+  reopenLabel.textContent = initialCopy.reopen;
+  if (homeButtonLabel) homeButtonLabel.textContent = initialCopy.homeButton || "Home";
+  if (homeButton) homeButton.setAttribute("aria-label", initialCopy.homeButton || "Home");
+  document.documentElement.lang = "en";
+  document.documentElement.dir = "ltr";
+  showLanguagePicker();
 })();
