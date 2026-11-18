@@ -11,7 +11,8 @@
     const hasSalePrice = Number.isFinite(salePrice) && salePrice > 0;
     const hasSale = hasRegularPrice && hasSalePrice && salePrice < regularPrice;
     const title = product.englishTitle || product.title || product.brand || product.advertiserName || "ZOVARO Offer";
-    const category = product.englishCategory || product.category || "Featured";
+    const rawCategory = product.englishCategory || product.category || "Other";
+    const category = String(rawCategory).trim().toLowerCase() === "other" ? "Unclassified" : rawCategory;
     return {
       id: product.id != null && String(product.id).trim() ? String(product.id) : "affiliate-" + index,
       name: title,
@@ -93,8 +94,8 @@
           typeof product.clickUrl === "string" && product.clickUrl.trim().startsWith("https://");
       });
 
-      // Do not expose unclassified inventory in customer-facing search or category results.
-      // The source catalog retains these products for later reclassification; they are not deleted.
+      // Keep eligible unclassified inventory searchable by its actual product title.
+      // It remains outside curated category navigation until taxonomy is corrected.
       const unclassifiedCount = eligible.filter(product =>
         String(product.englishCategory || product.category || "").trim().toLowerCase() === "other"
       ).length;
@@ -102,7 +103,7 @@
       const affiliateProducts = eligible
         .map(normalizeProduct)
         .filter(product => {
-          if (!product.name || !product.category || product.category.trim().toLowerCase() === "other" || !product.image || product.price === null) return false;
+          if (!product.name || !product.category || !product.image || product.price === null) return false;
           try {
             return new URL(product.image).protocol === "https:";
           } catch {
@@ -113,7 +114,7 @@
       if (affiliateProducts.length) {
         PRODUCTS.splice(0, PRODUCTS.length, ...affiliateProducts);
         loaded = affiliateProducts.length;
-        setStatus(loaded.toLocaleString() + " verified affiliate products loaded." + (unclassifiedCount ? " · " + unclassifiedCount.toLocaleString() + " unclassified items withheld pending review." : ""));
+        setStatus(loaded.toLocaleString() + " verified affiliate products searchable." + (unclassifiedCount ? " · " + unclassifiedCount.toLocaleString() + " searchable items await category classification." : ""));
       } else {
         setStatus("Product feed loaded, but no items passed the affiliate, image and price checks. Categories remain available.");
         console.warn("ZOVARO CJ loader: catalog contained no eligible products.", {
