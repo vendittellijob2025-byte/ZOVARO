@@ -860,66 +860,116 @@ const SEARCH_SYNONYMS = Object.freeze({
 });
 
 function normalizeSearchText(value) {
-  return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\\u0300-\\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^\\p{L}\\p{N}]+/gu, " ")
+    .trim()
+    .replace(/\\s+/g, " ");
 }
 
-function expandSearchTerms(query) {
-  const terms = normalizeSearchText(query).split(/\s+/).filter(term => term.length > 1);
-  const expanded = new Set(terms);
-  for (const term of terms) {
-    const synonyms = SEARCH_SYNONYMS[term];
-    if (synonyms) synonyms.split(/\s+/).forEach(word => expanded.add(word));
-  }
-  return [...expanded];
+const SEARCH_STOP_WORDS = new Set([
+  "a","an","and","the","for","of","to","with","in","on","me","i","want","need","find","show","looking",
+  "il","lo","la","i","gli","le","un","uno","una","e","di","da","per","con","che","cerco","cerca","vorrei","voglio","mi","serve",
+  "el","la","los","las","un","una","y","de","del","para","con","busco","quiero","necesito",
+  "le","les","un","une","des","et","de","du","pour","avec","cherche","veux",
+  "der","die","das","ein","eine","und","oder","mit","fur","für","ich","suche","brauche",
+  "o","os","as","um","uma","e","de","do","da","para","com","quero","preciso"
+]);
+
+const SEARCH_EQUIVALENTS = Object.freeze({
+  "profumo":["perfume","fragrance","parfum"],
+  "profumi":["perfume","perfumes","fragrance","fragrances","parfum","parfums"],
+  "fragranza":["fragrance","perfume"],
+  "fragranze":["fragrances","fragrance","perfumes","perfume"],
+  "televisore":["tv","television"],
+  "televisori":["tv","televisions","television"],
+  "televisione":["tv","television"],
+  "television":["tv","televisions"],
+  "televisions":["tv","television"],
+  "tv":["television","televisions"],
+  "cellulare":["phone","smartphone","mobile"],
+  "cellulari":["phones","smartphones","mobiles","phone","smartphone","mobile"],
+  "telefono":["phone","smartphone","mobile"],
+  "telefoni":["phones","smartphones","mobiles","phone","smartphone","mobile"],
+  "phone":["phones","smartphone","smartphones","mobile","mobiles"],
+  "phones":["phone","smartphone","smartphones","mobile","mobiles"],
+  "smartphone":["smartphones","phone","phones","mobile","mobiles"],
+  "smartphones":["smartphone","phone","phones","mobile","mobiles"],
+  "computer":["computers","pc","desktop","laptop"],
+  "computers":["computer","pc","desktop","laptop","notebook"],
+  "portatile":["laptop","notebook"],
+  "portatili":["laptops","notebooks","laptop","notebook"],
+  "laptop":["laptops","notebook","notebooks"],
+  "scarpa":["shoe","footwear"],
+  "scarpe":["shoes","footwear","sneaker","sneakers"],
+  "shoe":["shoes","footwear"],
+  "shoes":["shoe","footwear","sneakers"],
+  "vestito":["clothing","dress","apparel"],
+  "vestiti":["clothes","clothing","apparel"],
+  "abbigliamento":["clothing","apparel","fashion"],
+  "ropa":["clothing","apparel","clothes"],
+  "zapatos":["shoes","footwear"],
+  "chaussures":["shoes","footwear"],
+  "schuhe":["shoes","footwear"],
+  "parfum":["perfume","fragrance"],
+  "parfums":["perfumes","fragrances","perfume"],
+  "perfume":["perfumes","fragrance","fragrances"],
+  "perfumes":["perfume","fragrance","fragrances"],
+  "香水":["perfume","fragrance"],
+  "化妆品":["cosmetics","beauty"],
+  "靴":["shoes","footwear"]
+});
+
+function searchTokenForms(token) {
+  const forms = new Set([token]);
+  const equivalents = SEARCH_EQUIVALENTS[token];
+  if (equivalents) equivalents.forEach(term => forms.add(term));
+  // Conservative plural/singular normalization for common English catalog titles.
+  if (token.length > 4 && token.endsWith("ies")) forms.add(token.slice(0, -3) + "y");
+  if (token.length > 4 && token.endsWith("s") && !token.endsWith("ss")) forms.add(token.slice(0, -1));
+  if (token.length > 4 && token.endsWith("es")) forms.add(token.slice(0, -2));
+  return [...forms];
+}
+
+function tokenizeSearchQuery(query) {
+  return normalizeSearchText(query)
+    .split(/\\s+/)
+    .filter(token => token.length > 1 && !SEARCH_STOP_WORDS.has(token));
 }
 
 function scoreProductSearch(product, queryVariants) {
-  // A search result must match the product identity or its catalog taxonomy.
-  // Brand, merchant and free-form descriptions are deliberately excluded:
-  // they can mention unrelated terms and create false positives.
-  const titleText = normalizeSearchText([
-    product.name, product.title, product.englishTitle
+  // Search the complete imported catalogue, but match against product identity
+  // and the assigned taxonomy. Merchant names and free-form descriptions do
+  // not independently qualify an unrelated item.
+  const title = normalizeSearchText([
+    product.name, product.title, product.englishTitle, product.brand
   ].join(" "));
-  const taxonomyText = normalizeSearchText([
+  const taxonomy = normalizeSearchText([
     product.category, product.englishCategory,
     product.subcategory, product.englishSubcategory
   ].join(" "));
-  const titleWords = new Set(titleText.split(/\\s+/).filter(Boolean));
-  const taxonomyWords = new Set(taxonomyText.split(/\\s+/).filter(Boolean));
+  const titleTokens = new Set(title.split(/\\s+/).filter(Boolean));
+  const taxonomyTokens = new Set(taxonomy.split(/\\s+/).filter(Boolean));
   let best = 0;
 
   for (const query of queryVariants) {
-    const normalized = normalizeSearchText(query);
-    if (!normalized) continue;
-    const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
-    if (!queryWords.length) continue;
-
-    // Each requested word may be satisfied by an exact translation/synonym.
-    // All words in a multi-word request must match; no partial broad matches.
-    const matched = queryWords.map(word => {
-      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
-      const inTitle = alternatives.some(term => titleWords.has(term));
-      const inTaxonomy = alternatives.some(term => taxonomyWords.has(term));
+    const tokens = tokenizeSearchQuery(query);
+    if (!tokens.length) continue;
+    const checks = tokens.map(token => {
+      const forms = searchTokenForms(token);
+      const inTitle = forms.some(form => titleTokens.has(form));
+      const inTaxonomy = forms.some(form => taxonomyTokens.has(form));
       return { inTitle, inTaxonomy, matched: inTitle || inTaxonomy };
     });
 
-    if (matched.every(item => item.matched)) {
-      const titleMatches = matched.filter(item => item.inTitle).length;
-      const taxonomyMatches = matched.filter(item => item.inTaxonomy).length;
-      best = Math.max(best, 100 + titleMatches * 10 + taxonomyMatches * 3);
-      continue;
-    }
-
-    // A one-word query can match a whole product title/category phrase
-    // (e.g. "TV" in "Smart TV 55 inch"), but not a description or merchant.
-    if (queryWords.length === 1) {
-      const word = queryWords[0];
-      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
-      if (alternatives.some(term =>
-        titleText.split(" ").includes(term) || taxonomyText.split(" ").includes(term)
-      )) {
-        best = Math.max(best, 100);
-      }
+    // All meaningful terms must be present: "Samsung 55 TV" cannot match
+    // unrelated accessories that merely mention one of those words.
+    if (checks.every(check => check.matched)) {
+      const titleMatches = checks.filter(check => check.inTitle).length;
+      const taxonomyMatches = checks.filter(check => check.inTaxonomy).length;
+      best = Math.max(best, 100 + titleMatches * 12 + taxonomyMatches * 4);
     }
   }
   return best;
