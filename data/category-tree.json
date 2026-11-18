@@ -745,6 +745,21 @@
       "name": "Fashion",
       "children": [
         {
+          "name": "Clothing",
+          "children": [
+            "Dresses",
+            "T-Shirts & Tops",
+            "Shirts & Blouses",
+            "Jeans & Trousers",
+            "Shorts",
+            "Jackets & Coats",
+            "Sweatshirts & Hoodies",
+            "Activewear",
+            "Underwear & Sleepwear",
+            "Socks"
+          ]
+        },
+        {
           "name": "Women's Clothing",
           "children": [
             "Dresses",
@@ -2236,7 +2251,8 @@
             "Tennis Rackets",
             "Tennis Balls",
             "Strings & Grips",
-            "Tennis Accessories"
+            "Tennis Accessories",
+            "Tennis Shoes"
           ]
         },
         {
