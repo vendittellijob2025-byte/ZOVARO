@@ -862,11 +862,11 @@ const SEARCH_SYNONYMS = Object.freeze({
 function normalizeSearchText(value) {
   return String(value || "")
     .normalize("NFKD")
-    .replace(/[\\u0300-\\u036f]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
-    .replace(/[^\\p{L}\\p{N}]+/gu, " ")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim()
-    .replace(/\\s+/g, " ");
+    .replace(/\s+/g, " ");
 }
 
 const SEARCH_STOP_WORDS = new Set([
@@ -935,7 +935,7 @@ function searchTokenForms(token) {
 
 function tokenizeSearchQuery(query) {
   return normalizeSearchText(query)
-    .split(/\\s+/)
+    .split(/\s+/)
     .filter(token => token.length > 1 && !SEARCH_STOP_WORDS.has(token));
 }
 
@@ -950,8 +950,8 @@ function scoreProductSearch(product, queryVariants) {
     product.category, product.englishCategory,
     product.subcategory, product.englishSubcategory
   ].join(" "));
-  const titleTokens = new Set(title.split(/\\s+/).filter(Boolean));
-  const taxonomyTokens = new Set(taxonomy.split(/\\s+/).filter(Boolean));
+  const titleTokens = new Set(title.split(/\s+/).filter(Boolean));
+  const taxonomyTokens = new Set(taxonomy.split(/\s+/).filter(Boolean));
   let best = 0;
 
   for (const query of queryVariants) {
