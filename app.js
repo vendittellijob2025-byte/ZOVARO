@@ -1002,7 +1002,7 @@ function scoreProductSearch(product, queryVariants) {
 
   for (const query of queryVariants) {
     const tokens = tokenizeSearchQuery(query);
-    if (!tokens.length) continue;
+    if (!tokens.length || violatesSearchIntent(product, tokens)) continue;
     const checks = tokens.map(token => {
       const forms = searchTokenForms(token);
       const inTitle = forms.some(form => titleTokens.has(form));
