@@ -1,15 +1,166 @@
 (() => {
   "use strict";
+
   const backdrop = document.getElementById("zovaroAiBackdrop");
-  const close = document.getElementById("zovaroAiClose");
-  if (!backdrop || !close) return;
-  const hide = () => {
-    backdrop.hidden = true;
-    document.body.style.overflow = "";
+  if (!backdrop) return;
+
+  const languageScreen = document.getElementById("zovaroAiLanguages");
+  const welcomeScreen = document.getElementById("zovaroAiWelcomeScreen");
+  const closeButton = document.getElementById("zovaroAiClose");
+  const reopenButton = document.getElementById("zovaroAiReopen");
+  const changeButton = document.getElementById("zovaroAiChangeLanguage");
+  const welcomeText = document.getElementById("zovaroAiWelcomeText");
+  const chooseCopy = document.getElementById("zovaroAiChooseCopy");
+  const languageHeading = document.getElementById("zovaroAiLanguageHeading");
+  const languageHint = document.getElementById("zovaroAiLanguageHint");
+  const changeLabel = document.getElementById("zovaroAiChangeLabel");
+  const reopenLabel = document.getElementById("zovaroAiReopenLabel");
+  const buttons = backdrop.querySelectorAll("[data-zv-language]");
+  const STORAGE_KEY = "zovaroWorldwideLanguage";
+
+  const copy = {
+    en: {
+      label:"English", choose:"Welcome! First choose your language so I can greet you correctly.",
+      heading:"Choose your language", hint:"Select a flag to continue in your language.",
+      welcome:"Hello! I'm ZOVARO Worldwide. Are you looking for a product, an urgent job opportunity, or something exclusive such as a work of art or a luxury item? Tell me what you need and I'll help you explore the available opportunities. You can close my welcome and browse the homepage freely.",
+      change:"Change language", reopen:"Language",
+      home:["Discover Better. Shop Smarter. Discover Job Opportunities.","New & Used","Find what you need from around the world: electronics, fashion, beauty, perfumes, cosmetics, automotive, sports and much more.","Urgent Jobs & Workers","Find the opportunity that matches your skills, or find the right person for your business. Discover jobs, workers and new opportunities on ZOVARO.","ZOVARO WORLDWIDE · PRIVATE COLLECTION","LUXURY & PRESTIGE","Exclusive opportunities in prestigious properties, supercars, private aviation, yachts, fine watches, jewellery, art and collectibles."]
+    },
+    it: {
+      label:"Italiano", choose:"Benvenuto! Scegli prima la tua lingua, così potrò accoglierti correttamente.",
+      heading:"Scegli la tua lingua", hint:"Seleziona una bandiera per continuare nella tua lingua.",
+      welcome:"Ciao! Sono ZOVARO Worldwide. Cerchi un prodotto, un lavoro urgente o qualcosa di esclusivo, come un'opera d'arte o un bene di lusso? Raccontami cosa ti serve e ti aiuterò a esplorare le opportunità disponibili. Puoi chiudere il mio benvenuto e navigare liberamente nella Home Page.",
+      change:"Cambia lingua", reopen:"Lingua",
+      home:["Scopri meglio. Acquista con intelligenza. Scopri opportunità di lavoro.","Nuovo e usato","Trova ciò che ti serve in tutto il mondo: elettronica, moda, bellezza, profumi, cosmetici, auto, sport e molto altro.","Lavori urgenti e lavoratori","Trova l'opportunità adatta alle tue competenze oppure la persona giusta per la tua attività. Scopri lavori, professionisti e nuove opportunità su ZOVARO.","ZOVARO WORLDWIDE · COLLEZIONE PRIVATA","LUSSO E PRESTIGIO","Opportunità esclusive: immobili prestigiosi, supercar, aviazione privata, yacht, orologi, gioielli, arte e collezionismo."]
+    },
+    es: {
+      label:"Español", choose:"¡Bienvenido! Primero elige tu idioma para que pueda saludarte correctamente.",
+      heading:"Elige tu idioma", hint:"Selecciona una bandera para continuar en tu idioma.",
+      welcome:"¡Hola! Soy ZOVARO Worldwide. ¿Buscas un producto, un trabajo urgente o algo exclusivo, como una obra de arte o un artículo de lujo? Cuéntame qué necesitas y te ayudaré a explorar las oportunidades disponibles. Puedes cerrar mi bienvenida y navegar libremente por la página principal.",
+      change:"Cambiar idioma", reopen:"Idioma",
+      home:["Descubre mejor. Compra de forma inteligente. Encuentra oportunidades de trabajo.","Nuevo y usado","Encuentra en todo el mundo lo que necesitas: tecnología, moda, belleza, perfumes, cosmética, automoción, deportes y mucho más.","Empleos urgentes y trabajadores","Encuentra una oportunidad adecuada a tus habilidades o a la persona ideal para tu negocio. Descubre empleos y profesionales en ZOVARO.","ZOVARO WORLDWIDE · COLECCIÓN PRIVADA","LUJO Y PRESTIGIO","Oportunidades exclusivas: propiedades, superdeportivos, aviación privada, yates, relojes, joyas, arte y coleccionismo."]
+    },
+    fr: {
+      label:"Français", choose:"Bienvenue ! Choisissez d'abord votre langue afin que je puisse vous accueillir correctement.",
+      heading:"Choisissez votre langue", hint:"Sélectionnez un drapeau pour continuer dans votre langue.",
+      welcome:"Bonjour ! Je suis ZOVARO Worldwide. Vous cherchez un produit, un emploi urgent ou quelque chose d'exclusif, comme une œuvre d'art ou un article de luxe ? Dites-moi ce qu'il vous faut et je vous aiderai à explorer les possibilités disponibles. Vous pouvez fermer mon accueil et parcourir librement la page d'accueil.",
+      change:"Changer de langue", reopen:"Langue",
+      home:["Découvrez mieux. Achetez plus intelligemment. Découvrez des offres d'emploi.","Neuf et occasion","Trouvez dans le monde entier des produits électroniques, de mode, de beauté, des parfums, des cosmétiques, des articles automobiles, sportifs et bien plus.","Emplois urgents et travailleurs","Trouvez un emploi adapté à vos compétences ou la bonne personne pour votre entreprise. Découvrez des emplois et des professionnels sur ZOVARO.","ZOVARO WORLDWIDE · COLLECTION PRIVÉE","LUXE ET PRESTIGE","Des opportunités exclusives : propriétés, supercars, aviation privée, yachts, montres, bijoux, art et objets de collection."]
+    },
+    de: {
+      label:"Deutsch", choose:"Willkommen! Wähle zuerst deine Sprache, damit ich dich richtig begrüßen kann.",
+      heading:"Sprache auswählen", hint:"Wähle eine Flagge, um in deiner Sprache fortzufahren.",
+      welcome:"Hallo! Ich bin ZOVARO Worldwide. Suchst du ein Produkt, einen dringenden Job oder etwas Exklusives wie ein Kunstwerk oder einen Luxusartikel? Erzähle mir, was du brauchst, und ich helfe dir, verfügbare Angebote zu entdecken. Du kannst meine Begrüßung schließen und die Startseite frei erkunden.",
+      change:"Sprache ändern", reopen:"Sprache",
+      home:["Entdecke mehr. Kaufe cleverer. Entdecke Jobmöglichkeiten.","Neu und gebraucht","Finde weltweit Elektronik, Mode, Beauty, Parfüm, Kosmetik, Autozubehör, Sportartikel und vieles mehr.","Dringende Jobs und Arbeitskräfte","Finde einen passenden Job oder die richtige Person für dein Unternehmen. Entdecke Stellen und Fachkräfte auf ZOVARO.","ZOVARO WORLDWIDE · PRIVATE KOLLEKTION","LUXUS UND PRESTIGE","Exklusive Möglichkeiten: Luxusimmobilien, Supersportwagen, Privatjets, Yachten, Uhren, Schmuck, Kunst und Sammlerstücke."]
+    },
+    pt: {
+      label:"Português", choose:"Bem-vindo! Primeiro escolha o seu idioma para que eu possa cumprimentá-lo corretamente.",
+      heading:"Escolha o seu idioma", hint:"Selecione uma bandeira para continuar no seu idioma.",
+      welcome:"Olá! Sou o ZOVARO Worldwide. Procura um produto, um emprego urgente ou algo exclusivo, como uma obra de arte ou um artigo de luxo? Conte-me o que precisa e vou ajudar a explorar as oportunidades disponíveis. Pode fechar a apresentação e navegar livremente pela página inicial.",
+      change:"Mudar idioma", reopen:"Idioma",
+      home:["Descubra melhor. Compre de forma inteligente. Descubra oportunidades de trabalho.","Novo e usado","Encontre em todo o mundo eletrônicos, moda, beleza, perfumes, cosméticos, automóveis, artigos esportivos e muito mais.","Empregos urgentes e profissionais","Encontre uma oportunidade adequada às suas competências ou a pessoa certa para o seu negócio. Descubra vagas e profissionais na ZOVARO.","ZOVARO WORLDWIDE · COLEÇÃO PRIVADA","LUXO E PRESTÍGIO","Oportunidades exclusivas: imóveis, supercarros, aviação privada, iates, relógios, joias, arte e colecionáveis."]
+    },
+    ar: {
+      label:"العربية", choose:"مرحباً! اختر لغتك أولاً حتى أتمكن من الترحيب بك بشكل صحيح.",
+      heading:"اختر لغتك", hint:"اختر علماً للمتابعة بلغتك.",
+      welcome:"مرحباً! أنا ZOVARO Worldwide. هل تبحث عن منتج أو وظيفة عاجلة أو شيء مميز مثل عمل فني أو سلعة فاخرة؟ أخبرني بما تحتاج إليه وسأساعدك في استكشاف الفرص المتاحة. يمكنك إغلاق رسالة الترحيب وتصفح الصفحة الرئيسية بحرية.",
+      change:"تغيير اللغة", reopen:"اللغة",
+      home:["اكتشف الأفضل. تسوّق بذكاء. اكتشف فرص العمل.","جديد ومستعمل","اكتشف الإلكترونيات والأزياء والجمال والعطور ومستحضرات التجميل والسيارات والرياضة وغير ذلك حول العالم.","وظائف عاجلة وعاملون","اعثر على فرصة تناسب مهاراتك أو الشخص المناسب لعملك. اكتشف الوظائف والمهنيين على ZOVARO.","ZOVARO WORLDWIDE · مجموعة خاصة","الفخامة والتميز","فرص حصرية في العقارات الفاخرة والسيارات الخارقة والطيران الخاص واليخوت والساعات والمجوهرات والفنون والمقتنيات."]
+    },
+    hi: {
+      label:"हिन्दी", choose:"स्वागत है! पहले अपनी भाषा चुनें ताकि मैं आपका सही भाषा में स्वागत कर सकूँ।",
+      heading:"अपनी भाषा चुनें", hint:"अपनी भाषा में आगे बढ़ने के लिए झंडा चुनें।",
+      welcome:"नमस्ते! मैं ZOVARO Worldwide हूँ। क्या आप कोई उत्पाद, तुरंत नौकरी या कोई खास चीज़ जैसे कलाकृति या लग्ज़री वस्तु खोज रहे हैं? बताइए आपको क्या चाहिए, मैं उपलब्ध अवसर खोजने में मदद करूँगा। आप स्वागत संदेश बंद करके होम पेज पर स्वतंत्र रूप से जा सकते हैं।",
+      change:"भाषा बदलें", reopen:"भाषा",
+      home:["बेहतर खोजें। समझदारी से खरीदें। नौकरी के अवसर खोजें।","नया और पुराना","दुनिया भर में इलेक्ट्रॉनिक्स, फैशन, ब्यूटी, परफ्यूम, कॉस्मेटिक्स, ऑटोमोटिव, खेल और बहुत कुछ खोजें।","तत्काल नौकरियाँ और कर्मचारी","अपने कौशल के अनुसार अवसर या अपने व्यवसाय के लिए सही व्यक्ति खोजें। ZOVARO पर नौकरियाँ और पेशेवर खोजें।","ZOVARO WORLDWIDE · निजी संग्रह","लक्ज़री और प्रतिष्ठा","विशेष अवसर: प्रीमियम संपत्तियाँ, सुपरकार, निजी विमान, यॉट, घड़ियाँ, आभूषण, कला और संग्रहणीय वस्तुएँ।"]
+    },
+    zh: {
+      label:"中文", choose:"欢迎！请先选择您的语言，这样我才能用正确的语言向您问候。",
+      heading:"选择您的语言", hint:"选择一面旗帜，以您的语言继续。",
+      welcome:"您好！我是 ZOVARO Worldwide。您正在寻找商品、紧急工作机会，还是艺术品或奢侈品等独特物品？告诉我您的需求，我会帮您探索现有机会。您也可以关闭欢迎信息，自由浏览主页。",
+      change:"更改语言", reopen:"语言",
+      home:["发现更好选择，购物更明智。探索工作机会。","全新与二手","在全球寻找电子产品、时尚、美妆、香水、汽车用品、运动用品等。","紧急职位与人才","寻找适合您技能的机会，或为您的企业找到合适的人才。在 ZOVARO 探索职位与专业人才。","ZOVARO WORLDWIDE · 私人精选","奢华与尊贵","尊享机会：高端房产、超级跑车、私人航空、游艇、名表、珠宝、艺术品与收藏品。"]
+    },
+    ja: {
+      label:"日本語", choose:"ようこそ。最初に言語を選択してください。選択した言語でご案内します。",
+      heading:"言語を選択", hint:"旗を選択して、ご希望の言語で続行してください。",
+      welcome:"こんにちは。ZOVARO Worldwideです。商品、急募の仕事、または芸術作品や高級品のような特別なものをお探しですか？必要なものを教えてください。利用可能な機会を探すお手伝いをします。歓迎メッセージを閉じて、ホームページを自由に閲覧することもできます。",
+      change:"言語を変更", reopen:"言語",
+      home:["より良い発見を。賢いショッピングを。仕事の機会も見つけよう。","新品・中古","世界中から電子機器、ファッション、美容、香水、自動車用品、スポーツ用品などを探せます。","急募の仕事・人材","スキルに合う仕事や、ビジネスに最適な人材を見つけましょう。ZOVAROで求人と専門家を探せます。","ZOVARO WORLDWIDE · プライベートコレクション","ラグジュアリー＆プレステージ","高級不動産、スーパーカー、プライベート航空、ヨット、高級時計、ジュエリー、アート、コレクターズアイテム。"]
+    }
   };
-  close.addEventListener("click", hide);
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && !backdrop.hidden) hide();
+
+  function getCopy(code) { return copy[code] || copy.en; }
+
+  function applyHomepageLanguage(code) {
+    const data = getCopy(code).home;
+    const set = (selector, value) => {
+      const el = document.querySelector(selector);
+      if (el) el.textContent = value;
+    };
+    set(".brand-tagline", data[0]);
+    set(".shop-card .main-card-subtitle", data[1]);
+    set(".shop-card .main-card-description", data[2]);
+    set(".job-card .main-card-subtitle", data[3]);
+    set(".job-card .main-card-description", data[4]);
+    set(".luxury-feature-kicker", data[5]);
+    set(".luxury-feature-title", data[6]);
+    set(".luxury-feature-copy", data[7]);
+    document.documentElement.lang = code;
+    document.documentElement.dir = code === "ar" ? "rtl" : "ltr";
+  }
+
+  function showLanguagePicker() {
+    languageScreen.hidden = false;
+    welcomeScreen.hidden = true;
+    backdrop.hidden = false;
+    reopenButton.classList.remove("visible");
+  }
+
+  function showWelcome(code) {
+    const data = getCopy(code);
+    welcomeText.textContent = data.welcome;
+    changeLabel.textContent = data.change;
+    reopenLabel.textContent = data.label;
+    chooseCopy.textContent = data.choose;
+    languageHeading.textContent = data.heading;
+    languageHint.textContent = data.hint;
+    languageScreen.hidden = true;
+    welcomeScreen.hidden = false;
+    backdrop.hidden = false;
+    reopenButton.classList.remove("visible");
+    applyHomepageLanguage(code);
+  }
+
+  function closeWelcome() {
+    backdrop.hidden = true;
+    reopenButton.classList.add("visible");
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const code = button.dataset.zvLanguage || "en";
+      try { localStorage.setItem(STORAGE_KEY, code); } catch (_) {}
+      showWelcome(code);
+    });
   });
-  backdrop.hidden = false;
+
+  changeButton.addEventListener("click", showLanguagePicker);
+  closeButton.addEventListener("click", closeWelcome);
+  reopenButton.addEventListener("click", () => {
+    let saved = "";
+    try { saved = localStorage.getItem(STORAGE_KEY) || ""; } catch (_) {}
+    if (saved && copy[saved]) showWelcome(saved);
+    else showLanguagePicker();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !backdrop.hidden) closeWelcome();
+  });
+
+  let savedLanguage = "";
+  try { savedLanguage = localStorage.getItem(STORAGE_KEY) || ""; } catch (_) {}
+  if (savedLanguage && copy[savedLanguage]) showWelcome(savedLanguage);
+  else showLanguagePicker();
 })();
