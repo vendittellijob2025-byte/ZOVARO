@@ -105,6 +105,36 @@ for (const category of categories) {
 }
 
 const emptyCategories = categories.filter(category => category.productCount === 0).map(category => category.name);
+const productExample = product => ({
+  title: String(product.englishTitle || product.title || product.name || "").slice(0, 220),
+  brand: String(product.brand || "").slice(0, 100),
+  advertiser: String(product.advertiserName || "").slice(0, 120),
+  productType: String(product.productType || "").slice(0, 160),
+  googleProductCategory: String(product.googleProductCategory || "").slice(0, 180),
+  sourceCategory: String(product.sourceCategory || "").slice(0, 180),
+  description: String(product.description || product.longDescription || "").slice(0, 220)
+});
+const otherExamples = products
+  .filter(product => String(product.englishCategory || product.category || "").trim() === "Other")
+  .slice(0, 150)
+  .map(productExample);
+const missingSubcategoryExamples = products
+  .filter(product => {
+    const category = String(product.englishCategory || product.category || "").trim();
+    const subcategory = String(product.englishSubcategory || product.subcategory || "").trim();
+    return byName.has(category) && (!subcategory || subcategory === "Other");
+  })
+  .slice(0, 150)
+  .map(product => ({
+    ...productExample(product),
+    category: String(product.englishCategory || product.category || "").trim()
+  }));
+const otherByAdvertiser = new Map();
+for (const product of products) {
+  if (String(product.englishCategory || product.category || "").trim() !== "Other") continue;
+  const advertiser = String(product.advertiserName || "(unknown advertiser)");
+  otherByAdvertiser.set(advertiser, (otherByAdvertiser.get(advertiser) || 0) + 1);
+}
 const result = {
   generatedAt: new Date().toISOString(),
   selectedProductCount: products.length,
@@ -129,7 +159,10 @@ const result = {
       productsWithBrowseNodeId: productsWithAmazonBrowseNodeId,
       pendingReference: pendingAmazonReference
     },
-    mostUsedBrowsePaths: [...subcategoryCounts].map(([path, count]) => ({ path, productCount: count })).sort((a,b) => b.productCount - a.productCount).slice(0, 100)
+    mostUsedBrowsePaths: [...subcategoryCounts].map(([path, count]) => ({ path, productCount: count })).sort((a,b) => b.productCount - a.productCount).slice(0, 100),
+    otherByAdvertiser: [...otherByAdvertiser].map(([advertiser, count]) => ({ advertiser, productCount: count })).sort((a,b) => b.productCount - a.productCount).slice(0, 30),
+    otherExamples,
+    missingSubcategoryExamples
   },
   productCompleteness: {
     withTrackedHttpsLinks: productsWithTrackedLinks,
