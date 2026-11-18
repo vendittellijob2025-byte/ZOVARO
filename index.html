@@ -1311,6 +1311,28 @@ footer{
 /* ZOVARO AI language gate and homepage assistant */
 .zovaro-ai-backdrop{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:16px;background:rgba(2,8,22,.84);backdrop-filter:blur(12px)}
 .zovaro-ai-backdrop[hidden],.zovaro-ai-screen[hidden]{display:none!important}
+.zovaro-ai-robot-stage{display:flex;align-items:center;justify-content:center;gap:22px;max-width:560px;margin:0 auto 18px;min-height:158px}
+.zovaro-ai-robot{position:relative;width:124px;height:142px;flex:0 0 124px;filter:drop-shadow(0 0 18px rgba(35,190,255,.32));animation:zvRobotFloat 3.6s ease-in-out infinite}
+.zovaro-ai-robot .zv-antenna{position:absolute;top:0;left:60px;width:4px;height:18px;border-radius:4px;background:#54d9ff}
+.zovaro-ai-robot .zv-antenna:after{content:"";position:absolute;top:-5px;left:-4px;width:12px;height:12px;border-radius:50%;background:#ffcf64;box-shadow:0 0 12px #ffcf64}
+.zovaro-ai-robot .zv-head{position:absolute;top:17px;left:13px;width:98px;height:76px;border:3px solid #72dfff;border-radius:25px 25px 22px 22px;background:linear-gradient(145deg,#eafaff,#8fbad2);box-shadow:inset 0 -8px 15px rgba(10,53,87,.22),0 0 20px rgba(35,190,255,.25)}
+.zovaro-ai-robot .zv-face{position:absolute;inset:13px 12px 17px;border-radius:15px;background:linear-gradient(145deg,#07182c,#102f4e);display:flex;align-items:center;justify-content:center;gap:18px}
+.zovaro-ai-robot .zv-eye{width:12px;height:16px;border-radius:50%;background:#56e3ff;box-shadow:0 0 12px #39d8ff;animation:zvRobotBlink 4.8s infinite}
+.zovaro-ai-robot .zv-mouth{position:absolute;bottom:8px;left:39px;width:18px;height:4px;border-radius:5px;background:#ffcf64}
+.zovaro-ai-robot .zv-ear{position:absolute;top:43px;width:10px;height:25px;border-radius:7px;background:#4ba9d9;border:2px solid #a9efff}
+.zovaro-ai-robot .zv-ear.left{left:5px}.zovaro-ai-robot .zv-ear.right{right:5px}
+.zovaro-ai-robot .zv-body{position:absolute;left:29px;top:98px;width:66px;height:42px;border:3px solid #72dfff;border-radius:15px 15px 19px 19px;background:linear-gradient(145deg,#d8f5ff,#5596bd)}
+.zovaro-ai-robot .zv-core{position:absolute;left:22px;top:10px;width:16px;height:16px;border:3px solid #fff;border-radius:50%;background:#19caff;box-shadow:0 0 12px #1bcfff}
+.zovaro-ai-robot .zv-arm{position:absolute;top:105px;width:10px;height:30px;border-radius:8px;background:#77c7e8}
+.zovaro-ai-robot .zv-arm.left{left:17px;transform:rotate(18deg)}.zovaro-ai-robot .zv-arm.right{right:17px;transform:rotate(-18deg)}
+.zovaro-ai-robot .zv-orbit{position:absolute;inset:20px -4px 12px;border:1px solid rgba(94,220,255,.65);border-radius:50%;transform:rotate(-22deg);pointer-events:none}
+.zovaro-ai-robot .zv-orbit:after{content:"";position:absolute;right:10px;top:8px;width:9px;height:9px;border-radius:50%;background:#ffcf64;box-shadow:0 0 12px #ffcf64}
+.zovaro-ai-robot-copy{text-align:left;max-width:260px}
+.zovaro-ai-robot-copy strong{display:block;color:#f5fbff;font:700 clamp(20px,3vw,28px)/1.05 "Space Grotesk",sans-serif;letter-spacing:.03em}
+.zovaro-ai-robot-copy span{display:block;margin-top:9px;color:#a9c5de;font-size:12px;line-height:1.55}
+@keyframes zvRobotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes zvRobotBlink{0%,44%,48%,100%{transform:scaleY(1)}46%{transform:scaleY(.12)}}
+@media(max-width:560px){.zovaro-ai-robot-stage{gap:12px;min-height:135px}.zovaro-ai-robot{transform:scale(.86);margin:-8px -8px}.zovaro-ai-robot-copy{max-width:190px}.zovaro-ai-robot-copy span{font-size:11px}}
 .zovaro-ai-panel{position:relative;width:min(760px,100%);max-height:92vh;overflow:auto;padding:clamp(22px,4vw,38px);border:1px solid rgba(71,190,255,.5);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(27,125,211,.24),transparent 48%),linear-gradient(145deg,#101e35,#07111f 72%);box-shadow:0 30px 100px rgba(0,0,0,.6),0 0 45px rgba(35,173,255,.16);color:#f5f9ff;text-align:center}
 .zovaro-ai-close{position:absolute;top:12px;right:13px;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
 .zovaro-ai-kicker{color:#67dcff;font-size:10px;font-weight:900;letter-spacing:.2em}
@@ -2779,9 +2801,19 @@ document
   <section class="zovaro-ai-panel">
     <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
     <div id="zovaroAiLanguages" class="zovaro-ai-screen">
-      <div class="zovaro-ai-kicker">ZOVARO WORLDWIDE</div>
+      <div class="zovaro-ai-kicker">MEET YOUR GLOBAL DISCOVERY GUIDE</div>
+      <div class="zovaro-ai-robot-stage" role="img" aria-label="Animated ZOVARO Worldwide AI robot assistant">
+        <div class="zovaro-ai-robot" aria-hidden="true">
+          <span class="zv-antenna"></span><span class="zv-orbit"></span>
+          <span class="zv-ear left"></span><span class="zv-ear right"></span>
+          <span class="zv-head"><span class="zv-face"><i class="zv-eye"></i><i class="zv-eye"></i><b class="zv-mouth"></b></span></span>
+          <span class="zv-arm left"></span><span class="zv-arm right"></span>
+          <span class="zv-body"><i class="zv-core"></i></span>
+        </div>
+        <div class="zovaro-ai-robot-copy"><strong>ZOVARO WORLDWIDE</strong><span>Your intelligent global discovery assistant for products, services, opportunities and more.</span></div>
+      </div>
       <h2 class="zovaro-ai-title" id="zovaroAiTitle">CHOOSE YOUR LANGUAGE</h2>
-      <p class="zovaro-ai-intro">Select your country's flag. ZOVARO's assistant will then ask what you need and search the connected listings.</p>
+      <p class="zovaro-ai-intro">Select your language. ZOVARO Worldwide will help you explore products, services and opportunities from around the world.</p>
       <div class="zovaro-ai-flags" aria-label="Choose interface language">
         <button type="button" class="zovaro-ai-language" data-zv-language="en"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" width="32" height="24" alt="" loading="eager" decoding="async"><small>English</small></button>
         <button type="button" class="zovaro-ai-language" data-zv-language="en"><img class="zovaro-ai-flag-image" src="https://flagcdn.com/w40/us.png" srcset="https://flagcdn.com/w80/us.png 2x" width="32" height="24" alt="" loading="eager" decoding="async"><small>English (US)</small></button>
