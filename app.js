@@ -874,60 +874,51 @@ function expandSearchTerms(query) {
 }
 
 function scoreProductSearch(product, queryVariants) {
-  const normalizedQueries = queryVariants.map(normalizeSearchText);
-  const broadPhoneIntent = normalizedQueries.some(query => {
-    const words = query.split(/\s+/).filter(Boolean);
-    return words.length > 0 &&
-      words.every(word => ["cellulare","cellulari","telefono","telefoni","phone","phones","smartphone","smartphones","mobile","mobiles","cell","cells"].includes(word));
-  });
-  if (broadPhoneIntent) {
-    const productIdentity = normalizeSearchText([
-      product.name, product.title, product.englishTitle, product.brand
-    ].join(" "));
-    const phoneAccessory = /\b(case|cover|mount|holder|clamp|adapter|charger|charging|cable|screen protector|earbuds|headphones|headset|stand|dock|tripod|carplay|replacement|repair|battery|lens|grip)\b/.test(productIdentity);
-    const actualPhone = /\b(iphone|galaxy|pixel|smartphone|mobile phone|cell phone|oneplus|xiaomi|redmi|motorola|oppo|vivo|huawei|honor|nokia|xperia|zenfone|realme|nothing phone|phone)\b/.test(productIdentity);
-    if (phoneAccessory || !actualPhone) return 0;
-  }
-  const primaryFields = [
-    product.name, product.title, product.englishTitle, product.brand,
-    product.category, product.englishCategory, product.subcategory,
-    product.englishSubcategory, product.merchant, product.advertiserName
-  ];
-  const primaryText = normalizeSearchText(primaryFields.join(" "));
-  const primaryWords = new Set(primaryText.split(/\s+/));
-  const descriptionText = normalizeSearchText(product.description || product.englishDescription || "");
+  // A search result must match the product identity or its catalog taxonomy.
+  // Brand, merchant and free-form descriptions are deliberately excluded:
+  // they can mention unrelated terms and create false positives.
+  const titleText = normalizeSearchText([
+    product.name, product.title, product.englishTitle
+  ].join(" "));
+  const taxonomyText = normalizeSearchText([
+    product.category, product.englishCategory,
+    product.subcategory, product.englishSubcategory
+  ].join(" "));
+  const titleWords = new Set(titleText.split(/\\s+/).filter(Boolean));
+  const taxonomyWords = new Set(taxonomyText.split(/\\s+/).filter(Boolean));
   let best = 0;
 
   for (const query of queryVariants) {
     const normalized = normalizeSearchText(query);
     if (!normalized) continue;
-    if (primaryText.includes(normalized)) {
-      best = Math.max(best, 120 + normalized.length);
-      continue;
-    }
-    const queryWords = normalized.split(/\s+/).filter(word => word.length > 1);
+    const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
     if (!queryWords.length) continue;
-    const alternativesByWord = queryWords.map(word => [
-      word, ...(SEARCH_SYNONYMS[word] || "").split(/\s+/).filter(Boolean)
-    ]);
-    const matchedPrimary = alternativesByWord.filter(alternatives =>
-      alternatives.some(alternative => primaryWords.has(alternative))
-    ).length;
-    if (matchedPrimary === queryWords.length) {
-      best = Math.max(best, 90 + matchedPrimary);
+
+    // Each requested word may be satisfied by an exact translation/synonym.
+    // All words in a multi-word request must match; no partial broad matches.
+    const matched = queryWords.map(word => {
+      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
+      const inTitle = alternatives.some(term => titleWords.has(term));
+      const inTaxonomy = alternatives.some(term => taxonomyWords.has(term));
+      return { inTitle, inTaxonomy, matched: inTitle || inTaxonomy };
+    });
+
+    if (matched.every(item => item.matched)) {
+      const titleMatches = matched.filter(item => item.inTitle).length;
+      const taxonomyMatches = matched.filter(item => item.inTaxonomy).length;
+      best = Math.max(best, 100 + titleMatches * 10 + taxonomyMatches * 3);
       continue;
     }
 
-    // For a single category/product word, allow the description as a fallback
-    // (useful when partner feeds place the translated term in product copy).
-    // Multi-word model searches remain title/category strict to avoid accessory hits.
-    const phoneIntent = alternativesByWord.some(alternatives =>
-      alternatives.some(term => ["phone","phones","smartphone","smartphones","mobile","mobiles","iphone"].includes(term))
-    );
-    if (queryWords.length === 1 && !phoneIntent) {
-      const alternatives = alternativesByWord[0];
-      if (alternatives.some(alternative => descriptionText.split(" ").includes(alternative))) {
-        best = Math.max(best, 45);
+    // A one-word query can match a whole product title/category phrase
+    // (e.g. "TV" in "Smart TV 55 inch"), but not a description or merchant.
+    if (queryWords.length === 1) {
+      const word = queryWords[0];
+      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
+      if (alternatives.some(term =>
+        titleText.split(" ").includes(term) || taxonomyText.split(" ").includes(term)
+      )) {
+        best = Math.max(best, 100);
       }
     }
   }
