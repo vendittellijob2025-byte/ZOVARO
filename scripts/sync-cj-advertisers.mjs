@@ -380,6 +380,13 @@ function makeCatalogProduct(product, advertiser) {
     category,
     subcategory,
     englishSubcategory: subcategory,
+    // Amazon reference is deliberately explicit: the current CJ feed does not
+    // provide an Amazon browse-node ID, so never claim Amazon verification.
+    amazonBrowsePath: "",
+    amazonBrowseNodeId: "",
+    amazonReferenceStatus: "pending_amazon_reference",
+    classificationStatus: category === "Other" || subcategory === "Other" ? "needs_classification" : "provisional",
+    classificationBasis: "CJ product title, description, and available source category; awaiting Amazon browse-path verification",
     imageLink,
     additionalImageLinks: Array.isArray(product.additionalImageLink) ? product.additionalImageLink.map(cleanUrl).filter(Boolean) : [],
     destination,
