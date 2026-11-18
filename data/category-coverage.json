@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-18T23:35:35.628Z",
+  "generatedAt": "2026-11-18T23:42:00.492Z",
   "selectedProductCount": 19405,
-  "inventoryProductCount": 201045,
+  "inventoryProductCount": 200985,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -1751,8 +1751,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1876,
-      "unclassifiedProductCount": 690,
+      "productCount": 1874,
+      "unclassifiedProductCount": 689,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1900,7 +1900,7 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 130,
+          "productCount": 129,
           "directProductCount": 43,
           "children": [
             {
@@ -1976,8 +1976,8 @@
             {
               "name": "Serums & Essences",
               "path": "Skincare > Serums & Essences",
-              "productCount": 75,
-              "directProductCount": 75,
+              "productCount": 74,
+              "directProductCount": 74,
               "children": []
             }
           ]
@@ -2508,8 +2508,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 331,
-      "unclassifiedProductCount": 121,
+      "productCount": 330,
+      "unclassifiedProductCount": 120,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -3180,13 +3180,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 1046,
-          "directProductCount": 57,
+          "directProductCount": 64,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 307,
-              "directProductCount": 307,
+              "productCount": 301,
+              "directProductCount": 301,
               "children": []
             },
             {
@@ -3234,8 +3234,8 @@
             {
               "name": "Slippers",
               "path": "Shoes > Slippers",
-              "productCount": 90,
-              "directProductCount": 90,
+              "productCount": 89,
+              "directProductCount": 89,
               "children": []
             }
           ]
@@ -5637,8 +5637,8 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 45,
-      "unclassifiedProductCount": 42,
+      "productCount": 46,
+      "unclassifiedProductCount": 43,
       "browseTree": [
         {
           "name": "Office Supplies",
@@ -9828,20 +9828,20 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1755,
+  "otherProductCount": 1757,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1755
+      "count": 1757
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1337,
     "usedTaxonomyNodeCount": 203,
     "emptyTaxonomyNodeCount": 1134,
-    "productsWithKnownSubcategory": 11994,
+    "productsWithKnownSubcategory": 11993,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 7411,
+    "productsWithoutSubcategory": 7412,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -9857,7 +9857,7 @@
       },
       {
         "category": "Beauty",
-        "count": 690
+        "count": 689
       },
       {
         "category": "Sports",
@@ -9881,7 +9881,7 @@
       },
       {
         "category": "Electronics",
-        "count": 121
+        "count": 120
       },
       {
         "category": "Pets",
@@ -9897,7 +9897,7 @@
       },
       {
         "category": "Office & Technology",
-        "count": 42
+        "count": 43
       },
       {
         "category": "Luxury & Prestige",
@@ -9937,8 +9937,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 7411,
-      "provisional": 11994
+      "needs_classification": 7412,
+      "provisional": 11993
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -9984,7 +9984,7 @@
       },
       {
         "path": "Fashion > Shoes > Sneakers",
-        "productCount": 307
+        "productCount": 301
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
@@ -10076,7 +10076,7 @@
       },
       {
         "path": "Fashion > Shoes > Slippers",
-        "productCount": 90
+        "productCount": 89
       },
       {
         "path": "Beauty > Makeup > Eye Makeup",
@@ -10088,19 +10088,19 @@
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
-        "productCount": 75
+        "productCount": 74
       },
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
         "productCount": 68
       },
       {
-        "path": "Pets > Cats",
-        "productCount": 59
+        "path": "Fashion > Shoes",
+        "productCount": 64
       },
       {
-        "path": "Fashion > Shoes",
-        "productCount": 57
+        "path": "Pets > Cats",
+        "productCount": 59
       },
       {
         "path": "Books & Media > Music",
@@ -10345,6 +10345,2898 @@
       {
         "path": "Business, Wholesale & Bulk Supply > Retail & Hospitality Supplies > Cleaning & Janitorial",
         "productCount": 3
+      }
+    ],
+    "otherByAdvertiser": [
+      {
+        "advertiser": "Allegro.pl",
+        "productCount": 1115
+      },
+      {
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productCount": 305
+      },
+      {
+        "advertiser": "Perfumania.com",
+        "productCount": 206
+      },
+      {
+        "advertiser": "Amore Mall",
+        "productCount": 102
+      },
+      {
+        "advertiser": "FRP Moto  Affiliate",
+        "productCount": 17
+      },
+      {
+        "advertiser": "UNice",
+        "productCount": 7
+      },
+      {
+        "advertiser": "Rexing",
+        "productCount": 3
+      },
+      {
+        "advertiser": "Adblockultimate.net",
+        "productCount": 1
+      },
+      {
+        "advertiser": "Soundcore",
+        "productCount": 1
+      }
+    ],
+    "otherExamples": [
+      {
+        "title": "Rexing Installation Service",
+        "brand": "Rexing",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "body:has(#rexing-installation-draft) #MainPaymentContainer,body:has(#rexing-installation-draft) [data-product-price-list],body:has(#rexing-installation-draft) .product-form__option"
+      },
+      {
+        "title": "UNICE $99 Surprise Box -- Valued $330",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "UNICE $99 Surprise Box -- Valued $330"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Europe XXL Political and Road Wall Map MI",
+        "brand": "Maps International",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h2>EUROPA XXL MAPA ŚCIENNA POLITYCZNA I DROGOWA MI</h2>\n<p>Polityczno-drogowa mapa ścienna Europy w skali 1:3 200 000. Cieniowaniem zaznaczono ukształtowanie terenu. Żywe, wyrazis"
+      },
+      {
+        "title": "AdBlocker Ultimate for Windows",
+        "brand": "AdBlocker Ultimate",
+        "advertiser": "Adblockultimate.net",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ad-free and tracker-free browsing with full-featured premium protection."
+      },
+      {
+        "title": "Rexing Installation Service",
+        "brand": "Rexing",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "body:has(#rexing-installation-draft) #MainPaymentContainer,body:has(#rexing-installation-draft) [data-product-price-list],body:has(#rexing-installation-draft) .product-form__option"
+      },
+      {
+        "title": "UNice Plus VIP Exclusive Link (Unlock More Benefits)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "$15 OFF for first 2 orders&Extra 2% OFF each order&72-Hrs delivery&30 Days no reason return and free return label&Points redeem hair"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "25mm plastic buckle, 3-point Duraflex clasp",
+        "brand": "Kacperek",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1> Klamra plastikowa 25 mm z Duraflexu&#xa0; </h1>\n<p>Klamra przystosowana do pasa lub taśmy o szerokości 25 mm.</p>\n<p>Klamra ma mocne 3 punktowe zapięcie.</p>\n<p>Jest wykonana "
+      },
+      {
+        "title": "Espoir Fresh Setting Powder",
+        "brand": "espoir",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Lightweight powder particles form a thin powdery layer over the skin and remove excessive sebum"
+      },
+      {
+        "title": "Chrome By Azzaro And Versace Pour Homme By Versace - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "Rexing Installation Service",
+        "brand": "Rexing",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "body:has(#rexing-installation-draft) #MainPaymentContainer,body:has(#rexing-installation-draft) [data-product-price-list],body:has(#rexing-installation-draft) .product-form__option"
+      },
+      {
+        "title": "[US Only] $100 OFF Coupon (over $200 and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $100 OFF Coupon (over $200 and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Pride And Prejudice Jane Austen",
+        "brand": "Vintage",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
+      },
+      {
+        "title": "OSULLOC Samdayeon Original Milk Tea (10 sticks)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Divine Youth Oil by LOccitane for Unisex - 1 oz Oil - Default Title",
+        "brand": "LOccitane",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It has seven natural plant oils that are selected for their high concentration of essential fatty acids and nutrients, its lightweight and silky texture melts seamlessly into the s"
+      },
+      {
+        "title": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Pride And Prejudice Jane Austen",
+        "brand": "Vintage",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
+      },
+      {
+        "title": "OSULLOC Camellia Forest Tea (20 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Nectifirm Advanced Cream by Revision for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "Revision",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A proprietary blend of 8 distinctive peptides to lessen the look of fine lines and wrinkles. Lingonberry extract helps the skin enhance its own antioxidant system."
+      },
+      {
+        "title": "[US Only] UNice Plus VIP (90 Days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] UNice Plus VIP (90 Days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "How to set up an online store? Krzysztof Bartnik",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Witamy w oficjalnym sklepie OSMPower ✅</h1> <h1>Jak założyć sklep internetowy? - Krzysztof Bartnik</h1>\n<p>Zbuduj swój wymarzony sklep internetowy w oparciu o wiedzę praktyków!"
+      },
+      {
+        "title": "Instant Firmx Temporary Face Tightener by Peter Thomas Roth for Unisex - 3.4 oz Cream - Default Title",
+        "brand": "Peter Thomas Roth",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Temporarily tighten your skin instantly these agents work beneath the skins surface to help tighten, firm and smooth the appearance of fine lines, deep wrinkles and pores."
+      },
+      {
+        "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Clinique Smart Custom-Repair Eye Treatment by Clinique for Women - 0.5 oz Treatment - Default Title",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This treatment targets all visible signs of aging in the delicate eye area. It visibly brightens, contours and firms while reducing the appearance of lines, and wrinkles."
+      },
+      {
+        "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "DermaFood Cellular Eye Perfecting Cream by LashFood for Unisex - 0.51 oz Cream - 0.51  oz.",
+        "brand": "LashFood",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This cream is clinically proven to erase fine lines, wrinkles, and dark circles and gives the appearance of a younger and firmer looking eye area. It is suitable for all skin types"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Sensiderm Cream by G.M. Collin for Unisex - 1.7 oz Cream - 1.7 oz.",
+        "brand": "G.M. Collin",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A gentle, calming cream for fragile and irritated skin. Natural extracts and botanical blends provide a soothing effect while reducing redness in the skin. A silky formulation that"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "9PM Black Gift Set - 3.4 oz.",
+        "brand": "Afnan",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Afnan 9PM Black Gift Set is a fragrant tribute to the hours when the world comes alive - bold, warm, and perfectly timed for the evening. Bergamot, lavandin, cinnamon, and apple cr"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Romance by Ralph Lauren and Yellow Diamond by Versace and Acqua Di Gioia by Giorgio Armani - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Extra-Firming Day Wrinkle Control Firming Rich Cream - Dry Skin by Clarins for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "Clarins",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A day cream that provides a complete firming action thanks to kangaroo flower extract a new plant discovery known for its regenerating power to visibly lift and minimize wrinkles."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Ultimate Miracle Worker by Philosophy for Unisex - 2 Pc Set 2oz Multi-Rejuvenating Retinol and Superf - Default Title",
+        "brand": "Philosophy",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The power of pure retinol is combined with a natural retinol-like complex powered by alfalfa extract and nourishing superfood oils for an efficacious formula"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Bvlgari Omnia Collection by Bvlgari for Women - 3 Pc Mini Gift Set - Default Title",
+        "brand": "Bvlgari",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Launched by the house of Bvlgari Man in the year 2010. This woody aromatic formula has a blend of Pink grapefruit,cactus juice, middle notes of Benzion,calabrian bergamot and Base "
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Maximum Hydrator Activated Water-Gel Concentrate by Clinique for Men - 1.6 oz Treatment - 1.6 oz.",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Removes dirt and excess oil while preventing moisture loss. produces creamy rich lather and mild to skin. can be used as a shaving foam for comfortable close shave. leaves skin cle"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Tan Remover Mousse by St. Tropez for Unisex - 6.7 oz Mousse - 6.7 oz.",
+        "brand": "St. Tropez",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The quickest and easiest way to remove mistakes or tan build up and prime skin for a fresh tan application. Suitable for even sensitive skin, this luxurious foam effectively remove"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Prevage City Smart Double Action Detox Peel Off Mask by Elizabeth Arden for Women - 2.5 oz Mask - 2.5 oz.",
+        "brand": "Elizabeth Arden",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It acts like a liquid magnet to lift and remove impurities instantly while resurfacing skin and enhancing its natural detoxification system. Peel to reveal a brighter, smoother, vi"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Thirstymud Hydrating Treatment by Glamglow for Unisex - 0.5 oz Treatment - 0.5 oz.",
+        "brand": "Glamglow",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This perfects skin by treating the four aggravating factors hydration, energy, skin glow, wrinkles and firmness. The skin appears soft, regenerated and sparkling. The face glows wi"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Paris Hilton by Paris Hilton for Men - 4 Pc Gift Set - 4 oz.",
+        "brand": "Paris Hilton",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Launched by the design house of Paris Hilton in the year 2005. This masculine scent has a blend of fig leaf, cucumber, green mango, amber, white sage, cedarwood, and juniper. It is"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Multi-Action Restorative Cream by Strivectin for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "Strivectin",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A luxurious cream with 24 karat gold and intelligent shade sensing sphere technology to enhance luminosity and boost radiance, and colloidal gold to visibly lift and firm."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Ultra Moisture Day Cream by REN for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "REN",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ren ultra moisture day cream is designed with a moisture replenishing complex that provides long-lasting hydration and restores softness to the skin. Fights free radicals and the s"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Barrier Defense Booster by Dermalogica for Unisex - 1 oz Booster - 1 oz.",
+        "brand": "Dermalogica",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It is a concentrated oil booster that soothes, nourishes, and moisturizes to restore balance to sensitive skin and it also nourishes and soothes irritated skin."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - White / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Sensuelle By Camille Rochelle And Mon Paris By Yves Saint Laurent - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Tamiya Extra Thin Quick Setting 87182 Klej 40ml",
+        "brand": "Tamiya",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>TAMIYA - EXTRA THIN</h1><p><b>QUICK SETTING - SPECJALNA WERSJA: PRZYSPIESZONE WIĄZANIE!</b></p><h1>Klej z pędzelkiem do modeli plastikowych.</h1><p><b>40ml - DUŻY i bardzo WYDA"
+      },
+      {
+        "title": "Dr. Andrew Weil for Origins Mega-Mushroom Skin Relief by Origins for Women - 6.7 oz Treatment - 6.7 oz.",
+        "brand": "Origins",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This extra-light treatment lotion features, which soothes, comforts, and hydrates skin. This treatemnt helps to defend skin against silent skin agers."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Pomarańcza I Cynamon",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - POMARAŃCZA I CYNAMON </h1><h1>OLEJEK ZAPACHOWY POMARAŃCZA I CYNAMON 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zde"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Black / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Voyage (Refillable) - 1.18 oz.",
+        "brand": "Hermes",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Understated travel rather than a fixed, singular destination defines this Voyage Refillable fragrance from Hermes, built around movement itself. Cardamom, Amalfi lemon, assorted sp"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.12",
+        "brand": "Marko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.12</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
+      },
+      {
+        "title": "Cocoa Butter Eventone Fade Cream by Palmers for Unisex - 2.7 oz Cream - Default Title",
+        "brand": "Palmers",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This cream is a great skin lightening cream that helps to fade unwanted discoloration, dark spots or age spots caused by sun damage, aging skin or scarring. It deeply moisturizes a"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.13",
+        "brand": "Marko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.13</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.18",
+        "brand": "Marko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.18</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
+      },
+      {
+        "title": "Daisy Eau So Fresh Gift Set - 4.2 oz.",
+        "brand": "Marc Jacobs",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gift Set Includes: 4.2 oz. Eau de Toilette Spray, 2.5 oz. Body Lotion and 0.33 oz. Travel Size."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.21",
+        "brand": "Marko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.21</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
+      },
+      {
+        "title": "Phyto-Contour Eye Firming Creme by Yonka for Unisex - 0.53 oz Creme - 0.53 oz.",
+        "brand": "Yonka",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This refined, aromatic cream with extracts of rosemary visibly reduces puffiness and dark circles. It restores firmness to the eye and lip contour and provides a feeling of freshne"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.19",
+        "brand": "Marko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.19</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
+      },
+      {
+        "title": "I Peel Lightening Lift Gel Peel Technology by Image for Unisex - 4 oz Treatment - 4 oz.",
+        "brand": "Image",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This highly effective treatment blends lactic and kojic acids with a cocktail of lightening agents to reduce pigmentation and redness caused by rosacea and corrects all forms of pi"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Pg Sox Skarpety Antypoślizgowe Niebieskie r. 37-41",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>PIŁKARSKIE SKARPETY ANTYPOŚLIZGOWE PG SOX</h1><p>Sportowe skarpety PG SOX zapewniają niesamowitą stabilność oraz maksymalnie ograniczają przemieszczanie się stopy w bucie. Wyko"
+      },
+      {
+        "title": "Burberry Touch By Burberry And Burberry By Burberry - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Ładowarka słoneczna telefonu panel słoneczny 42W parasol słoneczny Usb",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>08S42</b> Ładowarka solarna 42W przenośna, składana, nietypowy model</p><p>Haveel 42W. Panel słoneczny. Ładowarka do komórek z 2 USB montaż na parasolu słonecznym plażowym lu"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Blue / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "The Most Wanted Intense Gift Set - 3.38 oz.",
+        "brand": "Azzaro",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Azzaro The Most Wanted Intense Gift Set is the complete experience of masculine desire - an immersive introduction to one of the most compelling modern aromatic colognes. Cardamom "
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Ładowarka słoneczna telefonu panel słoneczny 42W",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>08S42</b> Ładowarka solarna 42W przenośna, składana, nietypowy model</p><p>Haveel 42W. Panel słoneczny. Ładowarka do komórek z 2 USB montaż na parasolu słonecznym plażowym lu"
+      },
+      {
+        "title": "Acne-Clear Invisible Dots by Peter Thomas Roth for Unisex - 72 Clear Dots Acne-Care - 72 Clear Dots",
+        "brand": "Peter Thomas Roth",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Acne-Clear Invisible Dots"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Zima Winter- mała harmonijka",
+        "brand": "Literat",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Sztywno-stronicowa książeczka harmonijkowa z obrazkami i podpisami po polsku i angielsku jest doskonałą pomocą do poznawania otaczającego świata i języka obcego.</p><ul><li><b>O"
+      },
+      {
+        "title": "Stone Crop Hydrating Gel by Eminence for Unisex - 1 oz Gel - 1 oz.",
+        "brand": "Eminence",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This gel gives the skin instant, deep-penetrating moisture that leaves skin with a smooth matte finish. This hydrating gel will soothe, heal, and even skin tone to minimize the app"
+      },
+      {
+        "title": "Breloczek karabińczyk głowa konia zielony",
+        "brand": "Happyross",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze czarnym błyszczącym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet "
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Blue / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Clarifying Lotion 2 by Clinique for Unisex - 13.5 oz Clarifying Lotion - 13.5 oz.",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
+      },
+      {
+        "title": "Czuły narrator. Olga Tokarczuk",
+        "brand": "Wydawnictwo Literackie",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Czuły narrator</h1><ul><li><b>Autor:&#xa0;Tokarczuk&#xa0;Olga</b></li><li><b>EAN:&#xa0;9788308073056</b></li><li><b>Strony:&#xa0;304</b></li><li><b>Oprawa:&#xa0;Twarda</b></li>"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Purple / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Clear Improvement Active Charcoal Mask by Origins for Unisex - 2.5 oz Mask - 2.5 oz.",
+        "brand": "Origins",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This purifying charcoal mask unclogs pores for a perfectly pure look. It deeply detoxes, absorbs environmental toxins and dissolves impurities. It deep clean and draw out deep-dwel"
+      },
+      {
+        "title": "Maria Konopnicka Dzieciom",
+        "brand": "Olesiejuk",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ pt.:</h1><h1>MARIA KONOPNICKA DZIECIOM</h1><h1>AUTOR:</h1><h1>MARIA KONOPNICKA</h1><h1>ILUSTRACJE :</h1><h1>WOJCIECH WEJNER</h1><h1>LICZBA STRON :<"
+      },
+      {
+        "title": "Butter and Scrub - Pomegranate and Fig by Cuccio for Unisex - 4 oz Scrub - Default Title",
+        "brand": "Cuccio",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Indulge your senses with the sweet, fruity aroma of Cuccio Pomegranate and Fig butter scrub. This skin-polishing formula contains lush oils, finely ground sugar crystals, pomegrana"
+      },
+      {
+        "title": "Breloczek karabińczyk głowa konia złoty",
+        "brand": "Happyross",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze złotym matowym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet jeźdz"
+      },
+      {
+        "title": "Brodzińska, Morka, Niesiołowski Pardon Madame",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Brodzińska, Morka, Niesiołowski - Pardon Madame</h1><p><b>1. Co Sie Dzieje, Oszaleje ''Księżniczka Czardasz''</b></p><p><b>2. Pardon Madame ''Victoria i Jej Huzar''</b></p><p><"
+      },
+      {
+        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
+        "brand": "Versace",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
+      },
+      {
+        "title": "Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m",
+        "brand": "Jaxon",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m</h1><p><b>Podbierak Safe marki Jaxon</b></p><p><b>Teleskopowa rączka z twardego aluminium</b>,&nbsp;<b>wzmocn"
+      },
+      {
+        "title": "[BLENDED TEA SET] OSULLOC Sweet Hibiscus & Fig Chocolat & Maron Glace",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Redness Solutions Daily Relief Cream - All Skin Types by Clinique for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Redness Solutions Daily Relief Cream - All Skin Types instantly calms skins with persistent redness. Relieves visible redness, blotchiness. Soothes to cool discomfort. Over time, h"
+      },
+      {
+        "title": "Pakiet Kobieta mojego męża/Sekret Tatiany/Zaginion",
+        "brand": "Mando",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Pakiet Gill Paul</h1><h1>Kobieta mojego męża / Sekret Tatiany/ Zaginiona córka</h1><ul><li><b>Autor:&#xa0;Gill Paul</b></li><li><b>Dostawca:&#xa0;Azymut</b></li><li><b>liczba s"
+      },
+      {
+        "title": "HERA Uv Protector Multi-Defense 50ml",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Multi-functional daily sun cream with 5-Defense System and anti-aging benefits."
+      },
+      {
+        "title": "Kolorowanka z naklejkami. Wesołe motyle Zuzanna",
+        "brand": "Wydawnictwo M",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Wesołe motyle. Kolorowanka z naklejkami</h1>\n<p>Autor: <b>Zuzanna Płuciennik</b></p><p>EAN: <b>9788366330979</b></p><p>Strony: <b>16</b></p><p>Oprawa: <b>Miękka</b></p><p>Wydaw"
+      },
+      {
+        "title": "OSULLOC Honey Pear Tea (20 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A Perfect Pear-ing. Osulloc's Honey Pear Tea harmonizes the full-bodied aroma of ripe pears with the soothing sweetness of honey. This iconic blend masterfully pairs the natural es"
+      },
+      {
+        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
+      },
+      {
+        "title": "Książka Have a Nice Day Mankind HarperCollins",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Książka Have a Nice Day Mankind HarperCollins"
+      },
+      {
+        "title": "Sulwhasoo First Care Activating Mask (5sheets)",
+        "brand": "Sulwhasoo",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "MIRACLE HEALTHY RADIANCE WITHIN 15 MINUTES NEWFIRST CARE ACTIVATING MASK Experiencing a healthy radiance powered by one bottle of effective Ingredient of FIRST CARE ACTIVATING SERU"
+      },
+      {
+        "title": "Puractive Plus Cream by G.M. Collin for Unisex - 1.7 oz Cream - 1.7 oz.",
+        "brand": "G.M. Collin",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Oxygen PurActive Cream is formulated with seven plant extracts, chlorophyll and an oxygen complex to normalize, detoxify and hydrate. It matifies the skin all day long and tightens"
+      },
+      {
+        "title": "3x Główka jigowa Dragon X-fine 1,5g hak 01 01/1,5g",
+        "brand": "Dragon",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>GŁÓWKA JIGOWA DRAGON X-FINE</h1><p>Wyrafinowany i delikatny, ale przy tym bardzo sprężysty i mocny drut; dwa mikroskopijne zadziory, umieszczone po przeciwnych stronach trzonka"
+      },
+      {
+        "title": "OSULLOC Moroccan Mint Tea (10 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Gold Gift Set - 3.3 oz.",
+        "brand": "Cuba",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cuba Gold Set for Men offered by Cuba Paris, gets a unique edge with its cigar-like bottles. Irresistible notes of jasmine, cedar and sandalwood blend together to create a fragranc"
+      },
+      {
+        "title": "Amiel Irit Spóźniona",
+        "brand": "Austeria",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Spóźniona / Delayed</h1>\n<p>Autor: <b>Amiel&#xa0;Irit</b></p><p>EAN: <b>9788378660309</b></p><p>Strony: <b>208</b></p><p>Oprawa: <b>zintegrowana</b></p><p>Wydawca: <b>Austeria<"
+      },
+      {
+        "title": "Sensual Nude Gloss 5g 401 NUDIST",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Volumizing lips with sheer and glossy finish, creating beautiful adhesion to lips."
+      },
+      {
+        "title": "Protective Neck Gaiter",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Protect your neck and face with FRP's versatile motorcycle neck gaiter. This premium neck gaiter for motorcycle riding features moisture-wicking fabric that keeps you comfortable i"
+      },
+      {
+        "title": "Crystal Noir Gift Set - 1.7 oz.",
+        "brand": "Versace",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Crystal Noir by Versace is distinctly for the woman who walks with her head held high and has a distinct presence. She has a certain smile and has the innate ability to be confiden"
+      },
+      {
+        "title": "Karty Piotruś Kraina Lodu 2 Trefl 08483",
+        "brand": "Trefl",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Karty Piotruś Kraina Lodu 2 Trefl 08483"
+      },
+      {
+        "title": "OSULLOC Rooibos Caramel Berry (20 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Bamboo Firming Fluid by Eminence for Unisex - 1.2 oz Fluid - 1.2 oz.",
+        "brand": "Eminence",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The strengthening agents of bamboo and coconut deeply hydrates, with the help of a Natural Retinol Alternative and Swiss Green Apple Stem Cells. It tightens the skin naturally."
+      },
+      {
+        "title": "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb",
+        "brand": "Mann's",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>przedmiotem sprzedaży jest:</b></p><p><b>Manns RIPPER</b></p><p><b>rozmiar: 45mm</b></p><p><b>kolor: M048BB-MFCH Przeźroczysty żółty ze srebrnym brokatem i czarnym grzbietem<"
+      },
+      {
+        "title": "Sensual Fitting Glow Tint 103 HIDDEN MAUVE",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A glow lip tint with a sheer to full coverage buildable texture, leaving behind a sheer pop to the lips."
+      },
+      {
+        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
+        "brand": "Image",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
+      },
+      {
+        "title": "RotoSound Roto R11-54 whites 11-54 struny elektryk",
+        "brand": "Rotosound",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>RotoSound Roto R11-54 whites 11-54 struny do gitary elektrycznej 11-54</h1> <h1>Electric Guitar Strings SET</h1><p>Rewelacyjne struny do gitary elektrycznej brytyjskiej firmy R"
+      },
+      {
+        "title": "OSULLOC Tropical Black Tea (20 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
+        "brand": "Cuccio",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
+      },
+      {
+        "title": "3x Główka jigowa Dragon X-fine 1,5g hak 02 02/1,5g",
+        "brand": "Dragon",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>GŁÓWKA JIGOWA DRAGON X-FINE</h1><p>Wyrafinowany i delikatny, ale przy tym bardzo sprężysty i mocny drut; dwa mikroskopijne zadziory, umieszczone po przeciwnych stronach trzonka"
+      },
+      {
+        "title": "Nct 127 2 Baddies Gel Nail Glaze (Nct127 Photocards Included)",
+        "brand": "K-POP Collaboration",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "NCT 127 BADDIE'S GEL NAIL GLAZE, Purchase NCT127 GEL NAIL and get a set of photocards"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Black / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
+        "brand": "La Roche-Posay",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
+      },
+      {
+        "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
+        "brand": "DeWalt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h DeWALT DCMBA572N BODY</h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li><l"
+      },
+      {
+        "title": "OSULLOC Kombucha Apple Pine (10 sticks)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Orange / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Pakiet Percy jackson i bogowie olimpijscy Tom 1-5",
+        "brand": "Galeria Książki",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Pakiet: Percy Jackson i bogowie olimpijscy .</h1><h1>Tomy 1 - 5.</h1><ul><li><b>Autor:&#xa0;Riordan Rick</b></li><li><b>EAN: 9788367071307</b></li><li><b>Wydawnictwo:&#xa0;Gale"
+      },
+      {
+        "title": "Longtake Sandalwood Intensive Treatment 200ML",
+        "brand": "Longtake",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
+      },
+      {
+        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
+        "brand": "DeWalt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
+      },
+      {
+        "title": "Longtake Blacktea & Fig Softening Treatment 200ML",
+        "brand": "Longtake",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      }
+    ],
+    "missingSubcategoryExamples": [
+      {
+        "title": "Rexing BC500 In-Car Baby Monitor HD 1080p & Infrared Night Vision",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "4.3″ Display | 1080p HD Monitoring | Infrared Night Vision | 150° Wide-Angle Lenses| 360° Rotatable Rear-Facing Camera | Anti-Glare Display Screen 1080p HD Video MonitoringGet a cr",
+        "category": "Electronics"
+      },
+      {
+        "title": "cut mp3 2025 | Your simple music editing program",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Einfache und nützliche Bearbeitungsmöglichkeiten von mp3 Dateien wie abschneiden, ausschneiden etc. Einfache Bedienung bei hoher Audio-Qualität.",
+        "category": "Electronics"
+      },
+      {
+        "title": "FRP Limited Edition Crab Phone Mount",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Key Features: Mounts phone and action camera at the same time Professional 6-point surround fixation system Enhanced 5-claw secure grip technology Advanced vibration dampening desi",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing BC500 Pro In-Car Baby Monitor/Car Cam – 1080p IR Night Vision, Magnetic Mount",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "4.3″ Display | 1080p HD Monitoring | Infrared Night Vision | 150° Wide-Angle Lenses| 360° Rotatable Rear-Facing Camera | Anti-Glare Display Screen Upgraded Magnetic Suction Cup Mou",
+        "category": "Electronics"
+      },
+      {
+        "title": "Converter4Video 2025 |  Simply convert your video files",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Quick and easy video conversion to and from different formats for playing on a TV, mobile phone, and other devices.",
+        "category": "Electronics"
+      },
+      {
+        "title": "FRP Classic Phone Mount",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Key Features: Advanced shock absorption system Unobstructed camera view for photography Quick-release mechanism Tool-free installation Memory width adjustment Universal device comp",
+        "category": "Electronics"
+      },
+      {
+        "title": "FindMyFiles 2025 | Finds your files, wherever they are",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Finds all types of files – music, photos, or documents – on your computer within fractions of a second.",
+        "category": "Electronics"
+      },
+      {
+        "title": "Lanberg Cable HDMI 2.0 TV 7.5m 4K Ultra HD 60Hz Full Cu Media",
+        "brand": "Lanberg",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>KABEL HDMI M/M V2.0 4K 7,5M PEŁNA MIEDŹ CZARNY LANBERG</h1>\n<p>Specyfikacja:</p>\n<p>- Złącza:</p>\n<p>19-pin HDMI-A męskie</p>\n<p>19-pin HDMI-A męskie</p>\n<p>- Specyfikacja HDMI",
+        "category": "Electronics"
+      },
+      {
+        "title": "AntiRansomware 2025 | Ransomware protection | with background monitor",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Offers effective all-round protection against blackmail viruses that encrypt private data and only release it again after a ransom is paid.",
+        "category": "Electronics"
+      },
+      {
+        "title": "Lb Kabel Hdmi 2.0 Tv 15m 4K Ultra Hd 60Hz Full Cu",
+        "brand": "Lanberg",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>KABEL HDMI M/M V2.0 4K PEŁNA MIEDŹ CZARNY LANBERG</h1>\n<p>Specyfikacja:</p>\n<p>- Złącza:</p>\n<p>19-pin HDMI-A męskie</p>\n<p>19-pin HDMI-A męskie</p>\n<p>- Specyfikacja HDMI High",
+        "category": "Electronics"
+      },
+      {
+        "title": "Lb Kabel Hdmi 2.0 Tv 20m 4K Ultra Hd 60Hz Full Cu",
+        "brand": "Lanberg",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>KABEL HDMI M/M V2.0 4K PEŁNA MIEDŹ CZARNY LANBERG</h1>\n<p>Specyfikacja:</p>\n<p>- Złącza:</p>\n<p>19-pin HDMI-A męskie</p>\n<p>19-pin HDMI-A męskie</p>\n<p>- Specyfikacja HDMI High",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing B1 (Black) Night Vision Goggles Binoculars",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters CLEAR FROM ANY DISTANCE - See subjects in the dark up to 3",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Adhesive Mount for V2 Pro AI",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Compatible with Rexing V2 Pro AI Dash Cam Compatible ONLY with Rexing V2 Pro AI dash cams. 3M adhesive. Helps prevent camera shake, resulting in clear footage. Compact design. Main",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C GPS Module — 115200 Baud",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Add GPS location, speed and route information to compatible Rexing dash cam recordings with this Type-C plug-in GPS module. Compatible camera Rexing C2 Pro Match your exact camera ",
+        "category": "Electronics"
+      },
+      {
+        "title": "12V Antenna Power Supply DVB-T2 Amplifier For Terrestrial TV F Socket Vayox Plug",
+        "brand": "Vayox",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>ZASILACZ ANTENOWY 12V WZMACNIACZ DVB-T2 DO TV NAZIEMNEJ GNIAZO F WTYK VAYOX</h1><ul><li>Zasilacz antenowy przeznaczony do zasilania wzmacniaczy antenowych.</li></ul><h1>PRZYSTO",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle, Wi-Fi, Night Vision, and GPS, App Control, Loop Recording, Collision Sensor",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "170° Ultra-Wide Angle | Supercapacitor | IR Night Vision | Parking Mode | Collision Detection | Loop Recording | Type-C Port 2K Front Resolution & 1080p All-Around:The L4-2K model ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Pop Jr Tv songs CD+DVD New Songs from fairy tales",
+        "brand": "Universal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>NA SPRZEDAŻ ORYGINALNA PŁYTA JAK W TYTULE CD</h1><p>Stan techniczny przedmiotu:</p><p><b>PŁYTY</b></p><p><b>WIZUALNIE </b>:&#xa0; NOWE</p><p><b>ODSŁUCH :</b>&#xa0; -</p><p><b>K",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker Prime Wireless Charging Station (3-in-1, MagGo, AirCool, Foldable) Gray",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "25W Ultra-Fast MagSafe Charging: Delivers magnetic wireless power up to 25W using Qi2 technology. Charges iPhone 17 Pro to 50% in just 26 minutes—five times faster than standard 5W",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing B1 Mini 1080p Night Vision Digital Binoculars with Viewing Screen and Photo/Video Recording",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "2.4″ Screen | FHD 1080p | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 985ft Night Range Compact & Portable – Our smallest, mos",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C GPS Logger Add-On for Type-C Charger, Smart Hardwire Kit and IHWK-360",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "GPS recording: Add location, speed and route information to recordings from a compatible Rexing dash cam after a GPS signal is acquired. Compatible camera models: V1P FLEX X4, RH2-",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C Smart Hardwire Kit with GPS for R4, L4 and RH2, 12V-30V to 5V/2A, 11.5 ft",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Dash Cam Smart Hardwire Kit with GPS Logger, Type-C Hard Wire Kit Fuse Only for R4 Dashcam, L4 Series and RH2 Series, Rexing 12V-30V to 5V/2A Type-C Port Charger Power Cord,",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Smart Hardwire Kit with 360° Motion Detection",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Smart Hardwire Kit with 360° Motion Detection, 13ft Cable, Parking Monitor & Low Voltage Protection – Compatible with 95% of Rexing Dash Cams 360° Motion Detection – Automat",
+        "category": "Electronics"
+      },
+      {
+        "title": "Video intercom kit Monitor 8\" Wifi 5TECH Verus One 84213 Ahd Application",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Kupujesz sprzęt u autoryzowanego dystrybutora marki 5TECH !</h1><h1>Uważaj na \"podróbki\". U nas masz 100% pewności oryginalności produktów.</h1><h1>W skład zestawu wchodzą:</h1",
+        "category": "Electronics"
+      },
+      {
+        "title": "Pilot do Tv Thomson, RC802N, RC3000, Smart,netflix",
+        "brand": "Huayu",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>✅Pilot do TV LCD Thomson, TCL RM-L1508 +</h1><h1>(RC802N, RC3000), SMART, NETFLIX.</h1><h1>✅Pilot do TV LCD Thomson, TCL RM-L1508+(RC802N,RC3000), Smart, Netflix.</h1><p>Pilot",
+        "category": "Electronics"
+      },
+      {
+        "title": "Weekend W Rytmie Polo TV 2CD",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Weekend W Rytmie Polo Tv 2CD",
+        "category": "Electronics"
+      },
+      {
+        "title": "Iggy Pop Tv Eye 1977 Live CD Nowa",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Iggy Pop Tv Eye 1977 Live CD Nowa",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing C3 GPS Logger — 3.5mm Connector",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Add GPS location, speed and route information to your Rexing C3 recordings after a satellite signal is acquired.Compatible cameraRexing C3 only. This dedicated GPS logger uses a 3.",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing B1 Maverick Night Vision Goggles Binoculars",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters PHOTO/VIDEO – Record or take pictures in the day & night o",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing B1 (Digital Camo) Night Vision Goggles Binoculars",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters 10x optical zoom and 4x digital zoom (984ft) IR Night Visi",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Card Viewer 4-in-1 SD Card Reader",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Trail Camera Card Viewer | 4-in-1 Binoculars SD Card Reader for iPhone and Android | Micro SD/TF Card Adapter to View Game Camera Photos and Videos on Smart Devices 4-in-1 S",
+        "category": "Electronics"
+      },
+      {
+        "title": "Tc Electronic Hall Of Fame 2 X4 Reverb Gitarowy",
+        "brand": "TC Electronic",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Przedmiotem tej aukcji jest efekt gitarowy firmy TC ELECTRONIC</h1><h1>model: HALL OF FAME 2 X4</h1><p>Hall of Fame 2 X4 to uznany model efektu typu reverb z dodanymi 4 czułymi",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C Smart Hardwire Kit for R4, DT2, M3, M2 Max, M2-4, M4-4 and RH2, 11.5 ft",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Dash Cam Hardwire Kit, Type-C Hard Wire Kit Fuse Only for R4, DT2, M3 & M2 Max, M2-4, M4-4, and RH2 Series, Rexing 12V-30V to 5V/2A Type-C Port Charger Power Cord, Gift 8 Fu",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle, Wi-Fi, Night Vision, and GPS, App Control, Loop Recording, Collision Sensor",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "170° Ultra-Wide Angle | Supercapacitor | IR Night Vision | Parking Mode | Collision Detection | Loop Recording | Type-C Port 2K Front Resolution & 1080p All-Around:The L4-2K model ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Funko Pop Tv Umbrella Academy Hazel w/mask 937",
+        "brand": "Funko Pop!",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Funko Pop Tv Umbrella Academy Hazel w/mask 937",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Intelligent Type-C Hardwire Kit for R4, DT2, M2 Max, R316, RH2 and CPDuo",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Intelligent Hardwire Kit Type-C Port for All Rexing Dash Cam Models including R4, DT2, M2 Max, R316 Series, and CPDuo Multimedia Receiver Made to use with All Rexing Dash Ca",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing External GPS Logger — 2.5mm Connector",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "External GPS logger with a 2.5mm connector for compatible Rexing dash cams. After a satellite signal is acquired, your camera can record location, speed and route information along",
+        "category": "Electronics"
+      },
+      {
+        "title": "Row gloves. Lizard Skin Monitor Sl - size M",
+        "brand": "Lizard Skins",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>Numer 1906    39C</h2><h2>Rękawiczki row. Lizard Skin Monitor SL- rozm. M</h2><p>Monitor SL jest lekki, oddychający i świetnie wykonuje całą rękawiczkę, która będzie działać na",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rękawice rower Lizard Skins Monitor Sl Gel S",
+        "brand": "Lizard Skins",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p><b>Nr 1913 r2021    39C</b></p><p>Możesz kupić najlepiej sprzedającą się rękawicę Monitor SL z wypełnieniem żelowym.</p><p><b>funkcje</b></p><p>Silikonowe nadruki dla maksymalne",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rękawice rower Lizard Skins Monitor Hd S",
+        "brand": "Lizard Skins",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p><b>Nr 1897 r2021    39C</b></p><ul><li>Monitor HD oferuje doskonałe połączenie ochrony i zręczności. Jeśli potrzebujesz rękawiczek, które pomogą Ci podjąć najtwardsze trasy lub ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Modal Electronics Cobalt8M Sound Module w",
+        "brand": "Modal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Modal Electronics Cobalt8M Moduł Brzmieniowy w",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C Smart Hardwire Kit for R4, DT2, M3, M2 Max, M2-4, M4-4 and RH2, 11.5 ft",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Dash Cam Hardwire Kit, Type-C Hard Wire Kit Fuse Only for R4, DT2, M3 & M2 Max, M2-4, M4-4, and RH2 Series, Rexing 12V-30V to 5V/2A Type-C Port Charger Power Cord, Gift 8 Fu",
+        "category": "Electronics"
+      },
+      {
+        "title": "Tc Electronic Polytune Clip Tuner Chromatyczny",
+        "brand": "TC Electronic",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Tc Electronic Polytune Clip Tuner Chromatyczny",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing External GPS Logger — 3.5mm Connector",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "External GPS logger with a 3.5mm connector for compatible Rexing dash cams. After a satellite signal is acquired, your camera can record location, speed and route information along",
+        "category": "Electronics"
+      },
+      {
+        "title": "Tc Electronic Polytune Clip Bk Tuner Chromatyczny",
+        "brand": "TC Electronic",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Tc Electronic Polytune Clip Bk Tuner Chromatyczny",
+        "category": "Electronics"
+      },
+      {
+        "title": "Tv Series Tarot, instr.pl",
+        "brand": "Lo Scarabeo",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Tv Series Tarot, instr.pl",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type-C GPS Module — 9600 Baud",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Add GPS location, speed and route information to compatible Rexing dash cam recordings with this Type-C plug-in GPS module. Compatible cameras BBY C2 (Best Buy version), C2B and F3",
+        "category": "Electronics"
+      },
+      {
+        "title": "Pilot do Tv Samsung Smart BN59-01330J QE55LS..Inne",
+        "brand": "Samsung",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>ORIGINAL, NEW REMOTE</h1><h1>Manufacturer: SAMSUNG</h1><h1>Designation: BN59-01330J</h1><h1>Supports TV series: QE...LS</h1><ul><li>If you are not sure whether the remote contr",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing H3 Electronic Animal Caller Trail Cam 2.7K Video + 20MP Photo",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "2.8” LCD | Night Vision | 0.2s Trigger | 100FT Range | Up to 512GB Memory Expansion | 16 Month Standby Hunting/Wildlife Surveillance Cam 2.7K RESOLUTION – Rexing H3 captures video ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing M1S Monocular",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "4K IR Night Vision Digital Monocular | 4K(2160p) | 8x Digital Zoom | 4000mah Rechargeable Battery | Save Photos & Videos | Travel 4K Digital Monocular - High performance 4K(2160p) ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing B1 Compass Night Vision Binoculars 4K Ultra HD",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "4K Ultra HD | Integrated Compass | Flashlight | Weather Resistant | IR Night Vision | 5x Digital Zoom | Video Recording | Photos Ultra High Definition 4K Resolution – Capture every",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing FM Type-C Smart Hardwire Kit for CPDuo-6.25, CPDuo-686, CPDuo-7 and CPDuo Pro, 11.5 ft",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing FM Smart Hardwire Kit, Type-C Hard Wire Kit Fuse for CPDuo-6.25, CPDuo-686, CPDuo-7, and CPDuo Pro 24-Hour Surveillance Mode – Keep your dash cam powered even when the engin",
+        "category": "Electronics"
+      },
+      {
+        "title": "Kingston Canvas Select 64GB Micro SD Card",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Kingston Canvas Canvas Select 64GB Micro SD Card",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing OBD Hardwire Kit",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing OBD Hardwire Kit NOT compatible with Rexing S1 Pro, R4, DT2, and M2 Max dash cam Rexing 14ft Mini USB OBD Hardwire Charger Cable for Rexing Dash Cams and Other Dash Cams wit",
+        "category": "Electronics"
+      },
+      {
+        "title": "Video intercom kit Monitor 8\" Wifi Verus One Station 84207A 5TECH Ahd",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Kupujesz sprzęt u autoryzowanego dystrybutora marki 5TECH !</h1><h1>Uważaj na \"podróbki\". U nas masz 100% pewności oryginalności produktów.</h1><h1>W skład zestawu wchodzą:</h1",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing FM Type-C Charger – Compatible with CPStream, CPDuo-6.25, CPDuo-686, CPDuo-7, and CPDuo Pro Dash Cams",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing FM Charger for CPStream, CPDuo-6.25, CPDuo-686, CPDuo-7, and CPDuo Pro Reliable Power Supply for Your Dash Cam – Keep your CPDuo dash cam powered at all times with the Rexin",
+        "category": "Electronics"
+      },
+      {
+        "title": "Wifi video intercom 5TECH 10' Verus white Ahd Touch monitor Tuya application",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Kupujesz sprzęt u autoryzowanego dystrybutora marki 5TECH !</h1><h1>Uważaj na \"podróbki\". U nas masz 100% pewności oryginalności produktów.</h1><h1>W skład zestawu wchodzą:</h1",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing GPS Logger for M2",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing GPS Logger for M2 Dash Cam Only When connected to a Rexing dash cam, the speed and location of your vehicle will be stamped to your videos as you drive. You can then access ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Wifi 5TECH video intercom 10'' Verus Ahd Touch monitor Tuya application black",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Kupujesz sprzęt u autoryzowanego dystrybutora marki 5TECH !</h1><h1>Uważaj na \"podróbki\". U nas masz 100% pewności oryginalności produktów.</h1><h1>W skład zestawu wchodzą:</h1",
+        "category": "Electronics"
+      },
+      {
+        "title": "Kingston Canvas Go Plus 64GB Micro SD Card",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Kingston Canvas Go Plus 64GB Micro SD Card",
+        "category": "Electronics"
+      },
+      {
+        "title": "Wifi video intercom 5TECH 8'' Verus white Ahd Touch monitor Tuya application",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Kupujesz sprzęt u autoryzowanego dystrybutora marki 5TECH !</h1><h1>Uważaj na \"podróbki\". U nas masz 100% pewności oryginalności produktów.</h1><h1>W skład zestawu wchodzą:</h1",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Rexing-MSD-64GB microSDXC UHS-3 Memory Card with Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Designed for capturing full HD video and still photos using dash cameras, smartphones, tablets, and other microSDXC compatible devices. It features UHS Speed Class U3 and Speed Cla",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing MSD-32G microSDXC UHS-3 Memory Card with Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Designed for capturing full HD video and still photos using dash cameras, smartphones, tablets, and other microSDXC compatible devices. It features UHS Speed Class U3 and Speed Cla",
+        "category": "Electronics"
+      },
+      {
+        "title": "Thermoval Tv heating mat for 9 m2 tiles",
+        "brand": "Thermoval",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Mata grzejna THERMOVAL TV50 pod płytki</h1><p>Jednostronnie zasilana, <b>samoprzylepna mata grzejna o mocy 170 W/m² </b>&nbsp;do montażu w warstwie kleju pod płytkami. Idealnie",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing 512GB-MSD microSDXC UHS-3 Memory Card with Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Designed for capturing full HD video and still photos using dash cameras, smartphones, tablets, and other microSDXC compatible devices. It features UHS Speed Class U3 and Speed Cla",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Rexing-MSD-128GB microSDXC UHS-3 Memory Card with Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Designed for capturing full HD video and still photos using dash cameras, smartphones, tablets, and other microSDXC compatible devices. It features UHS Speed Class U3 and Speed Cla",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Rexing-MSD-256GB microSDXC UHS-3 Memory Card with Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Designed for capturing full HD video and still photos using dash cameras, smartphones, tablets, and other microSDXC compatible devices. It features UHS Speed Class U3 and Speed Cla",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing GPS Logger — Suction Cup Mount",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Suction cup mount with an integrated GPS logger for the Rexing R316 series only. Attaches through the camera’s dedicated mounting interface and enables GPS information in recording",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing 3-in-1 Wireless Charging Station",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Touch Control | Table Lamps for Home and Office | Desk Lamp with Cable | 15W Qi-certified Charging | Alarm Clock Wireless Charging, Table Lamp, Digital Clock Wireless Qi Charging 2",
+        "category": "Electronics"
+      },
+      {
+        "title": "WiFi video intercom Premium IP intercom Wicket gate 2x code, key fob",
+        "brand": "Eura",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>WIDEODOMOFON WiFi \"EURA\" VDP-99C5</h1><ul><li><b>dotykowy monitor 10”</b> z modułem <b>WiFi</b> (obsługa za pomocą <b>aplikacji TUYA</b>)</li><li>pamięć obrazów (obsługa kart&n",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing 3-in-1 Wireless Charging Station",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Touch Control | Table Lamps for Home and Office | Desk Lamp with Cable | 15W Qi-certified Charging | Alarm Clock Wireless Charging, Table Lamp, Digital Clock Wireless Qi Charging 2",
+        "category": "Electronics"
+      },
+      {
+        "title": "Kabel Mini Jack 2x Rca Chinch 1,5 M Stereo",
+        "brand": "Prolech",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p>KABEL MINI JACK 2x RCA CHINCH 1,5 M STEREO</p><p>Przyłącze z wtykiem minijack 3,5 mm stereo oraz 2RCA przeznaczone do przesyłania analogowego dźwięku m.in. pomiędzy urządzeniami",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing CPW-1 Wireless Apple CarPlay Adapter - Sale",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "OEM Integrated Apple CarPlay | Convert Wired CarPlay to Wireless CarPlay | 5GHz Wi-Fi | Plug and Play | Bluetooth | USB, Type-C and Play | Bluetooth | USB, Type-C Why Our Wireless ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Hdmi to Micro Hdmi Adapter Gdynia",
+        "brand": "Lanberg",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p>HDMI TO MICRO HDMI ADAPTER</p><p>Conversion from the HDMI socket used mainly in TV to the micro HDMI socket used in small devices such as cameras, phones or camcorders",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing OBD2 Scanner and Car Code Reader for OBDII Cars Since 1996, Live Data and Smog Check, Black",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Instant Diagnosis – Quickly and accurately determine why your Check Engine Light (CEL) is on. This plug-and-play scanner reads and clears emission-related diagnostic trouble codes ",
+        "category": "Electronics"
+      },
+      {
+        "title": "5TECH Verus Plus 10\" video intercom Gate Wicket Tuya Smart Full HD application",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>⭐ Wideodomofon 5tech Verus Plus z kamerą 84207A</h1><p><b>Kompletny zestaw</b> do domu jednorodzinnego. marki<b>&nbsp;5TECH. </b>Monitor z&nbsp;<b>ekranem dotykowym IPS 10\" </b",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Adhesive Mount for DT2",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Compatible ONLY with Rexing DT2 dash cams. 3M adhesive. Helps prevent camera shake, resulting in clear footage. Compact design. Maintains clear visibility of the road for safe driv",
+        "category": "Electronics"
+      },
+      {
+        "title": "Video intercom 5TECH Verus Plus 10\" Full Hd Wicket Gate Tuya Smart application",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>⭐ Wideodomofon 5tech Verus Plus z kamerą 84207A</h1><p><b>Kompletny zestaw</b> do domu jednorodzinnego. marki<b>&nbsp;5TECH. </b>Monitor z&nbsp;<b>ekranem dotykowym IPS 10\" </b",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing J1772 to Tesla Charging Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Travel Size | 250V AC | 80 Amp | Compatible with SAE J1772 Charger | Only for Tesla Owners Reliable Adapter – J1772 to Tesla adapter opens up more charging possibilities while on t",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Fuse Tap and Add-a-Circuit Adapter with LP-mini, Mini Fuse, Micro2 blade fuse adapters",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Fuse Tap and Add-a-Circuit Adapter with LP-mini, Mini Fuse, Micro2 blade fuse adapters BLADE FUSE ADAPTER TYPE - 2x Low profile LP mini (APS) fuse adapter with 2 Amp low pro",
+        "category": "Electronics"
+      },
+      {
+        "title": "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module",
+        "brand": "Hikvision",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>DS-KD8003-IME1(B) /EU</h1><h2>Moduł kamery wideo, doświetlenie IR, rozdz. kamery: 2MP, 2 przekaźniki, IP65</h2><h2>Nowy model</h2><h1>DS-KD8003-IME1(B) /EU</h1><p>to główny mod",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Smart Hardwire Kit Mini-USB Port for All Rexing Supercapacitor Models",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Smart Hardwire Kit Mini-USB Port for All Rexing Supercapacitor Models – V1-4K, V1P-4K, V3 Basic, V3, V2 Pro AI, V1P-3, V1P Pro, V1 Max, V1P Max, V1GW-4K, V1PGW-4K, S1 Series",
+        "category": "Electronics"
+      },
+      {
+        "title": "Genway WL-03NL-V2 Intercom 4 Family Rfid Code",
+        "brand": "Genway",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>Cyfrowy zestaw domofonowy 4-rodzinny Genway WL-03NL-V2</h2><p><b>W zestawie:</b></p><ul><li>panel zewnętrzny Genway WL-03NL-V2 - 1 szt;</li><li>brelok zbliżeniowy - 8 szt;</li>",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Type C Charger for R4, DT2, M3, M2 Max, M2-4, M4-4, RH2 Series, and CPDuo",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Charger for R4, DT2, M3, M2 Max, M2-4, M4-4, RH2 Series, and CPDuo",
+        "category": "Electronics"
+      },
+      {
+        "title": "Hikvision DS-KH8350-TE1/EU Internal IP Panel",
+        "brand": "Hikvision",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>DS-KH8350-TE1/EU HIKVISION</h1><h2>Stacja wewnętrzna, wielkość ekranu 7 \", dotykowy, metalowy korpus, HIKVISION</h2><h1>DS-KH8350-TE1</h1><p>Stacja wewnętrzna marki Hikvision p",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Hiking Backpacking Compass",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Rexing Hiking Backpacking Compass",
+        "category": "Electronics"
+      },
+      {
+        "title": "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module IP Gate Panel",
+        "brand": "Hikvision",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>DS-KD8003-IME1(B) /EU</h1><h2>Moduł kamery wideo, doświetlenie IR, rozdz. kamery: 2MP, 2 przekaźniki, IP65</h2><h2>Nowy model</h2><h1>DS-KD8003-IME1(B) /EU</h1><p>to główny mod",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing CCS to Tesla Charging Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Fast Charge | Tesla Model 3, Y, S, and X | Compatible Level 3 Fast Charging Stations | Tesla Owners Only Expanded Charging Network – Access over 5,000 CCS fast charging stations na",
+        "category": "Electronics"
+      },
+      {
+        "title": "Electronic kitchen scale Glass GlasScale Precise Touch LED panel",
+        "brand": "Transa Electronics",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>Waga kuchenna elektroniczna SZKLANA GlasScale PRECYZYJNA DOTYKOWY PANEL LED</h2><p><b>Waga kuchenna szklana Transa Electronics®</b> to <b>praktyczne</b> i <b>niezwykle</b> pomo",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Master N1 1.5A Smart 6V/12V Battery Charger and Maintainer with Temperature Control",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "ALL IN ONE CHARGING SOLUTION - The Rexing Master 1.5 is a compact 1.5A smart charger designed for everyday charging and long term maintenance. Functions as a battery charger, maint",
+        "category": "Electronics"
+      },
+      {
+        "title": "Video intercom Ip WiFi DS-KIS603-P-W Hikvision LCD 7",
+        "brand": "Hikvision",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Zestaw wideodomofonowy IP DS-KIS603-P-W Hikvision</h1><p>Jednorodzinny zestaw <b>Wideodomofonowy&nbsp;IP</b> marki Hikvision to idealnie rozwiązanie dla wymagających użytkownik",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rexing Tesla to J1772 Charging Adapter",
+        "brand": "Rexing USA",
+        "advertiser": "Rexing",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "J1772 EV Charging Adapter | Fits Mobile Connector | Tesla Wall Connector | Destination Chargers | Max 48 Amp & 250V AC | Travel Case Easy EV Charging – Use Our Tesla To J1772 Adapt",
+        "category": "Travel"
+      },
+      {
+        "title": "Wi-Fi video intercom 5tech Verus One Plus 8\" 84228 Keychain Reader Encryptor",
+        "brand": "5TECH",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>⭐ Wideodomofon 5tech Verus One Plus z kamerą 84228 RFiD Szyfrator</h1><p><b>Kompletny zestaw</b> do domu jednorodzinnego. marki<b>&nbsp;5TECH.</b></p><p>Monitor z&nbsp;<b>ekran",
+        "category": "Electronics"
+      },
+      {
+        "title": "TV cabinet 240 Chest of drawers Solid Wood Mango Wood Loft BGM24",
+        "brand": "BGM s.c.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>SZAFKA RTV 240 cm Komoda z szufladami TV Drewniana Lite Drewno MANGO LOFT BGM24</h2><p><b>Komoda pod telewizor Drewniana MANGO LOFT BGM s.c.</b></p><p>W naszej ofercie&nbsp;<b>",
+        "category": "Electronics"
+      },
+      {
+        "title": "Portable TV for the Kitchen 14 USB Hdmi Antenna",
+        "brand": "Sonax",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>TELEWIZOR PRZENOŚNY 14\" DVB-T MPEG-4</h1><p><b>+ ANTENA MAGNESOWA GRATIS</b></p><p><b>Antena dołączona do telewizora umożliwia odbiór kanałów telewizyjnych w bliskiej odległośc",
+        "category": "Electronics"
+      },
+      {
+        "title": "CL-141 Hdmi 2.0 Cable 10m long 4k2k Ultra Hd cable",
+        "brand": "Savio",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Elmak Kabel HDMI-HDMI 2.0, OFC, SAVIO CL-141, złoty, 3D, 4Kx2K, miedź, 10m, blister</h1>\n<p><b>Kabel HDMI 2.0, SAVIO CL-141, złoty, 3D, 4Kx2K, miedź, 10m, blister</b></p>\n<ul>\n",
+        "category": "Electronics"
+      },
+      {
+        "title": "CL-140 Hdmi 2.0 Cable 7.5m 4k2k Ultra Hd Cable",
+        "brand": "Savio",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Elmak Kabel HDMI-HDMI 2.0, OFC, SAVIO CL-140, złoty, 3D, 4Kx2K, miedź, 7,5m, blister</h1>\n<h1>Wersja: 2.0 high speed</h1>\n<ul>\n<li>Obsługa wysokich rozdzielczości nawet do 4K x",
+        "category": "Electronics"
+      },
+      {
+        "title": "CL-143 Hdmi 2.1 Cable 3m 8K 4K Ultra Hd Cable",
+        "brand": "Savio",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Elmak Kabel HDMI-HDMI v2.1, OFC, 3m, 8K, Miedź, Złote końcówki, Ethernet/3D CL-143 SAVIO Niebiesko-czarny</h1>\n<p><b>Kabel HDMI (M) v2.1, 3m, miedź, niebiesko-czarny, złote koń",
+        "category": "Electronics"
+      },
+      {
+        "title": "Könner & Söhnen Ks 3000 3000 W petrol generator",
+        "brand": "Könner & Söhnen",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Agregat prądotwórczy Könner &amp; Söhnen KS 3000</h1><p>Generator benzynowy <b>KS 3000</b> niemieckiej marki <b>Könner &amp; Söhnen</b> to doskonały wybór do awaryjnego lub sta",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker Prime Wireless Charging Station (3-in-1, MagGo, AirCool, Foldable) Radiant White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "25W Ultra-Fast MagSafe Charging: Delivers magnetic wireless power up to 25W using Qi2 technology. Charges iPhone 17 Pro to 50% in just 26 minutes—five times faster than standard 5W",
+        "category": "Electronics"
+      },
+      {
+        "title": "Hybrid generator set Könner & Söhnen 7.5 kW 8.0 kW Ks 10000E G",
+        "brand": "Könner & Söhnen",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Agregat prądotwórczy hybrydowy (LPG / benzyna) KS&nbsp;10000E G</h1><p>Generatory hybrydowe marki <b>«Könner &amp; Söhnen»</b> serii <b>DUAL FUEL t</b>o obecnie najbardziej pop",
+        "category": "Electronics"
+      },
+      {
+        "title": "Wooden TV cabinet 180 cm Solid wood TV Lite chest of drawers Mango Loft BGM24",
+        "brand": "BGM s.c.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>Wooden TV stand 180 cm Chest of drawers Solid wood TV Lite MANGO LOFT BGM24</h2><h2>BGM24 MANGO LOFT 1925 - TV stand 180 cm Chest of drawers</h2><p>In our offer<b>by bgm24",
+        "category": "Electronics"
+      },
+      {
+        "title": "Video Capture Card Image Grabber Hdmi Usb Streaming Video 4K",
+        "brand": "PAWONIK",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p><b>Nasze adaptery spełniają najwyższe standardy. Zostały wykonane z materiałów wysokiej jakości i są w pełni ekranowane, dzięki czemu zapewniają najwyższej jakości obraz i dźwię",
+        "category": "Electronics"
+      },
+      {
+        "title": "Life Q30 Bluetooth Headphone Midnight Blue",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Advanced Noise Cancellation Technology: Maintain your focus with Life Q30’s hybrid active noise cancellation. Dual noise-detecting microphones pick up and filter out up to 95% of l",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore P30i Green",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\n2-in-1 Charging Case and Phone Stand: Enjoy hands-free viewing without the hassle. Simply open the back panel of the case, plac",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore 1 Black",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds &amp; Speakers for Business\n\nAstonishing Sound: Breathtaking stereo sound with deep bass is delivered with exceptional clarity and zero distortion by two h",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Pearl White / 8 GB",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Midnight Black / 8 GB",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Pearl White / 64 GB",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore V20i White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\nUltra-Comfort with Open-Ear Headphones: Experience matchless comfort even for all-day wear with these non-intrusive, open-ear h",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore V20i BIue",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\nUltra-Comfort with Open-Ear Headphones: Experience matchless comfort even for all-day wear with these non-intrusive, open-ear h",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore P30i Sky Blue",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\n2-in-1 Charging Case and Phone Stand: Enjoy hands-free viewing without the hassle. Simply open the back panel of the case, plac",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore P30i Pink",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\n2-in-1 Charging Case and Phone Stand: Enjoy hands-free viewing without the hassle. Simply open the back panel of the case, plac",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore Space One Pro | FlexiCurve Over-Ear Headphone Jet Black",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt;\n\n\nsoundcore-Engineered FlexiCurve™ Structure: Reduces Space One Pro's size by 50% with its super foldable des",
+        "category": "Electronics"
+      },
+      {
+        "title": "Life Q30 Bluetooth Headphone Sakura Pink",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Advanced Noise Cancellation Technology: Maintain your focus with Life Q30’s hybrid active noise cancellation. Dual noise-detecting microphones pick up and filter out up to 95% of l",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore P30i Black",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\n2-in-1 Charging Case and Phone Stand: Enjoy hands-free viewing without the hassle. Simply open the back panel of the case, plac",
+        "category": "Electronics"
+      },
+      {
+        "title": "eufy FamiLock S3 Max",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Palm Vein Unlocking: Advanced Security with 99.9% Accuracy. Achieve recognition in just 0.6 seconds with cutting-edge, forgery-proof palm vein recognition. This next-gen security f",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore V20i Black",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\nUltra-Comfort with Open-Ear Headphones: Experience matchless comfort even for all-day wear with these non-intrusive, open-ear h",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore P30i White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\n2-in-1 Charging Case and Phone Stand: Enjoy hands-free viewing without the hassle. Simply open the back panel of the case, plac",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore Space One Pro | FlexiCurve Over-Ear Headphone Cream White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt;\n\n\nsoundcore-Engineered FlexiCurve™ Structure: Reduces Space One Pro's size by 50% with its super foldable des",
+        "category": "Electronics"
+      },
+      {
+        "title": "Abelssoft File Organizer 2025 | Tidy your PC up",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Automatically sorts pictures, documents, videos & more into predefined folders. This way you can always be sure that all files can be found at any time.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Abelssoft AntiLogger 2025 |  Makes nasty spy programs harmless",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Reliably prevents spy programs from recording input on the keyboard or screen and thus stealing data.",
+        "category": "Electronics"
+      },
+      {
+        "title": "PC Fresh 2025 | Up to 137% more PC performance | Turbo Boost mode",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Die All-In One Tuning-Software holt die maximale Performance aus Deinem Computer. So wird Dein PC schnell und leistungsstark wie Du es nie zuvor erlebt hast.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "AntiBrowserSpy 2026 | Schutz vor Spionage | mit Trackingblocker",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Bietet effektiven Schutz vor Online-Spionage und ermöglicht wirksamen Datenschutz mit nur einem Klick. Internetspuren sind kein Thema mehr.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "StartupStar 2025 | Rocket Launch for PC | Blocks startup spam",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Removes unnecessary system brakes with just one click and noticeably speeds up the PC startup.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Abelssoft Undeleter 2025 | Recover deleted files with ease",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Rettet selbst aus dem Papierkorb gelöschte Dateien. DEEP-Scan findet selbst beschädigte Dateien und versucht diese wiederherzustellen.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "WashAndGo 24 | Removes data garbage | Optimizes the PC | Award winner",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Efficiently removes collected data rubbish from the PC, and corrects system errors reliably. Both functions optimize your Mac performance.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Win11 PrivacyFix 2025 | Prevents data from being sent to MS",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Verhindert wirksam und sicher die Sammlung von privaten Daten durch Windows und beendet die Datenschnüffelei endgültig. Ohne Vorkenntnisse bedienbar.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Tagman 2025 | MP3 Tag Editor | Manage your digital music collection",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Tagman brings order to your music collection by automatically adding missing tracks, artists, albums and cover images - for a perfectly organized and easily accessible music librar",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Easy Backup 2025 | Backup ohne Vorwissen | Sehr schnell | Für Anfänger",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Die Backup Lösung für jedermann: Professionell Daten sichern bei einfacher und komfortabler Bedienung.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "CryptBox 2025 | encrypts data NASA secure | maximum security | 256 bit",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Easily encrypts all private data with maximum security using the AES 256 algorithm. Only you can access your data!",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "CleverPrint 8 | Saves up to 50% on printing costs | Ecologically sensible",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Reduziert die Druckkosten spürbar – ganz automatisch! Mit CleverPrint lassen sich Papier, Tinte und Zeit durch eine besonders einfache Druckoptimierung für Windows sparen.\n\n\n\n\n\n\n\n\n",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "MyKeyFinder 2025 | Finds your license keys and Wifi Passwords",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Never search for product keys and Wifi passwords again: Saves all serial numbers at a glance, and scans even external hard disks for license keys.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "EverDoc 2025 |  Bring order to your documents",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Automatically organizes and archives digital documents to make invoices, contracts and other documents available quickly, securely and centrally at any time.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Screenphoto 2025 | Take and edit screenshots easily",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Create screenshots quickly and easily, edit them individually, and send them as a link. Record even a scrollable website with just one click.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "HackCheck 2024 | Alerts in case of hacking attack | Incl. help + info",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Early warning system for data theft. HackCheck alerts you immediately in case of data theft and protects online accounts from abuse by cyber criminals.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "PhotoSort 2025 | Easily sort your photos",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "With PhotoSort you can quickly and easily sort your holiday photos before you save them on your computer.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "EasyFirewall 2025 | Boost for Windows Firewall | Users Choice",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Easy Firewall optimiert die Einstellungen & die Bedienbarkeit der Windows Firewall und bietet dadurch noch mehr Sicherheit.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "SSD Fresh 2025 | Optimizes your hard disk | Extends SSD lifetime",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Increases the lifetime of the SSD in the long term by reducing read and write operations and optimising Windows for the use of SSD hard drives.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "File Fusion 2025 | Delete duplicate files | Up to 71% more space",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Finds duplicate files, cleans unnecessarily utilized disk space, and frees up to 71% more space on your hard drive.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Recordify 2025 | Simply record your stream",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Legally and easily save music from streaming services or via the speakers as MP3. The song naming is done independently via the program.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "WashAndGo 24 | Removes data garbage | Optimizes the PC | Award winner",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Finds any junk data at the click of a mouse, ensures a tidy PC and noticeably optimises the PC's performance.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Data2Pocket 2025 | Finds and saves files on your USB device",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Untersucht mit einem Klick den Rechner nach allen Fotos, Videos und Songs und zieht es auf einen Stick oder Platte. Alle wichtigen Dateien sind so bei Dir.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "GClean 2025 |  Stoppt Datenspionage aus Programmen | Testsieger",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Google weiß mehr über Dich, als Du denkst! GClean stoppt unerwünschte Datenübertragungen, entfernt verräterische Surfspuren und schützt Deine Privatsphäre automatisch.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "ScreenVideo 2025 | Capture your screen - it's easy",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "A recorder that records the PC screen as a video. Intuitive operation. Can record presenter and screen at the same time if desired.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Abelssoft Easy PDF 2025 |  Re-assemble your PDF files",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Easy PDF makes it child's play to edit, merge and share multiple PDF documents.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Win10PrivacyFix 2025 | Prevents data from being sent to MS",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Effectively and securely prevents the collection of private data by Windows and finally ends data snooping. Can be used without prior knowledge.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "RouterGuard – FritzBox Security | Detects hackers & foreign WiFi devices",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Dein FritzBox Wächter von Abelssoft - alarmiert sofort bei verdächtigen Aktivitäten und zeigt Dir alle mit Deinem WLAN verbundenen Geräte an.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "CheckDrive 2025 | Hard drive diagnostics | Warns of a failure",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Überprüft den Lebensstatus Deiner Festplatten und warnt Dich rechtzeitig, bevor eine Festplatte einen defekt erleidet. Korrigiert kleine Fehler sofort.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "SyncManager 2025 | Synchronize your files easily",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Synchronisiert beliebig viele Daten zwischen verschiedenen Ordnern, Festplatten und Geräten und arbeitet dabei selbstständig im Hintergrund.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Malware Terminator 2025 |  Eliminates annoying malware | 1-click usage",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Entfernt wirkungsvoll nervige & hartnäckige Schadsoftware, die Deinen PC infiziert hat und auch Deinen Browser verlangsamt.",
+        "category": "Office & Technology"
       }
     ]
   },
