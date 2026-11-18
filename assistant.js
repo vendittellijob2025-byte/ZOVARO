@@ -93,6 +93,75 @@
 
   function getCopy(code) { return copy[code] || copy.en; }
 
+
+  const requestForm = document.getElementById("zovaroAiRequestForm");
+  const requestInput = document.getElementById("zovaroAiRequestInput");
+  const requestLabel = document.getElementById("zovaroAiRequestLabel");
+  const requestSubmit = document.getElementById("zovaroAiRequestSubmit");
+  const requestHint = document.getElementById("zovaroAiRequestHint");
+
+  const requestCopy = {
+    en:["What do you need?","Describe what you are looking for…","SEARCH","Tell me what you need: a product, a job or a luxury opportunity."],
+    it:["Di cosa hai bisogno?","Descrivi cosa stai cercando…","CERCA","Dimmi cosa ti serve: un prodotto, un lavoro o un'opportunità di lusso."],
+    es:["¿Qué necesitas?","Describe lo que estás buscando…","BUSCAR","Dime qué necesitas: un producto, un empleo o una oportunidad de lujo."],
+    fr:["De quoi avez-vous besoin ?","Décrivez ce que vous recherchez…","RECHERCHER","Dites-moi ce qu'il vous faut : un produit, un emploi ou une opportunité de luxe."],
+    de:["Was brauchst du?","Beschreibe, wonach du suchst…","SUCHEN","Sag mir, was du brauchst: ein Produkt, einen Job oder eine Luxusgelegenheit."],
+    pt:["Do que precisa?","Descreva o que está procurando…","PESQUISAR","Diga o que procura: um produto, um emprego ou uma oportunidade de luxo."],
+    ar:["ما الذي تحتاج إليه؟","اكتب ما الذي تبحث عنه…","بحث","أخبرني بما تحتاج إليه: منتج أو وظيفة أو فرصة فاخرة."],
+    hi:["आपको क्या चाहिए?","बताएँ कि आप क्या खोज रहे हैं…","खोजें","बताएँ कि आपको क्या चाहिए: उत्पाद, नौकरी या लग्ज़री अवसर।"],
+    zh:["您需要什么？","请描述您正在寻找的内容…","搜索","告诉我您的需求：商品、工作或奢华机会。"],
+    ja:["何をお探しですか？","お探しの内容を入力してください…","検索","商品、仕事、ラグジュアリーな機会など、ご希望を教えてください。"]
+  };
+
+  function applyRequestLanguage(code) {
+    const labels = requestCopy[code] || requestCopy.en;
+    requestLabel.textContent = labels[0];
+    requestInput.placeholder = labels[1];
+    requestSubmit.textContent = labels[2];
+    requestHint.textContent = labels[3];
+  }
+
+  function submitAssistantRequest(query) {
+    const normalized = query.toLowerCase();
+    closeWelcome();
+
+    if (/\b(job|jobs|work|career|employment|lavoro|lavori|impiego|assumere|trabajo|empleo|emploi|travail|arbeit|stelle|وظيفة|काम|工作|求人)\b/.test(normalized)) {
+      const hiring = /\b(hire|hiring|cerco personale|assumere|contratar|recruit|recruter|einstellen)\b/.test(normalized);
+      document.getElementById(hiring ? "openOfferJob" : "openLookingJob")?.click();
+      document.getElementById("openJobs")?.click();
+      return;
+    }
+
+    if (/\b(luxury|lusso|prestige|yacht|yachts|jet|helicopter|villa|castle|castello|rolex|ferrari|lamborghini|supercar|luxueux|luxus|豪华|高級|贅沢)\b/.test(normalized)) {
+      document.getElementById("openLuxury")?.click();
+      return;
+    }
+
+    document.getElementById("openShop")?.click();
+    window.setTimeout(() => {
+      document.getElementById("openBuyProducts")?.click();
+      window.setTimeout(() => {
+        document.getElementById("openNewProducts")?.click();
+        window.setTimeout(() => {
+          const search = document.getElementById("searchInput");
+          const form = document.getElementById("searchForm");
+          if (search && form) {
+            search.value = query;
+            form.dispatchEvent(new Event("submit", { bubbles:true, cancelable:true }));
+          }
+        }, 100);
+      }, 100);
+    }, 100);
+  }
+
+  requestForm?.addEventListener("submit", event => {
+    event.preventDefault();
+    const query = (requestInput.value || "").trim();
+    if (!query) return;
+    submitAssistantRequest(query);
+  });
+
+
   function applyHomepageLanguage(code) {
     const data = getCopy(code).home;
     const set = (selector, value) => {
@@ -120,6 +189,7 @@
 
   function showWelcome(code) {
     const data = getCopy(code);
+    applyRequestLanguage(code);
     welcomeText.textContent = data.welcome;
     changeLabel.textContent = data.change;
     reopenLabel.textContent = data.label;
