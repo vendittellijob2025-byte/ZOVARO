@@ -1393,6 +1393,30 @@ footer{
 .zovaro-ai-reopen.visible{display:block}
 @media(max-width:650px){.zovaro-ai-backdrop{padding:10px}.zovaro-ai-panel{padding:42px 12px 13px}.zovaro-ai-robot-stage{flex-direction:column;gap:4px;min-height:0}.zovaro-ai-avatar-image{width:165px;max-height:190px;margin:-5px auto -2px}.zovaro-ai-speech{max-width:100%;padding:15px 16px;font-size:13px}.zovaro-ai-speech:before{left:calc(50% - 10px);top:-10px;transform:rotate(135deg)}.zovaro-ai-flags{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.zovaro-ai-language{min-height:56px}}
 
+
+/* Refined ZOVARO assistant avatar, expressions and request field */
+.zovaro-ai-robot-stage{align-items:center}
+.zovaro-ai-avatar-wrap{position:relative;display:block;width:220px;max-width:38vw;flex:0 0 auto;line-height:0;transform-origin:50% 48%;filter:drop-shadow(0 10px 18px rgba(0,140,255,.25));animation:zvRobotFloat 4.4s ease-in-out infinite,zvRobotTilt 8.5s ease-in-out infinite}
+.zovaro-ai-avatar-image{display:block;width:100%;height:auto;max-height:285px;object-fit:contain;filter:none;animation:none;border-radius:0}
+.zv-eye-lid{position:absolute;z-index:2;top:21.5%;width:13%;height:7.5%;border-radius:50% 50% 42% 42%;background:linear-gradient(180deg,#07182c,#102f4e);opacity:0;transform:scaleY(.05);transform-origin:top;animation:zvRobotBlink 5.8s ease-in-out infinite;pointer-events:none}
+.zv-eye-lid-left{left:35.2%}
+.zv-eye-lid-right{left:54.3%;animation-delay:.04s}
+.zv-mouth-mask{position:absolute;z-index:2;left:44.8%;top:31.2%;width:14%;height:4.2%;border-radius:50%;background:#07182c;opacity:0;animation:zvRobotSerious 11s ease-in-out infinite;pointer-events:none}
+.zv-mouth-line{position:absolute;z-index:3;left:47.1%;top:33.1%;width:9.5%;height:1.1%;border-radius:50%;background:#b8eaff;opacity:0;animation:zvRobotSerious 11s ease-in-out infinite;pointer-events:none}
+@keyframes zvRobotTilt{0%,100%{rotate:0deg}24%{rotate:-1.3deg}50%{rotate:0deg}76%{rotate:1.1deg}}
+@keyframes zvRobotSerious{0%,54%,100%{opacity:0}62%,80%{opacity:.96}88%{opacity:0}}
+.zovaro-ai-request-form{margin-top:14px;padding-top:12px;border-top:1px solid rgba(91,210,255,.18)}
+.zovaro-ai-request-label{display:block;margin:0 0 7px;color:#dff6ff;font-size:12px;font-weight:800}
+.zovaro-ai-request-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.zovaro-ai-request-input{width:100%;min-width:0;min-height:44px;padding:11px 13px;border:1px solid rgba(111,187,235,.5);border-radius:11px;background:#071321;color:#fff;font:inherit;font-size:13px;outline:none}
+.zovaro-ai-request-input::placeholder{color:#7f9bb7}
+.zovaro-ai-request-input:focus{border-color:#53d5ff;box-shadow:0 0 0 3px rgba(53,194,255,.12)}
+.zovaro-ai-request-submit{min-height:44px;padding:0 16px;border:0;border-radius:11px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-size:11px;font-weight:900;letter-spacing:.06em;cursor:pointer}
+.zovaro-ai-request-hint{margin:7px 0 0!important;color:#9db6cf!important;font-size:10px!important;line-height:1.4!important}
+@media(max-width:650px){.zovaro-ai-avatar-wrap{width:165px;max-width:70vw;max-height:190px;margin:-5px auto -2px}.zovaro-ai-avatar-image{max-height:190px}.zovaro-ai-request-row{grid-template-columns:minmax(0,1fr) auto}.zovaro-ai-request-submit{padding:0 12px}}
+@media(max-width:420px){.zovaro-ai-request-row{grid-template-columns:1fr}.zovaro-ai-request-submit{width:100%}}
+@media(prefers-reduced-motion:reduce){.zovaro-ai-avatar-wrap,.zv-eye-lid,.zv-mouth-mask,.zv-mouth-line{animation:none!important}.zovaro-ai-avatar-wrap{transform:none!important}}
+
 </style>
   <link rel="stylesheet" href="marketplace.css">
 
@@ -2837,7 +2861,13 @@ document
     <button class="zovaro-ai-close" id="zovaroAiClose" type="button" aria-label="Close assistant">×</button>
     <div id="zovaroAiLanguages" class="zovaro-ai-screen">
       <div class="zovaro-ai-robot-stage">
-        <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar.webp" alt="ZOVARO Worldwide 3D white and blue robot avatar with illuminated eyes and ZOVARO emblem">
+        <div class="zovaro-ai-avatar-wrap" aria-label="ZOVARO Worldwide 3D white and blue robot assistant">
+          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar-v2.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
+          <span class="zv-eye-lid zv-eye-lid-left" aria-hidden="true"></span>
+          <span class="zv-eye-lid zv-eye-lid-right" aria-hidden="true"></span>
+          <span class="zv-mouth-mask" aria-hidden="true"></span>
+          <span class="zv-mouth-line" aria-hidden="true"></span>
+        </div>
         <div class="zovaro-ai-speech">
           <strong>ZOVARO WORLDWIDE</strong>
           <p id="zovaroAiChooseCopy">Welcome! First choose your language so I can greet you correctly.</p>
@@ -2864,11 +2894,25 @@ document
     </div>
     <div id="zovaroAiWelcomeScreen" class="zovaro-ai-screen" hidden>
       <div class="zovaro-ai-robot-stage">
-        <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar.webp" alt="ZOVARO Worldwide 3D robot assistant">
+        <div class="zovaro-ai-avatar-wrap" aria-label="ZOVARO Worldwide 3D white and blue robot assistant">
+          <img class="zovaro-ai-avatar-image" src="assets/zovaro-worldwide-avatar-v2.webp" alt="ZOVARO Worldwide 3D white and blue robot assistant">
+          <span class="zv-eye-lid zv-eye-lid-left" aria-hidden="true"></span>
+          <span class="zv-eye-lid zv-eye-lid-right" aria-hidden="true"></span>
+          <span class="zv-mouth-mask" aria-hidden="true"></span>
+          <span class="zv-mouth-line" aria-hidden="true"></span>
+        </div>
         <div class="zovaro-ai-speech" aria-live="polite">
           <strong>ZOVARO WORLDWIDE</strong>
           <p id="zovaroAiWelcomeText"></p>
           <button type="button" class="zovaro-ai-change" id="zovaroAiChangeLanguage">🌐 <span id="zovaroAiChangeLabel">Change language</span></button>
+          <form class="zovaro-ai-request-form" id="zovaroAiRequestForm">
+            <label class="zovaro-ai-request-label" for="zovaroAiRequestInput" id="zovaroAiRequestLabel">What do you need?</label>
+            <div class="zovaro-ai-request-row">
+              <input id="zovaroAiRequestInput" class="zovaro-ai-request-input" type="text" maxlength="300" autocomplete="off" required placeholder="Describe what you are looking for…">
+              <button class="zovaro-ai-request-submit" id="zovaroAiRequestSubmit" type="submit">SEARCH</button>
+            </div>
+            <p class="zovaro-ai-request-hint" id="zovaroAiRequestHint">Tell me what you need: a product, a job or a luxury opportunity.</p>
+          </form>
         </div>
       </div>
     </div>
