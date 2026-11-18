@@ -875,7 +875,9 @@ function expandSearchTerms(query) {
 
 function scoreProductSearch(product, queryVariants) {
   const primaryFields = [
-    product.name, product.brand, product.category, product.subcategory, product.merchant
+    product.name, product.title, product.englishTitle, product.brand,
+    product.category, product.englishCategory, product.subcategory,
+    product.englishSubcategory, product.merchant, product.advertiserName
   ];
   const primaryText = normalizeSearchText(primaryFields.join(" "));
   const primaryWords = new Set(primaryText.split(/\\s+/));
@@ -888,25 +890,16 @@ function scoreProductSearch(product, queryVariants) {
       best = Math.max(best, 120 + normalized.length);
       continue;
     }
-
     const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
     if (!queryWords.length) continue;
-
-    // Each original query word must be represented in the product's title,
-    // category, brand or merchant. Synonyms expand a word; they do not turn
-    // a multi-word query such as "iPhone 16" into a loose "iPhone" search.
     const matchedWords = queryWords.filter(word => {
       const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
       return alternatives.some(alternative => primaryWords.has(alternative));
     });
-
     if (matchedWords.length === queryWords.length) {
       best = Math.max(best, 90 + matchedWords.length);
-    } else if (queryWords.length === 1 && matchedWords.length === 1) {
-      best = Math.max(best, 85);
     }
   }
-
   return best;
 }
 
