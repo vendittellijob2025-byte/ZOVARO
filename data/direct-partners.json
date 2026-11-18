@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T19:14:00-05:00",
+  "updatedAt": "2026-11-17",
   "partners": [],
   "products": [],
   "notes": [
@@ -51,7 +51,8 @@
     "Daily audit 2026-11-16: Advance Auto Parts replied that its programme supports US customers/traffic only, uses last-click attribution, and pays through Impact's configured schedule; direct or weekly bank transfer is not available. Further review requires verified US audience metrics and an Impact publisher ID, neither currently available. A direct publisher enquiry was sent to Quicklly using the contact published on its Awin merchant profile; ZOVARO has not joined or paid for Awin.",
     "Daily audit 2026-11-16: KeldCo replied with 10% commission, bi-weekly payout and AUD $200 threshold; it requests verified audience/traffic metrics. ZOVARO sent a factual reply, explicitly withholding unverified reach estimates and declining to promise paid traffic or sales. Luxury Hotels Group confirmed it does not offer tracked affiliate/referral commissions and proposed only a franchise route; that route is not pursued. Mii Cosmetics and SimpliSafe UK sent automated acknowledgements only; Todson routed the message to general support, not an affiliate team. iHerb's automated message confirms receipt only, not approval.",
     "CJ Commission Reconciliation workflow run 43877498197 failed on 2026-11-16: the production endpoint /api/cj-commission-sync returned HTTP 500 on three attempts. No successful commission reconciliation is verified; investigate the endpoint/storage path before relying on commission totals.",
-    "eBay EPN audit 2026-11-16: official EPN and eBay Developers documentation reviewed. No authenticated EPN account status, campaign ID, OAuth application or payout settings could be verified. Browse API integration remains blocked pending legitimate EPN membership, 10-digit campaign ID, secure OAuth credentials and any required Buy API approval. No direct seller agreements or eBay product imports were created."
+    "eBay EPN audit 2026-11-16: official EPN and eBay Developers documentation reviewed. No authenticated EPN account status, campaign ID, OAuth application or payout settings could be verified. Browse API integration remains blocked pending legitimate EPN membership, 10-digit campaign ID, secure OAuth credentials and any required Buy API approval. No direct seller agreements or eBay product imports were created.",
+    "Daily audit 2026-11-17: Accor Plus/ALL Accor+ Explorer CJ welcome email confirms network approval, 8% commission and 30-day referral cookie; advertiser ID, publisher/customer territories, tracking, feed/API, product import and attribution remain unverified. A personalized follow-up was sent to the CJ programme contact. SOREL replied that the programme covers EMEA and pays through Impact in EUR; commission/cookie terms are only supplied after acceptance and the team requested audience/traffic figures and a media deck, which ZOVARO cannot yet substantiate. KeldCo confirmed 10%, a 14-day cookie, bi-weekly PayPal payouts with AUD $200 minimum, and Australia/New Zealand focus; no application or tracking link has been completed. A Philips Hue/Signify enquiry was sent, but the official Signify partner programme found is B2B system-integrator-only and excludes B2C Hue products; no affiliate programme was verified, so no further outreach is planned."
   ],
   "prospects": [
     {
@@ -3849,7 +3850,7 @@
     {
       "id": "sorel-affiliate",
       "name": "SOREL",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Impact affiliate programme",
       "category": "Footwear; Fashion; Outdoor",
       "sourceUrl": "https://www.sorel.ch/en/l/affiliate-program-sorel",
@@ -3870,12 +3871,33 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher/customer countries, feed, deep links, permitted images and programme terms.",
+      "nextAction": "Do not send a media deck or traffic figures until measured analytics are available. Reassess only when ZOVARO can provide verified audience and traffic data; no application, tracking link, feed or product import is confirmed.",
       "lastEmailSentAt": "2026-11-14T22:46:05Z",
       "lastEmailSubject": "ZOVARO Worldwide — SOREL affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3d45d87604a",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "responded",
+      "response": {
+        "receivedAt": "2026-11-17T11:02:47Z",
+        "contactName": "Vera",
+        "company": "Acceleration Partners",
+        "evidence": "Gmail thread 1a1dc3d45d87604a",
+        "territories": "EMEA",
+        "paymentPlatform": "Impact",
+        "payoutCurrency": "EUR",
+        "commission": "Not disclosed publicly; programme terms are supplied only after acceptance",
+        "cookie": "Not disclosed until acceptance",
+        "tracking": "Accepted partners receive tracking links and programme terms",
+        "requestedForReview": [
+          "Audience",
+          "Traffic",
+          "Promotional methods",
+          "Media deck"
+        ],
+        "blocker": "ZOVARO does not yet have verified monthly traffic, customer-country distribution or audience demographics; do not invent or estimate them."
+      },
+      "lastResponseAt": "2026-11-17T11:02:47Z",
+      "lastResponseThreadId": "1a1dc3d45d87604a"
     },
     {
       "id": "lenovo-north-america-affiliate",
@@ -5243,46 +5265,47 @@
       "contactedAt": "2026-11-14T22:50:15Z",
       "emailMessageId": "1a1dc4115693395f",
       "territories": [
-        "Australia; exact delivery countries to confirm"
+        "Australia",
+        "New Zealand"
       ],
-      "commission": "10% standard commission on qualifying sales through a unique tracking link, confirmed by affiliate manager",
-      "cookie": "Not stated",
+      "commission": "10% on qualifying tracked sales through a unique affiliate link",
+      "cookie": "14 days",
       "integration": {
         "affiliateLink": "pending",
         "productFeed": "pending",
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await KeldCo's programme guidelines and a response on countries, cookie, tracking, feed/API, image licence and payout method. No application, product import or publication until the missing traffic/territory requirements and programme terms are reviewed.",
+      "nextAction": "Review the programme rules before any application. No KeldCo tracking link, feed/API, product import, publication or attribution test is verified; keep offers unpublished until registration, terms and image permissions are confirmed.",
       "lastEmailSentAt": "2026-11-14T22:50:15Z",
       "lastEmailSubject": "ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
       "lastEmailThreadId": "1a1dc4115693395f",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent",
-      "payout": "Bi-weekly payout schedule; AUD $200 minimum threshold. Payment method not yet confirmed; weekly transfer not offered in the terms supplied.",
+      "emailDeliveryStatus": "responded",
+      "payout": "Bi-weekly; AUD $200 minimum payout threshold; PayPal only. Weekly bank transfer is not available in the terms supplied.",
       "terms": {
         "restrictions": "Paid Google Ads and Microsoft Ads prohibited; bidding on KeldCo brand prohibited; paid Meta/TikTok social advertising permitted by partner, but ZOVARO has no paid-ad spend authorised."
       },
       "response": {
-        "receivedAt": "2026-11-16T11:35:06Z",
+        "receivedAt": "2026-11-17T07:18:36Z",
         "contactName": "Kate",
         "role": "KeldCo Collaboration & Affiliate Manager",
         "email": "kate@keldco.com",
-        "evidence": "Gmail thread 1a1dc4115693395f",
-        "commission": "10% on qualifying sales via unique tracking link",
-        "payout": "Bi-weekly; AUD $200 threshold; payout method and currency conversion fees not confirmed",
-        "territories": "Not answered in reply; country eligibility still requires confirmation",
-        "requestedForReview": [
-          "Website URL",
-          "Main customer countries and audience demographics",
-          "Estimated monthly traffic or audience reach",
-          "Primary promotional and traffic sources",
-          "How products would be featured"
+        "evidence": "Gmail thread 1a1e6e0d07d1ba4f",
+        "commission": "10% on qualifying tracked sales",
+        "cookie": "14 days",
+        "attribution": "14-day cookie; precise attribution model not specified",
+        "payout": "Bi-weekly; AUD $200 minimum threshold; PayPal",
+        "territories": [
+          "Australia",
+          "New Zealand"
         ],
-        "blocker": "ZOVARO does not yet have validated monthly traffic, customer-country share or demographic metrics; do not invent estimates."
+        "productInformation": "No feed/API confirmed. Product photos/videos and marketing content uploaded directly by KeldCo to its official social accounts may be used; creator-owned content must not be reused without the creator's permission. Product claims must match verified KeldCo information.",
+        "registrationUrl": "https://keldco.goaffpro.com/create-account",
+        "blocker": "Affiliate registration and review of the attached programme rules are still required. ZOVARO has not applied or received a tracking link."
       },
-      "lastResponseAt": "2026-11-16T11:35:06Z",
-      "lastResponseThreadId": "1a1dc4115693395f",
+      "lastResponseAt": "2026-11-17T07:18:36Z",
+      "lastResponseThreadId": "1a1e6e0d07d1ba4f",
       "followUpSentAt": "2026-11-16",
       "followUpThreadId": "1a1e6e0d07d1ba4f",
       "followUpSubject": "Re: ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
@@ -7135,7 +7158,12 @@
           "visibilityNote": "No evidence of products imported or published for this new approval."
         }
       },
-      "nextAction": "Retrieve the advertiser ID and current programme terms in CJ; verify market eligibility, link generation, feed access, creative rights and attribution before importing or publishing."
+      "nextAction": "Retrieve the advertiser ID and current programme terms in CJ; verify market eligibility, link generation, feed access, creative rights and attribution before importing or publishing.",
+      "lastEmailSentAt": "2026-11-17T11:50:11Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Fragrance Outlet commission, feed and tracking confirmation",
+      "lastEmailThreadId": "1a1e957da753fd7e",
+      "emailDeliveryStatus": "sent",
+      "outreachSummary": "CJ welcome email confirmed network approval and said product feeds and creative assets may be available. ZOVARO sent a follow-up requesting actual commission/cookie/territory terms, advertiser ID, feed access, tracking and permitted assets. No response to that follow-up is recorded yet."
     },
     {
       "id": "perfumania-cj",
@@ -7449,6 +7477,93 @@
         "summary": "Automated response confirms the email was received and points to iHerb's affiliate information and support channels; no human reply, approval or terms supplied."
       },
       "nextAction": "Wait for a substantive response and determine the appropriate affiliate network for ZOVARO; do not apply, import or publish until eligibility, tracking, feed and image permissions are confirmed."
+    },
+    {
+      "id": "all-accor-plus-explorer-cj",
+      "name": "ALL Accor+ Explorer",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate travel-loyalty membership programme",
+      "category": "Travel; Hotels; Dining; Loyalty Membership",
+      "sourceUrl": "https://www.accorplus.com/",
+      "contact": {
+        "email": "accorplus_apac@cj.com",
+        "network": "CJ Affiliate"
+      },
+      "contactedAt": "2026-11-17T11:50:09Z",
+      "emailMessageId": "1a1e957d271dccab",
+      "lastEmailSentAt": "2026-11-17T11:50:09Z",
+      "lastEmailSubject": "ZOVARO Worldwide — ALL Accor+ Explorer affiliate markets, deep links and tracking",
+      "lastEmailThreadId": "1a1e957d271dccab",
+      "emailDeliveryStatus": "sent",
+      "territories": [
+        "Official membership page describes global hotel discounts; additional Stay Plus, dining and drinks benefits are market-specific to Asia Pacific and UAE/Middle East. CJ publisher and customer eligibility still not confirmed."
+      ],
+      "commission": "8% per CJ welcome email; account-specific rate still to be verified in CJ",
+      "cookie": "30 days per CJ welcome email",
+      "terms": {
+        "restrictions": "Generic search keywords permitted; bidding on Accor/ALL Accor trademarks, domain names, misspellings or variations is prohibited."
+      },
+      "approvalEvidence": {
+        "date": "2026-11-17",
+        "emailSubject": "Welcome to the Accor Plus Affiliate Program!",
+        "threadId": "1a1e7ca36289034b"
+      },
+      "advertiserId": null,
+      "integration": {
+        "affiliateLink": "pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "technicalAudit": {
+        "network": {
+          "relationshipStatus": "approved_on_network by CJ welcome email",
+          "advertiserId": "not provided in welcome email",
+          "checkedAt": "2026-11-17"
+        },
+        "feed": {
+          "status": "not_verified",
+          "productsImported": 0
+        },
+        "tracking": {
+          "clickUrlValidation": "not_verified",
+          "testClick": "not_performed",
+          "endToEndAttribution": "not_verified"
+        },
+        "catalog": {
+          "productsImported": 0,
+          "publicStorefrontProductsByAdvertiser": null,
+          "storefrontEligible": false
+        }
+      },
+      "nextAction": "Retrieve advertiser ID and current CJ terms; confirm eligible publisher/customer countries, deep links, tracking, feed/API, image permissions, reporting and payout before promoting. This is a paid membership product, not a hotel-inventory feed."
+    },
+    {
+      "id": "philips-hue-signify-contacted-unverified",
+      "name": "Philips Hue / Signify",
+      "status": "contacted_unverified",
+      "programType": "No B2C affiliate/referral programme verified; official Signify partner ecosystem is a B2B certified system-integrator programme",
+      "category": "Electronics; Smart Home; Lighting",
+      "sourceUrl": "https://www.signify.com/global/partner-program/become-a-partner",
+      "contact": {
+        "email": "partners.signify@signify.com",
+        "verificationNote": "Address not independently confirmed on an official public affiliate/partnership page; initial enquiry was already sent."
+      },
+      "contactedAt": "2026-11-17T11:45:33Z",
+      "lastEmailSentAt": "2026-11-17T11:45:33Z",
+      "lastEmailSubject": "ZOVARO Worldwide — Philips Hue affiliate partnership, product feed and international markets",
+      "lastEmailThreadId": "1a1e9539cde4fa7b",
+      "emailDeliveryStatus": "sent",
+      "territories": [
+        "Not confirmed"
+      ],
+      "integration": {
+        "affiliateLink": "not verified",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "not verified"
+      },
+      "nextAction": "Do not send further outreach. Signify's official partner programme is for certified system integrators and explicitly excludes B2C Philips Hue products; no publisher affiliate/referral programme or tracking was verified."
     }
   ],
   "cjAudit": {
