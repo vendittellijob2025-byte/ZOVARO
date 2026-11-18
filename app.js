@@ -868,28 +868,39 @@ function expandSearchTerms(query) {
 }
 
 function scoreProductSearch(product, queryVariants) {
-  const fields = [
-    product.name, product.brand, product.category, product.subcategory,
-    product.merchant, product.description, product.network
+  const primaryFields = [
+    product.name, product.brand, product.category, product.subcategory, product.merchant
   ];
-  const text = normalizeSearchText(fields.join(" "));
-  const normalizedFields = fields.map(normalizeSearchText);
+  const primaryText = normalizeSearchText(primaryFields.join(" "));
+  const primaryWords = new Set(primaryText.split(/\\s+/));
   let best = 0;
+
   for (const query of queryVariants) {
     const normalized = normalizeSearchText(query);
     if (!normalized) continue;
-    if (text.includes(normalized)) best = Math.max(best, 100 + normalized.length);
-    const terms = expandSearchTerms(normalized);
-    const meaningful = terms.filter(term => term.length > 1);
-    const matched = meaningful.filter(term => text.split(" ").includes(term));
-    const originalTerms = normalized.split(" ").filter(term => term.length > 1);
-    const originalMatched = originalTerms.filter(term => text.split(" ").includes(term));
-    if (originalTerms.length && originalMatched.length === originalTerms.length) {
-      best = Math.max(best, 80 + originalMatched.length);
-    } else if (meaningful.length && matched.length >= Math.max(1, Math.ceil(originalTerms.length * 0.7))) {
-      best = Math.max(best, 35 + matched.length);
+    if (primaryText.includes(normalized)) {
+      best = Math.max(best, 120 + normalized.length);
+      continue;
+    }
+
+    const queryWords = normalized.split(/\\s+/).filter(word => word.length > 1);
+    if (!queryWords.length) continue;
+
+    // Each original query word must be represented in the product's title,
+    // category, brand or merchant. Synonyms expand a word; they do not turn
+    // a multi-word query such as "iPhone 16" into a loose "iPhone" search.
+    const matchedWords = queryWords.filter(word => {
+      const alternatives = [word, ...(SEARCH_SYNONYMS[word] || "").split(/\\s+/).filter(Boolean)];
+      return alternatives.some(alternative => primaryWords.has(alternative));
+    });
+
+    if (matchedWords.length === queryWords.length) {
+      best = Math.max(best, 90 + matchedWords.length);
+    } else if (queryWords.length === 1 && matchedWords.length === 1) {
+      best = Math.max(best, 85);
     }
   }
+
   return best;
 }
 
@@ -907,7 +918,7 @@ $("#searchForm").addEventListener("submit", async event => {
   if (button) { button.disabled = true; button.textContent = "…"; }
 
   const translated = await translateSearchQuery(q);
-  const queryVariants = [...new Set([q, translated, ...expandSearchTerms(q)])];
+  const queryVariants = [...new Set([q, translated])];
   const scored = PRODUCTS
     .map(product => ({ product, score: scoreProductSearch(product, queryVariants) }))
     .filter(item => item.score > 0)
