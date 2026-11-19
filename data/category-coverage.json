@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T00:10:14.271Z",
+  "generatedAt": "2026-11-19T05:20:15.270Z",
   "selectedProductCount": 19517,
   "inventoryProductCount": 202106,
   "uniqueAdvertiserCount": 24,
@@ -2522,7 +2522,71 @@
               "path": "Phones & Tablets > Smartphones",
               "productCount": 36,
               "directProductCount": 36,
-              "children": []
+              "children": [
+                {
+                  "name": "Apple iPhone",
+                  "path": "Phones & Tablets > Smartphones > Apple iPhone",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Samsung Galaxy",
+                  "path": "Phones & Tablets > Smartphones > Samsung Galaxy",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Google Pixel",
+                  "path": "Phones & Tablets > Smartphones > Google Pixel",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Motorola",
+                  "path": "Phones & Tablets > Smartphones > Motorola",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Xiaomi & Redmi",
+                  "path": "Phones & Tablets > Smartphones > Xiaomi & Redmi",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "OnePlus",
+                  "path": "Phones & Tablets > Smartphones > OnePlus",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Huawei",
+                  "path": "Phones & Tablets > Smartphones > Huawei",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "OPPO & vivo",
+                  "path": "Phones & Tablets > Smartphones > OPPO & vivo",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Other Android Smartphones",
+                  "path": "Phones & Tablets > Smartphones > Other Android Smartphones",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Basic Phones",
@@ -2536,7 +2600,43 @@
               "path": "Phones & Tablets > Tablets",
               "productCount": 0,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Apple iPad",
+                  "path": "Phones & Tablets > Tablets > Apple iPad",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Samsung Galaxy Tab",
+                  "path": "Phones & Tablets > Tablets > Samsung Galaxy Tab",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Android Tablets",
+                  "path": "Phones & Tablets > Tablets > Android Tablets",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Windows Tablets",
+                  "path": "Phones & Tablets > Tablets > Windows Tablets",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Rugged Tablets",
+                  "path": "Phones & Tablets > Tablets > Rugged Tablets",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "E-Readers",
@@ -2572,28 +2672,193 @@
               "path": "Computers > Laptops",
               "productCount": 0,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Apple MacBook",
+                  "path": "Computers > Laptops > Apple MacBook",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Windows Laptops",
+                  "path": "Computers > Laptops > Windows Laptops",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Gaming Laptops",
+                  "path": "Computers > Laptops > Gaming Laptops",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Business Laptops",
+                  "path": "Computers > Laptops > Business Laptops",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Chromebooks",
+                  "path": "Computers > Laptops > Chromebooks",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "2-in-1 & Convertible Laptops",
+                  "path": "Computers > Laptops > 2-in-1 & Convertible Laptops",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Mobile Workstations",
+                  "path": "Computers > Laptops > Mobile Workstations",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Desktop Computers",
               "path": "Computers > Desktop Computers",
               "productCount": 0,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Gaming Desktops",
+                  "path": "Computers > Desktop Computers > Gaming Desktops",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Workstations",
+                  "path": "Computers > Desktop Computers > Workstations",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "All-in-One PCs",
+                  "path": "Computers > Desktop Computers > All-in-One PCs",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Mini PCs",
+                  "path": "Computers > Desktop Computers > Mini PCs",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Tower PCs",
+                  "path": "Computers > Desktop Computers > Tower PCs",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Monitors",
               "path": "Computers > Monitors",
               "productCount": 0,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Gaming Monitors",
+                  "path": "Computers > Monitors > Gaming Monitors",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Professional & Creator Monitors",
+                  "path": "Computers > Monitors > Professional & Creator Monitors",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "4K & High-Resolution Monitors",
+                  "path": "Computers > Monitors > 4K & High-Resolution Monitors",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Ultrawide Monitors",
+                  "path": "Computers > Monitors > Ultrawide Monitors",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
               "productCount": 0,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Graphics Cards",
+                  "path": "Computers > Computer Components > Graphics Cards",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Processors & CPUs",
+                  "path": "Computers > Computer Components > Processors & CPUs",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Motherboards",
+                  "path": "Computers > Computer Components > Motherboards",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "RAM & Memory",
+                  "path": "Computers > Computer Components > RAM & Memory",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "SSD & Hard Drives",
+                  "path": "Computers > Computer Components > SSD & Hard Drives",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Power Supplies",
+                  "path": "Computers > Computer Components > Power Supplies",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "PC Cases & Cooling",
+                  "path": "Computers > Computer Components > PC Cases & Cooling",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Keyboards & Mice",
@@ -6733,6 +6998,20 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Hummer & Luxury 4x4",
+              "path": "Luxury Cars & Hypercars > Hummer & Luxury 4x4",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Limousines & Chauffeur Cars",
+              "path": "Luxury Cars & Hypercars > Limousines & Chauffeur Cars",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
             }
           ]
         },
@@ -6783,6 +7062,34 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Private Jets for Sale",
+              "path": "Private Helicopters & Aviation > Private Jets for Sale",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Private Jets for Charter",
+              "path": "Private Helicopters & Aviation > Private Jets for Charter",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Business Jets for Sale",
+              "path": "Private Helicopters & Aviation > Business Jets for Sale",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Aircraft Fractional Ownership",
+              "path": "Private Helicopters & Aviation > Aircraft Fractional Ownership",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
             }
           ]
         },
@@ -6830,6 +7137,41 @@
             {
               "name": "Yachts for Sale",
               "path": "Yachts & Boats > Yachts for Sale",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Sailing Yachts",
+              "path": "Yachts & Boats > Sailing Yachts",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Motor Yachts",
+              "path": "Yachts & Boats > Motor Yachts",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Catamarans",
+              "path": "Yachts & Boats > Catamarans",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Luxury Motorboats",
+              "path": "Yachts & Boats > Luxury Motorboats",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Boats for Sale",
+              "path": "Yachts & Boats > Boats for Sale",
               "productCount": 0,
               "directProductCount": 0,
               "children": []
@@ -6897,6 +7239,27 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Rolex Watches",
+              "path": "Luxury Watches & Jewelry > Rolex Watches",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Patek Philippe Watches",
+              "path": "Luxury Watches & Jewelry > Patek Philippe Watches",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Pre-Owned & Vintage Luxury Watches",
+              "path": "Luxury Watches & Jewelry > Pre-Owned & Vintage Luxury Watches",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
             }
           ]
         },
@@ -6954,6 +7317,34 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Original Paintings",
+              "path": "Fine Art & Collectibles > Original Paintings",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Collector-Owned Artworks",
+              "path": "Fine Art & Collectibles > Collector-Owned Artworks",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Fine Art Auctions",
+              "path": "Fine Art & Collectibles > Fine Art Auctions",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Art Collections & Private Sales",
+              "path": "Fine Art & Collectibles > Art Collections & Private Sales",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
             }
           ]
         },
@@ -6994,6 +7385,34 @@
             {
               "name": "Waterfront Properties",
               "path": "Exclusive Villas & Real Estate > Waterfront Properties",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Luxury Villas for Sale",
+              "path": "Exclusive Villas & Real Estate > Luxury Villas for Sale",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Luxury Villas for Rent",
+              "path": "Exclusive Villas & Real Estate > Luxury Villas for Rent",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Luxury Apartments & Penthouses for Sale",
+              "path": "Exclusive Villas & Real Estate > Luxury Apartments & Penthouses for Sale",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Luxury Estates & Country Houses",
+              "path": "Exclusive Villas & Real Estate > Luxury Estates & Country Houses",
               "productCount": 0,
               "directProductCount": 0,
               "children": []
@@ -9921,9 +10340,9 @@
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1349,
+    "taxonomyNodeCount": 1408,
     "usedTaxonomyNodeCount": 216,
-    "emptyTaxonomyNodeCount": 1133,
+    "emptyTaxonomyNodeCount": 1192,
     "productsWithKnownSubcategory": 12249,
     "productsWithInvalidSubcategory": 0,
     "productsWithoutSubcategory": 7268,
