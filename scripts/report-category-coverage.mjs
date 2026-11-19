@@ -135,6 +135,39 @@ for (const product of products) {
   const advertiser = String(product.advertiserName || "(unknown advertiser)");
   otherByAdvertiser.set(advertiser, (otherByAdvertiser.get(advertiser) || 0) + 1);
 }
+const brandCoverage = {};
+for (const brand of ["Nike", "Adidas", "Reebok"]) {
+  const escaped = brand.replace(/[.*+?^${}()|[\]\\]/g, "\\const result = {
+  generatedAt: new Date().toISOString(),");
+  const pattern = new RegExp("\\b" + escaped + "\\b", "i");
+  const matches = products.filter(product =>
+    pattern.test(String(product.brand || "")) ||
+    pattern.test(String(product.englishTitle || product.title || product.name || ""))
+  );
+  brandCoverage[brand] = {
+    productCount: matches.length,
+    byCategory: [...matches.reduce((map, product) => {
+      const category = String(product.englishCategory || product.category || "Other");
+      map.set(category, (map.get(category) || 0) + 1);
+      return map;
+    }, new Map())].map(([category, count]) => ({ category, count })).sort((a,b) => b.count-a.count),
+    examples: matches.slice(0, 10).map(productExample)
+  };
+}
+const focusedProductCoverage = {
+  televisions: products.filter(product => {
+    const category = String(product.englishCategory || product.category || "");
+    const subcategory = String(product.englishSubcategory || product.subcategory || "");
+    return category === "TVs & Home Cinema" && /Televisions/.test(subcategory);
+  }).length,
+  smartphones: products.filter(product => /Phones & Tablets > Smartphones/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  playstationConsoles: products.filter(product => /Consoles > PlayStation/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  gamingConsoles: products.filter(product => String(product.englishCategory || product.category || "") === "Gaming" && /Consoles/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  fashionClothing: products.filter(product => String(product.englishCategory || product.category || "") === "Fashion" && /Clothing|Women's Clothing|Men's Clothing|Kids' Clothing/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  tennisShoes: products.filter(product => String(product.englishCategory || product.category || "") === "Sports" && /Tennis > Tennis Shoes/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  fashionSneakers: products.filter(product => String(product.englishCategory || product.category || "") === "Fashion" && /Shoes > Sneakers/.test(String(product.englishSubcategory || product.subcategory || ""))).length,
+  sportsFootwear: products.filter(product => String(product.englishCategory || product.category || "") === "Sports" && /Sports Footwear/.test(String(product.englishSubcategory || product.subcategory || ""))).length
+};
 const result = {
   generatedAt: new Date().toISOString(),
   selectedProductCount: products.length,
@@ -164,6 +197,8 @@ const result = {
     otherExamples,
     missingSubcategoryExamples
   },
+  brandCoverage,
+  focusedProductCoverage,
   productCompleteness: {
     withTrackedHttpsLinks: productsWithTrackedLinks,
     withImages: productsWithImages,
