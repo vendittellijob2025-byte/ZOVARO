@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T07:20:42.358Z",
+  "generatedAt": "2026-11-19T13:53:39.042Z",
   "selectedProductCount": 20906,
   "inventoryProductCount": 201240,
   "uniqueAdvertiserCount": 24,
@@ -2508,8 +2508,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 436,
-      "unclassifiedProductCount": 147,
+      "productCount": 435,
+      "unclassifiedProductCount": 146,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -7768,7 +7768,7 @@
     },
     {
       "name": "Sports",
-      "productCount": 1813,
+      "productCount": 1814,
       "unclassifiedProductCount": 463,
       "browseTree": [
         {
@@ -8230,14 +8230,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 363,
+          "productCount": 364,
           "directProductCount": 0,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 363,
-              "directProductCount": 363,
+              "productCount": 364,
+              "directProductCount": 364,
               "children": []
             },
             {
@@ -10343,9 +10343,9 @@
     "taxonomyNodeCount": 1408,
     "usedTaxonomyNodeCount": 228,
     "emptyTaxonomyNodeCount": 1180,
-    "productsWithKnownSubcategory": 12097,
+    "productsWithKnownSubcategory": 12098,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 8809,
+    "productsWithoutSubcategory": 8808,
     "unclassifiedByCategory": [
       {
         "category": "Toys & Games",
@@ -10385,7 +10385,7 @@
       },
       {
         "category": "Electronics",
-        "count": 147
+        "count": 146
       },
       {
         "category": "Travel",
@@ -10441,8 +10441,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 8809,
-      "provisional": 12097
+      "needs_classification": 8808,
+      "provisional": 12098
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10484,7 +10484,7 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 363
+        "productCount": 364
       },
       {
         "path": "Fashion > Shoes > Sneakers",
@@ -12293,7 +12293,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "title": "Abelssoft File Organizer 2025 | Organize your computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
@@ -13153,7 +13153,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Naprawdę?",
+        "title": "Really?",
         "brand": "Insignis",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13163,7 +13163,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Baseus Kabel Usb-c Szybkie Ładowanie Przewód Type-c Pd 100W Qc 4.0 5A 2M",
+        "title": "Baseus Usb-c Cable Fast Charging Cord Type-c Pd 100W Qc 4.0 5A 2M",
         "brand": "Baseus",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13173,17 +13173,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Rockbros Torba na ramę roweru z uchwytem na telefon Wodoodporna",
-        "brand": "Rockbros",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>Torba na ramę roweru ROCKBROS z uchwytem na telefon, wodoodporna, z ekranem dotykowym</h1><ul><li>Marka:<b> ROCKBROS</b></li><li>Waga: <b>około 109 g</b></li><li>Rozmiar telefo",
-        "category": "Electronics"
-      },
-      {
-        "title": "Pasek 2 Sztuki Do Huawei Watch Gt GT2 GT2E GT2PRO GT3 GT4 GT5 46MM",
+        "title": "Strap 2 Pieces For Huawei Watch Gt GT2 GT2E GT2PRO GT3 GT4 GT5 46MM",
         "brand": "nieznany producent",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13193,7 +13183,7 @@
         "category": "Electronics"
       },
       {
-        "title": "TensorFlow. 13 praktycznych projektów",
+        "title": "TensorFlow. 13 practical projects",
         "brand": "Helion",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13740,6 +13730,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Toys & Games",
         "description": "Lacoste Essential Sport Cologne for Men - Type Perfume Oil 1/3 oz Roll-on by Lacoste - A Perfume that commands attention. Shop now and find your perfect fragrance. Free Shipping!",
+        "category": "Toys & Games"
+      },
+      {
+        "title": "OEDRO 6\" Running Boards Steps Nerf Bars for 2005-2023 Toyota Tacoma Double Cab(4 Full doors Size=1:0.75)",
+        "brand": "OEDRO",
+        "advertiser": "Oedro",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Toys & Games",
+        "description": "OEDRO Drop Running Boards, designed for 2005-2023 Toyota Tacoma Double Cab, feature a sturdy three-tube construction for undercarriage and side protection. The 6-inch drop-down ped",
         "category": "Toys & Games"
       }
     ]
