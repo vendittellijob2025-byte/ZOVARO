@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - "lib/product-category.js"
       - "scripts/zovaro-autopilot-audit.mjs"
       - ".github/workflows/zovaro-autopilot.yml"
       - "scripts/test-product-category.mjs"
