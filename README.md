@@ -55,6 +55,15 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 - Each offer must record supported customer countries, shipping/service regions, currency, availability, tracking URL, image permissions and last verification date.
 - The canonical policy is `data/territory-visibility-policy.json`.
 
+### ZOVARO AUTOPILOT — free scheduled operations
+
+- `.github/workflows/zovaro-autopilot.yml` runs a read-only daily operations audit at 07:40 America/Bogota and can also be started manually.
+- The audit checks product-category rules, category quality, direct-partner registry integrity, catalogue coverage and affiliate-opportunity pipeline counts.
+- Each run publishes a JSON report as a GitHub Actions artifact retained for 30 days and writes a readable GitHub Actions job summary.
+- The workflow uses GitHub-hosted Actions and repository data only; it does not require a paid AI service, add a Vercel function, or change the live catalogue.
+- Existing CJ catalogue sync (six-hourly), image intelligence audit (four times daily), translation batches (six-hourly) and commission reconciliation (daily) remain separate workflows.
+- This first Autopilot version is scheduled quality control, not a continuously reasoning AI agent: it does not perform live AI-assisted affiliate discovery, submit applications, send emails, change partner approvals, or publish offers. Those activities remain manual and require owner authorization.
+
 ### Social promotion and TikTok
 
 - GitHub Actions can generate the daily promotion package and vertical video.
