@@ -139,12 +139,24 @@ const brandCoverage = {};
 for (const brand of ["Nike", "Adidas", "Reebok"]) {
   const pattern = new RegExp("\\b" + brand + "\\b", "i");
 
-  const matches = products.filter(product =>
-    pattern.test(String(product.brand || "")) ||
-    pattern.test(String(product.englishTitle || product.title || product.name || ""))
+  const matches = products.filter(product => {
+    const productBrand = String(product.brand || "").trim();
+    const title = String(product.englishTitle || product.title || product.name || "");
+    // A populated, different brand field is authoritative: do not count
+    // unrelated books or descriptions that merely mention the brand name.
+    if (productBrand) return pattern.test(productBrand);
+    return pattern.test(title) && !/\b(book|author|memoir|biography|history)\b/i.test(title);
+  });
+  const footwearMatches = matches.filter(product =>
+    /\b(shoes?|sneakers?|trainers?|footwear|cleats?|zapatillas?|scarpe)\b/i.test(String(product.englishTitle || product.title || product.name || ""))
+  );
+  const tennisShoes = footwearMatches.filter(product =>
+    /\b(tennis|court)\b/i.test(String(product.englishTitle || product.title || product.name || ""))
   );
   brandCoverage[brand] = {
     productCount: matches.length,
+    footwearProductCount: footwearMatches.length,
+    tennisShoeCount: tennisShoes.length,
     byCategory: [...matches.reduce((map, product) => {
       const category = String(product.englishCategory || product.category || "Other");
       map.set(category, (map.get(category) || 0) + 1);
