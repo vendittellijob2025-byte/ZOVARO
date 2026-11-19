@@ -625,9 +625,31 @@
         {
           "name": "Phones & Tablets",
           "children": [
-            "Smartphones",
+            {
+              "name": "Smartphones",
+              "children": [
+                "Apple iPhone",
+                "Samsung Galaxy",
+                "Google Pixel",
+                "Motorola",
+                "Xiaomi & Redmi",
+                "OnePlus",
+                "Huawei",
+                "OPPO & vivo",
+                "Other Android Smartphones"
+              ]
+            },
             "Basic Phones",
-            "Tablets",
+            {
+              "name": "Tablets",
+              "children": [
+                "Apple iPad",
+                "Samsung Galaxy Tab",
+                "Android Tablets",
+                "Windows Tablets",
+                "Rugged Tablets"
+              ]
+            },
             "E-Readers",
             "Cases & Screen Protectors",
             "Chargers & Cables"
@@ -636,10 +658,49 @@
         {
           "name": "Computers",
           "children": [
-            "Laptops",
-            "Desktop Computers",
-            "Monitors",
-            "Computer Components",
+            {
+              "name": "Laptops",
+              "children": [
+                "Apple MacBook",
+                "Windows Laptops",
+                "Gaming Laptops",
+                "Business Laptops",
+                "Chromebooks",
+                "2-in-1 & Convertible Laptops",
+                "Mobile Workstations"
+              ]
+            },
+            {
+              "name": "Desktop Computers",
+              "children": [
+                "Gaming Desktops",
+                "Workstations",
+                "All-in-One PCs",
+                "Mini PCs",
+                "Tower PCs"
+              ]
+            },
+            {
+              "name": "Monitors",
+              "children": [
+                "Gaming Monitors",
+                "Professional & Creator Monitors",
+                "4K & High-Resolution Monitors",
+                "Ultrawide Monitors"
+              ]
+            },
+            {
+              "name": "Computer Components",
+              "children": [
+                "Graphics Cards",
+                "Processors & CPUs",
+                "Motherboards",
+                "RAM & Memory",
+                "SSD & Hard Drives",
+                "Power Supplies",
+                "PC Cases & Cooling"
+              ]
+            },
             "Keyboards & Mice",
             "Storage & Memory",
             "Networking"
@@ -1657,7 +1718,9 @@
             "Mercedes-Maybach",
             "New Luxury Cars",
             "Pre-Owned Luxury Cars",
-            "Collector Cars"
+            "Collector Cars",
+            "Hummer & Luxury 4x4",
+            "Limousines & Chauffeur Cars"
           ]
         },
         {
@@ -1668,7 +1731,11 @@
             "Business Jets",
             "Executive Aircraft",
             "Private Charters",
-            "Aircraft for Sale"
+            "Aircraft for Sale",
+            "Private Jets for Sale",
+            "Private Jets for Charter",
+            "Business Jets for Sale",
+            "Aircraft Fractional Ownership"
           ]
         },
         {
@@ -1679,7 +1746,12 @@
             "Megayachts",
             "Exclusive Boats",
             "Yacht Charters",
-            "Yachts for Sale"
+            "Yachts for Sale",
+            "Sailing Yachts",
+            "Motor Yachts",
+            "Catamarans",
+            "Luxury Motorboats",
+            "Boats for Sale"
           ]
         },
         {
@@ -1692,7 +1764,10 @@
             "Vacheron Constantin",
             "Cartier",
             "High Jewelry",
-            "Collectible Watches"
+            "Collectible Watches",
+            "Rolex Watches",
+            "Patek Philippe Watches",
+            "Pre-Owned & Vintage Luxury Watches"
           ]
         },
         {
@@ -1704,7 +1779,11 @@
             "Contemporary Art",
             "Antiques",
             "Private Collections",
-            "Rare Objects"
+            "Rare Objects",
+            "Original Paintings",
+            "Collector-Owned Artworks",
+            "Fine Art Auctions",
+            "Art Collections & Private Sales"
           ]
         },
         {
@@ -1714,7 +1793,11 @@
             "Penthouses",
             "Private Residences",
             "Estates & Country Properties",
-            "Waterfront Properties"
+            "Waterfront Properties",
+            "Luxury Villas for Sale",
+            "Luxury Villas for Rent",
+            "Luxury Apartments & Penthouses for Sale",
+            "Luxury Estates & Country Houses"
           ]
         },
         {
