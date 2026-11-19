@@ -1,6 +1,13 @@
 name: ZOVARO - Weekly Affiliate Partner Page Monitor
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/zovaro-affiliate-page-monitor.mjs"
+      - ".github/workflows/zovaro-affiliate-page-monitor.yml"
+      - "data/partner-opportunities.json"
   workflow_dispatch:
   schedule:
     # 08:10 America/Bogota (UTC-5), every Monday.
