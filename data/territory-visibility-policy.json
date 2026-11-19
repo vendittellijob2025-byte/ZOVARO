@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "purpose": "Global discovery with market-specific purchase eligibility for affiliate and referral offers.",
+  "principles": [
+    "Do not reject an otherwise relevant affiliate or merchant solely because its checkout or delivery territory is limited to one or more countries.",
+    "Separate global discovery visibility from local purchase eligibility: a product may be discoverable worldwide while its purchase CTA is enabled only for supported customer markets.",
+    "Treat publisher eligibility, customer delivery territory, product availability, and legal/compliance restrictions as separate fields; one must never be inferred from another.",
+    "For every offer, disclose the actual supported customer countries/regions, shipping or service limitations, currency, and any material restrictions before the outbound click.",
+    "If the visitor is outside the merchant's supported market, keep the listing discoverable where useful but disable or replace the purchase CTA with a clear unavailable-in-your-region notice; never imply delivery is possible.",
+    "Where multiple affiliate partners sell the same or equivalent product in different markets, select the partner whose verified territory serves the visitor, preserving that partner's own tracking URL.",
+    "Allow region-specific variants and offers for the same product identity; do not merge prices, availability, warranties, shipping terms, or tracking links across markets.",
+    "Do not publish a product offer until partner approval, tracking attribution, product data, image rights, and applicable market restrictions are verified."
+  ],
+  "requiredOfferFields": [
+    "partnerId",
+    "productId",
+    "partnerApprovalStatus",
+    "trackingUrl",
+    "publisherEligibleCountries",
+    "customerPurchaseCountries",
+    "shippingOrServiceRegions",
+    "availabilityStatus",
+    "price",
+    "currency",
+    "imagePermissionStatus",
+    "lastVerifiedAt"
+  ],
+  "marketSelection": {
+    "visitorCountrySource": "Use a reliable visitor-selected country or permitted coarse geolocation; allow manual country override.",
+    "priority": [
+      "Exact country-specific partner offer with verified availability",
+      "Regional partner offer whose documented coverage includes the visitor country",
+      "Global partner offer with explicitly verified delivery/service to the visitor country"
+    ],
+    "noEligibleOffer": "Keep discovery listing only if it remains accurate and useful; suppress purchase action and clearly state that no verified seller currently serves the visitor's country."
+  },
+  "safetyAndCompliance": [
+    "Respect advertiser terms, local laws, sanctions, export controls, product restrictions, age restrictions, and platform/network policies.",
+    "Never bypass a merchant's geo-block, checkout restriction, or shipping policy.",
+    "Do not promise a commission, sale, delivery, warranty, or return outcome that has not been verified."
+  ]
+}
