@@ -358,14 +358,13 @@
         "empty-leg flights",
         "private aviation"
       ],
-      "publicProgram": "Current official partner page advertises 10% of flight price on booked flights, 365-day referral links, free signup and monthly bank transfer from €100; commission due 14 days after flight. A future-dated terms page version 2026-12-01 shows different service-fee calculations, so obtain written confirmation of the applicable rate before applying.",
+      "publicProgram": "Current terms (version 2026-09-26) pay 10% of flight price until 2026-11-30. New terms announced for 2026-12-01 reduce commission to 5% on empty legs and 2.5% on charter requests. Free to join; 365-day referral links; monthly bank transfer from €100; due 14 days after flight.",
       "url": "https://www.privjet.net/en/partner-program",
       "nextVerification": [
-        "written confirmation of current commission schedule and future terms transition",
-        "country eligibility and service route coverage",
-        "referral link/code and attribution exclusions",
-        "approved imagery and brand permissions",
-        "tax/KYC onboarding and bank transfer"
+        "confirm which rate applies to bookings placed/approved before and after 2026-12-01",
+        "international publisher and customer-country eligibility",
+        "referral link/code, cookie-consent limits and attribution exclusions",
+        "approved assets, tax/KYC and bank transfer"
       ]
     },
     {
