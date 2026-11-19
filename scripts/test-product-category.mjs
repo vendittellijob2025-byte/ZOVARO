@@ -328,7 +328,6 @@ const subcategoryCases = [
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"]
 ];
-const taxonomy = JSON.parse(fs.readFileSync("data/category-tree.json", "utf8"));
 const subcategoryFailures = [];
 for (const [category, title, expected] of subcategoryCases) {
   const actual = subcategoryFor(category, { title, englishTitle: title });
