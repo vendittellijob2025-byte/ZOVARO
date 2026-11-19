@@ -138,7 +138,6 @@ for (const product of products) {
 const brandCoverage = {};
 for (const brand of ["Nike", "Adidas", "Reebok"]) {
   const pattern = new RegExp("\\b" + brand + "\\b", "i");
-  generatedAt: new Date().toISOString(),");
 
   const matches = products.filter(product =>
     pattern.test(String(product.brand || "")) ||
