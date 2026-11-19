@@ -1,5 +1,4 @@
 import fs from "node:fs";
-import path from "node:path";
 
 const readJson = (file) => JSON.parse(fs.readFileSync(file, "utf8"));
 const catalog = readJson("data/catalog.json");
@@ -9,7 +8,6 @@ const opportunities = readJson("data/partner-opportunities.json");
 const products = Array.isArray(catalog.products) ? catalog.products : [];
 const roots = Array.isArray(taxonomy.categories) ? taxonomy.categories : [];
 const counts = new Map();
-const subcategoryCounts = new Map();
 let unclassified = 0;
 let invalidRoot = 0;
 let tracked = 0;
@@ -58,6 +56,11 @@ for (const item of opportunities.opportunities || []) {
 const report = {
   generatedAt: new Date().toISOString(),
   mode: "read_only_audit",
+  checks: {
+    classificationTests: process.env.CATEGORY_TESTS_OUTCOME || "not_run",
+    categoryAudit: process.env.CATEGORY_AUDIT_OUTCOME || "not_run",
+    partnerRegistryAudit: process.env.PARTNER_AUDIT_OUTCOME || "not_run"
+  },
   catalog: {
     selectedProducts: products.length,
     inventoryProducts: catalog.inventoryProductCount ?? null,
@@ -100,6 +103,11 @@ const summary = [
   "# ZOVARO AUTOPILOT — daily report",
   "",
   `Generated: ${report.generatedAt}`,
+  "",
+  "## Automated checks",
+  `- Classification tests: **${report.checks.classificationTests}**`,
+  `- Category quality audit: **${report.checks.categoryAudit}**`,
+  `- Partner registry audit: **${report.checks.partnerRegistryAudit}**`,
   "",
   "## Catalogue",
   `- Selected products: **${report.catalog.selectedProducts.toLocaleString("en-US")}**`,
