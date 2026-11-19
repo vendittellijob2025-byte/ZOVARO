@@ -438,6 +438,43 @@
         "product feed/deep links and image rights",
         "bank-transfer payout terms"
       ]
+    },
+    {
+      "partner": "OWC / MacSales.com",
+      "status": "prospect",
+      "verticals": [
+        "Mac accessories",
+        "SSD and memory upgrades",
+        "docks",
+        "Mac storage",
+        "Apple ecosystem peripherals"
+      ],
+      "publicProgram": "CJ programme advertises 1–2% on Apple-branded products, 3% on non-Apple products, 45-day referral period and daily-updated complete product feed. This is accessories/upgrades, not iPhone or Mac computer inventory.",
+      "url": "https://www.owc.com/affiliate-program",
+      "nextVerification": [
+        "apply via current CJ account",
+        "publisher/customer delivery territories",
+        "feed access and image rights",
+        "bank-transfer payout and threshold"
+      ]
+    },
+    {
+      "partner": "MacTrade — Apple Store Germany",
+      "status": "prospect",
+      "verticals": [
+        "Apple iPhone",
+        "Apple iPad",
+        "Mac computers",
+        "Apple Watch",
+        "Apple accessories"
+      ],
+      "publicProgram": "Awin listing advertises 1.5% on iPhone/iPad/Watch and 3% on Macs, 30-day cookie; Germany storefront and delivery territory to confirm. Awin signup remains on hold due to no upfront funds.",
+      "url": "https://ui.awin.com/merchant-profile/13737",
+      "nextVerification": [
+        "do not register or pay while Awin is on hold",
+        "confirm product feed and delivery countries",
+        "confirm current rates, Apple product exclusions and payout terms"
+      ]
     }
   ]
 }
