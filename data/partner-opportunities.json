@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "purpose": "Research leads for ZOVARO affiliate/referral supply. These are not approved partners or live catalog offers until acceptance, terms, tracking and availability are verified.",
   "opportunities": [
     {
@@ -250,6 +250,193 @@
         "obtain written acceptance, commission rates, attribution window and permitted channels",
         "verify tracking links, conversion reporting, payout threshold, frequency and bank transfer availability",
         "do not publish Uber/Eats offers until approval and tracking are confirmed"
+      ]
+    },
+    {
+      "partner": "HP Store",
+      "status": "prospect",
+      "verticals": [
+        "laptops",
+        "desktops",
+        "gaming PCs",
+        "business technology",
+        "imaging"
+      ],
+      "publicProgram": "Official HP Store affiliate programme is free to join and applications are reviewed through CJ; commission and feed terms need approval.",
+      "url": "https://store.hp.com/us/en/cv/affiliate-program",
+      "nextVerification": [
+        "CJ application eligibility for ZOVARO",
+        "customer territories and HP Store regions",
+        "commission by category, cookie and validation",
+        "product feed/API, deep links and image permissions",
+        "bank-transfer payout terms"
+      ]
+    },
+    {
+      "partner": "Acer Store Canada",
+      "status": "prospect",
+      "verticals": [
+        "laptops",
+        "desktop PCs",
+        "Chromebooks",
+        "monitors",
+        "tablets"
+      ],
+      "publicProgram": "Official Acer Canada programme via CJ advertises up to 4% commission; customer and publisher territories need confirmation.",
+      "url": "https://store.acer.com/en-ca/partner-program",
+      "nextVerification": [
+        "check advertiser availability in current CJ publisher account",
+        "publisher country and customer delivery restrictions",
+        "feed/API, tracking and image rights",
+        "commission, cookie and payout terms"
+      ]
+    },
+    {
+      "partner": "Acer India",
+      "status": "prospect",
+      "verticals": [
+        "laptops",
+        "desktops",
+        "Chromebooks",
+        "monitors"
+      ],
+      "publicProgram": "Official Acer India programme via Admitad advertises 3.5% baseline, 30-day cookie, product feed, cross-device tracking, deep links and 10-day validation.",
+      "url": "https://store.acer.com/en-in/acer-affiliate-program/",
+      "nextVerification": [
+        "verify Admitad publisher registration is free",
+        "confirm non-India publisher eligibility",
+        "confirm customer delivery territories and currency",
+        "feed access and bank-transfer payout"
+      ]
+    },
+    {
+      "partner": "Dell Home & Home Office",
+      "status": "prospect",
+      "verticals": [
+        "laptops",
+        "desktop PCs",
+        "workstations",
+        "servers",
+        "storage",
+        "monitors",
+        "printers"
+      ],
+      "publicProgram": "Third-party affiliate programme directory reports active CJ programme ID 2125808; current status, commission and feed must be verified in the authenticated CJ account.",
+      "url": "https://www.dell.com/",
+      "nextVerification": [
+        "verify CJ advertiser ID 2125808 is still active",
+        "regional programme terms and publisher eligibility",
+        "commission, cookie, feed/API and image rights",
+        "payout schedule and bank transfer"
+      ]
+    },
+    {
+      "partner": "Samsung UK Affiliate Programme",
+      "status": "prospect",
+      "verticals": [
+        "Samsung Galaxy smartphones",
+        "tablets",
+        "televisions",
+        "computers",
+        "home appliances"
+      ],
+      "publicProgram": "Official Samsung UK affiliate programme is operated through Rakuten Advertising; commission and product-feed terms require approval.",
+      "url": "https://www.samsung.com/uk/samsung-affiliate-partners/",
+      "nextVerification": [
+        "verify free Rakuten signup",
+        "publisher-country eligibility",
+        "UK-only customer delivery limits",
+        "Galaxy product feed, deep links and imagery",
+        "commission and payout terms"
+      ]
+    },
+    {
+      "partner": "PrivJet",
+      "status": "prospect",
+      "verticals": [
+        "private jet charter",
+        "empty-leg flights",
+        "private aviation"
+      ],
+      "publicProgram": "Free direct referral programme. Published terms clarify effective commission of 5% of flight price for empty legs and 2.5% for charter bookings; monthly bank transfer from €100; due 14 days after flight.",
+      "url": "https://www.privjet.net/en/partner-program",
+      "nextVerification": [
+        "full terms and country eligibility",
+        "referral link/code and attribution exclusions",
+        "flight route coverage and operator verification",
+        "approved imagery and brand permissions",
+        "tax/KYC onboarding"
+      ]
+    },
+    {
+      "partner": "Villanovo",
+      "status": "prospect",
+      "verticals": [
+        "luxury villas",
+        "riads",
+        "chalets",
+        "luxury property rentals"
+      ],
+      "publicProgram": "Free registration; 5% commission on confirmed bookings; 45-day referral window; portfolio of about 3,000 villas/riads/chalets stated by the programme.",
+      "url": "https://www.villanovo.com/affiliation/",
+      "nextVerification": [
+        "publisher approval and destination coverage",
+        "tracked listing links or feed/API",
+        "property image and description permissions",
+        "cancellations, payout threshold and bank transfer"
+      ]
+    },
+    {
+      "partner": "Wempe US",
+      "status": "prospect",
+      "verticals": [
+        "Rolex",
+        "Patek Philippe",
+        "luxury watches",
+        "jewelry"
+      ],
+      "publicProgram": "Awin US programme advertises up to 10%, 30-day cookie and average basket around $3,000; manual advertiser approval. Awin remains on hold due to no funds for signup costs.",
+      "url": "https://ui.awin.com/merchant-profile/114592",
+      "nextVerification": [
+        "do not pay or register while Awin is on hold",
+        "ask Wempe whether a no-fee direct referral agreement exists",
+        "confirm US shipping and Rolex/Patek exclusions",
+        "product feed, imagery and bank payout"
+      ]
+    },
+    {
+      "partner": "Galleria Taralli",
+      "status": "prospect",
+      "verticals": [
+        "original paintings",
+        "fine art",
+        "art prints",
+        "art advisory"
+      ],
+      "publicProgram": "Direct programme advertises 3–15% on eligible art, 2% on services, €100 payout threshold and PayPal on the 15th; worldwide delivery. Attribution currently requires the buyer to enter the referrer's full name at checkout.",
+      "url": "https://galleriataralli.com/partners-2",
+      "nextVerification": [
+        "standard trackable links or product feed availability",
+        "whether bank transfer is supported",
+        "publisher eligibility and artist/collector inventory",
+        "approved images and rights for art listings"
+      ]
+    },
+    {
+      "partner": "Exquisite Timepieces",
+      "status": "prospect",
+      "verticals": [
+        "luxury watches",
+        "pre-owned watches",
+        "jewelry"
+      ],
+      "publicProgram": "Direct affiliate programme advertises up to 6% and 30-day cookie; US shipping is stated and international eligibility needs confirmation.",
+      "url": "https://www.exquisitetimepieces.com/pages/affiliate",
+      "nextVerification": [
+        "publisher approval and country eligibility",
+        "brand exclusions and available Rolex/Patek inventory",
+        "product feed/deep links and image rights",
+        "bank-transfer payout terms"
       ]
     }
   ]
