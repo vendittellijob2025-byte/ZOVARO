@@ -218,5 +218,7 @@ console.log("ZOVARO category coverage: " + JSON.stringify({
   productsWithKnownSubcategory,
   productsWithInvalidSubcategory,
   amazonBrowsePathCoverage: productsWithAmazonBrowsePath,
-  amazonBrowseNodeCoverage: productsWithAmazonBrowseNodeId
+  amazonBrowseNodeCoverage: productsWithAmazonBrowseNodeId,
+  priorityProductCoverage: focusedProductCoverage,
+  brandCounts: Object.fromEntries(Object.entries(brandCoverage).map(([brand, data]) => [brand, data.productCount]))
 }));
