@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14T20:34:00-05:00",
+  "updatedAt": "2026-11-19T00:25:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -46,7 +46,13 @@
     "eBay EPN official terms recheck 2026-11-14: the Network Agreement currently published 2026-09-24 confirms the 14 participating sites, the image-based Global Rate Card, monthly payout threshold (USD 10 or applicable bank fees, whichever is greater), 24-hour Buy It Now attribution and auction bid/win rules. Browse API uses an OAuth application token and requires a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. The agreement requires EPN acceptance before promotion and defines the Buy API Program separately; it also restricts EPN Data use with AI/LLMs and requires prior written approval for restricted promotional methods. No EPN account, campaign ID, developer app, OAuth credentials, Buy API approval or authenticated payout settings were found; no API or tracking test was performed.",
     "Outreach reconciliation 2026-11-14: Gmail search `in:sent newer_than:1d subject:ZOVARO` returned 115 unique business recipients and 119 sent messages (four follow-up corrections). All 115 recipients matched existing prospect records; their latest sent date, subject and Gmail thread ID are now recorded. Existing bounced, auto-acknowledged and replied statuses were preserved. Of the 115 matched records, delivery-failure notices are not treated as successful delivery; automated acknowledgements are not approvals. No additional outreach was sent in this run.",
     "EPN payout clarification 2026-11-14: current EPN programme update states monthly payment on or around the 22nd for the previous month; the current readable Network Agreement does not expose a numeric minimum threshold, so no USD 10 threshold is treated as confirmed. The same official update says PayPal payments incur a 2% transaction fee capped at USD 20/month; direct deposit/EFT is excluded from that PayPal fee. ZOVARO's EPN payout method and threshold remain unverified in the authenticated Partner Portal.",
-    "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run."
+    "Outreach log reconciliation 2026-11-14: the broad Gmail search returned 201 sent threads overall, but the partnership-specific subject filter returned 115 unique recipients and 119 sent messages (four follow-up corrections). All 115 matched existing prospect records and now have latest sent date, subject and thread ID recorded. At the time of review, 13 recipients had bounce notices, three had automated acknowledgements, and the remaining 99 had no bounce notice; absence of a bounce is not proof of final delivery. No new email was sent in this run.",
+    "2026-11-19 worldwide technology research: HP Store official affiliate programme is free to join and reviewed through CJ; Lenovo official programme is free to join through Impact and advertises at least 2% on eligible sales, covering laptops, tablets, desktops, workstations, servers, storage and networking. Lenovo's previous direct email address blocked delivery; use the official Impact application route instead of retrying the email.",
+    "2026-11-19 technology opportunities: Acer Canada official store programme advertises up to 4% via CJ on PCs, laptops, Chromebooks, monitors and tablets. Acer India official programme via Admitad advertises 3.5%, 30-day cookie, product feed, cross-device tracking and deep links; verify publisher-country eligibility and that network access is free before applying. Dell Home & Home Office is reported by a third-party directory as an active CJ programme (ID 2125808); verify inside CJ before treating it as available.",
+    "2026-11-19 Samsung: official Samsung UK affiliate programme is operated via Rakuten Advertising. This is a UK-store programme, not proof of global Samsung coverage. Samsung's global Partner Portal is a separate partner-sales programme and must not be treated as an affiliate approval.",
+    "2026-11-19 luxury partner research: PrivJet's published partner terms clarify 5% of flight price for empty legs and 2.5% for charter bookings, paid monthly by bank transfer from €100 after the flight; the partner programme says free to join. PereJets offers no setup/monthly fee, access to 100+ vetted operators across 150+ countries, with rates negotiated by volume/client profile. ALANELI advertises 5% on luxury cars, villas, yachts and helicopters and 2.5% on private jets; confirm exact contract and attribution.",
+    "2026-11-19 luxury property/art/watch research: Villanovo advertises free registration, 5% on confirmed villa bookings and a 45-day referral window. Wempe US lists up to 10%, 30-day cookie and average basket around $3,000 for Rolex/Patek and other luxury watches, but it is an Awin programme and remains on hold due to the user's no-upfront-spend constraint. Galleria Taralli advertises 3–15% on eligible art and worldwide delivery, but attribution requires the customer to enter the referrer's name at checkout; standard tracking/feed is unverified. Exquisite Timepieces advertises up to 6%, 30-day cookie and primarily US shipping.",
+    "2026-11-19 Apple hardware qualification: Apple's public Performance Partner Program promotes Apple services (Music, TV, Podcasts, media), not a general affiliate commission for iPhone/Mac hardware. Do not treat it as an iPhone or Mac product source."
   ],
   "prospects": [
     {
@@ -7008,6 +7014,237 @@
       "sourceChecked": "2026-11-14",
       "sourceEvidence": "Wayfair's official Partner With Us page confirms an Affiliate Program, more than two million products across global home categories, specialty retail brands and dedicated in-house affiliate management. The page does not publish publisher territories, commission, cookie, payout, feed/API terms or a dedicated affiliate email. The listed deliverypartners@wayfair.com contact is for transportation partners, not affiliate publishers, and was not used.",
       "nextAction": "Find the official affiliate publisher application or an affiliate-specific contact through Wayfair's official programme channel; confirm publisher-country eligibility, commission, cookie, attribution, product feed/API, image licence, reporting and payout before applying or publishing."
+    },
+    {
+      "id": "hp-store",
+      "name": "HP Store Affiliate Program",
+      "status": "prospect",
+      "programType": "CJ affiliate programme",
+      "category": "Computers; Laptops; Desktops; Gaming; Business Technology",
+      "sourceUrl": "https://store.hp.com/us/en/cv/affiliate-program",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "HP US Store; publisher and customer-country eligibility to confirm"
+      ],
+      "publicCommission": "Not stated on official page; application is free and reviewed by CJ",
+      "integration": {
+        "affiliateLink": "pending CJ approval",
+        "productFeed": "pending confirmation",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ tracking after approval"
+      },
+      "nextAction": "Apply to HP Store inside the existing CJ publisher account; confirm feed/API, cookie, country eligibility, commission and weekly bank-transfer possibility."
+    },
+    {
+      "id": "acer-canada-affiliate",
+      "name": "Acer Store Canada Affiliate Program",
+      "status": "prospect",
+      "programType": "CJ affiliate programme",
+      "category": "Computers; Laptops; Desktops; Chromebooks; Monitors; Tablets",
+      "sourceUrl": "https://store.acer.com/en-ca/partner-program",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Canada store; customer delivery and publisher eligibility to confirm"
+      ],
+      "publicCommission": "Up to 4% per affiliate sale, as advertised by Acer Canada",
+      "integration": {
+        "affiliateLink": "pending CJ approval",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ reporting after approval"
+      },
+      "nextAction": "Check advertiser availability in CJ and apply only if the programme is accessible without an upfront fee; verify Canada-only restrictions and product feed."
+    },
+    {
+      "id": "acer-india-affiliate",
+      "name": "Acer India Affiliate Program",
+      "status": "prospect",
+      "programType": "Admitad affiliate programme",
+      "category": "Computers; Laptops; Desktops; Chromebooks; Monitors",
+      "sourceUrl": "https://store.acer.com/en-in/acer-affiliate-program/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "India storefront; publisher eligibility outside India not confirmed"
+      ],
+      "publicCommission": "3.5% baseline; 30-day cookie; 10-day validation; product feed and deep links advertised",
+      "integration": {
+        "affiliateLink": "pending Admitad approval",
+        "productFeed": "advertised; access pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Verify that Admitad registration is free and that an Italy-based publisher may promote the India store before applying."
+    },
+    {
+      "id": "dell-home-home-office-cj",
+      "name": "Dell Home & Home Office",
+      "status": "prospect",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Computers; Laptops; Desktops; Workstations; Servers; Storage; Monitors; Printers",
+      "sourceUrl": "https://www.dell.com/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Dell regional storefronts; confirm in CJ advertiser terms"
+      ],
+      "publicCommission": "No rate verified; third-party programme directory reports active CJ programme ID 2125808",
+      "integration": {
+        "affiliateLink": "check CJ advertiser marketplace",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ reporting if approved"
+      },
+      "nextAction": "Search CJ advertiser ID 2125808 in the existing publisher account; verify current active status, rate card, feeds, territories and assets."
+    },
+    {
+      "id": "samsung-uk-affiliate",
+      "name": "Samsung UK Affiliate Programme",
+      "status": "prospect",
+      "programType": "Rakuten Advertising affiliate programme",
+      "category": "Smartphones; Samsung Galaxy; Tablets; TVs; Computers; Home Appliances",
+      "sourceUrl": "https://www.samsung.com/uk/samsung-affiliate-partners/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "United Kingdom Samsung Store; customer and publisher eligibility to confirm"
+      ],
+      "publicCommission": "Not published on official programme page; application handled by Rakuten Advertising",
+      "integration": {
+        "affiliateLink": "pending Rakuten approval",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Rakuten reporting after approval"
+      },
+      "nextAction": "Verify free Rakuten publisher registration and whether ZOVARO can promote Samsung UK from its operating country; confirm feed, current Galaxy/iPhone competitor coverage and payout terms."
+    },
+    {
+      "id": "newegg-affiliate",
+      "name": "Newegg Affiliate Program",
+      "status": "contacted",
+      "programType": "Rakuten affiliate programme",
+      "category": "Computers; Components; Gaming; Electronics; Smart Home",
+      "sourceUrl": "https://www.newegg.com/promotions/affiliate_program/affiliate.html",
+      "sourceChecked": "2026-11-19",
+      "contact": {
+        "email": "affiliatealerts@newegg.com",
+        "sourceUrl": "https://www.newegg.com/promotions/affiliate_program/affiliate.html"
+      },
+      "contactedAt": "2026-11-12T21:20:56Z",
+      "emailMessageId": "1a1d1a299acda427",
+      "publicCommission": "Not stated on public page; free to join; product catalogue updated multiple times daily, RSS feeds and deep links advertised",
+      "integration": {
+        "affiliateLink": "pending application approval",
+        "productFeed": "RSS feed advertised; access pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Await reply and verify publisher eligibility; do not resend the initial enquiry. If approved, validate product feed and country-specific shipping."
+    },
+    {
+      "id": "privjet-partner",
+      "name": "PrivJet Partner Program",
+      "status": "prospect",
+      "programType": "Direct private-aviation referral programme",
+      "category": "Private Jet Charter; Empty-Leg Flights; Private Aviation",
+      "sourceUrl": "https://www.privjet.net/en/partner-program",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "International; individual/business publisher eligibility stated, flight/operator coverage to confirm"
+      ],
+      "publicCommission": "Terms clarify 5% of flight price on empty legs and 2.5% on charter bookings (50% of standard service fee); monthly bank transfer from €100; commission due 14 days after flight; free to join",
+      "integration": {
+        "affiliateLink": "personal referral links/codes after approval",
+        "productFeed": "no aircraft feed verified",
+        "imagePermission": "pending",
+        "conversionReporting": "partner dashboard/attribution terms to verify"
+      },
+      "nextAction": "Review full partner terms and apply only after checking ZOVARO publisher eligibility, country restrictions, tax details, flight service coverage and approved marketing assets."
+    },
+    {
+      "id": "villanovo-affiliate",
+      "name": "Villanovo",
+      "status": "prospect",
+      "programType": "Direct luxury villa rental affiliate programme",
+      "category": "Luxury Villas; Riads; Chalets; Premium Property Rentals",
+      "sourceUrl": "https://www.villanovo.com/affiliation/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Selected destinations worldwide; confirm publisher-country and property destinations"
+      ],
+      "publicCommission": "5% on confirmed bookings; 45-day referral window; free registration; 3,000 villas/riads/chalets stated on public page",
+      "contact": {
+        "email": "marketing@villanovo.com",
+        "sourceUrl": "https://www.villanovo.com/affiliation/"
+      },
+      "integration": {
+        "affiliateLink": "tracking link after approval",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "pending"
+      },
+      "nextAction": "Request publisher acceptance, destination coverage, tracked listing/deep links, approved property imagery, cancellation rules and weekly bank transfer availability."
+    },
+    {
+      "id": "wempe-us-affiliate",
+      "name": "Wempe US Affiliate Program",
+      "status": "prospect",
+      "programType": "Awin affiliate programme",
+      "category": "Rolex; Patek Philippe; Luxury Watches; Jewelry",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/114592",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "US programme; US delivery/customer eligibility to confirm"
+      ],
+      "publicCommission": "Up to 10% by brand/category; 30-day cookie; average basket around $3,000; personal approval required",
+      "contact": {
+        "email": "ulrike.fedl@wempe.com",
+        "sourceUrl": "https://ui.awin.com/merchant-profile/114592"
+      },
+      "integration": {
+        "affiliateLink": "Awin only; pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Awin reporting"
+      },
+      "nextAction": "Awin is on hold because the user has no funds for network signup costs. Do not register or pay; direct contact may ask whether a no-fee direct referral route exists."
+    },
+    {
+      "id": "galleria-taralli-art",
+      "name": "Galleria Taralli",
+      "status": "prospect",
+      "programType": "Direct art affiliate/referral programme",
+      "category": "Original Art; Fine Art; Art Prints; Art Advisory",
+      "sourceUrl": "https://galleriataralli.com/partners-2",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Worldwide delivery advertised; publisher eligibility to confirm"
+      ],
+      "publicCommission": "3–15% on eligible original art/prints; 2% on courses/services; average basket over €6,000; €100 threshold; PayPal payment on the 15th; customer must enter referrer's full name at checkout",
+      "integration": {
+        "affiliateLink": "manual name-at-checkout attribution; no standard tracked link verified",
+        "productFeed": "not verified",
+        "imagePermission": "pending",
+        "conversionReporting": "manual attribution to confirm"
+      },
+      "nextAction": "Ask whether tracked links or a formal publisher feed can replace manual name-at-checkout attribution, and whether bank transfer is possible."
+    },
+    {
+      "id": "exquisite-timepieces",
+      "name": "Exquisite Timepieces",
+      "status": "prospect",
+      "programType": "Direct affiliate programme",
+      "category": "Luxury Watches; Pre-Owned Watches; Jewelry",
+      "sourceUrl": "https://www.exquisitetimepieces.com/pages/affiliate",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "US shipping stated; international destinations to confirm"
+      ],
+      "publicCommission": "Up to 6% eligible sales; 30-day cookie; authorized dealer for 60+ watch brands and pre-owned collection across 70+ brands",
+      "integration": {
+        "affiliateLink": "pending application approval",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "affiliate dashboard after approval"
+      },
+      "nextAction": "Apply through the official affiliate form only after confirming publisher eligibility, watch-brand restrictions, product feed, image permissions and payout method."
     }
   ],
   "cjAudit": {
