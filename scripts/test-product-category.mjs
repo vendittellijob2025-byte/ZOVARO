@@ -349,7 +349,18 @@ const subcategoryCases = [
   ["Fashion", "Nike Women's Running Leggings", "Women's Clothing"],
   ["Fashion", "Men's Denim Jeans", "Clothing > Jeans & Trousers"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
-  ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"]
+  ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],
+  ["Luxury & Prestige", "Ferrari 296 GTB", "Luxury Cars & Hypercars > Ferrari"],
+  ["Luxury & Prestige", "Lamborghini Revuelto", "Luxury Cars & Hypercars > Lamborghini"],
+  ["Luxury & Prestige", "Porsche 911 GT3", "Luxury Cars & Hypercars > Porsche"],
+  ["Luxury & Prestige", "Hummer H2", "Luxury Cars & Hypercars > Hummer & Luxury 4x4"],
+  ["Luxury & Prestige", "Stretch Limousine Rental", "Luxury Cars & Hypercars > Limousines & Chauffeur Cars"],
+  ["Luxury & Prestige", "Rolex Submariner Watch", "Luxury Watches & Jewelry > Rolex Watches"],
+  ["Luxury & Prestige", "Patek Philippe Nautilus", "Luxury Watches & Jewelry > Patek Philippe Watches"],
+  ["Luxury & Prestige", "Private Jet Charter", "Yacht & Aviation Charter > Private Jets & Business Aviation"],
+  ["Luxury & Prestige", "Luxury Villa for Sale", "Exclusive Villas & Real Estate > Luxury Villas for Sale"],
+  ["Luxury & Prestige", "Luxury Villa for Rent", "Luxury Stays & Property Rentals > Luxury Villas & Chalets for Rent"],
+  ["Luxury & Prestige", "Original Oil Painting by Collector", "Fine Art & Collectibles > Original Paintings"]
 ];
 const subcategoryFailures = [];
 for (const [category, title, expected] of subcategoryCases) {
