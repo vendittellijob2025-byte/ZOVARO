@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T13:53:39.042Z",
-  "selectedProductCount": 20906,
-  "inventoryProductCount": 201240,
+  "generatedAt": "2026-11-19T20:33:21.446Z",
+  "selectedProductCount": 20910,
+  "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -1751,7 +1751,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1876,
+      "productCount": 1880,
       "unclassifiedProductCount": 706,
       "browseTree": [
         {
@@ -1900,7 +1900,7 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 129,
+          "productCount": 130,
           "directProductCount": 43,
           "children": [
             {
@@ -1976,8 +1976,8 @@
             {
               "name": "Serums & Essences",
               "path": "Skincare > Serums & Essences",
-              "productCount": 75,
-              "directProductCount": 75,
+              "productCount": 76,
+              "directProductCount": 76,
               "children": []
             }
           ]
@@ -1985,8 +1985,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 438,
-          "directProductCount": 438,
+          "productCount": 441,
+          "directProductCount": 441,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2508,26 +2508,26 @@
     },
     {
       "name": "Electronics",
-      "productCount": 435,
-      "unclassifiedProductCount": 146,
+      "productCount": 438,
+      "unclassifiedProductCount": 147,
       "browseTree": [
         {
           "name": "Phones & Tablets",
           "path": "Phones & Tablets",
-          "productCount": 58,
+          "productCount": 59,
           "directProductCount": 0,
           "children": [
             {
               "name": "Smartphones",
               "path": "Phones & Tablets > Smartphones",
-              "productCount": 58,
+              "productCount": 59,
               "directProductCount": 0,
               "children": [
                 {
                   "name": "Apple iPhone",
                   "path": "Phones & Tablets > Smartphones > Apple iPhone",
-                  "productCount": 36,
-                  "directProductCount": 36,
+                  "productCount": 37,
+                  "directProductCount": 37,
                   "children": []
                 },
                 {
@@ -2670,8 +2670,8 @@
             {
               "name": "Laptops",
               "path": "Computers > Laptops",
-              "productCount": 6,
-              "directProductCount": 6,
+              "productCount": 7,
+              "directProductCount": 7,
               "children": [
                 {
                   "name": "Apple MacBook",
@@ -2806,7 +2806,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 12,
+              "productCount": 11,
               "directProductCount": 0,
               "children": [
                 {
@@ -2840,8 +2840,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 7,
-                  "directProductCount": 7,
+                  "productCount": 6,
+                  "directProductCount": 6,
                   "children": []
                 },
                 {
@@ -2936,8 +2936,8 @@
         {
           "name": "Audio",
           "path": "Audio",
-          "productCount": 148,
-          "directProductCount": 148,
+          "productCount": 149,
+          "directProductCount": 149,
           "children": [
             {
               "name": "Headphones",
@@ -3274,7 +3274,7 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1767,
+      "productCount": 1766,
       "unclassifiedProductCount": 559,
       "browseTree": [
         {
@@ -3522,8 +3522,8 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 1039,
-          "directProductCount": 62,
+          "productCount": 1038,
+          "directProductCount": 59,
           "children": [
             {
               "name": "Sneakers",
@@ -3577,8 +3577,8 @@
             {
               "name": "Slippers",
               "path": "Shoes > Slippers",
-              "productCount": 87,
-              "directProductCount": 87,
+              "productCount": 89,
+              "directProductCount": 89,
               "children": []
             }
           ]
@@ -5651,13 +5651,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1787,
-      "unclassifiedProductCount": 1419,
+      "unclassifiedProductCount": 1409,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 367,
-          "directProductCount": 367,
+          "productCount": 377,
+          "directProductCount": 377,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -5980,8 +5980,8 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 42,
-      "unclassifiedProductCount": 39,
+      "productCount": 44,
+      "unclassifiedProductCount": 41,
       "browseTree": [
         {
           "name": "Office Supplies",
@@ -6906,7 +6906,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1717,
+      "productCount": 1718,
       "unclassifiedProductCount": 33,
       "browseTree": [
         {
@@ -7181,8 +7181,8 @@
         {
           "name": "Luxury Watches & Jewelry",
           "path": "Luxury Watches & Jewelry",
-          "productCount": 1660,
-          "directProductCount": 1660,
+          "productCount": 1661,
+          "directProductCount": 1661,
           "children": [
             {
               "name": "Rolex",
@@ -7768,8 +7768,8 @@
     },
     {
       "name": "Sports",
-      "productCount": 1814,
-      "unclassifiedProductCount": 463,
+      "productCount": 1813,
+      "unclassifiedProductCount": 462,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -9870,13 +9870,13 @@
     {
       "name": "Toys & Games",
       "productCount": 1798,
-      "unclassifiedProductCount": 1624,
+      "unclassifiedProductCount": 1627,
       "browseTree": [
         {
           "name": "Building & Construction",
           "path": "Building & Construction",
-          "productCount": 86,
-          "directProductCount": 86,
+          "productCount": 83,
+          "directProductCount": 83,
           "children": [
             {
               "name": "Building Sets",
@@ -10332,28 +10332,28 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1757,
+  "otherProductCount": 1753,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1757
+      "count": 1753
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1408,
     "usedTaxonomyNodeCount": 228,
     "emptyTaxonomyNodeCount": 1180,
-    "productsWithKnownSubcategory": 12098,
+    "productsWithKnownSubcategory": 12111,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 8808,
+    "productsWithoutSubcategory": 8799,
     "unclassifiedByCategory": [
       {
         "category": "Toys & Games",
-        "count": 1624
+        "count": 1627
       },
       {
         "category": "Industrial & Scientific",
-        "count": 1419
+        "count": 1409
       },
       {
         "category": "Health & Wellness",
@@ -10369,7 +10369,7 @@
       },
       {
         "category": "Sports",
-        "count": 463
+        "count": 462
       },
       {
         "category": "Books & Media",
@@ -10385,7 +10385,7 @@
       },
       {
         "category": "Electronics",
-        "count": 146
+        "count": 147
       },
       {
         "category": "Travel",
@@ -10401,7 +10401,7 @@
       },
       {
         "category": "Office & Technology",
-        "count": 39
+        "count": 41
       },
       {
         "category": "Luxury & Prestige",
@@ -10424,35 +10424,35 @@
         "count": 3
       },
       {
-        "category": "Security & Safety",
-        "count": 1
-      },
-      {
-        "category": "Real Estate",
-        "count": 1
-      },
-      {
         "category": "TVs & Home Cinema",
         "count": 1
       },
       {
         "category": "Repair & Circular Economy",
         "count": 1
+      },
+      {
+        "category": "Security & Safety",
+        "count": 1
+      },
+      {
+        "category": "Real Estate",
+        "count": 1
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 8808,
-      "provisional": 12098
+      "needs_classification": 8799,
+      "provisional": 12111
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20906
+      "pendingReference": 20910
     },
     "mostUsedBrowsePaths": [
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry",
-        "productCount": 1660
+        "productCount": 1661
       },
       {
         "path": "Automotive > Car Accessories",
@@ -10472,7 +10472,7 @@
       },
       {
         "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 438
+        "productCount": 441
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -10480,7 +10480,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 367
+        "productCount": 377
       },
       {
         "path": "Sports > Cycling > Bicycles",
@@ -10512,7 +10512,7 @@
       },
       {
         "path": "Electronics > Audio",
-        "productCount": 148
+        "productCount": 149
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
@@ -10563,16 +10563,16 @@
         "productCount": 94
       },
       {
+        "path": "Fashion > Shoes > Slippers",
+        "productCount": 89
+      },
+      {
         "path": "Toys & Games > Board Games & Puzzles",
         "productCount": 88
       },
       {
-        "path": "Fashion > Shoes > Slippers",
-        "productCount": 87
-      },
-      {
         "path": "Toys & Games > Building & Construction",
-        "productCount": 86
+        "productCount": 83
       },
       {
         "path": "Beauty > Makeup > Eye Makeup",
@@ -10584,7 +10584,7 @@
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
-        "productCount": 75
+        "productCount": 76
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
@@ -10599,12 +10599,12 @@
         "productCount": 68
       },
       {
-        "path": "Fashion > Shoes",
-        "productCount": 62
-      },
-      {
         "path": "TVs & Home Cinema > Televisions",
         "productCount": 60
+      },
+      {
+        "path": "Fashion > Shoes",
+        "productCount": 59
       },
       {
         "path": "Pets > Cats",
@@ -10640,7 +10640,7 @@
       },
       {
         "path": "Electronics > Phones & Tablets > Smartphones > Apple iPhone",
-        "productCount": 36
+        "productCount": 37
       },
       {
         "path": "Fashion > Shoes > Heels",
@@ -10683,11 +10683,11 @@
         "productCount": 25
       },
       {
-        "path": "Fashion > Shoes > Boots",
+        "path": "Sports > Padel > Padel Accessories",
         "productCount": 23
       },
       {
-        "path": "Sports > Padel > Padel Accessories",
+        "path": "Fashion > Shoes > Boots",
         "productCount": 23
       },
       {
@@ -10775,6 +10775,18 @@
         "productCount": 9
       },
       {
+        "path": "Sports > Fitness & Gym > Yoga & Pilates",
+        "productCount": 8
+      },
+      {
+        "path": "Sports > Padel > Padel Balls",
+        "productCount": 8
+      },
+      {
+        "path": "Health & Wellness > Nutrition > Sports Supplements > Post-Workout",
+        "productCount": 8
+      },
+      {
         "path": "Automotive > Car Parts > Filters",
         "productCount": 8
       },
@@ -10783,19 +10795,7 @@
         "productCount": 8
       },
       {
-        "path": "Health & Wellness > Nutrition > Sports Supplements > Post-Workout",
-        "productCount": 8
-      },
-      {
         "path": "Luxury & Prestige > Fine Art & Collectibles > Original Paintings",
-        "productCount": 8
-      },
-      {
-        "path": "Sports > Fitness & Gym > Yoga & Pilates",
-        "productCount": 8
-      },
-      {
-        "path": "Sports > Padel > Padel Balls",
         "productCount": 8
       },
       {
@@ -10807,7 +10807,7 @@
         "productCount": 8
       },
       {
-        "path": "Electronics > Computers > Computer Components > SSD & Hard Drives",
+        "path": "Electronics > Computers > Laptops",
         "productCount": 7
       },
       {
@@ -10831,7 +10831,7 @@
         "productCount": 7
       },
       {
-        "path": "Electronics > Computers > Laptops",
+        "path": "Electronics > Computers > Computer Components > SSD & Hard Drives",
         "productCount": 6
       },
       {
@@ -10854,7 +10854,7 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1155
+        "productCount": 1151
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -10990,15 +10990,6 @@
         "description": "Lightweight powder particles form a thin powdery layer over the skin and remove excessive sebum"
       },
       {
-        "title": "Chrome By Azzaro And Versace Pour Homme By Versace - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "Rexing Installation Service",
         "brand": "Rexing",
         "advertiser": "Rexing",
@@ -11053,15 +11044,6 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Divine Youth Oil by LOccitane for Unisex - 1 oz Oil - Default Title",
-        "brand": "LOccitane",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It has seven natural plant oils that are selected for their high concentration of essential fatty acids and nutrients, its lightweight and silky texture melts seamlessly into the s"
-      },
-      {
         "title": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11107,15 +11089,6 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Instant Firmx Temporary Face Tightener by Peter Thomas Roth for Unisex - 3.4 oz Cream - Default Title",
-        "brand": "Peter Thomas Roth",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Temporarily tighten your skin instantly these agents work beneath the skins surface to help tighten, firm and smooth the appearance of fine lines, deep wrinkles and pores."
-      },
-      {
         "title": "[US Only] UNice Plus VIP (90 Days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11152,15 +11125,6 @@
         "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
       },
       {
-        "title": "Clinique Smart Custom-Repair Eye Treatment by Clinique for Women - 0.5 oz Treatment - Default Title",
-        "brand": "Clinique",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This treatment targets all visible signs of aging in the delicate eye area. It visibly brightens, contours and firms while reducing the appearance of lines, and wrinkles."
-      },
-      {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11168,6 +11132,87 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Chrome By Azzaro And Versace Pour Homme By Versace - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Divine Youth Oil by LOccitane for Unisex - 1 oz Oil - Default Title",
+        "brand": "LOccitane",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It has seven natural plant oils that are selected for their high concentration of essential fatty acids and nutrients, its lightweight and silky texture melts seamlessly into the s"
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Instant Firmx Temporary Face Tightener by Peter Thomas Roth for Unisex - 3.4 oz Cream - Default Title",
+        "brand": "Peter Thomas Roth",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Temporarily tighten your skin instantly these agents work beneath the skins surface to help tighten, firm and smooth the appearance of fine lines, deep wrinkles and pores."
+      },
+      {
+        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "Clinique Smart Custom-Repair Eye Treatment by Clinique for Women - 0.5 oz Treatment - Default Title",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This treatment targets all visible signs of aging in the delicate eye area. It visibly brightens, contours and firms while reducing the appearance of lines, and wrinkles."
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11188,15 +11233,6 @@
         "description": "This cream is clinically proven to erase fine lines, wrinkles, and dark circles and gives the appearance of a younger and firmer looking eye area. It is suitable for all skin types"
       },
       {
-        "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
-      },
-      {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
         "brand": "BRUNO MARC",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11204,6 +11240,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
         "title": "9PM Black Gift Set - 3.4 oz.",
@@ -11278,15 +11323,6 @@
         "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
         "title": "Tan Remover Mousse by St. Tropez for Unisex - 6.7 oz Mousse - 6.7 oz.",
         "brand": "St. Tropez",
         "advertiser": "Perfumania.com",
@@ -11321,6 +11357,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
         "title": "Thirstymud Hydrating Treatment by Glamglow for Unisex - 0.5 oz Treatment - 0.5 oz.",
@@ -11359,6 +11404,15 @@
         "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
         "title": "Barrier Defense Booster by Dermalogica for Unisex - 1 oz Booster - 1 oz.",
         "brand": "Dermalogica",
         "advertiser": "Perfumania.com",
@@ -11395,15 +11449,6 @@
         "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
         "title": "Dr. Andrew Weil for Origins Mega-Mushroom Skin Relief by Origins for Women - 6.7 oz Treatment - 6.7 oz.",
         "brand": "Origins",
         "advertiser": "Perfumania.com",
@@ -11411,78 +11456,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This extra-light treatment lotion features, which soothes, comforts, and hydrates skin. This treatemnt helps to defend skin against silent skin agers."
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Cocoa Butter Eventone Fade Cream by Palmers for Unisex - 2.7 oz Cream - Default Title",
-        "brand": "Palmers",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This cream is a great skin lightening cream that helps to fade unwanted discoloration, dark spots or age spots caused by sun damage, aging skin or scarring. It deeply moisturizes a"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Daisy Eau So Fresh Gift Set - 4.2 oz.",
-        "brand": "Marc Jacobs",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift Set Includes: 4.2 oz. Eau de Toilette Spray, 2.5 oz. Body Lotion and 0.33 oz. Travel Size."
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Phyto-Contour Eye Firming Creme by Yonka for Unisex - 0.53 oz Creme - 0.53 oz.",
-        "brand": "Yonka",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This refined, aromatic cream with extracts of rosemary visibly reduces puffiness and dark circles. It restores firmness to the eye and lip contour and provides a feeling of freshne"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11503,13 +11476,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "I Peel Lightening Lift Gel Peel Technology by Image for Unisex - 4 oz Treatment - 4 oz.",
-        "brand": "Image",
+        "title": "Cocoa Butter Eventone Fade Cream by Palmers for Unisex - 2.7 oz Cream - Default Title",
+        "brand": "Palmers",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "This highly effective treatment blends lactic and kojic acids with a cocktail of lightening agents to reduce pigmentation and redness caused by rosacea and corrects all forms of pi"
+        "description": "This cream is a great skin lightening cream that helps to fade unwanted discoloration, dark spots or age spots caused by sun damage, aging skin or scarring. It deeply moisturizes a"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11528,15 +11501,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>TAMIYA - EXTRA THIN</h1><p><b>QUICK SETTING - SPECJALNA WERSJA: PRZYSPIESZONE WIĄZANIE!</b></p><h1>Klej z pędzelkiem do modeli plastikowych.</h1><p><b>40ml - DUŻY i bardzo WYDA"
-      },
-      {
-        "title": "Burberry Touch By Burberry And Burberry By Burberry - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11566,13 +11530,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "The Most Wanted Intense Gift Set - 3.38 oz.",
-        "brand": "Azzaro",
+        "title": "Daisy Eau So Fresh Gift Set - 4.2 oz.",
+        "brand": "Marc Jacobs",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Azzaro The Most Wanted Intense Gift Set is the complete experience of masculine desire - an immersive introduction to one of the most compelling modern aromatic colognes. Cardamom "
+        "description": "Gift Set Includes: 4.2 oz. Eau de Toilette Spray, 2.5 oz. Body Lotion and 0.33 oz. Travel Size."
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11593,13 +11557,13 @@
         "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.12</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
       },
       {
-        "title": "Acne-Clear Invisible Dots by Peter Thomas Roth for Unisex - 72 Clear Dots Acne-Care - 72 Clear Dots",
-        "brand": "Peter Thomas Roth",
+        "title": "Phyto-Contour Eye Firming Creme by Yonka for Unisex - 0.53 oz Creme - 0.53 oz.",
+        "brand": "Yonka",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Acne-Clear Invisible Dots"
+        "description": "This refined, aromatic cream with extracts of rosemary visibly reduces puffiness and dark circles. It restores firmness to the eye and lip contour and provides a feeling of freshne"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11620,13 +11584,13 @@
         "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.13</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
       },
       {
-        "title": "Stone Crop Hydrating Gel by Eminence for Unisex - 1 oz Gel - 1 oz.",
-        "brand": "Eminence",
+        "title": "I Peel Lightening Lift Gel Peel Technology by Image for Unisex - 4 oz Treatment - 4 oz.",
+        "brand": "Image",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "This gel gives the skin instant, deep-penetrating moisture that leaves skin with a smooth matte finish. This hydrating gel will soothe, heal, and even skin tone to minimize the app"
+        "description": "This highly effective treatment blends lactic and kojic acids with a cocktail of lightening agents to reduce pigmentation and redness caused by rosacea and corrects all forms of pi"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11647,13 +11611,13 @@
         "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.18</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
       },
       {
-        "title": "Clarifying Lotion 2 by Clinique for Unisex - 13.5 oz Clarifying Lotion - 13.5 oz.",
-        "brand": "Clinique",
+        "title": "Burberry Touch By Burberry And Burberry By Burberry - Default Title",
+        "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11674,13 +11638,13 @@
         "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.21</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
       },
       {
-        "title": "Clear Improvement Active Charcoal Mask by Origins for Unisex - 2.5 oz Mask - 2.5 oz.",
-        "brand": "Origins",
+        "title": "The Most Wanted Intense Gift Set - 3.38 oz.",
+        "brand": "Azzaro",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "This purifying charcoal mask unclogs pores for a perfectly pure look. It deeply detoxes, absorbs environmental toxins and dissolves impurities. It deep clean and draw out deep-dwel"
+        "description": "Azzaro The Most Wanted Intense Gift Set is the complete experience of masculine desire - an immersive introduction to one of the most compelling modern aromatic colognes. Cardamom "
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11701,13 +11665,13 @@
         "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.19</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
       },
       {
-        "title": "Butter and Scrub - Pomegranate and Fig by Cuccio for Unisex - 4 oz Scrub - Default Title",
-        "brand": "Cuccio",
+        "title": "Acne-Clear Invisible Dots by Peter Thomas Roth for Unisex - 72 Clear Dots Acne-Care - 72 Clear Dots",
+        "brand": "Peter Thomas Roth",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Indulge your senses with the sweet, fruity aroma of Cuccio Pomegranate and Fig butter scrub. This skin-polishing formula contains lush oils, finely ground sugar crystals, pomegrana"
+        "description": "Acne-Clear Invisible Dots"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11728,13 +11692,13 @@
         "description": "<h1>PIŁKARSKIE SKARPETY ANTYPOŚLIZGOWE PG SOX</h1><p>Sportowe skarpety PG SOX zapewniają niesamowitą stabilność oraz maksymalnie ograniczają przemieszczanie się stopy w bucie. Wyko"
       },
       {
-        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
-        "brand": "Versace",
+        "title": "Stone Crop Hydrating Gel by Eminence for Unisex - 1 oz Gel - 1 oz.",
+        "brand": "Eminence",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
+        "description": "This gel gives the skin instant, deep-penetrating moisture that leaves skin with a smooth matte finish. This hydrating gel will soothe, heal, and even skin tone to minimize the app"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11764,6 +11728,15 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
+        "title": "Clarifying Lotion 2 by Clinique for Unisex - 13.5 oz Clarifying Lotion - 13.5 oz.",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
+      },
+      {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
         "brand": "BRUNO MARC",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11782,13 +11755,13 @@
         "description": "<p><b>08S42</b> Ładowarka solarna 42W przenośna, składana, nietypowy model</p><p>Haveel 42W. Panel słoneczny. Ładowarka do komórek z 2 USB montaż na parasolu słonecznym plażowym lu"
       },
       {
-        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
-        "brand": "Jean Paul Gaultier",
+        "title": "Clear Improvement Active Charcoal Mask by Origins for Unisex - 2.5 oz Mask - 2.5 oz.",
+        "brand": "Origins",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
+        "description": "This purifying charcoal mask unclogs pores for a perfectly pure look. It deeply detoxes, absorbs environmental toxins and dissolves impurities. It deep clean and draw out deep-dwel"
       },
       {
         "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
@@ -11809,13 +11782,13 @@
         "description": "<p>Sztywno-stronicowa książeczka harmonijkowa z obrazkami i podpisami po polsku i angielsku jest doskonałą pomocą do poznawania otaczającego świata i języka obcego.</p><ul><li><b>O"
       },
       {
-        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
-        "brand": "Image",
+        "title": "Butter and Scrub - Pomegranate and Fig by Cuccio for Unisex - 4 oz Scrub - Default Title",
+        "brand": "Cuccio",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
+        "description": "Indulge your senses with the sweet, fruity aroma of Cuccio Pomegranate and Fig butter scrub. This skin-polishing formula contains lush oils, finely ground sugar crystals, pomegrana"
       },
       {
         "title": "Breloczek karabińczyk głowa konia zielony",
@@ -11836,13 +11809,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
-        "brand": "Cuccio",
+        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
+        "brand": "Versace",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
+        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
       },
       {
         "title": "Czuły narrator. Olga Tokarczuk",
@@ -11863,15 +11836,6 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
-        "brand": "La Roche-Posay",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
-      },
-      {
         "title": "Maria Konopnicka Dzieciom",
         "brand": "Olesiejuk",
         "advertiser": "Allegro.pl",
@@ -11879,6 +11843,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ pt.:</h1><h1>MARIA KONOPNICKA DZIECIOM</h1><h1>AUTOR:</h1><h1>MARIA KONOPNICKA</h1><h1>ILUSTRACJE :</h1><h1>WOJCIECH WEJNER</h1><h1>LICZBA STRON :<"
+      },
+      {
+        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
       },
       {
         "title": "Breloczek karabińczyk głowa konia złoty",
@@ -11890,13 +11863,13 @@
         "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze złotym matowym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet jeźdz"
       },
       {
-        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
-        "brand": "",
+        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
+        "brand": "Image",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
+        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
       },
       {
         "title": "Brodzińska, Morka, Niesiołowski Pardon Madame",
@@ -11917,13 +11890,13 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Ageless Total Retinol-A Creme by Image for Unisex - 1 oz Cream - Default Title",
-        "brand": "Image",
+        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
+        "brand": "Cuccio",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "A creme includes a potent blend of retinol mixed with polypeptides that penetrate the skin to repair, rejuvenate and resurface the skin. This miracle creme is particularly effectiv"
+        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
       },
       {
         "title": "Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m",
@@ -11944,13 +11917,13 @@
         "description": "Multi-functional daily sun cream with 5-Defense System and anti-aging benefits."
       },
       {
-        "title": "Invictus By Paco Rabanne And 1 Million By Paco Rabanne - Default Title",
-        "brand": "",
+        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
+        "brand": "La Roche-Posay",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
       },
       {
         "title": "Pakiet Kobieta mojego męża/Sekret Tatiany/Zaginion",
@@ -11971,15 +11944,6 @@
         "description": "A Perfect Pear-ing. Osulloc's Honey Pear Tea harmonizes the full-bodied aroma of ripe pears with the soothing sweetness of honey. This iconic blend masterfully pairs the natural es"
       },
       {
-        "title": "Burberry Brit By Burberry - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "Kolorowanka z naklejkami. Wesołe motyle Zuzanna",
         "brand": "Wydawnictwo M",
         "advertiser": "Allegro.pl",
@@ -11998,7 +11962,7 @@
         "description": "MIRACLE HEALTHY RADIANCE WITHIN 15 MINUTES NEWFIRST CARE ACTIVATING MASK Experiencing a healthy radiance powered by one bottle of effective Ingredient of FIRST CARE ACTIVATING SERU"
       },
       {
-        "title": "Cloud By Ariana Grande And Sweet Like Candy By Ariana Grande - Default Title",
+        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
         "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
@@ -12025,13 +11989,13 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Daisy Eau So Fresh Gift Set - 2.5 oz.",
-        "brand": "Marc Jacobs",
+        "title": "Ageless Total Retinol-A Creme by Image for Unisex - 1 oz Cream - Default Title",
+        "brand": "Image",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "With more fresh notes than Daisy by Marc Jacobs released in 20017, Daisy Eau So Fresh is for the woman of action. With the bittersweet tang of grapefruit melding with the sweetness"
+        "description": "A creme includes a potent blend of retinol mixed with polypeptides that penetrate the skin to repair, rejuvenate and resurface the skin. This miracle creme is particularly effectiv"
       },
       {
         "title": "3x Główka jigowa Dragon X-fine 1,5g hak 01 01/1,5g",
@@ -12052,7 +12016,7 @@
         "description": "Volumizing lips with sheer and glossy finish, creating beautiful adhesion to lips."
       },
       {
-        "title": "Poppy And Signature By Coach - Default Title",
+        "title": "Invictus By Paco Rabanne And 1 Million By Paco Rabanne - Default Title",
         "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
@@ -12088,13 +12052,13 @@
         "description": "Protect your neck and face with FRP's versatile motorcycle neck gaiter. This premium neck gaiter for motorcycle riding features moisture-wicking fabric that keeps you comfortable i"
       },
       {
-        "title": "Double Mousse with 7 Herbs by Erborian for Women - 4.9 oz Mousse - 4.9 oz.",
-        "brand": "Erborian",
+        "title": "Burberry Brit By Burberry - Default Title",
+        "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "This care with rich and fine foam cleanses in gentleness to remove all the impurities, then to visibly refine the skin texture to sublime the definition."
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
         "title": "Karty Piotruś Kraina Lodu 2 Trefl 08483",
@@ -12115,13 +12079,13 @@
         "description": "A glow lip tint with a sheer to full coverage buildable texture, leaving behind a sheer pop to the lips."
       },
       {
-        "title": "Desire by Alfred Dunhill for Men - 3 Pc Gift Set - 3.4 oz.",
-        "brand": "Alfred Dunhill",
+        "title": "Cloud By Ariana Grande And Sweet Like Candy By Ariana Grande - Default Title",
+        "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Launched by the design house of Alfred Dunhill. It is recommended for casual wear. Desire by Alfred Dunhill for Men - 3 Pc Gift Set 3.4oz EDT Spray, 1oz EDT Spray, 6.6oz Body Spray"
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
       },
       {
         "title": "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb",
@@ -12142,13 +12106,13 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Yara 4 Piece Gift Set - 0.85 oz.",
-        "brand": "Lattafa",
+        "title": "Daisy Eau So Fresh Gift Set - 2.5 oz.",
+        "brand": "Marc Jacobs",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Treat someone special to the Lattafa Yara 4-Piece Gift Set, a luxurious collection of fragrances designed to delight and inspire. This set includes four mini Eau de Parfums – Yara,"
+        "description": "With more fresh notes than Daisy by Marc Jacobs released in 20017, Daisy Eau So Fresh is for the woman of action. With the bittersweet tang of grapefruit melding with the sweetness"
       },
       {
         "title": "RotoSound Roto R11-54 whites 11-54 struny elektryk",
@@ -12169,13 +12133,13 @@
         "description": "NCT 127 BADDIE'S GEL NAIL GLAZE, Purchase NCT127 GEL NAIL and get a set of photocards"
       },
       {
-        "title": "Jessica Mcclintock By Jessica Mcclintock And White Diamonds By Elizabeth Taylor - Default Title",
+        "title": "Poppy And Signature By Coach - Default Title",
         "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
         "title": "3x Główka jigowa Dragon X-fine 1,5g hak 02 02/1,5g",
@@ -12205,13 +12169,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "Acqua Di Gio By Armani And Eros By Versace - Default Title",
-        "brand": "",
+        "title": "Double Mousse with 7 Herbs by Erborian for Women - 4.9 oz Mousse - 4.9 oz.",
+        "brand": "Erborian",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+        "description": "This care with rich and fine foam cleanses in gentleness to remove all the impurities, then to visibly refine the skin texture to sublime the definition."
       },
       {
         "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
@@ -12239,6 +12203,42 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Desire by Alfred Dunhill for Men - 3 Pc Gift Set - 3.4 oz.",
+        "brand": "Alfred Dunhill",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Launched by the design house of Alfred Dunhill. It is recommended for casual wear. Desire by Alfred Dunhill for Men - 3 Pc Gift Set 3.4oz EDT Spray, 1oz EDT Spray, 6.6oz Body Spray"
+      },
+      {
+        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
+        "brand": "DeWalt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
+      },
+      {
+        "title": "Longtake Blacktea & Fig Softening Treatment 200ML",
+        "brand": "Longtake",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Yara 4 Piece Gift Set - 0.85 oz.",
+        "brand": "Lattafa",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Treat someone special to the Lattafa Yara 4-Piece Gift Set, a luxurious collection of fragrances designed to delight and inspire. This set includes four mini Eau de Parfums â Yar"
       }
     ],
     "missingSubcategoryExamples": [
@@ -12249,7 +12249,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Einfache und nützliche Bearbeitungsmöglichkeiten von mp3 Dateien wie abschneiden, ausschneiden etc. Einfache Bedienung bei hoher Audio-Qualität.",
+        "description": "Simple and useful editing options for mp3 files such as trimming, cutting, etc. Easy to use with high audio quality.",
         "category": "Electronics"
       },
       {
@@ -12293,13 +12293,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Organize your computer",
+        "title": "Abelssoft AntiLogger 2025 |  Makes nasty spy programs harmless | Try it",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
+        "description": "Reliably prevents spyware from recording keyboard or screen inputs and thus stealing data.",
         "category": "Electronics"
       },
       {
@@ -12310,16 +12310,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<h1>KABEL HDMI M/M V2.0 4K PEŁNA MIEDŹ CZARNY LANBERG</h1>\n<p>Specyfikacja:</p>\n<p>- Złącza:</p>\n<p>19-pin HDMI-A męskie</p>\n<p>19-pin HDMI-A męskie</p>\n<p>- Specyfikacja HDMI High",
-        "category": "Electronics"
-      },
-      {
-        "title": "Abelssoft AntiLogger 2025 |  Makes nasty spy programs harmless | Try it",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Reliably prevents spyware from recording keyboard or screen inputs and thus stealing data.",
         "category": "Electronics"
       },
       {
@@ -12459,7 +12449,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Weekend W Rytmie Polo Tv 2CD",
+        "description": "Weekend W Rytmie Polo TV 2CD",
         "category": "Electronics"
       },
       {
@@ -12579,7 +12569,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Modal Electronics Cobalt8M Moduł Brzmieniowy w",
+        "description": "Modal Electronics Cobalt8M Sound Module w",
         "category": "Electronics"
       },
       {
@@ -13139,7 +13129,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h2>Wooden TV stand 180 cm Chest of drawers Solid wood TV Lite MANGO LOFT BGM24</h2><h2>BGM24 MANGO LOFT 1925 - TV stand 180 cm Chest of drawers</h2><p>In our offer<b>by bgm24",
+        "description": "<h2>SZAFKA RTV Drewniana 180 cm Komoda Z litego drewna TV Lite MANGO LOFT BGM24</h2><h2>BGM24 MANGO LOFT 1925 - Szafka RTV 180 cm Komoda</h2><p>W naszej ofercie&nbsp;<b>firmy bgm24",
         "category": "Electronics"
       },
       {
@@ -13149,7 +13139,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<p><b>Nasze adaptery spełniają najwyższe standardy. Zostały wykonane z materiałów wysokiej jakości i są w pełni ekranowane, dzięki czemu zapewniają najwyższej jakości obraz i dźwię",
+        "description": "<p><b>Our adapters meet the highest standards. They are made of high-quality materials and are fully shielded, ensuring the highest quality image and sound",
         "category": "Electronics"
       },
       {
@@ -13179,7 +13169,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>W KOMPLECIE DWA PASKI SILIKONOWE !</h1><h1>ZESTAW DWÓCH SZTUK !!!</h1><h1>PASEK ZAMIENNY SILIKONOWY</h1><p>Przeznaczenie:</p><h1>Smartwatch</h1><ul><li>HUAWEI WATCH GT 46mm</li",
+        "description": "<h1>INCLUDES TWO SILICONE STRAPS!</h1><h1>SET OF TWO !!!</h1><h1>SILICONE REPLACEMENT STRAP</h1><p>Intended use:</p><h1>Smartwatch</h1><ul><li>HUAWEI WATCH GT 46mm</li",
         "category": "Electronics"
       },
       {
@@ -13190,6 +13180,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<h1>TensorFlow. 13 praktycznych projektów wykorzystujących uczenie maszynowe</h1><p>Autorzy: <b>Ankit Jain, Armando Fandango, Amita Kapoor</b></p><p>Wydawca: <b>Helion</b></p><p>Ro",
+        "category": "Electronics"
+      },
+      {
+        "title": "Pasek Do Samsung Gear S3 Galaxy Watch 46 3 45",
+        "brand": "Samsung",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Silikonowy pasek do zegarka</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsung Galax",
         "category": "Electronics"
       },
       {
@@ -13223,13 +13223,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek Do Samsung Gear S3 Galaxy Watch 46 3 45",
+        "title": "Pasek Nylon Do Samsung Gear S3 Galaxy Watch 46 3 45",
         "brand": "Samsung",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>Silikonowy pasek do zegarka</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsung Galax",
+        "description": "<h1>Nylonowy pasek do zegarków:</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsung Galax",
         "category": "Electronics"
       },
       {
@@ -13243,13 +13243,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek Nylon Do Samsung Gear S3 Galaxy Watch 46 3 45",
+        "title": "Pasek Do Samsung Gear S3 Galaxy Watch 46 3 45",
         "brand": "Samsung",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>Nylonowy pasek do zegarków:</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsung Galax",
+        "description": "<h1>Bransoleta ze stali nierdzewnej do</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsun",
         "category": "Electronics"
       },
       {
@@ -13263,27 +13263,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek Do Samsung Gear S3 Galaxy Watch 46 3 45",
-        "brand": "Samsung",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>Bransoleta ze stali nierdzewnej do</h1><ol><li><b>Samsung Gear S3 Frontier</b></li><li><b>Samsung Gear S3 Classic</b></li><li><b>Samsung Galaxy Watch 46mm</b></li><li><b>Samsun",
-        "category": "Electronics"
-      },
-      {
         "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Midnight Black / 8 GB",
-        "brand": "Soundcore",
-        "advertiser": "Soundcore",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
-        "category": "Electronics"
-      },
-      {
-        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Pearl White / 64 GB",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
         "productType": "",
@@ -13303,13 +13283,13 @@
         "category": "Electronics"
       },
       {
-        "title": "soundcore V20i White",
+        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Pearl White / 64 GB",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\nUltra-Comfort with Open-Ear Headphones: Experience matchless comfort even for all-day wear with these non-intrusive, open-ear h",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
         "category": "Electronics"
       },
       {
@@ -13320,6 +13300,26 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<h1>KABEL USB + PODSTAWKA</h1><h1>ŁADOWARKA Tech-Band</h1><h1>do Samsung Galaxy Watch Active</h1><h2>Informacje o produkcie:</h2><ul><li>zamiennik (<b>Tech-Band</b>)</li><li>kolor ",
+        "category": "Electronics"
+      },
+      {
+        "title": "soundcore V20i White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Bulk Headphones, Earbuds, and Speakers for Business\n\nUltra-Comfort with Open-Ear Headphones: Experience matchless comfort even for all-day wear with these non-intrusive, open-ear h",
+        "category": "Electronics"
+      },
+      {
+        "title": "Ładowarka Usb do Samsung Galaxy Watch Active 2 40mm (Tech-Band)",
+        "brand": "Tech-Band",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>KABEL USB + PODSTAWKA</h1><h1>ŁADOWARKA Tech-Band</h1><h1>do Samsung Galaxy Watch Active 2 40mm</h1><h2>Informacje o produkcie:</h2><ul><li>zamiennik (<b>Tech-Band</b>)</li><li",
         "category": "Electronics"
       },
       {
@@ -13353,13 +13353,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Ładowarka Usb do Samsung Galaxy Watch Active 2 40mm (Tech-Band)",
+        "title": "Ładowarka Usb do Samsung Galaxy Watch Active 2 44mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>KABEL USB + PODSTAWKA</h1><h1>ŁADOWARKA Tech-Band</h1><h1>do Samsung Galaxy Watch Active 2 40mm</h1><h2>Informacje o produkcie:</h2><ul><li>zamiennik (<b>Tech-Band</b>)</li><li",
+        "description": "<h1>KABEL USB + PODSTAWKA</h1><h1>ŁADOWARKA Tech-Band</h1><h1>do Samsung Galaxy Watch Active 2 44mm</h1><h2>Informacje o produkcie:</h2><ul><li>zamiennik (<b>Tech-Band</b>)</li><li",
         "category": "Electronics"
       },
       {
@@ -13373,16 +13373,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Ładowarka Usb do Samsung Galaxy Watch Active 2 44mm (Tech-Band)",
-        "brand": "Tech-Band",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>KABEL USB + PODSTAWKA</h1><h1>ŁADOWARKA Tech-Band</h1><h1>do Samsung Galaxy Watch Active 2 44mm</h1><h2>Informacje o produkcie:</h2><ul><li>zamiennik (<b>Tech-Band</b>)</li><li",
-        "category": "Electronics"
-      },
-      {
         "title": "soundcore Space One Pro | FlexiCurve Over-Ear Headphone Jet Black",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
@@ -13390,6 +13380,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt;\n\n\nsoundcore-Engineered FlexiCurve™ Structure: Reduces Space One Pro's size by 50% with its super foldable des",
+        "category": "Electronics"
+      },
+      {
+        "title": "Etui na Ramię do Biegania Samsung S10 S20 Fe S21",
+        "brand": "TelForceOne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Etui na RAMIĘ, RĘKĘ do BIEGANIA / na Rower na SMARTFON 5,8-6,5 cali Rozmiar XXL</h1><p>Towar jest w 100% NOWY i NIEUŻYWANY. Etui wykonane z wysokiej jakości materiałów. Zapakow",
         "category": "Electronics"
       },
       {
@@ -13403,13 +13403,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Etui na Ramię do Biegania Samsung S10 S20 Fe S21",
-        "brand": "TelForceOne",
+        "title": "Pasek do Samsung Galaxy Watch Active Rozmiar S",
+        "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>Etui na RAMIĘ, RĘKĘ do BIEGANIA / na Rower na SMARTFON 5,8-6,5 cali Rozmiar XXL</h1><p>Towar jest w 100% NOWY i NIEUŻYWANY. Etui wykonane z wysokiej jakości materiałów. Zapakow",
+        "description": "<h1>TECH-BAND SIMILAR SAMSUNG</h1><h1>DESIGN GALAXY WATCH ACTIVE</h1><h1>ROZMIAR \"S\"</h1><p>PASEK PRZEZNACZONY DO MODELU SAMSUNG GALAXY ACTIVE</p><p>Silikonowy pasek inspirowany or",
         "category": "Electronics"
       },
       {
@@ -13443,13 +13443,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek do Samsung Galaxy Watch Active Rozmiar S",
+        "title": "Czarno-żółty Pasek Samsung Galaxy Watch 46MM Szkło 9H",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>TECH-BAND SIMILAR SAMSUNG</h1><h1>DESIGN GALAXY WATCH ACTIVE</h1><h1>ROZMIAR \"S\"</h1><p>PASEK PRZEZNACZONY DO MODELU SAMSUNG GALAXY ACTIVE</p><p>Silikonowy pasek inspirowany or",
+        "description": "<h1>Pasek Tech-Band do SAMSUNG GALAXY WATCH 46mm</h1><p>Silikonowy pasek do smartwatch'a Samsung Galaxy Watch 46 mm. Wykonany z najwyższej jakości materiałów zapewniających wytrzym",
         "category": "Electronics"
       },
       {
@@ -13463,13 +13463,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Czarno-żółty Pasek Samsung Galaxy Watch 46MM Szkło 9H",
+        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>Pasek Tech-Band do SAMSUNG GALAXY WATCH 46mm</h1><p>Silikonowy pasek do smartwatch'a Samsung Galaxy Watch 46 mm. Wykonany z najwyższej jakości materiałów zapewniających wytrzym",
+        "description": "<h2>Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)</h2><h2>SAMSUNG GALAXY WATCH 46mm | SZEROKOŚĆ 22mm | ROZMIAR L |&nbsp; TECH-BAND |</h2><h1>✅ TECH-BAND - Pasek do Samsung",
         "category": "Electronics"
       },
       {
@@ -13553,16 +13553,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
-        "brand": "Tech-Band",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h2>Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)</h2><h2>SAMSUNG GALAXY WATCH 46mm | SZEROKOŚĆ 22mm | ROZMIAR L |&nbsp; TECH-BAND |</h2><h1>✅ TECH-BAND - Pasek do Samsung",
-        "category": "Electronics"
-      },
-      {
         "title": "Silikonowy Pasek Samsung Gear S3 Frontier Classic (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
@@ -13570,6 +13560,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<h2>Silikonowy Pasek Samsung Gear S3 Frontier / Classic (Tech-Band)</h2><h2>SAMSUNG GEAR S3 FRONTIER oraz CLASSIC | SZEROKOŚĆ 22mm | ROZMIAR L |&nbsp; TECH-BAND |</h2><h1>✅ TECH-BA",
+        "category": "Electronics"
+      },
+      {
+        "title": "Anker soundcore Work × Typeless | AI Note Taker & Voice Dictation Midnight Black / 64 GB",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Business Audio &amp; Team Gifts. Click for Volume Pricing &gt;&gt;&gt; \n\n\nTwo Modes in One: AI Note-Taking Mode records, transcribes, and summarizes meetings. Dictation Mode, power",
         "category": "Electronics"
       },
       {
@@ -13703,44 +13703,44 @@
         "category": "Electronics"
       },
       {
-        "title": "Be. Professional 1.25 Repairing Argan Oil Vapor Iron With Thermolon Technology Flat Iron",
-        "brand": "Be. Professional",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Toys & Games",
-        "description": "Ecosmetics Is An Authorized Retailer Of Be. Professional. Discover The Be. Professional Repairing Argan Oil Vapor Iron Featuring Thermolon Technologya-\"a Must-Have For The Artistic",
-        "category": "Toys & Games"
-      },
-      {
-        "title": "Alpha Audio instrument cable 1.5 m",
-        "brand": "Alpha Audio",
+        "title": "Nakamichi Opaska rzepowa do organizacji kabli 5m",
+        "brand": "Nakamichi",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Toys & Games",
-        "description": "<p>Dobrej jakości przewód instrumentalny o długości 1.5m.  Jack prosty mono - Jack prosty mono 6.3 mm.</p>",
-        "category": "Toys & Games"
+        "sourceCategory": "Electronics",
+        "description": "<h1>Taśma na rzep do organizacji kabli NAKAMICHI HQ Premium</h1><h2>1 sztuka (rolka) - aż 5 metrów długości!</h2><h2>Taśma rzepowa Nakamichi do organizacji kabli. Obowiązkowa rzecz",
+        "category": "Electronics"
       },
       {
-        "title": "Lacoste Essential Sport Cologne for Men by Lacoste Type Perfume Oil 1/3 oz Roll-on",
-        "brand": "Lacoste",
-        "advertiser": "FragranceShop.com ",
+        "title": "Abelssoft File Organizer 2025 | Tidy your PC up",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Toys & Games",
-        "description": "Lacoste Essential Sport Cologne for Men - Type Perfume Oil 1/3 oz Roll-on by Lacoste - A Perfume that commands attention. Shop now and find your perfect fragrance. Free Shipping!",
-        "category": "Toys & Games"
+        "sourceCategory": "Office & Technology",
+        "description": "Automatically sorts pictures, documents, videos & more into predefined folders. This way you can always be sure that all files can be found at any time.",
+        "category": "Office & Technology"
       },
       {
-        "title": "OEDRO 6\" Running Boards Steps Nerf Bars for 2005-2023 Toyota Tacoma Double Cab(4 Full doors Size=1:0.75)",
-        "brand": "OEDRO",
-        "advertiser": "Oedro",
+        "title": "FolderVisualizer 2025 | Das Röntgengerät für deine Festplatte",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Toys & Games",
-        "description": "OEDRO Drop Running Boards, designed for 2005-2023 Toyota Tacoma Double Cab, feature a sturdy three-tube construction for undercarriage and side protection. The 6-inch drop-down ped",
-        "category": "Toys & Games"
+        "sourceCategory": "Office & Technology",
+        "description": "FolderVisualizer findet und analysiert zuverlässig alle Deine Festplatten auf der Suche nach großen Speicherfressern der Marke XXL.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Converter4Video 2025 |  Videos konvertieren leicht gemacht",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Schnelle und einfache Video-Konvertierung von und in verschiedene Formate für eine Wiedergabe auf dem Fernseher, Handy und Co.",
+        "category": "Office & Technology"
       }
     ]
   },
@@ -13760,15 +13760,6 @@
         }
       ],
       "examples": [
-        {
-          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
-          "brand": "Nike",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Fashion",
-          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
-        },
         {
           "title": "Nike Gym Red/cucumber Calm/tour Yellow Lebron 8 Empire Jade - 5.5",
           "brand": "Nike",
@@ -13795,11 +13786,20 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
+        },
+        {
+          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Fashion",
+          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
         }
       ]
     },
     "Adidas": {
-      "productCount": 8,
+      "productCount": 7,
       "footwearProductCount": 0,
       "tennisShoeCount": 0,
       "byCategory": [
@@ -13808,42 +13808,15 @@
           "count": 5
         },
         {
-          "category": "Other",
-          "count": 2
+          "category": "Beauty",
+          "count": 1
         },
         {
-          "category": "Beauty",
+          "category": "Other",
           "count": 1
         }
       ],
       "examples": [
-        {
-          "title": "Adidas Ice Dive Cologne for Men by Adidas TESTER Eau de Toilette Spray 3.4 oz (100ml)",
-          "brand": "Adidas",
-          "advertiser": "FragranceShop.com ",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Beauty",
-          "description": "Adidas Ice Dive Cologne for Men - TESTER Eau de Toilette Spray 3.4 oz by Adidas - A Perfume that commands attention. Shop now and find your perfect fragrance. Free Shipping!"
-        },
-        {
-          "title": "Adidas Wałek roller do ćwiczeń piankowy z wypustkami z uchwytami składany",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Other",
-          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
-        },
-        {
-          "title": "Adidas biustonosz sportowy drst volley M",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Other",
-          "description": "Adidas biustonosz sportowy drst volley M"
-        },
         {
           "title": "Adidas Sport Fight koszulka Polo rozm. XL",
           "brand": "",
@@ -13888,6 +13861,24 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "SPECIAL PACK ADIDAS HMX PRO BLACK GREEN 2026 - Una pala muy equilibrada, con un tacto cómodo y una gran facilidad de manejo.  Además de la pala, este pack incorpora un paletero de "
+        },
+        {
+          "title": "Adidas Ice Dive Cologne for Men by Adidas TESTER Eau de Toilette Spray 3.4 oz (100ml)",
+          "brand": "Adidas",
+          "advertiser": "FragranceShop.com ",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Beauty",
+          "description": "Adidas Ice Dive Cologne for Men - TESTER Eau de Toilette Spray 3.4 oz by Adidas - A Perfume that commands attention. Shop now and find your perfect fragrance. Free Shipping!"
+        },
+        {
+          "title": "Adidas Wałek roller do ćwiczeń piankowy z wypustkami z uchwytami składany",
+          "brand": "adidas",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
         }
       ]
     },
@@ -13906,15 +13897,6 @@
         }
       ],
       "examples": [
-        {
-          "title": "Top Stanik Reebok Dwustronny CrossFit r. Xs",
-          "brand": "Reebok",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Other",
-          "description": "<h1>Top Reebok CF BRATOP Z79435</h1><ul><li>Materiał: 73% Poliamid, 27% Elastan</li><li>Kolor :&nbsp;Niebieski, Żółty</li><li>Cechy dodatkowe<b>:</b>&nbsp;Dwustronny</li><li>Szerok"
-        },
         {
           "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 7 mm",
           "brand": "Reebok",
@@ -13986,13 +13968,22 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "<p><b>Opaska na kolano</b> marki <b>Reebok</b> została zaprojektowana tak, aby zapewnić Ci maksymalną wydajność i szybką regeneracją. Elastyczny materiał, z którego została wykonan"
+        },
+        {
+          "title": "Top Stanik Reebok Dwustronny CrossFit r. Xs",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "<h1>Top Reebok CF BRATOP Z79435</h1><ul><li>Materiał: 73% Poliamid, 27% Elastan</li><li>Kolor :&nbsp;Niebieski, Żółty</li><li>Cechy dodatkowe<b>:</b>&nbsp;Dwustronny</li><li>Szerok"
         }
       ]
     }
   },
   "focusedProductCoverage": {
     "televisions": 61,
-    "smartphones": 58,
+    "smartphones": 59,
     "playstationConsoles": 94,
     "gamingConsoles": 179,
     "fashionClothing": 145,
@@ -14001,9 +13992,9 @@
     "sportsFootwear": 223
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20906,
-    "withImages": 20906,
-    "withPositivePrices": 20906
+    "withTrackedHttpsLinks": 20910,
+    "withImages": 20910,
+    "withPositivePrices": 20910
   },
   "sources": [
     {
