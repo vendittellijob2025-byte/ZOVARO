@@ -324,7 +324,7 @@ const subcategoryCases = [
   ["Fashion", "Reebok Classic Leather Sneakers", "Shoes > Sneakers"],
   ["Fashion", "Cotton T-Shirt", "Clothing > T-Shirts & Tops"],
   ["Fashion", "Nike Women's Running Leggings", "Women's Clothing"],
-  ["Fashion", "Men's Denim Jeans", "Men's Clothing"],
+  ["Fashion", "Men's Denim Jeans", "Clothing > Jeans & Trousers"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"]
 ];
