@@ -1,0 +1,60 @@
+name: ZOVARO AUTOPILOT - Daily Operations Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 07:40 America/Bogota (UTC-5) every day.
+    - cron: "40 12 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zovaro-autopilot-audit
+  cancel-in-progress: false
+
+jobs:
+  daily-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Test product classification rules
+        id: category-tests
+        run: |
+          node scripts/test-product-category.mjs
+          node scripts/validate-product-category-rules.mjs
+
+      - name: Audit category quality
+        id: category-audit
+        continue-on-error: true
+        run: node scripts/audit-category-quality.mjs
+
+      - name: Validate affiliate partner registry
+        id: partner-audit
+        continue-on-error: true
+        run: node scripts/validate-direct-partners.mjs
+
+      - name: Generate read-only operational report
+        if: always()
+        env:
+          CATEGORY_TESTS_OUTCOME: ${{ steps.category-tests.outcome }}
+          CATEGORY_AUDIT_OUTCOME: ${{ steps.category-audit.outcome }}
+          PARTNER_AUDIT_OUTCOME: ${{ steps.partner-audit.outcome }}
+        run: node scripts/zovaro-autopilot-audit.mjs
+
+      - name: Upload daily report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zovaro-autopilot-report
+          path: reports/zovaro-autopilot-report.json
+          if-no-files-found: error
+          retention-days: 30
