@@ -60,6 +60,7 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 - `.github/workflows/zovaro-autopilot.yml` runs a read-only daily operations audit at 07:40 America/Bogota and can also be started manually.
 - The audit checks product-category rules, category quality, direct-partner registry integrity, catalogue coverage and affiliate-opportunity pipeline counts.
 - Each run publishes a JSON report as a GitHub Actions artifact retained for 30 days and writes a readable GitHub Actions job summary.
+- A separate weekly workflow checks the public availability of the 28 registered affiliate-opportunity pages, without logging in or contacting partners; HTTP reachability is never treated as programme approval.
 - The workflow uses GitHub-hosted Actions and repository data only; it does not require a paid AI service, add a Vercel function, or change the live catalogue.
 - Existing CJ catalogue sync (six-hourly), image intelligence audit (four times daily), translation batches (six-hourly) and commission reconciliation (daily) remain separate workflows.
 - This first Autopilot version is scheduled quality control, not a continuously reasoning AI agent: it does not perform live AI-assisted affiliate discovery, submit applications, send emails, change partner approvals, or publish offers. Those activities remain manual and require owner authorization.
