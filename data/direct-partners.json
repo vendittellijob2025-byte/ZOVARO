@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:30:00-05:00",
+  "updatedAt": "2026-11-19T00:32:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -56,7 +56,8 @@
     "2026-11-19 partner status refresh: CJ welcomed ANSI (advertiser 2190096) on 18-Nov, ALL Accor+ Explorer on 17-Nov (8%, 30-day cookie), Fragrance Outlet on 16-Nov and Perfumania on 16-Nov. These are network approvals only; verify tracking, markets, permitted images and feeds before promotion. CJ also notified that Apex Gaming PCs (7772585) was deactivated on 19-Nov; do not promote its links while inactive.",
     "2026-11-17 SOREL response: programme manager confirmed EMEA coverage and Impact payments in EUR, but asked for audience/traffic/promotional methods/media deck. This is a response, not an approval; do not invent traffic metrics.",
     "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint.",
-    "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email."
+    "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email.",
+    "2026-11-19 PrivJet rate discrepancy: the current partner programme page advertises 10% of flight price, 365-day links, free signup and monthly bank transfer from €100, due 14 days after flight. A separately indexed terms page is explicitly versioned 2026-12-01 and contains lower service-fee-based calculations. Do not rely on the future-dated terms as current; request written confirmation of the rate applicable at onboarding."
   ],
   "prospects": [
     {
@@ -7163,14 +7164,15 @@
       "territories": [
         "International; individual/business publisher eligibility stated, flight/operator coverage to confirm"
       ],
-      "publicCommission": "Terms clarify 5% of flight price on empty legs and 2.5% on charter bookings (50% of standard service fee); monthly bank transfer from €100; commission due 14 days after flight; free to join",
+      "publicCommission": "Current official partner page advertises 10% of flight price on booked flights; monthly bank transfer from €100; due 14 days after the flight; free to join. A future-dated terms page (version 2026-12-01) displays different service-fee calculations, so commission must be reconfirmed in writing before approval.",
       "integration": {
-        "affiliateLink": "personal referral links/codes after approval",
+        "affiliateLink": "personal referral links/codes; 365-day validity advertised",
         "productFeed": "no aircraft feed verified",
         "imagePermission": "pending",
-        "conversionReporting": "partner dashboard/attribution terms to verify"
+        "conversionReporting": "partner dashboard for clicks, requests, bookings and commissions",
+        "payout": "monthly bank transfer (SEPA, US ACH or SWIFT) from €100"
       },
-      "nextAction": "Review full partner terms and apply only after checking ZOVARO publisher eligibility, country restrictions, tax details, flight service coverage and approved marketing assets."
+      "nextAction": "Confirm in writing which commission schedule applies on the application date because a future-dated 2026-12-01 terms page conflicts with the current partner page; confirm territories, approved assets, tax/KYC and payout beneficiary details."
     },
     {
       "id": "villanovo-affiliate",
