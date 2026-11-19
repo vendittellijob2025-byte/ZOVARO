@@ -474,6 +474,46 @@
         "confirm product feed and delivery countries",
         "confirm current rates, Apple product exclusions and payout terms"
       ]
+    },
+    {
+      "partner": "Lenovo Colombia",
+      "status": "prospect",
+      "verticals": [
+        "tablets",
+        "desktop PCs",
+        "workstations",
+        "monitors",
+        "servers",
+        "storage",
+        "accessories"
+      ],
+      "publicProgram": "Official Lenovo Colombia affiliate campaign is free to join via Impact, advertises a 3-day cookie, and lists Colombia plus Argentina, Mexico, Chile and Peru campaigns. Public commission not stated.",
+      "url": "https://www.lenovo.com/co/es/afiliados/",
+      "nextVerification": [
+        "publisher eligibility and Impact application",
+        "confirm laptops are included in Colombia campaign",
+        "commission, feed/API, image rights and payout"
+      ]
+    },
+    {
+      "partner": "Lenovo Italy",
+      "status": "prospect",
+      "verticals": [
+        "laptops",
+        "tablets",
+        "desktop PCs",
+        "all-in-ones",
+        "workstations",
+        "accessories",
+        "software"
+      ],
+      "publicProgram": "Official Lenovo Italy affiliate programme is free to join; product families are listed, but commission, cookie and non-Italian publisher eligibility need confirmation.",
+      "url": "https://www.lenovo.com/it/it/landing-pages/promotion/affiliate/affiliate-program/",
+      "nextVerification": [
+        "publisher eligibility outside Italy",
+        "Impact application and regional store coverage",
+        "commission, cookie, product feed, image rights and bank payout"
+      ]
     }
   ]
 }
