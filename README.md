@@ -66,6 +66,7 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 - `data/catalog.json` — generated public product catalogue
 - `data/translation-cache.json` — translation cache
 - `data/direct-partners.json` — direct-partner registry and evidence
+- `docs/GLOBAL-AFFILIATE-GEOGRAPHIC-COVERAGE.md` — global product discovery with country-specific affiliate offer eligibility and routing policy
 - `scripts/sync-cj-advertisers.mjs` — CJ advertiser discovery, feed import and catalogue merge
 - `scripts/translate-to-english.mjs` — safe translation batches
 - `app-cj-loader.js` — public storefront loader
