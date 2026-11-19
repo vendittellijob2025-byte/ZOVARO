@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T23:59:28.366Z",
+  "generatedAt": "2026-11-19T00:06:39.008Z",
   "selectedProductCount": 19405,
   "inventoryProductCount": 200985,
   "uniqueAdvertiserCount": 24,
@@ -2235,8 +2235,8 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1355,
-      "unclassifiedProductCount": 379,
+      "productCount": 1353,
+      "unclassifiedProductCount": 377,
       "browseTree": [
         {
           "name": "Books",
@@ -2514,14 +2514,14 @@
         {
           "name": "Phones & Tablets",
           "path": "Phones & Tablets",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
               "name": "Smartphones",
               "path": "Phones & Tablets > Smartphones",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -2843,8 +2843,8 @@
         {
           "name": "Car Electronics",
           "path": "Car Electronics",
-          "productCount": 2,
-          "directProductCount": 2,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Dash Cameras",
@@ -3010,12 +3010,12 @@
     {
       "name": "Fashion",
       "productCount": 1768,
-      "unclassifiedProductCount": 693,
+      "unclassifiedProductCount": 553,
       "browseTree": [
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 0,
+          "productCount": 140,
           "directProductCount": 0,
           "children": [
             {
@@ -3028,36 +3028,36 @@
             {
               "name": "T-Shirts & Tops",
               "path": "Clothing > T-Shirts & Tops",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 75,
+              "directProductCount": 75,
               "children": []
             },
             {
               "name": "Shirts & Blouses",
               "path": "Clothing > Shirts & Blouses",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 10,
+              "directProductCount": 10,
               "children": []
             },
             {
               "name": "Jeans & Trousers",
               "path": "Clothing > Jeans & Trousers",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 51,
+              "directProductCount": 51,
               "children": []
             },
             {
               "name": "Shorts",
               "path": "Clothing > Shorts",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Jackets & Coats",
               "path": "Clothing > Jackets & Coats",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -3881,34 +3881,34 @@
     },
     {
       "name": "Gaming",
-      "productCount": 98,
+      "productCount": 106,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Consoles",
           "path": "Consoles",
-          "productCount": 95,
-          "directProductCount": 95,
+          "productCount": 103,
+          "directProductCount": 0,
           "children": [
             {
               "name": "PlayStation",
               "path": "Consoles > PlayStation",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 18,
+              "directProductCount": 18,
               "children": []
             },
             {
               "name": "Xbox",
               "path": "Consoles > Xbox",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 57,
+              "directProductCount": 57,
               "children": []
             },
             {
               "name": "Nintendo",
               "path": "Consoles > Nintendo",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 28,
+              "directProductCount": 28,
               "children": []
             },
             {
@@ -7349,13 +7349,13 @@
     },
     {
       "name": "Sports",
-      "productCount": 1813,
-      "unclassifiedProductCount": 464,
+      "productCount": 1812,
+      "unclassifiedProductCount": 463,
       "browseTree": [
         {
           "name": "Sports Apparel",
           "path": "Sports Apparel",
-          "productCount": 359,
+          "productCount": 357,
           "directProductCount": 0,
           "children": [
             {
@@ -7368,8 +7368,8 @@
             {
               "name": "Sports Footwear",
               "path": "Sports Apparel > Sports Footwear",
-              "productCount": 224,
-              "directProductCount": 224,
+              "productCount": 222,
+              "directProductCount": 222,
               "children": []
             },
             {
@@ -7876,14 +7876,14 @@
         {
           "name": "Running",
           "path": "Running",
-          "productCount": 250,
+          "productCount": 210,
           "directProductCount": 1,
           "children": [
             {
               "name": "Running Shoes",
               "path": "Running > Running Shoes",
-              "productCount": 249,
-              "directProductCount": 249,
+              "productCount": 209,
+              "directProductCount": 209,
               "children": []
             },
             {
@@ -8997,7 +8997,7 @@
         {
           "name": "Tennis",
           "path": "Tennis",
-          "productCount": 0,
+          "productCount": 42,
           "directProductCount": 0,
           "children": [
             {
@@ -9031,8 +9031,8 @@
             {
               "name": "Tennis Shoes",
               "path": "Tennis > Tennis Shoes",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 42,
+              "directProductCount": 42,
               "children": []
             }
           ]
@@ -9450,14 +9450,14 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 293,
+      "productCount": 288,
       "unclassifiedProductCount": 107,
       "browseTree": [
         {
           "name": "Building & Construction",
           "path": "Building & Construction",
-          "productCount": 94,
-          "directProductCount": 94,
+          "productCount": 89,
+          "directProductCount": 89,
           "children": [
             {
               "name": "Building Sets",
@@ -9780,8 +9780,8 @@
         {
           "name": "Televisions",
           "path": "Televisions",
-          "productCount": 5,
-          "directProductCount": 4,
+          "productCount": 61,
+          "directProductCount": 60,
           "children": [
             {
               "name": "OLED TVs",
@@ -9830,8 +9830,8 @@
         {
           "name": "Home Cinema",
           "path": "Home Cinema",
-          "productCount": 197,
-          "directProductCount": 196,
+          "productCount": 141,
+          "directProductCount": 140,
           "children": [
             {
               "name": "Projectors",
@@ -9922,11 +9922,11 @@
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1349,
-    "usedTaxonomyNodeCount": 203,
-    "emptyTaxonomyNodeCount": 1146,
-    "productsWithKnownSubcategory": 11993,
+    "usedTaxonomyNodeCount": 216,
+    "emptyTaxonomyNodeCount": 1133,
+    "productsWithKnownSubcategory": 12136,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 7412,
+    "productsWithoutSubcategory": 7269,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -9937,20 +9937,20 @@
         "count": 889
       },
       {
-        "category": "Fashion",
-        "count": 693
-      },
-      {
         "category": "Beauty",
         "count": 689
       },
       {
+        "category": "Fashion",
+        "count": 553
+      },
+      {
         "category": "Sports",
-        "count": 464
+        "count": 463
       },
       {
         "category": "Books & Media",
-        "count": 379
+        "count": 377
       },
       {
         "category": "Babies",
@@ -10022,8 +10022,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 7412,
-      "provisional": 11993
+      "needs_classification": 7269,
+      "provisional": 12136
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10084,24 +10084,24 @@
         "productCount": 267
       },
       {
-        "path": "Sports > Running > Running Shoes",
-        "productCount": 249
-      },
-      {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
         "productCount": 235
       },
       {
         "path": "Sports > Sports Apparel > Sports Footwear",
-        "productCount": 224
+        "productCount": 222
       },
       {
-        "path": "TVs & Home Cinema > Home Cinema",
-        "productCount": 196
+        "path": "Sports > Running > Running Shoes",
+        "productCount": 209
       },
       {
         "path": "Electronics > Audio",
         "productCount": 149
+      },
+      {
+        "path": "TVs & Home Cinema > Home Cinema",
+        "productCount": 140
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
@@ -10140,14 +10140,6 @@
         "productCount": 112
       },
       {
-        "path": "Gaming > Consoles",
-        "productCount": 95
-      },
-      {
-        "path": "Toys & Games > Building & Construction",
-        "productCount": 94
-      },
-      {
         "path": "Automotive > Car Parts > Body Parts & Trim",
         "productCount": 93
       },
@@ -10164,12 +10156,20 @@
         "productCount": 89
       },
       {
+        "path": "Toys & Games > Building & Construction",
+        "productCount": 89
+      },
+      {
         "path": "Beauty > Makeup > Eye Makeup",
         "productCount": 83
       },
       {
         "path": "Books & Media > Books",
         "productCount": 82
+      },
+      {
+        "path": "Fashion > Clothing > T-Shirts & Tops",
+        "productCount": 75
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
@@ -10184,8 +10184,20 @@
         "productCount": 64
       },
       {
+        "path": "TVs & Home Cinema > Televisions",
+        "productCount": 60
+      },
+      {
         "path": "Pets > Cats",
         "productCount": 59
+      },
+      {
+        "path": "Gaming > Consoles > Xbox",
+        "productCount": 57
+      },
+      {
+        "path": "Fashion > Clothing > Jeans & Trousers",
+        "productCount": 51
       },
       {
         "path": "Books & Media > Music",
@@ -10194,6 +10206,10 @@
       {
         "path": "Beauty > Skincare",
         "productCount": 43
+      },
+      {
+        "path": "Sports > Tennis > Tennis Shoes",
+        "productCount": 42
       },
       {
         "path": "Automotive > GPS Navigation",
@@ -10232,6 +10248,10 @@
         "productCount": 28
       },
       {
+        "path": "Gaming > Consoles > Nintendo",
+        "productCount": 28
+      },
+      {
         "path": "Fashion > Shoes > Boots",
         "productCount": 25
       },
@@ -10245,6 +10265,10 @@
       },
       {
         "path": "Automotive > Car Parts > Lighting",
+        "productCount": 18
+      },
+      {
+        "path": "Gaming > Consoles > PlayStation",
         "productCount": 18
       },
       {
@@ -10298,6 +10322,10 @@
       {
         "path": "Babies > Hygiene & Wellness > Baby Bath",
         "productCount": 11
+      },
+      {
+        "path": "Fashion > Clothing > Shirts & Blouses",
+        "productCount": 10
       },
       {
         "path": "Sports > Golf",
@@ -10402,34 +10430,6 @@
       {
         "path": "Beauty > Skincare > Face Cleansers",
         "productCount": 4
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Sports Supplements > Creatine",
-        "productCount": 4
-      },
-      {
-        "path": "TVs & Home Cinema > Televisions",
-        "productCount": 4
-      },
-      {
-        "path": "Luxury & Prestige > Fine Art & Collectibles",
-        "productCount": 4
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Sports Supplements > Protein Powders",
-        "productCount": 4
-      },
-      {
-        "path": "Security & Safety > Home & Business Security > Smart Locks",
-        "productCount": 3
-      },
-      {
-        "path": "Beauty > Hair Care > Hair Styling Tools",
-        "productCount": 3
-      },
-      {
-        "path": "Business, Wholesale & Bulk Supply > Retail & Hospitality Supplies > Cleaning & Janitorial",
-        "productCount": 3
       }
     ],
     "otherByAdvertiser": [
@@ -13324,6 +13324,256 @@
         "category": "Office & Technology"
       }
     ]
+  },
+  "brandCoverage": {
+    "Nike": {
+      "productCount": 5,
+      "byCategory": [
+        {
+          "category": "Sports",
+          "count": 4
+        },
+        {
+          "category": "Fashion",
+          "count": 1
+        }
+      ],
+      "examples": [
+        {
+          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Fashion",
+          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
+        },
+        {
+          "title": "Nike Gym Red/cucumber Calm/tour Yellow Lebron 8 Empire Jade - 5.5",
+          "brand": "Nike",
+          "advertiser": "eCosmetics.com",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "Size: 5.5 | Nike Gym Red/cucumber Calm/tour Yellow Lebron 8 Empire Jade - 5.5"
+        },
+        {
+          "title": "Nike Torba Sportowa Na Ramię Trening Fitness M",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
+        },
+        {
+          "title": "Nike Torba Sportowa Na Ramię Trening Fitness M",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
+        },
+        {
+          "title": "Knight Sztuka zwycięstwa Wspomnienia twórcy Nike",
+          "brand": "Dom Wydawniczy Rebis",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<h1>Sztuka zwycięstwa</h1>\n<p>Podtytuł: <b>Wspomnienia twórcy NIKE</b></p><p>Autor: <b>Phil Knight</b></p><p>EAN: <b>9788380621169</b></p><p>Typ publikacji: <b>audiobook</b></p><p>"
+        }
+      ]
+    },
+    "Adidas": {
+      "productCount": 7,
+      "byCategory": [
+        {
+          "category": "Sports",
+          "count": 5
+        },
+        {
+          "category": "Beauty",
+          "count": 1
+        },
+        {
+          "category": "Other",
+          "count": 1
+        }
+      ],
+      "examples": [
+        {
+          "title": "Adidas Ice Dive Cologne for Men by Adidas TESTER Eau de Toilette Spray 3.4 oz (100ml)",
+          "brand": "Adidas",
+          "advertiser": "FragranceShop.com ",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Beauty",
+          "description": "Adidas Ice Dive Cologne for Men - TESTER Eau de Toilette Spray 3.4 oz by Adidas - A Perfume that commands attention. Shop now and find your perfect fragrance. Free Shipping!"
+        },
+        {
+          "title": "Adidas Wałek roller do ćwiczeń piankowy z wypustkami z uchwytami składany",
+          "brand": "adidas",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
+        },
+        {
+          "title": "Adidas Sport Fight koszulka Polo rozm. XL",
+          "brand": "",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina.</p><p>Z przodu na piersi japoński haft.</p><p><b"
+        },
+        {
+          "title": "Adidas Sport Fight Longsleeve Zen Climalite M",
+          "brand": "",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina. Płaski szew dla wysokiego komfortu. Dynamiczny c"
+        },
+        {
+          "title": "Special Pack Adidas Zentix Black Orange 2026 - Adidas",
+          "brand": "Adidas",
+          "advertiser": "Padel Iberico ES",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "SPECIAL PACK ADIDAS ZENTIX BLACK ORANGE 2026 - This is a new pack in our padel store, with a racket that stands out for its balance and ease of adaptation, ideal for beginner to in"
+        },
+        {
+          "title": "Adidas Zentix Black Orange 2026 - Adidas",
+          "brand": "Adidas",
+          "advertiser": "Padel Iberico ES",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "ADIDAS ZENTIX BLACK ORANGE 2026 - Pala de pádel de temporada 2026. Fabricada con un formato redondo, para conseguir el control deseando en todo momento. INTRODUCCIÓN DE LA PALA\n\nLa"
+        },
+        {
+          "title": "Special Pack Adidas Hmx Pro Black Green 2026 - Adidas",
+          "brand": "Adidas",
+          "advertiser": "Padel Iberico ES",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "SPECIAL PACK ADIDAS HMX PRO BLACK GREEN 2026 - Una pala muy equilibrada, con un tacto cómodo y una gran facilidad de manejo.  Además de la pala, este pack incorpora un paletero de "
+        }
+      ]
+    },
+    "Reebok": {
+      "productCount": 9,
+      "byCategory": [
+        {
+          "category": "Sports",
+          "count": 8
+        },
+        {
+          "category": "Other",
+          "count": 1
+        }
+      ],
+      "examples": [
+        {
+          "title": "Top Stanik Reebok Dwustronny CrossFit r. Xs",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "<h1>Top Reebok CF BRATOP Z79435</h1><ul><li>Materiał: 73% Poliamid, 27% Elastan</li><li>Kolor :&nbsp;Niebieski, Żółty</li><li>Cechy dodatkowe<b>:</b>&nbsp;Dwustronny</li><li>Szerok"
+        },
+        {
+          "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 7 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p> </p>  <p>Idealna mata do wszystkich ćwiczeń na ziemi oraz ogólnorozwojowych gwarantująca doskonałą amortyzację i izolacje od podłoża. Perforowana powierzchnia sprawia, że mata "
+        },
+        {
+          "title": "Mata do ćwiczeń pilates jogi antypoślizgowa wytrzymała Reebok 4 mm błękitna",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>MATA DO ĆWICZEŃ RAMT-11024BLL</b> to idealne rozwiązanie dla osób praktykujących jogę lub pilates. Jest wykonana z wygodnego i trwałego materiału, który nie przesuwa się po p"
+        },
+        {
+          "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p> </p>  <p>Dwustronna <b>MATA DO JOGI „HELLO HI” RAYG-11030HH</b> to doskonały wybór dla osób praktykujących jogę i ćwiczenia fitness. Jest wykonana z trwałego materiału i posiad"
+        },
+        {
+          "title": "Mata fitness do jogi ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>MATA DO ĆWICZEŃ RAMT-11024GR</b>L to idealne rozwiązanie dla osób praktykujących jogę lub pilates. Jest wykonana z wygodnego i trwałego materiału, który nie przesuwa się po p"
+        },
+        {
+          "title": "Mata do jogi, fitness ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>OPIS PRODUKTU</b></p><ul><li>Wysokiej jakości dwustronna mata do jogi i ćwiczeń fitness</li><li>Mata do ćwiczeń wykonana z wygodnego i trwałego materiału</li><li>Mata nie prz"
+        },
+        {
+          "title": "2 sztuki mata fitness do ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>OFERTA DOTYCZY 2 SZTUK MATY REEBOK RAMT-11024RDL</b></p><p><b>MATA FITNESS 4 MM LOVE&nbsp;</b>to czerwony model z serii mat do ćwiczeń \"Love Fitness\" marki <b>Reebok. </b>Jes"
+        },
+        {
+          "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 7 mm",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>Mata treningowa 7 mm fioletowa </b>marki <b>Reebok</b>\n przyda się każdemu, kto ceni sobie komfort wykonywanych ćwiczeń. Dzięki\n temu, że jest grubsza niż standardowe, zapewn"
+        },
+        {
+          "title": "Reebok Opaska ściągacz stabilizator na kolano Speedwick M wytrzymała",
+          "brand": "Reebok",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>Opaska na kolano</b> marki <b>Reebok</b> została zaprojektowana tak, aby zapewnić Ci maksymalną wydajność i szybką regeneracją. Elastyczny materiał, z którego została wykonan"
+        }
+      ]
+    }
+  },
+  "focusedProductCoverage": {
+    "televisions": 61,
+    "smartphones": 1,
+    "playstationConsoles": 18,
+    "gamingConsoles": 103,
+    "fashionClothing": 145,
+    "tennisShoes": 42,
+    "fashionSneakers": 301,
+    "sportsFootwear": 222
   },
   "productCompleteness": {
     "withTrackedHttpsLinks": 19405,
