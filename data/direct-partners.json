@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:25:00-05:00",
+  "updatedAt": "2026-11-19T00:28:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -52,7 +52,10 @@
     "2026-11-19 Samsung: official Samsung UK affiliate programme is operated via Rakuten Advertising. This is a UK-store programme, not proof of global Samsung coverage. Samsung's global Partner Portal is a separate partner-sales programme and must not be treated as an affiliate approval.",
     "2026-11-19 luxury partner research: PrivJet's published partner terms clarify 5% of flight price for empty legs and 2.5% for charter bookings, paid monthly by bank transfer from €100 after the flight; the partner programme says free to join. PereJets offers no setup/monthly fee, access to 100+ vetted operators across 150+ countries, with rates negotiated by volume/client profile. ALANELI advertises 5% on luxury cars, villas, yachts and helicopters and 2.5% on private jets; confirm exact contract and attribution.",
     "2026-11-19 luxury property/art/watch research: Villanovo advertises free registration, 5% on confirmed villa bookings and a 45-day referral window. Wempe US lists up to 10%, 30-day cookie and average basket around $3,000 for Rolex/Patek and other luxury watches, but it is an Awin programme and remains on hold due to the user's no-upfront-spend constraint. Galleria Taralli advertises 3–15% on eligible art and worldwide delivery, but attribution requires the customer to enter the referrer's name at checkout; standard tracking/feed is unverified. Exquisite Timepieces advertises up to 6%, 30-day cookie and primarily US shipping.",
-    "2026-11-19 Apple hardware qualification: Apple's public Performance Partner Program promotes Apple services (Music, TV, Podcasts, media), not a general affiliate commission for iPhone/Mac hardware. Do not treat it as an iPhone or Mac product source."
+    "2026-11-19 Apple hardware qualification: Apple's public Performance Partner Program promotes Apple services (Music, TV, Podcasts, media), not a general affiliate commission for iPhone/Mac hardware. Do not treat it as an iPhone or Mac product source.",
+    "2026-11-19 partner status refresh: CJ welcomed ANSI (advertiser 2190096) on 18-Nov, ALL Accor+ Explorer on 17-Nov (8%, 30-day cookie), Fragrance Outlet on 16-Nov and Perfumania on 16-Nov. These are network approvals only; verify tracking, markets, permitted images and feeds before promotion. CJ also notified that Apex Gaming PCs (7772585) was deactivated on 19-Nov; do not promote its links while inactive.",
+    "2026-11-17 SOREL response: programme manager confirmed EMEA coverage and Impact payments in EUR, but asked for audience/traffic/promotional methods/media deck. This is a response, not an approval; do not invent traffic metrics.",
+    "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint."
   ],
   "prospects": [
     {
@@ -3848,7 +3851,7 @@
     {
       "id": "sorel-affiliate",
       "name": "SOREL",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Impact affiliate programme",
       "category": "Footwear; Fashion; Outdoor",
       "sourceUrl": "https://www.sorel.ch/en/l/affiliate-program-sorel",
@@ -3859,7 +3862,7 @@
       "contactedAt": "2026-11-14T22:46:05Z",
       "emailMessageId": "1a1dc3d45d87604a",
       "territories": [
-        "Not yet confirmed"
+        "EMEA programme coverage confirmed by programme manager; publisher and customer sub-territories to confirm"
       ],
       "commission": "Public page advertises up to 10%; verify actual rate",
       "cookie": "Public page advertises 30 days",
@@ -3869,12 +3872,18 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify publisher/customer countries, feed, deep links, permitted images and programme terms.",
+      "nextAction": "Prepare an honest media profile with no invented traffic figures; confirm whether the programme accepts a new low-traffic discovery platform, then apply through Impact if free.",
       "lastEmailSentAt": "2026-11-14T22:46:05Z",
       "lastEmailSubject": "ZOVARO Worldwide — SOREL affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3d45d87604a",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "response": {
+        "receivedAt": "2026-11-17T11:02:47Z",
+        "contact": "Vera Digner, Acceleration Partners",
+        "status": "programme information supplied; not accepted yet",
+        "summary": "All accepted partners receive tracking links and T&Cs; payments via Impact in EUR; programme covers EMEA. Manager requested ZOVARO audience, traffic, promotional methods and media deck. Commission/cookie terms only in programme T&Cs after acceptance."
+      }
     },
     {
       "id": "lenovo-north-america-affiliate",
@@ -7245,6 +7254,157 @@
         "conversionReporting": "affiliate dashboard after approval"
       },
       "nextAction": "Apply through the official affiliate form only after confirming publisher eligibility, watch-brand restrictions, product feed, image permissions and payout method."
+    },
+    {
+      "id": "ansi-standards-affiliate",
+      "name": "ANSI — American National Standards Institute",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "Standards; Technical Documents; Industrial & Scientific",
+      "sourceUrl": "https://www.ansi.org/",
+      "contact": {
+        "email": "affiliate programme via CJ",
+        "sourceUrl": "https://www.ansi.org/"
+      },
+      "contactedAt": "2026-11-18T15:20:15Z",
+      "emailMessageId": "1a1ef3ea3ba2935b",
+      "territories": [
+        "International digital standards sales; exact territories to confirm"
+      ],
+      "commission": "Not yet verified",
+      "cookie": "Not yet verified",
+      "integration": {
+        "affiliateLink": "pending CJ tracking verification",
+        "productFeed": "not yet verified",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ approval email received; reporting to verify"
+      },
+      "nextAction": "Verify ANSI CJ advertiser terms, document catalogue, deep links, commission, image/metadata permissions, eligible territories and payout settings before publication.",
+      "approvalEvidence": "CJ welcome email 2026-11-18; advertiser ID 2190096"
+    },
+    {
+      "id": "accor-plus-explorer",
+      "name": "ALL Accor+ Explorer",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "Travel; Hotel Membership; Rewards",
+      "sourceUrl": "https://all.accor.com/a/en/affiliate-program.html",
+      "contact": {
+        "email": "accorplus_apac@cj.com",
+        "sourceUrl": "https://all.accor.com/a/en/affiliate-program.html"
+      },
+      "contactedAt": "2026-11-17T04:35:50Z",
+      "emailMessageId": "1a1e7ca36289034b",
+      "territories": [
+        "Asia Pacific membership benefits; 4,500+ Accor hotels worldwide discounts; publisher/customer eligibility by market to confirm"
+      ],
+      "commission": "8%",
+      "cookie": "30 days",
+      "integration": {
+        "affiliateLink": "pending deep-link verification",
+        "productFeed": "membership offer; not hotel inventory feed",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ reporting after link verification"
+      },
+      "nextAction": "Confirm APAC membership purchase eligibility from ZOVARO target countries, exact link and permitted assets. Do not describe this as commission on all Accor hotel reservations.",
+      "approvalEvidence": "CJ welcome email 2026-11-17"
+    },
+    {
+      "id": "fragrance-outlet-cj",
+      "name": "Fragrance Outlet",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "Beauty; Fragrances; Perfumes",
+      "sourceUrl": "https://www.fragranceoutlet.com/",
+      "contact": {
+        "email": "hilda.rodriguez@fragranceoutlet.com",
+        "sourceUrl": "https://www.fragranceoutlet.com/"
+      },
+      "contactedAt": "2026-11-16T16:00:12Z",
+      "emailMessageId": "1a1e5169c5697fa9",
+      "territories": [
+        "US storefront; eligible customer markets to confirm"
+      ],
+      "commission": "Not fully confirmed in current email record",
+      "cookie": "Not fully confirmed",
+      "integration": {
+        "affiliateLink": "CJ; verify current clickUrl",
+        "productFeed": "feed availability confirmed in follow-up email 2026-11-17",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ reporting"
+      },
+      "nextAction": "Verify current feed import, deep links, approved images, US shipping eligibility and current commission/cookie before adding more products.",
+      "approvalEvidence": "CJ welcome email 2026-11-16; ZOVARO follow-up confirms feed availability"
+    },
+    {
+      "id": "perfumania-cj",
+      "name": "Perfumania",
+      "status": "approved_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "Beauty; Fragrances; Perfumes",
+      "sourceUrl": "https://www.perfumania.com/",
+      "contact": {
+        "email": "CJ advertiser programme",
+        "sourceUrl": "https://www.perfumania.com/"
+      },
+      "contactedAt": "2026-11-16T14:10:04Z",
+      "emailMessageId": "1a1e4b193d4207ed",
+      "territories": [
+        "US storefront; customer eligibility to confirm"
+      ],
+      "commission": "4% reported in prior programme terms; reconfirm current terms",
+      "cookie": "Not fully verified",
+      "integration": {
+        "affiliateLink": "pending CJ link verification",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "CJ reporting"
+      },
+      "nextAction": "Verify product feed, current commission/cookie, eligible markets, images and tracking links before publishing.",
+      "approvalEvidence": "CJ welcome email 2026-11-16"
+    },
+    {
+      "id": "apex-gaming-pcs-cj",
+      "name": "Apex Gaming PCs",
+      "status": "deactivated_on_network",
+      "programType": "CJ affiliate programme",
+      "category": "Gaming PCs; Computers; Gaming Hardware",
+      "sourceUrl": "https://apexgamingpcs.com/",
+      "territories": [
+        "US programme; exact terms not rechecked"
+      ],
+      "nextAction": "Do not promote or publish Apex Gaming PCs links while deactivated; replace active links if any. Await CJ reactivation notice.",
+      "deactivationEvidence": "CJ transactional notice 2026-11-19; advertiser ID 7772585"
+    },
+    {
+      "id": "iherb-affiliate",
+      "name": "iHerb",
+      "status": "responded",
+      "programType": "Partnerize / Awin / regional affiliate programmes",
+      "category": "Health & Wellness; Beauty; Personal Care; Grocery",
+      "sourceUrl": "https://uk.iherb.com/info/affiliates",
+      "contact": {
+        "email": "affiliates@iherb.com",
+        "sourceUrl": "https://uk.iherb.com/info/affiliates"
+      },
+      "contactedAt": "2026-11-15T19:29:00Z",
+      "territories": [
+        "All territories where iHerb delivers, subject to network and campaign approval"
+      ],
+      "commission": "5% default rate stated by iHerb",
+      "cookie": "7 days",
+      "integration": {
+        "affiliateLink": "pending formal approval",
+        "productFeed": "publisher access confirmed in principle; exact network/feed access pending",
+        "imagePermission": "subject to programme terms",
+        "conversionReporting": "network reporting after approval"
+      },
+      "response": {
+        "receivedAt": "2026-11-18T21:56:03Z",
+        "status": "application instructions; not approval",
+        "summary": "iHerb advised applying through its official affiliate campaign, default 5%, 7-day cookie, product feeds available, territories where iHerb delivers, 30-day approval period and commission paid within 60 days after approval."
+      },
+      "nextAction": "Use a free eligible network only; Awin is on hold. Confirm Partnerize publisher registration is free, then apply and wait for formal approval."
     }
   ],
   "cjAudit": {
