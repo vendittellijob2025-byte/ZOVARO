@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T00:06:39.008Z",
-  "selectedProductCount": 19405,
-  "inventoryProductCount": 200985,
+  "generatedAt": "2026-11-19T00:10:14.271Z",
+  "selectedProductCount": 19517,
+  "inventoryProductCount": 202106,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -1751,8 +1751,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1874,
-      "unclassifiedProductCount": 689,
+      "productCount": 1877,
+      "unclassifiedProductCount": 692,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -2235,8 +2235,8 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1353,
-      "unclassifiedProductCount": 377,
+      "productCount": 1349,
+      "unclassifiedProductCount": 373,
       "browseTree": [
         {
           "name": "Books",
@@ -2508,20 +2508,20 @@
     },
     {
       "name": "Electronics",
-      "productCount": 330,
-      "unclassifiedProductCount": 120,
+      "productCount": 367,
+      "unclassifiedProductCount": 122,
       "browseTree": [
         {
           "name": "Phones & Tablets",
           "path": "Phones & Tablets",
-          "productCount": 1,
+          "productCount": 36,
           "directProductCount": 0,
           "children": [
             {
               "name": "Smartphones",
               "path": "Phones & Tablets > Smartphones",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 36,
+              "directProductCount": 36,
               "children": []
             },
             {
@@ -3009,8 +3009,8 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1768,
-      "unclassifiedProductCount": 553,
+      "productCount": 1767,
+      "unclassifiedProductCount": 552,
       "browseTree": [
         {
           "name": "Clothing",
@@ -3258,13 +3258,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 1046,
-          "directProductCount": 64,
+          "directProductCount": 63,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 301,
-              "directProductCount": 301,
+              "productCount": 305,
+              "directProductCount": 305,
               "children": []
             },
             {
@@ -3291,15 +3291,15 @@
             {
               "name": "Heels",
               "path": "Shoes > Heels",
-              "productCount": 35,
-              "directProductCount": 35,
+              "productCount": 36,
+              "directProductCount": 36,
               "children": []
             },
             {
               "name": "Flats",
               "path": "Shoes > Flats",
-              "productCount": 135,
-              "directProductCount": 135,
+              "productCount": 134,
+              "directProductCount": 134,
               "children": []
             },
             {
@@ -3312,8 +3312,8 @@
             {
               "name": "Slippers",
               "path": "Shoes > Slippers",
-              "productCount": 89,
-              "directProductCount": 89,
+              "productCount": 86,
+              "directProductCount": 86,
               "children": []
             }
           ]
@@ -3881,20 +3881,20 @@
     },
     {
       "name": "Gaming",
-      "productCount": 106,
+      "productCount": 182,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Consoles",
           "path": "Consoles",
-          "productCount": 103,
+          "productCount": 179,
           "directProductCount": 0,
           "children": [
             {
               "name": "PlayStation",
               "path": "Consoles > PlayStation",
-              "productCount": 18,
-              "directProductCount": 18,
+              "productCount": 94,
+              "directProductCount": 94,
               "children": []
             },
             {
@@ -4024,14 +4024,14 @@
     },
     {
       "name": "Garden",
-      "productCount": 2,
+      "productCount": 3,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Gardening",
           "path": "Gardening",
-          "productCount": 2,
-          "directProductCount": 1,
+          "productCount": 3,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Seeds & Bulbs",
@@ -5386,13 +5386,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1786,
-      "unclassifiedProductCount": 1419,
+      "unclassifiedProductCount": 1418,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 366,
-          "directProductCount": 366,
+          "productCount": 367,
+          "directProductCount": 367,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -5715,8 +5715,8 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 46,
-      "unclassifiedProductCount": 43,
+      "productCount": 47,
+      "unclassifiedProductCount": 44,
       "browseTree": [
         {
           "name": "Office Supplies",
@@ -7349,8 +7349,8 @@
     },
     {
       "name": "Sports",
-      "productCount": 1812,
-      "unclassifiedProductCount": 463,
+      "productCount": 1813,
+      "unclassifiedProductCount": 464,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -9913,24 +9913,24 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1757,
+  "otherProductCount": 1755,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1757
+      "count": 1755
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1349,
     "usedTaxonomyNodeCount": 216,
     "emptyTaxonomyNodeCount": 1133,
-    "productsWithKnownSubcategory": 12136,
+    "productsWithKnownSubcategory": 12249,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 7269,
+    "productsWithoutSubcategory": 7268,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1419
+        "count": 1418
       },
       {
         "category": "Health & Wellness",
@@ -9938,19 +9938,19 @@
       },
       {
         "category": "Beauty",
-        "count": 689
+        "count": 692
       },
       {
         "category": "Fashion",
-        "count": 553
+        "count": 552
       },
       {
         "category": "Sports",
-        "count": 463
+        "count": 464
       },
       {
         "category": "Books & Media",
-        "count": 377
+        "count": 373
       },
       {
         "category": "Babies",
@@ -9966,7 +9966,7 @@
       },
       {
         "category": "Electronics",
-        "count": 120
+        "count": 122
       },
       {
         "category": "Pets",
@@ -9982,7 +9982,7 @@
       },
       {
         "category": "Office & Technology",
-        "count": 43
+        "count": 44
       },
       {
         "category": "Luxury & Prestige",
@@ -10022,13 +10022,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 7269,
-      "provisional": 12136
+      "needs_classification": 7268,
+      "provisional": 12249
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 19405
+      "pendingReference": 19517
     },
     "mostUsedBrowsePaths": [
       {
@@ -10061,7 +10061,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 366
+        "productCount": 367
       },
       {
         "path": "Sports > Cycling > Bicycles",
@@ -10069,7 +10069,7 @@
       },
       {
         "path": "Fashion > Shoes > Sneakers",
-        "productCount": 301
+        "productCount": 305
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
@@ -10112,12 +10112,12 @@
         "productCount": 137
       },
       {
-        "path": "Fashion > Shoes > Flats",
+        "path": "Sports > Sports Apparel > Sports Clothing",
         "productCount": 135
       },
       {
-        "path": "Sports > Sports Apparel > Sports Clothing",
-        "productCount": 135
+        "path": "Fashion > Shoes > Flats",
+        "productCount": 134
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
@@ -10140,6 +10140,10 @@
         "productCount": 112
       },
       {
+        "path": "Gaming > Consoles > PlayStation",
+        "productCount": 94
+      },
+      {
         "path": "Automotive > Car Parts > Body Parts & Trim",
         "productCount": 93
       },
@@ -10152,12 +10156,12 @@
         "productCount": 92
       },
       {
-        "path": "Fashion > Shoes > Slippers",
+        "path": "Toys & Games > Building & Construction",
         "productCount": 89
       },
       {
-        "path": "Toys & Games > Building & Construction",
-        "productCount": 89
+        "path": "Fashion > Shoes > Slippers",
+        "productCount": 86
       },
       {
         "path": "Beauty > Makeup > Eye Makeup",
@@ -10181,7 +10185,7 @@
       },
       {
         "path": "Fashion > Shoes",
-        "productCount": 64
+        "productCount": 63
       },
       {
         "path": "TVs & Home Cinema > Televisions",
@@ -10220,8 +10224,12 @@
         "productCount": 38
       },
       {
+        "path": "Electronics > Phones & Tablets > Smartphones",
+        "productCount": 36
+      },
+      {
         "path": "Fashion > Shoes > Heels",
-        "productCount": 35
+        "productCount": 36
       },
       {
         "path": "Electronics > Cameras & Photography",
@@ -10265,10 +10273,6 @@
       },
       {
         "path": "Automotive > Car Parts > Lighting",
-        "productCount": 18
-      },
-      {
-        "path": "Gaming > Consoles > PlayStation",
         "productCount": 18
       },
       {
@@ -10426,16 +10430,12 @@
       {
         "path": "Business, Wholesale & Bulk Supply > Packaging & Shipping Supplies > Labels & Printers",
         "productCount": 4
-      },
-      {
-        "path": "Beauty > Skincare > Face Cleansers",
-        "productCount": 4
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1115
+        "productCount": 1108
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -10443,7 +10443,7 @@
       },
       {
         "advertiser": "Perfumania.com",
-        "productCount": 206
+        "productCount": 207
       },
       {
         "advertiser": "Amore Mall",
@@ -10458,15 +10458,15 @@
         "productCount": 7
       },
       {
+        "advertiser": "Soundcore",
+        "productCount": 5
+      },
+      {
         "advertiser": "Rexing",
         "productCount": 3
       },
       {
         "advertiser": "Adblockultimate.net",
-        "productCount": 1
-      },
-      {
-        "advertiser": "Soundcore",
         "productCount": 1
       }
     ],
@@ -10553,6 +10553,15 @@
         "description": "<h1> Klamra plastikowa 25 mm z Duraflexu&#xa0; </h1>\n<p>Klamra przystosowana do pasa lub taśmy o szerokości 25 mm.</p>\n<p>Klamra ma mocne 3 punktowe zapięcie.</p>\n<p>Jest wykonana "
       },
       {
+        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Sky Blue",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
+      },
+      {
         "title": "Espoir Fresh Setting Powder",
         "brand": "espoir",
         "advertiser": "Amore Mall",
@@ -10607,6 +10616,15 @@
         "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
       },
       {
+        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Pink",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
+      },
+      {
         "title": "OSULLOC Samdayeon Original Milk Tea (10 sticks)",
         "brand": "OSULLOC",
         "advertiser": "Amore Mall",
@@ -10652,6 +10670,15 @@
         "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
       },
       {
+        "title": "Anker Nano Power Bank (5K, MagGo, Slim) White",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
+      },
+      {
         "title": "OSULLOC Camellia Forest Tea (20 count)",
         "brand": "OSULLOC",
         "advertiser": "Amore Mall",
@@ -10695,6 +10722,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Witamy w oficjalnym sklepie OSMPower ✅</h1> <h1>Jak założyć sklep internetowy? - Krzysztof Bartnik</h1>\n<p>Zbuduj swój wymarzony sklep internetowy w oparciu o wiedzę praktyków!"
+      },
+      {
+        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Black",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
       },
       {
         "title": "Instant Firmx Temporary Face Tightener by Peter Thomas Roth for Unisex - 3.4 oz Cream - Default Title",
@@ -11453,6 +11489,15 @@
         "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze złotym matowym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet jeźdz"
       },
       {
+        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
+        "brand": "Versace",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
+      },
+      {
         "title": "Brodzińska, Morka, Niesiołowski Pardon Madame",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11462,13 +11507,13 @@
         "description": "<h1>Brodzińska, Morka, Niesiołowski - Pardon Madame</h1><p><b>1. Co Sie Dzieje, Oszaleje ''Księżniczka Czardasz''</b></p><p><b>2. Pardon Madame ''Victoria i Jej Huzar''</b></p><p><"
       },
       {
-        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
-        "brand": "Versace",
+        "title": "Redness Solutions Daily Relief Cream - All Skin Types by Clinique for Unisex - 1.7 oz Cream - Default Title",
+        "brand": "Clinique",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
+        "description": "Redness Solutions Daily Relief Cream - All Skin Types instantly calms skins with persistent redness. Relieves visible redness, blotchiness. Soothes to cool discomfort. Over time, h"
       },
       {
         "title": "Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m",
@@ -11489,15 +11534,6 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Redness Solutions Daily Relief Cream - All Skin Types by Clinique for Unisex - 1.7 oz Cream - Default Title",
-        "brand": "Clinique",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Redness Solutions Daily Relief Cream - All Skin Types instantly calms skins with persistent redness. Relieves visible redness, blotchiness. Soothes to cool discomfort. Over time, h"
-      },
-      {
         "title": "Pakiet Kobieta mojego męża/Sekret Tatiany/Zaginion",
         "brand": "Mando",
         "advertiser": "Allegro.pl",
@@ -11514,6 +11550,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Multi-functional daily sun cream with 5-Defense System and anti-aging benefits."
+      },
+      {
+        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
       },
       {
         "title": "Kolorowanka z naklejkami. Wesołe motyle Zuzanna",
@@ -11534,13 +11579,13 @@
         "description": "A Perfect Pear-ing. Osulloc's Honey Pear Tea harmonizes the full-bodied aroma of ripe pears with the soothing sweetness of honey. This iconic blend masterfully pairs the natural es"
       },
       {
-        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
-        "brand": "Jean Paul Gaultier",
+        "title": "Puractive Plus Cream by G.M. Collin for Unisex - 1.7 oz Cream - 1.7 oz.",
+        "brand": "G.M. Collin",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
+        "description": "Oxygen PurActive Cream is formulated with seven plant extracts, chlorophyll and an oxygen complex to normalize, detoxify and hydrate. It matifies the skin all day long and tightens"
       },
       {
         "title": "Książka Have a Nice Day Mankind HarperCollins",
@@ -11561,13 +11606,13 @@
         "description": "MIRACLE HEALTHY RADIANCE WITHIN 15 MINUTES NEWFIRST CARE ACTIVATING MASK Experiencing a healthy radiance powered by one bottle of effective Ingredient of FIRST CARE ACTIVATING SERU"
       },
       {
-        "title": "Puractive Plus Cream by G.M. Collin for Unisex - 1.7 oz Cream - 1.7 oz.",
-        "brand": "G.M. Collin",
+        "title": "Crystal Noir Gift Set - 1.7 oz.",
+        "brand": "Versace",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Oxygen PurActive Cream is formulated with seven plant extracts, chlorophyll and an oxygen complex to normalize, detoxify and hydrate. It matifies the skin all day long and tightens"
+        "description": "Crystal Noir by Versace is distinctly for the woman who walks with her head held high and has a distinct presence. She has a certain smile and has the innate ability to be confiden"
       },
       {
         "title": "3x Główka jigowa Dragon X-fine 1,5g hak 01 01/1,5g",
@@ -11588,13 +11633,13 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Gold Gift Set - 3.3 oz.",
-        "brand": "Cuba",
+        "title": "Bamboo Firming Fluid by Eminence for Unisex - 1.2 oz Fluid - 1.2 oz.",
+        "brand": "Eminence",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Cuba Gold Set for Men offered by Cuba Paris, gets a unique edge with its cigar-like bottles. Irresistible notes of jasmine, cedar and sandalwood blend together to create a fragranc"
+        "description": "The strengthening agents of bamboo and coconut deeply hydrates, with the help of a Natural Retinol Alternative and Swiss Green Apple Stem Cells. It tightens the skin naturally."
       },
       {
         "title": "Amiel Irit Spóźniona",
@@ -11624,13 +11669,13 @@
         "description": "Protect your neck and face with FRP's versatile motorcycle neck gaiter. This premium neck gaiter for motorcycle riding features moisture-wicking fabric that keeps you comfortable i"
       },
       {
-        "title": "Crystal Noir Gift Set - 1.7 oz.",
-        "brand": "Versace",
+        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
+        "brand": "Image",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Crystal Noir by Versace is distinctly for the woman who walks with her head held high and has a distinct presence. She has a certain smile and has the innate ability to be confiden"
+        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
       },
       {
         "title": "Karty Piotruś Kraina Lodu 2 Trefl 08483",
@@ -11651,13 +11696,13 @@
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
-        "title": "Bamboo Firming Fluid by Eminence for Unisex - 1.2 oz Fluid - 1.2 oz.",
-        "brand": "Eminence",
+        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
+        "brand": "Cuccio",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "The strengthening agents of bamboo and coconut deeply hydrates, with the help of a Natural Retinol Alternative and Swiss Green Apple Stem Cells. It tightens the skin naturally."
+        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
       },
       {
         "title": "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb",
@@ -11678,13 +11723,13 @@
         "description": "A glow lip tint with a sheer to full coverage buildable texture, leaving behind a sheer pop to the lips."
       },
       {
-        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
-        "brand": "Image",
+        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
+        "brand": "La Roche-Posay",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
+        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
       },
       {
         "title": "RotoSound Roto R11-54 whites 11-54 struny elektryk",
@@ -11703,15 +11748,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
-        "brand": "Cuccio",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
       },
       {
         "title": "3x Główka jigowa Dragon X-fine 1,5g hak 02 02/1,5g",
@@ -11741,13 +11777,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
-        "brand": "La Roche-Posay",
+        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
+        "brand": "",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
       },
       {
         "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
@@ -11777,49 +11813,13 @@
         "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
       },
       {
-        "title": "Pakiet Percy jackson i bogowie olimpijscy Tom 1-5",
-        "brand": "Galeria Książki",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Pakiet: Percy Jackson i bogowie olimpijscy .</h1><h1>Tomy 1 - 5.</h1><ul><li><b>Autor:&#xa0;Riordan Rick</b></li><li><b>EAN: 9788367071307</b></li><li><b>Wydawnictwo:&#xa0;Gale"
-      },
-      {
-        "title": "Longtake Sandalwood Intensive Treatment 200ML",
-        "brand": "Longtake",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
-      },
-      {
-        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
-        "brand": "",
+        "title": "Ageless Total Retinol-A Creme by Image for Unisex - 1 oz Cream - Default Title",
+        "brand": "Image",
         "advertiser": "Perfumania.com",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
-      },
-      {
-        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
-        "brand": "DeWalt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
-      },
-      {
-        "title": "Longtake Blacktea & Fig Softening Treatment 200ML",
-        "brand": "Longtake",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+        "description": "A creme includes a potent blend of retinol mixed with polypeptides that penetrate the skin to repair, rejuvenate and resurface the skin. This miracle creme is particularly effectiv"
       }
     ],
     "missingSubcategoryExamples": [
@@ -11864,13 +11864,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Converter4Video 2025 |  Simply convert your video files",
+        "title": "FindMyFiles 2025 | Finds your files, wherever they are",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Quick and easy video conversion to and from different formats for playing on a TV, mobile phone, and other devices.",
+        "description": "Finds all types of files – music, photos, or documents – on your computer within fractions of a second.",
         "category": "Electronics"
       },
       {
@@ -11884,13 +11884,13 @@
         "category": "Electronics"
       },
       {
-        "title": "FindMyFiles 2025 | Finds your files, wherever they are",
+        "title": "AntiRansomware 2025 | Ransomware protection | with background monitor",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Finds all types of files – music, photos, or documents – on your computer within fractions of a second.",
+        "description": "Bietet effektiven Rundumschutz gegen Erpresserviren, die private Daten verschlüsseln und diese nur nach einer Lösegeldzahlung wieder frei geben.",
         "category": "Electronics"
       },
       {
@@ -11904,13 +11904,13 @@
         "category": "Electronics"
       },
       {
-        "title": "AntiRansomware 2025 | Ransomware protection | with background monitor",
+        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Offers effective all-round protection against blackmail viruses that encrypt private data and only release it again after a ransom is paid.",
+        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
         "category": "Electronics"
       },
       {
@@ -12844,6 +12844,36 @@
         "category": "Electronics"
       },
       {
+        "title": "Naprawdę?",
+        "brand": "Insignis",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Naprawdę?</h1> <ul><li>Autor: Jeremy Clarkson</li><li>Wydawnictwo: Insignis Media</li><li>Rok wydania: 2020</li><li>Ilość stron: 578</li><li>Format: 14.0x20.9 cm</li><li>Oprawa",
+        "category": "Electronics"
+      },
+      {
+        "title": "Baseus Kabel Usb-c Szybkie Ładowanie Przewód Type-c Pd 100W Qc 4.0 5A 2M",
+        "brand": "Baseus",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h2>BASEUS KABEL USB-C SZYBKIE ŁADOWANIE PRZEWÓD TYPE-C PD 100W QC 4.0 5A 2M</h2><p><b>⚠️UWAGA⚠️</b></p><ul><li><b>KABEL NIE WSPÓŁPRACUJE Z TELEFONAMI IPHONE OD SERII 15</b></li></",
+        "category": "Electronics"
+      },
+      {
+        "title": "Rockbros Torba na ramę roweru z uchwytem na telefon Wodoodporna",
+        "brand": "Rockbros",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Torba na ramę roweru ROCKBROS z uchwytem na telefon, wodoodporna, z ekranem dotykowym</h1><ul><li>Marka:<b> ROCKBROS</b></li><li>Waga: <b>około 109 g</b></li><li>Rozmiar telefo",
+        "category": "Electronics"
+      },
+      {
         "title": "Life Q30 Bluetooth Headphone Midnight Blue",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
@@ -13014,13 +13044,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Tidy your PC up",
+        "title": "Converter4Video 2025 |  Videos konvertieren leicht gemacht",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Automatically sorts pictures, documents, videos & more into predefined folders. This way you can always be sure that all files can be found at any time.",
+        "description": "Schnelle und einfache Video-Konvertierung von und in verschiedene Formate für eine Wiedergabe auf dem Fernseher, Handy und Co.",
         "category": "Office & Technology"
       },
       {
@@ -13030,8 +13060,8 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Reliably prevents spy programs from recording input on the keyboard or screen and thus stealing data.",
-        "category": "Electronics"
+        "description": "Hindert zuverlässig Spionageprogramme daran, die Eingaben auf der Tastatur oder auf dem Bildschirm aufzuzeichnen und so Daten zu stehlen.",
+        "category": "Office & Technology"
       },
       {
         "title": "PC Fresh 2025 | Up to 137% more PC performance | Turbo Boost mode",
@@ -13060,17 +13090,17 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Removes unnecessary system brakes with just one click and noticeably speeds up the PC startup.",
+        "description": "Entfernt unnötige System-Bremsen mit nur einem Klick und beschleunigt den PC Start spürbar.",
         "category": "Office & Technology"
       },
       {
-        "title": "Abelssoft Undeleter 2025 | Recover deleted files with ease",
+        "title": "Abelssoft Undeleter 2025 | Easily restore deleted files",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Rettet selbst aus dem Papierkorb gelöschte Dateien. DEEP-Scan findet selbst beschädigte Dateien und versucht diese wiederherzustellen.",
+        "description": "Recovers deleted files from the recycle bin. DEEP-Scan finds even damaged files and tries to recover them.",
         "category": "Office & Technology"
       },
       {
@@ -13090,7 +13120,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Verhindert wirksam und sicher die Sammlung von privaten Daten durch Windows und beendet die Datenschnüffelei endgültig. Ohne Vorkenntnisse bedienbar.",
+        "description": "Effectively and securely prevents the collection of private data by Windows and ends data snooping for good. Can be operated without prior knowledge.",
         "category": "Office & Technology"
       },
       {
@@ -13104,13 +13134,13 @@
         "category": "Office & Technology"
       },
       {
-        "title": "Easy Backup 2025 | Backup ohne Vorwissen | Sehr schnell | Für Anfänger",
+        "title": "Easy Backup 2025 | Backup without previous knowledge | For beginners",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Die Backup Lösung für jedermann: Professionell Daten sichern bei einfacher und komfortabler Bedienung.",
+        "description": "The backup solution for everyone: Professional data backup with simple and convenient operation.",
         "category": "Office & Technology"
       },
       {
@@ -13220,7 +13250,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Legally and easily save music from streaming services or via the speakers as MP3. The song naming is done independently via the program.",
+        "description": "Ganz legal und einfach Musik von Streaming-Diensten oder über die Boxen als MP3 abspeichern. Die Songbenennung erfolgt selbstständig übers Programm.",
         "category": "Office & Technology"
       },
       {
@@ -13264,13 +13294,13 @@
         "category": "Office & Technology"
       },
       {
-        "title": "Abelssoft Easy PDF 2025 |  Re-assemble your PDF files",
+        "title": "Abelssoft Easy PDF 2025 | PDF-Seiten ganz einfach neu anordnen",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Easy PDF makes it child's play to edit, merge and share multiple PDF documents.",
+        "description": "Mit Easy PDF kinderleicht mehrere PDF-Dokumente bearbeiten, zusammenführen und teilen.",
         "category": "Office & Technology"
       },
       {
@@ -13280,7 +13310,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
-        "description": "Effectively and securely prevents the collection of private data by Windows and finally ends data snooping. Can be used without prior knowledge.",
+        "description": "Verhindert wirksam und sicher die Sammlung von privaten Daten durch Windows und beendet die Datenschnüffelei endgültig. Ohne Vorkenntnisse bedienbar.",
         "category": "Office & Technology"
       },
       {
@@ -13292,46 +13322,18 @@
         "sourceCategory": "Office & Technology",
         "description": "Dein FritzBox Wächter von Abelssoft - alarmiert sofort bei verdächtigen Aktivitäten und zeigt Dir alle mit Deinem WLAN verbundenen Geräte an.",
         "category": "Office & Technology"
-      },
-      {
-        "title": "CheckDrive 2025 | Hard drive diagnostics | Warns of a failure",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Office & Technology",
-        "description": "Überprüft den Lebensstatus Deiner Festplatten und warnt Dich rechtzeitig, bevor eine Festplatte einen defekt erleidet. Korrigiert kleine Fehler sofort.",
-        "category": "Office & Technology"
-      },
-      {
-        "title": "SyncManager 2025 | Synchronize your files easily",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Office & Technology",
-        "description": "Synchronisiert beliebig viele Daten zwischen verschiedenen Ordnern, Festplatten und Geräten und arbeitet dabei selbstständig im Hintergrund.",
-        "category": "Office & Technology"
-      },
-      {
-        "title": "Malware Terminator 2025 |  Eliminates annoying malware | 1-click usage",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Office & Technology",
-        "description": "Entfernt wirkungsvoll nervige & hartnäckige Schadsoftware, die Deinen PC infiziert hat und auch Deinen Browser verlangsamt.",
-        "category": "Office & Technology"
       }
     ]
   },
   "brandCoverage": {
     "Nike": {
-      "productCount": 5,
+      "productCount": 4,
+      "footwearProductCount": 0,
+      "tennisShoeCount": 0,
       "byCategory": [
         {
           "category": "Sports",
-          "count": 4
+          "count": 3
         },
         {
           "category": "Fashion",
@@ -13374,20 +13376,13 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
-        },
-        {
-          "title": "Knight Sztuka zwycięstwa Wspomnienia twórcy Nike",
-          "brand": "Dom Wydawniczy Rebis",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "<h1>Sztuka zwycięstwa</h1>\n<p>Podtytuł: <b>Wspomnienia twórcy NIKE</b></p><p>Autor: <b>Phil Knight</b></p><p>EAN: <b>9788380621169</b></p><p>Typ publikacji: <b>audiobook</b></p><p>"
         }
       ]
     },
     "Adidas": {
       "productCount": 7,
+      "footwearProductCount": 0,
+      "tennisShoeCount": 0,
       "byCategory": [
         {
           "category": "Sports",
@@ -13470,6 +13465,8 @@
     },
     "Reebok": {
       "productCount": 9,
+      "footwearProductCount": 0,
+      "tennisShoeCount": 0,
       "byCategory": [
         {
           "category": "Sports",
@@ -13567,18 +13564,18 @@
   },
   "focusedProductCoverage": {
     "televisions": 61,
-    "smartphones": 1,
-    "playstationConsoles": 18,
-    "gamingConsoles": 103,
+    "smartphones": 36,
+    "playstationConsoles": 94,
+    "gamingConsoles": 179,
     "fashionClothing": 145,
     "tennisShoes": 42,
-    "fashionSneakers": 301,
+    "fashionSneakers": 305,
     "sportsFootwear": 222
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 19405,
-    "withImages": 19405,
-    "withPositivePrices": 19405
+    "withTrackedHttpsLinks": 19517,
+    "withImages": 19517,
+    "withPositivePrices": 19517
   },
   "sources": [
     {
