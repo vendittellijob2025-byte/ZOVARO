@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:36:00-05:00",
+  "updatedAt": "2026-11-19T00:38:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -59,7 +59,8 @@
     "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email.",
     "2026-11-19 PrivJet rate discrepancy: the current partner programme page advertises 10% of flight price, 365-day links, free signup and monthly bank transfer from €100, due 14 days after flight. A separately indexed terms page is explicitly versioned 2026-12-01 and contains lower service-fee-based calculations. Do not rely on the future-dated terms as current; request written confirmation of the rate applicable at onboarding.",
     "2026-11-19 Apple hardware supply routes: OWC/MacSales.com has a CJ affiliate programme advertising 1–2% on Apple-branded products, 3% on non-Apple products, a 45-day referral period and a complete daily-updated product feed. It focuses on Mac upgrades/accessories, not iPhone or Mac hardware sales. MacTrade Apple Store Germany is listed on Awin with 1.5% for iPhone/iPad/Watch and 3% for Macs, 30-day cookie; Awin remains on hold due to no upfront funds. Apple's official Performance Partners programme is for Apple Services/media, not hardware commissions.",
-    "2026-11-19 PrivJet terms reconciled: version 2026-09-26 applies until 2026-12-01 and pays 10% of flight price; new announced version 2026-12-01 pays 5% on empty legs and 2.5% on charter requests. Free to join, 365-day links, monthly bank transfer from €100, commission due 14 days after flight. This is a material rate reduction; confirm transition rules before onboarding."
+    "2026-11-19 PrivJet terms reconciled: version 2026-09-26 applies until 2026-12-01 and pays 10% of flight price; new announced version 2026-12-01 pays 5% on empty legs and 2.5% on charter requests. Free to join, 365-day links, monthly bank transfer from €100, commission due 14 days after flight. This is a material rate reduction; confirm transition rules before onboarding.",
+    "2026-11-19 Lenovo regional discovery: official Lenovo Colombia affiliate programme is free to join via Impact, advertises a 3-day cookie and lists tablets, desktops, workstations, monitors, servers/storage and accessories; it references campaigns in Colombia, Argentina, Mexico, Chile and Peru. Official Lenovo Italy programme is also free to join and lists laptops, tablets, desktops/all-in-ones, workstations and accessories/software. The earlier Lenovo North America email bounced; use the official regional Impact route instead, subject to publisher eligibility."
   ],
   "prospects": [
     {
@@ -7459,6 +7460,46 @@
         "conversionReporting": "Awin reporting"
       },
       "nextAction": "Awin is on hold because the user has no funds for network signup costs. Do not register or pay; seek a no-fee direct route or use CJ retailers that carry Apple devices."
+    },
+    {
+      "id": "lenovo-colombia-impact",
+      "name": "Lenovo Colombia Affiliate Program",
+      "status": "prospect",
+      "programType": "Impact affiliate programme",
+      "category": "Computers; Tablets; Desktops; Workstations; Servers; Accessories",
+      "sourceUrl": "https://www.lenovo.com/co/es/afiliados/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Colombia storefront; official page also references Argentina, Mexico, Chile and Peru programmes"
+      ],
+      "publicCommission": "Not publicly stated; free to join; 3-day cookie; apply through Impact",
+      "integration": {
+        "affiliateLink": "pending Impact application",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Impact reporting after approval"
+      },
+      "nextAction": "Apply through Impact only after confirming publisher-country eligibility and ZOVARO's target countries; verify whether laptops are included in the Colombian campaign, plus feed, images, commission and payout terms."
+    },
+    {
+      "id": "lenovo-italy-impact",
+      "name": "Lenovo Italy Affiliate Program",
+      "status": "prospect",
+      "programType": "Impact affiliate programme",
+      "category": "Laptops; Tablets; Desktop PCs; Workstations; Accessories; Software",
+      "sourceUrl": "https://www.lenovo.com/it/it/landing-pages/promotion/affiliate/affiliate-program/",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Italy storefront; publisher eligibility outside Italy to confirm"
+      ],
+      "publicCommission": "Free to join; commission and cookie not stated on public Italian page; programme application via affiliate portal/Impact",
+      "integration": {
+        "affiliateLink": "pending application",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Impact reporting after approval"
+      },
+      "nextAction": "Confirm whether a publisher based outside Italy can apply and promote the Italian store; verify feed/API, commissions, cookie, brand assets and payout terms."
     }
   ],
   "cjAudit": {
