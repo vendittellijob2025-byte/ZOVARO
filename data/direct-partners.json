@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:34:00-05:00",
+  "updatedAt": "2026-11-19T00:36:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -58,7 +58,8 @@
     "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint.",
     "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email.",
     "2026-11-19 PrivJet rate discrepancy: the current partner programme page advertises 10% of flight price, 365-day links, free signup and monthly bank transfer from €100, due 14 days after flight. A separately indexed terms page is explicitly versioned 2026-12-01 and contains lower service-fee-based calculations. Do not rely on the future-dated terms as current; request written confirmation of the rate applicable at onboarding.",
-    "2026-11-19 Apple hardware supply routes: OWC/MacSales.com has a CJ affiliate programme advertising 1–2% on Apple-branded products, 3% on non-Apple products, a 45-day referral period and a complete daily-updated product feed. It focuses on Mac upgrades/accessories, not iPhone or Mac hardware sales. MacTrade Apple Store Germany is listed on Awin with 1.5% for iPhone/iPad/Watch and 3% for Macs, 30-day cookie; Awin remains on hold due to no upfront funds. Apple's official Performance Partners programme is for Apple Services/media, not hardware commissions."
+    "2026-11-19 Apple hardware supply routes: OWC/MacSales.com has a CJ affiliate programme advertising 1–2% on Apple-branded products, 3% on non-Apple products, a 45-day referral period and a complete daily-updated product feed. It focuses on Mac upgrades/accessories, not iPhone or Mac hardware sales. MacTrade Apple Store Germany is listed on Awin with 1.5% for iPhone/iPad/Watch and 3% for Macs, 30-day cookie; Awin remains on hold due to no upfront funds. Apple's official Performance Partners programme is for Apple Services/media, not hardware commissions.",
+    "2026-11-19 PrivJet terms reconciled: version 2026-09-26 applies until 2026-12-01 and pays 10% of flight price; new announced version 2026-12-01 pays 5% on empty legs and 2.5% on charter requests. Free to join, 365-day links, monthly bank transfer from €100, commission due 14 days after flight. This is a material rate reduction; confirm transition rules before onboarding."
   ],
   "prospects": [
     {
@@ -7165,7 +7166,7 @@
       "territories": [
         "International; individual/business publisher eligibility stated, flight/operator coverage to confirm"
       ],
-      "publicCommission": "Current official partner page advertises 10% of flight price on booked flights; monthly bank transfer from €100; due 14 days after the flight; free to join. A future-dated terms page (version 2026-12-01) displays different service-fee calculations, so commission must be reconfirmed in writing before approval.",
+      "publicCommission": "Current terms version 2026-09-26: 10% of flight price (50% of a 20% service fee) until 2026-11-30. New announced terms effective 2026-12-01: 5% of flight price on empty legs and 2.5% on charter requests. Free to join; monthly bank transfer from €100; commission due 14 days after flight; referral links valid 365 days.",
       "integration": {
         "affiliateLink": "personal referral links/codes; 365-day validity advertised",
         "productFeed": "no aircraft feed verified",
@@ -7173,7 +7174,7 @@
         "conversionReporting": "partner dashboard for clicks, requests, bookings and commissions",
         "payout": "monthly bank transfer (SEPA, US ACH or SWIFT) from €100"
       },
-      "nextAction": "Confirm in writing which commission schedule applies on the application date because a future-dated 2026-12-01 terms page conflicts with the current partner page; confirm territories, approved assets, tax/KYC and payout beneficiary details."
+      "nextAction": "If applying, get written confirmation of the terms applicable on the approval/booking date; compare the current 10% rate through 2026-11-30 with the new 5%/2.5% rates from 2026-12-01. Confirm international eligibility and KYC/tax requirements."
     },
     {
       "id": "villanovo-affiliate",
