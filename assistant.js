@@ -109,6 +109,81 @@
 
   function getCopy(code) { return copy[code] || copy.en; }
 
+  // Reveal the words in the speech bubble while the browser voice reads them.
+  // Speech boundary events provide word-level synchronization; a timed fallback
+  // keeps the typewriter effect on browsers without boundary events.
+  const speechLocales = {
+    en:"en-US", it:"it-IT", es:"es-ES", fr:"fr-FR", de:"de-DE",
+    pt:"pt-PT", ar:"ar-SA", hi:"hi-IN", zh:"zh-CN", ja:"ja-JP",
+    ru:"ru-RU", ko:"ko-KR"
+  };
+  let speechRunId = 0;
+  let speechFallbackTimer = null;
+
+  function animateAndSpeak(element, text, code) {
+    if (!element) return;
+    const runId = ++speechRunId;
+    if (speechFallbackTimer) {
+      window.clearInterval(speechFallbackTimer);
+      speechFallbackTimer = null;
+    }
+
+    const synth = window.speechSynthesis;
+    if (synth && typeof synth.cancel === "function") synth.cancel();
+
+    element.textContent = "";
+    let shown = 0;
+    const revealTo = index => {
+      if (runId !== speechRunId) return;
+      shown = Math.max(shown, Math.min(text.length, index));
+      element.textContent = text.slice(0, shown);
+    };
+
+    // About 27 characters/second as a fallback; real speech boundaries take priority.
+    speechFallbackTimer = window.setInterval(() => {
+      if (runId !== speechRunId) return;
+      revealTo(shown + 1);
+      if (shown >= text.length && speechFallbackTimer) {
+        window.clearInterval(speechFallbackTimer);
+        speechFallbackTimer = null;
+      }
+    }, 37);
+
+    if (!synth || typeof window.SpeechSynthesisUtterance !== "function") return;
+
+    try {
+      const utterance = new SpeechSynthesisUtterance(text);
+      const locale = speechLocales[code] || "en-US";
+      utterance.lang = locale;
+      utterance.rate = 0.96;
+      utterance.pitch = 1.03;
+
+      const voices = synth.getVoices ? synth.getVoices() : [];
+      const languagePrefix = locale.toLowerCase().split("-")[0];
+      const matchingVoice = voices.find(voice => voice.lang && voice.lang.toLowerCase() === locale.toLowerCase())
+        || voices.find(voice => voice.lang && voice.lang.toLowerCase().startsWith(languagePrefix));
+      if (matchingVoice) utterance.voice = matchingVoice;
+
+      utterance.onboundary = event => {
+        if (runId !== speechRunId || typeof event.charIndex !== "number") return;
+        revealTo(event.charIndex + (event.charLength || 1));
+      };
+      const finish = () => {
+        if (runId !== speechRunId) return;
+        if (speechFallbackTimer) {
+          window.clearInterval(speechFallbackTimer);
+          speechFallbackTimer = null;
+        }
+        element.textContent = text;
+      };
+      utterance.onend = finish;
+      utterance.onerror = finish;
+      synth.speak(utterance);
+    } catch (_) {
+      // Keep the animated written greeting even if speech is unavailable.
+    }
+  }
+
 
   const requestForm = document.getElementById("zovaroAiRequestForm");
   const requestInput = document.getElementById("zovaroAiRequestInput");
@@ -202,13 +277,14 @@
     languageScreen.hidden = false;
     welcomeScreen.hidden = true;
     backdrop.hidden = false;
+    animateAndSpeak(chooseCopy, getCopy("en").choose, "en");
     reopenButton.classList.remove("visible");
   }
 
   function showWelcome(code) {
     const data = getCopy(code);
     applyRequestLanguage(code);
-    welcomeText.textContent = data.welcome;
+    animateAndSpeak(welcomeText, data.welcome, code);
     changeLabel.textContent = data.change;
     reopenLabel.textContent = data.reopen;
     if (homeButtonLabel) homeButtonLabel.textContent = data.homeButton || "Home";
