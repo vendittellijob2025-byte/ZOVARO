@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:32:00-05:00",
+  "updatedAt": "2026-11-19T00:34:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -57,7 +57,8 @@
     "2026-11-17 SOREL response: programme manager confirmed EMEA coverage and Impact payments in EUR, but asked for audience/traffic/promotional methods/media deck. This is a response, not an approval; do not invent traffic metrics.",
     "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint.",
     "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email.",
-    "2026-11-19 PrivJet rate discrepancy: the current partner programme page advertises 10% of flight price, 365-day links, free signup and monthly bank transfer from €100, due 14 days after flight. A separately indexed terms page is explicitly versioned 2026-12-01 and contains lower service-fee-based calculations. Do not rely on the future-dated terms as current; request written confirmation of the rate applicable at onboarding."
+    "2026-11-19 PrivJet rate discrepancy: the current partner programme page advertises 10% of flight price, 365-day links, free signup and monthly bank transfer from €100, due 14 days after flight. A separately indexed terms page is explicitly versioned 2026-12-01 and contains lower service-fee-based calculations. Do not rely on the future-dated terms as current; request written confirmation of the rate applicable at onboarding.",
+    "2026-11-19 Apple hardware supply routes: OWC/MacSales.com has a CJ affiliate programme advertising 1–2% on Apple-branded products, 3% on non-Apple products, a 45-day referral period and a complete daily-updated product feed. It focuses on Mac upgrades/accessories, not iPhone or Mac hardware sales. MacTrade Apple Store Germany is listed on Awin with 1.5% for iPhone/iPad/Watch and 3% for Macs, 30-day cookie; Awin remains on hold due to no upfront funds. Apple's official Performance Partners programme is for Apple Services/media, not hardware commissions."
   ],
   "prospects": [
     {
@@ -7412,6 +7413,51 @@
         "summary": "iHerb advised applying through its official affiliate campaign, default 5%, 7-day cookie, product feeds available, territories where iHerb delivers, 30-day approval period and commission paid within 60 days after approval."
       },
       "nextAction": "Use a free eligible network only; Awin is on hold. Confirm Partnerize publisher registration is free, then apply and wait for formal approval."
+    },
+    {
+      "id": "owc-macsales-cj",
+      "name": "OWC / MacSales.com",
+      "status": "prospect",
+      "programType": "CJ affiliate programme",
+      "category": "Mac accessories; SSDs; Memory; Docks; Apple ecosystem upgrades",
+      "sourceUrl": "https://www.owc.com/affiliate-program",
+      "sourceChecked": "2026-11-19",
+      "contact": {
+        "email": "cjaffiliates@macsales.com",
+        "sourceUrl": "https://www.owc.com/affiliate-program"
+      },
+      "territories": [
+        "Publisher restrictions listed for selected US states; international publisher and delivery coverage to confirm"
+      ],
+      "publicCommission": "1–2% on Apple-branded products; 3% on non-Apple products; 45-day referral period",
+      "integration": {
+        "affiliateLink": "pending CJ approval",
+        "productFeed": "complete daily-updated product catalogue advertised",
+        "imagePermission": "affiliate banners/text ads advertised; exact product-image licence pending",
+        "conversionReporting": "CJ reporting after approval"
+      },
+      "nextAction": "Apply through existing CJ publisher account; verify international publisher/customer territories, feed access, exact Apple-brand exclusions and bank-transfer payout terms."
+    },
+    {
+      "id": "mactrade-apple-de",
+      "name": "MacTrade — Apple Store Germany",
+      "status": "prospect",
+      "programType": "Awin affiliate programme",
+      "category": "Apple iPhone; iPad; Mac; Apple Watch; Accessories",
+      "sourceUrl": "https://ui.awin.com/merchant-profile/13737",
+      "sourceChecked": "2026-11-19",
+      "territories": [
+        "Germany storefront; international delivery and publisher eligibility to confirm"
+      ],
+      "publicCommission": "1.5% on iPhone/iPad/Apple Watch; 3% on Macs; 30-day cookie; rates vary by category and voucher use",
+      "network": "Awin",
+      "integration": {
+        "affiliateLink": "Awin only; pending",
+        "productFeed": "pending",
+        "imagePermission": "pending",
+        "conversionReporting": "Awin reporting"
+      },
+      "nextAction": "Awin is on hold because the user has no funds for network signup costs. Do not register or pay; seek a no-fee direct route or use CJ retailers that carry Apple devices."
     }
   ],
   "cjAudit": {
