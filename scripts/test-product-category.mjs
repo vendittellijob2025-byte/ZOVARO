@@ -335,8 +335,8 @@ assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcateg
 const subcategoryCases = [
   ["Gaming", "PlayStation 5 Slim Console", "Consoles > PlayStation"],
   ["Gaming", "Xbox Series X Console", "Consoles > Xbox"],
-  ["Electronics", "Samsung Galaxy S26 Smartphone", "Phones & Tablets > Smartphones"],
-  ["Electronics", "Apple iPhone 17 Pro", "Phones & Tablets > Smartphones"],
+  ["Electronics", "Samsung Galaxy S26 Smartphone", "Phones & Tablets > Smartphones > Samsung Galaxy"],
+  ["Electronics", "Apple iPhone 17 Pro", "Phones & Tablets > Smartphones > Apple iPhone"],
   ["Electronics", "Apple iPad Air Tablet", "Phones & Tablets > Tablets > Apple iPad"],
   ["Electronics", "Samsung Galaxy Tab S11 Tablet", "Phones & Tablets > Tablets > Samsung Galaxy Tab"],
   ["Electronics", "Apple MacBook Pro 16", "Computers > Laptops > Apple MacBook"],
