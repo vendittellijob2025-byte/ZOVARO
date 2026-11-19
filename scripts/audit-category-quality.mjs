@@ -15,6 +15,7 @@ const visualResults = new Map((imageReport.results || []).map(item => [item.key,
 const distribution = new Map();
 const subcategoryDistribution = new Map();
 const examples = [];
+const otherExamples = [];
 let checked = 0;
 let mismatches = 0;
 let invalidSubcategoryPaths = 0;
@@ -34,6 +35,17 @@ for (const product of catalog.products) {
   const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
   const visualCheck = visualResults.get(key)?.categoryCheck;
   const acceptedCategory = visualCategoryOverride(visualCheck) || textExpected;
+  if (acceptedCategory === "Other" && otherExamples.length < 120) {
+    otherExamples.push({
+      id: product.id || "",
+      title: product.title || "",
+      advertiser: product.advertiserName || "",
+      productType: product.productType || "",
+      googleProductCategory: product.googleProductCategory || "",
+      sourceCategory: product.sourceCategory || "",
+      description: String(product.description || product.longDescription || "").slice(0, 220)
+    });
+  }
   const actual = String(product.category || "");
   const subcategory = String(product.subcategory || "");
   const visualPath = visualSubcategoryOverride(visualCheck, acceptedCategory);
@@ -93,6 +105,7 @@ console.log("Primary category consistency audit: " + JSON.stringify({
   distribution: Object.fromEntries([...distribution].sort((a,b) => a[0].localeCompare(b[0]))),
   subcategoryDistribution: Object.fromEntries([...subcategoryDistribution].sort((a,b) => a[0].localeCompare(b[0]))),
   examples,
+  otherExamples,
   invalidSubcategoryPaths,
   unclassifiedProducts,
   imageAuditedProducts: imageReport.results?.length || 0,
