@@ -6,6 +6,14 @@ const advertiser = { name: "Toy Story Travel & Toys", parentCategory: "Travel", 
 const cases = [
   // Brand/model words are weak evidence: classify by what the product actually is.
   // Wigs and extensions follow the explicit Beauty > Hair Care browse taxonomy.
+  ["BRUNO MARC CrossFlex Lite Polish Men's Non Slip Smart Casual Oxfords", "Fashion"],
+  ["Anker Nano Power Bank (5K, MagGo, Slim) Sky Blue", "Electronics"],
+  ["Espoir Fresh Setting Powder", "Beauty"],
+  ["OSULLOC Samdayeon Original Milk Tea (10 sticks)", "Food & Grocery"],
+  ["AdBlocker Ultimate for Windows", "Office & Technology"],
+  ["Instant Firmx Temporary Face Tightener Cream", "Beauty"],
+  ["Clinique Smart Custom-Repair Eye Treatment", "Beauty"],
+  ["Divine Youth Oil by L'Occitane for Unisex", "Beauty"],
   ["Baby Lips Moisturizing Lip Balm", "Beauty", { advertiser: { name: "Babies & Kids Store" } }],
   ["M2U Nyc Metallic Liquid Lip | Baby Coral (Light Peach) 0.21Oz", "Beauty"],
   ["[From 20 Inches] 13x4 Bye Bye Slip Lace Frontal Water Wave Glueless Drawstring Wig", "Beauty", { description: "Product description mentions lipstick, mascara and beauty cosmetics as unrelated examples." }],
