@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T00:28:00-05:00",
+  "updatedAt": "2026-11-19T00:30:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -55,7 +55,8 @@
     "2026-11-19 Apple hardware qualification: Apple's public Performance Partner Program promotes Apple services (Music, TV, Podcasts, media), not a general affiliate commission for iPhone/Mac hardware. Do not treat it as an iPhone or Mac product source.",
     "2026-11-19 partner status refresh: CJ welcomed ANSI (advertiser 2190096) on 18-Nov, ALL Accor+ Explorer on 17-Nov (8%, 30-day cookie), Fragrance Outlet on 16-Nov and Perfumania on 16-Nov. These are network approvals only; verify tracking, markets, permitted images and feeds before promotion. CJ also notified that Apex Gaming PCs (7772585) was deactivated on 19-Nov; do not promote its links while inactive.",
     "2026-11-17 SOREL response: programme manager confirmed EMEA coverage and Impact payments in EUR, but asked for audience/traffic/promotional methods/media deck. This is a response, not an approval; do not invent traffic metrics.",
-    "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint."
+    "2026-11-18 iHerb response: 5% default commission, 7-day cookie, feeds available, eligible territories where iHerb delivers, 30-day approval period and payment 60 days after approval. Application still required; not approved. Awin remains on hold due to the user's no-upfront-spend constraint.",
+    "2026-11-19 Lenovo route correction: the direct NA_affiliate@lenovo.com address was blocked twice. Lenovo's official affiliate resources state that its Impact programme is free to join and advertises a minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales. No application has been submitted; use the official Impact portal rather than retrying the bounced email."
   ],
   "prospects": [
     {
@@ -3909,7 +3910,7 @@
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Do not resend to this address. Find a verified alternative contact or use the official affiliate application portal.",
+      "nextAction": "Do not retry the blocked NA_affiliate@lenovo.com address. Apply through the official Lenovo Impact programme only if ZOVARO's publisher country is eligible; verify customer regions, feed/API, deep links, brand exclusions and payout terms.",
       "deliveryStatus": "bounced",
       "bounceReason": "Message blocked by recipient server",
       "emailDeliveryStatus": "bounced",
@@ -3917,7 +3918,11 @@
       "lastEmailSentAt": "2026-11-14T22:46:07Z",
       "lastEmailSubject": "ZOVARO Worldwide — Lenovo North America affiliate partnership enquiry",
       "lastEmailThreadId": "1a1dc3d4f689e762",
-      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised."
+      "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
+      "applicationUrl": "https://www.lenovo.com/us/en/affiliate-program/resources/",
+      "publicCommission": "Official Lenovo page says programme is free to join and advertises minimum 2% commission on eligible Online and Small Business Lenovo Pro Store sales; final rate and regions depend on approval.",
+      "network": "Impact",
+      "applicationStatus": "not_submitted"
     },
     {
       "id": "rowenta-usa-affiliate",
