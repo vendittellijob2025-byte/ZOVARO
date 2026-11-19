@@ -45,6 +45,16 @@ A direct partner product must not be published until all of the following are ve
 
 A draft email is not evidence of contact; a sent email or submitted form must be recorded. A reply is not approval. The validation workflow checks the registry and publication gates.
 
+### Global discovery and market-specific affiliate availability
+
+- A merchant's country-limited sales territory is not, by itself, a reason to exclude its products from ZOVARO's global discovery catalogue.
+- Discovery visibility and purchase eligibility are separate: listings may be discoverable worldwide, while the purchase action is enabled only for countries where that merchant has verified availability and delivery/service coverage.
+- Publisher eligibility, customer delivery territory, product availability and legal/compliance restrictions must be tracked separately. Never infer one from another.
+- If several approved partners offer the same product in different markets, route the visitor to the verified partner serving that visitor's country, using that partner's own tracking URL and market-specific price/currency/terms.
+- If no verified partner serves the visitor's country, the product may remain discoverable where accurate, but the purchase action must be disabled or replaced by a clear regional-unavailability notice. Never bypass geo-blocks or promise unavailable delivery.
+- Each offer must record supported customer countries, shipping/service regions, currency, availability, tracking URL, image permissions and last verification date.
+- The canonical policy is `data/territory-visibility-policy.json`.
+
 ### Social promotion and TikTok
 
 - GitHub Actions can generate the daily promotion package and vertical video.
