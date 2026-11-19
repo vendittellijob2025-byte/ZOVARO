@@ -260,7 +260,7 @@ const departmentCases = [
   ["Dog Harness Adjustable", "Pets", "Dogs > Collars, Leashes & Harnesses"],
   ["LEGO Building Blocks Set", "Toys & Games", "Building & Construction"],
   ["Arabica Coffee Beans", "Food & Grocery", "Beverages > Coffee"],
-  ["Laptop Computer 15 inch", "Electronics", "Computers"],
+  ["Laptop Computer 15 inch", "Electronics", "Computers > Laptops"],
   ["Wireless Bluetooth Headphones", "Electronics", "Audio"],
   ["Cordless Power Drill", "Tools & DIY", "Power Tools"],
   ["Carry On Suitcase", "Travel", "Luggage"],
