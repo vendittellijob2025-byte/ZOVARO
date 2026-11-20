@@ -327,7 +327,7 @@ const departmentCases = [
   ["Leather Shoe Polish", "Fashion", "Accessories"],
   ["Shoe Travel Bag", "Fashion", "Bags & Luggage"],
   ["Stainless Steel Cookware Set", "Home & Living", "Kitchen & Dining"],
-  ["Robot Vacuum Cleaner", "Appliances", "Floor Care"],
+  ["Robot Vacuum Cleaner", "Appliances", "Floor Care > Robot Vacuums"],
   ["Dog Harness Adjustable", "Pets", "Dogs > Collars, Leashes & Harnesses"],
   ["LEGO Building Blocks Set", "Toys & Games", "Building & Construction"],
   ["Arabica Coffee Beans", "Food & Grocery", "Beverages > Coffee"],
