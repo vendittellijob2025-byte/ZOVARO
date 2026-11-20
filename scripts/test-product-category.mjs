@@ -562,6 +562,8 @@ const subcategoryCases = [
   ["Books & Media", "Terminator Genisys Arnold Schwarzenegger Clarke 4K", "Movies & TV > Blu-ray"],
   ["Books & Media", "Littlest Pet Shop Książka do wyklejania Kd", "Books > Children's Books"],
   ["Books & Media", "Iggy Pop TV Eye 1977 Live CD Nowa", "Music > CDs"],
+  ["Books & Media", "Sonor HS 2000 S Drum Hardware Stand Set", "Music > Instruments > Drums & Percussion > Stands"],
+  ["Books & Media", "Diagnoza psychiatryczna", "Books > Education & Reference"],
   ["Health & Wellness", "Elgydium Junior Płyn Do Płukania Dla Dzieci 500ml", "Oral Hygiene > Mouthwash"],
   ["Fashion", "Brocchi Travel Toiletry Bag Black", "Bags & Luggage > Toiletry Bags"],
   ["Arts, Crafts & Sewing", "Sznurek do makramy bawełniany denim 2mm 60m", "Crafts & Creative DIY"],
