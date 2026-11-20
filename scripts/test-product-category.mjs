@@ -285,6 +285,18 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Wykrywacz Xp Orx Rc Hf 9,5x5 DD 13-81kHz", sourceCategory: "Fashion" }), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", sourceCategory: "Fashion" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Kieszeń Taktyczna Zrzutowa Zasobnik Helikon Competition Utility Pouch Olive", sourceCategory: "Fashion" }), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pudełko Niespodzianka Exploding Box Diy Album", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drucik aluminiowy Złoty drut 1,2mm 5m Diy", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Kreatywny zestaw Koralików Diy do Bransoletek", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing Type-C GPS Logger Add-On for Type-C Charger", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing Type-C Smart Hardwire Kit with GPS for R4", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Crickle Daisy Bloom Baby Bloom Powder Brush Lavender Scent", sourceCategory: "Babies" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Słoik 100ML Pet Z Nakrętką Aluminiową Słoiczek Pudełko", sourceCategory: "Pets" }), "Home & Living");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Secret Life of Pets 3D Game Snakes and Ladders Gra", sourceCategory: "Pets" }), "Toys & Games");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pellet 2mm Truskawka 1kg Method Feeder Optimal Baits", sourceCategory: "Food & Grocery" }), "Sports");
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Etafor Plus Massage Gun", sourceCategory: "Sports" }), "Health & Wellness");
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Shone 001-002 - White - Eu28", sourceCategory: "Sports" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Jigapix Pets Nowa !", sourceCategory: "Pets" }), "Toys & Games");
@@ -522,6 +534,33 @@ const subcategoryCases = [
   ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
   ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
   ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
+  ["Beauty", "Dedcool Madonna Lilly Black Pepper Sandalwood Bergamot 1.7Oz", "Fragrances & Perfumes"],
+  ["Beauty", "Andis Cool Care Plus 5-In-1 Clipper Blade Cleaner And Lubricant 15.5Oz", "Hair Care > Hair Styling Tools"],
+  ["Beauty", "Woodys Beard And Tattoo Oil 1Oz", "Skincare > Body Skincare"],
+  ["Industrial & Scientific", "8×8×1/8インチ レーザー彫刻機用光沢カラーアクリル板", "3D Printing & Additive Manufacturing > Laser Engraving Materials"],
+  ["Industrial & Scientific", "CR-Wood - wood", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
+  ["Home & Living", "Aeriscape Baskets imprimées en 3D Black 35", "Home Décor > Decorative Objects"],
+  ["Sports", "Bielizna termoaktywna chłodząca Viking Nessa Coolmax Set L Komplet", "Sports Apparel > Sports Clothing"],
+  ["Sports", "Mata do jogi ćwiczeń antypoślizgowa Reebok 7 mm", "Fitness & Gym > Yoga & Pilates > Yoga Mats"],
+  ["Sports", "Outdoor Voices Brown the Exercise Dress Xs Saddle", "Sports Apparel > Sports Clothing"],
+  ["Books & Media", "Mało lat mam, a czytam sam. 616 naklejek. Część 1", "Books > Children's Books"],
+  ["Books & Media", "Diagnoza psychiatryczna", "Books > Education & Reference"],
+  ["Books & Media", "New Language Leader Upper-Intermediate MyEnglishLab", "Books > Education & Reference"],
+  ["Health & Wellness", "VITALBEAUTIE Energy Shot Body&Brain 28days", "Nutrition > Vitamins, Minerals & Supplements > Energy & Focus"],
+  ["Health & Wellness", "VITALBEAUTIE Super Collagen Liftshot 28ea", "Nutrition > Vitamins, Minerals & Supplements > Collagen Supplements"],
+  ["Sports", "Wykrywacz Xp Orx Rc Hf 9,5x5 DD 13-81kHz", "Hunting > Metal Detectors"],
+  ["Books & Media", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Music > Instruments > Guitar Accessories > Guitar Straps"],
+  ["Sports", "Helikon Competition Utility Pouch Olive", "Hunting > Tactical Gear & Accessories"],
+  ["Arts, Crafts & Sewing", "Pudełko Niespodzianka Exploding Box Diy Album", "Crafts & Creative DIY > Paper Crafts > Scrapbooking"],
+  ["Arts, Crafts & Sewing", "Drucik aluminiowy Złoty drut 1,2mm 5m Diy", "Crafts & Creative DIY > Beads & Jewelry Making > Craft Wire"],
+  ["Arts, Crafts & Sewing", "Kreatywny zestaw Koralików Diy do Bransoletek", "Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits"],
+  ["Electronics", "Anker Prime Wireless Charging Station 3-in-1 MagGo AirCool Foldable", "Phones & Tablets > Wireless Chargers"],
+  ["Automotive", "Rexing Type-C GPS Logger Add-On for Type-C Charger", "Vehicle Electronics > GPS & Navigation"],
+  ["Automotive", "Rexing Type-C Smart Hardwire Kit with GPS for R4 L4 RH2", "Vehicle Electronics > Dash Cameras"],
+  ["Beauty", "Crickle Daisy Bloom Baby Bloom Powder Brush Lavender Scent 1.4Oz", "Makeup > Makeup Tools & Accessories > Makeup Brushes"],
+  ["Home & Living", "Słoik 100ML Pet Z Nakrętką Aluminiową Słoiczek Pudełko", "Kitchen & Dining > Food Storage"],
+  ["Toys & Games", "Secret Life of Pets 3D Game Snakes and Ladders Gra", "Board Games & Puzzles > Board Games"],
+  ["Sports", "Pellet 2mm Truskawka 1kg Method Feeder Optimal Baits", "Fishing > Baits & Lures"],
   ["Health & Wellness", "Etafor Plus Massage Gun", "Wellness > Massage & Relaxation > Massage Guns"],
   ["Health & Wellness", "VITALBEAUTIE MetaGreen Booster Shot 7days x 4 boxes", "Nutrition > Weight Management"],
   ["Health & Wellness", "VITALBEAUTIE Super Retinol 30days", "Nutrition > Vitamins, Minerals & Supplements > Skin Health"],

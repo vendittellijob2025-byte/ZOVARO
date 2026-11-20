@@ -113,7 +113,13 @@
         {
           "name": "Crafts & Creative DIY",
           "children": [
-            "Beads & Jewelry Making",
+            {
+              "name": "Beads & Jewelry Making",
+              "children": [
+                "Craft Wire",
+                "Bead Kits"
+              ]
+            },
             "Models & Miniatures",
             "Resin & Molds",
             {
@@ -584,7 +590,18 @@
           "children": [
             "CDs",
             "Vinyl Records",
-            "Digital Music"
+            "Digital Music",
+            {
+              "name": "Instruments",
+              "children": [
+                {
+                  "name": "Guitar Accessories",
+                  "children": [
+                    "Guitar Straps"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -674,7 +691,8 @@
             "Chargers & Cables",
             "Power Banks & Portable Chargers",
             "Phone Mounts & Holders",
-            "Batteries & Power Supplies"
+            "Batteries & Power Supplies",
+            "Wireless Chargers"
           ]
         },
         {
@@ -1174,7 +1192,9 @@
                 "Probiotics",
                 "Omega Oils",
                 "Herbal Supplements",
-                "Skin Health"
+                "Skin Health",
+                "Energy & Focus",
+                "Collagen Supplements"
               ]
             },
             "Multivitamins",
@@ -2044,7 +2064,9 @@
               "children": [
                 "Night Vision"
               ]
-            }
+            },
+            "Metal Detectors",
+            "Tactical Gear & Accessories"
           ]
         },
         {
@@ -2316,7 +2338,8 @@
             "Fishing Rods",
             "Reels",
             "Lines & Hooks",
-            "Fishing Tackle"
+            "Fishing Tackle",
+            "Baits & Lures"
           ]
         },
         {

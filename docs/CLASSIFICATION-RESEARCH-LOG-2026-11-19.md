@@ -136,3 +136,12 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Jigapix Pets is a Nintendo DS video game, and “PET” in the Polish bottle listing refers to plastic, not animals.
 - Corrected the remaining title collisions for “Glow Baby Glow”, music CDs/DVDs, mouthwash, seasonal decorations, dash cameras and antenna power supplies.
 - Research sources: ETAFOR product listing https://www.ecosmetics.com/product/plus-massage-gun/ ; Shone model listing https://www.moda-nova.com/?product_tag=girl ; VITALBEAUTIE brand products https://www.belieef.com/vitalbeautie ; Amorepacific VITALBEAUTIE MetaGreen product-design overview https://design.amorepacific.com/en/work/2024/vitalbeautie/meta-green-line/ ; JIGAPIX PETS Nintendo DS listing https://allegro.pl/produkt/jigapix-pets-nintendo-ds-pudelkowa-d328badb-b58d-4206-9b17-15d567256c85 ; COLOR WOW Root Cover Up official page https://colorwowhair.com/products/root-cover-up .
+
+
+### 11. Corrections from the current audit sample
+
+- Classified Dedcool fragrance, Andis clipper cleaner and Woody's beard oil as Beauty subcategories.
+- Separated Creality's laser-engraving acrylic, wood filament and finished 3D-printed home baskets.
+- Added precise sports clothing, yoga, hunting optics/metal detectors, tactical pouches and method-feeder bait paths.
+- Added book paths for children's sticker books, psychology/education titles and guitar accessories.
+- Added health-supplement paths for energy and collagen, plus wireless charging, GPS logger/hardwire kit, makeup brushes, PET food jars and board games.
