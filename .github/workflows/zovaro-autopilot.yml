@@ -65,7 +65,7 @@ jobs:
           PARTNER_AUDIT_OUTCOME: ${{ steps.partner-audit.outcome }}
         run: node scripts/zovaro-autopilot-audit.mjs
 
-      - name: Upload daily report
+      - name: Upload six-hour audit report and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
