@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-20T01:47:56.492Z",
+  "generatedAt": "2026-11-20T02:00:12.519Z",
   "selectedProductCount": 20910,
   "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
       "name": "Accessible & Adaptive Living",
-      "productCount": 59,
+      "productCount": 113,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Mobility & Independence",
           "path": "Mobility & Independence",
-          "productCount": 58,
-          "directProductCount": 58,
+          "productCount": 112,
+          "directProductCount": 112,
           "children": [
             {
               "name": "Mobility Scooters",
@@ -158,12 +158,12 @@
     {
       "name": "Appliances",
       "productCount": 6,
-      "unclassifiedProductCount": 3,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Kitchen Appliances",
           "path": "Kitchen Appliances",
-          "productCount": 3,
+          "productCount": 4,
           "directProductCount": 2,
           "children": [
             {
@@ -221,6 +221,13 @@
               "productCount": 1,
               "directProductCount": 1,
               "children": []
+            },
+            {
+              "name": "Portable Coolers",
+              "path": "Kitchen Appliances > Portable Coolers",
+              "productCount": 1,
+              "directProductCount": 1,
+              "children": []
             }
           ]
         },
@@ -256,7 +263,7 @@
         {
           "name": "Floor Care",
           "path": "Floor Care",
-          "productCount": 0,
+          "productCount": 2,
           "directProductCount": 0,
           "children": [
             {
@@ -269,13 +276,20 @@
             {
               "name": "Robot Vacuums",
               "path": "Floor Care > Robot Vacuums",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
               "name": "Steam Cleaners",
               "path": "Floor Care > Steam Cleaners",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Vacuum Cleaner Accessories",
+              "path": "Floor Care > Vacuum Cleaner Accessories",
               "productCount": 0,
               "directProductCount": 0,
               "children": []
@@ -365,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 844,
+      "productCount": 992,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -407,8 +421,8 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 2,
-          "directProductCount": 0,
+          "productCount": 13,
+          "directProductCount": 11,
           "children": [
             {
               "name": "Beads & Jewelry Making",
@@ -450,8 +464,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 842,
-          "directProductCount": 842,
+          "productCount": 979,
+          "directProductCount": 664,
           "children": [
             {
               "name": "Sewing Machines",
@@ -470,8 +484,8 @@
             {
               "name": "Yarn & Knitting",
               "path": "Sewing & Textiles > Yarn & Knitting",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 315,
+              "directProductCount": 315,
               "children": []
             },
             {
@@ -494,7 +508,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1843,
+      "productCount": 2058,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -543,8 +557,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1348,
-          "directProductCount": 1331,
+          "productCount": 1479,
+          "directProductCount": 1459,
           "children": [
             {
               "name": "Interior Accessories",
@@ -594,6 +608,35 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Electric Vehicle Charging",
+              "path": "Car Accessories > Electric Vehicle Charging",
+              "productCount": 3,
+              "directProductCount": 0,
+              "children": [
+                {
+                  "name": "Charging Adapters",
+                  "path": "Car Accessories > Electric Vehicle Charging > Charging Adapters",
+                  "productCount": 3,
+                  "directProductCount": 3,
+                  "children": []
+                },
+                {
+                  "name": "Charging Cables",
+                  "path": "Car Accessories > Electric Vehicle Charging > Charging Cables",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Charging Stations",
+                  "path": "Car Accessories > Electric Vehicle Charging > Charging Stations",
+                  "productCount": 0,
+                  "directProductCount": 0,
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -694,8 +737,8 @@
         {
           "name": "Vehicle Tools",
           "path": "Vehicle Tools",
-          "productCount": 104,
-          "directProductCount": 102,
+          "productCount": 120,
+          "directProductCount": 119,
           "children": [
             {
               "name": "Diagnostic Tools",
@@ -707,8 +750,8 @@
             {
               "name": "Jacks & Lifting",
               "path": "Vehicle Tools > Jacks & Lifting",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -730,14 +773,14 @@
         {
           "name": "Rims & Tires",
           "path": "Rims & Tires",
-          "productCount": 101,
+          "productCount": 127,
           "directProductCount": 0,
           "children": [
             {
               "name": "Car Tires",
               "path": "Rims & Tires > Car Tires",
-              "productCount": 29,
-              "directProductCount": 29,
+              "productCount": 33,
+              "directProductCount": 33,
               "children": []
             },
             {
@@ -757,15 +800,15 @@
             {
               "name": "Wheels & Rims",
               "path": "Rims & Tires > Wheels & Rims",
-              "productCount": 70,
-              "directProductCount": 70,
+              "productCount": 94,
+              "directProductCount": 94,
               "children": []
             },
             {
               "name": "Wheel Accessories",
               "path": "Rims & Tires > Wheel Accessories",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -866,8 +909,8 @@
         {
           "name": "Motorcycles, Accessories & Parts",
           "path": "Motorcycles, Accessories & Parts",
-          "productCount": 66,
-          "directProductCount": 25,
+          "productCount": 86,
+          "directProductCount": 31,
           "children": [
             {
               "name": "Motorcycles",
@@ -900,8 +943,8 @@
             {
               "name": "ATV & Powersports",
               "path": "Motorcycles, Accessories & Parts > ATV & Powersports",
-              "productCount": 41,
-              "directProductCount": 41,
+              "productCount": 55,
+              "directProductCount": 55,
               "children": []
             }
           ]
@@ -981,7 +1024,7 @@
         {
           "name": "Car Parts",
           "path": "Car Parts",
-          "productCount": 179,
+          "productCount": 201,
           "directProductCount": 0,
           "children": [
             {
@@ -994,8 +1037,8 @@
             {
               "name": "Brakes",
               "path": "Car Parts > Brakes",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
@@ -1022,15 +1065,15 @@
             {
               "name": "Lighting",
               "path": "Car Parts > Lighting",
-              "productCount": 30,
-              "directProductCount": 30,
+              "productCount": 36,
+              "directProductCount": 36,
               "children": []
             },
             {
               "name": "Steering & Suspension",
               "path": "Car Parts > Steering & Suspension",
-              "productCount": 25,
-              "directProductCount": 25,
+              "productCount": 38,
+              "directProductCount": 38,
               "children": []
             },
             {
@@ -1050,8 +1093,8 @@
             {
               "name": "Body Parts & Trim",
               "path": "Car Parts > Body Parts & Trim",
-              "productCount": 94,
-              "directProductCount": 94,
+              "productCount": 96,
+              "directProductCount": 96,
               "children": []
             },
             {
@@ -1153,14 +1196,14 @@
     },
     {
       "name": "Babies",
-      "productCount": 601,
-      "unclassifiedProductCount": 254,
+      "productCount": 595,
+      "unclassifiedProductCount": 126,
       "browseTree": [
         {
           "name": "Baby Clothing",
           "path": "Baby Clothing",
-          "productCount": 193,
-          "directProductCount": 7,
+          "productCount": 316,
+          "directProductCount": 13,
           "children": [
             {
               "name": "Newborn Clothing",
@@ -1186,8 +1229,8 @@
             {
               "name": "Baby Sleepwear",
               "path": "Baby Clothing > Baby Sleepwear",
-              "productCount": 118,
-              "directProductCount": 118,
+              "productCount": 235,
+              "directProductCount": 235,
               "children": []
             },
             {
@@ -1317,8 +1360,8 @@
         {
           "name": "Diaper Changing",
           "path": "Diaper Changing",
-          "productCount": 9,
-          "directProductCount": 8,
+          "productCount": 8,
+          "directProductCount": 7,
           "children": [
             {
               "name": "Diapers",
@@ -1474,15 +1517,15 @@
             {
               "name": "Baby Bath",
               "path": "Hygiene & Wellness > Baby Bath",
-              "productCount": 11,
-              "directProductCount": 11,
+              "productCount": 10,
+              "directProductCount": 10,
               "children": []
             },
             {
               "name": "Baby Skin Care",
               "path": "Hygiene & Wellness > Baby Skin Care",
-              "productCount": 14,
-              "directProductCount": 14,
+              "productCount": 15,
+              "directProductCount": 15,
               "children": []
             },
             {
@@ -1758,8 +1801,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 2122,
-      "unclassifiedProductCount": 905,
+      "productCount": 3782,
+      "unclassifiedProductCount": 1636,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1793,8 +1836,8 @@
         {
           "name": "Bath & Body",
           "path": "Bath & Body",
-          "productCount": 6,
-          "directProductCount": 5,
+          "productCount": 9,
+          "directProductCount": 8,
           "children": [
             {
               "name": "Body Wash & Shower Gel",
@@ -1843,8 +1886,8 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 390,
-          "directProductCount": 2,
+          "productCount": 452,
+          "directProductCount": 12,
           "children": [
             {
               "name": "Hair Styling Accessories",
@@ -1877,15 +1920,15 @@
             {
               "name": "Hair Styling Products",
               "path": "Hair Care > Hair Styling Products",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
               "name": "Hair Styling Tools",
               "path": "Hair Care > Hair Styling Tools",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 52,
+              "directProductCount": 52,
               "children": []
             },
             {
@@ -1907,8 +1950,8 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 158,
-          "directProductCount": 37,
+          "productCount": 257,
+          "directProductCount": 72,
           "children": [
             {
               "name": "Neck & Décolleté",
@@ -1941,8 +1984,8 @@
             {
               "name": "Eye Treatments",
               "path": "Skincare > Eye Treatments",
-              "productCount": 11,
-              "directProductCount": 11,
+              "productCount": 14,
+              "directProductCount": 14,
               "children": []
             },
             {
@@ -1962,29 +2005,29 @@
             {
               "name": "Face Skincare",
               "path": "Skincare > Face Skincare",
-              "productCount": 21,
-              "directProductCount": 21,
+              "productCount": 33,
+              "directProductCount": 33,
               "children": []
             },
             {
               "name": "Face Cleansers",
               "path": "Skincare > Face Cleansers",
-              "productCount": 4,
-              "directProductCount": 4,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": []
             },
             {
               "name": "Moisturizers",
               "path": "Skincare > Moisturizers",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 15,
+              "directProductCount": 15,
               "children": []
             },
             {
               "name": "Serums & Essences",
               "path": "Skincare > Serums & Essences",
-              "productCount": 79,
-              "directProductCount": 79,
+              "productCount": 113,
+              "directProductCount": 113,
               "children": []
             }
           ]
@@ -1992,8 +2035,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 448,
-          "directProductCount": 448,
+          "productCount": 1155,
+          "directProductCount": 1155,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2098,14 +2141,14 @@
         {
           "name": "Manicure & Pedicure",
           "path": "Manicure & Pedicure",
-          "productCount": 2,
+          "productCount": 6,
           "directProductCount": 0,
           "children": [
             {
               "name": "Nail Polish",
               "path": "Manicure & Pedicure > Nail Polish",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": []
             },
             {
@@ -2141,7 +2184,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 213,
+          "productCount": 267,
           "directProductCount": 0,
           "children": [
             {
@@ -2183,15 +2226,15 @@
             {
               "name": "Lip Makeup",
               "path": "Makeup > Lip Makeup",
-              "productCount": 8,
-              "directProductCount": 8,
+              "productCount": 10,
+              "directProductCount": 10,
               "children": []
             },
             {
               "name": "Eye Makeup",
               "path": "Makeup > Eye Makeup",
-              "productCount": 87,
-              "directProductCount": 87,
+              "productCount": 97,
+              "directProductCount": 97,
               "children": []
             },
             {
@@ -2218,8 +2261,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 116,
-              "directProductCount": 116,
+              "productCount": 158,
+              "directProductCount": 158,
               "children": []
             },
             {
@@ -2242,13 +2285,13 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1333,
-      "unclassifiedProductCount": 364,
+      "productCount": 1332,
+      "unclassifiedProductCount": 329,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 82,
+          "productCount": 86,
           "directProductCount": 82,
           "children": [
             {
@@ -2296,8 +2339,8 @@
             {
               "name": "Education & Reference",
               "path": "Books > Education & Reference",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             }
           ]
@@ -2305,8 +2348,8 @@
         {
           "name": "Music",
           "path": "Music",
-          "productCount": 50,
-          "directProductCount": 48,
+          "productCount": 45,
+          "directProductCount": 43,
           "children": [
             {
               "name": "CDs",
@@ -2334,14 +2377,14 @@
         {
           "name": "Movies & TV",
           "path": "Movies & TV",
-          "productCount": 831,
-          "directProductCount": 831,
+          "productCount": 866,
+          "directProductCount": 679,
           "children": [
             {
               "name": "DVD",
               "path": "Movies & TV > DVD",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 187,
+              "directProductCount": 187,
               "children": []
             },
             {
@@ -2400,8 +2443,8 @@
     },
     {
       "name": "Business, Wholesale & Bulk Supply",
-      "productCount": 34,
-      "unclassifiedProductCount": 11,
+      "productCount": 3,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Wholesale Products",
@@ -2442,28 +2485,28 @@
         {
           "name": "Packaging & Shipping Supplies",
           "path": "Packaging & Shipping Supplies",
-          "productCount": 16,
+          "productCount": 2,
           "directProductCount": 0,
           "children": [
             {
               "name": "Boxes & Mailers",
               "path": "Packaging & Shipping Supplies > Boxes & Mailers",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Labels & Printers",
               "path": "Packaging & Shipping Supplies > Labels & Printers",
-              "productCount": 4,
-              "directProductCount": 4,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Protective Packaging",
               "path": "Packaging & Shipping Supplies > Protective Packaging",
-              "productCount": 11,
-              "directProductCount": 11,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -2478,21 +2521,21 @@
         {
           "name": "Retail & Hospitality Supplies",
           "path": "Retail & Hospitality Supplies",
-          "productCount": 6,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
               "name": "Point of Sale Equipment",
               "path": "Retail & Hospitality Supplies > Point of Sale Equipment",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Shop Fixtures",
               "path": "Retail & Hospitality Supplies > Shop Fixtures",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -2505,8 +2548,8 @@
             {
               "name": "Cleaning & Janitorial",
               "path": "Retail & Hospitality Supplies > Cleaning & Janitorial",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -2515,13 +2558,13 @@
     },
     {
       "name": "Electronics",
-      "productCount": 441,
+      "productCount": 444,
       "unclassifiedProductCount": 146,
       "browseTree": [
         {
           "name": "Phones & Tablets",
           "path": "Phones & Tablets",
-          "productCount": 65,
+          "productCount": 68,
           "directProductCount": 0,
           "children": [
             {
@@ -2671,6 +2714,13 @@
               "path": "Phones & Tablets > Power Banks & Portable Chargers",
               "productCount": 6,
               "directProductCount": 6,
+              "children": []
+            },
+            {
+              "name": "Phone Mounts & Holders",
+              "path": "Phones & Tablets > Phone Mounts & Holders",
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             }
           ]
@@ -3288,13 +3338,13 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1824,
-      "unclassifiedProductCount": 561,
+      "productCount": 1780,
+      "unclassifiedProductCount": 494,
       "browseTree": [
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 146,
+          "productCount": 124,
           "directProductCount": 0,
           "children": [
             {
@@ -3321,8 +3371,8 @@
             {
               "name": "Jeans & Trousers",
               "path": "Clothing > Jeans & Trousers",
-              "productCount": 51,
-              "directProductCount": 51,
+              "productCount": 29,
+              "directProductCount": 29,
               "children": []
             },
             {
@@ -3372,7 +3422,7 @@
         {
           "name": "Women's Clothing",
           "path": "Women's Clothing",
-          "productCount": 5,
+          "productCount": 8,
           "directProductCount": 5,
           "children": [
             {
@@ -3406,8 +3456,8 @@
             {
               "name": "Skirts",
               "path": "Women's Clothing > Skirts",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -3536,7 +3586,7 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 1082,
+          "productCount": 1118,
           "directProductCount": 59,
           "children": [
             {
@@ -3556,15 +3606,15 @@
             {
               "name": "Boots",
               "path": "Shoes > Boots",
-              "productCount": 23,
-              "directProductCount": 23,
+              "productCount": 56,
+              "directProductCount": 56,
               "children": []
             },
             {
               "name": "Sandals",
               "path": "Shoes > Sandals",
-              "productCount": 267,
-              "directProductCount": 267,
+              "productCount": 375,
+              "directProductCount": 375,
               "children": []
             },
             {
@@ -3577,8 +3627,8 @@
             {
               "name": "Flats",
               "path": "Shoes > Flats",
-              "productCount": 128,
-              "directProductCount": 128,
+              "productCount": 23,
+              "directProductCount": 23,
               "children": []
             },
             {
@@ -3657,7 +3707,7 @@
         {
           "name": "Jewelry",
           "path": "Jewelry",
-          "productCount": 9,
+          "productCount": 8,
           "directProductCount": 3,
           "children": [
             {
@@ -3670,8 +3720,8 @@
             {
               "name": "Bracelets",
               "path": "Jewelry > Bracelets",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -3707,8 +3757,8 @@
         {
           "name": "Accessories",
           "path": "Accessories",
-          "productCount": 8,
-          "directProductCount": 7,
+          "productCount": 15,
+          "directProductCount": 6,
           "children": [
             {
               "name": "Sunglasses",
@@ -3748,8 +3798,8 @@
             {
               "name": "Hair Accessories",
               "path": "Accessories > Hair Accessories",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             }
           ]
@@ -3758,8 +3808,8 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 278,
-      "unclassifiedProductCount": 86,
+      "productCount": 280,
+      "unclassifiedProductCount": 82,
       "browseTree": [
         {
           "name": "Pantry Staples",
@@ -3807,7 +3857,7 @@
         {
           "name": "Snacks & Sweets",
           "path": "Snacks & Sweets",
-          "productCount": 6,
+          "productCount": 5,
           "directProductCount": 5,
           "children": [
             {
@@ -3820,8 +3870,8 @@
             {
               "name": "Candy",
               "path": "Snacks & Sweets > Candy",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -3843,28 +3893,28 @@
         {
           "name": "Beverages",
           "path": "Beverages",
-          "productCount": 40,
+          "productCount": 47,
           "directProductCount": 0,
           "children": [
             {
               "name": "Coffee",
               "path": "Beverages > Coffee",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Tea",
               "path": "Beverages > Tea",
-              "productCount": 38,
-              "directProductCount": 38,
+              "productCount": 47,
+              "directProductCount": 47,
               "children": []
             },
             {
               "name": "Water",
               "path": "Beverages > Water",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -4160,7 +4210,7 @@
     },
     {
       "name": "Gaming",
-      "productCount": 182,
+      "productCount": 180,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -4202,7 +4252,7 @@
         {
           "name": "Video Games",
           "path": "Video Games",
-          "productCount": 3,
+          "productCount": 1,
           "directProductCount": 1,
           "children": [
             {
@@ -4236,8 +4286,8 @@
             {
               "name": "Digital Games & Gift Cards",
               "path": "Video Games > Digital Games & Gift Cards",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -4303,14 +4353,14 @@
     },
     {
       "name": "Garden",
-      "productCount": 7,
+      "productCount": 5,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Gardening",
           "path": "Gardening",
-          "productCount": 3,
-          "directProductCount": 2,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Seeds & Bulbs",
@@ -4322,8 +4372,8 @@
             {
               "name": "Soil & Fertilizers",
               "path": "Gardening > Soil & Fertilizers",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -4597,13 +4647,13 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1162,
-      "unclassifiedProductCount": 874,
+      "productCount": 769,
+      "unclassifiedProductCount": 498,
       "browseTree": [
         {
           "name": "Nutrition",
           "path": "Nutrition",
-          "productCount": 264,
+          "productCount": 254,
           "directProductCount": 0,
           "children": [
             {
@@ -4616,7 +4666,7 @@
             {
               "name": "Sports Supplements",
               "path": "Nutrition > Sports Supplements",
-              "productCount": 44,
+              "productCount": 40,
               "directProductCount": 10,
               "children": [
                 {
@@ -4643,8 +4693,8 @@
                 {
                   "name": "Post-Workout",
                   "path": "Nutrition > Sports Supplements > Post-Workout",
-                  "productCount": 7,
-                  "directProductCount": 7,
+                  "productCount": 4,
+                  "directProductCount": 4,
                   "children": []
                 },
                 {
@@ -4657,8 +4707,8 @@
                 {
                   "name": "Amino Acids",
                   "path": "Nutrition > Sports Supplements > Amino Acids",
-                  "productCount": 1,
-                  "directProductCount": 1,
+                  "productCount": 0,
+                  "directProductCount": 0,
                   "children": []
                 }
               ]
@@ -4673,8 +4723,8 @@
             {
               "name": "Vitamins, Minerals & Supplements",
               "path": "Nutrition > Vitamins, Minerals & Supplements",
-              "productCount": 220,
-              "directProductCount": 133,
+              "productCount": 214,
+              "directProductCount": 131,
               "children": [
                 {
                   "name": "Multivitamins",
@@ -4700,8 +4750,8 @@
                 {
                   "name": "Vitamin C",
                   "path": "Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
-                  "productCount": 25,
-                  "directProductCount": 25,
+                  "productCount": 24,
+                  "directProductCount": 24,
                   "children": []
                 },
                 {
@@ -4721,15 +4771,15 @@
                 {
                   "name": "Probiotics",
                   "path": "Nutrition > Vitamins, Minerals & Supplements > Probiotics",
-                  "productCount": 18,
-                  "directProductCount": 18,
+                  "productCount": 17,
+                  "directProductCount": 17,
                   "children": []
                 },
                 {
                   "name": "Omega Oils",
                   "path": "Nutrition > Vitamins, Minerals & Supplements > Omega Oils",
-                  "productCount": 13,
-                  "directProductCount": 13,
+                  "productCount": 11,
+                  "directProductCount": 11,
                   "children": []
                 },
                 {
@@ -4910,14 +4960,22 @@
               "name": "Sleep & Relaxation",
               "path": "Wellness > Sleep & Relaxation",
               "productCount": 2,
-              "directProductCount": 2,
-              "children": []
+              "directProductCount": 0,
+              "children": [
+                {
+                  "name": "Sleep Masks",
+                  "path": "Wellness > Sleep & Relaxation > Sleep Masks",
+                  "productCount": 2,
+                  "directProductCount": 2,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Sleep & Relaxation",
               "path": "Wellness > Sleep & Relaxation",
               "productCount": 2,
-              "directProductCount": 2,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -4998,8 +5056,8 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 14,
-          "directProductCount": 14,
+          "productCount": 6,
+          "directProductCount": 6,
           "children": [
             {
               "name": "Toothbrushes",
@@ -5219,7 +5277,7 @@
         {
           "name": "Home Cleaning & Care",
           "path": "Home Cleaning & Care",
-          "productCount": 3,
+          "productCount": 4,
           "directProductCount": 0,
           "children": [
             {
@@ -5232,8 +5290,8 @@
             {
               "name": "Disinfectants",
               "path": "Home Cleaning & Care > Disinfectants",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -5292,20 +5350,20 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 570,
-      "unclassifiedProductCount": 13,
+      "productCount": 576,
+      "unclassifiedProductCount": 6,
       "browseTree": [
         {
           "name": "Furniture",
           "path": "Furniture",
-          "productCount": 25,
-          "directProductCount": 25,
+          "productCount": 27,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Living Room Furniture",
               "path": "Furniture > Living Room Furniture",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 26,
+              "directProductCount": 26,
               "children": []
             },
             {
@@ -5341,8 +5399,8 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 7,
-          "directProductCount": 7,
+          "productCount": 17,
+          "directProductCount": 5,
           "children": [
             {
               "name": "Cookware",
@@ -5382,8 +5440,8 @@
             {
               "name": "Drinkware",
               "path": "Kitchen & Dining > Drinkware",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 12,
+              "directProductCount": 12,
               "children": []
             },
             {
@@ -5584,7 +5642,7 @@
         {
           "name": "Lighting",
           "path": "Lighting",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
@@ -5604,8 +5662,8 @@
             {
               "name": "Desk Lamps",
               "path": "Lighting > Desk Lamps",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -5664,14 +5722,14 @@
     },
     {
       "name": "Industrial & Scientific",
-      "productCount": 1787,
-      "unclassifiedProductCount": 1409,
+      "productCount": 1841,
+      "unclassifiedProductCount": 1421,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 377,
-          "directProductCount": 377,
+          "productCount": 250,
+          "directProductCount": 250,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -5824,19 +5882,48 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "3D Printing & Additive Manufacturing",
+          "path": "3D Printing & Additive Manufacturing",
+          "productCount": 169,
+          "directProductCount": 0,
+          "children": [
+            {
+              "name": "3D Printer Filament",
+              "path": "3D Printing & Additive Manufacturing > 3D Printer Filament",
+              "productCount": 144,
+              "directProductCount": 144,
+              "children": []
+            },
+            {
+              "name": "3D Printing Materials",
+              "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
+              "productCount": 5,
+              "directProductCount": 5,
+              "children": []
+            },
+            {
+              "name": "Laser Engraving Equipment",
+              "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
+              "productCount": 20,
+              "directProductCount": 20,
+              "children": []
+            }
+          ]
         }
       ]
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 292,
+      "productCount": 297,
       "unclassifiedProductCount": 3,
       "browseTree": [
         {
           "name": "Instruments",
           "path": "Instruments",
-          "productCount": 285,
-          "directProductCount": 284,
+          "productCount": 290,
+          "directProductCount": 289,
           "children": [
             {
               "name": "Guitars & Basses",
@@ -5958,7 +6045,7 @@
           "name": "Instrument Accessories",
           "path": "Instrument Accessories",
           "productCount": 3,
-          "directProductCount": 0,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Cases & Stands",
@@ -5977,8 +6064,8 @@
             {
               "name": "Tuners",
               "path": "Instrument Accessories > Tuners",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -5994,8 +6081,8 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 45,
-      "unclassifiedProductCount": 42,
+      "productCount": 47,
+      "unclassifiedProductCount": 39,
       "browseTree": [
         {
           "name": "Office Supplies",
@@ -6043,7 +6130,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 2,
+          "productCount": 7,
           "directProductCount": 2,
           "children": [
             {
@@ -6063,8 +6150,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": []
             },
             {
@@ -6159,8 +6246,8 @@
     },
     {
       "name": "Pets",
-      "productCount": 185,
-      "unclassifiedProductCount": 119,
+      "productCount": 180,
+      "unclassifiedProductCount": 114,
       "browseTree": [
         {
           "name": "Dogs",
@@ -6360,8 +6447,8 @@
     },
     {
       "name": "Real Estate",
-      "productCount": 3,
-      "unclassifiedProductCount": 1,
+      "productCount": 0,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Residential Property for Sale",
@@ -6495,7 +6582,7 @@
         {
           "name": "Land & Development",
           "path": "Land & Development",
-          "productCount": 1,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
@@ -6508,8 +6595,8 @@
             {
               "name": "Agricultural Land",
               "path": "Land & Development > Agricultural Land",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -6531,8 +6618,8 @@
         {
           "name": "Special Properties",
           "path": "Special Properties",
-          "productCount": 1,
-          "directProductCount": 1,
+          "productCount": 0,
+          "directProductCount": 0,
           "children": [
             {
               "name": "Farms & Vineyards",
@@ -6554,14 +6641,14 @@
     },
     {
       "name": "Refurbished, Pre-Owned & Outlet",
-      "productCount": 3,
+      "productCount": 2,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Certified Refurbished Electronics",
           "path": "Certified Refurbished Electronics",
-          "productCount": 3,
-          "directProductCount": 3,
+          "productCount": 2,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Refurbished Smartphones",
@@ -6669,8 +6756,8 @@
     },
     {
       "name": "Repair & Circular Economy",
-      "productCount": 3,
-      "unclassifiedProductCount": 1,
+      "productCount": 1,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Repair Services",
@@ -6718,8 +6805,8 @@
         {
           "name": "Parts & Components",
           "path": "Parts & Components",
-          "productCount": 2,
-          "directProductCount": 2,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Replacement Parts",
@@ -6827,34 +6914,34 @@
     },
     {
       "name": "Security & Safety",
-      "productCount": 11,
-      "unclassifiedProductCount": 1,
+      "productCount": 1,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Home & Business Security",
           "path": "Home & Business Security",
-          "productCount": 6,
+          "productCount": 1,
           "directProductCount": 1,
           "children": [
             {
               "name": "Alarm Systems",
               "path": "Home & Business Security > Alarm Systems",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "CCTV & Video Surveillance",
               "path": "Home & Business Security > CCTV & Video Surveillance",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Smart Locks",
               "path": "Home & Business Security > Smart Locks",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -6876,7 +6963,7 @@
         {
           "name": "Personal & Workplace Safety",
           "path": "Personal & Workplace Safety",
-          "productCount": 4,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
@@ -6903,15 +6990,15 @@
             {
               "name": "Emergency Lighting",
               "path": "Personal & Workplace Safety > Emergency Lighting",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Safety Sensors",
               "path": "Personal & Workplace Safety > Safety Sensors",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -6920,13 +7007,13 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1718,
+      "productCount": 1717,
       "unclassifiedProductCount": 33,
       "browseTree": [
         {
           "name": "Luxury Cars & Hypercars",
           "path": "Luxury Cars & Hypercars",
-          "productCount": 3,
+          "productCount": 4,
           "directProductCount": 0,
           "children": [
             {
@@ -6974,8 +7061,8 @@
             {
               "name": "McLaren",
               "path": "Luxury Cars & Hypercars > McLaren",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -7195,8 +7282,8 @@
         {
           "name": "Luxury Watches & Jewelry",
           "path": "Luxury Watches & Jewelry",
-          "productCount": 1661,
-          "directProductCount": 1661,
+          "productCount": 1660,
+          "directProductCount": 1660,
           "children": [
             {
               "name": "Rolex",
@@ -7479,7 +7566,7 @@
         {
           "name": "Private Islands",
           "path": "Private Islands",
-          "productCount": 2,
+          "productCount": 1,
           "directProductCount": 1,
           "children": [
             {
@@ -7499,8 +7586,8 @@
             {
               "name": "Archipelagos",
               "path": "Private Islands > Archipelagos",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -7782,8 +7869,8 @@
     },
     {
       "name": "Sports",
-      "productCount": 1814,
-      "unclassifiedProductCount": 432,
+      "productCount": 1883,
+      "unclassifiedProductCount": 421,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8244,14 +8331,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 356,
+          "productCount": 355,
           "directProductCount": 0,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 356,
-              "directProductCount": 356,
+              "productCount": 355,
+              "directProductCount": 355,
               "children": []
             },
             {
@@ -8504,7 +8591,7 @@
         {
           "name": "Fitness & Gym",
           "path": "Fitness & Gym",
-          "productCount": 13,
+          "productCount": 12,
           "directProductCount": 1,
           "children": [
             {
@@ -8524,8 +8611,8 @@
             {
               "name": "Benches & Racks",
               "path": "Fitness & Gym > Benches & Racks",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -8699,8 +8786,8 @@
         {
           "name": "Golf",
           "path": "Golf",
-          "productCount": 9,
-          "directProductCount": 9,
+          "productCount": 10,
+          "directProductCount": 10,
           "children": [
             {
               "name": "Golf Clubs",
@@ -8916,8 +9003,8 @@
         {
           "name": "Padel",
           "path": "Padel",
-          "productCount": 344,
-          "directProductCount": 277,
+          "productCount": 416,
+          "directProductCount": 349,
           "children": [
             {
               "name": "Padel Rackets",
@@ -9076,7 +9163,7 @@
         {
           "name": "Fishing",
           "path": "Fishing",
-          "productCount": 38,
+          "productCount": 47,
           "directProductCount": 0,
           "children": [
             {
@@ -9096,15 +9183,15 @@
             {
               "name": "Lines & Hooks",
               "path": "Fishing > Lines & Hooks",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
               "name": "Fishing Tackle",
               "path": "Fishing > Fishing Tackle",
-              "productCount": 38,
-              "directProductCount": 38,
+              "productCount": 43,
+              "directProductCount": 43,
               "children": []
             }
           ]
@@ -9539,8 +9626,8 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 164,
-      "unclassifiedProductCount": 156,
+      "productCount": 156,
+      "unclassifiedProductCount": 150,
       "browseTree": [
         {
           "name": "Power Tools",
@@ -9631,14 +9718,14 @@
         {
           "name": "Power Tool Accessories",
           "path": "Power Tool Accessories",
-          "productCount": 2,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
               "name": "Drill Bits",
               "path": "Power Tool Accessories > Drill Bits",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -9883,8 +9970,8 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 1798,
-      "unclassifiedProductCount": 1627,
+      "productCount": 222,
+      "unclassifiedProductCount": 51,
       "browseTree": [
         {
           "name": "Building & Construction",
@@ -10092,8 +10179,8 @@
     },
     {
       "name": "Travel",
-      "productCount": 143,
-      "unclassifiedProductCount": 142,
+      "productCount": 76,
+      "unclassifiedProductCount": 70,
       "browseTree": [
         {
           "name": "Luggage",
@@ -10202,18 +10289,47 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "Maps & Guides",
+          "path": "Maps & Guides",
+          "productCount": 5,
+          "directProductCount": 0,
+          "children": [
+            {
+              "name": "Wall Maps",
+              "path": "Maps & Guides > Wall Maps",
+              "productCount": 5,
+              "directProductCount": 5,
+              "children": []
+            },
+            {
+              "name": "Road Maps",
+              "path": "Maps & Guides > Road Maps",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Maps & Atlases",
+              "path": "Maps & Guides > Maps & Atlases",
+              "productCount": 0,
+              "directProductCount": 0,
+              "children": []
+            }
+          ]
         }
       ]
     },
     {
       "name": "TVs & Home Cinema",
-      "productCount": 203,
-      "unclassifiedProductCount": 1,
+      "productCount": 200,
+      "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Televisions",
           "path": "Televisions",
-          "productCount": 61,
+          "productCount": 60,
           "directProductCount": 60,
           "children": [
             {
@@ -10226,8 +10342,8 @@
             {
               "name": "QLED & Mini-LED TVs",
               "path": "Televisions > QLED & Mini-LED TVs",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -10263,7 +10379,7 @@
         {
           "name": "Home Cinema",
           "path": "Home Cinema",
-          "productCount": 141,
+          "productCount": 140,
           "directProductCount": 140,
           "children": [
             {
@@ -10276,8 +10392,8 @@
             {
               "name": "Soundbars",
               "path": "Home Cinema > Soundbars",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -10342,80 +10458,81 @@
       ]
     }
   ],
-  "nonEmptyCategoryCount": 30,
+  "nonEmptyCategoryCount": 29,
   "emptyCategories": [
-    "Food Delivery & Restaurant Orders"
+    "Food Delivery & Restaurant Orders",
+    "Real Estate"
   ],
-  "otherProductCount": 1425,
+  "otherProductCount": 1362,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1425
+      "count": 1362
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1410,
-    "usedTaxonomyNodeCount": 245,
-    "emptyTaxonomyNodeCount": 1165,
-    "productsWithKnownSubcategory": 12301,
+    "taxonomyNodeCount": 1426,
+    "usedTaxonomyNodeCount": 242,
+    "emptyTaxonomyNodeCount": 1184,
+    "productsWithKnownSubcategory": 13929,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 8609,
+    "productsWithoutSubcategory": 6981,
     "unclassifiedByCategory": [
       {
-        "category": "Toys & Games",
-        "count": 1627
+        "category": "Beauty",
+        "count": 1636
       },
       {
         "category": "Industrial & Scientific",
-        "count": 1409
-      },
-      {
-        "category": "Beauty",
-        "count": 905
+        "count": 1421
       },
       {
         "category": "Health & Wellness",
-        "count": 874
+        "count": 498
       },
       {
         "category": "Fashion",
-        "count": 561
+        "count": 494
       },
       {
         "category": "Sports",
-        "count": 432
+        "count": 421
       },
       {
         "category": "Books & Media",
-        "count": 364
-      },
-      {
-        "category": "Babies",
-        "count": 254
+        "count": 329
       },
       {
         "category": "Tools & DIY",
-        "count": 156
+        "count": 150
       },
       {
         "category": "Electronics",
         "count": 146
       },
       {
-        "category": "Travel",
-        "count": 142
+        "category": "Babies",
+        "count": 126
       },
       {
         "category": "Pets",
-        "count": 119
+        "count": 114
       },
       {
         "category": "Food & Grocery",
-        "count": 86
+        "count": 82
+      },
+      {
+        "category": "Travel",
+        "count": 70
+      },
+      {
+        "category": "Toys & Games",
+        "count": 51
       },
       {
         "category": "Office & Technology",
-        "count": 42
+        "count": 39
       },
       {
         "category": "Luxury & Prestige",
@@ -10423,40 +10540,16 @@
       },
       {
         "category": "Home & Living",
-        "count": 13
-      },
-      {
-        "category": "Business, Wholesale & Bulk Supply",
-        "count": 11
+        "count": 6
       },
       {
         "category": "Musical Instruments & Studio",
         "count": 3
-      },
-      {
-        "category": "Appliances",
-        "count": 3
-      },
-      {
-        "category": "TVs & Home Cinema",
-        "count": 1
-      },
-      {
-        "category": "Repair & Circular Economy",
-        "count": 1
-      },
-      {
-        "category": "Security & Safety",
-        "count": 1
-      },
-      {
-        "category": "Real Estate",
-        "count": 1
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 8609,
-      "provisional": 12301
+      "needs_classification": 6981,
+      "provisional": 13929
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10466,39 +10559,47 @@
     "mostUsedBrowsePaths": [
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry",
-        "productCount": 1661
+        "productCount": 1660
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1331
+        "productCount": 1459
       },
       {
-        "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 842
+        "path": "Beauty > Fragrances & Perfumes",
+        "productCount": 1155
       },
       {
         "path": "Books & Media > Movies & TV",
-        "productCount": 831
+        "productCount": 679
+      },
+      {
+        "path": "Arts, Crafts & Sewing > Sewing & Textiles",
+        "productCount": 664
       },
       {
         "path": "Home & Living > Home Décor",
         "productCount": 509
       },
       {
-        "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 448
-      },
-      {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
         "productCount": 385
       },
       {
-        "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 377
+        "path": "Fashion > Shoes > Sandals",
+        "productCount": 375
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 356
+        "productCount": 355
+      },
+      {
+        "path": "Sports > Padel",
+        "productCount": 349
+      },
+      {
+        "path": "Arts, Crafts & Sewing > Sewing & Textiles > Yarn & Knitting",
+        "productCount": 315
       },
       {
         "path": "Fashion > Shoes > Sneakers",
@@ -10506,15 +10607,15 @@
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
-        "productCount": 284
+        "productCount": 289
       },
       {
-        "path": "Sports > Padel",
-        "productCount": 277
+        "path": "Industrial & Scientific > Industrial Machinery",
+        "productCount": 250
       },
       {
-        "path": "Fashion > Shoes > Sandals",
-        "productCount": 267
+        "path": "Babies > Baby Clothing > Baby Sleepwear",
+        "productCount": 235
       },
       {
         "path": "Sports > Sports Apparel > Sports Footwear",
@@ -10525,12 +10626,24 @@
         "productCount": 209
       },
       {
+        "path": "Books & Media > Movies & TV > DVD",
+        "productCount": 187
+      },
+      {
         "path": "Fashion > Shoes > Formal Shoes",
         "productCount": 174
       },
       {
+        "path": "Beauty > Makeup > Face Makeup",
+        "productCount": 158
+      },
+      {
         "path": "Electronics > Audio",
         "productCount": 149
+      },
+      {
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Filament",
+        "productCount": 144
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
@@ -10546,30 +10659,34 @@
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
-        "productCount": 133
-      },
-      {
-        "path": "Fashion > Shoes > Flats",
-        "productCount": 128
+        "productCount": 131
       },
       {
         "path": "Babies > Baby Shoes",
         "productCount": 120
       },
       {
-        "path": "Babies > Baby Clothing > Baby Sleepwear",
-        "productCount": 118
-      },
-      {
-        "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 116
-      },
-      {
         "path": "Automotive > Vehicle Tools",
-        "productCount": 102
+        "productCount": 119
+      },
+      {
+        "path": "Beauty > Skincare > Serums & Essences",
+        "productCount": 113
+      },
+      {
+        "path": "Accessible & Adaptive Living > Mobility & Independence",
+        "productCount": 112
+      },
+      {
+        "path": "Beauty > Makeup > Eye Makeup",
+        "productCount": 97
       },
       {
         "path": "Automotive > Car Parts > Body Parts & Trim",
+        "productCount": 96
+      },
+      {
+        "path": "Automotive > Rims & Tires > Wheels & Rims",
         "productCount": 94
       },
       {
@@ -10585,10 +10702,6 @@
         "productCount": 88
       },
       {
-        "path": "Beauty > Makeup > Eye Makeup",
-        "productCount": 87
-      },
-      {
         "path": "Toys & Games > Building & Construction",
         "productCount": 83
       },
@@ -10597,16 +10710,12 @@
         "productCount": 82
       },
       {
-        "path": "Beauty > Skincare > Serums & Essences",
-        "productCount": 79
-      },
-      {
         "path": "Fashion > Clothing > T-Shirts & Tops",
         "productCount": 75
       },
       {
-        "path": "Automotive > Rims & Tires > Wheels & Rims",
-        "productCount": 70
+        "path": "Beauty > Skincare",
+        "productCount": 72
       },
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
@@ -10625,39 +10734,43 @@
         "productCount": 59
       },
       {
-        "path": "Accessible & Adaptive Living > Mobility & Independence",
-        "productCount": 58
-      },
-      {
         "path": "Gaming > Consoles > Xbox",
         "productCount": 57
       },
       {
-        "path": "Fashion > Clothing > Jeans & Trousers",
-        "productCount": 51
+        "path": "Fashion > Shoes > Boots",
+        "productCount": 56
+      },
+      {
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "productCount": 55
+      },
+      {
+        "path": "Beauty > Hair Care > Hair Styling Tools",
+        "productCount": 52
+      },
+      {
+        "path": "Food & Grocery > Beverages > Tea",
+        "productCount": 47
+      },
+      {
+        "path": "Sports > Fishing > Fishing Tackle",
+        "productCount": 43
       },
       {
         "path": "Books & Media > Music",
-        "productCount": 48
+        "productCount": 43
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
         "productCount": 42
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
-        "productCount": 41
-      },
-      {
         "path": "Automotive > GPS Navigation",
         "productCount": 39
       },
       {
-        "path": "Sports > Fishing > Fishing Tackle",
-        "productCount": 38
-      },
-      {
-        "path": "Food & Grocery > Beverages > Tea",
+        "path": "Automotive > Car Parts > Steering & Suspension",
         "productCount": 38
       },
       {
@@ -10665,8 +10778,8 @@
         "productCount": 37
       },
       {
-        "path": "Beauty > Skincare",
-        "productCount": 37
+        "path": "Automotive > Car Parts > Lighting",
+        "productCount": 36
       },
       {
         "path": "Fashion > Shoes > Heels",
@@ -10677,15 +10790,23 @@
         "productCount": 33
       },
       {
+        "path": "Beauty > Skincare > Face Skincare",
+        "productCount": 33
+      },
+      {
+        "path": "Automotive > Rims & Tires > Car Tires",
+        "productCount": 33
+      },
+      {
         "path": "Electronics > Cameras & Photography",
         "productCount": 31
       },
       {
-        "path": "Automotive > Car Parts > Lighting",
-        "productCount": 30
+        "path": "Automotive > Motorcycles, Accessories & Parts",
+        "productCount": 31
       },
       {
-        "path": "Automotive > Rims & Tires > Car Tires",
+        "path": "Fashion > Clothing > Jeans & Trousers",
         "productCount": 29
       },
       {
@@ -10693,27 +10814,19 @@
         "productCount": 28
       },
       {
-        "path": "Automotive > Car Parts > Steering & Suspension",
-        "productCount": 25
-      },
-      {
-        "path": "Automotive > Motorcycles, Accessories & Parts",
-        "productCount": 25
+        "path": "Home & Living > Furniture > Living Room Furniture",
+        "productCount": 26
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
-        "productCount": 25
-      },
-      {
-        "path": "Home & Living > Furniture",
-        "productCount": 25
+        "productCount": 24
       },
       {
         "path": "Sports > Padel > Padel Accessories",
         "productCount": 23
       },
       {
-        "path": "Fashion > Shoes > Boots",
+        "path": "Fashion > Shoes > Flats",
         "productCount": 23
       },
       {
@@ -10725,36 +10838,48 @@
         "productCount": 22
       },
       {
-        "path": "Beauty > Skincare > Face Skincare",
-        "productCount": 21
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
-        "productCount": 18
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
+        "productCount": 20
       },
       {
         "path": "Health & Wellness > Nutrition > Sports Supplements > Pre-Workout",
         "productCount": 18
       },
       {
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
+        "productCount": 17
+      },
+      {
         "path": "Home & Living > Bedding & Bath",
         "productCount": 16
       },
       {
-        "path": "Health & Wellness > Oral Hygiene",
-        "productCount": 14
+        "path": "Beauty > Skincare > Moisturizers",
+        "productCount": 15
       },
       {
         "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "productCount": 15
+      },
+      {
+        "path": "Beauty > Skincare > Eye Treatments",
         "productCount": 14
+      },
+      {
+        "path": "Babies > Baby Clothing",
+        "productCount": 13
       },
       {
         "path": "Fashion > Bags & Luggage",
         "productCount": 13
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Omega Oils",
-        "productCount": 13
+        "path": "Home & Living > Kitchen & Dining > Drinkware",
+        "productCount": 12
+      },
+      {
+        "path": "Beauty > Hair Care",
+        "productCount": 12
       },
       {
         "path": "Automotive > Car Accessories > Seat Covers & Floor Mats",
@@ -10765,15 +10890,11 @@
         "productCount": 11
       },
       {
-        "path": "Business, Wholesale & Bulk Supply > Packaging & Shipping Supplies > Protective Packaging",
-        "productCount": 11
-      },
-      {
         "path": "Automotive > Car Parts > Transmission & Drivetrain",
         "productCount": 11
       },
       {
-        "path": "Beauty > Skincare > Eye Treatments",
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Omega Oils",
         "productCount": 11
       },
       {
@@ -10781,8 +10902,16 @@
         "productCount": 11
       },
       {
-        "path": "Babies > Hygiene & Wellness > Baby Bath",
+        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
         "productCount": 11
+      },
+      {
+        "path": "Sports > Golf",
+        "productCount": 10
+      },
+      {
+        "path": "Beauty > Makeup > Lip Makeup",
+        "productCount": 10
       },
       {
         "path": "Fashion > Clothing > Shirts & Blouses",
@@ -10797,11 +10926,11 @@
         "productCount": 10
       },
       {
-        "path": "Sports > Soccer > Soccer Clothing & Accessories",
-        "productCount": 9
+        "path": "Babies > Hygiene & Wellness > Baby Bath",
+        "productCount": 10
       },
       {
-        "path": "Sports > Golf",
+        "path": "Sports > Soccer > Soccer Clothing & Accessories",
         "productCount": 9
       },
       {
@@ -10817,62 +10946,26 @@
         "productCount": 8
       },
       {
+        "path": "Beauty > Bath & Body",
+        "productCount": 8
+      },
+      {
         "path": "Automotive > Car Parts > Filters",
         "productCount": 8
       },
       {
-        "path": "Beauty > Makeup > Lip Makeup",
+        "path": "Fashion > Accessories > Hair Accessories",
         "productCount": 8
-      },
-      {
-        "path": "Luxury & Prestige > Fine Art & Collectibles > Original Paintings",
-        "productCount": 8
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Multivitamins",
-        "productCount": 8
-      },
-      {
-        "path": "Babies > Diaper Changing",
-        "productCount": 8
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Sports Supplements > Post-Workout",
-        "productCount": 7
-      },
-      {
-        "path": "Fashion > Accessories",
-        "productCount": 7
-      },
-      {
-        "path": "Luxury & Prestige > Castles & Historic Estates",
-        "productCount": 7
-      },
-      {
-        "path": "Pets > Dogs",
-        "productCount": 7
-      },
-      {
-        "path": "Home & Living > Kitchen & Dining",
-        "productCount": 7
-      },
-      {
-        "path": "Babies > Baby Clothing",
-        "productCount": 7
-      },
-      {
-        "path": "Electronics > Computers > Computer Components > SSD & Hard Drives",
-        "productCount": 6
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1107
+        "productCount": 1095
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productCount": 272
+        "productCount": 222
       },
       {
         "advertiser": "Amore Mall",
@@ -10885,10 +10978,6 @@
       {
         "advertiser": "Rexing",
         "productCount": 3
-      },
-      {
-        "advertiser": "Soundcore",
-        "productCount": 1
       }
     ],
     "otherExamples": [
@@ -10909,15 +10998,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "UNICE $99 Surprise Box -- Valued $330"
-      },
-      {
-        "title": "Europe XXL Political and Road Wall Map MI",
-        "brand": "Maps International",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>EUROPA XXL MAPA ŚCIENNA POLITYCZNA I DROGOWA MI</h2>\n<p>Polityczno-drogowa mapa ścienna Europy w skali 1:3 200 000. Cieniowaniem zaznaczono ukształtowanie terenu. Żywe, wyrazis"
       },
       {
         "title": "Rexing Installation Service",
@@ -11224,15 +11304,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
-      },
-      {
-        "title": "Pakiet Władca Pierścieni",
-        "brand": "Muza SA",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Władca Pierścieni.</h1><h1>Tomy 1 - 3.</h1><ul><li><b>Autor:&#xa0;Tolkien&#xa0;John&#xa0;Ronald&#xa0;Reuel</b></li><li><b>EAN:&#xa0;9788328713215</b></li><li><b>Wydawnictwo:&#x"
       },
       {
         "title": "ILLIYOON MD Red-itch Cure Balm 60ML",
@@ -11901,15 +11972,6 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Włóczka Merino Bulky kol.502 (ecru)",
-        "brand": "YarnArt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Włóczka Merino Bulky</h1><p><b>Gruba włóczka przeznaczona na zimowe wyroby, posiadająca właściwości termoizolacyjne. Niezwykle delikatna, przyjemna w dotyku, nie mechaci się i "
-      },
-      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12241,49 +12303,36 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Yerba Mate",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - YERBA MATE </h1><h1>OLEJEK ZAPACHOWY YERBA MATE 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość j"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Tmnt Wojownicze Żółwie Ninja. Donatello. Początki",
+        "brand": "Ameet",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Tmnt Wojownicze Żółwie Ninja. Donatello. Początki"
       }
     ],
     "missingSubcategoryExamples": [
-      {
-        "title": "cut mp3 2025 | Your simple music editing program",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Simple and useful editing options for mp3 files such as trimming, cutting, etc. Easy to use with high audio quality.",
-        "category": "Electronics"
-      },
-      {
-        "title": "FRP Limited Edition Crab Phone Mount",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Key Features: Mounts phone and action camera at the same time Professional 6-point surround fixation system Enhanced 5-claw secure grip technology Advanced vibration dampening desi",
-        "category": "Electronics"
-      },
-      {
-        "title": "FindMyFiles 2025 | Finds your files, wherever they are",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Finds all types of files – music, photos, or documents – on your computer within fractions of a second.",
-        "category": "Electronics"
-      },
-      {
-        "title": "FRP Classic Phone Mount",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Key Features: Advanced shock absorption system Unobstructed camera view for photography Quick-release mechanism Tool-free installation Memory width adjustment Universal device comp",
-        "category": "Electronics"
-      },
       {
         "title": "Lanberg Cable HDMI 2.0 TV 7.5m 4K Ultra HD 60Hz Full Cu Media",
         "brand": "Lanberg",
@@ -12905,16 +12954,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Rexing J1772 to Tesla Charging Adapter",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Travel Size | 250V AC | 80 Amp | Compatible with SAE J1772 Charger | Only for Tesla Owners Reliable Adapter – J1772 to Tesla adapter opens up more charging possibilities while on t",
-        "category": "Electronics"
-      },
-      {
         "title": "Genway WL-03NL-V2 Intercom 4 Family Rfid Code",
         "brand": "Genway",
         "advertiser": "Allegro.pl",
@@ -13005,16 +13044,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Rexing CCS to Tesla Charging Adapter",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Fast Charge | Tesla Model 3, Y, S, and X | Compatible Level 3 Fast Charging Stations | Tesla Owners Only Expanded Charging Network – Access over 5,000 CCS fast charging stations na",
-        "category": "Electronics"
-      },
-      {
         "title": "Wi-Fi video intercom 5tech Verus One Plus 8\" 84228 Keychain Reader Encryptor",
         "brand": "5TECH",
         "advertiser": "Allegro.pl",
@@ -13043,16 +13072,6 @@
         "sourceCategory": "Electronics",
         "description": "<h2>SZAFKA RTV 240 cm Komoda z szufladami TV Drewniana Lite Drewno MANGO LOFT BGM24</h2><p><b>Komoda pod telewizor Drewniana MANGO LOFT BGM s.c.</b></p><p>W naszej ofercie&nbsp;<b>",
         "category": "Electronics"
-      },
-      {
-        "title": "Rexing Tesla to J1772 Charging Adapter",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "J1772 EV Charging Adapter | Fits Mobile Connector | Tesla Wall Connector | Destination Chargers | Max 48 Amp & 250V AC | Travel Case Easy EV Charging – Use Our Tesla To J1772 Adapt",
-        "category": "Travel"
       },
       {
         "title": "Portable TV for the Kitchen 14 USB Hdmi Antenna",
@@ -13705,16 +13724,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Tidy your PC up",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Office & Technology",
-        "description": "Automatically sorts pictures, documents, videos & more into predefined folders. This way you can always be sure that all files can be found at any time.",
-        "category": "Office & Technology"
-      },
-      {
         "title": "FolderVisualizer 2025 | Das Röntgengerät für deine Festplatte",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
@@ -13725,16 +13734,6 @@
         "category": "Office & Technology"
       },
       {
-        "title": "Converter4Video 2025 |  Videos konvertieren leicht gemacht",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Office & Technology",
-        "description": "Schnelle und einfache Video-Konvertierung von und in verschiedene Formate für eine Wiedergabe auf dem Fernseher, Handy und Co.",
-        "category": "Office & Technology"
-      },
-      {
         "title": "PC Fresh 2025 | Up to 137% more PC performance | Turbo Boost mode",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
@@ -13742,6 +13741,96 @@
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
         "description": "The All-In One tuning software gets the maximum performance out of your computer. It will make your PC fast and powerful like you have never experienced before.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "AntiBrowserSpy 2026 | Schutz vor Spionage | mit Trackingblocker",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Bietet effektiven Schutz vor Online-Spionage und ermöglicht wirksamen Datenschutz mit nur einem Klick. Internetspuren sind kein Thema mehr.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "StartupStar 2025 | Rocket Launch for the PC | Blocks Autostart Spam",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Removes unnecessary system slowdowns with just one click and noticeably accelerates PC startup.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "WashAndGo 24 | Removes data garbage | Optimizes the PC | Award winner",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Efficiently removes collected data rubbish from the PC, and corrects system errors reliably. Both functions optimize your Mac performance.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Win11 PrivacyFix 2025 | Prevents data from being sent to MS",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Effectively and securely prevents the collection of private data by Windows and ends data snooping for good. Can be operated without prior knowledge.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Tagman 2025 | Ergänzt automatisch Musiktitel und Cover",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Tagman bringt Ordnung in deine Musiksammlung, indem es automatisch fehlende Titel, Interpreten, Alben und Coverbilder hinzufügt – für eine perfekt organisierte und leicht zugänglic",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "Easy Backup 2025 | Backup without previous knowledge | For beginners",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "The backup solution for everyone: Professional data backup with simple and convenient operation.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "CryptBox 2025 | encrypts data NASA secure | maximum security | 256 bit",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Easily encrypts all private data with maximum security using the AES 256 algorithm. Only you can access your data!",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "CleverPrint 8 | Spart bis zu 50% Druckkosten | Ökologisch sinnvoll",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Reduziert die Druckkosten spürbar – ganz automatisch! Mit CleverPrint lassen sich Papier, Tinte und Zeit durch eine besonders einfache Druckoptimierung für Windows sparen.\n\n\n\n\n\n\n\n\n",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "MyKeyFinder 2026 | Findet deine Lizenzschlüssel wieder",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "Nie wieder suchen: Speichert alle Seriennummern übersichtlich auf einen Blick ab und durchsucht dabei selbst externe Festplatten nach Lizenzschlüsseln.",
         "category": "Office & Technology"
       }
     ]
@@ -13984,11 +14073,11 @@
     }
   },
   "focusedProductCoverage": {
-    "televisions": 61,
+    "televisions": 60,
     "smartphones": 59,
     "playstationConsoles": 94,
     "gamingConsoles": 179,
-    "fashionClothing": 151,
+    "fashionClothing": 132,
     "tennisShoes": 42,
     "fashionSneakers": 306,
     "sportsFootwear": 223
