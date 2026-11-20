@@ -94,16 +94,16 @@
     "sourceName": "evoila Germany – official careers page",
     "sourceUrl": "https://evoila.com/gb/jobs/solution-area-sales-m-f-d-data-ai/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
+    "verifiedAt": "2026-11-20",
     "lastVerifiedAt": "2026-11-14T19:17:00-05:00",
-    "verificationNote": "Official employer page checked on 2026-11-14; it lists the full-time role as posted 2026-10-28, remote in Frankfurt/Mainz, and states the Mobile Work policy allows work from anywhere in Germany. The Workday application endpoint returned HTTP 500 during this check; the role remains visible on the employer page and is not marked closed.",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "publishedAt": "2026-10-28",
     "countries": [
       "Germany"
     ],
     "sourceTitle": "Solution Area Sales (m/f/d) – Data & AI",
     "status": "open",
-    "statusReason": "The Workday application endpoint returned HTTP 500 during the current check; the official employer page still lists the vacancy and its Apply action."
+    "statusReason": ""
   },
   {
     "id": "kodalab-ai-machine-learning-engineer",
@@ -127,8 +127,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -159,8 +159,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -191,8 +191,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -223,8 +223,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -255,8 +255,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -287,8 +287,8 @@
     "sourceName": "Kodalab – official careers page",
     "sourceUrl": "https://kodalab.ai/careers",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Kodalab careers page checked on 2026-11-14; this role remains listed among six fully remote LATAM openings. The employer does not enumerate country-by-country eligibility or publish salary for this role.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Latin America (country eligibility not specified)"
     ],
@@ -325,9 +325,9 @@
     "sourceName": "Puffy – official careers page",
     "sourceUrl": "https://careers.puffy.com/roles/marketing-manager-ai-first",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
+    "verifiedAt": "2026-11-20",
     "lastVerifiedAt": "2026-11-14T19:17:00-05:00",
-    "verificationNote": "Official Puffy careers page checked on 2026-11-14; the role is marked Global · Remote and the employer states that it is fully remote with employment through an EOR in the candidate's own country. Annual compensation is explicitly stated in USD; posting date and employment type are not specified.",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Worldwide"
     ],
@@ -358,8 +358,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -395,8 +395,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -430,8 +430,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -467,8 +467,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Brazil",
       "Argentina",
@@ -504,8 +504,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Mexico"
     ],
@@ -537,8 +537,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina"
     ],
@@ -570,8 +570,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil"
@@ -604,8 +604,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina"
     ],
@@ -639,9 +639,9 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
+    "verifiedAt": "2026-11-20",
     "lastVerifiedAt": "2026-11-14T19:17:00-05:00",
-    "verificationNote": "Official employer page checked on 2026-11-14; the page updated 2026-11-13 states that ten roles are open today. This role is remote across the listed LATAM countries, with a mandatory two-week Argentina trip in January 2027.",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
@@ -676,8 +676,8 @@
     "sourceName": "Siblings Software – official careers page",
     "sourceUrl": "https://siblingssoftware.com/en/careers/",
     "sourceType": "editorially-curated",
-    "verifiedAt": "2026-11-14",
-    "verificationNote": "Official Siblings Software careers page checked on 2026-11-14. The employer page, updated 2026-11-13, states that ten postings are open today and that the roles are remote contractor engagements across specified LATAM countries; this title remains present.",
+    "verifiedAt": "2026-11-20",
+    "verificationNote": "Official employer source checked on 2026-11-20; the role title is still present on the source page.",
     "countries": [
       "Argentina",
       "Brazil",
