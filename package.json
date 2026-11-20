@@ -2,5 +2,8 @@
   "type": "module",
   "dependencies": {
     "@vercel/blob": "^2.8.2"
+  },
+  "scripts": {
+    "test:search": "node scripts/test-search-relevance.mjs"
   }
 }
