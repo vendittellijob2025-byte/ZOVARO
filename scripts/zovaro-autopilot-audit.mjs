@@ -100,7 +100,7 @@ fs.mkdirSync("reports", { recursive: true });
 fs.writeFileSync("reports/zovaro-autopilot-report.json", JSON.stringify(report, null, 2) + "\n", "utf8");
 
 const summary = [
-  "# ZOVARO AUTOPILOT — daily report",
+  "# ZOVARO AUTOPILOT — six-hour operations report",
   "",
   `Generated: ${report.generatedAt}`,
   "",
