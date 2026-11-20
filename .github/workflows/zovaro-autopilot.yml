@@ -1,4 +1,4 @@
-name: ZOVARO AUTOPILOT - Daily Operations Audit
+name: ZOVARO AUTOPILOT - Six-Hour Operations Audit
 
 on:
   push:
@@ -29,7 +29,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  daily-audit:
+  six-hour-audit:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

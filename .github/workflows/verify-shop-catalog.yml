@@ -24,7 +24,7 @@ permissions:
 
 concurrency:
   group: zovaro-catalog-sync-${{ github.ref }}
-  cancel-in-progress: false
+  queue: max
 
 jobs:
   verify-shop:
