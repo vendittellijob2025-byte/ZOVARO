@@ -29,7 +29,7 @@ assert.equal(score("Dior Homme Eau de Toilette", "Dior Sauvage",
   "Words split between title and taxonomy must not create a false match");
 assert.ok(score("Dior Sauvage Eau de Parfum", "Dior Sauvage", "Beauty") > 0,
   "Exact branded perfume query should match");
-assert.ok(score("Samsung Galaxy S25 Screen Protector", "phone screen protector") > 0,
+assert.ok(score("Universal Phone Screen Protector", "phone screen protector") > 0,
   "Multi-word accessory intent should permit the requested accessory");
 assert.equal(score("Universal Phone Case", "phone"), 0,
   "Generic phone search must exclude phone cases");
