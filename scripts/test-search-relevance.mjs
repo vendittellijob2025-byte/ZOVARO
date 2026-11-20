@@ -14,7 +14,11 @@ const score = (title, query, category = "Electronics", subcategory = "") =>
     name: title, title, englishTitle: title, category, subcategory
   }, [query]);
 
-console.log("DEBUG", context.searchTestApi.tokenizeSearchQuery("Samsung Galaxy S25"), context.searchTestApi.normalizeSearchText("Samsung Galaxy S25 Ultra 256GB"), score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25"));
+console.log("DEBUG",
+  context.searchTestApi.tokenizeSearchQuery("Samsung Galaxy S25"),
+  context.searchTestApi.normalizeSearchText("Samsung Galaxy S25 Ultra 256GB"),
+  score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25")
+);
 assert.ok(score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25") > 0,
   "Exact model query should find the product");
 assert.equal(score("Samsung Galaxy S25 Silicone Case", "Samsung Galaxy S25"), 0,
