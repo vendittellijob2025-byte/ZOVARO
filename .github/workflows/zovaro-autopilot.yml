@@ -70,6 +70,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zovaro-autopilot-report
-          path: reports/zovaro-autopilot-report.json
+          path: |
+            reports/zovaro-autopilot-report.json
+            reports/category-quality-audit.json
           if-no-files-found: error
           retention-days: 30

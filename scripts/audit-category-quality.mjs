@@ -99,7 +99,7 @@ for (const product of catalog.products) {
   }
 }
 
-console.log("Primary category consistency audit: " + JSON.stringify({
+const auditReport = {
   checked,
   mismatches,
   distribution: Object.fromEntries([...distribution].sort((a,b) => a[0].localeCompare(b[0]))),
@@ -111,6 +111,16 @@ console.log("Primary category consistency audit: " + JSON.stringify({
   imageAuditedProducts: imageReport.results?.length || 0,
   visualRootOverrides: catalog.products.filter(product => product.visualCategoryEvidence?.source === "CLIP zero-shot image classification").length,
   invalidSubcategoryExamples
+};
+fs.mkdirSync("reports", { recursive: true });
+fs.writeFileSync("reports/category-quality-audit.json", JSON.stringify(auditReport, null, 2) + "\n", "utf8");
+console.log("Category quality audit: " + JSON.stringify({
+  checked,
+  mismatches,
+  invalidSubcategoryPaths,
+  unclassifiedProducts,
+  examples: examples.slice(0, 10),
+  invalidSubcategoryExamples: invalidSubcategoryExamples.slice(0, 10)
 }));
 if (mismatches || invalidSubcategoryPaths) {
   throw new Error("Catalog quality audit failed: " + mismatches + " primary-category mismatches and " + invalidSubcategoryPaths + " invalid category/subcategory paths.");
