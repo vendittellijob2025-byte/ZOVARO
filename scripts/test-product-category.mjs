@@ -521,7 +521,7 @@ const subcategoryCases = [
   ["Health & Wellness", "Colgate Plax płyn do płukania jamy ustnej 3x500 ml", "Oral Hygiene > Mouthwash"],
   ["Electronics", "Satel Perfecta 16 LTE Alarm Bezprzewodowy", "Smart Home > Sensors & Alarms"],
   ["Automotive", "Rexing Adhesive Mount for V2 Pro AI", "Vehicle Electronics > Dash Cameras"],
-  ["Automotive", "Rexing Type-C GPS Module 115200 Baud", "Vehicle Electronics > GPS Navigation"],
+  ["Automotive", "Rexing Type-C GPS Module 115200 Baud", "Vehicle Electronics > GPS & Navigation"],
   ["Fashion", "ISEE HAIR Wear Go Highlight Brown Wigs Silky Straight Pre-plucked Glueless Lace Wigs", "Accessories > Wigs & Hair Extensions"],
   ["Books & Media", "Kenia Podróże z pasją Rough Guides", "Books > Travel & Geography"],
   ["Arts, Crafts & Sewing", "Papier scrapbookingu P13 The Garden of Books", "Crafts & Creative DIY > Paper Crafts > Scrapbooking"],
