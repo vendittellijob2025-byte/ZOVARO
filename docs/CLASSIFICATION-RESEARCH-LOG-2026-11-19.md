@@ -63,3 +63,38 @@ The product classifier regression suite now includes exact subcategory cases for
 ## Implementation note
 
 The regression suite now covers the Anker power bank, Espoir setting powder, Instant Firmx face-tightening cream, Clinique eye treatment, and L'Occitane facial oil at both primary-category and subcategory level where applicable. The Bruno Marc and OSULLOC examples retain primary-category coverage. Do not mark any of these records as Amazon-verified until an actual Amazon product page or breadcrumb has been inspected successfully.
+
+
+### 6. High-confidence classification from the catalog's Other sample
+
+The following product identities were checked against manufacturer or marketplace descriptions and are now covered by regression tests:
+
+- Perfumania fragrance listing → `Beauty > Fragrances & Perfumes`; the retailer has an official Beauty & Cosmetics catalogue.
+- OSULLOC Camellia Forest Tea → `Food & Grocery > Beverages > Tea`; the product page identifies a black-tea blend and tea-bag preparation.
+- FRP Moto Sahara 40 → `Automotive > Motorcycles, Accessories & Parts > ATV & Powersports`; the manufacturer identifies it as a 40cc kids ATV.
+- RotoSound Roto Whites 11-54 → `Musical Instruments & Studio > Instrument Accessories > Strings & Reeds`; the manufacturer identifies them as electric-guitar strings.
+- Tamiya Extra Thin Cement Quick Setting 87182 → `Arts, Crafts & Sewing > Crafts & Creative DIY > Models & Miniatures`; the manufacturer describes it as cement for model construction.
+- DeWALT DCMBA572 → `Garden > Lawn Care > Leaf Blowers`; the manufacturer lists it in cordless leaf blowers.
+- Siemens TZ80001B → `Appliances > Kitchen Appliances > Coffee Machine Accessories`; Siemens identifies it as cleaning tablets for automatic coffee machines.
+- Solar phone charger with panel → `Energy, Solar & Electric Mobility > Solar & Renewable Energy > Solar Panels`; the Allegro listing identifies it as a solar phone charger.
+- Mediseptol H → `Health & Wellness > Home Cleaning & Care > Disinfectants`; the product listing describes surface disinfection in medical and service environments.
+- Jaxon Safe Extra Strong landing net and Dragon jig heads → `Sports > Fishing > Fishing Tackle`; Allegro's product and category listings identify the landing net as fishing equipment.
+- Polish anti-slip socks, gold engagement ring and protective neck gaiter → Fashion clothing/jewelry/accessory paths.
+
+Amazon status: these examples are **not** marked Amazon-verified. Amazon.com returned a robots.txt access block in this research session, so the above decisions rely on manufacturer or independent marketplace evidence instead.
+
+Sources:
+- https://perfumania.com/collections/beauty-cosmetics
+- https://global.amoremall.com/products/osulloc-camellia-flower-tea-20-count-1
+- https://www.frpmoto.com/products/40cc-sahara-40-kids-atv
+- https://www.rotosound.com/product/r11-54/
+- https://www.tamiya.com/english/products/87182/index.html
+- https://www.dewalt.com.au/en-au/product/dcmba572n-xe/54v-xr-flexvolt-blower-tool-only
+- https://www.siemens-home.bsh-group.com/es/es/product/limpieza-y-mantenimiento/cafeteras/productos-limpieza-para-cafeteras/TZ80001B
+- https://allegro.pl/kategoria/dom-i-ogrod?string=%C5%82adowarka+s%C5%82oneczna+do+telefonu
+- https://www.ceneo.pl/162714824
+- https://allegro.pl/oferta/podbierak-jaxon-safe-extra-strong-teleskop-aluminium-dlugosc-2-30m-9761235772
+
+## Implementation note
+
+The classifier now has regression coverage for representative perfume, tea, ATV, guitar strings, harmonica, model adhesive, leaf blower, coffee-machine cleaning tablets, solar charger, disinfectant, fishing gear and Polish fashion listings. Every subcategory case is checked against the canonical taxonomy tree before it can pass.
