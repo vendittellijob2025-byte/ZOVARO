@@ -14,6 +14,16 @@ ZOVARO is a global discovery platform for products, offers, jobs and commercial 
 - CJ synchronization is scheduled every six hours and can also be started manually from GitHub Actions.
 - The catalogue is generated in `data/catalog.json`. Do not edit this generated file manually.
 
+### Product classification research and quality
+
+- Product identity and intended use take priority over isolated title keywords, brand names, compatibility terms, and advertiser labels.
+- When a product's category or subcategory is uncertain or sources conflict, research the exact item on Amazon where accessible, compare its visible category/breadcrumb, then cross-check manufacturer/specification pages and independent search results.
+- Inspect images as corroborating evidence; do not classify from an ambiguous image alone.
+- If evidence remains weak or conflicting, flag the item as unresolved instead of forcing a deep subcategory.
+- Record researched examples as regression tests so a corrected decision remains stable.
+- Amazon is a reference, not infallible ground truth. ZOVARO maps evidence into its own canonical taxonomy; it does not claim to use official Amazon Browse Node IDs.
+- The detailed evidence, confidence, and conflict-resolution rules are in `docs/PRODUCT-CLASSIFICATION-RESEARCH-PROTOCOL.md`.
+
 ### English translations
 
 Translation runs separately from CJ ingestion so a translation-service rate limit cannot block a valid product import.
