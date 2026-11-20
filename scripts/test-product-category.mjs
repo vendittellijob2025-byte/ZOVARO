@@ -285,6 +285,17 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "TWO SLASH FOUR Glaze Lip Changer Nu Ginger", sourceCategory: "Health & Wellness" }), "Beauty");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "TWO SLASH FOUR Strobing Face Cube 2 Purple", sourceCategory: "Health & Wellness" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Papier scrapbookingu P13 The Garden of Books", sourceCategory: "Books & Media" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Medisept Velox Spray 5 L Tea Tonic", sourceCategory: "Sports" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Satel Perfecta 16 LTE Alarm Bezprzewodowy", sourceCategory: "Pets" }), "Electronics");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing B1 (Black) Night Vision Goggles Binoculars", sourceCategory: "Electronics" }), "Sports");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing Adhesive Mount for V2 Pro AI", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing Type-C GPS Module — 115200 Baud", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "Alternativestereo Lip Potion Balmy Rose 01 Baby Rose", sourceCategory: "Babies" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Littlest Pet Shop Jak w kołowrotku Koloruj czytaj", sourceCategory: "Pets" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Kenia Podróże z pasją Rough Guides", sourceCategory: "Books & Media" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Siła nawyku. Dlaczego robimy to, co robimy", sourceCategory: "Food & Grocery" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "8x Końcówka dla Dzieci do Szczoteczki Oral-B głowice do szczoteczek", sourceCategory: "Food & Grocery" }), "Health & Wellness");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "CD Lotto (Majkowski/Rychlicki/Szpura) Elite Feline", sourceCategory: "Pets" }), "Books & Media");
@@ -498,6 +509,24 @@ const subcategoryCases = [
   ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
   ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
   ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
+  ["Beauty", "Invisibobble Power The Strong Grip Hair Ring", "Hair Care > Hair Styling Accessories"],
+  ["Beauty", "Goody Fabric Headwraps Assorted Colors 6Ct", "Hair Care > Hair Styling Accessories"],
+  ["Beauty", "Moraz J And M Herbal Massage Ointment 1.7Oz", "Skincare > Body Skincare"],
+  ["Beauty", "TWO SLASH FOUR Glaze Lip Changer Nu Ginger", "Makeup > Lip Makeup"],
+  ["Beauty", "TWO SLASH FOUR Strobing Face Cube 2 Purple", "Makeup > Face Makeup"],
+  ["Sports", "Koa+Roy Fitness Cube 2.8Oz", "Sports Medicine > Therapy & Rehabilitation > Muscle Recovery"],
+  ["Sports", "Rexing B1 (Black) Night Vision Goggles Binoculars", "Hunting > Outdoor Optics > Night Vision"],
+  ["Health & Wellness", "Medisept Velox Spray 5 L Tea Tonic", "Home Cleaning & Care > Disinfectants"],
+  ["Health & Wellness", "Demoxoft Płyn do oczyszczania powiek na świąd i podrażnienie 100 ml", "Eye Care > Eyelid Cleansers"],
+  ["Health & Wellness", "Colgate Plax płyn do płukania jamy ustnej 3x500 ml", "Oral Hygiene > Mouthwash"],
+  ["Electronics", "Satel Perfecta 16 LTE Alarm Bezprzewodowy", "Smart Home > Sensors & Alarms"],
+  ["Automotive", "Rexing Adhesive Mount for V2 Pro AI", "Vehicle Electronics > Dash Cameras"],
+  ["Automotive", "Rexing Type-C GPS Module 115200 Baud", "Vehicle Electronics > GPS Navigation"],
+  ["Fashion", "ISEE HAIR Wear Go Highlight Brown Wigs Silky Straight Pre-plucked Glueless Lace Wigs", "Accessories > Wigs & Hair Extensions"],
+  ["Books & Media", "Kenia Podróże z pasją Rough Guides", "Books > Travel & Geography"],
+  ["Arts, Crafts & Sewing", "Papier scrapbookingu P13 The Garden of Books", "Crafts & Creative DIY > Paper Crafts > Scrapbooking"],
+  ["Books & Media", "Littlest Pet Shop Jak w kołowrotku Koloruj czytaj", "Books > Children's Books"],
+  ["Babies", "Mustela Vitamin Barrier Cream For Baby - 3.8Oz", "Hygiene & Wellness > Baby Skin Care"],
   ["Home & Living", "Vitajuwel Via Heat Tea Strainer", "Kitchen & Dining > Drinkware"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],

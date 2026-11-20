@@ -116,7 +116,12 @@
             "Beads & Jewelry Making",
             "Models & Miniatures",
             "Resin & Molds",
-            "Paper Crafts",
+            {
+              "name": "Paper Crafts",
+              "children": [
+                "Scrapbooking"
+              ]
+            },
             "Candle & Soap Making"
           ]
         },
@@ -570,7 +575,8 @@
             "Science & Technology",
             "Health & Fitness",
             "Children's Books",
-            "Education & Reference"
+            "Education & Reference",
+            "Travel & Geography"
           ]
         },
         {
@@ -916,7 +922,8 @@
             "Hats & Caps",
             "Scarves",
             "Gloves",
-            "Hair Accessories"
+            "Hair Accessories",
+            "Wigs & Hair Extensions"
           ]
         }
       ]
@@ -1231,7 +1238,8 @@
           "children": [
             "Eye Drops & Lubricants",
             "Reading Glasses",
-            "Vision Accessories"
+            "Vision Accessories",
+            "Eyelid Cleansers"
           ]
         },
         {
@@ -1444,7 +1452,8 @@
             "3D Printer Filament",
             "3D Printing Materials",
             "Laser Engraving Equipment",
-            "3D Printer Accessories"
+            "3D Printer Accessories",
+            "Laser Engraving Materials"
           ]
         }
       ]
@@ -2016,7 +2025,12 @@
           "children": [
             "Hunting Clothing",
             "Hunting Accessories",
-            "Outdoor Optics"
+            {
+              "name": "Outdoor Optics",
+              "children": [
+                "Night Vision"
+              ]
+            }
           ]
         },
         {
@@ -2204,7 +2218,12 @@
           "children": [
             "Recovery Equipment",
             "Sports Supports",
-            "Therapy & Rehabilitation"
+            {
+              "name": "Therapy & Rehabilitation",
+              "children": [
+                "Muscle Recovery"
+              ]
+            }
           ]
         },
         {

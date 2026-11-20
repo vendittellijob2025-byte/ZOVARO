@@ -118,3 +118,12 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Added merchant-aware mappings for UNice hair accessories, Vitajuwel drinkware, and Abelssoft utilities.
 - Kept gift cards, coupons, memberships and installation services outside the physical-product taxonomy.
 - Added multilingual product signals for French 3D filament listings and Polish product titles.
+
+
+### 9. Manufacturer-verified and multilingual category corrections
+
+- Rexing B1 night-vision binoculars are classified under Sports / Hunting / Outdoor Optics; the adhesive mount and GPS module for Rexing dash cameras are Automotive accessories.
+- SATEL Perfecta is an alarm control panel, not a pet product; Medisept Velox Spray is a medical-surface disinfectant.
+- KOA+ROY Fitness Cube is a post-workout muscle balm; TWO SLASH FOUR Glaze Lip Changer and Strobing Face Cube are makeup products.
+- Added exact paths for hair accessories, wigs, travel guides, scrapbooking paper, eyelid cleansers, mouthwash, alarm panels, dash-camera accessories and night-vision optics.
+- Source references: https://www.rexingusa.com/product/b1-black/ ; https://rexing.com/products/rexing-adhesive-mount-for-v2-pro-ai ; https://www.satel.pl/en/products/intruder-alarms/perfecta/alarm-control-panels/perfecta-16-lte/ ; https://medisept.pl/pobierz-atrybut/CqY2MGTDGOLzlixLNjhspBhx9pt4Brit/pdf/Ulotka%20produktowa%20%28EN%29 ; https://koaroy.com/products/fitness-cube ; https://en.twoslashfour.com/product/glaze-lip-changer-nu-ginger/23/
