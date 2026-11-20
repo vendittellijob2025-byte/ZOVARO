@@ -240,6 +240,7 @@ assert.equal(categoryFor({ name: "General Retailer" }, {
   category: "Beauty & Personal Care",
   sourceCategory: "Electronics"
 }), "Electronics");
+assert.equal(categoryFor({ name: "Model Retailer" }, { title: "Maisto 1:24 Ferrari F40 Diecast Model Car" }), "Toys & Games");
 assert.equal(categoryFor({ name: "eCosmetics.com" }, {
   title: "Be. Professional 1.25 Repairing Argan Oil Vapor Iron With Thermolon Technology Flat Iron",
   sourceCategory: "Toys & Games"
