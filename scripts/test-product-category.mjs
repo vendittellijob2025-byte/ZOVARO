@@ -184,6 +184,7 @@ const cases = [
   ["Vacation Arizona Lip Balms 3Pc", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Nuda Self Tan Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Teaology Yoga Care Radiance Butter Shower Scrub", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
+  ["Clinique Smart Custom-Repair Eye Treatment", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Instant Firmx Temporary Face Tightener Cream", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
   ["Rexing Hard Travel Case Replacement", "Travel"],
   ["Millefiori Icon Classic Car Air Freshener", "Automotive"]
@@ -366,6 +367,7 @@ const subcategoryCases = [
   ["Fashion", "Nike Women's Running Leggings", "Women's Clothing"],
   ["Fashion", "Men's Denim Jeans", "Clothing > Jeans & Trousers"],
   ["Beauty", "Espoir Fresh Setting Powder", "Makeup > Face Makeup"],
+  ["Beauty", "Clinique Smart Custom-Repair Eye Treatment", "Skincare > Eye Care"],
   ["Beauty", "Instant Firmx Temporary Face Tightener Cream", "Skincare > Face Skincare"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],
