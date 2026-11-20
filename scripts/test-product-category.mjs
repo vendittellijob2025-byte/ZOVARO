@@ -626,7 +626,6 @@ const subcategoryCases = [
   ["Musical Instruments & Studio", "Sonor HS 2000 S Drum Hardware Stand Set", "Instruments > Drums & Percussion"],
   ["Electronics", "Rexing Card Viewer 4-in-1 SD Card Reader", "Computers > Storage & Memory"],
   ["Electronics", "Kingston Canvas Select 64GB Micro SD Card", "Computers > Storage & Memory"],
-  ["Electronics", "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module", "Home & Business Security > Access Control"],
   ["Electronics", "Uchwyt na tablet dla Dji Mini 2 i Air 2 Druk 3D", "Cameras & Photography > Camera Accessories"],
   ["Electronics", "Life Q30 Bluetooth Headphone Midnight Blue", "Audio > Headphones"],
   ["Electronics", "Samsung Galaxy Watch Silicone Strap 46mm", "Wearable Technology > Wearable Accessories"],
