@@ -346,6 +346,7 @@ assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcateg
 const subcategoryCases = [
   ["Gaming", "PlayStation 5 Slim Console", "Consoles > PlayStation"],
   ["Gaming", "Xbox Series X Console", "Consoles > Xbox"],
+  ["Electronics", "Anker Nano Power Bank (5K, MagGo, Slim) Sky Blue", "Phones & Tablets > Power Banks & Portable Chargers"],
   ["Electronics", "Samsung Galaxy S26 Smartphone", "Phones & Tablets > Smartphones > Samsung Galaxy"],
   ["Electronics", "Apple iPhone 17 Pro", "Phones & Tablets > Smartphones > Apple iPhone"],
   ["Electronics", "Apple iPad Air Tablet", "Phones & Tablets > Tablets > Apple iPad"],
@@ -363,6 +364,7 @@ const subcategoryCases = [
   ["Fashion", "Cotton T-Shirt", "Clothing > T-Shirts & Tops"],
   ["Fashion", "Nike Women's Running Leggings", "Women's Clothing"],
   ["Fashion", "Men's Denim Jeans", "Clothing > Jeans & Trousers"],
+  ["Beauty", "Espoir Fresh Setting Powder", "Makeup > Face Makeup"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],
   ["Luxury & Prestige", "Ferrari 296 GTB", "Luxury Cars & Hypercars > Ferrari"],
