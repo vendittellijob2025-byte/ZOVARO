@@ -371,7 +371,7 @@ const subcategoryCases = [
   ["Fashion", "Men's Denim Jeans", "Clothing > Jeans & Trousers"],
   ["Beauty", "Espoir Fresh Setting Powder", "Makeup > Face Makeup"],
   ["Beauty", "Divine Youth Oil by L'Occitane for Unisex", "Skincare > Face Skincare"],
-  ["Beauty", "Clinique Smart Custom-Repair Eye Treatment", "Skincare > Eye Care"],
+  ["Beauty", "Clinique Smart Custom-Repair Eye Treatment", "Skincare > Eye Treatments"],
   ["Beauty", "Instant Firmx Temporary Face Tightener Cream", "Skincare > Face Skincare"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],
@@ -391,6 +391,7 @@ const subcategoryFailures = [];
 for (const [category, title, expected] of subcategoryCases) {
   const actual = subcategoryFor(category, { title, englishTitle: title });
   if (actual !== expected) subcategoryFailures.push({ category, title, expected, actual });
+  assert.equal(treeHasPath(category, expected), true, "Missing browse-tree path: " + category + " > " + expected + " (" + title + ")");
 }
 console.log(JSON.stringify({ subcategoryTestCount: subcategoryCases.length, subcategoryFailures }, null, 2));
 if (subcategoryFailures.length) throw new Error("Product subcategory tests failed: " + subcategoryFailures.length);

@@ -12,15 +12,7 @@ on:
       - main
     paths:
       - "scripts/sync-cj-advertisers.mjs"
-      - "scripts/reclassify-catalog-categories.mjs"
-      - "scripts/validate-product-category-rules.mjs"
-      - "scripts/test-product-category.mjs"
-      - "scripts/report-category-coverage.mjs"
-      - "lib/product-category.js"
-      - "lib/category-taxonomy.js"
-      - "scripts/translate-to-english.mjs"
       - "app-cj-loader.js"
-      - ".github/workflows/cj-products.yml"
 
 permissions:
   contents: write
