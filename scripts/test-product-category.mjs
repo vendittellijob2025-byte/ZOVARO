@@ -332,6 +332,8 @@ for (const [title, category, subcategory] of [...autoCases, ...departmentCases])
 }
 console.log("Amazon.it browse-tree path integrity passed (" + (autoCases.length + departmentCases.length) + " paths).");
 
+assert.equal(categoryFor({ name: "General Retailer" }, { title: "Etui na Ramię do Biegania Samsung S10 S20 Fe S21" }), "Sports");
+assert.equal(categoryFor({ name: "General Retailer" }, { title: "BRUNO MARC CrossFlex Lite Polish Men’s Non Slip Smart Casual Oxfords" }), "Fashion");
 console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2 + departmentCases.length * 2) + " checks).");
 
 assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.62,margin:0.21}),"Beauty");
