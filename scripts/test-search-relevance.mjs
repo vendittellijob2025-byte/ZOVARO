@@ -6,7 +6,7 @@ const source = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
 const start = source.indexOf("const SEARCH_SYNONYMS = Object.freeze({");
 const end = source.indexOf("\n$(\"#searchForm\").addEventListener", start);
 assert.ok(start >= 0 && end > start, "Search relevance block must exist");
-const isolated = source.slice(start, end) + "\nglobalThis.searchTestApi = { scoreProductSearch };";
+const isolated = source.slice(start, end) + "\nglobalThis.searchTestApi = { scoreProductSearch, tokenizeSearchQuery, normalizeSearchText, searchTokenForms, violatesSearchIntent };";
 const context = vm.createContext({});
 vm.runInContext(isolated, context);
 const score = (title, query, category = "Electronics", subcategory = "") =>
@@ -14,7 +14,7 @@ const score = (title, query, category = "Electronics", subcategory = "") =>
     name: title, title, englishTitle: title, category, subcategory
   }, [query]);
 
-assert.ok(score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25") > 0,
+console.log("DEBUG", context.searchTestApi.tokenizeSearchQuery("Samsung Galaxy S25"), context.searchTestApi.normalizeSearchText("Samsung Galaxy S25 Ultra 256GB"), score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25"));\nassert.ok(score("Samsung Galaxy S25 Ultra 256GB", "Samsung Galaxy S25") > 0,
   "Exact model query should find the product");
 assert.equal(score("Samsung Galaxy S25 Silicone Case", "Samsung Galaxy S25"), 0,
   "A model search must not return its case");
