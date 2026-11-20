@@ -152,3 +152,12 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Added explicit title-based root corrections for ETUDE sunscreen, ABOUT_TONE face powder, Clarinsmen moisturizer, Fwee lip colour, Bioliq skincare, makeup brushes, Moleskine notebooks, bike bottle cages, oral-care products, guitar accessories, board games, dash-camera accessories and craft supplies.
 - Added exact subcategory rules using existing taxonomy paths for beauty, sports, music/books, oral hygiene, bags, charging, remote controls and camera accessories.
 - Added only the missing browse leaves required for toiletry bags, TV remote controls, office desk accessories and drum hardware; other mappings reuse existing taxonomy branches.
+
+
+### 14. Safe root-Other reductions from product identity evidence
+
+- Moved clearly identifiable books and recorded music to Books & Media, including Jane Austen titles, Polish literature, children's books and CD releases.
+- Moved family/children's card and board games to Toys & Games.
+- Identified AESTURA, ILLIYOON, Espoir, Innisfree and Mamonde skincare/makeup products as Beauty.
+- Identified berberine supplements and ankle-support products as Health & Wellness, fishing lures as Sports, gate automation kits as Home & Living, Steam keys as Gaming and horse-head keychains as Fashion.
+- Left coupons, memberships, installation services and other non-merchandise entries in Other rather than forcing them into product categories.

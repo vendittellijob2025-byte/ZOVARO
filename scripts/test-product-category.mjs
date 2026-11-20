@@ -285,6 +285,16 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pride And Prejudice Jane Austen", sourceCategory: "Other" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "How to set up an online store? Krzysztof Bartnik", sourceCategory: "Other" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Maria Konopnicka Dzieciom", sourceCategory: "Other" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Karty Piotruś Kraina Lodu 2 Trefl 08483", sourceCategory: "Other" }), "Toys & Games");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "AESTURA Atobarrier 365 Hydro Soothing Cream 60ml", sourceCategory: "Other" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Yango Berberyna Premium 90 Kapsułek", sourceCategory: "Other" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb", sourceCategory: "Other" }), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa", sourceCategory: "Other" }), "Home & Living");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Nostradamus: The Last Prophecy Steam Key Klucz Kod", sourceCategory: "Other" }), "Gaming");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Breloczek karabińczyk głowa konia zielony", sourceCategory: "Other" }), "Fashion");
 assert.equal(categoryFor({ name: "Amore Mall" }, { title: "[1+1] ETUDE Sunprise Mild Watery Light Duo Set", sourceCategory: "Toys & Games" }), "Beauty");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Notatnik Passion Journal Baby Moleskine L", sourceCategory: "Babies" }), "Office & Technology");
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Fwee Blurry Pudding Pot Pk01 Baby Soft Pink", sourceCategory: "Babies" }), "Beauty");
@@ -572,6 +582,18 @@ const subcategoryCases = [
   ["Electronics", "Uchwyt Na Tablet Telefon Do Dji Phantom 2 3 Se", "Cameras & Photography > Camera Accessories"],
   ["Office & Technology", "Notatnik Passion Journal Baby Moleskine L", "Office Supplies > Desk Accessories"],
   ["Toys & Games", "Secret Life of Pets 3D Game Snakes and Ladders Gra", "Board Games & Puzzles > Board Games"],
+  ["Books & Media", "Pride And Prejudice Jane Austen", "Books > Fiction"],
+  ["Books & Media", "How to set up an online store? Krzysztof Bartnik", "Books > Business & Finance"],
+  ["Books & Media", "Maria Konopnicka Dzieciom", "Books > Children's Books"],
+  ["Toys & Games", "Karty Piotruś Kraina Lodu 2 Trefl 08483", "Board Games & Puzzles > Card Games"],
+  ["Beauty", "AESTURA Atobarrier 365 Hydro Soothing Cream 60ml", "Skincare > Moisturizers"],
+  ["Beauty", "Espoir Protailor Be Glow Sheer Powder", "Makeup > Face Makeup"],
+  ["Health & Wellness", "Yango Berberyna Premium 90 Kapsułek", "Nutrition > Vitamins, Minerals & Supplements"],
+  ["Health & Wellness", "Cep Ortho Opaska na kostkę rozmiar V 26-28cm", "Medical Devices & Equipment > Compression Garments"],
+  ["Sports", "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb", "Fishing > Baits & Lures"],
+  ["Home & Living", "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa", "Home Improvement > Electrical"],
+  ["Gaming", "Nostradamus: The Last Prophecy Steam Key Klucz Kod", "Video Games > Digital Games & Gift Cards"],
+  ["Fashion", "Breloczek karabińczyk głowa konia zielony", "Accessories > Keychains & Key Rings"],
   ["Beauty", "Dedcool Madonna Lilly Black Pepper Sandalwood Bergamot 1.7Oz", "Fragrances & Perfumes"],
   ["Beauty", "Andis Cool Care Plus 5-In-1 Clipper Blade Cleaner And Lubricant 15.5Oz", "Hair Care > Hair Styling Tools"],
   ["Beauty", "Woodys Beard And Tattoo Oil 1Oz", "Skincare > Body Skincare"],
