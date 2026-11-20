@@ -1,0 +1,26 @@
+name: Search relevance regression tests
+
+on:
+  push:
+    branches:
+      - fix/strict-product-search-relevance
+  pull_request:
+    branches:
+      - main
+    paths:
+      - app.js
+      - scripts/test-search-relevance.mjs
+      - .github/workflows/search-relevance-tests.yml
+
+jobs:
+  search-relevance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run product search regression tests
+        run: node scripts/test-search-relevance.mjs
