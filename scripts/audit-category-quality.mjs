@@ -21,6 +21,8 @@ let mismatches = 0;
 let invalidSubcategoryPaths = 0;
 let unclassifiedProducts = 0;
 const invalidSubcategoryExamples = [];
+const unclassifiedByCategory = new Map();
+const unclassifiedExamplesByCategory = new Map();
 
 for (const product of catalog.products) {
   if (!product || typeof product !== "object") continue;
@@ -40,6 +42,9 @@ for (const product of catalog.products) {
       id: product.id || "",
       title: product.title || "",
       advertiser: product.advertiserName || "",
+      category: product.category || "Other",
+      subcategory: product.subcategory || "Other",
+      classificationStatus: product.classificationStatus || "",
       productType: product.productType || "",
       googleProductCategory: product.googleProductCategory || "",
       sourceCategory: product.sourceCategory || "",
@@ -58,7 +63,26 @@ for (const product of catalog.products) {
       subcategory, expectedSubcategory, reason: "subcategory_classifier_mismatch"
     });
   }
-  if (!subcategory || subcategory === "Other" || actual === "Other") unclassifiedProducts++;
+  if (!subcategory || subcategory === "Other" || actual === "Other") {
+    unclassifiedProducts++;
+    const root = actual || "Other";
+    unclassifiedByCategory.set(root, (unclassifiedByCategory.get(root) || 0) + 1);
+    const samples = unclassifiedExamplesByCategory.get(root) || [];
+    if (samples.length < 8) {
+      samples.push({
+        id: product.id || "",
+        title: product.title || "",
+        advertiser: product.advertiserName || "",
+        category: actual,
+        subcategory,
+        classificationStatus: product.classificationStatus || "",
+        productType: product.productType || "",
+        googleProductCategory: product.googleProductCategory || "",
+        sourceCategory: product.sourceCategory || ""
+      });
+      unclassifiedExamplesByCategory.set(root, samples);
+    }
+  }
   const rootExists = taxonomyRoots.has(actual) || actual === "Other";
   const subcategoryValid = !subcategory || subcategory === "Other" || (() => {
     const root = taxonomy.categories.find(item => item.name === actual);
@@ -108,6 +132,8 @@ const auditReport = {
   otherExamples,
   invalidSubcategoryPaths,
   unclassifiedProducts,
+  unclassifiedByCategory: Object.fromEntries([...unclassifiedByCategory].sort((a,b) => b[1] - a[1])),
+  unclassifiedExamplesByCategory: Object.fromEntries([...unclassifiedExamplesByCategory].sort((a,b) => (unclassifiedByCategory.get(b[0]) || 0) - (unclassifiedByCategory.get(a[0]) || 0))),
   imageAuditedProducts: imageReport.results?.length || 0,
   visualRootOverrides: catalog.products.filter(product => product.visualCategoryEvidence?.source === "CLIP zero-shot image classification").length,
   invalidSubcategoryExamples
@@ -119,6 +145,7 @@ console.log("Category quality audit: " + JSON.stringify({
   mismatches,
   invalidSubcategoryPaths,
   unclassifiedProducts,
+  unclassifiedByCategory: [...unclassifiedByCategory].sort((a,b) => b[1] - a[1]).slice(0, 12).map(([category, count]) => ({ category, count, examples: (unclassifiedExamplesByCategory.get(category) || []).slice(0, 3) })),
   examples: examples.slice(0, 10),
   invalidSubcategoryExamples: invalidSubcategoryExamples.slice(0, 10)
 }));
