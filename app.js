@@ -945,11 +945,11 @@ const SEARCH_INTENT_EXCLUSIONS = [
     exclude:["projector","projectors","antenna","amplifier","mount","mounts","stand","stands","remote","remote control","cable","cables","adapter","adapters","power supply","replacement","wall bracket","screen protector"]
   },
   {
-    terms:["phone","phones","smartphone","smartphones","cellulare","cellulari","telefono","telefoni","iphone","galaxy","pixel","macbook"],
+    terms:["phone","phones","smartphone","smartphones","cellulare","cellulari","telefono","telefoni","iphone","galaxy","pixel"],
     exclude:["mount","mounts","holder","holders","clamp","case","cases","cover","covers","charger","chargers","cable","cables","screen protector","battery","batteries","repair","replacement","parts","web development","projector","tripod"]
   },
   {
-    terms:["computer","computers","pc","laptop","laptops","notebook","notebooks","desktop","desktops"],
+    terms:["computer","computers","pc","laptop","laptops","notebook","notebooks","desktop","desktops","macbook"],
     exclude:["keyboard","keyboards","mouse","mice","power bank","powerbank","charger","chargers","cable","cables","sticker","stickers","case","cases","sleeve","sleeves","stand","stands","dock","docking station","memory","ram","ssd","hard drive","adapter","adapters","replacement","parts"]
   },
   {
