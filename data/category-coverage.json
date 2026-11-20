@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T07:10:12.881Z",
+  "generatedAt": "2026-11-20T10:55:25.651Z",
   "selectedProductCount": 20872,
   "inventoryProductCount": 201466,
   "uniqueAdvertiserCount": 24,
@@ -531,7 +531,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1845,
+      "productCount": 1846,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -796,14 +796,14 @@
         {
           "name": "Rims & Tires",
           "path": "Rims & Tires",
-          "productCount": 121,
+          "productCount": 122,
           "directProductCount": 0,
           "children": [
             {
               "name": "Car Tires",
               "path": "Rims & Tires > Car Tires",
-              "productCount": 31,
-              "directProductCount": 31,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
@@ -2640,8 +2640,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 405,
-      "unclassifiedProductCount": 49,
+      "productCount": 402,
+      "unclassifiedProductCount": 43,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2824,8 +2824,8 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 53,
-          "directProductCount": 22,
+          "productCount": 54,
+          "directProductCount": 23,
           "children": [
             {
               "name": "Laptops",
@@ -3260,7 +3260,7 @@
         {
           "name": "Wearable Technology",
           "path": "Wearable Technology",
-          "productCount": 14,
+          "productCount": 16,
           "directProductCount": 0,
           "children": [
             {
@@ -3287,8 +3287,8 @@
             {
               "name": "Wearable Accessories",
               "path": "Wearable Technology > Wearable Accessories",
-              "productCount": 14,
-              "directProductCount": 14,
+              "productCount": 16,
+              "directProductCount": 16,
               "children": []
             }
           ]
@@ -8174,8 +8174,8 @@
     },
     {
       "name": "Sports",
-      "productCount": 1811,
-      "unclassifiedProductCount": 373,
+      "productCount": 1809,
+      "unclassifiedProductCount": 364,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8557,8 +8557,8 @@
         {
           "name": "Soccer",
           "path": "Soccer",
-          "productCount": 10,
-          "directProductCount": 1,
+          "productCount": 12,
+          "directProductCount": 3,
           "children": [
             {
               "name": "Soccer Balls",
@@ -8665,14 +8665,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 357,
+          "productCount": 356,
           "directProductCount": 0,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 355,
-              "directProductCount": 355,
+              "productCount": 354,
+              "directProductCount": 354,
               "children": []
             },
             {
@@ -8932,8 +8932,8 @@
         {
           "name": "Fitness & Gym",
           "path": "Fitness & Gym",
-          "productCount": 20,
-          "directProductCount": 1,
+          "productCount": 26,
+          "directProductCount": 5,
           "children": [
             {
               "name": "Weights & Dumbbells",
@@ -8966,8 +8966,8 @@
             {
               "name": "Cardio Machines",
               "path": "Fitness & Gym > Cardio Machines",
-              "productCount": 2,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 1,
               "children": [
                 {
                   "name": "Treadmills",
@@ -9009,14 +9009,14 @@
             {
               "name": "Yoga & Pilates",
               "path": "Fitness & Gym > Yoga & Pilates",
-              "productCount": 16,
-              "directProductCount": 8,
+              "productCount": 15,
+              "directProductCount": 9,
               "children": [
                 {
                   "name": "Yoga Mats",
                   "path": "Fitness & Gym > Yoga & Pilates > Yoga Mats",
-                  "productCount": 6,
-                  "directProductCount": 6,
+                  "productCount": 4,
+                  "directProductCount": 4,
                   "children": []
                 },
                 {
@@ -9038,8 +9038,8 @@
             {
               "name": "Exercise Mats",
               "path": "Fitness & Gym > Exercise Mats",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             }
           ]
@@ -10564,8 +10564,8 @@
     },
     {
       "name": "Travel",
-      "productCount": 105,
-      "unclassifiedProductCount": 50,
+      "productCount": 109,
+      "unclassifiedProductCount": 54,
       "browseTree": [
         {
           "name": "Luggage",
@@ -10866,9 +10866,9 @@
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 362,
     "emptyTaxonomyNodeCount": 1118,
-    "productsWithKnownSubcategory": 15307,
+    "productsWithKnownSubcategory": 15318,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5565,
+    "productsWithoutSubcategory": 5554,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10884,7 +10884,7 @@
       },
       {
         "category": "Sports",
-        "count": 373
+        "count": 364
       },
       {
         "category": "Health & Wellness",
@@ -10911,20 +10911,20 @@
         "count": 73
       },
       {
+        "category": "Travel",
+        "count": 54
+      },
+      {
         "category": "Food & Grocery",
         "count": 54
       },
       {
-        "category": "Travel",
-        "count": 50
+        "category": "Pets",
+        "count": 46
       },
       {
         "category": "Electronics",
-        "count": 49
-      },
-      {
-        "category": "Pets",
-        "count": 46
+        "count": 43
       },
       {
         "category": "Musical Instruments & Studio",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5565,
-      "provisional": 15307
+      "needs_classification": 5554,
+      "provisional": 15318
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10987,7 +10987,7 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 355
+        "productCount": 354
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
@@ -11239,7 +11239,7 @@
       },
       {
         "path": "Automotive > Rims & Tires > Car Tires",
-        "productCount": 31
+        "productCount": 32
       },
       {
         "path": "Home & Living > Furniture > Living Room Furniture",
@@ -11290,12 +11290,12 @@
         "productCount": 24
       },
       {
-        "path": "Sports > Padel > Padel Accessories",
+        "path": "Electronics > Computers",
         "productCount": 23
       },
       {
-        "path": "Electronics > Computers",
-        "productCount": 22
+        "path": "Sports > Padel > Padel Accessories",
+        "productCount": 23
       },
       {
         "path": "Electronics > Phones & Tablets > Smartphones > Samsung Galaxy",
@@ -11338,6 +11338,10 @@
         "productCount": 17
       },
       {
+        "path": "Electronics > Wearable Technology > Wearable Accessories",
+        "productCount": 16
+      },
+      {
         "path": "Fashion > Shoes > Kids' Shoes",
         "productCount": 16
       },
@@ -11347,10 +11351,6 @@
       },
       {
         "path": "Books & Media > Music > CDs",
-        "productCount": 15
-      },
-      {
-        "path": "Security & Safety > Home & Business Security > Access Control",
         "productCount": 15
       }
     ],
@@ -13052,7 +13052,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Srebrna Stalowa Bransoleta Samsung Galaxy Watch Active 2 40mm (Tech-Band)",
+        "title": "Silver Steel Bracelet Samsung Galaxy Watch Active 2 40mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13062,7 +13062,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Brązowa Bransoleta do Samsung Galaxy Watch 42mm",
+        "title": "Brown Bracelet for Samsung Galaxy Watch 42mm",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13082,7 +13082,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Wysoko wydajny Python. Efektywne programowanie",
+        "title": "High performance Python. Effective programming",
         "brand": "Helion",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13092,27 +13092,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Różowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
-        "brand": "Tech-Band",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h2>Różowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)</h2><h2>SAMSUNG GALAXY WATCH 46mm | SZEROKOŚĆ 22mm | ROZMIAR L |&nbsp; TECH-BAND |</h2><h1>✅ TECH-BAND - Pasek do Samsung Gal",
-        "category": "Electronics"
-      },
-      {
-        "title": "Różowy pasek do Samsung Galaxy Watch 46MM",
-        "brand": "Tech-Band",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>TECH-BAND SIMILAR SAMSUNG</h1><h1>DESIGN GALAXY WATCH 46mm</h1><h2>PASEK PRZEZNACZONY DO MODELU SAMSUNG GALAXY WATCH 46mm</h2><p>Silikonowy pasek inspirowany oryginalnym design",
-        "category": "Electronics"
-      },
-      {
-        "title": "Nakamichi Opaska rzepowa do organizacji kabli 5m",
+        "title": "Nakamichi Velcro tie for organizing 5m cables",
         "brand": "Nakamichi",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13142,7 +13122,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Mocna Latarka Led XHP160 6000LM 800M 2x 26650",
+        "title": "Powerful LED Flashlight XHP160 6000LM 800M 2x 26650",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13152,17 +13132,17 @@
         "category": "Electronics"
       },
       {
-        "title": "Organizer Podróżny Kabli I Ładowarek Na Zamek",
+        "title": "Zippered travel organizer for cables and chargers",
         "brand": "Blue Collection",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<p>Firma <b>Gifts24</b> zaprasza na swoją aukcję z gadżetami &nbsp;dla domu &nbsp;. Posiadamy specjalnie wybraną grupę produktów do użytku dla domu w kuchni, garażu czy też w wolny",
-        "category": "Electronics"
+        "category": "Travel"
       },
       {
-        "title": "Satel Alarm System Bezprzewodowy Perfecta 16 Lte 4 Czujki MPD-310 Aplikacja",
+        "title": "Satel Alarm Wireless System Perfecta 16 Lte 4 Detectors MPD-310 Application",
         "brand": "Satel",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13172,24 +13152,24 @@
         "category": "Electronics"
       },
       {
-        "title": "Podróżny Organizer Etui Na Kable, Karty Pamięci",
+        "title": "Travel Organizer for Cables, Memory Cards",
         "brand": "Blue Collection",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<p>Firma <b>Gifts24</b> zaprasza na swoją aukcję z gadżetami &nbsp;dla domu &nbsp;. Posiadamy specjalnie wybraną grupę produktów do użytku dla domu w kuchni, garażu czy też w wolny",
-        "category": "Electronics"
+        "category": "Travel"
       },
       {
-        "title": "Organizer Podróżny Kabli I Ładowarek Na Zamek",
+        "title": "Zippered travel organizer for cables and chargers",
         "brand": "Blue Collection",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<p>Firma <b>Gifts24</b> zaprasza na swoją aukcję z gadżetami &nbsp;dla domu &nbsp;. Posiadamy specjalnie wybraną grupę produktów do użytku dla domu w kuchni, garażu czy też w wolny",
-        "category": "Electronics"
+        "category": "Travel"
       },
       {
         "title": "Lampa camping Ledlenser ML6 Connect Wl Bluetooth",
@@ -13202,17 +13182,17 @@
         "category": "Electronics"
       },
       {
-        "title": "Organizer Podróżny Do Kabli I Ładowarek Na Zamek",
+        "title": "Zipped Travel Organizer for Cables and Chargers",
         "brand": "Blue Collection",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<p>Firma <b>Gifts24</b> zaprasza na swoją aukcję z gadżetami &nbsp;dla domu &nbsp;. Posiadamy specjalnie wybraną grupę produktów do użytku dla domu w kuchni, garażu czy też w wolny",
-        "category": "Electronics"
+        "category": "Travel"
       },
       {
-        "title": "Zestaw Alarmowy Perfecta 16 Lte Set Wrl 6 Czujek Bosch Sms Syrena Aplikacja",
+        "title": "Perfecta 16 Lte Set Wrl Alarm Set 6 Bosch Sms Sensors Siren Application",
         "brand": "Satel",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13222,7 +13202,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Zestaw Gumy Fitness taśmy do ćwiczeń Hip Band 3W1 3 gumy EbFit",
+        "title": "Set of Fitness Elastics, Hip Band 3in1 exercise bands, 3 EbFit rubbers",
         "brand": "Eb Fit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13232,7 +13212,7 @@
         "category": "Sports"
       },
       {
-        "title": "Pokrowiec mic-cb1 na statyw mikrofonowy athletic",
+        "title": "Mic-cb1 cover for athletic microphone stand",
         "brand": "Athletic",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13242,27 +13222,7 @@
         "category": "Sports"
       },
       {
-        "title": "Platinum Fitness Hantla Neoprenowa Neopren 1 kg Hantelka Do Ćwiczeń",
-        "brand": "Platinum Fitness",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Hantla żeliwna w osłonie neoprenowej 1kg - Platinum Fitness</h1>\n<p>Hantle wykonane zostały z wysokiej jakości żeliwa z dbałością o najmniejszy szczegół. Pokryte zostały warstw",
-        "category": "Sports"
-      },
-      {
-        "title": "Platinum Fitness Hantla Żeliwna 15kg Hantle Sztanga Gryf Regulowana",
-        "brand": "Platinum Fitness",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Hantla żeliwna regulowana 15kg/28mm Platinum Fitness</h1><h1>Najwyższej jakości żeliwo!</h1><p>Hantla składa się z żeliwnego obciążenia, które&nbsp;<b>zabezpieczone zostało prz",
-        "category": "Sports"
-      },
-      {
-        "title": "Termoaktywna Koszulka Sport Męska Damska Brubeck",
+        "title": "Thermoactive Sports T-shirt for Men and Women Brubeck",
         "brand": "Brubeck",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13272,7 +13232,7 @@
         "category": "Sports"
       },
       {
-        "title": "Termoaktywna Koszulka Sport Męska Damska Brubeck S",
+        "title": "Thermoactive Sport T-shirt Men's Women's Brubeck S",
         "brand": "Brubeck",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13342,17 +13302,7 @@
         "category": "Sports"
       },
       {
-        "title": "Czapka Termoaktywna Treningowa Drużyna Piłkarska Herb Klubu Sport",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>CZAPKA TERMOAKTYWNA Z HERBEM KLUBU</h1><h2>Idealna ochrona i komfort podczas sportowych aktywności.</h2><p>Czapka dostępna w dwóch rozmiarach:</p><ul><li>JUNIOR</li><li>SENIOR<",
-        "category": "Sports"
-      },
-      {
-        "title": "D370 Under Armour Bluzka Damska Fitness S",
+        "title": "D370 Under Armor Women's Fitness Blouse S",
         "brand": "Under Armour",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13362,7 +13312,7 @@
         "category": "Sports"
       },
       {
-        "title": "Świnka Peppa Ćwiczę z Peppą 7 Poznaję sport Kd",
+        "title": "Peppa Pig I exercise with Peppa 7 I learn about sports Kd",
         "brand": "Media Service Zawada",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13372,27 +13322,7 @@
         "category": "Sports"
       },
       {
-        "title": "Hantle Ciężarki 2 x 2 kg Powlekane Gumą ciężarek Fitness Trening ćwiczenia",
-        "brand": "Kaytan",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p>Witamy Serdecznie ! Informujemy, iż oferujemy ten poniższy produkt nowy i oryginalny!</p> <p>Zapraszamy do zakupów!</p> <h1>Zestaw hantli 2 x 2 kg</h1> <p>Czy jesteś w domu i na",
-        "category": "Sports"
-      },
-      {
-        "title": "Czapka Termoaktywna Treningowa Drużyna Piłkarska Herb Klubu Sport",
-        "brand": "Strefa Reklamy",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>CZAPKA TERMOAKTYWNA Z HERBEM I NAZWĄ KLUBU</h1><h2>Idealna ochrona i komfort podczas sportowych aktywności.</h2><p>Czapka dostępna w dwóch rozmiarach:</p><ul><li>JUNIOR</li><li",
-        "category": "Sports"
-      },
-      {
-        "title": "Adidas Sport Fight koszulka Polo rozm. XL",
+        "title": "Adidas Sport Fight Polo T-shirt, size XL",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13402,7 +13332,7 @@
         "category": "Sports"
       },
       {
-        "title": "Duży Bidon Niebieski Dla Treningowy Siłownia Sport ION8 1 Litr",
+        "title": "Large Blue Water Bottle For Training Gym Sport ION8 1 ​​Liter",
         "brand": "Ion8",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13422,7 +13352,7 @@
         "category": "Sports"
       },
       {
-        "title": "M&s Sportowa Damska Czarna Bluzka Różowy Top Fitness Kobieca Koszulka Xs 34",
+        "title": "M&s Women's Sports Black Blouse Pink Top Fitness Women's T-Shirt Xs 34",
         "brand": "Marks & Spencer",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13432,17 +13362,7 @@
         "category": "Sports"
       },
       {
-        "title": "Bidon Szczelny Lekki Duży Sport Rower Siłownia Szkoła Joga Róż ION8 1 Litr",
-        "brand": "Ion8",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Oryginalny bidon na wodę ION8®</h1>\n<ul><li><b>Szczelny</b> - idealny do plecaka, torby czy torebki</li><li><b>Potrójne zabezpieczenie </b>przed przypadkowym otwarciem</li><li>",
-        "category": "Sports"
-      },
-      {
-        "title": "Joma Koszulka Sport. T-shirt Combi Czarna 4XS-3XS",
+        "title": "Joma Sport T-shirt. Combi T-shirt Black 4XS-3XS",
         "brand": "Joma",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13452,17 +13372,7 @@
         "category": "Sports"
       },
       {
-        "title": "Athletic kb-6 statyw stabilny keyboardowy +ława",
-        "brand": "Athletic",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Statyw keyboardowy KB-6</h1><p>Standardowy statywy keyboardowe przeznaczone pod lekkie instrumenty klawiszowe, polecane dla początkujących klawiszowców.</p><p>Statyw posiada si",
-        "category": "Sports"
-      },
-      {
-        "title": "Gumy oporowe do ćwiczeń 5szt – ekspander fitness",
+        "title": "Resistance bands for exercise, 5 pieces - fitness expander",
         "brand": "Minexo",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13472,17 +13382,7 @@
         "category": "Sports"
       },
       {
-        "title": "Skakanka Mp Sport Crossfit Stalowa Łożyska 3m Boks Fitness Regulowana",
-        "brand": "MP Sport",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>SKAKANKA CROSSFIT FITNESS BOKS siłownia STALOWA Z ŁOŻYSKAMI DO ĆWICZEŃ 3m</h1><p>⭐ 3-metrowa <b>skakanka treningowa</b></p><p>⭐ Posiada <b>metalowe łożysko</b> ułatwiające ruch",
-        "category": "Sports"
-      },
-      {
-        "title": "Gryf krótki prosty gładki 28 mm 40 cm hantle plus zaciski siłownia fitness",
+        "title": "Short, straight, smooth bar, 28 mm, 40 cm, dumbbells plus clamps, fitness gym",
         "brand": "Kawmet",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13492,17 +13392,7 @@
         "category": "Sports"
       },
       {
-        "title": "Taśma Guma Oporowa Treningowa Do Ćwiczeń Fitness",
-        "brand": "Gymtek",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>YELLOW 6.4 x 4.5 x 2080 MM GUMA DO ĆWICZEŃ</h1>\n<p><b>Specyfikacja:</b></p>\n<ul>\n<li>długość: 2080 mm</li>\n<li>szerokość: 6,4 mm</li>\n<li>grubość: 4,5 mm</li>\n<li>Zakres obciąż",
-        "category": "Sports"
-      },
-      {
-        "title": "Bidon Sport Chłopiec Szkoła Przedszkole Dziecko Niebieski ION8 0,5L 500 ml",
+        "title": "Water bottle Sport Boy School Kindergarten Child Blue ION8 0.5L 500 ml",
         "brand": "Ion8",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13512,7 +13402,7 @@
         "category": "Sports"
       },
       {
-        "title": "Jagwire Sport klocki półmetaliczne do Sram Guide T",
+        "title": "Jagwire Sport semi-metallic pads for Sram Guide T",
         "brand": "Jagwire",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -14240,6 +14130,116 @@
         "sourceCategory": "Sports",
         "description": "<h1>Stojak pod Sztangę Dwuczęściowy Marbo-Sport MH-S201 250 kg Regulowany</h1><p><b>Stojaki pod sztangę regulowane (2 sztuki) MH-S201 - Marbo Sport</b></p> <p>Wyposażone w 7-stopni",
         "category": "Sports"
+      },
+      {
+        "title": "Hantelki Do Ćwiczeń Treningu Fitness Wzmocnienie Ciała Obciążenie 2x1 Kg",
+        "brand": "4FIZJO",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>HANTELKI DO ĆWICZEŃ TRENINGU FITNESS WZMOCNIENIE CIAŁA OBCIĄŻENIE 2x1 KG</h1><h2>Hantelki żeliwne do ćwiczeń siłowych 4FIZJO 2 × 1 kg</h2><p>Szukasz hantli do ćwiczeń, z którym",
+        "category": "Sports"
+      },
+      {
+        "title": "Hantelki Do Ćwiczeń Treningu Fitness Wytrzymałe Obciążenie 2x3 Kg",
+        "brand": "4FIZJO",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>HANTELKI DO ĆWICZEŃ TRENINGU FITNESS WYTRZYMAŁE WYGODNE OBCIĄŻENIE 2x3 KG</h1><h2>Hantelki żeliwne do ćwiczeń siłowych 4FIZJO 2 × 2 kg</h2><p>Szukasz hantli do ćwiczeń, z który",
+        "category": "Sports"
+      },
+      {
+        "title": "Platinum Fitness Hantla Hex Gumowana 30LBS (13,5KG) Hexagonalna Żeliwna",
+        "brand": "Platinum Fitness",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Profesjonalna hantla powlekana HEX - 30LBS (~13,5kg)</h1><h1>Najwyższa trwałość!</h1><p>Idealnie zaprojektowane obciążenie którego nie może zabraknąć w żadnej siłowni. Wykonana",
+        "category": "Sports"
+      },
+      {
+        "title": "Śrut H&n Logo Sport 4.5 mm 500 szt.",
+        "brand": "H&N",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Śrut H&amp;N Logo Sport 4.5 mm - 500 szt.</h1>\n<p><b>Producent</b>: H&amp;N</p>\n<p><b>Indeks produktu:</b> 051-015</p>\n<ul><li><b>Stan:</b> Nowe</li></ul><h2>Opis produktu:</h2",
+        "category": "Sports"
+      },
+      {
+        "title": "Kubeczek Menstruacyjny Sport S Shorty Z Kulką",
+        "brand": "MeLuna",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Kubeczek menstruacyjny Me Luna SPORT S SHORTY ciemny fiolet z kulką</h1><h2>Charakterystyka kubeczka menstruacyjnego Me Luna:</h2>\n<ul><li>kubeczek jest <b>wygodny i bezpieczny",
+        "category": "Sports"
+      },
+      {
+        "title": "Nils 11002 Rolki Fitness Regulowane Kauczuk 31-34",
+        "brand": "Nils Extreme",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<p>Informacje o produkcie</p><p>NA11002 Nils Extreme to model łyżworolek przeznaczony dla początkujących oraz średnio zaawansowanych pasjonatów jazdy. Jest połączeniem ciekawego wz",
+        "category": "Sports"
+      },
+      {
+        "title": "Triathlon Potrójna pasja Od pierwszego treningu",
+        "brand": "Pascal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Triathlon. Potrójna pasja. Od pierwszego treningu do mety</h1>\n<p>Autor:Łukasz Remisiewicz</p> <p><b>Triathlon – pływanie, jazda na rowerze, bieganie.</b></p><p><b>Najważniejsz",
+        "category": "Sports"
+      },
+      {
+        "title": "Wędka Berkley E-Motion Casting 1,98m 5-20g",
+        "brand": "Berkley",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Wędka Berkley E-Motion Casting 1,98m 5-20gWędka Berkley E-Motion Casting - 1,98m 5-20g</h1><p> </p> <p>Kategoria: <b>2 elementy</b></p> <p>Producent: <b>Berkley</b></p> <p>Kod ",
+        "category": "Sports"
+      },
+      {
+        "title": "Wędka Berkley E-Motion Spinning 2,74m 10-30g",
+        "brand": "Berkley",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Wędka Berkley E-Motion Spinning 2,74m 10-30gWędka Berkley E-Motion Spinning - 2,74m 10-30g</h1><p> </p> <p>Kategoria: <b>2 elementy</b></p> <p>Producent: <b>Berkley</b></p> <p>",
+        "category": "Sports"
+      },
+      {
+        "title": "Wobler Berkley Stick Floating 3,5cm/1,9g",
+        "brand": "Berkley",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Wobler Berkley Hit Stick Floating 3,5cm/1,9gWobler Berkley Hit Stick Floating 3,5cm/1,9g, Brown Trout</h1><p> </p> <p>Kategoria: <b>Ze sterem</b></p> <p>Producent: <b>Berkley</",
+        "category": "Sports"
+      },
+      {
+        "title": "Wobler Berkley Stick Floating 3,5cm/1,9g",
+        "brand": "Berkley",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Wobler Berkley Hit Stick Floating 3,5cm/1,9gWobler Berkley Hit Stick Floating 3,5cm/1,9g, Rainbow Trout</h1><p> </p> <p>Kategoria: <b>Ze sterem</b></p> <p>Producent: <b>Berkley",
+        "category": "Sports"
       }
     ]
   },
@@ -14313,7 +14313,7 @@
       ],
       "examples": [
         {
-          "title": "Adidas Sport Fight koszulka Polo rozm. XL",
+          "title": "Adidas Sport Fight Polo T-shirt, size XL",
           "brand": "",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14411,7 +14411,7 @@
       ],
       "examples": [
         {
-          "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 7 mm",
+          "title": "Yoga mat, exercise mat, anti-slip, durable Reebok 7 mm",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14420,7 +14420,7 @@
           "description": "<p> </p>  <p>Idealna mata do wszystkich ćwiczeń na ziemi oraz ogólnorozwojowych gwarantująca doskonałą amortyzację i izolacje od podłoża. Perforowana powierzchnia sprawia, że mata "
         },
         {
-          "title": "Mata do ćwiczeń pilates jogi antypoślizgowa wytrzymała Reebok 4 mm błękitna",
+          "title": "Anti-slip, durable, Reebok yoga mat for Pilates yoga exercises, 4 mm, blue",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14429,7 +14429,7 @@
           "description": "<p><b>MATA DO ĆWICZEŃ RAMT-11024BLL</b> to idealne rozwiązanie dla osób praktykujących jogę lub pilates. Jest wykonana z wygodnego i trwałego materiału, który nie przesuwa się po p"
         },
         {
-          "title": "Mata do jogi, ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "title": "Yoga mat, exercise mat, anti-slip, durable Reebok 4 mm",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14438,7 +14438,7 @@
           "description": "<p> </p>  <p>Dwustronna <b>MATA DO JOGI „HELLO HI” RAYG-11030HH</b> to doskonały wybór dla osób praktykujących jogę i ćwiczenia fitness. Jest wykonana z trwałego materiału i posiad"
         },
         {
-          "title": "Mata fitness do jogi ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "title": "Fitness mat for yoga exercises, anti-slip, durable Reebok 4 mm",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14447,7 +14447,7 @@
           "description": "<p><b>MATA DO ĆWICZEŃ RAMT-11024GR</b>L to idealne rozwiązanie dla osób praktykujących jogę lub pilates. Jest wykonana z wygodnego i trwałego materiału, który nie przesuwa się po p"
         },
         {
-          "title": "Mata do jogi, fitness ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "title": "Yoga mat, fitness exercises, non-slip, durable Reebok 4 mm",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
@@ -14456,7 +14456,7 @@
           "description": "<p><b>OPIS PRODUKTU</b></p><ul><li>Wysokiej jakości dwustronna mata do jogi i ćwiczeń fitness</li><li>Mata do ćwiczeń wykonana z wygodnego i trwałego materiału</li><li>Mata nie prz"
         },
         {
-          "title": "2 sztuki mata fitness do ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm",
+          "title": "2 pieces fitness mat for exercise, anti-slip, durable Reebok 4 mm",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
