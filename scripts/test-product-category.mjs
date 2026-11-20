@@ -294,6 +294,9 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Płytka przedsionkowa
 assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing H3 Electronic Animal Caller Trail Cam 2.7K Video + 20MP Photo", sourceCategory: "Electronics" }), "Sports");
 assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing M1S Monocular", sourceCategory: "Electronics" }), "Sports");
 assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing CPW-1 Wireless Apple CarPlay Adapter", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Oakley Flak 2.0 Xl Sports Men's Sunglasses - Oo9188-B559", sourceCategory: "Fashion" }), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Innersense Mini Travel Color Trio Set For Medium Color-Treated Hair 3Pc", sourceCategory: "Travel" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Seyssso Baby Penguin 2 końcówki dla dzieci 0-18m", sourceCategory: "Other" }), "Babies");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module", sourceCategory: "Electronics" }), "Security & Safety");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Funko Pop Tv Umbrella Academy Hazel w/mask 937", sourceCategory: "Electronics" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Prima Soloist 1/4 skrzypce zestaw Białe", sourceCategory: "Toys & Games" }), "Musical Instruments & Studio");
@@ -549,6 +552,13 @@ const subcategoryCases = [
   ["Health & Wellness", "Anker soundcore Eye Mask", "Wellness > Sleep & Relaxation > Sleep Masks"],
   ["Electronics", "FRP Limited Edition Crab Phone Mount", "Phones & Tablets > Phone Mounts & Holders"],
   ["Automotive", "Rexing Tesla to J1772 Charging Adapter", "Car Accessories > Electric Vehicle Charging > Charging Adapters"],
+  ["Automotive", "Rexing CPW-1 Wireless Apple CarPlay Adapter", "Vehicle Electronics > CarPlay & Android Auto"],
+  ["Automotive", "Rexing OBD2 Scanner and Car Code Reader", "Vehicle Tools > Diagnostic Tools"],
+  ["Health & Wellness", "Colodent Biel, na przebarwienia i próchnicę 100ml", "Oral Hygiene > Toothpaste"],
+  ["Beauty", "IGK Good Behavior Juicy Baby Frizz And Flyaway Hair Taming Wand", "Hair Care > Hair Styling Products"],
+  ["Beauty", "Innersense Mini Travel Color Trio Set For Medium Color-Treated Hair 3Pc", "Hair Care > Hair Care Products"],
+  ["Sports", "Odlo Performance Warm men's base layer trousers", "Sports Apparel > Sports Clothing"],
+  ["Sports", "Oakley Flak 2.0 Xl Sports Men's Sunglasses", "Sports Sunglasses > Performance Sunglasses"],
   ["Home & Living", "Vitajuwel Decanter Era Set - Fitness", "Kitchen & Dining > Drinkware"],
   ["Home & Living", "Kanapa rozkładana z funkcją spania", "Furniture > Living Room Furniture"],
   ["Home & Living", "FRP Limited Edition LED Desk Light", "Lighting > Desk Lamps"],

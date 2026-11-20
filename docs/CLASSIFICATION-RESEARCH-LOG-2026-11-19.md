@@ -171,3 +171,10 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Corrected oral-care, orthodontic, supplement, herbal, insect-repellent and surgical-instrument examples into Health & Wellness; hazardous rodent poison remains unclassified for safety.
 - Reclassified children's books, recorded music, DVDs, toys, dice, crochet/candle-making supplies, travel accessories and home furniture/decor to their matching browse paths.
 - Verified Rexing H3 as a trail camera, MyOva MyoPlus as a myo-inositol supplement, Muppy vestibular plates as orthodontic devices, and Omegaregen Sport as a dietary supplement using manufacturer or product-reference sources.
+
+
+### 16. Normalization edge cases and final identity checks
+
+- Normalized mixed-case brand/model strings before applying rules (e.g. CPW-1 becomes "cpw 1", Apple CarPlay becomes "car play").
+- Corrected CPW-1 to Automotive > CarPlay & Android Auto, OBD2 scanners to diagnostic tools, and fuse taps to automotive electrical parts.
+- Corrected the subcategory for Colodent toothpaste, separated IGK styling products from hair-colour masks, and added precise paths for Innersense hair care, Odlo base layers and Oakley performance sunglasses.
