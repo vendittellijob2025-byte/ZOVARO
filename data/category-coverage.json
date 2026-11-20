@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T02:11:46.223Z",
+  "generatedAt": "2026-11-20T02:17:30.799Z",
   "selectedProductCount": 20910,
   "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 995,
+      "productCount": 996,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -421,7 +421,7 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 16,
+          "productCount": 17,
           "directProductCount": 11,
           "children": [
             {
@@ -448,14 +448,14 @@
             {
               "name": "Paper Crafts",
               "path": "Crafts & Creative DIY > Paper Crafts",
-              "productCount": 3,
+              "productCount": 4,
               "directProductCount": 0,
               "children": [
                 {
                   "name": "Scrapbooking",
                   "path": "Crafts & Creative DIY > Paper Crafts > Scrapbooking",
-                  "productCount": 3,
-                  "directProductCount": 3,
+                  "productCount": 4,
+                  "directProductCount": 4,
                   "children": []
                 }
               ]
@@ -516,7 +516,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 2062,
+      "productCount": 2066,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -565,8 +565,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1471,
-          "directProductCount": 1451,
+          "productCount": 1435,
+          "directProductCount": 1415,
           "children": [
             {
               "name": "Interior Accessories",
@@ -874,7 +874,7 @@
         {
           "name": "Vehicle Electronics",
           "path": "Vehicle Electronics",
-          "productCount": 13,
+          "productCount": 84,
           "directProductCount": 0,
           "children": [
             {
@@ -887,8 +887,8 @@
             {
               "name": "Dash Cameras",
               "path": "Vehicle Electronics > Dash Cameras",
-              "productCount": 11,
-              "directProductCount": 11,
+              "productCount": 82,
+              "directProductCount": 82,
               "children": []
             },
             {
@@ -917,8 +917,8 @@
         {
           "name": "Motorcycles, Accessories & Parts",
           "path": "Motorcycles, Accessories & Parts",
-          "productCount": 86,
-          "directProductCount": 31,
+          "productCount": 84,
+          "directProductCount": 29,
           "children": [
             {
               "name": "Motorcycles",
@@ -960,8 +960,8 @@
         {
           "name": "GPS Navigation",
           "path": "GPS Navigation",
-          "productCount": 39,
-          "directProductCount": 39,
+          "productCount": 10,
+          "directProductCount": 10,
           "children": [
             {
               "name": "Car GPS",
@@ -1204,8 +1204,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 587,
-      "unclassifiedProductCount": 111,
+      "productCount": 586,
+      "unclassifiedProductCount": 108,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1519,7 +1519,7 @@
         {
           "name": "Hygiene & Wellness",
           "path": "Hygiene & Wellness",
-          "productCount": 34,
+          "productCount": 36,
           "directProductCount": 0,
           "children": [
             {
@@ -1553,15 +1553,15 @@
             {
               "name": "Baby Grooming",
               "path": "Hygiene & Wellness > Baby Grooming",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Baby Fragrances",
               "path": "Hygiene & Wellness > Baby Fragrances",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             }
           ]
@@ -1816,8 +1816,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 4036,
-      "unclassifiedProductCount": 1428,
+      "productCount": 4038,
+      "unclassifiedProductCount": 1425,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1901,7 +1901,7 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 515,
+          "productCount": 519,
           "directProductCount": 14,
           "children": [
             {
@@ -1921,8 +1921,8 @@
             {
               "name": "Hair Color",
               "path": "Hair Care > Hair Color",
-              "productCount": 63,
-              "directProductCount": 63,
+              "productCount": 67,
+              "directProductCount": 67,
               "children": []
             },
             {
@@ -2206,7 +2206,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 282,
+          "productCount": 283,
           "directProductCount": 0,
           "children": [
             {
@@ -2283,8 +2283,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 152,
-              "directProductCount": 152,
+              "productCount": 153,
+              "directProductCount": 153,
               "children": []
             },
             {
@@ -2307,14 +2307,14 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1342,
-      "unclassifiedProductCount": 313,
+      "productCount": 1355,
+      "unclassifiedProductCount": 299,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 115,
-          "directProductCount": 82,
+          "productCount": 150,
+          "directProductCount": 74,
           "children": [
             {
               "name": "Fiction",
@@ -2354,15 +2354,15 @@
             {
               "name": "Children's Books",
               "path": "Books > Children's Books",
-              "productCount": 27,
-              "directProductCount": 27,
+              "productCount": 33,
+              "directProductCount": 33,
               "children": []
             },
             {
               "name": "Education & Reference",
               "path": "Books > Education & Reference",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 38,
+              "directProductCount": 38,
               "children": []
             },
             {
@@ -2377,14 +2377,14 @@
         {
           "name": "Music",
           "path": "Music",
-          "productCount": 46,
-          "directProductCount": 43,
+          "productCount": 48,
+          "directProductCount": 42,
           "children": [
             {
               "name": "CDs",
               "path": "Music > CDs",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": []
             },
             {
@@ -2406,8 +2406,8 @@
         {
           "name": "Movies & TV",
           "path": "Movies & TV",
-          "productCount": 862,
-          "directProductCount": 677,
+          "productCount": 852,
+          "directProductCount": 667,
           "children": [
             {
               "name": "DVD",
@@ -2587,8 +2587,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 440,
-      "unclassifiedProductCount": 130,
+      "productCount": 434,
+      "unclassifiedProductCount": 124,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2986,8 +2986,8 @@
         {
           "name": "Cameras & Photography",
           "path": "Cameras & Photography",
-          "productCount": 31,
-          "directProductCount": 31,
+          "productCount": 30,
+          "directProductCount": 30,
           "children": [
             {
               "name": "Digital Cameras",
@@ -3086,7 +3086,7 @@
         {
           "name": "TV & Home Theater",
           "path": "TV & Home Theater",
-          "productCount": 6,
+          "productCount": 7,
           "directProductCount": 0,
           "children": [
             {
@@ -3129,6 +3129,13 @@
               "path": "TV & Home Theater > Cables & Accessories",
               "productCount": 6,
               "directProductCount": 6,
+              "children": []
+            },
+            {
+              "name": "Antennas & Accessories",
+              "path": "TV & Home Theater > Antennas & Accessories",
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -3381,8 +3388,8 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1756,
-      "unclassifiedProductCount": 228,
+      "productCount": 1754,
+      "unclassifiedProductCount": 224,
       "browseTree": [
         {
           "name": "Clothing",
@@ -3465,7 +3472,7 @@
         {
           "name": "Women's Clothing",
           "path": "Women's Clothing",
-          "productCount": 8,
+          "productCount": 9,
           "directProductCount": 5,
           "children": [
             {
@@ -3506,8 +3513,8 @@
             {
               "name": "Jackets & Coats",
               "path": "Women's Clothing > Jackets & Coats",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -3629,7 +3636,7 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 1118,
+          "productCount": 1119,
           "directProductCount": 59,
           "children": [
             {
@@ -3686,6 +3693,13 @@
               "path": "Shoes > Slippers",
               "productCount": 89,
               "directProductCount": 89,
+              "children": []
+            },
+            {
+              "name": "Kids' Shoes",
+              "path": "Shoes > Kids' Shoes",
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -3858,20 +3872,20 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 269,
-      "unclassifiedProductCount": 72,
+      "productCount": 264,
+      "unclassifiedProductCount": 69,
       "browseTree": [
         {
           "name": "Pantry Staples",
           "path": "Pantry Staples",
-          "productCount": 137,
+          "productCount": 135,
           "directProductCount": 0,
           "children": [
             {
               "name": "Pasta & Rice",
               "path": "Pantry Staples > Pasta & Rice",
-              "productCount": 137,
-              "directProductCount": 137,
+              "productCount": 135,
+              "directProductCount": 135,
               "children": []
             },
             {
@@ -4697,13 +4711,13 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 619,
-      "unclassifiedProductCount": 288,
+      "productCount": 628,
+      "unclassifiedProductCount": 281,
       "browseTree": [
         {
           "name": "Nutrition",
           "path": "Nutrition",
-          "productCount": 253,
+          "productCount": 262,
           "directProductCount": 0,
           "children": [
             {
@@ -4766,14 +4780,14 @@
             {
               "name": "Weight Management",
               "path": "Nutrition > Weight Management",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 7,
+              "directProductCount": 7,
               "children": []
             },
             {
               "name": "Vitamins, Minerals & Supplements",
               "path": "Nutrition > Vitamins, Minerals & Supplements",
-              "productCount": 213,
+              "productCount": 215,
               "directProductCount": 131,
               "children": [
                 {
@@ -4837,6 +4851,13 @@
                   "path": "Nutrition > Vitamins, Minerals & Supplements > Herbal Supplements",
                   "productCount": 0,
                   "directProductCount": 0,
+                  "children": []
+                },
+                {
+                  "name": "Skin Health",
+                  "path": "Nutrition > Vitamins, Minerals & Supplements > Skin Health",
+                  "productCount": 2,
+                  "directProductCount": 2,
                   "children": []
                 }
               ]
@@ -4975,7 +4996,7 @@
         {
           "name": "Wellness",
           "path": "Wellness",
-          "productCount": 46,
+          "productCount": 48,
           "directProductCount": 0,
           "children": [
             {
@@ -4995,9 +5016,17 @@
             {
               "name": "Massage & Relaxation",
               "path": "Wellness > Massage & Relaxation",
-              "productCount": 0,
+              "productCount": 2,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Massage Guns",
+                  "path": "Wellness > Massage & Relaxation > Massage Guns",
+                  "productCount": 2,
+                  "directProductCount": 2,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Alternative Therapies",
@@ -5041,15 +5070,23 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
               "name": "Hair Health & Treatments",
               "path": "Hair Care > Hair Health & Treatments",
-              "productCount": 0,
+              "productCount": 1,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Hair Loss Treatments",
+                  "path": "Hair Care > Hair Health & Treatments > Hair Loss Treatments",
+                  "productCount": 1,
+                  "directProductCount": 1,
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -5121,7 +5158,7 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 17,
+          "productCount": 21,
           "directProductCount": 0,
           "children": [
             {
@@ -5148,8 +5185,8 @@
             {
               "name": "Mouthwash",
               "path": "Oral Hygiene > Mouthwash",
-              "productCount": 8,
-              "directProductCount": 8,
+              "productCount": 12,
+              "directProductCount": 12,
               "children": []
             },
             {
@@ -5415,7 +5452,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 576,
+      "productCount": 582,
       "unclassifiedProductCount": 5,
       "browseTree": [
         {
@@ -5464,7 +5501,7 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 22,
+          "productCount": 25,
           "directProductCount": 4,
           "children": [
             {
@@ -5505,8 +5542,8 @@
             {
               "name": "Drinkware",
               "path": "Kitchen & Dining > Drinkware",
-              "productCount": 18,
-              "directProductCount": 18,
+              "productCount": 21,
+              "directProductCount": 21,
               "children": []
             },
             {
@@ -5578,7 +5615,7 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 505,
+          "productCount": 508,
           "directProductCount": 505,
           "children": [
             {
@@ -5612,8 +5649,8 @@
             {
               "name": "Decorative Objects",
               "path": "Home Décor > Decorative Objects",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -5621,6 +5658,13 @@
               "path": "Home Décor > Clocks",
               "productCount": 0,
               "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Seasonal Decor",
+              "path": "Home Décor > Seasonal Decor",
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             }
           ]
@@ -5788,7 +5832,7 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1841,
-      "unclassifiedProductCount": 1193,
+      "unclassifiedProductCount": 1186,
       "browseTree": [
         {
           "name": "Industrial Machinery",
@@ -5951,7 +5995,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 404,
+          "productCount": 411,
           "directProductCount": 0,
           "children": [
             {
@@ -5964,15 +6008,15 @@
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 4,
-              "directProductCount": 4,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": []
             },
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 20,
-              "directProductCount": 20,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
@@ -5985,8 +6029,8 @@
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 9,
-              "directProductCount": 9,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             }
           ]
@@ -6325,8 +6369,8 @@
     },
     {
       "name": "Pets",
-      "productCount": 174,
-      "unclassifiedProductCount": 107,
+      "productCount": 169,
+      "unclassifiedProductCount": 102,
       "browseTree": [
         {
           "name": "Dogs",
@@ -7963,20 +8007,20 @@
     },
     {
       "name": "Sports",
-      "productCount": 1876,
-      "unclassifiedProductCount": 408,
+      "productCount": 1875,
+      "unclassifiedProductCount": 403,
       "browseTree": [
         {
           "name": "Sports Apparel",
           "path": "Sports Apparel",
-          "productCount": 359,
+          "productCount": 363,
           "directProductCount": 0,
           "children": [
             {
               "name": "Sports Clothing",
               "path": "Sports Apparel > Sports Clothing",
-              "productCount": 136,
-              "directProductCount": 136,
+              "productCount": 140,
+              "directProductCount": 140,
               "children": []
             },
             {
@@ -9736,8 +9780,8 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 137,
-      "unclassifiedProductCount": 131,
+      "productCount": 133,
+      "unclassifiedProductCount": 127,
       "browseTree": [
         {
           "name": "Power Tools",
@@ -10080,7 +10124,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 219,
+      "productCount": 220,
       "unclassifiedProductCount": 51,
       "browseTree": [
         {
@@ -10252,7 +10296,7 @@
         {
           "name": "Video Games",
           "path": "Video Games",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
@@ -10265,9 +10309,17 @@
             {
               "name": "Video Games",
               "path": "Video Games > Video Games",
-              "productCount": 0,
+              "productCount": 1,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Nintendo DS",
+                  "path": "Video Games > Video Games > Nintendo DS",
+                  "productCount": 1,
+                  "directProductCount": 1,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Controllers & Accessories",
@@ -10580,64 +10632,64 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1334,
+  "otherProductCount": 1322,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1334
+      "count": 1322
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1442,
-    "usedTaxonomyNodeCount": 273,
-    "emptyTaxonomyNodeCount": 1169,
-    "productsWithKnownSubcategory": 15015,
+    "taxonomyNodeCount": 1449,
+    "usedTaxonomyNodeCount": 289,
+    "emptyTaxonomyNodeCount": 1160,
+    "productsWithKnownSubcategory": 15088,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5895,
+    "productsWithoutSubcategory": 5822,
     "unclassifiedByCategory": [
       {
         "category": "Beauty",
-        "count": 1428
+        "count": 1425
       },
       {
         "category": "Industrial & Scientific",
-        "count": 1193
+        "count": 1186
       },
       {
         "category": "Sports",
-        "count": 408
+        "count": 403
       },
       {
         "category": "Books & Media",
-        "count": 313
+        "count": 299
       },
       {
         "category": "Health & Wellness",
-        "count": 288
+        "count": 281
       },
       {
         "category": "Fashion",
-        "count": 228
+        "count": 224
       },
       {
         "category": "Tools & DIY",
-        "count": 131
+        "count": 127
       },
       {
         "category": "Electronics",
-        "count": 130
+        "count": 124
       },
       {
         "category": "Babies",
-        "count": 111
+        "count": 108
       },
       {
         "category": "Pets",
-        "count": 107
+        "count": 102
       },
       {
         "category": "Food & Grocery",
-        "count": 72
+        "count": 69
       },
       {
         "category": "Travel",
@@ -10665,8 +10717,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5895,
-      "provisional": 15015
+      "needs_classification": 5822,
+      "provisional": 15088
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10684,11 +10736,11 @@
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1451
+        "productCount": 1415
       },
       {
         "path": "Books & Media > Movies & TV",
-        "productCount": 677
+        "productCount": 667
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
@@ -10760,11 +10812,15 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 152
+        "productCount": 153
       },
       {
         "path": "Electronics > Audio",
         "productCount": 149
+      },
+      {
+        "path": "Sports > Sports Apparel > Sports Clothing",
+        "productCount": 140
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
@@ -10772,11 +10828,7 @@
       },
       {
         "path": "Food & Grocery > Pantry Staples > Pasta & Rice",
-        "productCount": 137
-      },
-      {
-        "path": "Sports > Sports Apparel > Sports Clothing",
-        "productCount": 136
+        "productCount": 135
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
@@ -10827,7 +10879,7 @@
         "productCount": 86
       },
       {
-        "path": "Books & Media > Books",
+        "path": "Automotive > Vehicle Electronics > Dash Cameras",
         "productCount": 82
       },
       {
@@ -10839,6 +10891,10 @@
         "productCount": 75
       },
       {
+        "path": "Books & Media > Books",
+        "productCount": 74
+      },
+      {
         "path": "Beauty > Skincare",
         "productCount": 72
       },
@@ -10848,7 +10904,7 @@
       },
       {
         "path": "Beauty > Hair Care > Hair Color",
-        "productCount": 63
+        "productCount": 67
       },
       {
         "path": "TVs & Home Cinema > Televisions",
@@ -10895,16 +10951,16 @@
         "productCount": 43
       },
       {
-        "path": "Books & Media > Music",
-        "productCount": 43
-      },
-      {
         "path": "Sports > Tennis > Tennis Shoes",
         "productCount": 42
       },
       {
-        "path": "Automotive > GPS Navigation",
-        "productCount": 39
+        "path": "Books & Media > Music",
+        "productCount": 42
+      },
+      {
+        "path": "Books & Media > Books > Education & Reference",
+        "productCount": 38
       },
       {
         "path": "Automotive > Car Parts > Steering & Suspension",
@@ -10931,12 +10987,20 @@
         "productCount": 33
       },
       {
+        "path": "Books & Media > Books > Children's Books",
+        "productCount": 33
+      },
+      {
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
+        "productCount": 32
+      },
+      {
         "path": "Electronics > Cameras & Photography",
-        "productCount": 31
+        "productCount": 30
       },
       {
         "path": "Automotive > Motorcycles, Accessories & Parts",
-        "productCount": 31
+        "productCount": 29
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
@@ -10952,10 +11016,6 @@
       },
       {
         "path": "Beauty > Skincare > Face Skincare",
-        "productCount": 27
-      },
-      {
-        "path": "Books & Media > Books > Children's Books",
         "productCount": 27
       },
       {
@@ -10983,16 +11043,12 @@
         "productCount": 22
       },
       {
-        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "path": "Home & Living > Kitchen & Dining > Drinkware",
         "productCount": 21
       },
       {
-        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 20
-      },
-      {
-        "path": "Home & Living > Kitchen & Dining > Drinkware",
-        "productCount": 18
+        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "productCount": 21
       },
       {
         "path": "Health & Wellness > Nutrition > Sports Supplements > Pre-Workout",
@@ -11023,11 +11079,11 @@
         "productCount": 12
       },
       {
-        "path": "Electronics > Computers > Monitors",
-        "productCount": 11
+        "path": "Health & Wellness > Oral Hygiene > Mouthwash",
+        "productCount": 12
       },
       {
-        "path": "Automotive > Vehicle Electronics > Dash Cameras",
+        "path": "Electronics > Computers > Monitors",
         "productCount": 11
       },
       {
@@ -11055,6 +11111,10 @@
         "productCount": 10
       },
       {
+        "path": "Automotive > GPS Navigation",
+        "productCount": 10
+      },
+      {
         "path": "Fashion > Clothing > Shirts & Blouses",
         "productCount": 10
       },
@@ -11065,20 +11125,12 @@
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin B",
         "productCount": 10
-      },
-      {
-        "path": "Babies > Hygiene & Wellness > Baby Bath",
-        "productCount": 10
-      },
-      {
-        "path": "Sports > Soccer > Soccer Clothing & Accessories",
-        "productCount": 9
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1058
+        "productCount": 1051
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11086,7 +11138,7 @@
       },
       {
         "advertiser": "Amore Mall",
-        "productCount": 35
+        "productCount": 30
       },
       {
         "advertiser": "UNice",
@@ -11364,15 +11416,6 @@
         "description": "<h1>Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY [91549210]</h1> <p><b>Parametry:</b></p><ul><li>Model: Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY</li><li>Marka: Mil-Tec, N"
       },
       {
-        "title": "[33days]VITALBEAUTIE Energy Shot Body&Brain 28days (+5days gift)",
-        "brand": "VITALBEAUTIE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
-      },
-      {
         "title": "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa",
         "brand": "Nice",
         "advertiser": "Allegro.pl",
@@ -11454,15 +11497,6 @@
         "description": "<h1>YANGO Berberyna Premium 90 Kapsułek</h1><p><b> Potężny ekstrakt 100:1 oraz wysokie stężenie!</b></p><p><b> Wspiera prawidłowy poziom cukru we krwi </b></p><p><b> Bez dodatków i"
       },
       {
-        "title": "Jak szczęśliwie żyć we dwoje Podręcznik dla kobiet",
-        "brand": "Bratni Zew",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Napisałam te strony dla Ciebie, która jeszcze szukasz bratniej duszy, dla Ciebie, która wkrótce wychodzisz za mąż, i również dla Ciebie, która jesteś już żoną. Pisząc je, myślał"
-      },
-      {
         "title": "Gra Ravensburger Moja Pierwsza La Cucaracha",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11533,15 +11567,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Czego o sobie nie wiecie?</h1><h1>Dzieci kontra rodzice.</h1><ul><li><b>EAN:&#xa0;5902768471588</b></li><li><b>Kategoria:&#xa0;gra rodzinna</b></li><li><b>Producent:&#xa0;Kangu"
-      },
-      {
-        "title": "VITALBEAUTIE Energy Shot Body&Brain 7days(+1day)",
-        "brand": "VITALBEAUTIE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
       },
       {
         "title": "Nożyczki Chirurgiczne Operacyjne Proste 13cm O/t",
@@ -11751,15 +11776,6 @@
         "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
       },
       {
-        "title": "VITALBEAUTIE Super Collagen Liftshot 28ea",
-        "brand": "VITALBEAUTIE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Rejuvenate with our highly concentrated collagen ampoule. Packed with a total of 4,000 mg of collagen per serving, it enhances skin elasticity, moisture, and texture. The liquid fo"
-      },
-      {
         "title": "Makita Młot Udarowo-obrotowy Sds-max HR4511C",
         "brand": "Makita",
         "advertiser": "Allegro.pl",
@@ -11776,15 +11792,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Functional cream that relieves itching for itchy, hypersensitive skin."
-      },
-      {
-        "title": "Wampir: Maskarada Podręcznik Dodatkowy Camarilla",
-        "brand": "Alis Games",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Globalna krwawa opera Camarilii trwa. Kiedy najstarsze wampiry zaczynają znikać, Wieża z Kości Słoniowej pęka pod ciężarem swojego zepsucia. Dawniej najsilniejsza na świecie fra"
       },
       {
         "title": "Spodnie męskie bojówki wojskowe militarne Pentagon Bdu 2.0 Black 44",
@@ -11866,15 +11873,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1><h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1>\n<p>Opis produktu</p>\n<ul>\n<li>Bardzo miękka powierzchnia</li>\n<li>Z oddychającego"
-      },
-      {
-        "title": "Wampir: Maskarada Podręcznik Dodatkowy Anarchiści",
-        "brand": "Alis Games",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Witamy w krwawym thrillerze nocnych ulic. </p>\n<p> Przez stulecia Ruch Anarchistów korzystał z niepewnego rozejmu z Camarillą, ale koniec z tym. Niezwiązani nie będą już dłużej "
       },
       {
         "title": "AYUNCHE Enrich Bonding Mask 100ml",
@@ -12073,15 +12071,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>Lojalność, odwaga i prawda. Disney przedstawia historię Mulan, nieustraszonej, młodej kobiety, która ryzykuje wszystko w imię miłości do rodziny i swojego kraju, i staje się naj"
-      },
-      {
-        "title": "[New] VITALBEAUTIE Meta Green Calorie Cut Jelly 10EA",
-        "brand": "VITALBEAUTIE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12372,15 +12361,6 @@
         "description": "<p>Oferuję Państwu delikatną pęsetę do pracy przy urządzeniach elektronicznych i innych precyzyjnych robót.</p><p>Długość pęsety 110mm.</p><p>Pęseta ma ostre zwężające się końcówki"
       },
       {
-        "title": "[8Days]VITALBEAUTIE Super Essential 7days(+1day gift)",
-        "brand": "VITALBEAUTIE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Rejuvenate with our highly concentrated collagen ampoule. Packed with a total of 4,000 mg of collagen per serving, it enhances skin elasticity, moisture, and texture. The liquid fo"
-      },
-      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12451,39 +12431,81 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Tmnt Wojownicze Żółwie Ninja. Donatello. Początki"
+      },
+      {
+        "title": "HANYUL Chestnut Shell Hydrating Mask 100ml",
+        "brand": "HANYUL",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A wash-off mask with “Chestnut Shell PHA™” from grinded shell of chestnut from Buyeo area"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Olejek zapachowy Zapach Świąt Boże Narodzenie",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy ZAPACH ŚWIĄT BOŻE NARODZENIE</h1><h1>OLEJEK ZAPACHOWY ZAPACH ŚWIĄT</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana więks"
+      },
+      {
+        "title": "Laneige Cica Sleeping Mask",
+        "brand": "LANEIGE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Karty Do Gry klasyczne Do Pokera Remika 2 talie",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Klasyczne karty do gry papierowe,</p><p>wymiary: 8x5,2 cm</p><p>Zapakowane w plastikowe etui.</p><p>Karty pokryte plastikiem, ale oczywiście przy tej cenie, nie są to karty plas"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "wstążka Tasiemka satynowa 38 mm 32 m Zielony",
+        "brand": "JUGA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "wstążka Tasiemka satynowa 38 mm 32 m Zielony"
       }
     ],
     "missingSubcategoryExamples": [
-      {
-        "title": "12V Antenna Power Supply DVB-T2 Amplifier For Terrestrial TV F Socket Vayox Plug",
-        "brand": "Vayox",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>ZASILACZ ANTENOWY 12V WZMACNIACZ DVB-T2 DO TV NAZIEMNEJ GNIAZO F WTYK VAYOX</h1><ul><li>Zasilacz antenowy przeznaczony do zasilania wzmacniaczy antenowych.</li></ul><h1>PRZYSTO",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle, Wi-Fi, Night Vision, and GPS, App Control, Loop Recording, Collision Sensor",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "170° Ultra-Wide Angle | Supercapacitor | IR Night Vision | Parking Mode | Collision Detection | Loop Recording | Type-C Port 2K Front Resolution & 1080p All-Around:The L4-2K model ",
-        "category": "Electronics"
-      },
-      {
-        "title": "Pop Jr Tv songs CD+DVD New Songs from fairy tales",
-        "brand": "Universal",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>NA SPRZEDAŻ ORYGINALNA PŁYTA JAK W TYTULE CD</h1><p>Stan techniczny przedmiotu:</p><p><b>PŁYTY</b></p><p><b>WIZUALNIE </b>:&#xa0; NOWE</p><p><b>ODSŁUCH :</b>&#xa0; -</p><p><b>K",
-        "category": "Electronics"
-      },
       {
         "title": "Anker Prime Wireless Charging Station (3-in-1, MagGo, AirCool, Foldable) Gray",
         "brand": "Soundcore",
@@ -12592,16 +12614,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Rexing Dash Cam Hardwire Kit, Type-C Hard Wire Kit Fuse Only for R4, DT2, M3 & M2 Max, M2-4, M4-4, and RH2 Series, Rexing 12V-30V to 5V/2A Type-C Port Charger Power Cord, Gift 8 Fu",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle, Wi-Fi, Night Vision, and GPS, App Control, Loop Recording, Collision Sensor",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "170° Ultra-Wide Angle | Supercapacitor | IR Night Vision | Parking Mode | Collision Detection | Loop Recording | Type-C Port 2K Front Resolution & 1080p All-Around:The L4-2K model ",
         "category": "Electronics"
       },
       {
@@ -12752,16 +12764,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Rexing OBD Hardwire Kit NOT compatible with Rexing S1 Pro, R4, DT2, and M2 Max dash cam Rexing 14ft Mini USB OBD Hardwire Charger Cable for Rexing Dash Cams and Other Dash Cams wit",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing FM Type-C Charger – Compatible with CPStream, CPDuo-6.25, CPDuo-686, CPDuo-7, and CPDuo Pro Dash Cams",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Rexing FM Charger for CPStream, CPDuo-6.25, CPDuo-686, CPDuo-7, and CPDuo Pro Reliable Power Supply for Your Dash Cam – Keep your CPDuo dash cam powered at all times with the Rexin",
         "category": "Electronics"
       },
       {
@@ -13555,16 +13557,6 @@
         "category": "Electronics"
       },
       {
-        "title": "The Official Scratchjr Mitchel Manual..",
-        "brand": "Wydawnictwo Naukowe PWN",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>Oficjalny podręcznik ScratchJr</h1><h2>Mitchel Resnick, Marina Umaschi-Bers</h2> <ul>\n<li>\nWydawca: Wydawnictwo Naukowe PWN\n</li>\n<li>\nRok wydania: 2021\n</li>\n<li>\nOprawa: Mięk",
-        "category": "Electronics"
-      },
-      {
         "title": "Pasek do Samsung Galaxy Watch Active 2 40mm, Rozmiar S (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
@@ -13685,36 +13677,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Champion The Authentic Sports Bra In | White Xs",
-        "brand": "CHAMPION",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Introducing The The Authentic Sports Bra In White Color: White * - 100% Guaranteed Manufactured By Champion - We Only Sell Authenticated, Brand New Clothing. Ecosmetics Was Created",
-        "category": "Sports"
-      },
-      {
-        "title": "Legginsy bezszwowe wysoki stan beżowe Xs Carpatree",
-        "brand": "Carpatree",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p>Poznaj wyjątkowe legginsy bezszwowe Phase. To produkt idealny dla każdej kobiety zainteresowanej aktywnością fizyczną. Są uniwersalne, dzięki czemu sprawdzą się podczas ćwiczeń ",
-        "category": "Sports"
-      },
-      {
-        "title": "Marella Sport Sonale Knitted Coat-Jacket In | Blue Jeans",
-        "brand": "Marella Sport",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Introducing The Sonale Knitted Coat-Jacket In Blue Jeans Color: Blue Jeans * - 100% Guaranteed Manufactured By Marella Sport - We Only Sell Authenticated, Brand New Clothing. Ecosm",
-        "category": "Sports"
-      },
-      {
         "title": "Bielizna termoaktywna chłodząca Viking Nessa Coolmax Set L Komplet",
         "brand": "Viking",
         "advertiser": "Allegro.pl",
@@ -13722,16 +13684,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Sports",
         "description": "<h1>Komplet bielizny termoaktywnej NESSA COOLMAX</h1>\n<p>Kod produktu: 50022321019L</p>\n<p>SKU: 500/22/3210/19/L</p>\n<p>5901115793960</p><p>Produkt wykonany z wysokiej jakości mate",
-        "category": "Sports"
-      },
-      {
-        "title": "Ideology Sweat Set Low Impact Sports Bra In | Moonlit Ocean Xs",
-        "brand": "Ideology",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Introducing The Sweat Set Low Impact Sports Bra * Color: Moonlit Ocean * - 100% Guaranteed Manufactured By Ideology - We Only Sell Authenticated, Brand New Clothing. Ecosmetics Was",
         "category": "Sports"
       },
       {
@@ -13845,26 +13797,6 @@
         "category": "Sports"
       },
       {
-        "title": "Etafor Plus Massage Gun",
-        "brand": "ETAFOR",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Ecosmetics Is An Authorized Retailer Of Etafor. Deep Muscle Relief, Precision Recovery. Unlock Powerful, Professional-Grade Muscle Recovery With The Etafor Plus Massage Gun. Design",
-        "category": "Beauty"
-      },
-      {
-        "title": "Etafor Pro Massage Gun",
-        "brand": "ETAFOR",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Ecosmetics Is An Authorized Retailer Of Etafor. Professional-Grade Muscle Recovery & Deep Tissue Relief. Take Your Muscle Recovery To The Next Level With The Etafor Pro Massage Gun",
-        "category": "Beauty"
-      },
-      {
         "title": "Wioślarz powietrzny York Fitness Turbine",
         "brand": "York Fitness",
         "advertiser": "Allegro.pl",
@@ -13873,16 +13805,6 @@
         "sourceCategory": "Sports",
         "description": "<h2>Wioślarz powietrzny YORK FITNESS Turbine</h2><ul>\n\n\n<li><b>Klasa urządzenia:</b>&nbsp;H - użytek domowy</li>\n<li><b>Ćwiczone partie mięśni:</b>&nbsp;Kark, Plecy, Ramiona, Ręce<",
         "category": "Sports"
-      },
-      {
-        "title": "Shone 001-002 - White - Eu28",
-        "brand": "SHONE",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Shone's 001-002 - White Supports Busy Spring And Summer Play With A Smooth Synthetic Leather Upper And A Soft Fabric Lining That Cushions Each Step While Promoting Airflow, Helping",
-        "category": "Beauty"
       },
       {
         "title": "Wioślarz powietrzny York Fitness Turbine",
@@ -13952,6 +13874,136 @@
         "googleProductCategory": "",
         "sourceCategory": "Sports",
         "description": "<h1>SPORT ARSENAL - największy czeski producent sakw i bagażników rowerowych</h1><p><b>Doświadczenie</b></p>\n<p>Czeska firma SPORT ARSENAL powstała w 1992 roku i specjalizuje się w",
+        "category": "Sports"
+      },
+      {
+        "title": "Sport Arsenal art. 312 sakwa wodoszczelna",
+        "brand": "Sport Arsenal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>SPORT ARSENAL - największy czeski producent sakw i bagażników rowerowych</h1><p><b>Doświadczenie</b></p>\n<p>Czeska firma SPORT ARSENAL powstała w 1992 roku i specjalizuje się w",
+        "category": "Sports"
+      },
+      {
+        "title": "Bio Psyllium Babka Jajowata Łuska Błonnik Sytość Odchudzanie GymBeam 300g",
+        "brand": "GymBeam",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<p><b>BIO Psyllium</b> to rozpuszczalny błonnik odpowiedni do dbania o <b>pracę jelit.</b> Psyllium można pić <b>samodzielnie</b> z wodą lub dodawać <b>do owsianki, jogurtu lub inn",
+        "category": "Sports"
+      },
+      {
+        "title": "Bio Chlorella W Proszku Algi Detox Witaminy Detoksykacja GymBeam 250 g",
+        "brand": "GymBeam",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<p><b>BIO Chlorella w proszku</b> to suplement diety zawierający zielone algi chlorella w postaci sproszkowanej. Należy do jedynych z najpopularniejszych suplementów diety, poniewa",
+        "category": "Sports"
+      },
+      {
+        "title": "Zestaw Gumy Fitness taśmy do ćwiczeń Hip Band 3W1 3 gumy EbFit",
+        "brand": "Eb Fit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>ZESTAW GUM TAŚM DO ĆWICZEŃ HIP BAND 3W1 EB FIT</h1><p>Taśmy oporowe Hip Band o 3 możliwościach oporu zapewniają siłę do wszystkich potrzeb ćwiczącego.Powszechnie wykorzystywane",
+        "category": "Sports"
+      },
+      {
+        "title": "Pokrowiec mic-cb1 na statyw mikrofonowy athletic",
+        "brand": "Athletic",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Pokrowiec mic-cb1 na statyw mikrofonowy athletic</h1> <p><b>Wykonany z wysokiej jakości materiału pokrowiec na jeden statyw mikrofonowy.</b></p>",
+        "category": "Sports"
+      },
+      {
+        "title": "FRP x ParkerPro #420 120-link chain",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "This FRP x ParkerPro #420 120âlink chain is built as a directâreplacement upgrade for mini bikes that need a stronger, more reliable drivetrain. The robust construction improve",
+        "category": "Sports"
+      },
+      {
+        "title": "FRP x ParkerPro Torque Converter - 3/4 IN",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "FRP GMB100 Torque Converter Fitment: Tight Space, Chain Line, and 212 Builds If you are unsure about a torque converter because the GMB100 frame looks tight, you are asking the rig",
+        "category": "Sports"
+      },
+      {
+        "title": "Platinum Fitness Hantla Neoprenowa Neopren 1 kg Hantelka Do Ćwiczeń",
+        "brand": "Platinum Fitness",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Hantla żeliwna w osłonie neoprenowej 1kg - Platinum Fitness</h1>\n<p>Hantle wykonane zostały z wysokiej jakości żeliwa z dbałością o najmniejszy szczegół. Pokryte zostały warstw",
+        "category": "Sports"
+      },
+      {
+        "title": "Platinum Fitness Hantla Żeliwna 15kg Hantle Sztanga Gryf Regulowana",
+        "brand": "Platinum Fitness",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Hantla żeliwna regulowana 15kg/28mm Platinum Fitness</h1><h1>Najwyższej jakości żeliwo!</h1><p>Hantla składa się z żeliwnego obciążenia, które&nbsp;<b>zabezpieczone zostało prz",
+        "category": "Sports"
+      },
+      {
+        "title": "Termoaktywna Koszulka Sport Męska Damska Brubeck",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Dopasowana koszulka&nbsp;BRUBECK BASE LAYER</h1>\n<p>Koszulka z długim rękawem BRUBECK BASE LAYER (model LS10850) to jedna z najciekawszych propozycji tej uznanej marki. Na tle ",
+        "category": "Sports"
+      },
+      {
+        "title": "Termoaktywna Koszulka Sport Męska Damska Brubeck S",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Dopasowana koszulka&nbsp;BRUBECK BASE LAYER</h1>\n<p>Koszulka z długim rękawem BRUBECK BASE LAYER (model LS10850) to jedna z najciekawszych propozycji tej uznanej marki. Na tle ",
+        "category": "Sports"
+      },
+      {
+        "title": "yellowSPORT Plastry Tape Kinesio Taping Tejpy Tejp",
+        "brand": "yellowTAPE",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; Niebieska 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</l",
+        "category": "Sports"
+      },
+      {
+        "title": "yellowSPORT Taśma Kinesiology Taping Kinesiotaping",
+        "brand": "yellowTAPE",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; CZARNY 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</li><",
         "category": "Sports"
       }
     ]
@@ -14198,7 +14250,7 @@
     "smartphones": 59,
     "playstationConsoles": 94,
     "gamingConsoles": 178,
-    "fashionClothing": 131,
+    "fashionClothing": 132,
     "tennisShoes": 42,
     "fashionSneakers": 306,
     "sportsFootwear": 223
