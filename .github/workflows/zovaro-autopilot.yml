@@ -47,6 +47,9 @@ jobs:
           node scripts/test-product-category.mjs
           node scripts/validate-product-category-rules.mjs
 
+      - name: Recalculate categories in the temporary runner workspace (no repository write)
+        run: node scripts/reclassify-catalog-categories.mjs
+
       - name: Audit category quality
         id: category-audit
         continue-on-error: true
