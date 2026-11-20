@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - "scripts/audit-product-images.mjs"
-      - "scripts/audit-product-images.mjs"
+      - "scripts/test-product-category.mjs"
+      - "lib/product-category.js"
       - "data/category-tree.json"
   workflow_dispatch:
     inputs:
@@ -53,7 +54,7 @@ jobs:
             zovaro-yolos-tiny-${{ runner.os }}-
 
       - name: Install free local vision runtime (CPU-only)
-        run: npm install --no-save --no-package-lock --onnxruntime-node-install-cuda=skip @huggingface/transformers@3.8.1
+        run: npm install --no-save --no-package-lock --onnxruntime-node-install=skip @huggingface/transformers@3.8.1
 
       - name: Run image-audit logic tests
         run: node scripts/audit-product-images.mjs --self-test
