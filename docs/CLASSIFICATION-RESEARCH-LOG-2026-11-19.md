@@ -127,3 +127,12 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - KOA+ROY Fitness Cube is a post-workout muscle balm; TWO SLASH FOUR Glaze Lip Changer and Strobing Face Cube are makeup products.
 - Added exact paths for hair accessories, wigs, travel guides, scrapbooking paper, eyelid cleansers, mouthwash, alarm panels, dash-camera accessories and night-vision optics.
 - Source references: https://www.rexingusa.com/product/b1-black/ ; https://rexing.com/products/rexing-adhesive-mount-for-v2-pro-ai ; https://www.satel.pl/en/products/intruder-alarms/perfecta/alarm-control-panels/perfecta-16-lte/ ; https://medisept.pl/pobierz-atrybut/CqY2MGTDGOLzlixLNjhspBhx9pt4Brit/pdf/Ulotka%20produktowa%20%28EN%29 ; https://koaroy.com/products/fitness-cube ; https://en.twoslashfour.com/product/glaze-lip-changer-nu-ginger/23/
+
+
+### 10. Follow-up corrections from the newest catalog audit
+
+- ETAFOR massage guns are Health & Wellness / Massage & Relaxation; VITALBEAUTIE MetaGreen is weight-management nutrition and Super Retinol is grouped with skin-health supplements.
+- Shone 001-002 is children's footwear; Color Wow Root Cover Up is hair-color touch-up powder; Marella Sport's knitted coat is Fashion rather than Sports.
+- Jigapix Pets is a Nintendo DS video game, and “PET” in the Polish bottle listing refers to plastic, not animals.
+- Corrected the remaining title collisions for “Glow Baby Glow”, music CDs/DVDs, mouthwash, seasonal decorations, dash cameras and antenna power supplies.
+- Research sources: ETAFOR product listing https://www.ecosmetics.com/product/plus-massage-gun/ ; Shone model listing https://www.moda-nova.com/?product_tag=girl ; VITALBEAUTIE brand products https://www.belieef.com/vitalbeautie ; Amorepacific VITALBEAUTIE MetaGreen product-design overview https://design.amorepacific.com/en/work/2024/vitalbeautie/meta-green-line/ ; JIGAPIX PETS Nintendo DS listing https://allegro.pl/produkt/jigapix-pets-nintendo-ds-pudelkowa-d328badb-b58d-4206-9b17-15d567256c85 ; COLOR WOW Root Cover Up official page https://colorwowhair.com/products/root-cover-up .

@@ -758,7 +758,8 @@
             "Streaming Devices",
             "Home Theater Systems",
             "TV Mounts & Accessories",
-            "Cables & Accessories"
+            "Cables & Accessories",
+            "Antennas & Accessories"
           ]
         },
         {
@@ -888,7 +889,8 @@
             "Heels",
             "Flats",
             "Formal Shoes",
-            "Slippers"
+            "Slippers",
+            "Kids' Shoes"
           ]
         },
         {
@@ -1171,7 +1173,8 @@
                 "Minerals",
                 "Probiotics",
                 "Omega Oils",
-                "Herbal Supplements"
+                "Herbal Supplements",
+                "Skin Health"
               ]
             },
             "Multivitamins",
@@ -1211,7 +1214,12 @@
           "children": [
             "Sauna Accessories",
             "Tanning Lamps",
-            "Massage & Relaxation",
+            {
+              "name": "Massage & Relaxation",
+              "children": [
+                "Massage Guns"
+              ]
+            },
             {
               "name": "Alternative Therapies",
               "children": [
@@ -1230,7 +1238,12 @@
         {
           "name": "Hair Care",
           "children": [
-            "Hair Health & Treatments"
+            {
+              "name": "Hair Health & Treatments",
+              "children": [
+                "Hair Loss Treatments"
+              ]
+            }
           ]
         },
         {
@@ -1362,7 +1375,8 @@
             "Candles & Holders",
             "Vases",
             "Decorative Objects",
-            "Clocks"
+            "Clocks",
+            "Seasonal Decor"
           ]
         },
         {
@@ -2552,7 +2566,12 @@
           "name": "Video Games",
           "children": [
             "Consoles",
-            "Video Games",
+            {
+              "name": "Video Games",
+              "children": [
+                "Nintendo DS"
+              ]
+            },
             "Controllers & Accessories",
             "Gaming Headsets"
           ]

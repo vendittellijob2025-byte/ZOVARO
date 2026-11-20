@@ -285,6 +285,19 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Etafor Plus Massage Gun", sourceCategory: "Sports" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Shone 001-002 - White - Eu28", sourceCategory: "Sports" }), "Fashion");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Jigapix Pets Nowa !", sourceCategory: "Pets" }), "Toys & Games");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Butelka Pet 200ml z dozownikiem czarnym", sourceCategory: "Pets" }), "Home & Living");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Color Wow Root Cover Up | Medium Brown 0.07Oz", sourceCategory: "Fashion" }), "Beauty");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Marella Sport Sonale Knitted Coat-Jacket In | Blue Jeans", sourceCategory: "Sports" }), "Fashion");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "MAC Hyper Real Glow Palette Highlighter Glow Baby Glow", sourceCategory: "Babies" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pop Jr Tv songs CD+DVD Nowa Piosenki z bajek", sourceCategory: "Electronics" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Azuli Presents Miami 2002 David Piccioni 2xCD Nowa", sourceCategory: "Food & Grocery" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "meridol płyn do płukania ust Ochrona Dziąseł 400ml", sourceCategory: "Food & Grocery" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Zestaw do dekoracji na Święta świąteczny Diy", sourceCategory: "Tools & DIY" }), "Home & Living");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pomysł dla niej/ dla niego Diy zdjęcia", sourceCategory: "Tools & DIY" }), "Other");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle", sourceCategory: "Electronics" }), "Automotive");
 assert.equal(categoryFor({ name: "Amore Mall" }, { title: "TWO SLASH FOUR Glaze Lip Changer Nu Ginger", sourceCategory: "Health & Wellness" }), "Beauty");
 assert.equal(categoryFor({ name: "Amore Mall" }, { title: "TWO SLASH FOUR Strobing Face Cube 2 Purple", sourceCategory: "Health & Wellness" }), "Beauty");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Papier scrapbookingu P13 The Garden of Books", sourceCategory: "Books & Media" }), "Arts, Crafts & Sewing");
@@ -509,6 +522,27 @@ const subcategoryCases = [
   ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
   ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
   ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
+  ["Health & Wellness", "Etafor Plus Massage Gun", "Wellness > Massage & Relaxation > Massage Guns"],
+  ["Health & Wellness", "VITALBEAUTIE MetaGreen Booster Shot 7days x 4 boxes", "Nutrition > Weight Management"],
+  ["Health & Wellness", "VITALBEAUTIE Super Retinol 30days", "Nutrition > Vitamins, Minerals & Supplements > Skin Health"],
+  ["Health & Wellness", "Ds Laboratories Revita.sod Tablets For Stress Related Hair Loss 30Ct", "Hair Care > Hair Health & Treatments > Hair Loss Treatments"],
+  ["Fashion", "Shone 001-002 - White - Eu28", "Shoes > Kids' Shoes"],
+  ["Beauty", "Color Wow Root Cover Up Medium Brown 0.07Oz", "Hair Care > Hair Color"],
+  ["Fashion", "Marella Sport Sonale Knitted Coat-Jacket In Blue Jeans", "Women's Clothing > Jackets & Coats"],
+  ["Sports", "Champion The Authentic Sports Bra In White Xs", "Sports Apparel > Sports Clothing"],
+  ["Sports", "Legginsy bezszwowe wysoki stan beżowe Xs Carpatree", "Sports Apparel > Sports Clothing"],
+  ["Books & Media", "Zabawy manualne 2-latka Love Books", "Books > Children's Books"],
+  ["Books & Media", "Amici d'Italia 3 libro dello studente podręcznik", "Books > Education & Reference"],
+  ["Books & Media", "Pop Jr Tv songs CD+DVD Nowa Piosenki z bajek", "Music > CDs"],
+  ["Books & Media", "Azuli Presents Miami 2002 David Piccioni 2xCD Nowa", "Music > CDs"],
+  ["Electronics", "Zasilacz Antenowy 12V Wzmacniacz DVB-T2 Do Tv Naziemnej", "TV & Home Theater > Antennas & Accessories"],
+  ["Automotive", "Rexing L4 Series 4-Channel Dash Cams with Ultra-Wide Angle", "Vehicle Electronics > Dash Cameras"],
+  ["Babies", "Cherry Baby Perfume 2.5 oz.", "Hygiene & Wellness > Baby Fragrances"],
+  ["Babies", "Tweezerman Baby Manicure Kit 4Pcs", "Hygiene & Wellness > Baby Grooming"],
+  ["Beauty", "MAC Hyper Real Glow Palette Glow Baby Glow", "Makeup > Face Makeup"],
+  ["Home & Living", "Butelka Pet 200ml z dozownikiem czarnym", "Kitchen & Dining > Drinkware"],
+  ["Home & Living", "Zestaw do dekoracji na Święta świąteczny Diy", "Home Décor > Seasonal Decor"],
+  ["Toys & Games", "Jigapix Pets Nowa Nintendo DS", "Video Games > Nintendo DS"],
   ["Beauty", "Invisibobble Power The Strong Grip Hair Ring", "Hair Care > Hair Styling Accessories"],
   ["Beauty", "Goody Fabric Headwraps Assorted Colors 6Ct", "Hair Care > Hair Styling Accessories"],
   ["Beauty", "Moraz J And M Herbal Massage Ointment 1.7Oz", "Skincare > Body Skincare"],
