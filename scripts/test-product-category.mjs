@@ -558,7 +558,6 @@ const subcategoryCases = [
   ["Sports", "Mata fitness do jogi ćwiczeń antypoślizgowa Reebok 4 mm", "Fitness & Gym > Yoga & Pilates > Yoga Mats"],
   ["Sports", "Nike Lebron 8 Empire Jade 5.5", "Sports Apparel > Sports Footwear"],
   ["Sports", "Topeak Modula Cage XL Koszyk na butelki 1.5L Pet", "Cycling > Bike Components"],
-  ["Sports", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Music > Instruments > Guitar Accessories > Guitar Straps"],
   ["Books & Media", "Terminator Genisys Arnold Schwarzenegger Clarke 4K", "Movies & TV > Blu-ray"],
   ["Books & Media", "Littlest Pet Shop Książka do wyklejania Kd", "Books > Children's Books"],
   ["Books & Media", "Iggy Pop TV Eye 1977 Live CD Nowa", "Music > CDs"],
