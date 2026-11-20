@@ -98,3 +98,6 @@ Sources:
 ## Implementation note
 
 The classifier now has regression coverage for representative perfume, tea, ATV, guitar strings, harmonica, model adhesive, leaf blower, coffee-machine cleaning tablets, solar charger, disinfectant, fishing gear and Polish fashion listings. Every subcategory case is checked against the canonical taxonomy tree before it can pass.
+
+
+Regression safeguard: the generic word "tea" is not a primary-category rule. OSULLOC is identified by brand, while tea strainers remain Home & Living > Kitchen & Dining; this prevents a beverage keyword from overriding a kitchen utensil.
