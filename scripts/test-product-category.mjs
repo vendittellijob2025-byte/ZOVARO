@@ -662,7 +662,7 @@ const subcategoryCases = [
   ["Toys & Games", "Karty Piotruś Kraina Lodu 2 Trefl 08483", "Board Games & Puzzles > Card Games"],
   ["Beauty", "AESTURA Atobarrier 365 Hydro Soothing Cream 60ml", "Skincare > Moisturizers"],
   ["Beauty", "Espoir Protailor Be Glow Sheer Powder", "Makeup > Face Makeup"],
-  ["Health & Wellness", "Yango Berberyna Premium 90 Kapsułek", "Nutrition > Vitamins, Minerals & Supplements"],
+  ["Health & Wellness", "Yango Berberyna Premium 90 Kapsułek", "Nutrition > Vitamins, Minerals & Supplements > Herbal Supplements"],
   ["Health & Wellness", "Cep Ortho Opaska na kostkę rozmiar V 26-28cm", "Medical Devices & Equipment > Compression Garments"],
   ["Sports", "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb", "Fishing > Baits & Lures"],
   ["Home & Living", "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa", "Home Improvement > Electrical"],
