@@ -542,7 +542,7 @@ const subcategoryCases = [
   ["Beauty", "MAC Hyper Real Glow Palette Glow Baby Glow", "Makeup > Face Makeup"],
   ["Home & Living", "Butelka Pet 200ml z dozownikiem czarnym", "Kitchen & Dining > Drinkware"],
   ["Home & Living", "Zestaw do dekoracji na Święta świąteczny Diy", "Home Décor > Seasonal Decor"],
-  ["Toys & Games", "Jigapix Pets Nowa Nintendo DS", "Video Games > Nintendo DS"],
+  ["Toys & Games", "Jigapix Pets Nowa Nintendo DS", "Video Games > Video Games > Nintendo DS"],
   ["Beauty", "Invisibobble Power The Strong Grip Hair Ring", "Hair Care > Hair Styling Accessories"],
   ["Beauty", "Goody Fabric Headwraps Assorted Colors 6Ct", "Hair Care > Hair Styling Accessories"],
   ["Beauty", "Moraz J And M Herbal Massage Ointment 1.7Oz", "Skincare > Body Skincare"],
