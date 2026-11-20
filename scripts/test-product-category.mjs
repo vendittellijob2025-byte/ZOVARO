@@ -285,6 +285,26 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Creality" }, { title: "Aeriscape – Baskets imprimées en 3D - Black / 35", sourceCategory: "Industrial & Scientific" }), "Fashion");
+assert.equal(categoryFor({ name: "Creality" }, { title: "Guardian Orbit – Chaussures pour enfants imprimées en 3D - Orange / 33", sourceCategory: "Industrial & Scientific" }), "Fashion");
+assert.equal(categoryFor({ name: "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes" }, { title: "BRUNO MARC Men s Cotton Crew Athletic Dress Socks", sourceCategory: "Sports" }), "Fashion");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Omegaregen Sport Cytryna 250 ml", sourceCategory: "Sports" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Myova Myoplus Tablets 120Ct", sourceCategory: "Health & Wellness" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Płytka przedsionkowa silikonowa Muppy duża", sourceCategory: "Health & Wellness" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing H3 Electronic Animal Caller Trail Cam 2.7K Video + 20MP Photo", sourceCategory: "Electronics" }), "Sports");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing M1S Monocular", sourceCategory: "Electronics" }), "Sports");
+assert.equal(categoryFor({ name: "Rexing" }, { title: "Rexing CPW-1 Wireless Apple CarPlay Adapter", sourceCategory: "Electronics" }), "Automotive");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module", sourceCategory: "Electronics" }), "Security & Safety");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Funko Pop Tv Umbrella Academy Hazel w/mask 937", sourceCategory: "Electronics" }), "Toys & Games");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Prima Soloist 1/4 skrzypce zestaw Białe", sourceCategory: "Toys & Games" }), "Musical Instruments & Studio");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Księżniczka i Książę. Gotowi do snu.", sourceCategory: "Books & Media" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Baby Driver dvd", sourceCategory: "Babies" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Wax Kolagenowa Odżywka Włosy Zniszczone 200ml", sourceCategory: "Pets" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Motul 8100 X-Clean Efe C2/C3 5W30 5L 505.01", sourceCategory: "Pets" }), "Automotive");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Uchwyt na tablet dla Dji Mini 2 i Air 2 Druk 3D", sourceCategory: "Health & Wellness" }), "Electronics");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Włóczka Himalaya Medical Baby turkus 79246", sourceCategory: "Health & Wellness" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Cliganic Mosquito Repellent Patches - Solid 90Ct", sourceCategory: "Health & Wellness" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Blissy Silk Scrunchie Pack - Regular - Red/white/blue", sourceCategory: "Fashion" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pride And Prejudice Jane Austen", sourceCategory: "Other" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "How to set up an online store? Krzysztof Bartnik", sourceCategory: "Other" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Maria Konopnicka Dzieciom", sourceCategory: "Other" }), "Books & Media");
@@ -307,10 +327,10 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pilot do Tv Thomson R
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Uchwyt Na Tablet Telefon Do Dji Phantom 2 3 Se", sourceCategory: "Health & Wellness" }), "Electronics");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Sznurek do makramy bawełniany denim 2mm 60m", sourceCategory: "Fashion" }), "Arts, Crafts & Sewing");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Zestaw koralików do robienia bransoletek DIY", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
-assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Sonor HS 2000 S Drum Hardware Stand Set", sourceCategory: "Tools & DIY" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Sonor HS 2000 S Drum Hardware Stand Set", sourceCategory: "Tools & DIY" }), "Musical Instruments & Studio");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Iggy Pop TV Eye 1977 Live CD Nowa", sourceCategory: "Electronics" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Wykrywacz Xp Orx Rc Hf 9,5x5 DD 13-81kHz", sourceCategory: "Fashion" }), "Sports");
-assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", sourceCategory: "Fashion" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", sourceCategory: "Fashion" }), "Musical Instruments & Studio");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Kieszeń Taktyczna Zrzutowa Zasobnik Helikon Competition Utility Pouch Olive", sourceCategory: "Fashion" }), "Sports");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pudełko Niespodzianka Exploding Box Diy Album", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drucik aluminiowy Złoty drut 1,2mm 5m Diy", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
@@ -571,7 +591,7 @@ const subcategoryCases = [
   ["Books & Media", "Terminator Genisys Arnold Schwarzenegger Clarke 4K", "Movies & TV > Blu-ray"],
   ["Books & Media", "Littlest Pet Shop Książka do wyklejania Kd", "Books > Children's Books"],
   ["Books & Media", "Iggy Pop TV Eye 1977 Live CD Nowa", "Music > CDs"],
-  ["Books & Media", "Sonor HS 2000 S Drum Hardware Stand Set", "Music > Instruments > Drums & Percussion > Stands"],
+  ["Musical Instruments & Studio", "Sonor HS 2000 S Drum Hardware Stand Set", "Instruments > Drums & Percussion"],
   ["Books & Media", "Diagnoza psychiatryczna", "Books > Education & Reference"],
   ["Health & Wellness", "Elgydium Junior Płyn Do Płukania Dla Dzieci 500ml", "Oral Hygiene > Mouthwash"],
   ["Fashion", "Brocchi Travel Toiletry Bag Black", "Bags & Luggage > Toiletry Bags"],
@@ -583,6 +603,51 @@ const subcategoryCases = [
   ["Office & Technology", "Notatnik Passion Journal Baby Moleskine L", "Office Supplies > Desk Accessories"],
   ["Toys & Games", "Secret Life of Pets 3D Game Snakes and Ladders Gra", "Board Games & Puzzles > Board Games"],
   ["Books & Media", "Pride And Prejudice Jane Austen", "Books > Fiction"],
+  ["Fashion", "Aeriscape – Baskets imprimées en 3D - Black / 35", "Shoes > Sneakers"],
+  ["Fashion", "Guardian Orbit – Chaussures pour enfants imprimées en 3D - Orange / 33", "Shoes > Kids' Shoes"],
+  ["Sports", "Ochronniki słuchu Peltor SportTac aktywne ziel-róż", "Hunting > Hunting Accessories"],
+  ["Sports", "2 sztuki mata fitness do ćwiczeń antypoślizgowa wytrzymała Reebok 4 mm", "Fitness & Gym > Exercise Mats"],
+  ["Sports", "Oakley Flak 2.0 Xl Sports Men's Sunglasses - Oo9188-B559", "Sports Sunglasses > Performance Sunglasses"],
+  ["Sports", "Wioślarz powietrzny York Fitness Turbine", "Fitness & Gym > Cardio Machines > Rowing Machines"],
+  ["Sports", "Sport Arsenal art. 312 sakwa wodoszczelna", "Cycling > Bike Bags & Panniers"],
+  ["Sports", "Rexing H3 Electronic Animal Caller Trail Cam 2.7K Video + 20MP Photo", "Hunting > Hunting Accessories"],
+  ["Sports", "Rexing M1S Monocular", "Hunting > Outdoor Optics > Monoculars & Spotting Scopes"],
+  ["Health & Wellness", "Omegaregen Sport Cytryna 250 ml", "Nutrition > Sports Supplements > Post-Workout"],
+  ["Health & Wellness", "Myova Myoplus Tablets 120Ct", "Nutrition > Vitamins, Minerals & Supplements > Women's Health Supplements"],
+  ["Health & Wellness", "Płytka przedsionkowa silikonowa Muppy duża", "Medical Devices & Equipment > Dental & Orthodontic Appliances"],
+  ["Health & Wellness", "Cliganic Mosquito Repellent Patches - Solid 90Ct", "Bath & Body > Insect Repellents"],
+  ["Health & Wellness", "Nożyczki Chirurgiczne Operacyjne Proste 13cm O/t", "Medical Devices & Equipment > Medical Instruments & Surgical Tools"],
+  ["Musical Instruments & Studio", "TC Electronic Hall Of Fame 2 X4 Reverb Gitarowy", "Instrument Accessories > Cables & Pedals"],
+  ["Musical Instruments & Studio", "TC Electronic Polytune Clip Tuner Chromatyczny", "Instrument Accessories > Tuners"],
+  ["Musical Instruments & Studio", "Modal Electronics Cobalt8M Moduł Brzmieniowy", "Instruments > Keyboards & Pianos"],
+  ["Musical Instruments & Studio", "Prima Soloist 1/4 skrzypce zestaw Białe", "Instruments > Strings"],
+  ["Musical Instruments & Studio", "Hamilton KB130E Keyboard Holder", "Instrument Accessories > Cases & Stands"],
+  ["Musical Instruments & Studio", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Instrument Accessories > Guitar Accessories > Guitar Straps"],
+  ["Musical Instruments & Studio", "Sonor HS 2000 S Drum Hardware Stand Set", "Instruments > Drums & Percussion"],
+  ["Electronics", "Rexing Card Viewer 4-in-1 SD Card Reader", "Computers > Storage & Memory"],
+  ["Electronics", "Kingston Canvas Select 64GB Micro SD Card", "Computers > Storage & Memory"],
+  ["Electronics", "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module", "Home & Business Security > Access Control"],
+  ["Electronics", "Uchwyt na tablet dla Dji Mini 2 i Air 2 Druk 3D", "Cameras & Photography > Camera Accessories"],
+  ["Electronics", "Life Q30 Bluetooth Headphone Midnight Blue", "Audio > Headphones"],
+  ["Electronics", "Samsung Galaxy Watch Silicone Strap 46mm", "Wearable Technology > Wearable Accessories"],
+  ["Electronics", "Soundcore Nebula Carry Case for P1 & P1i", "TV & Home Theater > Projector Accessories"],
+  ["Security & Safety", "Hikvision DS-KD8003-IME1(B)/EU Video Intercom Module", "Home & Business Security > Access Control"],
+  ["Appliances", "Makita VC2000L 1000W Industrial Vacuum Cleaner", "Floor Care > Vacuum Cleaners"],
+  ["Toys & Games", "Funko Pop Tv Umbrella Academy Hazel w/mask 937", "Dolls & Figures > Action Figures"],
+  ["Toys & Games", "Kostki do gry K3 d3 (d6 w/ 1-2-3 twice) kostka", "Board Games & Puzzles > Dice & Accessories"],
+  ["Arts, Crafts & Sewing", "Szydełko Tulip Etimo Rose 1,50 mm No. 2", "Sewing & Textiles > Needles & Notions"],
+  ["Arts, Crafts & Sewing", "Zestaw Do Robienia Świec Sojowych wosk kwiaty Diy", "Crafts & Creative DIY > Candle & Soap Making"],
+  ["Arts, Crafts & Sewing", "Włóczka Himalaya Medical Baby turkus 79246", "Sewing & Textiles > Yarn & Knitting"],
+  ["Babies", "Blissy Toddler Pillowcase - Bubblegum Pink", "Nursery > Bedding"],
+  ["Babies", "Seyssso Baby Penguin 2 końcówki dla dzieci 0-18m", "Hygiene & Wellness > Baby Grooming"],
+  ["Travel", "Macy's Dual-Purpose Refillable Travel Bottle 3.4Oz", "Travel Accessories > Packing Organizers"],
+  ["Books & Media", "Baby Driver dvd", "Movies & TV > DVD"],
+  ["Books & Media", "Little Mix Salute CD", "Music > CDs"],
+  ["Books & Media", "Peppa Pig: Peppa Goes On Holiday Peppa Pig", "Books > Children's Books"],
+  ["Books & Media", "Czarnogóra Pascal Holiday", "Books > Travel & Geography"],
+  ["Home & Living", "TV cabinet 240 Chest of drawers Solid Wood Mango Wood Loft BGM24", "Furniture > Living Room Furniture"],
+  ["Office & Technology", "AdBlocker Ultimate for Windows", "Software > Security & Antivirus"],
+  ["Luxury & Prestige", "'Starry' 950 Platinum Ring", "Luxury Watches & Jewelry > High Jewelry"],
   ["Books & Media", "How to set up an online store? Krzysztof Bartnik", "Books > Business & Finance"],
   ["Books & Media", "Maria Konopnicka Dzieciom", "Books > Children's Books"],
   ["Toys & Games", "Karty Piotruś Kraina Lodu 2 Trefl 08483", "Board Games & Puzzles > Card Games"],
@@ -609,7 +674,7 @@ const subcategoryCases = [
   ["Health & Wellness", "VITALBEAUTIE Energy Shot Body&Brain 28days", "Nutrition > Vitamins, Minerals & Supplements > Energy & Focus"],
   ["Health & Wellness", "VITALBEAUTIE Super Collagen Liftshot 28ea", "Nutrition > Vitamins, Minerals & Supplements > Collagen Supplements"],
   ["Sports", "Wykrywacz Xp Orx Rc Hf 9,5x5 DD 13-81kHz", "Hunting > Metal Detectors"],
-  ["Books & Media", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Music > Instruments > Guitar Accessories > Guitar Straps"],
+  ["Musical Instruments & Studio", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Instrument Accessories > Guitar Accessories > Guitar Straps"],
   ["Sports", "Helikon Competition Utility Pouch Olive", "Hunting > Tactical Gear & Accessories"],
   ["Arts, Crafts & Sewing", "Pudełko Niespodzianka Exploding Box Diy Album", "Crafts & Creative DIY > Paper Crafts > Scrapbooking"],
   ["Arts, Crafts & Sewing", "Drucik aluminiowy Złoty drut 1,2mm 5m Diy", "Crafts & Creative DIY > Beads & Jewelry Making > Craft Wire"],

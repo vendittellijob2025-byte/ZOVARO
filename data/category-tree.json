@@ -784,7 +784,8 @@
             "TV Mounts & Accessories",
             "Cables & Accessories",
             "Antennas & Accessories",
-            "Remote Controls"
+            "Remote Controls",
+            "Projector Accessories"
           ]
         },
         {
@@ -847,6 +848,12 @@
             "Charging Cables",
             "Charging Accessories",
             "E-Bike Charging"
+          ]
+        },
+        {
+          "name": "Power Generation",
+          "children": [
+            "Generators"
           ]
         }
       ]
@@ -1203,7 +1210,8 @@
                 "Herbal Supplements",
                 "Skin Health",
                 "Energy & Focus",
-                "Collagen Supplements"
+                "Collagen Supplements",
+                "Women's Health Supplements"
               ]
             },
             "Multivitamins",
@@ -1235,7 +1243,8 @@
           "children": [
             "Personal Hygiene",
             "Body Care",
-            "Foot Care"
+            "Foot Care",
+            "Insect Repellents"
           ]
         },
         {
@@ -1299,7 +1308,8 @@
             "Toothpaste",
             "Dental Floss",
             "Mouthwash",
-            "Oral Irrigators"
+            "Oral Irrigators",
+            "Interdental Brushes"
           ]
         },
         {
@@ -1321,7 +1331,9 @@
             "Supports, Slings & Lifts",
             "Thermometers",
             "Blood Pressure Monitors",
-            "Pulse Oximeters"
+            "Pulse Oximeters",
+            "Dental & Orthodontic Appliances",
+            "Medical Instruments & Surgical Tools"
           ]
         },
         {
@@ -1539,7 +1551,13 @@
             "Cases & Stands",
             "Strings & Reeds",
             "Tuners",
-            "Cables & Pedals"
+            "Cables & Pedals",
+            {
+              "name": "Guitar Accessories",
+              "children": [
+                "Guitar Straps"
+              ]
+            }
           ]
         }
       ]
@@ -2071,7 +2089,8 @@
             {
               "name": "Outdoor Optics",
               "children": [
-                "Night Vision"
+                "Night Vision",
+                "Monoculars & Spotting Scopes"
               ]
             },
             "Metal Detectors",
@@ -2121,7 +2140,8 @@
             "Helmets & Protection",
             "Cycling Apparel",
             "Lights & Electronics",
-            "Pumps & Repair"
+            "Pumps & Repair",
+            "Bike Bags & Panniers"
           ]
         },
         {
@@ -2205,7 +2225,8 @@
                 "Yoga Blocks & Straps",
                 "Pilates Equipment"
               ]
-            }
+            },
+            "Exercise Mats"
           ]
         },
         {
@@ -2573,7 +2594,8 @@
             "Board Games",
             "Card Games",
             "Jigsaw Puzzles",
-            "Educational Games"
+            "Educational Games",
+            "Dice & Accessories"
           ]
         },
         {
@@ -2630,7 +2652,8 @@
             "Travel Pillows",
             "Passport Holders",
             "Luggage Tags",
-            "Travel Adapters"
+            "Travel Adapters",
+            "Travel Bottles"
           ]
         },
         {

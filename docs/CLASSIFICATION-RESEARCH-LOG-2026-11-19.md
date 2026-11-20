@@ -161,3 +161,13 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Identified AESTURA, ILLIYOON, Espoir, Innisfree and Mamonde skincare/makeup products as Beauty.
 - Identified berberine supplements and ankle-support products as Health & Wellness, fishing lures as Sports, gate automation kits as Home & Living, Steam keys as Gaming and horse-head keychains as Fashion.
 - Left coupons, memberships, installation services and other non-merchandise entries in Other rather than forcing them into product categories.
+
+
+### 15. Cross-category corrections from the expanded catalogue diagnostics
+
+- Reclassified Creality 3D-printed shoes as Fashion footwear rather than Industrial & Scientific; separated adult sneakers from children's shoes.
+- Moved guitar straps, tuners, reverb pedals, keyboard modules, violin products and drum hardware into Musical Instruments & Studio.
+- Added evidence-based roots and subcategories for Rexing trail cameras/monoculars/compass, automotive OBD2/CarPlay accessories, Kingston memory cards, intercoms and smart locks.
+- Corrected oral-care, orthodontic, supplement, herbal, insect-repellent and surgical-instrument examples into Health & Wellness; hazardous rodent poison remains unclassified for safety.
+- Reclassified children's books, recorded music, DVDs, toys, dice, crochet/candle-making supplies, travel accessories and home furniture/decor to their matching browse paths.
+- Verified Rexing H3 as a trail camera, MyOva MyoPlus as a myo-inositol supplement, Muppy vestibular plates as orthodontic devices, and Omegaregen Sport as a dietary supplement using manufacturer or product-reference sources.
