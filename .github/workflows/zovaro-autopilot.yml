@@ -18,8 +18,8 @@ on:
       - "data/partner-opportunities.json"
   workflow_dispatch:
   schedule:
-    # 07:40 America/Bogota (UTC-5) every day.
-    - cron: "40 12 * * *"
+    # Every six hours. GitHub-hosted execution continues while the owner's computer is off.
+    - cron: "40 */6 * * *"
 
 permissions:
   contents: read
