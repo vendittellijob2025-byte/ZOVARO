@@ -44,7 +44,7 @@
     },
     {
       "partner": "Edel & Stark",
-      "status": "application_sent",
+      "status": "responded",
       "verticals": [
         "luxury car rental",
         "chauffeur services",
@@ -54,10 +54,11 @@
       "publicProgram": "Public affiliate page states commissions up to 15%, subject to agent agreement and booked referrals.",
       "url": "https://www.edelstark.com/en/about/affiliate/",
       "nextVerification": [
-        "existing outreach reply",
-        "written agent agreement",
-        "country coverage and referral tracking",
-        "actual rate by service and payment schedule"
+        "deferred until ZOVARO can submit a concrete qualified enquiry",
+        "written Agent Agreement after first enquiry",
+        "referral attribution by direct email; no tracking tool or link supplied",
+        "express image-use permission and approved promotional material unavailable",
+        "confirm current commission rate and invoice payment timing before any activation"
       ]
     },
     {
