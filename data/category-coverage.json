@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T01:42:41.988Z",
+  "generatedAt": "2026-11-20T01:46:14.892Z",
   "selectedProductCount": 20910,
   "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
@@ -157,13 +157,13 @@
     },
     {
       "name": "Appliances",
-      "productCount": 5,
+      "productCount": 6,
       "unclassifiedProductCount": 3,
       "browseTree": [
         {
           "name": "Kitchen Appliances",
           "path": "Kitchen Appliances",
-          "productCount": 2,
+          "productCount": 3,
           "directProductCount": 2,
           "children": [
             {
@@ -213,6 +213,13 @@
               "path": "Kitchen Appliances > Refrigerators",
               "productCount": 0,
               "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Coffee Machine Accessories",
+              "path": "Kitchen Appliances > Coffee Machine Accessories",
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -358,7 +365,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 843,
+      "productCount": 844,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -400,7 +407,7 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 1,
+          "productCount": 2,
           "directProductCount": 0,
           "children": [
             {
@@ -413,8 +420,8 @@
             {
               "name": "Models & Miniatures",
               "path": "Crafts & Creative DIY > Models & Miniatures",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -487,7 +494,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1819,
+      "productCount": 1843,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -536,8 +543,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1362,
-          "directProductCount": 1345,
+          "productCount": 1348,
+          "directProductCount": 1331,
           "children": [
             {
               "name": "Interior Accessories",
@@ -859,8 +866,8 @@
         {
           "name": "Motorcycles, Accessories & Parts",
           "path": "Motorcycles, Accessories & Parts",
-          "productCount": 28,
-          "directProductCount": 28,
+          "productCount": 66,
+          "directProductCount": 25,
           "children": [
             {
               "name": "Motorcycles",
@@ -893,8 +900,8 @@
             {
               "name": "ATV & Powersports",
               "path": "Motorcycles, Accessories & Parts > ATV & Powersports",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 41,
+              "directProductCount": 41,
               "children": []
             }
           ]
@@ -1146,8 +1153,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 604,
-      "unclassifiedProductCount": 257,
+      "productCount": 601,
+      "unclassifiedProductCount": 254,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1751,8 +1758,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1904,
-      "unclassifiedProductCount": 706,
+      "productCount": 2122,
+      "unclassifiedProductCount": 905,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1900,8 +1907,8 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 153,
-          "directProductCount": 45,
+          "productCount": 158,
+          "directProductCount": 37,
           "children": [
             {
               "name": "Neck & Décolleté",
@@ -1934,8 +1941,8 @@
             {
               "name": "Eye Treatments",
               "path": "Skincare > Eye Treatments",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 11,
+              "directProductCount": 11,
               "children": []
             },
             {
@@ -1976,8 +1983,8 @@
             {
               "name": "Serums & Essences",
               "path": "Skincare > Serums & Essences",
-              "productCount": 76,
-              "directProductCount": 76,
+              "productCount": 79,
+              "directProductCount": 79,
               "children": []
             }
           ]
@@ -1985,8 +1992,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 441,
-          "directProductCount": 441,
+          "productCount": 448,
+          "directProductCount": 448,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2091,14 +2098,14 @@
         {
           "name": "Manicure & Pedicure",
           "path": "Manicure & Pedicure",
-          "productCount": 1,
+          "productCount": 2,
           "directProductCount": 0,
           "children": [
             {
               "name": "Nail Polish",
               "path": "Manicure & Pedicure > Nail Polish",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
@@ -2134,7 +2141,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 207,
+          "productCount": 213,
           "directProductCount": 0,
           "children": [
             {
@@ -2183,8 +2190,8 @@
             {
               "name": "Eye Makeup",
               "path": "Makeup > Eye Makeup",
-              "productCount": 83,
-              "directProductCount": 83,
+              "productCount": 87,
+              "directProductCount": 87,
               "children": []
             },
             {
@@ -2211,8 +2218,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 114,
-              "directProductCount": 114,
+              "productCount": 116,
+              "directProductCount": 116,
               "children": []
             },
             {
@@ -3159,20 +3166,20 @@
     },
     {
       "name": "Energy, Solar & Electric Mobility",
-      "productCount": 8,
+      "productCount": 10,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Solar & Renewable Energy",
           "path": "Solar & Renewable Energy",
-          "productCount": 2,
-          "directProductCount": 2,
+          "productCount": 4,
+          "directProductCount": 0,
           "children": [
             {
               "name": "Solar Panels",
               "path": "Solar & Renewable Energy > Solar Panels",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -3281,13 +3288,13 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1810,
-      "unclassifiedProductCount": 559,
+      "productCount": 1824,
+      "unclassifiedProductCount": 561,
       "browseTree": [
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 140,
+          "productCount": 146,
           "directProductCount": 0,
           "children": [
             {
@@ -3356,8 +3363,8 @@
             {
               "name": "Socks",
               "path": "Clothing > Socks",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": []
             }
           ]
@@ -3650,7 +3657,7 @@
         {
           "name": "Jewelry",
           "path": "Jewelry",
-          "productCount": 4,
+          "productCount": 9,
           "directProductCount": 3,
           "children": [
             {
@@ -3677,8 +3684,8 @@
             {
               "name": "Rings",
               "path": "Jewelry > Rings",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": []
             },
             {
@@ -3700,7 +3707,7 @@
         {
           "name": "Accessories",
           "path": "Accessories",
-          "productCount": 7,
+          "productCount": 8,
           "directProductCount": 7,
           "children": [
             {
@@ -3727,8 +3734,8 @@
             {
               "name": "Scarves",
               "path": "Accessories > Scarves",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -3751,8 +3758,8 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 252,
-      "unclassifiedProductCount": 88,
+      "productCount": 278,
+      "unclassifiedProductCount": 86,
       "browseTree": [
         {
           "name": "Pantry Staples",
@@ -3800,8 +3807,8 @@
         {
           "name": "Snacks & Sweets",
           "path": "Snacks & Sweets",
-          "productCount": 7,
-          "directProductCount": 6,
+          "productCount": 6,
+          "directProductCount": 5,
           "children": [
             {
               "name": "Chocolate",
@@ -3836,7 +3843,7 @@
         {
           "name": "Beverages",
           "path": "Beverages",
-          "productCount": 10,
+          "productCount": 40,
           "directProductCount": 0,
           "children": [
             {
@@ -3849,8 +3856,8 @@
             {
               "name": "Tea",
               "path": "Beverages > Tea",
-              "productCount": 8,
-              "directProductCount": 8,
+              "productCount": 38,
+              "directProductCount": 38,
               "children": []
             },
             {
@@ -3879,8 +3886,8 @@
         {
           "name": "Specialty & Organic",
           "path": "Specialty & Organic",
-          "productCount": 1,
-          "directProductCount": 1,
+          "productCount": 0,
+          "directProductCount": 0,
           "children": [
             {
               "name": "Organic Foods",
@@ -4296,7 +4303,7 @@
     },
     {
       "name": "Garden",
-      "productCount": 3,
+      "productCount": 7,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -4345,7 +4352,7 @@
         {
           "name": "Lawn Care",
           "path": "Lawn Care",
-          "productCount": 0,
+          "productCount": 4,
           "directProductCount": 0,
           "children": [
             {
@@ -4365,8 +4372,8 @@
             {
               "name": "Leaf Blowers",
               "path": "Lawn Care > Leaf Blowers",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -4590,13 +4597,13 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1161,
-      "unclassifiedProductCount": 875,
+      "productCount": 1162,
+      "unclassifiedProductCount": 874,
       "browseTree": [
         {
           "name": "Nutrition",
           "path": "Nutrition",
-          "productCount": 265,
+          "productCount": 264,
           "directProductCount": 0,
           "children": [
             {
@@ -4666,8 +4673,8 @@
             {
               "name": "Vitamins, Minerals & Supplements",
               "path": "Nutrition > Vitamins, Minerals & Supplements",
-              "productCount": 221,
-              "directProductCount": 134,
+              "productCount": 220,
+              "directProductCount": 133,
               "children": [
                 {
                   "name": "Multivitamins",
@@ -5212,7 +5219,7 @@
         {
           "name": "Home Cleaning & Care",
           "path": "Home Cleaning & Care",
-          "productCount": 0,
+          "productCount": 3,
           "directProductCount": 0,
           "children": [
             {
@@ -5225,8 +5232,8 @@
             {
               "name": "Disinfectants",
               "path": "Home Cleaning & Care > Disinfectants",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -5285,8 +5292,8 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 571,
-      "unclassifiedProductCount": 14,
+      "productCount": 570,
+      "unclassifiedProductCount": 13,
       "browseTree": [
         {
           "name": "Furniture",
@@ -5334,8 +5341,8 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 6,
-          "directProductCount": 6,
+          "productCount": 7,
+          "directProductCount": 7,
           "children": [
             {
               "name": "Cookware",
@@ -5391,8 +5398,8 @@
         {
           "name": "Bedding & Bath",
           "path": "Bedding & Bath",
-          "productCount": 17,
-          "directProductCount": 17,
+          "productCount": 16,
+          "directProductCount": 16,
           "children": [
             {
               "name": "Sheets & Pillowcases",
@@ -5822,13 +5829,13 @@
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 289,
+      "productCount": 292,
       "unclassifiedProductCount": 3,
       "browseTree": [
         {
           "name": "Instruments",
           "path": "Instruments",
-          "productCount": 284,
+          "productCount": 285,
           "directProductCount": 284,
           "children": [
             {
@@ -5862,8 +5869,8 @@
             {
               "name": "Wind Instruments",
               "path": "Instruments > Wind Instruments",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -5950,7 +5957,7 @@
         {
           "name": "Instrument Accessories",
           "path": "Instrument Accessories",
-          "productCount": 1,
+          "productCount": 3,
           "directProductCount": 0,
           "children": [
             {
@@ -5963,8 +5970,8 @@
             {
               "name": "Strings & Reeds",
               "path": "Instrument Accessories > Strings & Reeds",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
@@ -7776,7 +7783,7 @@
     {
       "name": "Sports",
       "productCount": 1814,
-      "unclassifiedProductCount": 462,
+      "unclassifiedProductCount": 432,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8237,14 +8244,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 364,
+          "productCount": 356,
           "directProductCount": 0,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 364,
-              "directProductCount": 364,
+              "productCount": 356,
+              "directProductCount": 356,
               "children": []
             },
             {
@@ -9069,7 +9076,7 @@
         {
           "name": "Fishing",
           "path": "Fishing",
-          "productCount": 0,
+          "productCount": 38,
           "directProductCount": 0,
           "children": [
             {
@@ -9096,8 +9103,8 @@
             {
               "name": "Fishing Tackle",
               "path": "Fishing > Fishing Tackle",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 38,
+              "directProductCount": 38,
               "children": []
             }
           ]
@@ -9532,8 +9539,8 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 178,
-      "unclassifiedProductCount": 170,
+      "productCount": 164,
+      "unclassifiedProductCount": 156,
       "browseTree": [
         {
           "name": "Power Tools",
@@ -10085,8 +10092,8 @@
     },
     {
       "name": "Travel",
-      "productCount": 146,
-      "unclassifiedProductCount": 145,
+      "productCount": 143,
+      "unclassifiedProductCount": 142,
       "browseTree": [
         {
           "name": "Luggage",
@@ -10339,20 +10346,20 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1698,
+  "otherProductCount": 1425,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1698
+      "count": 1425
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1409,
-    "usedTaxonomyNodeCount": 231,
-    "emptyTaxonomyNodeCount": 1178,
-    "productsWithKnownSubcategory": 12175,
+    "taxonomyNodeCount": 1410,
+    "usedTaxonomyNodeCount": 245,
+    "emptyTaxonomyNodeCount": 1165,
+    "productsWithKnownSubcategory": 12301,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 8735,
+    "productsWithoutSubcategory": 8609,
     "unclassifiedByCategory": [
       {
         "category": "Toys & Games",
@@ -10363,20 +10370,20 @@
         "count": 1409
       },
       {
-        "category": "Health & Wellness",
-        "count": 875
+        "category": "Beauty",
+        "count": 905
       },
       {
-        "category": "Beauty",
-        "count": 706
+        "category": "Health & Wellness",
+        "count": 874
       },
       {
         "category": "Fashion",
-        "count": 559
+        "count": 561
       },
       {
         "category": "Sports",
-        "count": 462
+        "count": 432
       },
       {
         "category": "Books & Media",
@@ -10384,11 +10391,11 @@
       },
       {
         "category": "Babies",
-        "count": 257
+        "count": 254
       },
       {
         "category": "Tools & DIY",
-        "count": 170
+        "count": 156
       },
       {
         "category": "Electronics",
@@ -10396,7 +10403,7 @@
       },
       {
         "category": "Travel",
-        "count": 145
+        "count": 142
       },
       {
         "category": "Pets",
@@ -10404,7 +10411,7 @@
       },
       {
         "category": "Food & Grocery",
-        "count": 88
+        "count": 86
       },
       {
         "category": "Office & Technology",
@@ -10416,7 +10423,7 @@
       },
       {
         "category": "Home & Living",
-        "count": 14
+        "count": 13
       },
       {
         "category": "Business, Wholesale & Bulk Supply",
@@ -10448,8 +10455,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 8735,
-      "provisional": 12175
+      "needs_classification": 8609,
+      "provisional": 12301
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10463,7 +10470,7 @@
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1345
+        "productCount": 1331
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
@@ -10479,7 +10486,7 @@
       },
       {
         "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 441
+        "productCount": 448
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -10491,7 +10498,7 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 364
+        "productCount": 356
       },
       {
         "path": "Fashion > Shoes > Sneakers",
@@ -10539,7 +10546,7 @@
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
-        "productCount": 134
+        "productCount": 133
       },
       {
         "path": "Fashion > Shoes > Flats",
@@ -10555,7 +10562,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 114
+        "productCount": 116
       },
       {
         "path": "Automotive > Vehicle Tools",
@@ -10578,11 +10585,11 @@
         "productCount": 88
       },
       {
-        "path": "Toys & Games > Building & Construction",
-        "productCount": 83
+        "path": "Beauty > Makeup > Eye Makeup",
+        "productCount": 87
       },
       {
-        "path": "Beauty > Makeup > Eye Makeup",
+        "path": "Toys & Games > Building & Construction",
         "productCount": 83
       },
       {
@@ -10591,7 +10598,7 @@
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
-        "productCount": 76
+        "productCount": 79
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
@@ -10634,19 +10641,31 @@
         "productCount": 48
       },
       {
-        "path": "Beauty > Skincare",
-        "productCount": 45
-      },
-      {
         "path": "Sports > Tennis > Tennis Shoes",
         "productCount": 42
+      },
+      {
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "productCount": 41
       },
       {
         "path": "Automotive > GPS Navigation",
         "productCount": 39
       },
       {
+        "path": "Sports > Fishing > Fishing Tackle",
+        "productCount": 38
+      },
+      {
+        "path": "Food & Grocery > Beverages > Tea",
+        "productCount": 38
+      },
+      {
         "path": "Electronics > Phones & Tablets > Smartphones > Apple iPhone",
+        "productCount": 37
+      },
+      {
+        "path": "Beauty > Skincare",
         "productCount": 37
       },
       {
@@ -10670,15 +10689,15 @@
         "productCount": 29
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts",
-        "productCount": 28
-      },
-      {
         "path": "Gaming > Consoles > Nintendo",
         "productCount": 28
       },
       {
         "path": "Automotive > Car Parts > Steering & Suspension",
+        "productCount": 25
+      },
+      {
+        "path": "Automotive > Motorcycles, Accessories & Parts",
         "productCount": 25
       },
       {
@@ -10719,7 +10738,7 @@
       },
       {
         "path": "Home & Living > Bedding & Bath",
-        "productCount": 17
+        "productCount": 16
       },
       {
         "path": "Health & Wellness > Oral Hygiene",
@@ -10751,6 +10770,10 @@
       },
       {
         "path": "Automotive > Car Parts > Transmission & Drivetrain",
+        "productCount": 11
+      },
+      {
+        "path": "Beauty > Skincare > Eye Treatments",
         "productCount": 11
       },
       {
@@ -10798,10 +10821,6 @@
         "productCount": 8
       },
       {
-        "path": "Food & Grocery > Beverages > Tea",
-        "productCount": 8
-      },
-      {
         "path": "Beauty > Makeup > Lip Makeup",
         "productCount": 8
       },
@@ -10834,50 +10853,30 @@
         "productCount": 7
       },
       {
+        "path": "Home & Living > Kitchen & Dining",
+        "productCount": 7
+      },
+      {
         "path": "Babies > Baby Clothing",
         "productCount": 7
       },
       {
         "path": "Electronics > Computers > Computer Components > SSD & Hard Drives",
         "productCount": 6
-      },
-      {
-        "path": "Electronics > Phones & Tablets > Power Banks & Portable Chargers",
-        "productCount": 6
-      },
-      {
-        "path": "Food & Grocery > Snacks & Sweets",
-        "productCount": 6
-      },
-      {
-        "path": "Books & Media > Magazines & Periodicals",
-        "productCount": 6
-      },
-      {
-        "path": "Home & Living > Kitchen & Dining",
-        "productCount": 6
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1141
+        "productCount": 1107
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productCount": 272
       },
       {
-        "advertiser": "Perfumania.com",
-        "productCount": 159
-      },
-      {
         "advertiser": "Amore Mall",
-        "productCount": 98
-      },
-      {
-        "advertiser": "FRP Moto  Affiliate",
-        "productCount": 17
+        "productCount": 35
       },
       {
         "advertiser": "UNice",
@@ -10993,15 +10992,6 @@
         "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
       },
       {
-        "title": "OSULLOC Camellia Forest Tea (20 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
         "title": "[US Only] UNice Plus VIP (90 Days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11029,15 +11019,6 @@
         "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
       },
       {
-        "title": "Chrome By Azzaro And Versace Pour Homme By Versace - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11045,168 +11026,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
-      },
-      {
-        "title": "DermaFood Cellular Eye Perfecting Cream by LashFood for Unisex - 0.51 oz Cream - 0.51  oz.",
-        "brand": "LashFood",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This cream is clinically proven to erase fine lines, wrinkles, and dark circles and gives the appearance of a younger and firmer looking eye area. It is suitable for all skin types"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "9PM Black Gift Set - 3.4 oz.",
-        "brand": "Afnan",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Afnan 9PM Black Gift Set is a fragrant tribute to the hours when the world comes alive - bold, warm, and perfectly timed for the evening. Bergamot, lavandin, cinnamon, and apple cr"
-      },
-      {
-        "title": "Romance by Ralph Lauren and Yellow Diamond by Versace and Acqua Di Gioia by Giorgio Armani - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "Ultimate Miracle Worker by Philosophy for Unisex - 2 Pc Set 2oz Multi-Rejuvenating Retinol and Superf - Default Title",
-        "brand": "Philosophy",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The power of pure retinol is combined with a natural retinol-like complex powered by alfalfa extract and nourishing superfood oils for an efficacious formula"
-      },
-      {
-        "title": "Bvlgari Omnia Collection by Bvlgari for Women - 3 Pc Mini Gift Set - Default Title",
-        "brand": "Bvlgari",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Launched by the house of Bvlgari Man in the year 2010. This woody aromatic formula has a blend of Pink grapefruit,cactus juice, middle notes of Benzion,calabrian bergamot and Base "
-      },
-      {
-        "title": "Tan Remover Mousse by St. Tropez for Unisex - 6.7 oz Mousse - 6.7 oz.",
-        "brand": "St. Tropez",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The quickest and easiest way to remove mistakes or tan build up and prime skin for a fresh tan application. Suitable for even sensitive skin, this luxurious foam effectively remove"
-      },
-      {
-        "title": "Prevage City Smart Double Action Detox Peel Off Mask by Elizabeth Arden for Women - 2.5 oz Mask - 2.5 oz.",
-        "brand": "Elizabeth Arden",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It acts like a liquid magnet to lift and remove impurities instantly while resurfacing skin and enhancing its natural detoxification system. Peel to reveal a brighter, smoother, vi"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Thirstymud Hydrating Treatment by Glamglow for Unisex - 0.5 oz Treatment - 0.5 oz.",
-        "brand": "Glamglow",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This perfects skin by treating the four aggravating factors hydration, energy, skin glow, wrinkles and firmness. The skin appears soft, regenerated and sparkling. The face glows wi"
-      },
-      {
-        "title": "Paris Hilton by Paris Hilton for Men - 4 Pc Gift Set - 4 oz.",
-        "brand": "Paris Hilton",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Launched by the design house of Paris Hilton in the year 2005. This masculine scent has a blend of fig leaf, cucumber, green mango, amber, white sage, cedarwood, and juniper. It is"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Barrier Defense Booster by Dermalogica for Unisex - 1 oz Booster - 1 oz.",
-        "brand": "Dermalogica",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It is a concentrated oil booster that soothes, nourishes, and moisturizes to restore balance to sensitive skin and it also nourishes and soothes irritated skin."
-      },
-      {
-        "title": "Sensuelle By Camille Rochelle And Mon Paris By Yves Saint Laurent - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "Dr. Andrew Weil for Origins Mega-Mushroom Skin Relief by Origins for Women - 6.7 oz Treatment - 6.7 oz.",
-        "brand": "Origins",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This extra-light treatment lotion features, which soothes, comforts, and hydrates skin. This treatemnt helps to defend skin against silent skin agers."
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - White / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Cocoa Butter Eventone Fade Cream by Palmers for Unisex - 2.7 oz Cream - Default Title",
-        "brand": "Palmers",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This cream is a great skin lightening cream that helps to fade unwanted discoloration, dark spots or age spots caused by sun damage, aging skin or scarring. It deeply moisturizes a"
-      },
-      {
-        "title": "Tamiya Extra Thin Quick Setting 87182 Klej 40ml",
-        "brand": "Tamiya",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>TAMIYA - EXTRA THIN</h1><p><b>QUICK SETTING - SPECJALNA WERSJA: PRZYSPIESZONE WIĄZANIE!</b></p><h1>Klej z pędzelkiem do modeli plastikowych.</h1><p><b>40ml - DUŻY i bardzo WYDA"
       },
       {
         "title": "Olejek zapachowy 12ml Pomarańcza I Cynamon",
@@ -11218,195 +11037,6 @@
         "description": "<h1>Olejek zapachowy 12ml - POMARAŃCZA I CYNAMON </h1><h1>OLEJEK ZAPACHOWY POMARAŃCZA I CYNAMON 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zde"
       },
       {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Black / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Daisy Eau So Fresh Gift Set - 4.2 oz.",
-        "brand": "Marc Jacobs",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift Set Includes: 4.2 oz. Eau de Toilette Spray, 2.5 oz. Body Lotion and 0.33 oz. Travel Size."
-      },
-      {
-        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.12",
-        "brand": "Marko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.12</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
-      },
-      {
-        "title": "Phyto-Contour Eye Firming Creme by Yonka for Unisex - 0.53 oz Creme - 0.53 oz.",
-        "brand": "Yonka",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This refined, aromatic cream with extracts of rosemary visibly reduces puffiness and dark circles. It restores firmness to the eye and lip contour and provides a feeling of freshne"
-      },
-      {
-        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.13",
-        "brand": "Marko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.13</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
-      },
-      {
-        "title": "I Peel Lightening Lift Gel Peel Technology by Image for Unisex - 4 oz Treatment - 4 oz.",
-        "brand": "Image",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This highly effective treatment blends lactic and kojic acids with a cocktail of lightening agents to reduce pigmentation and redness caused by rosacea and corrects all forms of pi"
-      },
-      {
-        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.18",
-        "brand": "Marko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.18</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
-      },
-      {
-        "title": "Burberry Touch By Burberry And Burberry By Burberry - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.21",
-        "brand": "Marko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.21</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
-      },
-      {
-        "title": "The Most Wanted Intense Gift Set - 3.38 oz.",
-        "brand": "Azzaro",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Azzaro The Most Wanted Intense Gift Set is the complete experience of masculine desire - an immersive introduction to one of the most compelling modern aromatic colognes. Cardamom "
-      },
-      {
-        "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.19",
-        "brand": "Marko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Złoty PIERŚCIONEK ZARĘCZYNOWY 585 z CYRKONIĄ r.19</h1><p>Wszystkie&nbsp;pierścionki sprzedawane przez firmę MARKO wykonane są z najlepszych włoskich i polskich materiałów. Wyro"
-      },
-      {
-        "title": "Acne-Clear Invisible Dots by Peter Thomas Roth for Unisex - 72 Clear Dots Acne-Care - 72 Clear Dots",
-        "brand": "Peter Thomas Roth",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Acne-Clear Invisible Dots"
-      },
-      {
-        "title": "Pg Sox Skarpety Antypoślizgowe Niebieskie r. 37-41",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>PIŁKARSKIE SKARPETY ANTYPOŚLIZGOWE PG SOX</h1><p>Sportowe skarpety PG SOX zapewniają niesamowitą stabilność oraz maksymalnie ograniczają przemieszczanie się stopy w bucie. Wyko"
-      },
-      {
-        "title": "Stone Crop Hydrating Gel by Eminence for Unisex - 1 oz Gel - 1 oz.",
-        "brand": "Eminence",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This gel gives the skin instant, deep-penetrating moisture that leaves skin with a smooth matte finish. This hydrating gel will soothe, heal, and even skin tone to minimize the app"
-      },
-      {
-        "title": "Ładowarka słoneczna telefonu panel słoneczny 42W parasol słoneczny Usb",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>08S42</b> Ładowarka solarna 42W przenośna, składana, nietypowy model</p><p>Haveel 42W. Panel słoneczny. Ładowarka do komórek z 2 USB montaż na parasolu słonecznym plażowym lu"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Blue / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Clarifying Lotion 2 by Clinique for Unisex - 13.5 oz Clarifying Lotion - 13.5 oz.",
-        "brand": "Clinique",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
-      },
-      {
-        "title": "Ładowarka słoneczna telefonu panel słoneczny 42W",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>08S42</b> Ładowarka solarna 42W przenośna, składana, nietypowy model</p><p>Haveel 42W. Panel słoneczny. Ładowarka do komórek z 2 USB montaż na parasolu słonecznym plażowym lu"
-      },
-      {
-        "title": "Clear Improvement Active Charcoal Mask by Origins for Unisex - 2.5 oz Mask - 2.5 oz.",
-        "brand": "Origins",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This purifying charcoal mask unclogs pores for a perfectly pure look. It deeply detoxes, absorbs environmental toxins and dissolves impurities. It deep clean and draw out deep-dwel"
-      },
-      {
-        "title": "Zima Winter- mała harmonijka",
-        "brand": "Literat",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Sztywno-stronicowa książeczka harmonijkowa z obrazkami i podpisami po polsku i angielsku jest doskonałą pomocą do poznawania otaczającego świata i języka obcego.</p><ul><li><b>O"
-      },
-      {
-        "title": "Butter and Scrub - Pomegranate and Fig by Cuccio for Unisex - 4 oz Scrub - Default Title",
-        "brand": "Cuccio",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Indulge your senses with the sweet, fruity aroma of Cuccio Pomegranate and Fig butter scrub. This skin-polishing formula contains lush oils, finely ground sugar crystals, pomegrana"
-      },
-      {
         "title": "Breloczek karabińczyk głowa konia zielony",
         "brand": "Happyross",
         "advertiser": "Allegro.pl",
@@ -11414,24 +11044,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze czarnym błyszczącym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet "
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Blue / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Versace Pour Homme by Versace for Men - 3 Pc Gift Set - 3.4 oz.",
-        "brand": "Versace",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Launched by the design house of Versace. A limited-edition set featuring the scent of Versace pour Homme, presented in an elegant box for giving.Versace Pour Homme by Versace for M"
       },
       {
         "title": "Czuły narrator. Olga Tokarczuk",
@@ -11443,15 +11055,6 @@
         "description": "<h1>Czuły narrator</h1><ul><li><b>Autor:&#xa0;Tokarczuk&#xa0;Olga</b></li><li><b>EAN:&#xa0;9788308073056</b></li><li><b>Strony:&#xa0;304</b></li><li><b>Oprawa:&#xa0;Twarda</b></li>"
       },
       {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Purple / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
         "title": "Maria Konopnicka Dzieciom",
         "brand": "Olesiejuk",
         "advertiser": "Allegro.pl",
@@ -11459,15 +11062,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ pt.:</h1><h1>MARIA KONOPNICKA DZIECIOM</h1><h1>AUTOR:</h1><h1>MARIA KONOPNICKA</h1><h1>ILUSTRACJE :</h1><h1>WOJCIECH WEJNER</h1><h1>LICZBA STRON :<"
-      },
-      {
-        "title": "Divine 3 Piece Gift Set - 3.4 oz.",
-        "brand": "Jean Paul Gaultier",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift Set includes: Divine Eau de Parfum 3.4 oz. Divine Body Lotion 2.5 oz. Divine Eau de Parfum Travel Size 0.34 oz."
       },
       {
         "title": "Breloczek karabińczyk głowa konia złoty",
@@ -11479,15 +11073,6 @@
         "description": "<p><b>Oryginalny breloczek karabińczyk w kształcie głowy konia</b></p><p>W kolorze złotym matowym</p><p>Wytrzymały</p><p>Aluminiowy</p><p>Lekki</p><p>Funkcjonalny&nbsp;gadżet jeźdz"
       },
       {
-        "title": "Ormedic Balancing Lip Enhancement Complex by Image for Unisex - 0.25 oz Lip Treatment - Default Title",
-        "brand": "Image",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "An ultra hydrating anti-ageing polypeptide lip complex, which dramatically enhances the appearance of lip contours. Adding up to 40 percent more moisture, volume and reducing fine "
-      },
-      {
         "title": "Brodzińska, Morka, Niesiołowski Pardon Madame",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11495,51 +11080,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Brodzińska, Morka, Niesiołowski - Pardon Madame</h1><p><b>1. Co Sie Dzieje, Oszaleje ''Księżniczka Czardasz''</b></p><p><b>2. Pardon Madame ''Victoria i Jej Huzar''</b></p><p><"
-      },
-      {
-        "title": "[BLENDED TEA SET] OSULLOC Sweet Hibiscus & Fig Chocolat & Maron Glace",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Butter and Scrub - Coconut and White Ginger by Cuccio for Unisex - 4 oz Scrub - Default Title",
-        "brand": "Cuccio",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Revitalize and nourish your skin with Cuccio Coconut and White Ginger Butter Scrub. This gentle yet effective formula contains coconut oil, ginger extract, and sugar crystals to ex"
-      },
-      {
-        "title": "Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m",
-        "brand": "Jaxon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Podbierak Jaxon Safe Extra Strong teleskop aluminium długość 1,90m</h1><p><b>Podbierak Safe marki Jaxon</b></p><p><b>Teleskopowa rączka z twardego aluminium</b>,&nbsp;<b>wzmocn"
-      },
-      {
-        "title": "HERA Uv Protector Multi-Defense 50ml",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Multi-functional daily sun cream with 5-Defense System and anti-aging benefits."
-      },
-      {
-        "title": "Effaclar Purifying Foaming Gel by La Roche-Posay for Unisex - 6.7 oz Gel - Default Title",
-        "brand": "La Roche-Posay",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This gel gently purifyies the skin, eliminating impurities and excess sebum. The skin tends to become shiny. It is recommended for all skin types and long lasting result."
       },
       {
         "title": "Pakiet Kobieta mojego męża/Sekret Tatiany/Zaginion",
@@ -11551,15 +11091,6 @@
         "description": "<h1>Pakiet Gill Paul</h1><h1>Kobieta mojego męża / Sekret Tatiany/ Zaginiona córka</h1><ul><li><b>Autor:&#xa0;Gill Paul</b></li><li><b>Dostawca:&#xa0;Azymut</b></li><li><b>liczba s"
       },
       {
-        "title": "OSULLOC Honey Pear Tea (20 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A Perfect Pear-ing. Osulloc's Honey Pear Tea harmonizes the full-bodied aroma of ripe pears with the soothing sweetness of honey. This iconic blend masterfully pairs the natural es"
-      },
-      {
         "title": "Kolorowanka z naklejkami. Wesołe motyle Zuzanna",
         "brand": "Wydawnictwo M",
         "advertiser": "Allegro.pl",
@@ -11567,24 +11098,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Wesołe motyle. Kolorowanka z naklejkami</h1>\n<p>Autor: <b>Zuzanna Płuciennik</b></p><p>EAN: <b>9788366330979</b></p><p>Strony: <b>16</b></p><p>Oprawa: <b>Miękka</b></p><p>Wydaw"
-      },
-      {
-        "title": "Sulwhasoo First Care Activating Mask (5sheets)",
-        "brand": "Sulwhasoo",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "MIRACLE HEALTHY RADIANCE WITHIN 15 MINUTES NEWFIRST CARE ACTIVATING MASK Experiencing a healthy radiance powered by one bottle of effective Ingredient of FIRST CARE ACTIVATING SERU"
-      },
-      {
-        "title": "Euphoria By Calvin Klein And Ooh La Rouge By Christian Siriano - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
       },
       {
         "title": "Książka Have a Nice Day Mankind HarperCollins",
@@ -11596,51 +11109,6 @@
         "description": "Książka Have a Nice Day Mankind HarperCollins"
       },
       {
-        "title": "OSULLOC Moroccan Mint Tea (10 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Ageless Total Retinol-A Creme by Image for Unisex - 1 oz Cream - Default Title",
-        "brand": "Image",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A creme includes a potent blend of retinol mixed with polypeptides that penetrate the skin to repair, rejuvenate and resurface the skin. This miracle creme is particularly effectiv"
-      },
-      {
-        "title": "3x Główka jigowa Dragon X-fine 1,5g hak 01 01/1,5g",
-        "brand": "Dragon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>GŁÓWKA JIGOWA DRAGON X-FINE</h1><p>Wyrafinowany i delikatny, ale przy tym bardzo sprężysty i mocny drut; dwa mikroskopijne zadziory, umieszczone po przeciwnych stronach trzonka"
-      },
-      {
-        "title": "Sensual Nude Gloss 5g 401 NUDIST",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Volumizing lips with sheer and glossy finish, creating beautiful adhesion to lips."
-      },
-      {
-        "title": "Invictus By Paco Rabanne And 1 Million By Paco Rabanne - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "Amiel Irit Spóźniona",
         "brand": "Austeria",
         "advertiser": "Allegro.pl",
@@ -11648,33 +11116,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Spóźniona / Delayed</h1>\n<p>Autor: <b>Amiel&#xa0;Irit</b></p><p>EAN: <b>9788378660309</b></p><p>Strony: <b>208</b></p><p>Oprawa: <b>zintegrowana</b></p><p>Wydawca: <b>Austeria<"
-      },
-      {
-        "title": "OSULLOC Rooibos Caramel Berry (20 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Protective Neck Gaiter",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Protect your neck and face with FRP's versatile motorcycle neck gaiter. This premium neck gaiter for motorcycle riding features moisture-wicking fabric that keeps you comfortable i"
-      },
-      {
-        "title": "Burberry Brit By Burberry - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
         "title": "Karty Piotruś Kraina Lodu 2 Trefl 08483",
@@ -11686,24 +11127,6 @@
         "description": "Karty Piotruś Kraina Lodu 2 Trefl 08483"
       },
       {
-        "title": "Sensual Fitting Glow Tint 103 HIDDEN MAUVE",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A glow lip tint with a sheer to full coverage buildable texture, leaving behind a sheer pop to the lips."
-      },
-      {
-        "title": "Cloud By Ariana Grande And Sweet Like Candy By Ariana Grande - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
-      },
-      {
         "title": "Manns Ripper 45mm Przeźr. żół. sreb. br. czar.grzb",
         "brand": "Mann's",
         "advertiser": "Allegro.pl",
@@ -11711,177 +11134,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p><b>przedmiotem sprzedaży jest:</b></p><p><b>Manns RIPPER</b></p><p><b>rozmiar: 45mm</b></p><p><b>kolor: M048BB-MFCH Przeźroczysty żółty ze srebrnym brokatem i czarnym grzbietem<"
-      },
-      {
-        "title": "OSULLOC Tropical Black Tea (20 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Daisy Eau So Fresh Gift Set - 2.5 oz.",
-        "brand": "Marc Jacobs",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "With more fresh notes than Daisy by Marc Jacobs released in 20017, Daisy Eau So Fresh is for the woman of action. With the bittersweet tang of grapefruit melding with the sweetness"
-      },
-      {
-        "title": "RotoSound Roto R11-54 whites 11-54 struny elektryk",
-        "brand": "Rotosound",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>RotoSound Roto R11-54 whites 11-54 struny do gitary elektrycznej 11-54</h1> <h1>Electric Guitar Strings SET</h1><p>Rewelacyjne struny do gitary elektrycznej brytyjskiej firmy R"
-      },
-      {
-        "title": "Nct 127 2 Baddies Gel Nail Glaze (Nct127 Photocards Included)",
-        "brand": "K-POP Collaboration",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "NCT 127 BADDIE'S GEL NAIL GLAZE, Purchase NCT127 GEL NAIL and get a set of photocards"
-      },
-      {
-        "title": "Poppy And Signature By Coach - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "3x Główka jigowa Dragon X-fine 1,5g hak 02 02/1,5g",
-        "brand": "Dragon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>GŁÓWKA JIGOWA DRAGON X-FINE</h1><p>Wyrafinowany i delikatny, ale przy tym bardzo sprężysty i mocny drut; dwa mikroskopijne zadziory, umieszczone po przeciwnych stronach trzonka"
-      },
-      {
-        "title": "OSULLOC Kombucha Apple Pine (10 sticks)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Black / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Double Mousse with 7 Herbs by Erborian for Women - 4.9 oz Mousse - 4.9 oz.",
-        "brand": "Erborian",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This care with rich and fine foam cleanses in gentleness to remove all the impurities, then to visibly refine the skin texture to sublime the definition."
-      },
-      {
-        "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
-        "brand": "DeWalt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h DeWALT DCMBA572N BODY</h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li><l"
-      },
-      {
-        "title": "Longtake Sandalwood Intensive Treatment 200ML",
-        "brand": "Longtake",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Orange / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Desire by Alfred Dunhill for Men - 3 Pc Gift Set - 3.4 oz.",
-        "brand": "Alfred Dunhill",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Launched by the design house of Alfred Dunhill. It is recommended for casual wear. Desire by Alfred Dunhill for Men - 3 Pc Gift Set 3.4oz EDT Spray, 1oz EDT Spray, 6.6oz Body Spray"
-      },
-      {
-        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
-        "brand": "DeWalt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
-      },
-      {
-        "title": "Longtake Blacktea & Fig Softening Treatment 200ML",
-        "brand": "Longtake",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
-      },
-      {
-        "title": "Yara 4 Piece Gift Set - 0.85 oz.",
-        "brand": "Lattafa",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Treat someone special to the Lattafa Yara 4-Piece Gift Set, a luxurious collection of fragrances designed to delight and inspire. This set includes four mini Eau de Parfums â Yar"
-      },
-      {
-        "title": "Mediseptol H naturalny- płyn do dezynfekcji 5 L",
-        "brand": "Alpinus",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>MEDISEPTOL H NATURALNY PREPARAT DO DEZYNFEKCJI POWIERZCHNI I PRZEDMIOTÓW NOWA NAZWA</h1><h1>ALPINUSEPTOL+</h1><h1>5L</h1><p>Preparat do szybkiej dezynfekcji powierzchni sprzętu"
-      },
-      {
-        "title": "OSULLOC Wedding Green Tea (20 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
-        "title": "Jessica Mcclintock By Jessica Mcclintock And White Diamonds By Elizabeth Taylor - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
       },
       {
         "title": "Uniwersalny zestaw do czyszczenia broni wycior Mil-Tec w pudełku 24 w 1",
@@ -11893,33 +11145,6 @@
         "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
       },
       {
-        "title": "ETUDE Color Lasting Glow Stick 05 Honey Beige",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Color Lasting Glow Stick Color Lasting Glow Stick That Maintains the Color More Clear and Transparent on Lips point 1. Natural Color Fixing That Stays On the Lips as It Is Applied "
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Purple / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Acqua Di Gio By Armani And Eros By Versace - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "Zestaw do czyszczenia konserwowania broni krótkiej pistoletu Mil-Tec",
         "brand": "Mil-Tec",
         "advertiser": "Allegro.pl",
@@ -11927,60 +11152,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Zestaw do czyszczenia broni krótkiej Mil-Tec (16171340)</h1><p>Zestaw do dbania o broń krótką od Mil-Tec, przeznaczony dla kalibrów .40, .45, .357, .38, .22 oraz 9 mm. Sprawna "
-      },
-      {
-        "title": "HERA Hydro Reflecting Fluid 140ml",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Hydrating and texturizing fluid with a soft and relaxing moisture essence formula that balances oil and water in the skin."
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Miniature Variety Gift Set - 0.13 oz. Each",
-        "brand": "Marc Jacobs",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Set includes the miniature sizes of Daisy, Eau So Fresh, Perfect, Love"
-      },
-      {
-        "title": "Tabletki czyszczące do ekspresów Siemens TZ80001B Oryginalne",
-        "brand": "Siemens",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>Wspaniały smak i aromat Twojej kawy dzięki orginalnym tabletkom czyszczącym marki Siemens.</h2><h2>NAJWAŻNIEJSZE PARAMETRY:</h2>\n<ul>\n<li><b>Ilość sztuk w opakowaniu:</b> 10</l"
-      },
-      {
-        "title": "ETUDE Modi Spa Nail Hardner 02 Red",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "MODI Spa Nail Hardener Nail hardener that provides both nutrition and healthy complexion to damaged nails. - Nail Strength & Resilience repairs damaged nails cause by frequent nail"
-      },
-      {
-        "title": "The Most Wanted 3-Piece Gift Set - 3.4 oz.",
-        "brand": "Azzaro",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift Set includes: Parfum 3.4 oz. Shower Gel 2.5 oz. Parfum Travel Size 0.33 oz."
       },
       {
         "title": "Szwajcarski Bagnet M57 SG510 Demobil Swiss Army",
@@ -12001,15 +11172,6 @@
         "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
       },
       {
-        "title": "Myslf and Y by Yves Saint Laurent - Default Title",
-        "brand": "Yves Saint Laurent",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
         "title": "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa",
         "brand": "Nice",
         "advertiser": "Allegro.pl",
@@ -12028,51 +11190,6 @@
         "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
       },
       {
-        "title": "Treatment Softener by Shiseido for Unisex - 5 oz Treatment - Default Title",
-        "brand": "Shiseido",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A treatment that improves the appearance of fine lines, your skin's clarity and texture. Helps to strengthen the inner defenses of your skin. It protects your skin from the signs o"
-      },
-      {
-        "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
-        "brand": "DeWalt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h DeWALT DCMBA572N BODY</h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li><l"
-      },
-      {
-        "title": "HERA Sensual Lip & Cheek 7g 02 LINGERIE",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A multi-use lip and cheek balm that appears natural vibrant and plump look."
-      },
-      {
-        "title": "Pour Femme By Gia Lucca And Flowerbomb By Viktor & Rolf - Default Title",
-        "brand": "",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
-        "brand": "DeWalt",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
-      },
-      {
         "title": "Espoir Protailor Be Glow Sheer Powder",
         "brand": "espoir",
         "advertiser": "Amore Mall",
@@ -12080,51 +11197,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "A glossy powder with a dewy glow and long-lasting finish. The subtle shimmer completes the original sleek result with a three-dimensional face."
-      },
-      {
-        "title": "Shea Butter Intensive Hand Balm by LOccitane for Unisex - 5.2 oz Hand Balm - 5.2 oz.",
-        "brand": "LOccitane",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This balm melts into the hands and nails from the moment it is applied and massaged. Enriched with allantoin, it helps to immediately soothe the skin, bringing comfort and softness"
-      },
-      {
-        "title": "plecionka dragon street fishing 8X Vision 0.10MM",
-        "brand": "Dragon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "plecionka dragon street fishing 8X Vision 0.10MM"
-      },
-      {
-        "title": "ETUDE Drawing Eye Brow 0.25G B6 Ash Brown",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "- Long Lasting Adhesion to keep your brow tails from fading The well-balanced mixture of adhesive flake powder, wax, and oil ingredients provides a long lasting eyebrow. - Smooth &"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Max",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Clarifying Lotion 3 by Clinique for Unisex - 13.4 oz Clarifying Lotion - 13.4 oz.",
-        "brand": "Clinique",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
       },
       {
         "title": "Yes Yessongs mini lp Shm CD Japan nowa",
@@ -12136,15 +11208,6 @@
         "description": "<h1>YES -&#xa0;Yessongs</h1> <h2>2x SHM CD - Mini LP - Cardboard Sleeve</h2> <p><b>Product Details:</b></p><ul><li><b>Catalog No.:</b> WPCR-13517</li><li><b>JAN/ISBN:</b> 494367409"
       },
       {
-        "title": "OSULLOC Tangerine Blossom Oolong Tea (10 count)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
-      },
-      {
         "title": "Zestaw automatyki do bramy Nice Hopp Era 2x Pilot",
         "brand": "Nice",
         "advertiser": "Allegro.pl",
@@ -12154,24 +11217,6 @@
         "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
       },
       {
-        "title": "ETUDE Collagen Eye Patch",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
-      },
-      {
-        "title": "Multi-Action Blue Rescue Clay Renewal Mask by Strivectin for Unisex - 3.2 oz Mask - 3.2 oz.",
-        "brand": "Strivectin",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This multi-tasking, buttery smooth clay mask reduces the look of fine lines, enlarged pores, rough texture and dullness in just 10 minutes. Massage-activated formula transforms to "
-      },
-      {
         "title": "Zestaw automatyki do bramy Nice HOPP,3x Pilot MyGO4",
         "brand": "Nice",
         "advertiser": "Allegro.pl",
@@ -12179,33 +11224,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
-      },
-      {
-        "title": "ETUDE Drawing Eye Brow 0.25G B3 Brown",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "- Long Lasting Adhesion to keep your brow tails from fading The well-balanced mixture of adhesive flake powder, wax, and oil ingredients provides a long lasting eyebrow. - Smooth &"
-      },
-      {
-        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Basic (no accessories included)",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
-      },
-      {
-        "title": "Pur Luxe Intense Magical Radiance by Stendhal for Women - 1 oz Treatment - 1  oz.",
-        "brand": "Stendhal",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It visibly reduces the appearance of wrinkles and fine lines. It helps to diminish the appearance of lines and wrinkles, improves skins elasticity and helps to firm and tone overni"
       },
       {
         "title": "Pakiet Władca Pierścieni",
@@ -12226,15 +11244,6 @@
         "description": "Deeply nourishing cure balm that targets particularly dry, sensitive areas."
       },
       {
-        "title": "Skin Nourishing Shower Cream by Elemis for Unisex - 10.1 oz Shower Cream - Default Title",
-        "brand": "Elemis",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This exquisite shower cream gently cleanses, whilst enriching the body and balancing the acid mantle."
-      },
-      {
         "title": "Nostradamus: The Last Prophecy Steam Key Klucz Kod",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -12242,6 +11251,996 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Nostradamus: The Last Prophecy Steam Key Klucz Kod"
+      },
+      {
+        "title": "Yango Berberyna Premium 90 Kapsułek",
+        "brand": "Yango",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>YANGO Berberyna Premium 90 Kapsułek</h1><p><b> Potężny ekstrakt 100:1 oraz wysokie stężenie!</b></p><p><b> Wspiera prawidłowy poziom cukru we krwi </b></p><p><b> Bez dodatków i"
+      },
+      {
+        "title": "Jak szczęśliwie żyć we dwoje Podręcznik dla kobiet",
+        "brand": "Bratni Zew",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Napisałam te strony dla Ciebie, która jeszcze szukasz bratniej duszy, dla Ciebie, która wkrótce wychodzisz za mąż, i również dla Ciebie, która jesteś już żoną. Pisząc je, myślał"
+      },
+      {
+        "title": "Gra Ravensburger Moja Pierwsza La Cucaracha",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gra Ravensburger Moja Pierwsza La Cucaracha"
+      },
+      {
+        "title": "AESTURA Atobarrier 365 Hydro Soothing Cream 60ml",
+        "brand": "AESTURA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Nadejście nocy Nelson Demille",
+        "brand": "Buchmann",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
+      },
+      {
+        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>Aukcja dotyczy wypełnienia najmniejszego pudełeczka w pudełku ze zdjęciami.</b></p><h1>Aukcja nie zawiera żadnego pudełka,</h1><h2>jest jedynie uzupełnieniem kompletu: pudełk"
+      },
+      {
+        "title": "Gra Dzieci kontra rodzice Magia Świąt",
+        "brand": "Kangur",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Dzieci kontra Rodzice.</h1><h1>Magia Świąt</h1><ul><li><b>EAN:&#xa0;5907758708675</b></li><li><b>Wydawca:&#xa0;Kangur</b></li><li><b>SID:&#xa0;2952977</b></li></ul> <p><b>Czym "
+      },
+      {
+        "title": "INNISFREE No-Sebum Moisture Powder",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Smooth and moist oil-blotting powder to control shine while leaving moisture NO-SEBUM MOISTURE POWDER NO SEBUM MOISTURE FOR InnIsFree Matte outside and moist inside for dry or oily"
+      },
+      {
+        "title": "Cep Ortho Opaska na kostkę rozmiar V 26-28cm",
+        "brand": "CEP",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>CEP Ortho Opaska na kostkę rozmiar V 26-28cm</h1><p>Prawdziwi sportowcy outdoorowi i ambitni biegacze nie pozwolą, aby radość z ruchu została odebrana. Rękaw do kostki pomaga p"
+      },
+      {
+        "title": "Gra Dzieci kontra rodzice Czego o sobie nie wiecie",
+        "brand": "Kangur",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Czego o sobie nie wiecie?</h1><h1>Dzieci kontra rodzice.</h1><ul><li><b>EAN:&#xa0;5902768471588</b></li><li><b>Kategoria:&#xa0;gra rodzinna</b></li><li><b>Producent:&#xa0;Kangu"
+      },
+      {
+        "title": "VITALBEAUTIE Energy Shot Body&Brain 7days(+1day)",
+        "brand": "VITALBEAUTIE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
+      },
+      {
+        "title": "Nożyczki Chirurgiczne Operacyjne Proste 13cm O/t",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Nożyczki Chirurgiczne Operacyjne Proste 13cm O/t"
+      },
+      {
+        "title": "Nożyczki Chirurgiczne Operacyjne Zagięte 16,5 T/t",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Nożyczki Chirurgiczne Operacyjne Zagięte 16,5 T/t"
+      },
+      {
+        "title": "Mamonde Pore Shrinker Bakuchiol Pad 250g",
+        "brand": "MAMONDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Clear out the sebum and replenish moisture with the stretchy and High-fit Pad"
+      },
+      {
+        "title": "Jan III Waza i misja Possewina Feliks Koneczny",
+        "brand": "Prohibita",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Jan III Waza i misja Possewina Feliks Koneczny"
+      },
+      {
+        "title": "Zimowa Czapka Merino Brubeck Active Wool S/m",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Czapka&nbsp;MERINO&nbsp;BRUBECK ACTIVE WOOL</h1>\n<h2>Rozmiar S/M</h2>\n<p>obwód głowy: 52-57</p>\n<p>Czapka z serii BRUBECK ACTIVE WOOL wykonana z wełny owiec merynosów to doskon"
+      },
+      {
+        "title": "Nożyczki Medyczne Do Szwów Nici Spencer 9cm W-wa",
+        "brand": "Gama",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Nożyczki Spencer 9cm</h1>\n<h1>Stal Nierdzewna!!! Stainless Steel!!!</h1>\n<p>   Nożyczki Spencer 9cm. Wykonane ze stali nierdzewnej wysokiej jakości. Niejałowe. Można Sterylizow"
+      },
+      {
+        "title": "Black Cushion SPF34 PA++ 02_RYAN",
+        "brand": "B.READY",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Thin and Lightweight Fitting\r\n\r\nB.READY BLUE CUSHION provides a thin and lightweight fitting that gives you the confidence to showcase skin as light and delicate as your own."
+      },
+      {
+        "title": "Erko Wycinarka hydrauliczna WHP1 w kasecie",
+        "brand": "Erko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Wycinarka hydrauliczna WHP 1&nbsp;firmy Erko</h1>\n\n<h2>Wycinarka hydrauliczna do wycinania otworów okrągłych, kwadratowych i prostokątnych:</h2>\n\n<ul>\n\t<li>maksymalna grubość b"
+      },
+      {
+        "title": "Tasiemka Wstążka Satynowa Niebieska Śnieżynki 12mm",
+        "brand": "Akces",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>TASIEMKA SATYNOWA</h1><h1>NIEBIESKA W ŚNIEŻYNKI</h1><h1>12mm</h1><p>Tasiemka satynowa w kolorze niebieskim z nadrukiem w białe śnieżynki.</p><p>Idealna do udekorowania Bożonaro"
+      },
+      {
+        "title": "Makita Młot Udarowy HR5202C",
+        "brand": "Makita",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>MAKITA MŁOT UDAROWY HR5202C</b></p><ul><li>Młot przeznaczony do wiercenia z udarem i kucia (2 tryby pracy).</li><li>Wyposażony w przesuwny uchwyt szybkoblokujący.</li><li>Pos"
+      },
+      {
+        "title": "LABO-H Scalp Strengthening Clinic Scaler Hair Loss Care 208G",
+        "brand": "LABO-H",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A vegan, sea salt scaler that gently exfoliates the scalp, leaving it feeling squeaky clean."
+      },
+      {
+        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]",
+        "brand": "Abu Garcia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]"
+      },
+      {
+        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_12 oz.",
+        "brand": "Benlee rocky marciano",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
+      },
+      {
+        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_8 oz.",
+        "brand": "Benlee rocky marciano",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
+      },
+      {
+        "title": "INNISFREE Retinol Cica Repair Ampoule 30ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
+      },
+      {
+        "title": "Kapodaster Gitary Akustycznej Klasycznej Niebieski",
+        "brand": "E-trade",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h2>Kapodaster niebieski do gitary akustycznej, klasycznej</h2> <p>kod: KAP01N</p> <ul><li><b>kolor: </b>niebieski,</li><li><b>trwałe materiały</b><b>,</b></li><li><b>prosty w użyc"
+      },
+      {
+        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Aukcja dotyczy <b>wypełnienia</b> najmniejszego pudełeczka w pudełku ze zdjęciami. <b>Cena nie zawiera żadnego pudełka</b>, jest to cena za uzupełnienie najmniejszego pudełeczka"
+      },
+      {
+        "title": "AYUNCHE Airy Veil Curl Volume Fixer 150ml",
+        "brand": "AYUNCHE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Volume fixer that helps fix hair softly without clumping."
+      },
+      {
+        "title": "Kamatsu Krętlik Barrel Swivel K211 18",
+        "brand": "Kamatsu",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Do wyboru macie Państwo popularne krętliki baryłkowe, rolowane, a także najmocniejsze – krętliki łożyskowane. Wszystkie, w zależności od wielkości (22 – 4 0) nadają się do delik"
+      },
+      {
+        "title": "Bankrut. Gra rodzinna. Nasza księgarnia",
+        "brand": "Nasza Księgarnia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>NEGOCJACJE, KRZYKI I GWAR JAK NA TARGU!</p><p>W tej grze nie czekasz na swoją kolejkę, wszyscy grają równocześnie!</p><p>Gracze wcielają się w rolę kupców handlujących towarami "
+      },
+      {
+        "title": "IOPE UV Shield Sunstick",
+        "brand": "IOPE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "An anti-oxidant waterproof sunstick that flawlessly protects the skin against strong UV rays, fine dust, and blue light."
+      },
+      {
+        "title": "Dywan Juliet loft idustrialny beżowy szary 200x300 w stylu loftowym beton",
+        "brand": "dywanypers",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
+      },
+      {
+        "title": "Dywan Juliet loft idustrialny beżowy szary 160x230 w stylu loftowym beton",
+        "brand": "dywanypers",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
+      },
+      {
+        "title": "VITALBEAUTIE Super Collagen Liftshot 28ea",
+        "brand": "VITALBEAUTIE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Rejuvenate with our highly concentrated collagen ampoule. Packed with a total of 4,000 mg of collagen per serving, it enhances skin elasticity, moisture, and texture. The liquid fo"
+      },
+      {
+        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4511C",
+        "brand": "Makita",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4511C</b></p><ul><li>TECHNOLOGIA ANTYWIBRACYJNA AVT</li><li>2 tryby pracy: wiercenie z udarem i kucie</li><li>16 - pozycyjne przestawia"
+      },
+      {
+        "title": "ILLIYOON MD Red-itch Care Cream 330ML",
+        "brand": "ILLIYOON",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Functional cream that relieves itching for itchy, hypersensitive skin."
+      },
+      {
+        "title": "Wampir: Maskarada Podręcznik Dodatkowy Camarilla",
+        "brand": "Alis Games",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Globalna krwawa opera Camarilii trwa. Kiedy najstarsze wampiry zaczynają znikać, Wieża z Kości Słoniowej pęka pod ciężarem swojego zepsucia. Dawniej najsilniejsza na świecie fra"
+      },
+      {
+        "title": "Spodnie męskie bojówki wojskowe militarne Pentagon Bdu 2.0 Black 44",
+        "brand": "Pentagon",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Spodnie wojskowe Pentagon BDU 2.0 - Black 34/34 (K05001-2.0-01 44)</h1><ul><li><b>Styl odzieży:</b> Militarny</li><li><b>Kolor/kamuflaż:</b> Czarny</li><li><b>Typ materiału:</b"
+      },
+      {
+        "title": "Primera Nia Cica Soothing Glow Cream 30ml",
+        "brand": "Primera",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Primera nia cica soothing glow cream improve skin barrier and dull skin at once. Removed any disadvantages of derma cream which is slowly absorbed into skin.  Improves inner skin g"
+      },
+      {
+        "title": "Impregnat do butów skór 200ml Protector Skuteczny",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Protector Impregnat Kaps 200ml No PFC Fluor Free</p>\n<h2>Impregnat Kaps Protector 200ml No PFC Fluor Free</h2>\n<p>Impregnat Kaps Protector to produkt nowej generacji, o doskonał"
+      },
+      {
+        "title": "B. READY Cicaffeine Trouble Reset Cleansing Foam 150g",
+        "brand": "B.READY",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "CicaffeineTM\r\n\r\nBeta-Sitosterol, a next-generation CICA ingredient that soothes skin and bolsters its natural power, is blended with rich Caffeine extracted from skin-firming Green"
+      },
+      {
+        "title": "Maska Maseczka Ochronna Filtrująca FFP2 N95 Przeciwpyłowa Do Oprysków",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>MASECZKA FILTRUJĄCA 3D MASK KN95 Z FILTREM N95 (FFP2)</h1><h1>DODATKOWA OCHRONA W CZASIE ZABIEGÓW CHEMICZNYCH NA KLESZCZE, MUCHY, KOMARY, MESZKI</h1><ul><li><b>wytrzymała skład"
+      },
+      {
+        "title": "Erko Wycinak ręczny fi 22,5 (kompletny, w kasecie)",
+        "brand": "Erko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
+      },
+      {
+        "title": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L"
+      },
+      {
+        "title": "Soft Finish Loose Powder 15g",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The spherical silicone powder and fixing powder keep sebum under complete control to keep your skin smooth, soft, and matte for longer."
+      },
+      {
+        "title": "Poduszka rozgrzewająca Beurer Hk Comfort 100W",
+        "brand": "Beurer",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1><h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1>\n<p>Opis produktu</p>\n<ul>\n<li>Bardzo miękka powierzchnia</li>\n<li>Z oddychającego"
+      },
+      {
+        "title": "Wampir: Maskarada Podręcznik Dodatkowy Anarchiści",
+        "brand": "Alis Games",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Witamy w krwawym thrillerze nocnych ulic. </p>\n<p> Przez stulecia Ruch Anarchistów korzystał z niepewnego rozejmu z Camarillą, ale koniec z tym. Niezwiązani nie będą już dłużej "
+      },
+      {
+        "title": "AYUNCHE Enrich Bonding Mask 100ml",
+        "brand": "AYUNCHE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Intensive damage care mask with hair bonding technology."
+      },
+      {
+        "title": "Olejek zapachowy 12ml Tiramisu",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - TIRAMISU </h1><h1>OLEJEK ZAPACHOWY TIRAMISU 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość jest "
+      },
+      {
+        "title": "ILLIYOON Ceramide Ato Soothing gel 175ML",
+        "brand": "ILLIYOON",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "High moisture gel cream which refreshingly soothes the sensitive skin"
+      },
+      {
+        "title": "Mamonde Flora Glow Rose Smoothing Cream 50ml",
+        "brand": "MAMONDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Truskawka",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - TRUSKAWKA </h1><h1>OLEJEK ZAPACHOWY TRUSKAWKA 12 ML</h1> <p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość je"
+      },
+      {
+        "title": "Filtr gąbkowy Cpap Prisma Line (2 sztuki)",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
+      },
+      {
+        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4501C",
+        "brand": "Makita",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4501C</b></p>\n<ul>\n<li>2 tryby pracy: wiercenie z udarem i kucie</li>\n<li>16 - pozycyjne przestawianie dłuta</li>\n<li>Ślizgowy uchwyt t"
+      },
+      {
+        "title": "AYUNCHE Airy Veil Curl Cream 150ml",
+        "brand": "AYUNCHE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
+      },
+      {
+        "title": "Dzwoneczki Metalowe Ozdobne Dekoracyjne Złote Srebrne Święta 2cm 10szt.",
+        "brand": "Aliga",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>10 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
+      },
+      {
+        "title": "Chusteczki Higieniczne bezzapachowe Velvet Nature 3W 10 pudełek x 90 sztuk",
+        "brand": "Velvet",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>Nasze nowe chusteczki Velvet Nature to ukłon w stronę osób, które chcą być bliżej natury oraz pragną być bardziej eko. Velvet Nature zastąpiły jedną z wcześniejszych serii – "
+      },
+      {
+        "title": "INNISFREE Jeju Super Volcanic pore Mask 100ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Powerful pore clean mask. Jeju Volcanic Pine Spear™, which has strong sebum adsorption, and a formula containing AHA intensively cares for various pore problems."
+      },
+      {
+        "title": "Haft Diamentowy Diamond Painting Mozaika 35x35 cm",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>HAFT DIAMENTOWY, DIAMOND PAINTING</h1>\n<p><b>Haft diamentowy, Diamond painting, mozaika diamentowa</b> - wszystkie te nazwy dotyczą jednej techniki rękodzieła, polegającej na w"
+      },
+      {
+        "title": "Pedał Nożny Przycisk Przełącznik 220V 10A No Nc 1m",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
+      },
+      {
+        "title": "INNISFREE No sebum Mineral Pact 8.5G",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
+      },
+      {
+        "title": "Obliczenia kwantowe dla każdego",
+        "brand": "Wydawnictwo Naukowe PWN",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Obliczenia kwantowe dla każdego</h1>\n<ul><li><b>Autor:</b> Bernhardt Chris</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 202</li><li><b>format:</b> 16.5x23.5cm</"
+      },
+      {
+        "title": "10 Harmonijek kontrastowych dla Maluchów",
+        "brand": "Literat",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Zestaw 7 kontrastowych harmonijek + 3 książeczek rozkładanych z kolorowymi obrazkami</h1> <p><b>Seria niewielkich książeczek sztywnostronicowych w formie harmonijki – skierowan"
+      },
+      {
+        "title": "HOLITUAL Radiance Resurfacing Peel 12ea",
+        "brand": "HOLITUAL",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
+      },
+      {
+        "title": "Dzwoneczki Metal Ozdobne Złote Srebrne 1,3cm 12szt",
+        "brand": "Aliga",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>12 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
+      },
+      {
+        "title": "INNISFREE Retinol Green Tea PDRN Skinbooster Ampoule 25ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
+      },
+      {
+        "title": "Mata do gry Playmata Ultra Pro Iroas",
+        "brand": "Ultra-Pro",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Ultra PRO Playmat</h1><p>to świetna mata wykonana z solidnego materiału do gier karcianych np. Magic the Gathering.</p><p>Produkt jest nowy, nieużywany. Strukturą przypomina po"
+      },
+      {
+        "title": "Uwaga! Koncentruję Się 4 Ćwiczenia Na Koncentrację",
+        "brand": "Harmonia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Uwaga! Koncentruję się! Część 4. Ćwiczenia na koncentrację i spostrzegawczość dla uczniów liceum i technikum, Praca zbiorowa, Wydawnictwo Harmonia</h1> <p><b>Numer katalogowy:&"
+      },
+      {
+        "title": "Mulan (bd) 2021",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Lojalność, odwaga i prawda. Disney przedstawia historię Mulan, nieustraszonej, młodej kobiety, która ryzykuje wszystko w imię miłości do rodziny i swojego kraju, i staje się naj"
+      },
+      {
+        "title": "[New] VITALBEAUTIE Meta Green Calorie Cut Jelly 10EA",
+        "brand": "VITALBEAUTIE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Włóczka Merino Bulky kol.502 (ecru)",
+        "brand": "YarnArt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Włóczka Merino Bulky</h1><p><b>Gruba włóczka przeznaczona na zimowe wyroby, posiadająca właściwości termoizolacyjne. Niezwykle delikatna, przyjemna w dotyku, nie mechaci się i "
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Zbiór zadań z analizy matematycznej",
+        "brand": "Wydawnictwo Naukowe PWN",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Zbiór zadań z analizy matematycznej</h1>\n<ul><li><b>Autor:</b> Stanisław Wędrychowicz, Józef Banaś</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 533</li><li><b>f"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Pomysł na rocznice. Papierowa rocznica",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<ul><li><b>Zbliża się ważna okazja a Ty szukasz prezentu ?</b></li><li><b>Twój spokój zaburza ciągłe myślenie co kupić na rocznice żonie ?</b></li><li><b>A może wykorzystałaś już w"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 7,5cm ]",
+        "brand": "Abu Garcia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7,5cm ]"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Wanilia I Cytryna",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - WANILIA I CYTRYNA </h1><h1>OLEJEK ZAPACHOWY WANILIA I CYTRYNA 12 ML</h1> <p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydow"
+      },
+      {
+        "title": "AESTURA A-Cica 365 Cream 60ml",
+        "brand": "AESTURA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "CD Twoje imię Tgd",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "CD Twoje imię Tgd"
+      },
+      {
+        "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
+        "brand": "mise-en-scence",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Wino Różane",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - WINO RÓŻANE </h1><h1>OLEJEK ZAPACHOWY WINO RÓŻANE 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość"
+      },
+      {
+        "title": "ILLIYOON Stretch Mark Cream 330ML",
+        "brand": "ILLIYOON",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Hypoallergenic functional cream that relieves red stretch marks in just 4 weeks"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Sny dzieci nocną porą Recie Saunders",
+        "brand": "Wydawnictwo Dawida",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Sny dzieci nocną porą Recie Saunders"
+      },
+      {
+        "title": "INNISFREE Black tea treatment essence 75ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Pierścień zabezpieczający zębatki",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Pierścień zabezpieczający zębatkę w rowerach z biegami w tylnej piaście lub torpedo.</p>"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "CD Stare Taśmy Kryzys czytelnictwa",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "CD Stare Taśmy Kryzys czytelnictwa"
+      },
+      {
+        "title": "ILLIYOON MD Red-itch Care Oil 200ML",
+        "brand": "ILLIYOON",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "No sticky feel! Artificial scent-free! Hypoallergenic vegan oil for the whole family"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Olejek zapachowy 12ml Wodna Nimfa",
+        "brand": "Naturalne Aromaty",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Olejek zapachowy 12ml - WODNA NIMFA </h1><h1>OLEJEK ZAPACHOWY WODNA NIMFA 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Termos Próżniowy Esbit Vacuum Flask 1L 2 kubki",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>TERMOS PRÓŻNIOWY ESBIT VACUUM FLASK 1L 2 kubki</h1><h2>✅&nbsp;TERMOS PRÓŻNIOWY ESBIT VACUUM 2 KUBKI KORKI 1 L</h2><p>✅ <b>Termos próżniowy Esbit Vacuum jest wykonany ze stali n"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Haft Diamentowy Diamond Painting Mozaika 35x35 cm",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>HAFT DIAMENTOWY, DIAMOND PAINTING</h1>\n<p><b>Haft diamentowy, Diamond painting, mozaika diamentowa</b> - wszystkie te nazwy dotyczą jednej techniki rękodzieła, polegającej na w"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Pinceta Pęseta Elektronika Esd 110mm Delikatna",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Oferuję Państwu delikatną pęsetę do pracy przy urządzeniach elektronicznych i innych precyzyjnych robót.</p><p>Długość pęsety 110mm.</p><p>Pęseta ma ostre zwężające się końcówki"
+      },
+      {
+        "title": "[8Days]VITALBEAUTIE Super Essential 7days(+1day gift)",
+        "brand": "VITALBEAUTIE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Rejuvenate with our highly concentrated collagen ampoule. Packed with a total of 4,000 mg of collagen per serving, it enhances skin elasticity, moisture, and texture. The liquid fo"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Mate.O/TU Pentecoste Live",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Mate.O/TU Pentecoste Live"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Wirnik Pompy Wody Yamaha 6L5-44352-00 Oryginał",
+        "brand": "Yamaha",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>WIRNIK POMPY WODY DO SILNIKÓW YAMAHA ORYGINALNY</h1><p>Wirnik do silników zaburtowych Yamaha:</p><p>Pasuje m.in do:</p><ul><li>F2.5A</li><li>3A</li><li>Malta</li></ul><p>Kod pr"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       }
     ],
     "missingSubcategoryExamples": [
@@ -13989,7 +13988,7 @@
     "smartphones": 59,
     "playstationConsoles": 94,
     "gamingConsoles": 179,
-    "fashionClothing": 145,
+    "fashionClothing": 151,
     "tennisShoes": 42,
     "fashionSneakers": 306,
     "sportsFootwear": 223
