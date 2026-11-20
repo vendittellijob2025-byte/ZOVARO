@@ -109,3 +109,12 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Visual root classification is permitted only when text, product description and known advertiser identity cannot classify the product. It cannot overwrite a confident text/merchant classification.
 - Coupons, discount codes, memberships and installation/service offers are excluded from image-based product classification.
 - Added regression cases for flat irons, instrument cables, fragrance listings, decanters, shoes, fishing lines, yarn, EV adapters and software where partner categories previously conflicted with the product identity.
+
+
+### 8. Second precision pass from the post-reclassification examples
+
+- Mapped fragrance-retailer offers to fragrance subcategories without relying on generic words such as “Sport”.
+- Corrected hair-color and face-peel products, tablet batteries, Oral-B brush heads, Polish books/CDs, pet deodorizing sprays, baby fragrances, HDMI cables, leather belts, and wooden ship model kits.
+- Added merchant-aware mappings for UNice hair accessories, Vitajuwel drinkware, and Abelssoft utilities.
+- Kept gift cards, coupons, memberships and installation services outside the physical-product taxonomy.
+- Added multilingual product signals for French 3D filament listings and Polish product titles.

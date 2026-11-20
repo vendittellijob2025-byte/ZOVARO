@@ -278,6 +278,20 @@ assert.equal(categoryFor({ name: "Abelssoft Int" }, {
   title: "mp3 schneiden 2025 | Dein einfaches Musikschnitt-Programm",
   sourceCategory: "Electronics"
 }), "Office & Technology");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Alfaparf Milano Evolution Of The Hair Color | 1.11 - Blue Black 2.05Oz", sourceCategory: "Toys & Games" }), "Beauty");
+assert.equal(categoryFor({ name: "Perfumania.com" }, { title: "I Peel The Signature Facelift Gel Peel Technology", sourceCategory: "Health & Wellness" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Akumulator Bateria Tablet 7''-9'' 3500mAh", sourceCategory: "Health & Wellness" }), "Electronics");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eteryczny 12ml Drzewo Sandałowe", sourceCategory: "Other" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
+assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Siła nawyku. Dlaczego robimy to, co robimy", sourceCategory: "Food & Grocery" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "8x Końcówka dla Dzieci do Szczoteczki Oral-B głowice do szczoteczek", sourceCategory: "Food & Grocery" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "CD Lotto (Majkowski/Rychlicki/Szpura) Elite Feline", sourceCategory: "Pets" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Littlest Pet Shop Panoramiczna kolorowanka", sourceCategory: "Pets" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer", sourceCategory: "Fashion" }), "Other");
+assert.equal(categoryFor({ name: "UNice" }, { title: "[Random Color] High-elastic blend hugs your head comfortably without slipping or sliding", sourceCategory: "Sports" }), "Fashion");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Vitajuwel Via Glass Bottle - Fitness", sourceCategory: "Sports" }), "Home & Living");
 assert.equal(categoryFor({ name: "Abelssoft Int", parentCategory: "Electronics" }, {
   title: "Abelssoft StartupStar 2025"
 }), "Office & Technology");
@@ -465,6 +479,21 @@ const subcategoryCases = [
   ["Office & Technology", "Abelssoft FindMyFiles 2025", "Software > Utilities"],
   ["Appliances", "Anker SOLIX EverFrost 2 40L Electric Cooler", "Kitchen Appliances > Portable Coolers"],
   ["Babies", "Pod Organics Vitamin E Baby Massage Oil 4.05Oz", "Hygiene & Wellness > Baby Skin Care"],
+  ["Beauty", "Alfaparf Milano Evolution Of The Hair Color", "Hair Care > Hair Color"],
+  ["Beauty", "I Peel The Signature Facelift Gel Peel Technology", "Skincare > Face Peels"],
+  ["Health & Wellness", "Naturalny olejek eteryczny 12ml Drzewo Sandałowe", "Wellness > Alternative Therapies > Essential Oils"],
+  ["Health & Wellness", "8x Końcówka do Szczoteczki Oral-B", "Oral Hygiene > Toothbrushes"],
+  ["Electronics", "Akumulator Bateria Tablet 7''-9'' 3500mAh", "Phones & Tablets > Batteries & Power Supplies"],
+  ["Electronics", "Lanberg Kabel Hdmi 2.0 Tv 7,5m 4K Ultra Hd", "TV & Home Theater > Cables & Accessories"],
+  ["Fashion", "Valentino Men's Milo 1.5 Logo Leather Belt", "Accessories > Belts"],
+  ["Books & Media", "Tata i Ja Poznaję świat Smart Books 1-3 lata", "Books > Children's Books"],
+  ["Books & Media", "Siła nawyku. Dlaczego robimy to, co robimy", "Books > Nonfiction"],
+  ["Books & Media", "CD Lotto Elite Feline", "Music > CDs"],
+  ["Toys & Games", "Drewniany model statku Western 1:130 Diy", "Model Kits"],
+  ["Babies", "Baby Tous - 3.4 oz.", "Hygiene & Wellness > Baby Fragrances"],
+  ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
+  ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
+  ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
   ["Home & Living", "Vitajuwel Via Heat Tea Strainer", "Kitchen & Dining"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],

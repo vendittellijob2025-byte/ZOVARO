@@ -381,7 +381,8 @@
             "Baby Skin Care",
             "Baby Hair Care",
             "Baby Health",
-            "Baby Grooming"
+            "Baby Grooming",
+            "Baby Fragrances"
           ]
         },
         {
@@ -500,7 +501,8 @@
             "Face Skincare",
             "Face Cleansers",
             "Moisturizers",
-            "Serums & Essences"
+            "Serums & Essences",
+            "Face Peels"
           ]
         },
         {
@@ -665,7 +667,8 @@
             "Cases & Screen Protectors",
             "Chargers & Cables",
             "Power Banks & Portable Chargers",
-            "Phone Mounts & Holders"
+            "Phone Mounts & Holders",
+            "Batteries & Power Supplies"
           ]
         },
         {
@@ -748,7 +751,8 @@
             "Projectors",
             "Streaming Devices",
             "Home Theater Systems",
-            "TV Mounts & Accessories"
+            "TV Mounts & Accessories",
+            "Cables & Accessories"
           ]
         },
         {
@@ -1201,7 +1205,12 @@
             "Sauna Accessories",
             "Tanning Lamps",
             "Massage & Relaxation",
-            "Alternative Therapies",
+            {
+              "name": "Alternative Therapies",
+              "children": [
+                "Essential Oils"
+              ]
+            },
             {
               "name": "Sleep & Relaxation",
               "children": [
@@ -1434,7 +1443,8 @@
           "children": [
             "3D Printer Filament",
             "3D Printing Materials",
-            "Laser Engraving Equipment"
+            "Laser Engraving Equipment",
+            "3D Printer Accessories"
           ]
         }
       ]
@@ -1573,6 +1583,12 @@
             "Food",
             "Bedding",
             "Accessories"
+          ]
+        },
+        {
+          "name": "Pet Grooming & Health",
+          "children": [
+            "Deodorizing & Finishing Sprays"
           ]
         }
       ]
@@ -2521,7 +2537,8 @@
             "Controllers & Accessories",
             "Gaming Headsets"
           ]
-        }
+        },
+        "Model Kits"
       ]
     },
     {
