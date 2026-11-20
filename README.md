@@ -23,6 +23,7 @@ ZOVARO is a global discovery platform for products, offers, jobs and commercial 
 - Record researched examples as regression tests so a corrected decision remains stable.
 - Amazon is a reference, not infallible ground truth. ZOVARO maps evidence into its own canonical taxonomy; it does not claim to use official Amazon Browse Node IDs.
 - The detailed evidence, confidence, and conflict-resolution rules are in `docs/PRODUCT-CLASSIFICATION-RESEARCH-PROTOCOL.md`.
+- Researched product examples and source links are recorded in `docs/CLASSIFICATION-RESEARCH-LOG-2026-11-19.md`; Amazon references are marked verified only after an actual Amazon page/breadcrumb is accessible.
 
 ### English translations
 
