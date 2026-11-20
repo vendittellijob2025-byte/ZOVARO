@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T02:07:12.907Z",
+  "generatedAt": "2026-11-20T02:11:46.223Z",
   "selectedProductCount": 20910,
   "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 992,
+      "productCount": 995,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -421,7 +421,7 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 13,
+          "productCount": 16,
           "directProductCount": 11,
           "children": [
             {
@@ -448,9 +448,17 @@
             {
               "name": "Paper Crafts",
               "path": "Crafts & Creative DIY > Paper Crafts",
-              "productCount": 0,
+              "productCount": 3,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Scrapbooking",
+                  "path": "Crafts & Creative DIY > Paper Crafts > Scrapbooking",
+                  "productCount": 3,
+                  "directProductCount": 3,
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Candle & Soap Making",
@@ -508,7 +516,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 2058,
+      "productCount": 2062,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -557,8 +565,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1479,
-          "directProductCount": 1459,
+          "productCount": 1471,
+          "directProductCount": 1451,
           "children": [
             {
               "name": "Interior Accessories",
@@ -866,7 +874,7 @@
         {
           "name": "Vehicle Electronics",
           "path": "Vehicle Electronics",
-          "productCount": 1,
+          "productCount": 13,
           "directProductCount": 0,
           "children": [
             {
@@ -879,8 +887,8 @@
             {
               "name": "Dash Cameras",
               "path": "Vehicle Electronics > Dash Cameras",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 11,
+              "directProductCount": 11,
               "children": []
             },
             {
@@ -900,8 +908,8 @@
             {
               "name": "GPS & Navigation",
               "path": "Vehicle Electronics > GPS & Navigation",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             }
           ]
@@ -1196,8 +1204,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 588,
-      "unclassifiedProductCount": 116,
+      "productCount": 587,
+      "unclassifiedProductCount": 111,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1360,8 +1368,8 @@
         {
           "name": "Diaper Changing",
           "path": "Diaper Changing",
-          "productCount": 8,
-          "directProductCount": 7,
+          "productCount": 6,
+          "directProductCount": 5,
           "children": [
             {
               "name": "Diapers",
@@ -1511,7 +1519,7 @@
         {
           "name": "Hygiene & Wellness",
           "path": "Hygiene & Wellness",
-          "productCount": 28,
+          "productCount": 34,
           "directProductCount": 0,
           "children": [
             {
@@ -1524,8 +1532,8 @@
             {
               "name": "Baby Skin Care",
               "path": "Hygiene & Wellness > Baby Skin Care",
-              "productCount": 15,
-              "directProductCount": 15,
+              "productCount": 21,
+              "directProductCount": 21,
               "children": []
             },
             {
@@ -1808,8 +1816,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 4028,
-      "unclassifiedProductCount": 1443,
+      "productCount": 4036,
+      "unclassifiedProductCount": 1428,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1893,14 +1901,14 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 513,
+          "productCount": 515,
           "directProductCount": 14,
           "children": [
             {
               "name": "Hair Styling Accessories",
               "path": "Hair Care > Hair Styling Accessories",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
@@ -1957,7 +1965,7 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 228,
+          "productCount": 229,
           "directProductCount": 72,
           "children": [
             {
@@ -1970,8 +1978,8 @@
             {
               "name": "Body Skincare",
               "path": "Skincare > Body Skincare",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
@@ -2198,7 +2206,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 262,
+          "productCount": 282,
           "directProductCount": 0,
           "children": [
             {
@@ -2240,8 +2248,8 @@
             {
               "name": "Lip Makeup",
               "path": "Makeup > Lip Makeup",
-              "productCount": 10,
-              "directProductCount": 10,
+              "productCount": 28,
+              "directProductCount": 28,
               "children": []
             },
             {
@@ -2275,8 +2283,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 150,
-              "directProductCount": 150,
+              "productCount": 152,
+              "directProductCount": 152,
               "children": []
             },
             {
@@ -2299,13 +2307,13 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1331,
-      "unclassifiedProductCount": 319,
+      "productCount": 1342,
+      "unclassifiedProductCount": 313,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 96,
+          "productCount": 115,
           "directProductCount": 82,
           "children": [
             {
@@ -2346,13 +2354,20 @@
             {
               "name": "Children's Books",
               "path": "Books > Children's Books",
-              "productCount": 9,
-              "directProductCount": 9,
+              "productCount": 27,
+              "directProductCount": 27,
               "children": []
             },
             {
               "name": "Education & Reference",
               "path": "Books > Education & Reference",
+              "productCount": 1,
+              "directProductCount": 1,
+              "children": []
+            },
+            {
+              "name": "Travel & Geography",
+              "path": "Books > Travel & Geography",
               "productCount": 1,
               "directProductCount": 1,
               "children": []
@@ -2391,14 +2406,14 @@
         {
           "name": "Movies & TV",
           "path": "Movies & TV",
-          "productCount": 864,
+          "productCount": 862,
           "directProductCount": 677,
           "children": [
             {
               "name": "DVD",
               "path": "Movies & TV > DVD",
-              "productCount": 187,
-              "directProductCount": 187,
+              "productCount": 185,
+              "directProductCount": 185,
               "children": []
             },
             {
@@ -2572,8 +2587,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 446,
-      "unclassifiedProductCount": 139,
+      "productCount": 440,
+      "unclassifiedProductCount": 130,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -3121,7 +3136,7 @@
         {
           "name": "Smart Home",
           "path": "Smart Home",
-          "productCount": 0,
+          "productCount": 3,
           "directProductCount": 0,
           "children": [
             {
@@ -3148,8 +3163,8 @@
             {
               "name": "Sensors & Alarms",
               "path": "Smart Home > Sensors & Alarms",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -3367,7 +3382,7 @@
     {
       "name": "Fashion",
       "productCount": 1756,
-      "unclassifiedProductCount": 471,
+      "unclassifiedProductCount": 228,
       "browseTree": [
         {
           "name": "Clothing",
@@ -3785,8 +3800,8 @@
         {
           "name": "Accessories",
           "path": "Accessories",
-          "productCount": 15,
-          "directProductCount": 6,
+          "productCount": 258,
+          "directProductCount": 4,
           "children": [
             {
               "name": "Sunglasses",
@@ -3829,6 +3844,13 @@
               "productCount": 6,
               "directProductCount": 6,
               "children": []
+            },
+            {
+              "name": "Wigs & Hair Extensions",
+              "path": "Accessories > Wigs & Hair Extensions",
+              "productCount": 245,
+              "directProductCount": 245,
+              "children": []
             }
           ]
         }
@@ -3836,8 +3858,8 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 274,
-      "unclassifiedProductCount": 77,
+      "productCount": 269,
+      "unclassifiedProductCount": 72,
       "browseTree": [
         {
           "name": "Pantry Staples",
@@ -4238,13 +4260,13 @@
     },
     {
       "name": "Gaming",
-      "productCount": 180,
+      "productCount": 179,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Consoles",
           "path": "Consoles",
-          "productCount": 179,
+          "productCount": 178,
           "directProductCount": 0,
           "children": [
             {
@@ -4257,8 +4279,8 @@
             {
               "name": "Xbox",
               "path": "Consoles > Xbox",
-              "productCount": 57,
-              "directProductCount": 57,
+              "productCount": 56,
+              "directProductCount": 56,
               "children": []
             },
             {
@@ -4675,8 +4697,8 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 618,
-      "unclassifiedProductCount": 300,
+      "productCount": 619,
+      "unclassifiedProductCount": 288,
       "browseTree": [
         {
           "name": "Nutrition",
@@ -5034,7 +5056,7 @@
         {
           "name": "Eye Care",
           "path": "Eye Care",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
@@ -5056,6 +5078,13 @@
               "path": "Eye Care > Vision Accessories",
               "productCount": 0,
               "directProductCount": 0,
+              "children": []
+            },
+            {
+              "name": "Eyelid Cleansers",
+              "path": "Eye Care > Eyelid Cleansers",
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -5092,8 +5121,8 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 10,
-          "directProductCount": 1,
+          "productCount": 17,
+          "directProductCount": 0,
           "children": [
             {
               "name": "Toothbrushes",
@@ -5119,8 +5148,8 @@
             {
               "name": "Mouthwash",
               "path": "Oral Hygiene > Mouthwash",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             },
             {
@@ -5313,7 +5342,7 @@
         {
           "name": "Home Cleaning & Care",
           "path": "Home Cleaning & Care",
-          "productCount": 4,
+          "productCount": 9,
           "directProductCount": 0,
           "children": [
             {
@@ -5326,8 +5355,8 @@
             {
               "name": "Disinfectants",
               "path": "Home Cleaning & Care > Disinfectants",
-              "productCount": 4,
-              "directProductCount": 4,
+              "productCount": 9,
+              "directProductCount": 9,
               "children": []
             },
             {
@@ -5386,7 +5415,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 577,
+      "productCount": 576,
       "unclassifiedProductCount": 5,
       "browseTree": [
         {
@@ -5435,7 +5464,7 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 23,
+          "productCount": 22,
           "directProductCount": 4,
           "children": [
             {
@@ -5476,8 +5505,8 @@
             {
               "name": "Drinkware",
               "path": "Kitchen & Dining > Drinkware",
-              "productCount": 19,
-              "directProductCount": 19,
+              "productCount": 18,
+              "directProductCount": 18,
               "children": []
             },
             {
@@ -5759,7 +5788,7 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1841,
-      "unclassifiedProductCount": 1205,
+      "unclassifiedProductCount": 1193,
       "browseTree": [
         {
           "name": "Industrial Machinery",
@@ -5922,7 +5951,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 392,
+          "productCount": 404,
           "directProductCount": 0,
           "children": [
             {
@@ -5935,8 +5964,8 @@
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -5949,8 +5978,15 @@
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 112,
-              "directProductCount": 112,
+              "productCount": 116,
+              "directProductCount": 116,
+              "children": []
+            },
+            {
+              "name": "Laser Engraving Materials",
+              "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
+              "productCount": 9,
+              "directProductCount": 9,
               "children": []
             }
           ]
@@ -6289,8 +6325,8 @@
     },
     {
       "name": "Pets",
-      "productCount": 178,
-      "unclassifiedProductCount": 111,
+      "productCount": 174,
+      "unclassifiedProductCount": 107,
       "browseTree": [
         {
           "name": "Dogs",
@@ -7928,7 +7964,7 @@
     {
       "name": "Sports",
       "productCount": 1876,
-      "unclassifiedProductCount": 414,
+      "unclassifiedProductCount": 408,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8223,7 +8259,7 @@
         {
           "name": "Hunting",
           "path": "Hunting",
-          "productCount": 0,
+          "productCount": 5,
           "directProductCount": 0,
           "children": [
             {
@@ -8243,9 +8279,17 @@
             {
               "name": "Outdoor Optics",
               "path": "Hunting > Outdoor Optics",
-              "productCount": 0,
+              "productCount": 5,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Night Vision",
+                  "path": "Hunting > Outdoor Optics > Night Vision",
+                  "productCount": 5,
+                  "directProductCount": 5,
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -8945,7 +8989,7 @@
         {
           "name": "Sports Medicine",
           "path": "Sports Medicine",
-          "productCount": 0,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
@@ -8965,9 +9009,17 @@
             {
               "name": "Therapy & Rehabilitation",
               "path": "Sports Medicine > Therapy & Rehabilitation",
-              "productCount": 0,
+              "productCount": 1,
               "directProductCount": 0,
-              "children": []
+              "children": [
+                {
+                  "name": "Muscle Recovery",
+                  "path": "Sports Medicine > Therapy & Rehabilitation > Muscle Recovery",
+                  "productCount": 1,
+                  "directProductCount": 1,
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -10028,14 +10080,14 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 226,
+      "productCount": 219,
       "unclassifiedProductCount": 51,
       "browseTree": [
         {
           "name": "Building & Construction",
           "path": "Building & Construction",
-          "productCount": 83,
-          "directProductCount": 83,
+          "productCount": 78,
+          "directProductCount": 78,
           "children": [
             {
               "name": "Building Sets",
@@ -10092,8 +10144,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 88,
-          "directProductCount": 88,
+          "productCount": 86,
+          "directProductCount": 86,
           "children": [
             {
               "name": "Board Games",
@@ -10528,64 +10580,64 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1336,
+  "otherProductCount": 1334,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1336
+      "count": 1334
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1435,
-    "usedTaxonomyNodeCount": 255,
-    "emptyTaxonomyNodeCount": 1180,
-    "productsWithKnownSubcategory": 14696,
+    "taxonomyNodeCount": 1442,
+    "usedTaxonomyNodeCount": 273,
+    "emptyTaxonomyNodeCount": 1169,
+    "productsWithKnownSubcategory": 15015,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 6214,
+    "productsWithoutSubcategory": 5895,
     "unclassifiedByCategory": [
       {
         "category": "Beauty",
-        "count": 1443
+        "count": 1428
       },
       {
         "category": "Industrial & Scientific",
-        "count": 1205
-      },
-      {
-        "category": "Fashion",
-        "count": 471
+        "count": 1193
       },
       {
         "category": "Sports",
-        "count": 414
+        "count": 408
       },
       {
         "category": "Books & Media",
-        "count": 319
+        "count": 313
       },
       {
         "category": "Health & Wellness",
-        "count": 300
+        "count": 288
       },
       {
-        "category": "Electronics",
-        "count": 139
+        "category": "Fashion",
+        "count": 228
       },
       {
         "category": "Tools & DIY",
         "count": 131
       },
       {
-        "category": "Babies",
-        "count": 116
+        "category": "Electronics",
+        "count": 130
       },
       {
-        "category": "Pets",
+        "category": "Babies",
         "count": 111
       },
       {
+        "category": "Pets",
+        "count": 107
+      },
+      {
         "category": "Food & Grocery",
-        "count": 77
+        "count": 72
       },
       {
         "category": "Travel",
@@ -10613,8 +10665,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 6214,
-      "provisional": 14696
+      "needs_classification": 5895,
+      "provisional": 15015
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10632,7 +10684,7 @@
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1459
+        "productCount": 1451
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10679,6 +10731,10 @@
         "productCount": 255
       },
       {
+        "path": "Fashion > Accessories > Wigs & Hair Extensions",
+        "productCount": 245
+      },
+      {
         "path": "Industrial & Scientific > Industrial Machinery",
         "productCount": 243
       },
@@ -10696,7 +10752,7 @@
       },
       {
         "path": "Books & Media > Movies & TV > DVD",
-        "productCount": 187
+        "productCount": 185
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
@@ -10704,7 +10760,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 150
+        "productCount": 152
       },
       {
         "path": "Electronics > Audio",
@@ -10736,7 +10792,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 112
+        "productCount": 116
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -10768,15 +10824,15 @@
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 88
-      },
-      {
-        "path": "Toys & Games > Building & Construction",
-        "productCount": 83
+        "productCount": 86
       },
       {
         "path": "Books & Media > Books",
         "productCount": 82
+      },
+      {
+        "path": "Toys & Games > Building & Construction",
+        "productCount": 78
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
@@ -10807,11 +10863,11 @@
         "productCount": 59
       },
       {
-        "path": "Gaming > Consoles > Xbox",
-        "productCount": 57
+        "path": "Fashion > Shoes > Boots",
+        "productCount": 56
       },
       {
-        "path": "Fashion > Shoes > Boots",
+        "path": "Gaming > Consoles > Xbox",
         "productCount": 56
       },
       {
@@ -10887,11 +10943,19 @@
         "productCount": 29
       },
       {
+        "path": "Beauty > Makeup > Lip Makeup",
+        "productCount": 28
+      },
+      {
         "path": "Gaming > Consoles > Nintendo",
         "productCount": 28
       },
       {
         "path": "Beauty > Skincare > Face Skincare",
+        "productCount": 27
+      },
+      {
+        "path": "Books & Media > Books > Children's Books",
         "productCount": 27
       },
       {
@@ -10919,12 +10983,16 @@
         "productCount": 22
       },
       {
+        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "productCount": 21
+      },
+      {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
         "productCount": 20
       },
       {
         "path": "Home & Living > Kitchen & Dining > Drinkware",
-        "productCount": 19
+        "productCount": 18
       },
       {
         "path": "Health & Wellness > Nutrition > Sports Supplements > Pre-Workout",
@@ -10937,10 +11005,6 @@
       {
         "path": "Home & Living > Bedding & Bath",
         "productCount": 16
-      },
-      {
-        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
-        "productCount": 15
       },
       {
         "path": "Beauty > Hair Care",
@@ -10960,6 +11024,10 @@
       },
       {
         "path": "Electronics > Computers > Monitors",
+        "productCount": 11
+      },
+      {
+        "path": "Automotive > Vehicle Electronics > Dash Cameras",
         "productCount": 11
       },
       {
@@ -10987,10 +11055,6 @@
         "productCount": 10
       },
       {
-        "path": "Beauty > Makeup > Lip Makeup",
-        "productCount": 10
-      },
-      {
         "path": "Fashion > Clothing > Shirts & Blouses",
         "productCount": 10
       },
@@ -11009,24 +11073,12 @@
       {
         "path": "Sports > Soccer > Soccer Clothing & Accessories",
         "productCount": 9
-      },
-      {
-        "path": "Books & Media > Books > Children's Books",
-        "productCount": 9
-      },
-      {
-        "path": "Health & Wellness > Oral Hygiene > Toothbrushes",
-        "productCount": 9
-      },
-      {
-        "path": "Sports > Fitness & Gym > Yoga & Pilates",
-        "productCount": 8
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1060
+        "productCount": 1058
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12403,36 +12455,6 @@
     ],
     "missingSubcategoryExamples": [
       {
-        "title": "Rexing B1 (Black) Night Vision Goggles Binoculars",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters CLEAR FROM ANY DISTANCE - See subjects in the dark up to 3",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing Adhesive Mount for V2 Pro AI",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Compatible with Rexing V2 Pro AI Dash Cam Compatible ONLY with Rexing V2 Pro AI dash cams. 3M adhesive. Helps prevent camera shake, resulting in clear footage. Compact design. Main",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing Type-C GPS Module — 115200 Baud",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Add GPS location, speed and route information to compatible Rexing dash cam recordings with this Type-C plug-in GPS module. Compatible camera Rexing C2 Pro Match your exact camera ",
-        "category": "Electronics"
-      },
-      {
         "title": "12V Antenna Power Supply DVB-T2 Amplifier For Terrestrial TV F Socket Vayox Plug",
         "brand": "Vayox",
         "advertiser": "Allegro.pl",
@@ -12470,16 +12492,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "25W Ultra-Fast MagSafe Charging: Delivers magnetic wireless power up to 25W using Qi2 technology. Charges iPhone 17 Pro to 50% in just 26 minutes—five times faster than standard 5W",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing B1 Mini 1080p Night Vision Digital Binoculars with Viewing Screen and Photo/Video Recording",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "2.4″ Screen | FHD 1080p | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 985ft Night Range Compact & Portable – Our smallest, mos",
         "category": "Electronics"
       },
       {
@@ -12550,26 +12562,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Add GPS location, speed and route information to your Rexing C3 recordings after a satellite signal is acquired.Compatible cameraRexing C3 only. This dedicated GPS logger uses a 3.",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing B1 Maverick Night Vision Goggles Binoculars",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters PHOTO/VIDEO – Record or take pictures in the day & night o",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing B1 (Digital Camo) Night Vision Goggles Binoculars",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "LCD Screen | Infrared (IR) Digital Camera | Dual Photo + Video Recording for Spotting, Hunting, Tracking up to 300 Meters 10x optical zoom and 4x digital zoom (984ft) IR Night Visi",
         "category": "Electronics"
       },
       {
@@ -12703,16 +12695,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Rexing Type-C GPS Module — 9600 Baud",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Add GPS location, speed and route information to compatible Rexing dash cam recordings with this Type-C plug-in GPS module. Compatible cameras BBY C2 (Best Buy version), C2B and F3",
-        "category": "Electronics"
-      },
-      {
         "title": "Pilot do Tv Samsung Smart BN59-01330J QE55LS..Inne",
         "brand": "Samsung",
         "advertiser": "Allegro.pl",
@@ -12740,16 +12722,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "4K IR Night Vision Digital Monocular | 4K(2160p) | 8x Digital Zoom | 4000mah Rechargeable Battery | Save Photos & Videos | Travel 4K Digital Monocular - High performance 4K(2160p) ",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing B1 Compass Night Vision Binoculars 4K Ultra HD",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "4K Ultra HD | Integrated Compass | Flashlight | Weather Resistant | IR Night Vision | 5x Digital Zoom | Video Recording | Photos Ultra High Definition 4K Resolution – Capture every",
         "category": "Electronics"
       },
       {
@@ -12960,16 +12932,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Instant Diagnosis – Quickly and accurately determine why your Check Engine Light (CEL) is on. This plug-and-play scanner reads and clears emission-related diagnostic trouble codes ",
-        "category": "Electronics"
-      },
-      {
-        "title": "Rexing Adhesive Mount for DT2",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Compatible ONLY with Rexing DT2 dash cams. 3M adhesive. Helps prevent camera shake, resulting in clear footage. Compact design. Maintains clear visibility of the road for safe driv",
         "category": "Electronics"
       },
       {
@@ -13723,46 +13685,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Medisept Velox Spray 5 L Tea Tonic do mycia i de",
-        "brand": "Medisept",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Medisept Velox Spray 5 L Tea Tonic - do mycia i dezynfekcji</h2><p>Produkt zastępuje w ofercie <b>Protect Spray</b></p><p><b>Zastosowanie:</b></p><p>Płyn do szybkiej dezynfekcj",
-        "category": "Sports"
-      },
-      {
-        "title": "Medisept Velox Spray 1 L Tea Tonic do mycia i de",
-        "brand": "Medisept",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Medisept Velox Spray 1 L Tea Tonic - do mycia i dezynfekcji</h2>\n<p>Produkt zastępuje w ofercie <b>Protect Spray</b></p>\n<p><b>Zastosowanie:</b></p>\n<p>Płyn do szybkiej dezynfe",
-        "category": "Sports"
-      },
-      {
-        "title": "Koa+Roy Fitness Cube 2.8Oz",
-        "brand": "KOA+ROY",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Ecosmetics Is An Authorized Retailer Of Koa+Roy. Revitalize Your Post-Workout Routine With This Solid Fitness Cube, A Powerhouse Blend Of Menthol, Camphor, And Wintergreen. Crafted",
-        "category": "Sports"
-      },
-      {
-        "title": "Medisept Velox Spray 5 L Tea Tonic do mycia i de",
-        "brand": "Medisept",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Medisept Velox Spray 5 L Tea Tonic - do mycia i dezynfekcji</h2><p>Produkt zastępuje w ofercie <b>Protect Spray</b></p><p><b>Zastosowanie:</b></p><p>Płyn do szybkiej dezynfekcj",
-        "category": "Sports"
-      },
-      {
         "title": "Champion The Authentic Sports Bra In | White Xs",
         "brand": "CHAMPION",
         "advertiser": "eCosmetics.com",
@@ -13900,6 +13822,136 @@
         "googleProductCategory": "",
         "sourceCategory": "Sports",
         "description": "Oakley Flak 2.0 Xl Sports Men's Sunglasses - Oo9188-B559 | Prizm Road Black",
+        "category": "Sports"
+      },
+      {
+        "title": "Omegaregen Sport Cytryna 250 ml",
+        "brand": "FLC PHARMA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<p><b>Omegaregen ® SPORT Cytryna - 250 ml</b></p><p><b>Właściwości:</b></p><p>Zawarte w preparacie Omegaregen® Sport kwasy omega 3 (ALA) w formie bioestrów to podstawowy element bu",
+        "category": "Sports"
+      },
+      {
+        "title": "BRUNO MARC Men s Cotton Crew Athletic Dress Socks",
+        "brand": "BRUNO MARC",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Breathable Cotton Blend: Crafted with cotton, polyester, and spandex, these men's socks offer a soft touch and dynamic stretch, keeping feet dry and comfortable through long office",
+        "category": "Sports"
+      },
+      {
+        "title": "Etafor Plus Massage Gun",
+        "brand": "ETAFOR",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Ecosmetics Is An Authorized Retailer Of Etafor. Deep Muscle Relief, Precision Recovery. Unlock Powerful, Professional-Grade Muscle Recovery With The Etafor Plus Massage Gun. Design",
+        "category": "Beauty"
+      },
+      {
+        "title": "Etafor Pro Massage Gun",
+        "brand": "ETAFOR",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Ecosmetics Is An Authorized Retailer Of Etafor. Professional-Grade Muscle Recovery & Deep Tissue Relief. Take Your Muscle Recovery To The Next Level With The Etafor Pro Massage Gun",
+        "category": "Beauty"
+      },
+      {
+        "title": "Wioślarz powietrzny York Fitness Turbine",
+        "brand": "York Fitness",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h2>Wioślarz powietrzny YORK FITNESS Turbine</h2><ul>\n\n\n<li><b>Klasa urządzenia:</b>&nbsp;H - użytek domowy</li>\n<li><b>Ćwiczone partie mięśni:</b>&nbsp;Kark, Plecy, Ramiona, Ręce<",
+        "category": "Sports"
+      },
+      {
+        "title": "Shone 001-002 - White - Eu28",
+        "brand": "SHONE",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Shone's 001-002 - White Supports Busy Spring And Summer Play With A Smooth Synthetic Leather Upper And A Soft Fabric Lining That Cushions Each Step While Promoting Airflow, Helping",
+        "category": "Beauty"
+      },
+      {
+        "title": "Wioślarz powietrzny York Fitness Turbine",
+        "brand": "York Fitness",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h2>Wioślarz powietrzny YORK FITNESS Turbine</h2><ul>\n\n\n<li><b>Klasa urządzenia:</b>&nbsp;H - użytek domowy</li>\n<li><b>Ćwiczone partie mięśni:</b>&nbsp;Kark, Plecy, Ramiona, Ręce<",
+        "category": "Sports"
+      },
+      {
+        "title": "Dedcool Madonna Lilly | Black Pepper + Sandalwood + Bergamot 1.7Oz",
+        "brand": "Dedcool",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Ecosmetics Is An Authorized Retailer Of Dedcool. Floral With A Dash Of Pepper. We Bottled A Power Suit. Smells Like Hitting The Pavement Running. Feels Like Fingerprints On The Gla",
+        "category": "Beauty"
+      },
+      {
+        "title": "Andis Cool Care Plus 5-In-1 Clipper Blade Cleaner And Lubricant 15.5Oz",
+        "brand": "Andis",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Andis's Cool Care Plus 5-In-1 Clipper Blade Cleaner And Lubricant Streamlines Clipper Upkeep With A Single-Step Spray That Cools, Cleans, Disinfects, Lubricates, And Helps Prevent ",
+        "category": "Beauty"
+      },
+      {
+        "title": "Woodys Beard And Tattoo Oil 1Oz",
+        "brand": "Woodys",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "Redefine Your Grooming Routine With Woody's Beard And Tattoo Oil, The Ultimate All-In-One Solution For The Modern Man On The Move. Infused With A Powerhouse Blend Of Argan, Macadam",
+        "category": "Beauty"
+      },
+      {
+        "title": "Komin termoaktywny chusta Brubeck Athletic S/m",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Komin termoaktywny chusta unisex BRUBECK granatowy</h1><p>------------------------------------------------------------</p> <p>✅ Producent: <b>Brubeck</b></p> <p>✅ Rozmiar: <b>S",
+        "category": "Sports"
+      },
+      {
+        "title": "Komin termoaktywny chusta Brubeck Athletic S/m",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Komin termoaktywny chusta unisex BRUBECK granatowy</h1><p>------------------------------------------------------------</p> <p>✅ Producent: <b>Brubeck</b></p> <p>✅ Rozmiar: <b>S",
+        "category": "Sports"
+      },
+      {
+        "title": "Sport Arsenal art. 312 sakwa wodoszczelna",
+        "brand": "Sport Arsenal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>SPORT ARSENAL - największy czeski producent sakw i bagażników rowerowych</h1><p><b>Doświadczenie</b></p>\n<p>Czeska firma SPORT ARSENAL powstała w 1992 roku i specjalizuje się w",
         "category": "Sports"
       }
     ]
@@ -14145,7 +14197,7 @@
     "televisions": 60,
     "smartphones": 59,
     "playstationConsoles": 94,
-    "gamingConsoles": 179,
+    "gamingConsoles": 178,
     "fashionClothing": 131,
     "tennisShoes": 42,
     "fashionSneakers": 306,
