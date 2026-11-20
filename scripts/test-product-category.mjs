@@ -172,7 +172,7 @@ const cases = [
   ["UNice Pre Cut Lace Natural Black Water Wave Curly Drawstring No Baby Hair", "Beauty"],
   ["Le Specs Air Heart Cat-Eye Sunglasses", "Fashion"],
 ["Rexing CPW-1 Wireless Apple CarPlay Adapter", "Electronics"],
-  ["Rexing Smart Hardwire Kit with 360 Motion Detection", "Electronics"],
+  ["Rexing Smart Hardwire Kit with 360 Motion Detection", "Automotive"],
   ["UNice Hair 3pcs/pack Peruvian Virgin Hair Loose Wave", "Beauty"],
   ["UNice Sport-Friendly Glueless Curly Wig", "Beauty"],
   ["Chi Tea Tree Oil Travel Kit", "Beauty", { advertiser: { name: "eCosmetics.com" } }],
