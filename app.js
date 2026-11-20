@@ -945,7 +945,7 @@ const SEARCH_INTENT_EXCLUSIONS = [
     exclude:["projector","projectors","antenna","amplifier","mount","mounts","stand","stands","remote","remote control","cable","cables","adapter","adapters","power supply","replacement","wall bracket","screen protector"]
   },
   {
-    terms:["phone","phones","smartphone","smartphones","cellulare","cellulari","telefono","telefoni"],
+    terms:["phone","phones","smartphone","smartphones","cellulare","cellulari","telefono","telefoni","iphone","galaxy","pixel","macbook"],
     exclude:["mount","mounts","holder","holders","clamp","case","cases","cover","covers","charger","chargers","cable","cables","screen protector","battery","batteries","repair","replacement","parts","web development","projector","tripod"]
   },
   {
@@ -962,7 +962,7 @@ function hasWholePhrase(text, phrase) {
   return (" " + text + " ").includes(" " + normalizeSearchText(phrase) + " ");
 }
 
-function violatesSearchIntent(product, queryTokens) {
+function violatesSearchIntent(product, queryTokens, queryText) {
   const title = normalizeSearchText([
     product.name, product.title, product.englishTitle, product.brand
   ].join(" "));
@@ -975,9 +975,10 @@ function violatesSearchIntent(product, queryTokens) {
     const requested = intent.terms.some(term => queryTokens.includes(term) ||
       queryTokens.some(token => searchTokenForms(token).includes(term)));
     if (!requested) continue;
-    // An explicitly requested accessory remains searchable (e.g. "phone case").
+    // Multi-word accessory intent must be checked against the complete query,
+    // not one token at a time (e.g. "phone screen protector").
     const accessoryExplicitlyRequested = intent.exclude.some(term =>
-      queryTokens.some(token => hasWholePhrase(token, term))
+      hasWholePhrase(queryText, term)
     );
     if (accessoryExplicitlyRequested) continue;
     if (intent.exclude.some(term => hasWholePhrase(identity, term))) return true;
@@ -986,9 +987,9 @@ function violatesSearchIntent(product, queryTokens) {
 }
 
 function scoreProductSearch(product, queryVariants) {
-  // Search the complete imported catalogue, but match against product identity
-  // and the assigned taxonomy. Merchant names and free-form descriptions do
-  // not independently qualify an unrelated item.
+  // Product identity is authoritative for multi-word product/model searches.
+  // Taxonomy may satisfy a complete category phrase, but category words may
+  // never be combined with unrelated title words to manufacture a match.
   const title = normalizeSearchText([
     product.name, product.title, product.englishTitle, product.brand
   ].join(" "));
@@ -996,28 +997,43 @@ function scoreProductSearch(product, queryVariants) {
     product.category, product.englishCategory,
     product.subcategory, product.englishSubcategory
   ].join(" "));
-  const titleTokens = new Set(title.split(/\s+/).filter(Boolean));
-  const taxonomyTokens = new Set(taxonomy.split(/\s+/).filter(Boolean));
+  const titleTokens = new Set(title.split(/\\s+/).filter(Boolean));
+  const taxonomyTokens = new Set(taxonomy.split(/\\s+/).filter(Boolean));
   let best = 0;
 
   for (const query of queryVariants) {
     const tokens = tokenizeSearchQuery(query);
-    // Apply product-type exclusions before scoring any title/category match.
-    if (!tokens.length || violatesSearchIntent(product, tokens)) continue;
-    const checks = tokens.map(token => {
-      const forms = searchTokenForms(token);
-      const inTitle = forms.some(form => titleTokens.has(form));
-      const inTaxonomy = forms.some(form => taxonomyTokens.has(form));
-      return { inTitle, inTaxonomy, matched: inTitle || inTaxonomy };
-    });
+    if (!tokens.length) continue;
+    const queryPhrase = tokens.join(" ");
 
-    // All meaningful terms must be present: "Samsung 55 TV" cannot match
-    // unrelated accessories that merely mention one of those words.
-    if (checks.every(check => check.matched)) {
-      const titleMatches = checks.filter(check => check.inTitle).length;
-      const taxonomyMatches = checks.filter(check => check.inTaxonomy).length;
-      best = Math.max(best, 100 + titleMatches * 12 + taxonomyMatches * 4);
-    }
+    // Apply product-type exclusions before considering any match.
+    if (violatesSearchIntent(product, tokens, queryPhrase)) continue;
+
+    const titleChecks = tokens.map(token =>
+      searchTokenForms(token).some(form => titleTokens.has(form))
+    );
+    const allTermsInTitle = titleChecks.every(Boolean);
+    const exactTitlePhrase = hasWholePhrase(title, queryPhrase);
+    const exactTaxonomyPhrase = hasWholePhrase(taxonomy, queryPhrase);
+    const singleTermTaxonomyMatch = tokens.length === 1 &&
+      searchTokenForms(tokens[0]).some(form => taxonomyTokens.has(form));
+
+    // For multi-word searches, require the complete query in the product
+    // identity OR as a contiguous taxonomy phrase. Never mix partial matches
+    // across title and category fields.
+    const isRelevant = allTermsInTitle || exactTaxonomyPhrase ||
+      singleTermTaxonomyMatch;
+    if (!isRelevant) continue;
+
+    const titleMatches = titleChecks.filter(Boolean).length;
+    const score = exactTitlePhrase
+      ? 500 + titleMatches * 20
+      : allTermsInTitle
+        ? 300 + titleMatches * 15
+        : exactTaxonomyPhrase
+          ? 180
+          : 100;
+    best = Math.max(best, score);
   }
   return best;
 }
