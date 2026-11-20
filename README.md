@@ -67,7 +67,7 @@ A draft email is not evidence of contact; a sent email or submitted form must be
 
 ### ZOVARO AUTOPILOT — free scheduled operations
 
-- `.github/workflows/zovaro-autopilot.yml` runs a read-only daily operations audit at 07:40 America/Bogota and can also be started manually.
+- `.github/workflows/zovaro-autopilot.yml` runs a read-only operations audit every six hours on GitHub-hosted runners (independent of the owner's computer) and can also be started manually.
 - The audit checks product-category rules, category quality, direct-partner registry integrity, catalogue coverage and affiliate-opportunity pipeline counts.
 - Each run publishes a JSON report as a GitHub Actions artifact retained for 30 days and writes a readable GitHub Actions job summary.
 - A separate weekly workflow checks the public availability of the 28 registered affiliate-opportunity pages, without logging in or contacting partners; HTTP reachability is never treated as programme approval.
