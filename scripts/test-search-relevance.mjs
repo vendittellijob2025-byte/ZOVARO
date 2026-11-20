@@ -4,9 +4,9 @@ import vm from "node:vm";
 
 const source = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
 const start = source.indexOf("const SEARCH_SYNONYMS = Object.freeze({");
-const end = source.indexOf('\\n$("#searchForm").addEventListener', start);
+const end = source.indexOf("\n$(\"#searchForm\").addEventListener", start);
 assert.ok(start >= 0 && end > start, "Search relevance block must exist");
-const isolated = source.slice(start, end) + "\\nglobalThis.searchTestApi = { scoreProductSearch };";
+const isolated = source.slice(start, end) + "\nglobalThis.searchTestApi = { scoreProductSearch };";
 const context = vm.createContext({});
 vm.runInContext(isolated, context);
 const score = (title, query, category = "Electronics", subcategory = "") =>
