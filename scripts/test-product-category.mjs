@@ -416,6 +416,10 @@ assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"re
 assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.30,margin:0.03},{title:"Mystery Product 123",advertiserName:"General Retailer"}),null);
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Beauty"),"Makeup > Lip Makeup");
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Fashion"),null);
+assert.equal(subcategoryFor("Beauty", { title: "Jaguar Vision Sport - 3.4 oz.", advertiserName: "The Fragrance Outlet" }), "Fragrances & Perfumes");
+assert.equal(subcategoryFor("Home & Living", { title: "Vitajuwel Via Glass Bottle - Fitness" }), "Kitchen & Dining > Drinkware");
+assert.equal(subcategoryFor("Fashion", { title: "[Random Color] High-elastic blend hugs your head comfortably without slipping or sliding", advertiserName: "UNice" }), "Accessories > Hair Accessories");
+assert.equal(subcategoryFor("Office & Technology", { title: "Abelssoft AntiLogger 2025", advertiserName: "Abelssoft Int" }), "Software > Utilities");
 
 
 const subcategoryCases = [
@@ -494,7 +498,7 @@ const subcategoryCases = [
   ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
   ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
   ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
-  ["Home & Living", "Vitajuwel Via Heat Tea Strainer", "Kitchen & Dining"],
+  ["Home & Living", "Vitajuwel Via Heat Tea Strainer", "Kitchen & Dining > Drinkware"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],
   ["Luxury & Prestige", "Ferrari 296 GTB", "Luxury Cars & Hypercars > Ferrari"],
