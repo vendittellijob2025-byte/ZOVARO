@@ -240,6 +240,42 @@ assert.equal(categoryFor({ name: "General Retailer" }, {
   category: "Beauty & Personal Care",
   sourceCategory: "Electronics"
 }), "Electronics");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, {
+  title: "Be. Professional 1.25 Repairing Argan Oil Vapor Iron With Thermolon Technology Flat Iron",
+  sourceCategory: "Toys & Games"
+}), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, {
+  title: "Alpha Audio kabel instrumentalny 1,5m",
+  sourceCategory: "Toys & Games"
+}), "Musical Instruments & Studio");
+assert.equal(categoryFor({ name: "The Fragrance Outlet" }, {
+  title: "Jaguar Vision Sport - 3.4 oz.",
+  sourceCategory: "Sports"
+}), "Beauty");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, {
+  title: "Vitajuwel Decanter Era Set - Fitness",
+  sourceCategory: "Sports"
+}), "Home & Living");
+assert.equal(categoryFor({ name: "Dream Pairs Shoes" }, {
+  title: "DREAM PAIRS Classic Chelsea Ankle Booties",
+  sourceCategory: "Travel"
+}), "Fashion");
+assert.equal(categoryFor({ name: "Allegro.pl" }, {
+  title: "Plecionka Dragon R'n's 8X Invisible 0,12mm/150m",
+  sourceCategory: "Other"
+}), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, {
+  title: "Włóczka Nako Bebe akryl premium 50g",
+  sourceCategory: "Babies"
+}), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, {
+  title: "Rexing Tesla to J1772 Charging Adapter",
+  sourceCategory: "Electronics"
+}), "Automotive");
+assert.equal(categoryFor({ name: "Abelssoft Int" }, {
+  title: "mp3 schneiden 2025 | Dein einfaches Musikschnitt-Programm",
+  sourceCategory: "Electronics"
+}), "Office & Technology");
 assert.equal(categoryFor({ name: "Abelssoft Int", parentCategory: "Electronics" }, {
   title: "Abelssoft StartupStar 2025"
 }), "Office & Technology");
@@ -357,9 +393,11 @@ assert.equal(categoryFor({ name: "General Retailer" }, { title: "Etui na Ramię 
 assert.equal(categoryFor({ name: "General Retailer" }, { title: "BRUNO MARC CrossFlex Lite Polish Men’s Non Slip Smart Casual Oxfords" }), "Fashion");
 console.log("Product primary-category and hierarchy tests passed (" + (cases.length + 3 + autoCases.length * 2 + departmentCases.length * 2) + " checks).");
 
-assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.62,margin:0.21}),"Beauty");
-assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"review",detectedCategory:"Beauty",confidence:0.62,margin:0.21}),null);
-assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.30,margin:0.03}),null);
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.62,margin:0.21},{title:"Mystery Product 123",advertiserName:"General Retailer",sourceCategory:"Other"}),"Beauty");
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Toys & Games",confidence:0.95,margin:0.50},{title:"Be. Professional Flat Iron",advertiserName:"eCosmetics.com",sourceCategory:"Toys & Games"}),null);
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.95,margin:0.50},{title:"[US Only] $100 OFF Coupon",advertiserName:"UNice"}),null);
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"review",detectedCategory:"Beauty",confidence:0.62,margin:0.21},{title:"Mystery Product 123",advertiserName:"General Retailer"}),null);
+assert.equal(visualCategoryOverride({status:"possible_mismatch",visualAction:"reclassify",detectedCategory:"Beauty",confidence:0.30,margin:0.03},{title:"Mystery Product 123",advertiserName:"General Retailer"}),null);
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Beauty"),"Makeup > Lip Makeup");
 assert.equal(visualSubcategoryOverride({detectedCategory:"Beauty",visualSubcategoryAction:"apply",visualSubcategoryPath:"Makeup > Lip Makeup",visualSubcategoryConfidence:0.71,visualSubcategoryMargin:0.42},"Fashion"),null);
 
@@ -404,6 +442,27 @@ const subcategoryCases = [
   ["Fashion", "PG Sox Skarpety Antypoślizgowe Niebieskie r. 37-41", "Clothing > Socks"],
   ["Fashion", "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.12", "Jewelry > Rings"],
   ["Fashion", "Protective Neck Gaiter", "Accessories > Scarves"],
+  ["Beauty", "Be. Professional 1.25 Repairing Argan Oil Vapor Iron Flat Iron", "Hair Care > Hair Styling Tools"],
+  ["Beauty", "FOREO LUNA 4 body Peach Perfect", "Skincare > Body Skincare"],
+  ["Beauty", "Acne Clearing Wash", "Skincare > Face Cleansers"],
+  ["Beauty", "ODYSSEY Romantic Skin Emulsion 130ml", "Skincare > Face Skincare"],
+  ["Health & Wellness", "Anker soundcore Eye Mask", "Wellness > Sleep & Relaxation > Sleep Masks"],
+  ["Electronics", "FRP Limited Edition Crab Phone Mount", "Phones & Tablets > Phone Mounts & Holders"],
+  ["Automotive", "Rexing Tesla to J1772 Charging Adapter", "Car Accessories > Electric Vehicle Charging > Charging Adapters"],
+  ["Home & Living", "Vitajuwel Decanter Era Set - Fitness", "Kitchen & Dining > Drinkware"],
+  ["Home & Living", "Kanapa rozkładana z funkcją spania", "Furniture > Living Room Furniture"],
+  ["Home & Living", "FRP Limited Edition LED Desk Light", "Lighting > Desk Lamps"],
+  ["Fashion", "DREAM PAIRS Classic Chelsea Ankle Booties", "Shoes > Boots"],
+  ["Fashion", "DREAM PAIRS Low Wedge Espadrilles", "Shoes > Sandals"],
+  ["Fashion", "UNice headwrap hair accessory", "Accessories > Hair Accessories"],
+  ["Sports", "Plecionka Dragon R'n's 8X Invisible 0,12mm/150m", "Fishing > Lines & Hooks"],
+  ["Books & Media", "Władca Pierścieni Drużyna Pierścienia Rozszerzona", "Movies & TV > DVD"],
+  ["Arts, Crafts & Sewing", "Włóczka Nako Bebe akryl premium 50g", "Sewing & Textiles > Yarn & Knitting"],
+  ["Industrial & Scientific", "CR-PETG Filament 1,75 mm 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
+  ["Industrial & Scientific", "Hojas de acrílico opaco brillante 8x8x1/8''", "3D Printing & Additive Manufacturing > 3D Printing Materials"],
+  ["Office & Technology", "Abelssoft FindMyFiles 2025", "Software > Utilities"],
+  ["Appliances", "Anker SOLIX EverFrost 2 40L Electric Cooler", "Kitchen Appliances > Portable Coolers"],
+  ["Babies", "Pod Organics Vitamin E Baby Massage Oil 4.05Oz", "Hygiene & Wellness > Baby Skin Care"],
   ["Home & Living", "Vitajuwel Via Heat Tea Strainer", "Kitchen & Dining"],
   ["TVs & Home Cinema", "LG OLED Smart TV", "Televisions > OLED TVs"],
   ["TVs & Home Cinema", "Samsung QLED TV", "Televisions > QLED & Mini-LED TVs"],

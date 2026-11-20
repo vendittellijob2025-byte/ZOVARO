@@ -36,7 +36,7 @@ for (const product of catalog.products) {
   );
   const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
   const visualCheck = visualResults.get(key)?.categoryCheck;
-  const acceptedCategory = visualCategoryOverride(visualCheck) || textExpected;
+  const acceptedCategory = visualCategoryOverride(visualCheck, product) || textExpected;
   if (acceptedCategory === "Other" && otherExamples.length < 120) {
     otherExamples.push({
       id: product.id || "",

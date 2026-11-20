@@ -101,3 +101,11 @@ The classifier now has regression coverage for representative perfume, tea, ATV,
 
 
 Regression safeguard: the generic word "tea" is not a primary-category rule. OSULLOC is identified by brand, while tea strainers remain Home & Living > Kitchen & Dining; this prevents a beverage keyword from overriding a kitchen utensil.
+
+
+### 7. Source-category and visual-evidence safeguards
+
+- A partner's source category is now fallback evidence, not an authority that can override a clear product title or a known specialist advertiser.
+- Visual root classification is permitted only when text, product description and known advertiser identity cannot classify the product. It cannot overwrite a confident text/merchant classification.
+- Coupons, discount codes, memberships and installation/service offers are excluded from image-based product classification.
+- Added regression cases for flat irons, instrument cables, fragrance listings, decanters, shoes, fishing lines, yarn, EV adapters and software where partner categories previously conflicted with the product identity.

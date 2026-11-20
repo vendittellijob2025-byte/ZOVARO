@@ -26,7 +26,7 @@ for (const product of catalog.products) {
   );
   const key = [product.source || "", product.advertiserId || "", product.id || ""].join("|");
   const visualCheck = visualResults.get(key)?.categoryCheck;
-  const nextCategory = visualCategoryOverride(visualCheck) || textCategory;
+  const nextCategory = visualCategoryOverride(visualCheck, product) || textCategory;
   // A visual override is accepted only when CLIP's top category clears the
   // explicit confidence and margin thresholds in visualCategoryOverride().
   // All lower-confidence disagreements remain review signals, not overrides.
