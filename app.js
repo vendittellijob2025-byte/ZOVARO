@@ -997,8 +997,8 @@ function scoreProductSearch(product, queryVariants) {
     product.category, product.englishCategory,
     product.subcategory, product.englishSubcategory
   ].join(" "));
-  const titleTokens = new Set(title.split(/\\s+/).filter(Boolean));
-  const taxonomyTokens = new Set(taxonomy.split(/\\s+/).filter(Boolean));
+  const titleTokens = new Set(title.split(/\s+/).filter(Boolean));
+  const taxonomyTokens = new Set(taxonomy.split(/\s+/).filter(Boolean));
   let best = 0;
 
   for (const query of queryVariants) {
