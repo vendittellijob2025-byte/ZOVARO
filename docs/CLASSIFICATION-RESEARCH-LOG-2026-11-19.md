@@ -145,3 +145,10 @@ Regression safeguard: the generic word "tea" is not a primary-category rule. OSU
 - Added precise sports clothing, yoga, hunting optics/metal detectors, tactical pouches and method-feeder bait paths.
 - Added book paths for children's sticker books, psychology/education titles and guitar accessories.
 - Added health-supplement paths for energy and collagen, plus wireless charging, GPS logger/hardwire kit, makeup brushes, PET food jars and board games.
+
+
+### 13. Additional precision corrections from the 20,910-product catalogue audit
+
+- Added explicit title-based root corrections for ETUDE sunscreen, ABOUT_TONE face powder, Clarinsmen moisturizer, Fwee lip colour, Bioliq skincare, makeup brushes, Moleskine notebooks, bike bottle cages, oral-care products, guitar accessories, board games, dash-camera accessories and craft supplies.
+- Added exact subcategory rules using existing taxonomy paths for beauty, sports, music/books, oral hygiene, bags, charging, remote controls and camera accessories.
+- Added only the missing browse leaves required for toiletry bags, TV remote controls, office desk accessories and drum hardware; other mappings reuse existing taxonomy branches.

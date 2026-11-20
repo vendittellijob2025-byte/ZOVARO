@@ -285,6 +285,20 @@ assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Naturalny olejek eter
 assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Valentino By Mario Valentino Men's Milo 1.5 Logo Leather Belt", sourceCategory: "Toys & Games" }), "Fashion");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Drewniany model statku Western 1:130 Diy", sourceCategory: "Toys & Games" }), "Toys & Games");
 assert.equal(categoryFor({ name: "Abelssoft Int" }, { title: "Abelssoft AntiLogger 2025", sourceCategory: "Electronics" }), "Office & Technology");
+assert.equal(categoryFor({ name: "Amore Mall" }, { title: "[1+1] ETUDE Sunprise Mild Watery Light Duo Set", sourceCategory: "Toys & Games" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Notatnik Passion Journal Baby Moleskine L", sourceCategory: "Babies" }), "Office & Technology");
+assert.equal(categoryFor({ name: "eCosmetics.com" }, { title: "Fwee Blurry Pudding Pot Pk01 Baby Soft Pink", sourceCategory: "Babies" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Topeak Modula Cage XL Koszyk na butelki 1,5L Pet", sourceCategory: "Pets" }), "Sports");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Bioliq 35+ zestaw 3 kremów do cery mieszanej", sourceCategory: "Pets" }), "Beauty");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Elgydium Junior Płyn Do Płukania Dla Dzieci 500ml", sourceCategory: "Food & Grocery" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Szczoteczka Do Zębów Z Bioplastiku Włosie Miękkie", sourceCategory: "Food & Grocery" }), "Health & Wellness");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Littlest Pet Shop Książka do wyklejania Kd", sourceCategory: "Pets" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Pilot do Tv Thomson RC802N Smart Netflix", sourceCategory: "Electronics" }), "Electronics");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Uchwyt Na Tablet Telefon Do Dji Phantom 2 3 Se", sourceCategory: "Health & Wellness" }), "Electronics");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Sznurek do makramy bawełniany denim 2mm 60m", sourceCategory: "Fashion" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Zestaw koralików do robienia bransoletek DIY", sourceCategory: "Tools & DIY" }), "Arts, Crafts & Sewing");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Sonor HS 2000 S Drum Hardware Stand Set", sourceCategory: "Tools & DIY" }), "Books & Media");
+assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Iggy Pop TV Eye 1977 Live CD Nowa", sourceCategory: "Electronics" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Wykrywacz Xp Orx Rc Hf 9,5x5 DD 13-81kHz", sourceCategory: "Fashion" }), "Sports");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", sourceCategory: "Fashion" }), "Books & Media");
 assert.equal(categoryFor({ name: "Allegro.pl" }, { title: "Kieszeń Taktyczna Zrzutowa Zasobnik Helikon Competition Utility Pouch Olive", sourceCategory: "Fashion" }), "Sports");
@@ -534,6 +548,29 @@ const subcategoryCases = [
   ["Pets", "Giovanni Deodorizing & Finishing Pet Spray Oatmeal & Coconut", "Pet Grooming & Health > Deodorizing & Finishing Sprays"],
   ["Industrial & Scientific", "Ender PLA+ 1,75 mm Filament d’impression 3D 1 kg", "3D Printing & Additive Manufacturing > 3D Printer Filament"],
   ["Industrial & Scientific", "Creality K2-Series Unicorn Quick Change Nozzle", "3D Printing & Additive Manufacturing > 3D Printer Accessories"],
+  ["Beauty", "ETUDE Sunprise Mild Watery Light Duo Set", "Skincare > Sun Protection & Tanning"],
+  ["Beauty", "ABOUT_TONE Blur Powder Pact 9g 1.5 Cool Fair", "Makeup > Face Makeup"],
+  ["Beauty", "Clarinsmen Super Moisture Face Balm 1.6 Oz", "Skincare > Moisturizers"],
+  ["Beauty", "Fwee Blurry Pudding Pot Pk01 Baby Soft Pink", "Makeup > Lip Makeup"],
+  ["Beauty", "Crickle Daisy Bloom Baby Bloom Powder Brush Lavender Scent 1.4Oz", "Makeup > Makeup Tools & Accessories > Makeup Brushes"],
+  ["Home & Living", "Aeriscape Baskets imprimées en 3D Black 35", "Home Décor > Decorative Objects"],
+  ["Sports", "Peltor SportTac Active Hearing Protection", "Hunting > Hunting Accessories"],
+  ["Sports", "Mata fitness do jogi ćwiczeń antypoślizgowa Reebok 4 mm", "Fitness & Gym > Yoga & Pilates > Yoga Mats"],
+  ["Sports", "Nike Lebron 8 Empire Jade 5.5", "Sports Apparel > Sports Footwear"],
+  ["Sports", "Topeak Modula Cage XL Koszyk na butelki 1.5L Pet", "Cycling > Bike Components"],
+  ["Sports", "Ibanez DCS50D-PBD Pale Blue Denim pasek do gitary", "Music > Instruments > Guitar Accessories > Guitar Straps"],
+  ["Books & Media", "Terminator Genisys Arnold Schwarzenegger Clarke 4K", "Movies & TV > Blu-ray"],
+  ["Books & Media", "Littlest Pet Shop Książka do wyklejania Kd", "Books > Children's Books"],
+  ["Books & Media", "Iggy Pop TV Eye 1977 Live CD Nowa", "Music > CDs"],
+  ["Health & Wellness", "Elgydium Junior Płyn Do Płukania Dla Dzieci 500ml", "Oral Hygiene > Mouthwash"],
+  ["Fashion", "Brocchi Travel Toiletry Bag Black", "Bags & Luggage > Toiletry Bags"],
+  ["Arts, Crafts & Sewing", "Sznurek do makramy bawełniany denim 2mm 60m", "Crafts & Creative DIY"],
+  ["Arts, Crafts & Sewing", "Diy Zestaw Koralików Do Robienia Bransoletek", "Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits"],
+  ["Electronics", "Anker Prime Wireless Charging Station 3-in-1 MagGo AirCool Foldable", "Phones & Tablets > Wireless Chargers"],
+  ["Electronics", "Pilot do Tv Thomson RC802N Smart Netflix", "TV & Home Theater > Remote Controls"],
+  ["Electronics", "Uchwyt Na Tablet Telefon Do Dji Phantom 2 3 Se", "Cameras & Photography > Camera Accessories"],
+  ["Office & Technology", "Notatnik Passion Journal Baby Moleskine L", "Office Supplies > Desk Accessories"],
+  ["Toys & Games", "Secret Life of Pets 3D Game Snakes and Ladders Gra", "Board Games & Puzzles > Board Games"],
   ["Beauty", "Dedcool Madonna Lilly Black Pepper Sandalwood Bergamot 1.7Oz", "Fragrances & Perfumes"],
   ["Beauty", "Andis Cool Care Plus 5-In-1 Clipper Blade Cleaner And Lubricant 15.5Oz", "Hair Care > Hair Styling Tools"],
   ["Beauty", "Woodys Beard And Tattoo Oil 1Oz", "Skincare > Body Skincare"],
