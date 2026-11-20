@@ -9,6 +9,7 @@ on:
       - "scripts/test-product-category.mjs"
       - "lib/product-category.js"
       - "data/category-tree.json"
+      - ".github/workflows/image-audit.yml"
   workflow_dispatch:
     inputs:
       batch_size:
@@ -54,7 +55,7 @@ jobs:
             zovaro-yolos-tiny-${{ runner.os }}-
 
       - name: Install free local vision runtime (CPU-only)
-        run: npm install --no-save --no-package-lock --onnxruntime-node-install=skip @huggingface/transformers@3.8.1
+        run: npm install --no-save --no-package-lock --onnxruntime-node-install-cuda=skip @huggingface/transformers@3.8.1
 
       - name: Run image-audit logic tests
         run: node scripts/audit-product-images.mjs --self-test
