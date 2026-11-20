@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T20:33:21.446Z",
+  "generatedAt": "2026-11-20T01:42:41.988Z",
   "selectedProductCount": 20910,
   "inventoryProductCount": 200952,
   "uniqueAdvertiserCount": 24,
@@ -1751,7 +1751,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1880,
+      "productCount": 1904,
       "unclassifiedProductCount": 706,
       "browseTree": [
         {
@@ -1900,8 +1900,8 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 130,
-          "directProductCount": 43,
+          "productCount": 153,
+          "directProductCount": 45,
           "children": [
             {
               "name": "Neck & Décolleté",
@@ -1955,8 +1955,8 @@
             {
               "name": "Face Skincare",
               "path": "Skincare > Face Skincare",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 21,
+              "directProductCount": 21,
               "children": []
             },
             {
@@ -2134,7 +2134,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 206,
+          "productCount": 207,
           "directProductCount": 0,
           "children": [
             {
@@ -2211,8 +2211,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 113,
-              "directProductCount": 113,
+              "productCount": 114,
+              "directProductCount": 114,
               "children": []
             },
             {
@@ -2235,8 +2235,8 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1334,
-      "unclassifiedProductCount": 365,
+      "productCount": 1333,
+      "unclassifiedProductCount": 364,
       "browseTree": [
         {
           "name": "Books",
@@ -2508,13 +2508,13 @@
     },
     {
       "name": "Electronics",
-      "productCount": 438,
-      "unclassifiedProductCount": 147,
+      "productCount": 441,
+      "unclassifiedProductCount": 146,
       "browseTree": [
         {
           "name": "Phones & Tablets",
           "path": "Phones & Tablets",
-          "productCount": 59,
+          "productCount": 65,
           "directProductCount": 0,
           "children": [
             {
@@ -2658,20 +2658,27 @@
               "productCount": 0,
               "directProductCount": 0,
               "children": []
+            },
+            {
+              "name": "Power Banks & Portable Chargers",
+              "path": "Phones & Tablets > Power Banks & Portable Chargers",
+              "productCount": 6,
+              "directProductCount": 6,
+              "children": []
             }
           ]
         },
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 51,
+          "productCount": 49,
           "directProductCount": 22,
           "children": [
             {
               "name": "Laptops",
               "path": "Computers > Laptops",
-              "productCount": 7,
-              "directProductCount": 7,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": [
                 {
                   "name": "Apple MacBook",
@@ -3274,7 +3281,7 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1766,
+      "productCount": 1810,
       "unclassifiedProductCount": 559,
       "browseTree": [
         {
@@ -3522,7 +3529,7 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 1038,
+          "productCount": 1082,
           "directProductCount": 59,
           "children": [
             {
@@ -3570,8 +3577,8 @@
             {
               "name": "Formal Shoes",
               "path": "Shoes > Formal Shoes",
-              "productCount": 130,
-              "directProductCount": 130,
+              "productCount": 174,
+              "directProductCount": 174,
               "children": []
             },
             {
@@ -3744,8 +3751,8 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 249,
-      "unclassifiedProductCount": 87,
+      "productCount": 252,
+      "unclassifiedProductCount": 88,
       "browseTree": [
         {
           "name": "Pantry Staples",
@@ -3829,7 +3836,7 @@
         {
           "name": "Beverages",
           "path": "Beverages",
-          "productCount": 9,
+          "productCount": 10,
           "directProductCount": 0,
           "children": [
             {
@@ -3842,8 +3849,8 @@
             {
               "name": "Tea",
               "path": "Beverages > Tea",
-              "productCount": 7,
-              "directProductCount": 7,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             },
             {
@@ -3872,8 +3879,8 @@
         {
           "name": "Specialty & Organic",
           "path": "Specialty & Organic",
-          "productCount": 0,
-          "directProductCount": 0,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Organic Foods",
@@ -4583,13 +4590,13 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1181,
-      "unclassifiedProductCount": 884,
+      "productCount": 1161,
+      "unclassifiedProductCount": 875,
       "browseTree": [
         {
           "name": "Nutrition",
           "path": "Nutrition",
-          "productCount": 275,
+          "productCount": 265,
           "directProductCount": 0,
           "children": [
             {
@@ -4602,7 +4609,7 @@
             {
               "name": "Sports Supplements",
               "path": "Nutrition > Sports Supplements",
-              "productCount": 45,
+              "productCount": 44,
               "directProductCount": 10,
               "children": [
                 {
@@ -4629,8 +4636,8 @@
                 {
                   "name": "Post-Workout",
                   "path": "Nutrition > Sports Supplements > Post-Workout",
-                  "productCount": 8,
-                  "directProductCount": 8,
+                  "productCount": 7,
+                  "directProductCount": 7,
                   "children": []
                 },
                 {
@@ -4659,8 +4666,8 @@
             {
               "name": "Vitamins, Minerals & Supplements",
               "path": "Nutrition > Vitamins, Minerals & Supplements",
-              "productCount": 230,
-              "directProductCount": 139,
+              "productCount": 221,
+              "directProductCount": 134,
               "children": [
                 {
                   "name": "Multivitamins",
@@ -4686,8 +4693,8 @@
                 {
                   "name": "Vitamin C",
                   "path": "Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
-                  "productCount": 29,
-                  "directProductCount": 29,
+                  "productCount": 25,
+                  "directProductCount": 25,
                   "children": []
                 },
                 {
@@ -4984,8 +4991,8 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 15,
-          "directProductCount": 15,
+          "productCount": 14,
+          "directProductCount": 14,
           "children": [
             {
               "name": "Toothbrushes",
@@ -5980,8 +5987,8 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 44,
-      "unclassifiedProductCount": 41,
+      "productCount": 45,
+      "unclassifiedProductCount": 42,
       "browseTree": [
         {
           "name": "Office Supplies",
@@ -7768,7 +7775,7 @@
     },
     {
       "name": "Sports",
-      "productCount": 1813,
+      "productCount": 1814,
       "unclassifiedProductCount": 462,
       "browseTree": [
         {
@@ -8295,8 +8302,8 @@
         {
           "name": "Running",
           "path": "Running",
-          "productCount": 210,
-          "directProductCount": 1,
+          "productCount": 211,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Running Shoes",
@@ -10332,20 +10339,20 @@
   "emptyCategories": [
     "Food Delivery & Restaurant Orders"
   ],
-  "otherProductCount": 1753,
+  "otherProductCount": 1698,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1753
+      "count": 1698
     }
   ],
   "categoryQuality": {
-    "taxonomyNodeCount": 1408,
-    "usedTaxonomyNodeCount": 228,
-    "emptyTaxonomyNodeCount": 1180,
-    "productsWithKnownSubcategory": 12111,
+    "taxonomyNodeCount": 1409,
+    "usedTaxonomyNodeCount": 231,
+    "emptyTaxonomyNodeCount": 1178,
+    "productsWithKnownSubcategory": 12175,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 8799,
+    "productsWithoutSubcategory": 8735,
     "unclassifiedByCategory": [
       {
         "category": "Toys & Games",
@@ -10357,7 +10364,7 @@
       },
       {
         "category": "Health & Wellness",
-        "count": 884
+        "count": 875
       },
       {
         "category": "Beauty",
@@ -10373,7 +10380,7 @@
       },
       {
         "category": "Books & Media",
-        "count": 365
+        "count": 364
       },
       {
         "category": "Babies",
@@ -10385,7 +10392,7 @@
       },
       {
         "category": "Electronics",
-        "count": 147
+        "count": 146
       },
       {
         "category": "Travel",
@@ -10397,11 +10404,11 @@
       },
       {
         "category": "Food & Grocery",
-        "count": 87
+        "count": 88
       },
       {
         "category": "Office & Technology",
-        "count": 41
+        "count": 42
       },
       {
         "category": "Luxury & Prestige",
@@ -10441,8 +10448,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 8799,
-      "provisional": 12111
+      "needs_classification": 8735,
+      "provisional": 12175
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10511,16 +10518,16 @@
         "productCount": 209
       },
       {
+        "path": "Fashion > Shoes > Formal Shoes",
+        "productCount": 174
+      },
+      {
         "path": "Electronics > Audio",
         "productCount": 149
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
         "productCount": 140
-      },
-      {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
-        "productCount": 139
       },
       {
         "path": "Food & Grocery > Pantry Staples > Pasta & Rice",
@@ -10531,8 +10538,8 @@
         "productCount": 136
       },
       {
-        "path": "Fashion > Shoes > Formal Shoes",
-        "productCount": 130
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
+        "productCount": 134
       },
       {
         "path": "Fashion > Shoes > Flats",
@@ -10548,7 +10555,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 113
+        "productCount": 114
       },
       {
         "path": "Automotive > Vehicle Tools",
@@ -10628,7 +10635,7 @@
       },
       {
         "path": "Beauty > Skincare",
-        "productCount": 43
+        "productCount": 45
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
@@ -10663,10 +10670,6 @@
         "productCount": 29
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
-        "productCount": 29
-      },
-      {
         "path": "Automotive > Motorcycles, Accessories & Parts",
         "productCount": 28
       },
@@ -10676,6 +10679,10 @@
       },
       {
         "path": "Automotive > Car Parts > Steering & Suspension",
+        "productCount": 25
+      },
+      {
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
         "productCount": 25
       },
       {
@@ -10699,6 +10706,10 @@
         "productCount": 22
       },
       {
+        "path": "Beauty > Skincare > Face Skincare",
+        "productCount": 21
+      },
+      {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
         "productCount": 18
       },
@@ -10712,7 +10723,7 @@
       },
       {
         "path": "Health & Wellness > Oral Hygiene",
-        "productCount": 15
+        "productCount": 14
       },
       {
         "path": "Babies > Hygiene & Wellness > Baby Skin Care",
@@ -10783,11 +10794,11 @@
         "productCount": 8
       },
       {
-        "path": "Health & Wellness > Nutrition > Sports Supplements > Post-Workout",
+        "path": "Automotive > Car Parts > Filters",
         "productCount": 8
       },
       {
-        "path": "Automotive > Car Parts > Filters",
+        "path": "Food & Grocery > Beverages > Tea",
         "productCount": 8
       },
       {
@@ -10807,11 +10818,7 @@
         "productCount": 8
       },
       {
-        "path": "Electronics > Computers > Laptops",
-        "productCount": 7
-      },
-      {
-        "path": "Food & Grocery > Beverages > Tea",
+        "path": "Health & Wellness > Nutrition > Sports Supplements > Post-Workout",
         "productCount": 7
       },
       {
@@ -10835,6 +10842,10 @@
         "productCount": 6
       },
       {
+        "path": "Electronics > Phones & Tablets > Power Banks & Portable Chargers",
+        "productCount": 6
+      },
+      {
         "path": "Food & Grocery > Snacks & Sweets",
         "productCount": 6
       },
@@ -10845,28 +10856,24 @@
       {
         "path": "Home & Living > Kitchen & Dining",
         "productCount": 6
-      },
-      {
-        "path": "Automotive > Car Parts > Engine & Engine Parts",
-        "productCount": 5
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1151
+        "productCount": 1141
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productCount": 305
+        "productCount": 272
       },
       {
         "advertiser": "Perfumania.com",
-        "productCount": 163
+        "productCount": 159
       },
       {
         "advertiser": "Amore Mall",
-        "productCount": 101
+        "productCount": 98
       },
       {
         "advertiser": "FRP Moto  Affiliate",
@@ -10877,15 +10884,11 @@
         "productCount": 7
       },
       {
-        "advertiser": "Soundcore",
-        "productCount": 5
-      },
-      {
         "advertiser": "Rexing",
         "productCount": 3
       },
       {
-        "advertiser": "Adblockultimate.net",
+        "advertiser": "Soundcore",
         "productCount": 1
       }
     ],
@@ -10909,15 +10912,6 @@
         "description": "UNICE $99 Surprise Box -- Valued $330"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Europe XXL Political and Road Wall Map MI",
         "brand": "Maps International",
         "advertiser": "Allegro.pl",
@@ -10925,15 +10919,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h2>EUROPA XXL MAPA ŚCIENNA POLITYCZNA I DROGOWA MI</h2>\n<p>Polityczno-drogowa mapa ścienna Europy w skali 1:3 200 000. Cieniowaniem zaznaczono ukształtowanie terenu. Żywe, wyrazis"
-      },
-      {
-        "title": "AdBlocker Ultimate for Windows",
-        "brand": "AdBlocker Ultimate",
-        "advertiser": "Adblockultimate.net",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ad-free and tracker-free browsing with full-featured premium protection."
       },
       {
         "title": "Rexing Installation Service",
@@ -10954,15 +10939,6 @@
         "description": "$15 OFF for first 2 orders&Extra 2% OFF each order&72-Hrs delivery&30 Days no reason return and free return label&Points redeem hair"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "25mm plastic buckle, 3-point Duraflex clasp",
         "brand": "Kacperek",
         "advertiser": "Allegro.pl",
@@ -10970,24 +10946,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1> Klamra plastikowa 25 mm z Duraflexu&#xa0; </h1>\n<p>Klamra przystosowana do pasa lub taśmy o szerokości 25 mm.</p>\n<p>Klamra ma mocne 3 punktowe zapięcie.</p>\n<p>Jest wykonana "
-      },
-      {
-        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Sky Blue",
-        "brand": "Soundcore",
-        "advertiser": "Soundcore",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
-      },
-      {
-        "title": "Espoir Fresh Setting Powder",
-        "brand": "espoir",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Lightweight powder particles form a thin powdery layer over the skin and remove excessive sebum"
       },
       {
         "title": "Rexing Installation Service",
@@ -11008,15 +10966,6 @@
         "description": "[US Only] $100 OFF Coupon (over $200 and valid in 30 days)"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Pride And Prejudice Jane Austen",
         "brand": "Vintage",
         "advertiser": "Allegro.pl",
@@ -11024,24 +10973,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
-      },
-      {
-        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Pink",
-        "brand": "Soundcore",
-        "advertiser": "Soundcore",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
-      },
-      {
-        "title": "OSULLOC Samdayeon Original Milk Tea (10 sticks)",
-        "brand": "OSULLOC",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
       },
       {
         "title": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)",
@@ -11053,15 +10984,6 @@
         "description": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Pride And Prejudice Jane Austen",
         "brand": "Vintage",
         "advertiser": "Allegro.pl",
@@ -11069,15 +10991,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Pride and Prejudice. Vintage Classics Library</h1><h2>Jane Austen</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2016\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>\nP"
-      },
-      {
-        "title": "Anker Nano Power Bank (5K, MagGo, Slim) White",
-        "brand": "Soundcore",
-        "advertiser": "Soundcore",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
       },
       {
         "title": "OSULLOC Camellia Forest Tea (20 count)",
@@ -11098,15 +11011,6 @@
         "description": "[US Only] UNice Plus VIP (90 Days)"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "How to set up an online store? Krzysztof Bartnik",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11116,15 +11020,6 @@
         "description": "<h1>Witamy w oficjalnym sklepie OSMPower ✅</h1> <h1>Jak założyć sklep internetowy? - Krzysztof Bartnik</h1>\n<p>Zbuduj swój wymarzony sklep internetowy w oparciu o wiedzę praktyków!"
       },
       {
-        "title": "Anker Nano Power Bank (5K, MagGo, Slim) Black",
-        "brand": "Soundcore",
-        "advertiser": "Soundcore",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ultra-Slim Qi2-Compatible Magnetic Power Bank: Embrace sleekness with a 0.3-inch slim magnetic power bank, delivering 5,000mAh of dependable charging.\n\nEnhanced Safety and Speed: O"
-      },
-      {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11132,15 +11027,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Chrome By Azzaro And Versace Pour Homme By Versace - Default Title",
@@ -11161,69 +11047,6 @@
         "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Divine Youth Oil by LOccitane for Unisex - 1 oz Oil - Default Title",
-        "brand": "LOccitane",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It has seven natural plant oils that are selected for their high concentration of essential fatty acids and nutrients, its lightweight and silky texture melts seamlessly into the s"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Instant Firmx Temporary Face Tightener by Peter Thomas Roth for Unisex - 3.4 oz Cream - Default Title",
-        "brand": "Peter Thomas Roth",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Temporarily tighten your skin instantly these agents work beneath the skins surface to help tighten, firm and smooth the appearance of fine lines, deep wrinkles and pores."
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
-        "title": "Clinique Smart Custom-Repair Eye Treatment by Clinique for Women - 0.5 oz Treatment - Default Title",
-        "brand": "Clinique",
-        "advertiser": "Perfumania.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "This treatment targets all visible signs of aging in the delicate eye area. It visibly brightens, contours and firms while reducing the appearance of lines, and wrinkles."
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "DermaFood Cellular Eye Perfecting Cream by LashFood for Unisex - 0.51 oz Cream - 0.51  oz.",
         "brand": "LashFood",
         "advertiser": "Perfumania.com",
@@ -11231,15 +11054,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This cream is clinically proven to erase fine lines, wrinkles, and dark circles and gives the appearance of a younger and firmer looking eye area. It is suitable for all skin types"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Max",
@@ -11260,15 +11074,6 @@
         "description": "Afnan 9PM Black Gift Set is a fragrant tribute to the hours when the world comes alive - bold, warm, and perfectly timed for the evening. Bergamot, lavandin, cinnamon, and apple cr"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Romance by Ralph Lauren and Yellow Diamond by Versace and Acqua Di Gioia by Giorgio Armani - Default Title",
         "brand": "",
         "advertiser": "Perfumania.com",
@@ -11276,15 +11081,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Ultimate Miracle Worker by Philosophy for Unisex - 2 Pc Set 2oz Multi-Rejuvenating Retinol and Superf - Default Title",
@@ -11296,15 +11092,6 @@
         "description": "The power of pure retinol is combined with a natural retinol-like complex powered by alfalfa extract and nourishing superfood oils for an efficacious formula"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Bvlgari Omnia Collection by Bvlgari for Women - 3 Pc Mini Gift Set - Default Title",
         "brand": "Bvlgari",
         "advertiser": "Perfumania.com",
@@ -11312,15 +11099,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Launched by the house of Bvlgari Man in the year 2010. This woody aromatic formula has a blend of Pink grapefruit,cactus juice, middle notes of Benzion,calabrian bergamot and Base "
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Tan Remover Mousse by St. Tropez for Unisex - 6.7 oz Mousse - 6.7 oz.",
@@ -11332,15 +11110,6 @@
         "description": "The quickest and easiest way to remove mistakes or tan build up and prime skin for a fresh tan application. Suitable for even sensitive skin, this luxurious foam effectively remove"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Prevage City Smart Double Action Detox Peel Off Mask by Elizabeth Arden for Women - 2.5 oz Mask - 2.5 oz.",
         "brand": "Elizabeth Arden",
         "advertiser": "Perfumania.com",
@@ -11348,15 +11117,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "It acts like a liquid magnet to lift and remove impurities instantly while resurfacing skin and enhancing its natural detoxification system. Peel to reveal a brighter, smoother, vi"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Basic (no accessories included)",
@@ -11377,15 +11137,6 @@
         "description": "This perfects skin by treating the four aggravating factors hydration, energy, skin glow, wrinkles and firmness. The skin appears soft, regenerated and sparkling. The face glows wi"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Paris Hilton by Paris Hilton for Men - 4 Pc Gift Set - 4 oz.",
         "brand": "Paris Hilton",
         "advertiser": "Perfumania.com",
@@ -11393,15 +11144,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Launched by the design house of Paris Hilton in the year 2005. This masculine scent has a blend of fig leaf, cucumber, green mango, amber, white sage, cedarwood, and juniper. It is"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Basic (no accessories included)",
@@ -11422,15 +11164,6 @@
         "description": "It is a concentrated oil booster that soothes, nourishes, and moisturizes to restore balance to sensitive skin and it also nourishes and soothes irritated skin."
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Sensuelle By Camille Rochelle And Mon Paris By Yves Saint Laurent - Default Title",
         "brand": "",
         "advertiser": "Perfumania.com",
@@ -11440,15 +11173,6 @@
         "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Dr. Andrew Weil for Origins Mega-Mushroom Skin Relief by Origins for Women - 6.7 oz Treatment - 6.7 oz.",
         "brand": "Origins",
         "advertiser": "Perfumania.com",
@@ -11456,15 +11180,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This extra-light treatment lotion features, which soothes, comforts, and hydrates skin. This treatemnt helps to defend skin against silent skin agers."
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - White / Basic (no accessories included)",
@@ -11485,15 +11200,6 @@
         "description": "This cream is a great skin lightening cream that helps to fade unwanted discoloration, dark spots or age spots caused by sun damage, aging skin or scarring. It deeply moisturizes a"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Tamiya Extra Thin Quick Setting 87182 Klej 40ml",
         "brand": "Tamiya",
         "advertiser": "Allegro.pl",
@@ -11501,15 +11207,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>TAMIYA - EXTRA THIN</h1><p><b>QUICK SETTING - SPECJALNA WERSJA: PRZYSPIESZONE WIĄZANIE!</b></p><h1>Klej z pędzelkiem do modeli plastikowych.</h1><p><b>40ml - DUŻY i bardzo WYDA"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Olejek zapachowy 12ml Pomarańcza I Cynamon",
@@ -11539,15 +11236,6 @@
         "description": "Gift Set Includes: 4.2 oz. Eau de Toilette Spray, 2.5 oz. Body Lotion and 0.33 oz. Travel Size."
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.12",
         "brand": "Marko",
         "advertiser": "Allegro.pl",
@@ -11564,15 +11252,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This refined, aromatic cream with extracts of rosemary visibly reduces puffiness and dark circles. It restores firmness to the eye and lip contour and provides a feeling of freshne"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.13",
@@ -11593,15 +11272,6 @@
         "description": "This highly effective treatment blends lactic and kojic acids with a cocktail of lightening agents to reduce pigmentation and redness caused by rosacea and corrects all forms of pi"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.18",
         "brand": "Marko",
         "advertiser": "Allegro.pl",
@@ -11618,15 +11288,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.21",
@@ -11647,15 +11308,6 @@
         "description": "Azzaro The Most Wanted Intense Gift Set is the complete experience of masculine desire - an immersive introduction to one of the most compelling modern aromatic colognes. Cardamom "
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Złoty Pierścionek Zaręczynowy 585 z Cyrkonią r.19",
         "brand": "Marko",
         "advertiser": "Allegro.pl",
@@ -11674,15 +11326,6 @@
         "description": "Acne-Clear Invisible Dots"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Pg Sox Skarpety Antypoślizgowe Niebieskie r. 37-41",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11699,15 +11342,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This gel gives the skin instant, deep-penetrating moisture that leaves skin with a smooth matte finish. This hydrating gel will soothe, heal, and even skin tone to minimize the app"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Ładowarka słoneczna telefonu panel słoneczny 42W parasol słoneczny Usb",
@@ -11737,15 +11371,6 @@
         "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
       },
       {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
-      },
-      {
         "title": "Ładowarka słoneczna telefonu panel słoneczny 42W",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -11762,15 +11387,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "This purifying charcoal mask unclogs pores for a perfectly pure look. It deeply detoxes, absorbs environmental toxins and dissolves impurities. It deep clean and draw out deep-dwel"
-      },
-      {
-        "title": "BRUNO MARC  CrossFlex Lite Polish  Men s Non Slip Smart Casual Oxfords",
-        "brand": "BRUNO MARC",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "These smart-casual Oxfords fit seamlessly into your daily routine. The classic Derby upper, crafted from soft vegan leather, allows for freedom of movement and ensures a comfortabl"
       },
       {
         "title": "Zima Winter- mała harmonijka",
@@ -12239,6 +11855,393 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Treat someone special to the Lattafa Yara 4-Piece Gift Set, a luxurious collection of fragrances designed to delight and inspire. This set includes four mini Eau de Parfums â Yar"
+      },
+      {
+        "title": "Mediseptol H naturalny- płyn do dezynfekcji 5 L",
+        "brand": "Alpinus",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>MEDISEPTOL H NATURALNY PREPARAT DO DEZYNFEKCJI POWIERZCHNI I PRZEDMIOTÓW NOWA NAZWA</h1><h1>ALPINUSEPTOL+</h1><h1>5L</h1><p>Preparat do szybkiej dezynfekcji powierzchni sprzętu"
+      },
+      {
+        "title": "OSULLOC Wedding Green Tea (20 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Jessica Mcclintock By Jessica Mcclintock And White Diamonds By Elizabeth Taylor - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for women. This bundle duo provides you with bigger savings than ever before! This offer can on"
+      },
+      {
+        "title": "Uniwersalny zestaw do czyszczenia broni wycior Mil-Tec w pudełku 24 w 1",
+        "brand": "Mil-Tec",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
+      },
+      {
+        "title": "ETUDE Color Lasting Glow Stick 05 Honey Beige",
+        "brand": "ETUDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Color Lasting Glow Stick Color Lasting Glow Stick That Maintains the Color More Clear and Transparent on Lips point 1. Natural Color Fixing That Stays On the Lips as It Is Applied "
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Purple / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Acqua Di Gio By Armani And Eros By Versace - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "Zestaw do czyszczenia konserwowania broni krótkiej pistoletu Mil-Tec",
+        "brand": "Mil-Tec",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Zestaw do czyszczenia broni krótkiej Mil-Tec (16171340)</h1><p>Zestaw do dbania o broń krótką od Mil-Tec, przeznaczony dla kalibrów .40, .45, .357, .38, .22 oraz 9 mm. Sprawna "
+      },
+      {
+        "title": "HERA Hydro Reflecting Fluid 140ml",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Hydrating and texturizing fluid with a soft and relaxing moisture essence formula that balances oil and water in the skin."
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Pink / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Miniature Variety Gift Set - 0.13 oz. Each",
+        "brand": "Marc Jacobs",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Set includes the miniature sizes of Daisy, Eau So Fresh, Perfect, Love"
+      },
+      {
+        "title": "Tabletki czyszczące do ekspresów Siemens TZ80001B Oryginalne",
+        "brand": "Siemens",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h2>Wspaniały smak i aromat Twojej kawy dzięki orginalnym tabletkom czyszczącym marki Siemens.</h2><h2>NAJWAŻNIEJSZE PARAMETRY:</h2>\n<ul>\n<li><b>Ilość sztuk w opakowaniu:</b> 10</l"
+      },
+      {
+        "title": "ETUDE Modi Spa Nail Hardner 02 Red",
+        "brand": "ETUDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "MODI Spa Nail Hardener Nail hardener that provides both nutrition and healthy complexion to damaged nails. - Nail Strength & Resilience repairs damaged nails cause by frequent nail"
+      },
+      {
+        "title": "The Most Wanted 3-Piece Gift Set - 3.4 oz.",
+        "brand": "Azzaro",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gift Set includes: Parfum 3.4 oz. Shower Gel 2.5 oz. Parfum Travel Size 0.33 oz."
+      },
+      {
+        "title": "Szwajcarski Bagnet M57 SG510 Demobil Swiss Army",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY [91549210]</h1> <p><b>Parametry:</b></p><ul><li>Model: Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY</li><li>Marka: Mil-Tec, N"
+      },
+      {
+        "title": "[33days]VITALBEAUTIE Energy Shot Body&Brain 28days (+5days gift)",
+        "brand": "VITALBEAUTIE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The quick-absorbing green ampoule allows easy diet. Contains tangerine, calamansi, and lemon concentrate as supplementary ingredients for refreshing diet routine with unsweet drink"
+      },
+      {
+        "title": "Myslf and Y by Yves Saint Laurent - Default Title",
+        "brand": "Yves Saint Laurent",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "Zestaw automatyki do bramy Nice Hopp 3xPILOT Lampa",
+        "brand": "Nice",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
+      },
+      {
+        "title": "[+Cream&Lotion 30ml]AESTURA Atobarrier 365 Lotion 150ml*2EA",
+        "brand": "AESTURA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Treatment Softener by Shiseido for Unisex - 5 oz Treatment - Default Title",
+        "brand": "Shiseido",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A treatment that improves the appearance of fine lines, your skin's clarity and texture. Helps to strengthen the inner defenses of your skin. It protects your skin from the signs o"
+      },
+      {
+        "title": "Dmuchawa akumulatorowa 54V DeWALT DCMBA572N Body",
+        "brand": "DeWalt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h DeWALT DCMBA572N BODY</h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li><l"
+      },
+      {
+        "title": "HERA Sensual Lip & Cheek 7g 02 LINGERIE",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A multi-use lip and cheek balm that appears natural vibrant and plump look."
+      },
+      {
+        "title": "Pour Femme By Gia Lucca And Flowerbomb By Viktor & Rolf - Default Title",
+        "brand": "",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Explore this great deal! We have bundled together two of our best-selling fragrances for men. This bundle duo provides you with bigger savings than ever before! This offer can only"
+      },
+      {
+        "title": "Dmuchawa akumulatorowa 54V 1x9Ah DeWALT DCMBA572X1",
+        "brand": "DeWalt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Bezszczotkowa dmuchawa osiowa 54V 200km/h 1x9Ah DeWALT DCMBA572X1 </h1>\n<p><b>Zawartość zestawu:</b></p>\n<ul><li>Akumulatorowa dmuchawa osiowa bezszczotkowa DeWALT DCMBA572</li"
+      },
+      {
+        "title": "Espoir Protailor Be Glow Sheer Powder",
+        "brand": "espoir",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A glossy powder with a dewy glow and long-lasting finish. The subtle shimmer completes the original sleek result with a three-dimensional face."
+      },
+      {
+        "title": "Shea Butter Intensive Hand Balm by LOccitane for Unisex - 5.2 oz Hand Balm - 5.2 oz.",
+        "brand": "LOccitane",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This balm melts into the hands and nails from the moment it is applied and massaged. Enriched with allantoin, it helps to immediately soothe the skin, bringing comfort and softness"
+      },
+      {
+        "title": "plecionka dragon street fishing 8X Vision 0.10MM",
+        "brand": "Dragon",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "plecionka dragon street fishing 8X Vision 0.10MM"
+      },
+      {
+        "title": "ETUDE Drawing Eye Brow 0.25G B6 Ash Brown",
+        "brand": "ETUDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "- Long Lasting Adhesion to keep your brow tails from fading The well-balanced mixture of adhesive flake powder, wax, and oil ingredients provides a long lasting eyebrow. - Smooth &"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Red / Max",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Clarifying Lotion 3 by Clinique for Unisex - 13.4 oz Clarifying Lotion - 13.4 oz.",
+        "brand": "Clinique",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "A clarifying lotion formulated for dry skin, hydrates area and leaves it moist while getting rid of dull flakes. It exfoliates the skin and leaves it with a smooth effect and radia"
+      },
+      {
+        "title": "Yes Yessongs mini lp Shm CD Japan nowa",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>YES -&#xa0;Yessongs</h1> <h2>2x SHM CD - Mini LP - Cardboard Sleeve</h2> <p><b>Product Details:</b></p><ul><li><b>Catalog No.:</b> WPCR-13517</li><li><b>JAN/ISBN:</b> 494367409"
+      },
+      {
+        "title": "OSULLOC Tangerine Blossom Oolong Tea (10 count)",
+        "brand": "OSULLOC",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Refreshingly delicious. This fermented drinks with sparkling is a healthy alternative to soda. Honey fermented kombucha provides rich aroma and tastes. No sugar added."
+      },
+      {
+        "title": "Zestaw automatyki do bramy Nice Hopp Era 2x Pilot",
+        "brand": "Nice",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
+      },
+      {
+        "title": "ETUDE Collagen Eye Patch",
+        "brand": "ETUDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Multi-Action Blue Rescue Clay Renewal Mask by Strivectin for Unisex - 3.2 oz Mask - 3.2 oz.",
+        "brand": "Strivectin",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This multi-tasking, buttery smooth clay mask reduces the look of fine lines, enlarged pores, rough texture and dullness in just 10 minutes. Massage-activated formula transforms to "
+      },
+      {
+        "title": "Zestaw automatyki do bramy Nice HOPP,3x Pilot MyGO4",
+        "brand": "Nice",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>ZESTAW NICE HOPP ONE</h1><h2>KOMPLETNY ZESTAW AUTOMATYKI RENOMOWANEJ MARKI NICE DO BRAM DWUSKRZYDŁOWYCH O DŁUGOŚCI DO 2,5 METRA KAŻDEGO ZE SKRZYDŁO I WADZE 2x 250 KG</h2><h2>ID"
+      },
+      {
+        "title": "ETUDE Drawing Eye Brow 0.25G B3 Brown",
+        "brand": "ETUDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "- Long Lasting Adhesion to keep your brow tails from fading The well-balanced mixture of adhesive flake powder, wax, and oil ingredients provides a long lasting eyebrow. - Smooth &"
+      },
+      {
+        "title": "FRP Moto Sahara 40 40cc Kids ATV for Ages 6+ â Dual Disc Brakes - Green / Basic (no accessories included)",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "FRP Moto Sahara 40 is a 40cc kids ATV for ages 6+ â 13 mph top speed, 143 lbs capacity, dual front and rear disc brakes, dual suspension. Adjustable speed limiter lets parents co"
+      },
+      {
+        "title": "Pur Luxe Intense Magical Radiance by Stendhal for Women - 1 oz Treatment - 1  oz.",
+        "brand": "Stendhal",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "It visibly reduces the appearance of wrinkles and fine lines. It helps to diminish the appearance of lines and wrinkles, improves skins elasticity and helps to firm and tone overni"
+      },
+      {
+        "title": "Pakiet Władca Pierścieni",
+        "brand": "Muza SA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Władca Pierścieni.</h1><h1>Tomy 1 - 3.</h1><ul><li><b>Autor:&#xa0;Tolkien&#xa0;John&#xa0;Ronald&#xa0;Reuel</b></li><li><b>EAN:&#xa0;9788328713215</b></li><li><b>Wydawnictwo:&#x"
+      },
+      {
+        "title": "ILLIYOON MD Red-itch Cure Balm 60ML",
+        "brand": "ILLIYOON",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Deeply nourishing cure balm that targets particularly dry, sensitive areas."
+      },
+      {
+        "title": "Skin Nourishing Shower Cream by Elemis for Unisex - 10.1 oz Shower Cream - Default Title",
+        "brand": "Elemis",
+        "advertiser": "Perfumania.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "This exquisite shower cream gently cleanses, whilst enriching the body and balancing the acid mantle."
+      },
+      {
+        "title": "Nostradamus: The Last Prophecy Steam Key Klucz Kod",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Nostradamus: The Last Prophecy Steam Key Klucz Kod"
       }
     ],
     "missingSubcategoryExamples": [
@@ -13293,7 +13296,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Ładowarka Usb Podstawka Samsung Galaxy Watch Active (Tech-Band)",
+        "title": "Usb charger Samsung Galaxy Watch Active stand (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13383,16 +13386,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Etui na Ramię do Biegania Samsung S10 S20 Fe S21",
-        "brand": "TelForceOne",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>Etui na RAMIĘ, RĘKĘ do BIEGANIA / na Rower na SMARTFON 5,8-6,5 cali Rozmiar XXL</h1><p>Towar jest w 100% NOWY i NIEUŻYWANY. Etui wykonane z wysokiej jakości materiałów. Zapakow",
-        "category": "Electronics"
-      },
-      {
         "title": "Life Q30 Bluetooth Headphone Sakura Pink",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
@@ -13403,7 +13396,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek do Samsung Galaxy Watch Active Rozmiar S",
+        "title": "Strap for Samsung Galaxy Watch Active Size S",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13423,7 +13416,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Pasek do Samsung Galaxy Watch Active Rozmiar S",
+        "title": "Strap for Samsung Galaxy Watch Active Size S",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13443,7 +13436,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Czarno-żółty Pasek Samsung Galaxy Watch 46MM Szkło 9H",
+        "title": "Black and yellow Samsung Galaxy Watch strap 46MM 9H glass",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13463,7 +13456,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13483,7 +13476,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13503,7 +13496,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13513,7 +13506,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13523,7 +13516,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13533,7 +13526,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13543,7 +13536,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Galaxy Watch 46mm (Tech-Band)",
+        "title": "Samsung Galaxy Watch Silicone Strap 46mm (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13553,7 +13546,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Gear S3 Frontier Classic (Tech-Band)",
+        "title": "Samsung Gear S3 Frontier Classic Silicone Strap (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13573,7 +13566,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Silikonowy Pasek Samsung Gear S3 Frontier Classic (Tech-Band)",
+        "title": "Samsung Gear S3 Frontier Classic Silicone Strap (Tech-Band)",
         "brand": "Tech-Band",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13583,7 +13576,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Oficjalny Podręcznik Scratchjr Mitchel..",
+        "title": "The Official Scratchjr Mitchel Manual..",
         "brand": "Wydawnictwo Naukowe PWN",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13740,6 +13733,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Office & Technology",
         "description": "Schnelle und einfache Video-Konvertierung von und in verschiedene Formate für eine Wiedergabe auf dem Fernseher, Handy und Co.",
+        "category": "Office & Technology"
+      },
+      {
+        "title": "PC Fresh 2025 | Up to 137% more PC performance | Turbo Boost mode",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Office & Technology",
+        "description": "The All-In One tuning software gets the maximum performance out of your computer. It will make your PC fast and powerful like you have never experienced before.",
         "category": "Office & Technology"
       }
     ]
