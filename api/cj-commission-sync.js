@@ -80,8 +80,7 @@ function buildQuery({ sincePostingDate, beforePostingDate, sinceCommissionId }) 
   const args = [
     "forPublishers: " + JSON.stringify([PUBLISHER_CID]),
     "sincePostingDate: " + JSON.stringify(sincePostingDate),
-    "beforePostingDate: " + JSON.stringify(beforePostingDate),
-    'actionTypes: ["sim_sale", "item_sale", "sim_lead", "item_lead"]'
+    "beforePostingDate: " + JSON.stringify(beforePostingDate)
   ];
   if (sinceCommissionId) args.push("sinceCommissionId: " + JSON.stringify(String(sinceCommissionId)));
   return `query {
