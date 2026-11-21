@@ -186,6 +186,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("ZOVARO admin dashboard error:", error);
-    return res.status(503).json({ error: "Impossibile leggere l'archivio privato tramite OIDC. Verifica il collegamento Blob del progetto e la versione SDK." });
+    return res.status(503).json({ error: "Impossibile leggere l'archivio privato Cloudflare D1. Verifica la configurazione e i limiti del database." });
   }
 }
