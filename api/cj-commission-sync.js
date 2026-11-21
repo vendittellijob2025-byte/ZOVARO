@@ -49,6 +49,8 @@ function normalizeRecord(record) {
     original_action_id: record.originalActionId == null ? null : String(record.originalActionId),
     referral_id: referralId,
     action_type: actionType,
+    action_tracker_id: record.actionTrackerId == null ? null : String(record.actionTrackerId),
+    action_tracker_name: record.actionTrackerName || null,
     action_status: record.actionStatus || null,
     validation_status: record.validationStatus || null,
     correction_reason: record.correctionReason || null,
