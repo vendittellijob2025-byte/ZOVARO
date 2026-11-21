@@ -10,6 +10,8 @@
   const reopenButton = document.getElementById("zovaroAiReopen");
   const changeButton = document.getElementById("zovaroAiChangeLanguage");
   const welcomeText = document.getElementById("zovaroAiWelcomeText");
+  const audioButton = document.getElementById("zovaroAiPlayAudio");
+  let currentLanguage = "en";
   const chooseCopy = document.getElementById("zovaroAiChooseCopy");
   const languageHeading = document.getElementById("zovaroAiLanguageHeading");
   const languageHint = document.getElementById("zovaroAiLanguageHint");
@@ -283,6 +285,7 @@
 
   function showWelcome(code) {
     const data = getCopy(code);
+    currentLanguage = code;
     applyRequestLanguage(code);
     animateAndSpeak(welcomeText, data.welcome, code);
     changeLabel.textContent = data.change;
@@ -310,6 +313,24 @@
       try { localStorage.setItem(STORAGE_KEY, code); } catch (_) {}
       showWelcome(code);
     });
+  });
+
+  const audioLabels = {
+    en:"🔊 Listen to welcome", it:"🔊 Ascolta il benvenuto", es:"🔊 Escuchar bienvenida",
+    fr:"🔊 Écouter le message", de:"🔊 Begrüßung anhören", pt:"🔊 Ouvir boas-vindas",
+    ar:"🔊 استمع إلى الترحيب", hi:"🔊 स्वागत सुनें", zh:"🔊 播放欢迎语",
+    ja:"🔊 挨拶を聞く", ru:"🔊 Прослушать приветствие", ko:"🔊 환영 인사 듣기"
+  };
+
+  audioButton?.addEventListener("click", () => {
+    // Speech synthesis is commonly blocked on page load by browser autoplay
+    // policies. A direct tap/click is the reliable, accessible way to start it.
+    const code = currentLanguage || "en";
+    const text = getCopy(code).welcome;
+    if (window.speechSynthesis && typeof window.speechSynthesis.resume === "function") {
+      window.speechSynthesis.resume();
+    }
+    animateAndSpeak(welcomeText, text, code);
   });
 
   changeButton.addEventListener("click", showLanguagePicker);
@@ -350,5 +371,8 @@
   if (homeButton) homeButton.setAttribute("aria-label", initialCopy.homeButton || "Home");
   document.documentElement.lang = "en";
   document.documentElement.dir = "ltr";
-  showLanguagePicker();
+  // Every fresh visit opens with the primary English welcome. Visitors can
+  // then choose another language from the welcome panel. The separate audio
+  // control handles browsers that block speech until a user gesture.
+  showWelcome("en");
 })();
