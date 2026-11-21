@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - ".github/workflows/cj-commission-sync.yml"
+      - "api/cj-commission-sync.js"
 
 permissions:
   contents: read
