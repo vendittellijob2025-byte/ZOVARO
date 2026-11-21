@@ -146,7 +146,7 @@ export default async function handler(req, res) {
       if (records.length) {
         // 22 parameters per row; four rows stay below D1's 100-bind-parameter limit.
         for (let i = 0; i < records.length; i += 4) {
-          const part = records.slice(i, i + 20);
+          const part = records.slice(i, i + 4);
           await d1Batch(part);
           saved += part.length;
           sales += part.filter(x => x.event_type === "cj_sale").length;
