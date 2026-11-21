@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { list, get } from "@vercel/blob";
+import { list, get } from "../lib/zovaro-store.js";
 import { d1Query } from "../lib/cj-d1.js";
 
 function readCookie(header, name) {
