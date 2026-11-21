@@ -1443,6 +1443,38 @@ footer{
   .zovaro-home-button{left:10px;bottom:12px;padding:11px 13px;font-size:11px}
   .zovaro-ai-reopen{right:10px!important;bottom:12px!important;padding:11px 13px!important;font-size:11px!important}
 }
+
+/* Mobile category views: prevent intrinsic content widths from scaling the viewport. */
+html,body{width:100%;max-width:100%;overflow-x:clip;}
+.page,.view,#buyProductsView,#categoryGrid{width:100%;max-width:100%;min-width:0;}
+.page{padding-left:clamp(12px,3.5vw,18px);padding-right:clamp(12px,3.5vw,18px);}
+#categoryGrid.shop-categories{width:100%;min-width:0;grid-template-columns:repeat(4,minmax(0,1fr));}
+#categoryGrid .category-node{width:100%;max-width:100%;min-width:0;}
+#categoryGrid button.category,#categoryGrid button.category-back{width:100%;max-width:100%;min-width:0;}
+#categoryGrid .category-count{max-width:100%;overflow-wrap:anywhere;}
+.product-grid{width:100%;min-width:0;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));}
+.product,.product-media,.product-info{min-width:0;max-width:100%;}
+@media(max-width:760px){
+  #buyProductsView{padding-left:0;padding-right:0;}
+  #categoryGrid.shop-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  #categoryGrid .category-node{min-width:0;}
+  #categoryGrid button.category{height:clamp(88px,25vw,112px);min-height:clamp(88px,25vw,112px);padding:10px;overflow:hidden;}
+  #categoryGrid button.category strong{font-size:clamp(12px,3.5vw,15px);line-height:1.15;overflow-wrap:anywhere;}
+  #categoryGrid .category-products,#categoryGrid .category-browse{max-width:100%;white-space:normal;overflow-wrap:anywhere;}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  .product-info{padding:10px;}
+}
+@media(max-width:380px){
+  #categoryGrid.shop-categories{gap:8px;}
+  #categoryGrid button.category{padding:8px;}
+  .product-grid{grid-template-columns:minmax(0,1fr);}
+}
+
+/* Explicit playback control for browsers that block automatic speech on load. */
+.zovaro-ai-audio{display:inline-flex;align-items:center;justify-content:center;gap:7px;margin:8px 8px 4px 0;padding:9px 13px;border:1px solid rgba(53,216,255,.55);border-radius:999px;background:rgba(0,130,210,.16);color:#e6f8ff;font-size:12px;font-weight:800;cursor:pointer;}
+.zovaro-ai-audio:hover{background:rgba(0,150,230,.28);}
+.zovaro-ai-audio:focus-visible{outline:2px solid #48dcff;outline-offset:3px;}
+
 </style>
 
 </head>
@@ -2924,6 +2956,7 @@ document
         <div class="zovaro-ai-speech" aria-live="polite">
           <strong>ZOVARO WORLDWIDE</strong>
           <p id="zovaroAiWelcomeText"></p>
+          <button type="button" class="zovaro-ai-audio" id="zovaroAiPlayAudio" aria-label="Play welcome audio">🔊 Listen to welcome</button>
           <button type="button" class="zovaro-ai-change" id="zovaroAiChangeLanguage">🌐 <span id="zovaroAiChangeLabel">Change language</span></button>
           <form class="zovaro-ai-request-form" id="zovaroAiRequestForm">
             <label class="zovaro-ai-request-label" for="zovaroAiRequestInput" id="zovaroAiRequestLabel">What do you need?</label>
