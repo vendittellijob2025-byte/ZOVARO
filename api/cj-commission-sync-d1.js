@@ -163,6 +163,10 @@ export default async function handler(req, res) {
       }
     }
     if (latestCursor) await writeSyncCursor(latestCursor);
+    await d1Query(
+      "INSERT INTO cj_sync_state(state_key,state_value,updated_at) VALUES(?,?,?) ON CONFLICT(state_key) DO UPDATE SET state_value=excluded.state_value, updated_at=excluded.updated_at",
+      ["last_synced_at", new Date().toISOString(), new Date().toISOString()]
+    );
     return res.status(200).json({
       success: true, publisher_cid: PUBLISHER_CID, pages_read: pages,
       records_received: received, records_upserted: saved,
