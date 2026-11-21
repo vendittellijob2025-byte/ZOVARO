@@ -137,7 +137,7 @@ jobs:
             JSON.parse(fs.readFileSync("vercel.json", "utf8"));
             const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
             if (pkg.type !== "module") throw new Error("package.json must declare native ESM.");
-            if (!pkg.dependencies?.["@vercel/blob"]) throw new Error("@vercel/blob dependency is missing.");
+            if (pkg.dependencies?.["@vercel/blob"]) throw new Error("Production package must not depend on Vercel Blob.");
             console.log("Node.js package configuration is valid.");
             console.log("Dashboard JavaScript and Vercel configuration are valid.");
           '
