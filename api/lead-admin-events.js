@@ -75,11 +75,21 @@ export default async function handler(req, res) {
     const updates = blobValue(1);
     let cjCommissions = blobValue(2);
     let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
-    let cjLedgerSource = "legacy_blob";
+    let cjLedgerSource = process.env.BLOB_STORE_ID ? "legacy_blob" : "unavailable";
+    let cjLedgerTotals = null;
     if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
-      const [d1Records, d1State] = await Promise.all([
+      const [d1Records, d1State, d1Totals] = await Promise.all([
         d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
-        d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"])
+        d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"]),
+        d1Query(`SELECT COUNT(*) AS total_records,
+          SUM(CASE WHEN lower(action_type) LIKE '%_sale' THEN 1 ELSE 0 END) AS sale_records,
+          SUM(CASE WHEN lower(action_type) LIKE '%_lead' THEN 1 ELSE 0 END) AS lead_records,
+          COUNT(DISTINCT CASE WHEN lower(action_type) LIKE '%_sale' THEN COALESCE(order_id,commission_id) END) AS sale_orders,
+          SUM(COALESCE(sale_amount_usd,0)) AS sale_amount_usd,
+          SUM(COALESCE(commission_amount_usd,0)) AS commission_amount_usd,
+          SUM(CASE WHEN upper(COALESCE(validation_status,''))='PENDING' OR lower(COALESCE(action_status,''))='new' THEN COALESCE(commission_amount_usd,0) ELSE 0 END) AS pending_commission_amount_usd,
+          SUM(CASE WHEN referral_id IS NOT NULL AND referral_id<>'' THEN 1 ELSE 0 END) AS records_with_referral_id
+          FROM cj_commissions`)
       ]);
       const parsed = (d1Records.results || []).map(row => {
         try { return JSON.parse(row.record_json); } catch { return null; }
@@ -88,6 +98,7 @@ export default async function handler(req, res) {
       const stateMap = Object.fromEntries((d1State.results || []).map(row => [row.state_key, row.state_value]));
       cjState = { last_synced_at: stateMap.last_synced_at || null, max_commission_id: stateMap.max_commission_id || null };
       cjLedgerSource = "cloudflare_d1";
+      cjLedgerTotals = d1Totals.results?.[0] || null;
     }
 
     const cjEvents = cjCommissions.map(record => ({
@@ -138,26 +149,26 @@ export default async function handler(req, res) {
         leads: updates.filter(event => event.status === "lead").length,
         appointments: updates.filter(event => event.status === "appointment").length,
         closed_won: closed.length,
-        cj_commission_records: cjCommissions.length,
-        cj_sale_orders: cjSaleOrders.size,
-        cj_lead_records: cjCommissions.filter(record => record.event_type === "cj_lead").length,
+        cj_commission_records: Number(cjLedgerTotals?.total_records ?? cjCommissions.length),
+        cj_sale_orders: Number(cjLedgerTotals?.sale_orders ?? cjSaleOrders.size),
+        cj_lead_records: Number(cjLedgerTotals?.lead_records ?? cjCommissions.filter(record => record.event_type === "cj_lead").length),
         cj_records_matching_clicks: cjRecordsMatchingClicks
       },
       reported_revenue_by_currency: revenueByCurrency,
       cj_summary: {
         ledger_source: cjLedgerSource,
         last_synced_at: cjState?.last_synced_at || null,
-        sale_amount_usd: sumUsd(cjCommissions, "sale_amount_usd"),
-        commission_amount_usd: sumUsd(cjCommissions, "commission_amount_usd"),
-        pending_commission_amount_usd: sumUsd(
+        sale_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.sale_amount_usd || 0) : sumUsd(cjCommissions, "sale_amount_usd"),
+        commission_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.commission_amount_usd || 0) : sumUsd(cjCommissions, "commission_amount_usd"),
+        pending_commission_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.pending_commission_amount_usd || 0) : sumUsd(
           cjCommissions.filter(record =>
             String(record.validation_status || "").toUpperCase() === "PENDING" ||
             String(record.action_status || "").toLowerCase() === "new"
           ),
           "commission_amount_usd"
         ),
-        records_with_referral_id: cjCommissions.filter(record => Boolean(record.referral_id)).length,
-        records_without_referral_id: cjCommissions.filter(record => !record.referral_id).length
+        records_with_referral_id: Number(cjLedgerTotals?.records_with_referral_id ?? cjCommissions.filter(record => Boolean(record.referral_id)).length),
+        records_without_referral_id: cjLedgerTotals ? Math.max(0, Number(cjLedgerTotals.total_records || 0) - Number(cjLedgerTotals.records_with_referral_id || 0)) : cjCommissions.filter(record => !record.referral_id).length
       },
       events
     });
