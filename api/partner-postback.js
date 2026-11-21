@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { put } from "@vercel/blob";
+import { d1Query } from "../lib/cj-d1.js";
 
 function canonical(value) {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
@@ -82,14 +82,12 @@ export default async function handler(req, res) {
   };
 
   try {
-    const storageId = crypto.randomUUID();
-    await put(
-      `lead-sales/events/partner-updates/${partner}/${storageId}.json`,
-      JSON.stringify(event),
-      { access: "private", addRandomSuffix: false, contentType: "application/json" }
+    await d1Query(
+      "INSERT INTO partner_conversion_events(event_id,partner_id,referral_id,status,amount,currency,partner_order_reference,occurred_at,received_at,record_json) VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT(event_id) DO UPDATE SET status=excluded.status,amount=excluded.amount,currency=excluded.currency,partner_order_reference=excluded.partner_order_reference,occurred_at=excluded.occurred_at,received_at=excluded.received_at,record_json=excluded.record_json",
+      [event.event_id,event.partner_id,event.referral_id,event.status,event.amount,event.currency,event.partner_order_reference,event.occurred_at,event.received_at,JSON.stringify(event)]
     );
   } catch (error) {
-    console.error("ZOVARO partner event storage error:", error);
+    console.error("ZOVARO partner event D1 storage error:", error);
     return res.status(503).json({ error: "Event storage unavailable" });
   }
 

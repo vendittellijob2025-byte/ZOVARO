@@ -1,5 +1,6 @@
 import crypto from "node:crypto";
 import { list, get } from "@vercel/blob";
+import { d1Query } from "../lib/cj-d1.js";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
@@ -58,20 +59,54 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: "Sessione amministratore assente o scaduta." });
   }
 
-  // The connected private Blob store uses Vercel OIDC.
-  // @vercel/blob resolves the request-scoped OIDC token together with BLOB_STORE_ID.
-  // Do not require a long-lived BLOB_READ_WRITE_TOKEN on this Vercel deployment.
-  if (!process.env.BLOB_STORE_ID) {
-    return res.status(503).json({ error: "Archivio eventi non configurato: il Blob Store non risulta collegato a questo ambiente." });
-  }
-
   try {
-    const [clicks, updates, cjCommissions, cjState] = await Promise.all([
-      collectLatest("lead-sales/events/clicks/", 100),
-      collectLatest("lead-sales/events/partner-updates/", 100),
-      collectLatest("cj-commissions/records/", 100),
-      readJson("cj-commissions/state.json").catch(() => null)
-    ]);
+    // Blob remains a best-effort legacy source during migration. A suspended
+    // Blob store must not prevent the private D1 CJ ledger from being viewed.
+    const blobReads = process.env.BLOB_STORE_ID
+      ? await Promise.allSettled([
+          collectLatest("lead-sales/events/clicks/", 100),
+          collectLatest("lead-sales/events/partner-updates/", 100),
+          collectLatest("cj-commissions/records/", 100),
+          readJson("cj-commissions/state.json")
+        ])
+      : [];
+    const blobValue = index => blobReads[index]?.status === "fulfilled" ? blobReads[index].value : [];
+    const clicks = blobValue(0);
+    let updates = blobValue(1);
+    let cjCommissions = blobValue(2);
+    let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
+    let cjLedgerSource = process.env.BLOB_STORE_ID ? "legacy_blob" : "unavailable";
+    let cjLedgerTotals = null;
+    if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
+      const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals] = await Promise.all([
+        d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
+        d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"]),
+        d1Query(`SELECT COUNT(*) AS total_records,
+          SUM(CASE WHEN lower(action_type) LIKE '%_sale' THEN 1 ELSE 0 END) AS sale_records,
+          SUM(CASE WHEN lower(action_type) LIKE '%_lead' THEN 1 ELSE 0 END) AS lead_records,
+          COUNT(DISTINCT CASE WHEN lower(action_type) LIKE '%_sale' THEN COALESCE(order_id,commission_id) END) AS sale_orders,
+          SUM(COALESCE(sale_amount_usd,0)) AS sale_amount_usd,
+          SUM(COALESCE(commission_amount_usd,0)) AS commission_amount_usd,
+          SUM(CASE WHEN upper(COALESCE(validation_status,''))='PENDING' OR lower(COALESCE(action_status,''))='new' THEN COALESCE(commission_amount_usd,0) ELSE 0 END) AS pending_commission_amount_usd,
+          SUM(CASE WHEN referral_id IS NOT NULL AND referral_id<>'' THEN 1 ELSE 0 END) AS records_with_referral_id
+          FROM cj_commissions`),
+        d1Query("SELECT record_json FROM partner_conversion_events ORDER BY occurred_at DESC LIMIT 100"),
+        d1Query("SELECT COUNT(*) AS total_records, SUM(CASE WHEN status='lead' THEN 1 ELSE 0 END) AS leads, SUM(CASE WHEN status='appointment' THEN 1 ELSE 0 END) AS appointments, SUM(CASE WHEN status='closed_won' THEN 1 ELSE 0 END) AS closed_won FROM partner_conversion_events")
+      ]);
+      const parsed = (d1Records.results || []).map(row => {
+        try { return JSON.parse(row.record_json); } catch { return null; }
+      }).filter(Boolean);
+      cjCommissions = parsed;
+      updates = (d1PartnerRecords.results || []).map(row => {
+        try { return JSON.parse(row.record_json); } catch { return null; }
+      }).filter(Boolean);
+      const stateMap = Object.fromEntries((d1State.results || []).map(row => [row.state_key, row.state_value]));
+      cjState = { last_synced_at: stateMap.last_synced_at || null, max_commission_id: stateMap.max_commission_id || null };
+      cjLedgerSource = "cloudflare_d1";
+      cjLedgerTotals = d1Totals.results?.[0] || null;
+      const partnerTotals = d1PartnerTotals.results?.[0] || {};
+      var partnerLedgerTotals = partnerTotals;
+    }
 
     const cjEvents = cjCommissions.map(record => ({
       schema: record.schema,
@@ -117,29 +152,30 @@ export default async function handler(req, res) {
       sample_limit_per_type: 100,
       counts: {
         clicks: clicks.length,
-        partner_updates: updates.length,
-        leads: updates.filter(event => event.status === "lead").length,
-        appointments: updates.filter(event => event.status === "appointment").length,
-        closed_won: closed.length,
-        cj_commission_records: cjCommissions.length,
-        cj_sale_orders: cjSaleOrders.size,
-        cj_lead_records: cjCommissions.filter(record => record.event_type === "cj_lead").length,
+        partner_updates: Number(partnerLedgerTotals?.total_records ?? updates.length),
+        leads: Number(partnerLedgerTotals?.leads ?? updates.filter(event => event.status === "lead").length),
+        appointments: Number(partnerLedgerTotals?.appointments ?? updates.filter(event => event.status === "appointment").length),
+        closed_won: Number(partnerLedgerTotals?.closed_won ?? closed.length),
+        cj_commission_records: Number(cjLedgerTotals?.total_records ?? cjCommissions.length),
+        cj_sale_orders: Number(cjLedgerTotals?.sale_orders ?? cjSaleOrders.size),
+        cj_lead_records: Number(cjLedgerTotals?.lead_records ?? cjCommissions.filter(record => record.event_type === "cj_lead").length),
         cj_records_matching_clicks: cjRecordsMatchingClicks
       },
       reported_revenue_by_currency: revenueByCurrency,
       cj_summary: {
+        ledger_source: cjLedgerSource,
         last_synced_at: cjState?.last_synced_at || null,
-        sale_amount_usd: sumUsd(cjCommissions, "sale_amount_usd"),
-        commission_amount_usd: sumUsd(cjCommissions, "commission_amount_usd"),
-        pending_commission_amount_usd: sumUsd(
+        sale_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.sale_amount_usd || 0) : sumUsd(cjCommissions, "sale_amount_usd"),
+        commission_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.commission_amount_usd || 0) : sumUsd(cjCommissions, "commission_amount_usd"),
+        pending_commission_amount_usd: cjLedgerTotals ? Number(cjLedgerTotals.pending_commission_amount_usd || 0) : sumUsd(
           cjCommissions.filter(record =>
             String(record.validation_status || "").toUpperCase() === "PENDING" ||
             String(record.action_status || "").toLowerCase() === "new"
           ),
           "commission_amount_usd"
         ),
-        records_with_referral_id: cjCommissions.filter(record => Boolean(record.referral_id)).length,
-        records_without_referral_id: cjCommissions.filter(record => !record.referral_id).length
+        records_with_referral_id: Number(cjLedgerTotals?.records_with_referral_id ?? cjCommissions.filter(record => Boolean(record.referral_id)).length),
+        records_without_referral_id: cjLedgerTotals ? Math.max(0, Number(cjLedgerTotals.total_records || 0) - Number(cjLedgerTotals.records_with_referral_id || 0)) : cjCommissions.filter(record => !record.referral_id).length
       },
       events
     });

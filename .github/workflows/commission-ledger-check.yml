@@ -1,0 +1,45 @@
+name: ZOVARO - Commission Ledger Checks
+
+on:
+  push:
+    branches:
+      - fix/cj-commission-ledger-d1
+  pull_request:
+    paths:
+      - "api/cj-commission-sync.js"
+      - "lib/cj-d1.js"
+      - "api/lead-admin-events.js"
+      - "api/partner-postback.js"
+      - "cloudflare/d1/**"
+      - ".github/workflows/commission-ledger-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  syntax-and-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: |
+          node --check api/cj-commission-sync.js
+          node --check lib/cj-d1.js
+          node --check api/lead-admin-events.js
+          node --check api/partner-postback.js
+      - name: Check patch whitespace
+        run: git diff --check origin/main...HEAD
+      - name: Validate D1 schema with SQLite
+        run: |
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+          db = sqlite3.connect(":memory:")
+          db.executescript(Path("cloudflare/d1/schema.sql").read_text())
+          tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+          assert {"cj_commissions", "cj_sync_state"} <= tables
+          print("D1 schema OK")
+          PY
