@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T19:46:51-05:00",
+  "updatedAt": "2026-11-20T20:14:53-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -4313,7 +4313,7 @@
     {
       "id": "advance-auto-parts-affiliate",
       "name": "Advance Auto Parts",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Impact affiliate programme",
       "category": "Automotive; Auto Parts",
       "sourceUrl": "https://shop.advanceautoparts.com/o/affiliates",
@@ -4324,22 +4324,30 @@
       "contactedAt": "2026-11-14T22:47:13Z",
       "emailMessageId": "1a1dc3e514e0b8db",
       "territories": [
-        "US; retailer reports stores in 40 states"
+        "United States only"
       ],
-      "commission": "Public page advertises up to 10%; verify actual qualifying rate",
-      "cookie": "Public page describes a 30-day return window; attribution details to verify",
+      "commission": "Public page advertises up to 10%; exact qualifying rate not confirmed by programme manager",
+      "cookie": "Not confirmed; the public 30-day return window is not proof of a 30-day affiliate cookie",
       "integration": {
         "affiliateLink": "pending",
         "productFeed": "pending",
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; verify Impact acceptance, delivery area, catalog feed, click tracking and image rights.",
+      "nextAction": "Do not invent traffic or US audience figures. Reassess only when verifiable metrics and an Impact publisher ID exist; no tracking, feed or approval is confirmed.",
       "lastEmailSentAt": "2026-11-14T22:47:13Z",
       "lastEmailSubject": "ZOVARO Worldwide — Advance Auto Parts affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc3e514e0b8db",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "payout": "Impact account payment schedule; direct or weekly bank transfer unavailable",
+      "attribution": "Last click",
+      "response": {
+        "receivedAt": "2026-11-16T14:42:12Z",
+        "contact": "Danielle Hernandez, Senior Affiliate Manager, Gen3",
+        "status": "information request; eligibility not established; application not submitted",
+        "summary": "Gen3 confirmed US-only customers and traffic, last-click attribution, and payment through Impact on the publisher account schedule. Direct and weekly bank transfers are not available. The manager requested verified company details, promotional methods, monthly traffic, US audience share and an Impact publisher ID; these metrics/ID are not verified."
+      }
     },
     {
       "id": "every-foods-affiliate",
@@ -4594,7 +4602,7 @@
     {
       "id": "luxury-hotels-group",
       "name": "Luxury Hotels Group",
-      "status": "contacted",
+      "status": "not_eligible",
       "programType": "Direct referral / listing partnership enquiry",
       "category": "Luxury; Travel; Hotels; Property; Yachts; Private Jets",
       "sourceUrl": "https://luxuryhotels.group/contact-us",
@@ -4607,20 +4615,26 @@
       "territories": [
         "300+ destinations advertised; exact inventory and coverage to confirm"
       ],
-      "commission": "Not published",
-      "cookie": "Not applicable / not confirmed",
+      "commission": "No tracked affiliate/referral commission programme offered for the requested partnership",
+      "cookie": "Not applicable",
       "integration": {
         "affiliateLink": "pending",
         "inventoryAccess": "pending",
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; determine whether listings/referrals are commissionable, establish tracked leads or booking attribution, confirm inventory, territories and media rights.",
+      "nextAction": "Close this affiliate prospect. Do not pursue franchise discussions, commitments or fees.",
       "lastEmailSentAt": "2026-11-14T22:47:40Z",
       "lastEmailSubject": "ZOVARO Worldwide — Luxury Hotels Group listing and referral partnership",
       "lastEmailThreadId": "1a1dc3eb90409b16",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "payout": "Not applicable",
+      "response": {
+        "receivedAt": "2026-11-16T12:23:36Z",
+        "status": "affiliate/referral arrangement declined; franchise only",
+        "summary": "Luxury Hotels Group stated it does not offer the tracked referral or commission-based affiliate arrangement requested. It offered discussion of a territorial franchise instead. ZOVARO did not pursue the franchise because it would be a commercial investment outside the authorised no-cost affiliate scope."
+      }
     },
     {
       "id": "cricut-affiliate",
@@ -5216,7 +5230,7 @@
     {
       "id": "keldco-affiliate",
       "name": "KeldCo",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Direct ambassador affiliate programme",
       "category": "Security & Safety; Smart Home",
       "sourceUrl": "https://keldco.com/pages/ambassador-affiliate-program",
@@ -5227,22 +5241,29 @@
       "contactedAt": "2026-11-14T22:50:15Z",
       "emailMessageId": "1a1dc4115693395f",
       "territories": [
-        "Australia; exact delivery countries to confirm"
+        "Australia",
+        "New Zealand"
       ],
-      "commission": "Public page states minimum 10%",
-      "cookie": "Not stated",
+      "commission": "10% on qualifying tracked sales (confirmed by KeldCo email)",
+      "cookie": "14 days",
       "integration": {
         "affiliateLink": "pending",
         "productFeed": "pending",
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm platform publisher eligibility, countries, tracking, feed and payout terms.",
+      "nextAction": "Do not register until supported delivery countries and publisher eligibility are clear. No tracking link or feed/API verified; no products imported or published.",
       "lastEmailSentAt": "2026-11-14T22:50:15Z",
       "lastEmailSubject": "ZOVARO Worldwide — KeldCo affiliate partnership enquiry",
       "lastEmailThreadId": "1a1dc4115693395f",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "payout": "Bi-weekly via PayPal; AUD 200 minimum threshold; bank transfer not confirmed",
+      "response": {
+        "receivedAt": "2026-11-17T07:18:36Z",
+        "status": "programme details supplied; registration not submitted; not activated",
+        "summary": "KeldCo confirmed 10% on qualifying tracked sales, 14-day cookie, Australia/New Zealand focus, bi-weekly PayPal payouts and AUD 200 minimum. It permits its own official social assets but not creator-owned content without permission. No feed/API or activated ZOVARO tracking link was supplied."
+      }
     },
     {
       "id": "u-tec-ultraloq-affiliate",
@@ -5441,7 +5462,7 @@
     {
       "id": "bradford-exchange-affiliate",
       "name": "The Bradford Exchange",
-      "status": "contacted",
+      "status": "responded",
       "programType": "Partnerize affiliate programme",
       "category": "Collectibles; Art; Gifts",
       "sourceUrl": "https://www.ashtondrake.com/service/start-now.html",
@@ -5452,22 +5473,29 @@
       "contactedAt": "2026-11-14T22:51:36Z",
       "emailMessageId": "1a1dc4252ae62633",
       "territories": [
-        "Not yet confirmed"
+        "Not confirmed by programme manager"
       ],
-      "commission": "Public page advertises up to 10%; verify exact rate",
-      "cookie": "Not stated",
+      "commission": "Public page advertises up to 10%; exact Bradford Exchange rate not confirmed",
+      "cookie": "Not stated by programme manager",
       "integration": {
         "affiliateLink": "pending",
         "productFeed": "pending",
         "imagePermission": "pending",
         "conversionReporting": "pending"
       },
-      "nextAction": "Await reply; confirm programme eligibility, customer countries, product catalogue, tracking, assets and payout.",
+      "nextAction": "Do not send an unapproved media kit or claim traffic metrics. Await confirmed programme details and assess eligibility; weekly bank transfer is unavailable.",
       "lastEmailSentAt": "2026-11-14T22:51:36Z",
       "lastEmailSubject": "ZOVARO Worldwide — Bradford Exchange affiliate publisher enquiry",
       "lastEmailThreadId": "1a1dc4252ae62633",
       "outreachSummary": "Personalized ZOVARO affiliate/referral introduction; requested international publisher eligibility, territories, commission, cookie/attribution, feed/API, creative/image permissions, reporting and payout terms. Weekly bank transfer is a request only; no sales or traffic volume was promised.",
-      "emailDeliveryStatus": "sent"
+      "emailDeliveryStatus": "sent",
+      "payout": "Weekly bank transfer unavailable; alternative payment schedule, method, threshold and currency not confirmed",
+      "response": {
+        "receivedAt": "2026-11-20T15:22:42Z",
+        "contact": "Stephen Martin, Senior Account Strategist, Partnerize",
+        "status": "programme contact established; media kit requested; not approved",
+        "summary": "Partnerize confirms Stephen oversees the Bradford Exchange affiliate programme and requested a media kit. Weekly bank transfers are unavailable. ZOVARO has no approved media kit ready; none was sent. Commission, cookie, supported territories, tracking, feed/API, alternative payout method and minimum threshold remain unconfirmed."
+      }
     },
     {
       "id": "scientific-products-ltda",
