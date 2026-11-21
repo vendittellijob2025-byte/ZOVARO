@@ -3,7 +3,7 @@ name: ZOVARO - Sync global remote jobs
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 13 * * *"
   push:
     branches:
       - main
@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: zovaro-global-jobs-sync-${{ github.ref }}
@@ -45,16 +46,18 @@ jobs:
         run: node scripts/sync-global-remote-jobs.mjs
       - name: Validate source attribution, country eligibility and categories
         run: node scripts/validate-global-job-feed.mjs
-      - name: Commit refreshed job listings
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/remote-jobs.json
-          if git diff --cached --quiet; then
-            echo "No global job feed changes."
-            exit 0
-          fi
-          git commit -m "chore: refresh attributed global remote job listings"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+      - name: Create or update draft PR for refreshed job listings
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: data/remote-jobs.json
+          commit-message: "chore: refresh attributed global remote job listings"
+          branch: jobs/daily-feed-updates
+          delete-branch: false
+          title: "JOBS: daily remote feed refresh"
+          body: |
+            Daily refresh of the public remote-job sources.
+            Preserve each source's canonical listing URL and attribution.
+            Review all changes before merging; no production publication is automatic.
+          base: main
+          draft: true
