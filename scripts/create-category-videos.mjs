@@ -154,6 +154,21 @@ if (await fs.access(MUSIC_LUXURY).then(()=>true).catch(()=>false)) {
 } else {
   console.log("LUXURY video skipped: approved audio file is not yet present at "+MUSIC_LUXURY);
 }
+
+results.push(await makeVideo({
+  name:"ZOVARO-ADVERTISERS-DAILY",
+  background:"assets/job-visual.png",
+  music:MUSIC_DEFAULT,
+  scenes:[
+    {title:"ADVERTISE ON ZOVARO",subtitle:"Promote your business worldwide."},
+    {title:"US$9.99 / MONTH",subtitle:"Monthly advertising plan."},
+    {title:"US$99 / YEAR",subtitle:"One payment for 12 months."}
+  ],
+  caption:"Promote your business, products or services worldwide on ZOVARO. US$9.99 per month or US$99 for 12 months paid once. Contact ZOVARO for details: https://zovaro.vercel.app/",
+  hashtags:["#ZOVARO","#Advertise","#BusinessPromotion","#GlobalVisibility"],
+  footer:"US$9.99 / MONTH  ·  US$99 / YEAR"
+}));
+
 await fs.rm(temp,{recursive:true,force:true});
 await fs.writeFile(path.join(OUTPUT,"captions.json"),JSON.stringify({
   createdAt:new Date().toISOString(),
