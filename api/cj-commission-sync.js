@@ -1,4 +1,4 @@
-import { d1Batch, d1Query, readSyncCursor, writeSyncCursor } from "../lib/cj-d1.js";
+import { d1Batch, d1Query, ensureClickSchema, readSyncCursor, writeSyncCursor } from "../lib/cj-d1.js";
 
 const CJ_COMMISSION_API = "https://commissions.api.cj.com/query";
 const PUBLISHER_CID = "8068799";
@@ -80,8 +80,7 @@ function buildQuery({ sincePostingDate, beforePostingDate, sinceCommissionId }) 
   const args = [
     "forPublishers: " + JSON.stringify([PUBLISHER_CID]),
     "sincePostingDate: " + JSON.stringify(sincePostingDate),
-    "beforePostingDate: " + JSON.stringify(beforePostingDate),
-    'actionTypes: ["sim_sale", "item_sale", "sim_lead", "item_lead"]'
+    "beforePostingDate: " + JSON.stringify(beforePostingDate)
   ];
   if (sinceCommissionId) args.push("sinceCommissionId: " + JSON.stringify(String(sinceCommissionId)));
   return `query {
@@ -128,6 +127,8 @@ export default async function handler(req, res) {
   if (!token || token.length < 20) return res.status(401).json({ error: "CJ authorization missing or invalid." });
 
   try {
+    // Ensure the first-party click ledger exists before processing any CJ records.
+    await ensureClickSchema();
     // Validate D1 configuration before spending CJ API calls.
     await d1Query("SELECT 1 AS ready");
     const now = new Date();

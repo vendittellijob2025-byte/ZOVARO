@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
-import { list, get } from "@vercel/blob";
-import { d1Query } from "../lib/cj-d1.js";
+import { list, get } from "../lib/zovaro-store.js";
+import { d1Query, ensureClickSchema } from "../lib/cj-d1.js";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
@@ -62,23 +62,23 @@ export default async function handler(req, res) {
   try {
     // Blob remains a best-effort legacy source during migration. A suspended
     // Blob store must not prevent the private D1 CJ ledger from being viewed.
-    const blobReads = process.env.BLOB_STORE_ID
-      ? await Promise.allSettled([
-          collectLatest("lead-sales/events/clicks/", 100),
-          collectLatest("lead-sales/events/partner-updates/", 100),
-          collectLatest("cj-commissions/records/", 100),
-          readJson("cj-commissions/state.json")
-        ])
-      : [];
+    const blobReads = await Promise.allSettled([
+      collectLatest("lead-sales/events/clicks/", 100),
+      collectLatest("lead-sales/events/partner-updates/", 100),
+      collectLatest("cj-commissions/records/", 100),
+      readJson("cj-commissions/state.json")
+    ]);
     const blobValue = index => blobReads[index]?.status === "fulfilled" ? blobReads[index].value : [];
-    const clicks = blobValue(0);
+    let clicks = blobValue(0);
+    let clickLedgerTotal = clicks.length;
     let updates = blobValue(1);
     let cjCommissions = blobValue(2);
     let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
-    let cjLedgerSource = process.env.BLOB_STORE_ID ? "legacy_blob" : "unavailable";
+    let cjLedgerSource = "private_d1_store";
     let cjLedgerTotals = null;
     if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
-      const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals] = await Promise.all([
+      await ensureClickSchema();
+      const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals, d1ClickRecords, d1ClickTotals] = await Promise.all([
         d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
         d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"]),
         d1Query(`SELECT COUNT(*) AS total_records,
@@ -91,12 +91,18 @@ export default async function handler(req, res) {
           SUM(CASE WHEN referral_id IS NOT NULL AND referral_id<>'' THEN 1 ELSE 0 END) AS records_with_referral_id
           FROM cj_commissions`),
         d1Query("SELECT record_json FROM partner_conversion_events ORDER BY occurred_at DESC LIMIT 100"),
-        d1Query("SELECT COUNT(*) AS total_records, SUM(CASE WHEN status='lead' THEN 1 ELSE 0 END) AS leads, SUM(CASE WHEN status='appointment' THEN 1 ELSE 0 END) AS appointments, SUM(CASE WHEN status='closed_won' THEN 1 ELSE 0 END) AS closed_won FROM partner_conversion_events")
+        d1Query("SELECT COUNT(*) AS total_records, SUM(CASE WHEN status='lead' THEN 1 ELSE 0 END) AS leads, SUM(CASE WHEN status='appointment' THEN 1 ELSE 0 END) AS appointments, SUM(CASE WHEN status='closed_won' THEN 1 ELSE 0 END) AS closed_won FROM partner_conversion_events"),
+        d1Query("SELECT record_json FROM outbound_click_events ORDER BY occurred_at DESC LIMIT 100"),
+        d1Query("SELECT COUNT(*) AS total_records FROM outbound_click_events")
       ]);
       const parsed = (d1Records.results || []).map(row => {
         try { return JSON.parse(row.record_json); } catch { return null; }
       }).filter(Boolean);
       cjCommissions = parsed;
+      clicks = (d1ClickRecords.results || []).map(row => {
+        try { return JSON.parse(row.record_json); } catch { return null; }
+      }).filter(Boolean);
+      clickLedgerTotal = Number(d1ClickTotals.results?.[0]?.total_records || 0);
       updates = (d1PartnerRecords.results || []).map(row => {
         try { return JSON.parse(row.record_json); } catch { return null; }
       }).filter(Boolean);
@@ -151,7 +157,7 @@ export default async function handler(req, res) {
       generated_at: new Date().toISOString(),
       sample_limit_per_type: 100,
       counts: {
-        clicks: clicks.length,
+        clicks: clickLedgerTotal,
         partner_updates: Number(partnerLedgerTotals?.total_records ?? updates.length),
         leads: Number(partnerLedgerTotals?.leads ?? updates.filter(event => event.status === "lead").length),
         appointments: Number(partnerLedgerTotals?.appointments ?? updates.filter(event => event.status === "appointment").length),
@@ -181,6 +187,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("ZOVARO admin dashboard error:", error);
-    return res.status(503).json({ error: "Impossibile leggere l'archivio privato tramite OIDC. Verifica il collegamento Blob del progetto e la versione SDK." });
+    return res.status(503).json({ error: "Impossibile leggere l'archivio privato Cloudflare D1. Verifica la configurazione e i limiti del database." });
   }
 }

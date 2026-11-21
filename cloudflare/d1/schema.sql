@@ -52,3 +52,28 @@ CREATE TABLE IF NOT EXISTS partner_conversion_events (
 CREATE INDEX IF NOT EXISTS idx_partner_events_partner_status ON partner_conversion_events(partner_id,status);
 CREATE INDEX IF NOT EXISTS idx_partner_events_referral ON partner_conversion_events(referral_id);
 CREATE INDEX IF NOT EXISTS idx_partner_events_occurred_at ON partner_conversion_events(occurred_at);
+
+-- First-party outbound affiliate click ledger; one row per validated redirect.
+CREATE TABLE IF NOT EXISTS outbound_click_events (
+  event_id TEXT PRIMARY KEY,
+  partner_id TEXT NOT NULL,
+  referral_id TEXT NOT NULL,
+  item_id TEXT NOT NULL,
+  source TEXT NOT NULL,
+  campaign TEXT,
+  destination_host TEXT NOT NULL,
+  occurred_at TEXT NOT NULL,
+  record_json TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_outbound_clicks_occurred_at ON outbound_click_events(occurred_at);
+CREATE INDEX IF NOT EXISTS idx_outbound_clicks_referral ON outbound_click_events(referral_id);
+CREATE INDEX IF NOT EXISTS idx_outbound_clicks_partner ON outbound_click_events(partner_id, occurred_at);
+
+-- Generic private JSON record store replacing Vercel Blob for application metadata.
+CREATE TABLE IF NOT EXISTS app_records (
+  pathname TEXT PRIMARY KEY,
+  value TEXT NOT NULL,
+  content_type TEXT NOT NULL DEFAULT 'application/json',
+  uploaded_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_app_records_uploaded_at ON app_records(uploaded_at);

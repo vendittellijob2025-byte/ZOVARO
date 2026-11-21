@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { get } from "@vercel/blob";
+import { get } from "../lib/zovaro-store.js";
 
 const VERIFIED_VIDEO_PREFIX =
   "https://vendittellijob2025-byte.github.io/ZOVARO/";

@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { del, get, list, put } from "@vercel/blob";
+import { del, get, list, put } from "../lib/zovaro-store.js";
 import { moderationDecision, websiteDomain } from "../lib/marketplace-moderation.js";
 
 const rateLimits = new Map();
@@ -289,7 +289,6 @@ async function handlePublicCase(req,res,body,kind) {
 export default async function handler(req,res) {
   res.setHeader("Cache-Control","no-store");
   res.setHeader("X-Content-Type-Options","nosniff");
-  if (!process.env.BLOB_STORE_ID) return res.status(503).json({error:"Marketplace storage is not connected in this environment."});
   const url=new URL(req.url||"/","https://zovaro.vercel.app");
   if (req.method==="GET") {
     if (url.searchParams.get("admin")==="1") {

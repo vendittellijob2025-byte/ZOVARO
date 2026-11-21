@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { get } from "@vercel/blob";
+import { get } from "../lib/zovaro-store.js";
 
 export default async function handler(req, res) {
   const allowedOrigin = "https://vendittellijob2025-byte.github.io";
