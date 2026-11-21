@@ -3,6 +3,7 @@ name: ZOVARO - CJ Commission Reconciliation
 on:
   schedule:
     - cron: "15 5 * * *"
+    - cron: "*/5 * * * *" # temporary first D1 verification; revert after successful run
   workflow_dispatch:
   push:
     branches:
