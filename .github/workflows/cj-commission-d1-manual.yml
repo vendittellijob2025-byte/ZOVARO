@@ -25,4 +25,4 @@ jobs:
             -H "Authorization: Bearer ${CJ_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data '{}' \
-            "https://zovaro.vercel.app/api/cj-commission-sync-d1"
+            "https://zovaro.vercel.app/api/cj-commission-sync"
