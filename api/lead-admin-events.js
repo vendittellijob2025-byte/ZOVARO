@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 import { list, get } from "../lib/zovaro-store.js";
-import { d1Query } from "../lib/cj-d1.js";
+import { d1Query, ensureClickSchema } from "../lib/cj-d1.js";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
@@ -77,6 +77,7 @@ export default async function handler(req, res) {
     let cjLedgerSource = "private_d1_store";
     let cjLedgerTotals = null;
     if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
+      await ensureClickSchema();
       const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals, d1ClickRecords, d1ClickTotals] = await Promise.all([
         d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
         d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"]),
