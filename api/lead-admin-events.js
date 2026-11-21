@@ -62,21 +62,19 @@ export default async function handler(req, res) {
   try {
     // Blob remains a best-effort legacy source during migration. A suspended
     // Blob store must not prevent the private D1 CJ ledger from being viewed.
-    const blobReads = process.env.BLOB_STORE_ID
-      ? await Promise.allSettled([
-          collectLatest("lead-sales/events/clicks/", 100),
-          collectLatest("lead-sales/events/partner-updates/", 100),
-          collectLatest("cj-commissions/records/", 100),
-          readJson("cj-commissions/state.json")
-        ])
-      : [];
+    const blobReads = await Promise.allSettled([
+      collectLatest("lead-sales/events/clicks/", 100),
+      collectLatest("lead-sales/events/partner-updates/", 100),
+      collectLatest("cj-commissions/records/", 100),
+      readJson("cj-commissions/state.json")
+    ]);
     const blobValue = index => blobReads[index]?.status === "fulfilled" ? blobReads[index].value : [];
     let clicks = blobValue(0);
     let clickLedgerTotal = clicks.length;
     let updates = blobValue(1);
     let cjCommissions = blobValue(2);
     let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
-    let cjLedgerSource = process.env.BLOB_STORE_ID ? "legacy_blob" : "unavailable";
+    let cjLedgerSource = "private_d1_store";
     let cjLedgerTotals = null;
     if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
       const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals, d1ClickRecords, d1ClickTotals] = await Promise.all([
