@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - "api/cj-commission-sync-d1.js"
-      - "api/lib/cj-d1.js"
+      - "lib/cj-d1.js"
       - "api/lead-admin-events.js"
       - "cloudflare/d1/**"
       - ".github/workflows/commission-ledger-check.yml"
@@ -23,7 +23,7 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check api/cj-commission-sync-d1.js
-          node --check api/lib/cj-d1.js
+          node --check lib/cj-d1.js
           node --check api/lead-admin-events.js
       - name: Validate D1 schema with SQLite
         run: |
