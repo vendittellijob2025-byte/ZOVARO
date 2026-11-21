@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { put } from "@vercel/blob";
+import { put } from "../lib/zovaro-store.js";
 
 export default async function handler(req, res) {
   res.setHeader(
