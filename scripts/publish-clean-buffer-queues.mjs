@@ -18,12 +18,17 @@ const tt=channels.find(c=>c.service?.toLowerCase()==="tiktok"&&c.name==="zovaro_
 const ig=channels.find(c=>c.service?.toLowerCase()==="instagram"&&c.name==="zovaroworldwide");
 if(!tt||!ig) throw new Error("ZOVARO TikTok and Instagram channels not found.");
 if(tt.isQueuePaused||ig.isQueuePaused) throw new Error("A Buffer queue is paused.");
-const base="https://github.com/vendittellijob2025-byte/ZOVARO/releases/download/zovaro-social-20261116/";
+const releaseResponse=await fetch("https://api.github.com/repos/vendittellijob2025-byte/ZOVARO/releases?per_page=1",{headers:{Accept:"application/vnd.github+json","User-Agent":"ZOVARO-social-publisher"},signal:AbortSignal.timeout(30000)});
+if(!releaseResponse.ok)throw new Error("Could not retrieve the latest ZOVARO social video release: HTTP "+releaseResponse.status);
+const releases=await releaseResponse.json();
+const latestRelease=releases[0];
+if(!latestRelease?.assets?.length)throw new Error("No published daily social-video release is available yet.");
+const assetUrl=(name)=>{const asset=latestRelease.assets.find(item=>item.name===name);if(!asset?.browser_download_url)throw new Error("Latest social-video release is missing "+name);return asset.browser_download_url;};
 const posts=[
- {label:"SHOP",url:base+"daily-01-tiktok-video.mp4",text:"Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"},
- {label:"JOBS",url:base+"daily-02-ZOVARO-JOBS-DAILY.mp4",text:"Explore employer-published job openings on ZOVARO JOBS. https://zovaro.vercel.app/?view=jobs #ZOVARO #Jobs"},
- {label:"LUXURY",url:base+"daily-03-ZOVARO-LUXURY-DAILY.mp4",text:"Discover luxury cars, yachts, private aviation, estates and watches. https://zovaro.vercel.app/ #ZOVARO #Luxury"},
- {label:"ADVERTISERS",url:base+"08-ZOVARO-ADVERTISERS-DAILY.mp4",text:"Promote your business worldwide on ZOVARO: US$9.99/month or US$99/year. Details: https://zovaro.vercel.app/ #ZOVARO #Advertise"}
+ {label:"SHOP",url:assetUrl("daily-01-tiktok-video.mp4"),text:"Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"},
+ {label:"JOBS",url:assetUrl("daily-02-ZOVARO-JOBS-DAILY.mp4"),text:"Explore employer-published job openings on ZOVARO JOBS. https://zovaro.vercel.app/?view=jobs #ZOVARO #Jobs"},
+ {label:"LUXURY",url:assetUrl("daily-03-ZOVARO-LUXURY-DAILY.mp4"),text:"Discover luxury cars, yachts, private aviation, estates and watches. https://zovaro.vercel.app/ #ZOVARO #Luxury"},
+ {label:"ADVERTISERS",url:assetUrl("daily-04-ZOVARO-ADVERTISERS-DAILY.mp4"),text:"Promote your business worldwide on ZOVARO: US$9.99/month or US$99/year. Details: https://zovaro.vercel.app/ #ZOVARO #Advertise"}
 ];
 const results=[];
 for(const channel of [ig]){
