@@ -23,4 +23,6 @@ This is the private, idempotent commission ledger target for CJ reconciliation.
 - Keep action/validation status, locking date, corrections, reversals and cancellations.
 - Only amounts that CJ marks approved/locked and that are actually payable under the advertiser's terms should be treated as receivable.
 - CJ reports cannot establish conversions from non-CJ partners. Each other network needs its own verified API/report/postback and payout terms.
+- Signed non-CJ partner callbacks are written to `partner_conversion_events`; partners must be explicitly configured with a signing secret and must send a stable event ID. A callback is partner-reported evidence, not independent proof of a completed sale.
+- Historical Vercel Blob click, partner callback and commission batches are not automatically copied by this change. They must be exported and reconciled before Blob is retired; the existing Blob data must remain intact.
 - This D1 database is a ledger, not a payout processor. Payout remains controlled by CJ/network payout settings.
