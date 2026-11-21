@@ -286,6 +286,10 @@
   function showWelcome(code) {
     const data = getCopy(code);
     currentLanguage = code;
+    if (audioButton) {
+      audioButton.textContent = audioLabels[code] || audioLabels.en;
+      audioButton.setAttribute("aria-label", audioLabels[code] || audioLabels.en);
+    }
     applyRequestLanguage(code);
     animateAndSpeak(welcomeText, data.welcome, code);
     changeLabel.textContent = data.change;
