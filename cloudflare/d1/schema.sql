@@ -68,3 +68,12 @@ CREATE TABLE IF NOT EXISTS outbound_click_events (
 CREATE INDEX IF NOT EXISTS idx_outbound_clicks_occurred_at ON outbound_click_events(occurred_at);
 CREATE INDEX IF NOT EXISTS idx_outbound_clicks_referral ON outbound_click_events(referral_id);
 CREATE INDEX IF NOT EXISTS idx_outbound_clicks_partner ON outbound_click_events(partner_id, occurred_at);
+
+-- Generic private JSON record store replacing Vercel Blob for application metadata.
+CREATE TABLE IF NOT EXISTS app_records (
+  pathname TEXT PRIMARY KEY,
+  value TEXT NOT NULL,
+  content_type TEXT NOT NULL DEFAULT 'application/json',
+  uploaded_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_app_records_uploaded_at ON app_records(uploaded_at);
