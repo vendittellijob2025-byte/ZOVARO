@@ -1,4 +1,4 @@
-import { d1Batch, d1Query, readSyncCursor, writeSyncCursor } from "../lib/cj-d1.js";
+import { d1Batch, d1Query, ensureClickSchema, readSyncCursor, writeSyncCursor } from "../lib/cj-d1.js";
 
 const CJ_COMMISSION_API = "https://commissions.api.cj.com/query";
 const PUBLISHER_CID = "8068799";
@@ -127,21 +127,8 @@ export default async function handler(req, res) {
   if (!token || token.length < 20) return res.status(401).json({ error: "CJ authorization missing or invalid." });
 
   try {
-    // Provision the first-party click ledger idempotently during the authenticated CJ sync.
-    await d1Query(`CREATE TABLE IF NOT EXISTS outbound_click_events (
-      event_id TEXT PRIMARY KEY,
-      partner_id TEXT NOT NULL,
-      referral_id TEXT NOT NULL,
-      item_id TEXT NOT NULL,
-      source TEXT NOT NULL,
-      campaign TEXT,
-      destination_host TEXT NOT NULL,
-      occurred_at TEXT NOT NULL,
-      record_json TEXT NOT NULL
-    )`);
-    await d1Query("CREATE INDEX IF NOT EXISTS idx_outbound_clicks_occurred_at ON outbound_click_events(occurred_at)");
-    await d1Query("CREATE INDEX IF NOT EXISTS idx_outbound_clicks_referral ON outbound_click_events(referral_id)");
-    await d1Query("CREATE INDEX IF NOT EXISTS idx_outbound_clicks_partner ON outbound_click_events(partner_id, occurred_at)");
+    // Ensure the first-party click ledger exists before processing any CJ records.
+    await ensureClickSchema();
     // Validate D1 configuration before spending CJ API calls.
     await d1Query("SELECT 1 AS ready");
     const now = new Date();
