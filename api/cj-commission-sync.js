@@ -144,8 +144,8 @@ export default async function handler(req, res) {
       const records = result.records.map(normalizeRecord);
       received += records.length;
       if (records.length) {
-        // 22 parameters per row; keep batches below conservative D1 query-size limits.
-        for (let i = 0; i < records.length; i += 20) {
+        // 22 parameters per row; four rows stay below D1's 100-bind-parameter limit.
+        for (let i = 0; i < records.length; i += 4) {
           const part = records.slice(i, i + 20);
           await d1Batch(part);
           saved += part.length;
