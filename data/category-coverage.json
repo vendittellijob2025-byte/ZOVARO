@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-21T13:00:30.661Z",
-  "selectedProductCount": 20888,
-  "inventoryProductCount": 201143,
+  "generatedAt": "2026-11-21T19:12:55.354Z",
+  "selectedProductCount": 20896,
+  "inventoryProductCount": 200002,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1851,
+      "productCount": 1852,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1552,
-          "directProductCount": 901,
+          "productCount": 1553,
+          "directProductCount": 902,
           "children": [
             {
               "name": "Sewing Machines",
@@ -2263,8 +2263,8 @@
             {
               "name": "Lip Makeup",
               "path": "Makeup > Lip Makeup",
-              "productCount": 12,
-              "directProductCount": 12,
+              "productCount": 13,
+              "directProductCount": 13,
               "children": []
             },
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 137,
-              "directProductCount": 137,
+              "productCount": 136,
+              "directProductCount": 136,
               "children": []
             },
             {
@@ -2640,8 +2640,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 408,
-      "unclassifiedProductCount": 45,
+      "productCount": 412,
+      "unclassifiedProductCount": 47,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 54,
+          "productCount": 53,
           "directProductCount": 23,
           "children": [
             {
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 12,
+              "productCount": 11,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 7,
-                  "directProductCount": 7,
+                  "productCount": 6,
+                  "directProductCount": 6,
                   "children": []
                 },
                 {
@@ -3096,8 +3096,8 @@
         {
           "name": "Audio",
           "path": "Audio",
-          "productCount": 164,
-          "directProductCount": 71,
+          "productCount": 167,
+          "directProductCount": 74,
           "children": [
             {
               "name": "Headphones",
@@ -3726,13 +3726,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 980,
-          "directProductCount": 52,
+          "directProductCount": 56,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 310,
-              "directProductCount": 310,
+              "productCount": 313,
+              "directProductCount": 313,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 22,
-              "directProductCount": 22,
+              "productCount": 15,
+              "directProductCount": 15,
               "children": []
             }
           ]
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1147,
+      "unclassifiedProductCount": 1141,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 241,
-          "directProductCount": 241,
+          "productCount": 242,
+          "directProductCount": 242,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,21 +6147,21 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 411,
+          "productCount": 416,
           "directProductCount": 0,
           "children": [
             {
               "name": "3D Printer Filament",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Filament",
-              "productCount": 254,
-              "directProductCount": 254,
+              "productCount": 255,
+              "directProductCount": 255,
               "children": []
             },
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -6174,15 +6174,15 @@
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 116,
-              "directProductCount": 116,
+              "productCount": 117,
+              "directProductCount": 117,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 7,
-              "directProductCount": 7,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             }
           ]
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 48,
+      "productCount": 50,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 47,
+          "productCount": 49,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 46,
-              "directProductCount": 46,
+              "productCount": 48,
+              "directProductCount": 48,
               "children": []
             },
             {
@@ -10855,24 +10855,24 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1818,
+  "otherProductCount": 1819,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1818
+      "count": 1819
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 362,
     "emptyTaxonomyNodeCount": 1118,
-    "productsWithKnownSubcategory": 15340,
+    "productsWithKnownSubcategory": 15351,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5548,
+    "productsWithoutSubcategory": 5545,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1147
+        "count": 1141
       },
       {
         "category": "Beauty",
@@ -10919,12 +10919,12 @@
         "count": 49
       },
       {
-        "category": "Pets",
-        "count": 46
+        "category": "Electronics",
+        "count": 47
       },
       {
-        "category": "Electronics",
-        "count": 45
+        "category": "Pets",
+        "count": 46
       },
       {
         "category": "Musical Instruments & Studio",
@@ -10944,13 +10944,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5548,
-      "provisional": 15340
+      "needs_classification": 5545,
+      "provisional": 15351
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20888
+      "pendingReference": 20896
     },
     "mostUsedBrowsePaths": [
       {
@@ -10963,7 +10963,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 901
+        "productCount": 902
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10990,11 +10990,11 @@
         "productCount": 354
       },
       {
-        "path": "Fashion > Accessories > Wigs & Hair Extensions",
-        "productCount": 310
+        "path": "Fashion > Shoes > Sneakers",
+        "productCount": 313
       },
       {
-        "path": "Fashion > Shoes > Sneakers",
+        "path": "Fashion > Accessories > Wigs & Hair Extensions",
         "productCount": 310
       },
       {
@@ -11011,7 +11011,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Filament",
-        "productCount": 254
+        "productCount": 255
       },
       {
         "path": "Fashion > Shoes > Sandals",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 241
+        "productCount": 242
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11063,7 +11063,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 137
+        "productCount": 136
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 116
+        "productCount": 117
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11134,12 +11134,12 @@
         "productCount": 75
       },
       {
-        "path": "Books & Media > Books",
-        "productCount": 73
+        "path": "Electronics > Audio",
+        "productCount": 74
       },
       {
-        "path": "Electronics > Audio",
-        "productCount": 71
+        "path": "Books & Media > Books",
+        "productCount": 73
       },
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
@@ -11162,12 +11162,12 @@
         "productCount": 56
       },
       {
-        "path": "Gaming > Consoles > Xbox",
+        "path": "Fashion > Shoes",
         "productCount": 56
       },
       {
-        "path": "Fashion > Shoes",
-        "productCount": 52
+        "path": "Gaming > Consoles > Xbox",
+        "productCount": 56
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
@@ -11182,12 +11182,12 @@
         "productCount": 50
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "path": "Office & Technology > Software > Utilities",
         "productCount": 48
       },
       {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 46
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "productCount": 48
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
@@ -11262,11 +11262,11 @@
         "productCount": 27
       },
       {
-        "path": "Fashion > Clothing > Jeans & Trousers",
+        "path": "Beauty > Skincare > Moisturizers",
         "productCount": 27
       },
       {
-        "path": "Beauty > Skincare > Moisturizers",
+        "path": "Fashion > Clothing > Jeans & Trousers",
         "productCount": 27
       },
       {
@@ -11302,15 +11302,7 @@
         "productCount": 23
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
-        "productCount": 22
-      },
-      {
-        "path": "Books & Media > Books > Nonfiction",
-        "productCount": 21
-      },
-      {
-        "path": "Musical Instruments & Studio > Instruments > Strings",
+        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
         "productCount": 21
       },
       {
@@ -11318,7 +11310,11 @@
         "productCount": 21
       },
       {
-        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "path": "Books & Media > Books > Nonfiction",
+        "productCount": 21
+      },
+      {
+        "path": "Musical Instruments & Studio > Instruments > Strings",
         "productCount": 21
       },
       {
@@ -11350,6 +11346,10 @@
         "productCount": 16
       },
       {
+        "path": "Home & Living > Bedding & Bath",
+        "productCount": 15
+      },
+      {
         "path": "Books & Media > Music > CDs",
         "productCount": 15
       }
@@ -11357,11 +11357,11 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1611
+        "productCount": 1609
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productCount": 159
+        "productCount": 160
       },
       {
         "advertiser": "Amore Mall",
@@ -11376,6 +11376,10 @@
         "productCount": 5
       },
       {
+        "advertiser": "Soundcore",
+        "productCount": 3
+      },
+      {
         "advertiser": "Rexing",
         "productCount": 3
       },
@@ -11386,13 +11390,1044 @@
       {
         "advertiser": "RSE- ISEE Hair, BGMgirl and WigFever",
         "productCount": 1
-      },
-      {
-        "advertiser": "Soundcore",
-        "productCount": 1
       }
     ],
     "otherExamples": [
+      {
+        "title": "soundcore Work Necklace for soundcore Work AI Voice Recorder",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "Compatible with soundcore Work AI Voice Recorder: Necklace only. The AI voice recorder is not included.\n\n\n\nPut It On, Not Pack It Away: The recorder lives in the necklace, so it's "
+      },
+      {
+        "title": "Termos Próżniowy Esbit Vacuum Flask 1L 2 kubki",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>TERMOS PRÓŻNIOWY ESBIT VACUUM FLASK 1L 2 kubki</h1><h2>✅&nbsp;TERMOS PRÓŻNIOWY ESBIT VACUUM 2 KUBKI KORKI 1 L</h2><p>✅ <b>Termos próżniowy Esbit Vacuum jest wykonany ze stali n"
+      },
+      {
+        "title": "Python Mniej Poważnie Lee Vaughan",
+        "brand": "Wydawnictwo Naukowe PWN",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Python mniej poważnie</h1><h2>Lee Vaughan</h2> <ul>\n<li>\nWydawca: Wydawnictwo Naukowe PWN\n</li>\n<li>\nRok wydania: 2020\n</li>\n<li>\nOprawa: Miękka\n</li>\n<li>\nIlość stron: 450\n</l"
+      },
+      {
+        "title": "Elton John: Goodbye Yellow Brick Rod (CD)",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Elton John: Goodbye Yellow Brick Road (Remaster) [CD]</h1><h2>Goodbye Yellow Brick Road (Remaster)</h2><p><b>Wykonawca:</b> Elton John</p><p><b>Rok wydania:</b> 2014</p> <h2>Li"
+      },
+      {
+        "title": "Ludovico Einaudi: Una Mattina (CD)",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ludovico Einaudi: Una Mattina [CD]</h1><h2>Ludovico Einaudi: Una Mattina</h2><p><b>Wykonawca:</b> Ludovico Einaudi</p><p><b>Rok wydania:</b> 2005</p> <h2>Lista utworów</h2><ul>"
+      },
+      {
+        "title": "Dream Theater: Original Album Series 5CD",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Dream Theater: Original Album Series [BOX] [5CD]</h1><h2>Dream Theater: Original Album Series [Box]</h2><p><b>Seria:</b> Original Album Series</p><p><b>Wykonawca:</b> Dream The"
+      },
+      {
+        "title": "Zdrowe dania dla bobasów i brzdąców od 4 m-ca Kd",
+        "brand": "Egmont",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Zdrowe dania dla bobasów i brzdąców</h1>\n<h2>Zapewnij swojemu dziecku zdrowy start</h2>\n<p><b>Przepisy na zdrowe dania dla dzieci w wieku od 4 miesięcy do 3 lat!</b></p>\n<p>Iko"
+      },
+      {
+        "title": "Tusz Hp 653 Czarny 5 ml 3YM75AE",
+        "brand": "HP",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tusz HP 653 Czarny 5 ml 3YM75AE</h2><ul><li><b>Producent drukarki&#xA0;:</b>&#xA0;HP</li><li><b>Kolor:</b>&#xA0;Czarny</li><li><b>Pojemno&#x15B;&#x107;&#xA0;[ml]:</b>&#xA0;5</l"
+      },
+      {
+        "title": "Wykrojnik metalowy DPCraft Koła z falbanką",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>WYKROJNIK metalowy DPCraft - Koła z falbanką</h1>\n<p>Zestaw wykrojników \"Koła\"&#xa0;jest kompatybilny ze wszystkimi dostępnymi na rynku maszynkami tego typu. </p>\n<p>Wykrojniki"
+      },
+      {
+        "title": "Wykrojnik metalowy DPCraft Border ażurowy panel",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>WYKROJNIK metalowy DPCraft - Border ażurowy panel</h1>\n<p>Wykrojnik \"Border\"&#xa0;jest kompatybilny ze wszystkimi dostępnymi na rynku maszynkami tnąco - wytłaczającymi. </p>\n<p"
+      },
+      {
+        "title": "Wykrojnik metalowy DPCraft Składane zaproszenie",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>WYKROJNIK metalowy DPCraft - Składane zaproszenie</h1>\n<p>Wykrojnik do&#xa0;wykonania koperty z ozdobnym zamknięciem oraz&#xa0;dopasowany do&#xa0;niego rozmiarem prostokątny wy"
+      },
+      {
+        "title": "SwissStop okładziny hamulcowe Disc 32 Rs Sram organiczne",
+        "brand": "SwissStop",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>SwissStop okładziny hamulcowe Disc 32 RS Sram organiczne</h1><p><b>Okładziny hamulcowe SRAM Smooth-Control – cisza, kontrola i&nbsp;skuteczność</b></p><p>Okładziny hamulcowe SR"
+      },
+      {
+        "title": "Dziurkacz Ozdobny koło Duży 7,6 cm pianka papier",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Dziurkacz ozdobny z motywem \"KOŁO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w papierze i - NOWOŚĆ TYLKO W DPCRAFT - w piance: zwykłej, samoprzylepnej "
+      },
+      {
+        "title": "Dziurkacz Ozdobny jajko Duży 7,6 cm pianka papier",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Dziurkacz ozdobny z motywem \"JAJKO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w papierze i - NOWOŚĆ TYLKO W DPCRAFT - w piance: zwykłej, samoprzylepnej"
+      },
+      {
+        "title": "Dziurkacz Ozdobny koło 3,8 cm uniwersalny",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Super dziurkacz ozdobny z motywem \"KOŁO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w bardzo grubym papierze papierze - aż do 500g/m2!!!</p><p>Dziurkacz"
+      },
+      {
+        "title": "Koraliki drewniane DpCraft kolorowe, 100 szt.",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Koraliki drewniane - DpCraft - kolorowe, 100 szt.</b></p>\n<p>Koraliki z drewna w podstawowych kolorach oraz kilku kształtach i rozmiarach urozmaicą Twoje prace.</p>\n<p>W opak"
+      },
+      {
+        "title": "Koraliki drewniane DpCraft pastelowe, 80 szt.",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Koraliki drewniane - DpCraft - pastelowe, 80 szt.</b></p>\n<p>Pastelowe koraliki to fantastyczna baza, jak i dodatek do projektów rękodzielniczych. Zostały wykonane z drewna, "
+      },
+      {
+        "title": "Dance+dance Rotation Vol. 4 (2CD)",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Dance &amp; Dance Rotation vol. 4 [2CD]</h1><h2>Różni Wykonawcy: Dance &amp; Dance Rotation Vol. 4</h2><p><b>Wykonawca:</b> Smoothie, Roy Bee, Pakito, Xamayca Allstars, Kinderv"
+      },
+      {
+        "title": "Lew szary Tkanina tapicerska Materiał obiciowy meb",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew grafit Tkanina tapicerska Materiał obiciowy me",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew czerwony Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew czarny Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew ciemno brązowy Tkanina tapicerska Materiał obi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew brązowy Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew zielony Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew różowy Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew błękitny Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Lew beżowy Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
+      },
+      {
+        "title": "Bling szary Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling grafit Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling błękitny Tkanina tapicerska Materiał obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling beżowy Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling czarny Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling różowy Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Bling szmaragd Tkanina tapicerska Materiał obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
+      },
+      {
+        "title": "Alcala czerwona Tkanina tapicerska Materiał obicio",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala czarna Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala szara Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala grafit Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala beżowa Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala zielona Tkanina tapicerska Materiał obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala niebieska Tkanina tapicerska Materiał obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala brązowa Tkanina tapicerska Materiał obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala fioletowa Tkanina tapicerska Materiał obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "Alcala różowa Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
+      },
+      {
+        "title": "38kol Eko skóra Skaj Tkanina obiciowa Materiał Tap",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft szary Eko skóra Skaj Tkanina obiciowa Materia",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft biały Eko skóra Skaj Tkanina obiciowa Materia",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT&#xa0;gładka. Tkanina obiciowa. Materiał tapicerski.</h1><h2>Soft - ekoskóra niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft grafitowy Eko skóra Skaj Tkanina Materiał obi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft złoty Eko skóra Skaj Tkanina Materiał obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft czarny Eko skóra Skaj Tkanina obiciowa Materi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft jasno złoty Eko skóra Skaj Tkanina Materiał o",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft ciemno złoty Eko skóra Skaj Tkanina Materiał",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft pudrowy róż Eko skóra Skaj Tkanina Materiał",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft różowy Eko skóra Skaj Tkanina Materiał Obicio",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft niebieski Eko skóra Skaj Tkanina Materiał Obi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft granatowy Eko skóra Skaj Tkanina Materiał Obi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft zielony metalik Eko skóra Skaj Tkanina Materi",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft granat metalik Eko skóra Skaj Tkanina Materia",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft brązowa Eko skóra Skaj Tkanina Materiał Obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft ciemno brązowa Eko skóra Skaj Tkanina Materia",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft beżowy Eko skóra Skaj Tkanina Materiał Obicio",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft perła Eko skóra Skaj Tkanina Materiał Obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Soft khaki Eko skóra Skaj Tkanina Materiał Obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Wawa czarna Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa khaki Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa beżowa Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa brązowa Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa zielona Tkanina tapicerska Materiał obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa butelkowa zieleń Tkanina tapicerska Materiał",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa niebieska Tkanina tapicerska Materiał Obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa granatowa Tkanina tapicerska Materiał Obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa czerwona Tkanina tapicerska Materiał Obiciowa",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa grafitowa Tkanina tapicerska Materiał Obiciow",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa szara Tkanina tapicerska Materiał Obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa gołębi Tkanina tapicerska Materiał Obiciowy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa musztardowa Tkanina tapicerska Materiał Obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wawa pudrowy róż Tkanina tapicerska Materiał Obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
+      },
+      {
+        "title": "Wykrojnik baloniki 7 cm x 9 cm",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Wykrojnik - baloniki 7 cm x 9 cm</b></p>\n<p>Wykrojnik \"Baloniki\" jest dedykowany maszynce tnąco-wytłaczającej dpCraft, ale&#xa0;także jest kompatybilny z wszystkimi dostępnym"
+      },
+      {
+        "title": "Poduszka ortopedyczna profilowana, dziecięca",
+        "brand": "ARmedical",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Poduszka ortopedyczna profilowana, dla dzieci.</h1><h2>Przeznaczona dla dzieci w wieku od 2 do 6 lat.</h2><p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopa"
+      },
+      {
+        "title": "Soft czerwony Eko skóra Skaj Tkanina Materiał obic",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>CENTRUM TKANIN</h1><h2>SOFT eko skóra lub 2. WAWA tkanina tapicerska już od 0,5mb.</h2><h2>Cana 10zł brutto dotyczy 1szt = 0,5mb</h2><h2>Decydując się np. na 20szt otrzymujemy "
+      },
+      {
+        "title": "Soft srebrny Eko skóra Skaj Tkanina Materiał obici",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
+      },
+      {
+        "title": "Sznurek Bawełniany biało- czerwony 2mm 50m",
+        "brand": "Grzanpol",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>SZNUREK BAWEŁNIANY biało- czerwony 2mm 50m</h2>\n<p>Sznurek bawełniany to niewątpliwie niezbędny element w wielu projektach kreatywnych, takich jak własna biżuteria, akcesoria d"
+      },
+      {
+        "title": "Tasiemki ozdobne, satynowe Brights, 6 szt.",
+        "brand": "DpCraft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Tasiemki ozdobne, satynowe - Brights, 6 szt.</b></p>\n<p>Uniwersalne tasiemki satynowe w żywych, nasyconych kolorach.</p>\n<p>Będą doskonałym dodatkiem do zdobienia kartek okol"
+      },
+      {
+        "title": "Tusze GT51 52 XL Do Drukarki Hp Ink Tank 315 410 415 Smart Tank 510 515 589",
+        "brand": "4INK",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>✅ 8x Tusz do Drukarki HP - GT51 XL / GT52 XL / GT53 XL</h1><p><b>Certyfikaty ISO 9001 - ISO 14001 / Jakość Premium /</b> <b>Pojemność XL</b></p><p><b>✅ 8x TUSZ GT-51 XL / GT-52"
+      },
+      {
+        "title": "Dywan Tkany Skóra Owcza Ciemny Grafit Handmade",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Dywan Skóra Owcza Tkana Narzuta Jasny Brąz",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Skóra Owcza Komplet Narzut Tkanych Ciemny Grafit",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Narzuty na Wypocznek Skóra Owcza Tkana Jasny Brąz",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Krzesełko Baranek Stojak Skóra Owcza Naturalna",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Miś Niedźwiadek Skóra Owcza Naturalna Dekoracja",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
+      },
+      {
+        "title": "Baranek Na Biegunach Bujak Skóra Owcza Naturalna",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy&nbsp; się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także"
+      },
+      {
+        "title": "Tusz Hp 653 Czarny 5 ml 3YM75AE",
+        "brand": "HP",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Tusz HP 653 Czarny 5 ml 3YM75AE</h2><ul><li><b>Producent drukarki&#xA0;:</b>&#xA0;HP</li><li><b>Kolor:</b>&#xA0;Czarny</li><li><b>Pojemno&#x15B;&#x107;&#xA0;[ml]:</b>&#xA0;5</l"
+      },
+      {
+        "title": "Wakacyjne Piosenki cz. 4 100 popularnych piosenek",
+        "brand": "Beseder",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>WAKACYJNE PIOSENKI cz. 4 100 popularnych piosenek</p><p> Śpiewnik zawiera 100 popularnych piosenek z zapisem nutowym i harmonizacją. </p><p> wybór i opracowanie: Krzysztof Nowak"
+      },
+      {
+        "title": "Naturalne wody owocowe. Susan Marque",
+        "brand": "Vital",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Naturalne wody owocowe. Susan Marque</p> <h1>\"Naturalne wody owocowe. Jak prawidłowo wykonać energetyzujące, oczyszczające i antyoksydacyjne izotoniki\" Susan Marque</h1> \n<p>Tyt"
+      },
+      {
+        "title": "Naturalne wody owocowe. Susan Marque",
+        "brand": "Vital",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Naturalne wody owocowe. Susan Marque</p> <h1>\"Naturalne wody owocowe. Jak prawidłowo wykonać energetyzujące, oczyszczające i antyoksydacyjne izotoniki\" Susan Marque</h1> \n<p>Tyt"
+      },
+      {
+        "title": "Punk Rock Samplers CD Ataris Vandals Freese Bigwig",
+        "brand": "Not On Label",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Numer produktu 00824/2018/01/2019-05</p><h1>NA SPRZEDAŻ ORYGINALNA PŁYTA CD JAK W TYTULE</h1><p>Wszystkie parametry wydania oraz utwory, widoczne są na dużych fotkach .</p><p>St"
+      },
+      {
+        "title": "Termos Na Napoje Z Dwoma Kubkami Esbit Vacuum Flask 1L Długo Trzyma Ciepło",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>TERMOS NA NAPOJE Z DWOMA KUBKAMI ESBIT VACUUM FLASK 1L DŁUGO TRZYMA CIEPŁO</h1><h2>TERMOS ESBIT SCULPTOR VACUUM FLASK 1L</h2><p>✅ Termos wykonany został ze <b>stali nierdzewnej"
+      },
+      {
+        "title": "Plaster miodu Adam Szustak Op",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Plaster miodu</h1>\n<h2>Adam Szustak OP</h2>\n<p><b>Bóg każdego dnia chce osłodzić ludzkie cierpienia przykładając do naszych ran PLASTER MIODU</b></p>\n<p>Może czytasz to wieczor"
+      },
+      {
+        "title": "Stalowy Bidon Butelka Czerwona Duża Lekkai Stal Nierdzewna ION8 1,2 Litr",
+        "brand": "Ion8",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Oryginalny stalowy bidon na wodę ION8®</h1>\n<ul><li><b>Posiada Atest PZH</b></li><li><b>stal nierdzewna</b><b> 304</b></li><li><b>Szczelny</b> - idealny do plecaka, torby czy t"
+      },
+      {
+        "title": "Anioł do wynajęcia Magdalena Kordel",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Anioł do wynajęcia</h1>\n<h2>Magdalena Kordel</h2>\n<p><b>Daj się porwać niezwykłej magii tej opowieści.</b></p>\n<p><b>Uwierz w cuda i rozejrzyj się dookoła – może i ty zostanies"
+      },
+      {
+        "title": "Wielki Ogarniacz Pracy czyli jak robić i się nie n",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Wielki Ogarniacz Pracy, czyli jak robić i się nie narobić</h1>\n<h2>Pan Buk,  Pani Bukowa</h2>\n<p>Człowiek uczy się na błędach, zwłaszcza w pracy.  Popełniasz wciąż te same pomy"
+      },
+      {
+        "title": "Siostry z powstania Nieznane historie kobiet walcz",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Siostry z powstania. Nieznane historie kobiet walczących o Warszawę</h1>\n<h2>Agata Puścikowska</h2>\n<p><b>&#xa0;</b></p>\n<p>Nieznane historie bohaterskich „Sióstr z powstania”<"
+      },
+      {
+        "title": "Termos Na Napoje Z Dwoma Kubkami Stalowy Esbit Sculptor Vacuum Flask 0,7L",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>TERMOS NA NAPOJE Z DWOMA KUBKAMI STALOWY ESBIT SCULPTOR VACUUM FLASK 0,7L</h2><h2>TERMOS ESBIT SCULPTOR VACUUM FLASK 0,7L</h2>\n<p>✅ Termos wykonany został ze <b>stali nierdzewn"
+      },
+      {
+        "title": "Termos Próżniowy 2 Kubki Esbit Vacuum Flask 0,7L Stalowy Oliwkowy 700ML",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>TERMOS PRÓŻNIOWY 2 KUBKI ESBIT VACUUM FLASK 0,7L STALOWY OLIWKOWY 700ML</h1><h2>TERMOS PRÓŻNIOWY ESBIT VACUUM FLASK 0,7L</h2><p>✅ <b>Oliwkowo-zielona wersja</b> jednego z najpo"
+      },
+      {
+        "title": "Gra Planszowa Edukacyjna Quiz Zwierzęta Big",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Quiz Zwierzęta BIG</h1>\n<h2>Alexander 1724</h2> <h1>Quiz Zwierzęta</h1>\n<p>Jakie zwierzę ma pomarańczowe zęby? Gdzie żyje wielbłąd dwugarbny? Który słoń (afrykański czy indyjsk"
+      },
+      {
+        "title": "Mistrz Słowa Aleksander 0343",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>MISTRZ SŁOWA</h1>\n<h1>ALEKSANDER 0343</h1> <p>Pasjonująca gra słowna dla 2-10 graczy. W trakcie swojej kolejki każdy z graczy stara się jak najszybciej ułożyć słowo z liter zna"
+      },
+      {
+        "title": "Zestaw 100 Gier Dla Całej Rodziny Bierki Warcaby",
+        "brand": "Alexander",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Zestaw 100 gier dla całej Rodziny</h1>\n<h2>Alexander 0376</h2> <h2>100 Gier</h2>\n<p>Zbiór aż stu atrakcyjnych, emocjonujących i różnorodnych gier.</p>\n<p>W tym bogatym zestawie"
+      },
+      {
+        "title": "Drewniane Kółko Koło ze sklejki Kółko 10cm 10szt",
+        "brand": "Fenwit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Drewniane KÓŁKO KOŁO ze sklejki KÓŁKO 10cm 10szt</h2><p><b>Podstawki ze sklejki</b>&#xa0;pod szklanki to ostatnio najmodniejszy gadżet. Połączenie&#xa0;<b>rustykalnej dekoracji"
+      },
+      {
+        "title": "Termos z kubkiem turystyczny próżniowy Mil-Tec stal nierdzewna 1L olive",
+        "brand": "Mil-Tec",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Termos turystyczny próżniowy Mil-Tec ze stali nierdzewnej 1L olive</h1><h2>[14532000]</h2><h2>Parametry:</h2><ul><li>Model: Termos stalowy 1L z kubkiem</li><li>Marka: Mil-Tec, "
+      },
+      {
+        "title": "Termos Esbit Sculptor Vacuum Flask 1l Black na napoje czarno srebrny",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Termos Esbit Sculptor Vacuum Flask 1l Black</h2><p>To doskonały termos do przechowywania gorących jak i zimnych płynów. Niezawodny w każdej sytuacji i w każdym miejscu.</p><p>N"
+      },
+      {
+        "title": "Termos Esbit Sculptor Vacuum Flask 1l Black Sleeve czarno srebrny na napoje",
+        "brand": "Esbit",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h2>Termos Esbit Sculptor Vacuum Flask with Sleeve 1l Black z silikonowym kołnierzem</h2><p>To doskonały termos do przechowywania gorących jak i zimnych płynów. Niezawodny w każdej"
+      },
+      {
+        "title": "50 Gier Chińczyk Bierki Domino Warcaby I Inne",
+        "brand": "Alexander",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>50 gier bierki, chińczyk, młynek, domino i inne gry</h1><p>Wydawca: Alexander</p><p>Rok wydania: 2014</p><p>Oprawa: Pudełko</p><p>Waga: 0,83 kg</p><p>Stan: Nowa</p><p>\"Świat 50"
+      },
+      {
+        "title": "Filipek i rodzeństwo",
+        "brand": "Wydawnictwo Literatura",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Filipek i rodzeństwo</h1> <ul><li>Autor: Strękowska-Zaremba Małgorzata</li><li>Wydawnictwo: Literatura</li><li>Rok wydania: 2016</li><li>Ilość stron: 144</li><li>Format: 14.5x2"
+      },
+      {
+        "title": "Plaster Miodu Adam Szustak (książka)",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Plaster miodu - Adam Szustak [KSIĄŻKA]</h1><p><b>Autor:</b> Adam Szustak</p><p><b>Rok wydania:</b> 2015</p> <h2>Opis</h2><p>Może czytasz to wieczorem, siedzisz gdzieś tam w swo"
+      },
       {
         "title": "Kabina Prysznicowa Składana 90X90 Czarna Kratka Narożna Rea Molier Double",
         "brand": "Rea",
@@ -11628,6 +12663,15 @@
         "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ&#xa0; pt.:</h1><h1>WAMPIRE KNIGHT</h1><h1>1-5</h1><h1>-----</h1><p>MANGA</p><h1>.</h1><h1>AUTOR:</h1><h1>MATSURI HINO,</h1><h1>ALEKSANDRA WATANUKI<"
       },
       {
+        "title": "PowerConf S3 Speakerphone",
+        "brand": "Soundcore",
+        "advertiser": "Soundcore",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Smart Voice Enhancement: Real-time voice optimization and background noise reduction is conducted by the customized DSP algorithm to ensure you always sound crystal-clear to the ot"
+      },
+      {
         "title": "Ecosmetics Gift Card - $100",
         "brand": "eCosmetics",
         "advertiser": "eCosmetics.com",
@@ -11698,1063 +12742,9 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>Dętka rowerowa marki ROMET</p><p>Wymiary produktu: 18 x 1.75</p><p>Średnica: 18\"</p><p>Szerokość: 1.75</p><p>Zawór: DV35</p><p>Długość zaworu: 35 mm</p><p>Opis zaworu:&nbsp;<b>n"
-      },
-      {
-        "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
-      },
-      {
-        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R5 35215",
-        "brand": "Piko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
-      },
-      {
-        "title": "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R7 35217",
-        "brand": "Piko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
-      },
-      {
-        "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "[Value $210 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "[Value $103 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "[Value $525 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "INNISFREE No-Sebum Moisture Powder",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Smooth and moist oil-blotting powder to control shine while leaving moisture NO-SEBUM MOISTURE POWDER NO SEBUM MOISTURE FOR InnIsFree Matte outside and moist inside for dry or oily"
-      },
-      {
-        "title": "[Value $740 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Black Cushion SPF34 PA++ 02_RYAN",
-        "brand": "B.READY",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Thin and Lightweight Fitting\r\n\r\nB.READY BLUE CUSHION provides a thin and lightweight fitting that gives you the confidence to showcase skin as light and delicate as your own."
-      },
-      {
-        "title": "[Value $950 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "[Value $1100 Gift Card] UNice Women's Day Special Offer",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "LABO-H Scalp Strengthening Clinic Scaler Hair Loss Care 208G",
-        "brand": "LABO-H",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A vegan, sea salt scaler that gently exfoliates the scalp, leaving it feeling squeaky clean."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "INNISFREE Retinol Cica Repair Ampoule 30ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "AYUNCHE Airy Veil Curl Volume Fixer 150ml",
-        "brand": "AYUNCHE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Volume fixer that helps fix hair softly without clumping."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Olejek zapachowy 12ml Pomarańcza I Cynamon",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - POMARAŃCZA I CYNAMON </h1><h1>OLEJEK ZAPACHOWY POMARAŃCZA I CYNAMON 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zde"
-      },
-      {
-        "title": "IOPE UV Shield Sunstick",
-        "brand": "IOPE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "An anti-oxidant waterproof sunstick that flawlessly protects the skin against strong UV rays, fine dust, and blue light."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Uniwersalny zestaw do czyszczenia broni wycior Mil-Tec w pudełku 24 w 1",
-        "brand": "Mil-Tec",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Zestaw do czyszczenia konserwowania broni krótkiej pistoletu Mil-Tec",
-        "brand": "Mil-Tec",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Zestaw do czyszczenia broni krótkiej Mil-Tec (16171340)</h1><p>Zestaw do dbania o broń krótką od Mil-Tec, przeznaczony dla kalibrów .40, .45, .357, .38, .22 oraz 9 mm. Sprawna "
-      },
-      {
-        "title": "Primera Nia Cica Soothing Glow Cream 30ml",
-        "brand": "Primera",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Primera nia cica soothing glow cream improve skin barrier and dull skin at once. Removed any disadvantages of derma cream which is slowly absorbed into skin.  Improves inner skin g"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Szwajcarski Bagnet M57 SG510 Demobil Swiss Army",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY [91549210]</h1> <p><b>Parametry:</b></p><ul><li>Model: Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY</li><li>Marka: Mil-Tec, N"
-      },
-      {
-        "title": "B. READY Cicaffeine Trouble Reset Cleansing Foam 150g",
-        "brand": "B.READY",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "CicaffeineTM\r\n\r\nBeta-Sitosterol, a next-generation CICA ingredient that soothes skin and bolsters its natural power, is blended with rich Caffeine extracted from skin-firming Green"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Gra Ravensburger Moja Pierwsza La Cucaracha",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gra Ravensburger Moja Pierwsza La Cucaracha"
-      },
-      {
-        "title": "Soft Finish Loose Powder 15g",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The spherical silicone powder and fixing powder keep sebum under complete control to keep your skin smooth, soft, and matte for longer."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Nadejście nocy Nelson Demille",
-        "brand": "Buchmann",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
-      },
-      {
-        "title": "AYUNCHE Enrich Bonding Mask 100ml",
-        "brand": "AYUNCHE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Intensive damage care mask with hair bonding technology."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>Aukcja dotyczy wypełnienia najmniejszego pudełeczka w pudełku ze zdjęciami.</b></p><h1>Aukcja nie zawiera żadnego pudełka,</h1><h2>jest jedynie uzupełnieniem kompletu: pudełk"
-      },
-      {
-        "title": "Mamonde Flora Glow Rose Smoothing Cream 50ml",
-        "brand": "MAMONDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Zimowa Czapka Merino Brubeck Active Wool S/m",
-        "brand": "Brubeck",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Czapka&nbsp;MERINO&nbsp;BRUBECK ACTIVE WOOL</h1>\n<h2>Rozmiar S/M</h2>\n<p>obwód głowy: 52-57</p>\n<p>Czapka z serii BRUBECK ACTIVE WOOL wykonana z wełny owiec merynosów to doskon"
-      },
-      {
-        "title": "AYUNCHE Airy Veil Curl Cream 150ml",
-        "brand": "AYUNCHE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Nożyczki Medyczne Do Szwów Nici Spencer 9cm W-wa",
-        "brand": "Gama",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Nożyczki Spencer 9cm</h1>\n<h1>Stal Nierdzewna!!! Stainless Steel!!!</h1>\n<p>   Nożyczki Spencer 9cm. Wykonane ze stali nierdzewnej wysokiej jakości. Niejałowe. Można Sterylizow"
-      },
-      {
-        "title": "INNISFREE Jeju Super Volcanic pore Mask 100ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Powerful pore clean mask. Jeju Volcanic Pine Spear™, which has strong sebum adsorption, and a formula containing AHA intensively cares for various pore problems."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Erko Wycinarka hydrauliczna WHP1 w kasecie",
-        "brand": "Erko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Wycinarka hydrauliczna WHP 1&nbsp;firmy Erko</h1>\n\n<h2>Wycinarka hydrauliczna do wycinania otworów okrągłych, kwadratowych i prostokątnych:</h2>\n\n<ul>\n\t<li>maksymalna grubość b"
-      },
-      {
-        "title": "INNISFREE No sebum Mineral Pact 8.5G",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Makita Młot Udarowy HR5202C",
-        "brand": "Makita",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>MAKITA MŁOT UDAROWY HR5202C</b></p><ul><li>Młot przeznaczony do wiercenia z udarem i kucia (2 tryby pracy).</li><li>Wyposażony w przesuwny uchwyt szybkoblokujący.</li><li>Pos"
-      },
-      {
-        "title": "HOLITUAL Radiance Resurfacing Peel 12ea",
-        "brand": "HOLITUAL",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]",
-        "brand": "Abu Garcia",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]"
-      },
-      {
-        "title": "INNISFREE Retinol Green Tea PDRN Skinbooster Ampoule 25ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_12 oz.",
-        "brand": "Benlee rocky marciano",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_8 oz.",
-        "brand": "Benlee rocky marciano",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
-      },
-      {
-        "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
-        "brand": "mise-en-scence",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Kapodaster Gitary Akustycznej Klasycznej Niebieski",
-        "brand": "E-trade",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>Kapodaster niebieski do gitary akustycznej, klasycznej</h2> <p>kod: KAP01N</p> <ul><li><b>kolor: </b>niebieski,</li><li><b>trwałe materiały</b><b>,</b></li><li><b>prosty w użyc"
-      },
-      {
-        "title": "INNISFREE Black tea treatment essence 75ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Aukcja dotyczy <b>wypełnienia</b> najmniejszego pudełeczka w pudełku ze zdjęciami. <b>Cena nie zawiera żadnego pudełka</b>, jest to cena za uzupełnienie najmniejszego pudełeczka"
-      },
-      {
-        "title": "HANYUL Chestnut Shell Hydrating Mask 100ml",
-        "brand": "HANYUL",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A wash-off mask with “Chestnut Shell PHA™” from grinded shell of chestnut from Buyeo area"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Kamatsu Krętlik Barrel Swivel K211 18",
-        "brand": "Kamatsu",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Do wyboru macie Państwo popularne krętliki baryłkowe, rolowane, a także najmocniejsze – krętliki łożyskowane. Wszystkie, w zależności od wielkości (22 – 4 0) nadają się do delik"
-      },
-      {
-        "title": "Laneige Cica Sleeping Mask",
-        "brand": "LANEIGE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Bankrut. Gra rodzinna. Nasza księgarnia",
-        "brand": "Nasza Księgarnia",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>NEGOCJACJE, KRZYKI I GWAR JAK NA TARGU!</p><p>W tej grze nie czekasz na swoją kolejkę, wszyscy grają równocześnie!</p><p>Gracze wcielają się w rolę kupców handlujących towarami "
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dywan Juliet loft idustrialny beżowy szary 200x300 w stylu loftowym beton",
-        "brand": "dywanypers",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dywan Juliet loft idustrialny beżowy szary 160x230 w stylu loftowym beton",
-        "brand": "dywanypers",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4511C",
-        "brand": "Makita",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4511C</b></p><ul><li>TECHNOLOGIA ANTYWIBRACYJNA AVT</li><li>2 tryby pracy: wiercenie z udarem i kucie</li><li>16 - pozycyjne przestawia"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Spodnie męskie bojówki wojskowe militarne Pentagon Bdu 2.0 Black 44",
-        "brand": "Pentagon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Spodnie wojskowe Pentagon BDU 2.0 - Black 34/34 (K05001-2.0-01 44)</h1><ul><li><b>Styl odzieży:</b> Militarny</li><li><b>Kolor/kamuflaż:</b> Czarny</li><li><b>Typ materiału:</b"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Impregnat do butów skór 200ml Protector Skuteczny",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Protector Impregnat Kaps 200ml No PFC Fluor Free</p>\n<h2>Impregnat Kaps Protector 200ml No PFC Fluor Free</h2>\n<p>Impregnat Kaps Protector to produkt nowej generacji, o doskonał"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Maska Maseczka Ochronna Filtrująca FFP2 N95 Przeciwpyłowa Do Oprysków",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>MASECZKA FILTRUJĄCA 3D MASK KN95 Z FILTREM N95 (FFP2)</h1><h1>DODATKOWA OCHRONA W CZASIE ZABIEGÓW CHEMICZNYCH NA KLESZCZE, MUCHY, KOMARY, MESZKI</h1><ul><li><b>wytrzymała skład"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Erko Wycinak ręczny fi 22,5 (kompletny, w kasecie)",
-        "brand": "Erko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Poduszka rozgrzewająca Beurer Hk Comfort 100W",
-        "brand": "Beurer",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1><h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1>\n<p>Opis produktu</p>\n<ul>\n<li>Bardzo miękka powierzchnia</li>\n<li>Z oddychającego"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Olejek zapachowy 12ml Tiramisu",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - TIRAMISU </h1><h1>OLEJEK ZAPACHOWY TIRAMISU 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość jest "
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Olejek zapachowy 12ml Truskawka",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - TRUSKAWKA </h1><h1>OLEJEK ZAPACHOWY TRUSKAWKA 12 ML</h1> <p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość je"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Filtr gąbkowy Cpap Prisma Line (2 sztuki)",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4501C",
-        "brand": "Makita",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4501C</b></p>\n<ul>\n<li>2 tryby pracy: wiercenie z udarem i kucie</li>\n<li>16 - pozycyjne przestawianie dłuta</li>\n<li>Ślizgowy uchwyt t"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dzwoneczki Metalowe Ozdobne Dekoracyjne Złote Srebrne Święta 2cm 10szt.",
-        "brand": "Aliga",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>10 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Chusteczki Higieniczne bezzapachowe Velvet Nature 3W 10 pudełek x 90 sztuk",
-        "brand": "Velvet",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>Nasze nowe chusteczki Velvet Nature to ukłon w stronę osób, które chcą być bliżej natury oraz pragną być bardziej eko. Velvet Nature zastąpiły jedną z wcześniejszych serii – "
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Haft Diamentowy Diamond Painting Mozaika 35x35 cm",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>HAFT DIAMENTOWY, DIAMOND PAINTING</h1>\n<p><b>Haft diamentowy, Diamond painting, mozaika diamentowa</b> - wszystkie te nazwy dotyczą jednej techniki rękodzieła, polegającej na w"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Pedał Nożny Przycisk Przełącznik 220V 10A No Nc 1m",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Obliczenia kwantowe dla każdego",
-        "brand": "Wydawnictwo Naukowe PWN",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Obliczenia kwantowe dla każdego</h1>\n<ul><li><b>Autor:</b> Bernhardt Chris</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 202</li><li><b>format:</b> 16.5x23.5cm</"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "10 Harmonijek kontrastowych dla Maluchów",
-        "brand": "Literat",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Zestaw 7 kontrastowych harmonijek + 3 książeczek rozkładanych z kolorowymi obrazkami</h1> <p><b>Seria niewielkich książeczek sztywnostronicowych w formie harmonijki – skierowan"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dzwoneczki Metal Ozdobne Złote Srebrne 1,3cm 12szt",
-        "brand": "Aliga",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>12 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
       }
     ],
     "missingSubcategoryExamples": [
-      {
-        "title": "Abelssoft File Organizer 2025 | Organize your computer",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
-        "category": "Electronics"
-      },
       {
         "title": "Tv Series Tarot, instr.pl",
         "brand": "Lo Scarabeo",
@@ -13186,6 +13176,36 @@
         "category": "Electronics"
       },
       {
+        "title": "Gąbki Nakładki do Sennheiser PX100 PX200 MM100",
+        "brand": "moXomi",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p><b>Na dzisiejszej aukcji chciałbym Państwu zaoferować parę gąbek (2 sztuki) do słuchawek !!</b></p><p><b>Specyfikacja:</b></p><ul><li><b>wykonanie z miękkiej pianki dającej idea",
+        "category": "Electronics"
+      },
+      {
+        "title": "Gąbki Poduszki Sennheiser do PX100 PX200 MM100",
+        "brand": "moXomi",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p><b>Na dzisiejszej aukcji chciałbym Państwu zaoferować parę gąbek (2 sztuki) do słuchawek Creative JAM!!</b></p><p><b>Specyfikacja:</b></p><ul><li><b>wykonanie z miękkiej pianki ",
+        "category": "Electronics"
+      },
+      {
+        "title": "Oryginał Bateria Dell YRDD6 Inspiron 5482 5491 5493 5590 5593 2026",
+        "brand": "Dell",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>⭐⭐⭐⭐⭐ Nowa Bateria do Laptopa Dell ORYGINALNA OD AUTORYZOWANEGO PARTNERA DELL</h1><h2>⭐⭐⭐⭐⭐ Bateria DELL TYPE YRDD6 11.4V 42Wh 3C Latitude Vostro Inspiron</h2><p>Najwyższa jako",
+        "category": "Electronics"
+      },
+      {
         "title": "Rexing Hard Travel Case Replacement",
         "brand": "Rexing USA",
         "advertiser": "Rexing",
@@ -13312,7 +13332,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Scriba Travel Gra Słowna Edukacyjna Alexander",
+        "description": "Scriba Travel Educational Word Game Alexander",
         "category": "Travel"
       },
       {
@@ -13322,7 +13342,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "<h1>Pokrowiec Anaconda 3 Section Travel Rod System 134Pokrowiec Anaconda 3 Section Travel Rod System 134cm</h1><p> </p> <p>Kategoria: <b>Jednokomorowe</b></p> <p>Producent: <b>Anac",
+        "description": "<h1>Anaconda 3 Section Travel Rod System 134 Cover Anaconda 3 Section Travel Rod System 134cm Cover</h1><p> </p> <p>Category: <b>Single-chamber</b></p> <p>Producer: <b>Anac",
         "category": "Travel"
       },
       {
@@ -13332,7 +13352,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "<h1>Pokrowiec Anaconda 3 Section Travel Rod System 145Pokrowiec Anaconda 3 Section Travel Rod System 145cm</h1><p> </p> <p>Kategoria: <b>Pokrowce na wędki</b></p> <p>Producent: <b>",
+        "description": "<h1>Anaconda 3 Section Travel Rod System 145 Cover Anaconda 3 Section Travel Rod System 145cm Cover</h1><p> </p> <p>Category: <b>Rod Covers</b></p> <p>Manufacturer: <b>",
         "category": "Travel"
       },
       {
@@ -13362,18 +13382,8 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Gra Słowna Scriba Podróżna Travel",
+        "description": "Scriba Travel Word Game",
         "category": "Travel"
-      },
-      {
-        "title": "Baby's songs. Travel Song. CD.",
-        "brand": "Soliton",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<h1>Piosenki Maluszka. Travel Song. Płyta CD.</h1>\n<p>Autor: <b>Various Artists, praca zbiorowa</b></p><p>EAN: <b>5901549899504</b></p><p>Typ publikacji: <b>płyta CD</b></p><p>Stro",
-        "category": "Babies"
       },
       {
         "title": "Hotel Room No. 1. Emma Mars",
@@ -13382,7 +13392,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Hotel Pokój nr 1. Emma Mars",
+        "description": "Hotel Room No. 1. Emma Mars",
         "category": "Travel"
       },
       {
@@ -13686,564 +13696,554 @@
         "category": "Travel"
       },
       {
-        "title": "Set of Fitness Elastics, Hip Band 3in1 exercise bands, 3 EbFit rubbers",
-        "brand": "Eb Fit",
+        "title": "Baby's songs. Travel Song. CD.",
+        "brand": "Soliton",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>ZESTAW GUM TAŚM DO ĆWICZEŃ HIP BAND 3W1 EB FIT</h1><p>Taśmy oporowe Hip Band o 3 możliwościach oporu zapewniają siłę do wszystkich potrzeb ćwiczącego.Powszechnie wykorzystywane",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Piosenki Maluszka. Travel Song. Płyta CD.</h1>\n<p>Autor: <b>Various Artists, praca zbiorowa</b></p><p>EAN: <b>5901549899504</b></p><p>Typ publikacji: <b>płyta CD</b></p><p>Stro",
+        "category": "Babies"
       },
       {
-        "title": "Mic-cb1 cover for athletic microphone stand",
-        "brand": "Athletic",
+        "title": "AsH Burn Baby Burn Scd DVD Limited Edit Nowa",
+        "brand": "Not On Label",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Mic-cb1 cover for an athletic microphone stand</h1> <p><b>A cover for one microphone stand made of high-quality material.</b></p>",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<p>Numer produktu 00353/2018/01/2019-05</p>\n<h1>NA SPRZEDAŻ PŁYTA CD JAK W TYTULE</h1>\n<p>Wszystkie parametry wydania oraz utwory, widoczne są na dużych fotkach .</p>\n<p>Stan techn",
+        "category": "Babies"
       },
       {
-        "title": "Thermoactive Sports T-shirt for Men and Women Brubeck",
-        "brand": "Brubeck",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Dopasowana koszulka&nbsp;BRUBECK BASE LAYER</h1>\n<p>Koszulka z długim rękawem BRUBECK BASE LAYER (model LS10850) to jedna z najciekawszych propozycji tej uznanej marki. Na tle ",
-        "category": "Sports"
-      },
-      {
-        "title": "Thermoactive Sport T-shirt Men's Women's Brubeck S",
-        "brand": "Brubeck",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Dopasowana koszulka&nbsp;BRUBECK BASE LAYER</h1>\n<p>Koszulka z długim rękawem BRUBECK BASE LAYER (model LS10850) to jedna z najciekawszych propozycji tej uznanej marki. Na tle ",
-        "category": "Sports"
-      },
-      {
-        "title": "yellowSPORT Plastry Tape Kinesio Taping Tejpy Tejp",
-        "brand": "yellowTAPE",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; Niebieska 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</l",
-        "category": "Sports"
-      },
-      {
-        "title": "yellowSPORT Taśma Kinesiology Taping Kinesiotaping",
-        "brand": "yellowTAPE",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; CZARNY 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</li><",
-        "category": "Sports"
-      },
-      {
-        "title": "yellowSPORT Taśma Kinesiology Taping Kinesiotaping",
-        "brand": "yellowTAPE",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; Żółta 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</li><l",
-        "category": "Sports"
-      },
-      {
-        "title": "FRP x ParkerPro #420 120-link chain",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "This FRP x ParkerPro #420 120âlink chain is built as a directâreplacement upgrade for mini bikes that need a stronger, more reliable drivetrain. The robust construction improve",
-        "category": "Sports"
-      },
-      {
-        "title": "yellowSPORT Taśma Kinesiology Taping Kinesiotaping",
-        "brand": "yellowTAPE",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Taśma Do Kinesiotapingy YellowSPORT</h1><h1>yellowTAPE&nbsp; Niebieska 5cm x 5m</h1><p><b>Właściwości:</b></p><ul><li>Wykonana z bawełny</li><li>Pokryta bezlateksowym klejem</l",
-        "category": "Sports"
-      },
-      {
-        "title": "FRP x ParkerPro Torque Converter - 3/4 IN",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "FRP GMB100 Torque Converter Fitment: Tight Space, Chain Line, and 212 Builds If you are unsure about a torque converter because the GMB100 frame looks tight, you are asking the rig",
-        "category": "Sports"
-      },
-      {
-        "title": "D370 Under Armor Women's Fitness Blouse S",
-        "brand": "Under Armour",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<ul><li>szerokość pod pachami---53cm</li><li>długość---64-67cm</li><li>rękaw zewn/wewn---52cm/52cm</li><li>ROZMIAR Z METKI--- S</li><li>PROSZĘ OPRÓCZ ROZMIARU Z METKI SPRAWDZIĆ POD",
-        "category": "Sports"
-      },
-      {
-        "title": "Peppa Pig I exercise with Peppa 7 I learn about sports Kd",
-        "brand": "Media Service Zawada",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Świnka Peppa</h1>\n<h1>Ćwiczę z Peppą 7</h1>\n<h1>Poznaję sport</h1>\n<p>===================================================</p>\n<p><b>Uwaga! Książki są nowe, jednak mogą występow",
-        "category": "Sports"
-      },
-      {
-        "title": "Adidas Sport Fight Polo T-shirt, size XL",
+        "title": "Baby's Gang Challenger 2016 Album 12'' Italo",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina.</p><p>Z przodu na piersi japoński haft.</p><p><b",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Baby's Gang Challenger 2016 Album 12'' Italo",
+        "category": "Babies"
       },
       {
-        "title": "Large Blue Water Bottle For Training Gym Sport ION8 1 ​​Liter",
-        "brand": "Ion8",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Oryginalny bidon na wodę ION8®</h1>\n<ul><li><b>Szczelny</b> - idealny do plecaka, torby czy torebki</li><li><b>Potrójne zabezpieczenie </b>przed przypadkowym otwarciem</li><li>",
-        "category": "Sports"
-      },
-      {
-        "title": "Adidas Sport Fight Longsleeve Zen Climalite M",
+        "title": "Baby's Gang Challenger (Deluxe Edition) 2016 CD",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina. Płaski szew dla wysokiego komfortu. Dynamiczny c",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Baby's Gang Challenger (Deluxe Edition) 2016 CD",
+        "category": "Babies"
       },
       {
-        "title": "M&s Women's Sports Black Blouse Pink Top Fitness Women's T-Shirt Xs 34",
-        "brand": "Marks & Spencer",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Bluzka marki Marks&amp;Spencer.</h1><h2>Rozmiar z metki: 6 (polski XS 34)</h2><p>(Sprawdź wymiary w tabeli poniżej)</p><p>Sugerowana cena producenta: 89,90 zł</p><p>Nowa Sporto",
-        "category": "Sports"
-      },
-      {
-        "title": "Joma Sport T-shirt. Combi T-shirt Black 4XS-3XS",
-        "brand": "Joma",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>KOSZULKA T-SHIRT JOMA COMBI CZARNA</h1><p>koszulka wykonana w 100% z poliestru. Tkanina jest miła w dotyku, łatwa w praniu i suszeniu. Idealna na trening i do szkoły.</p><p>Cec",
-        "category": "Sports"
-      },
-      {
-        "title": "Resistance bands for exercise, 5 pieces - fitness expander",
-        "brand": "Minexo",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Gumy oporowe do ćwiczeń 5szt – ekspander fitness</h1><p>Zestaw gum treningowych wykonanych z naturalnej gumy która zapewnia&nbsp;<b>bezproblemowe i bezpieczne użytkowanie</b>&n",
-        "category": "Sports"
-      },
-      {
-        "title": "Short, straight, smooth bar, 28 mm, 40 cm, dumbbells plus clamps, fitness gym",
-        "brand": "Kawmet",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Gryf krótki prosty gładki 28 mm 40 cm hantle plus zaciski siłownia fitness</h1><h2>Gryf prosty krótki + zaciski sprężynowe</h2><p>4,9 ⭐⭐⭐⭐⭐</p><p>❇️ Ten gryf jest wyposażony w ",
-        "category": "Sports"
-      },
-      {
-        "title": "Water bottle Sport Boy School Kindergarten Child Blue ION8 0.5L 500 ml",
-        "brand": "Ion8",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Oryginalny bidon na wodę ION8®</h1>\n<ul><li><b>Szczelny</b> - idealny do plecaka, torby czy torebki</li><li><b>Potrójne zabezpieczenie </b>przed przypadkowym otwarciem</li><li>",
-        "category": "Sports"
-      },
-      {
-        "title": "Jagwire Sport semi-metallic pads for Sram Guide T",
-        "brand": "Jagwire",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Klocki Jagwire Mountain Sport zapewniają cichą, gładką pracę oraz dużą trwałość i siłę hamowania.</h1><p>Kompatybilne m.in. z hamulcami Avid X7, X8 oraz X0 w wersji Trail, a ta",
-        "category": "Sports"
-      },
-      {
-        "title": "Large Blue Water Bottle For Men Guy Gym Sport ION8 1 ​​L",
-        "brand": "Ion8",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Oryginalny bidon na wodę ION8®</h1>\n<ul><li><b>Szczelny</b> - idealny do plecaka, torby czy torebki</li><li><b>Potrójne zabezpieczenie </b>przed przypadkowym otwarciem</li><li>",
-        "category": "Sports"
-      },
-      {
-        "title": "Bottle Woman Sport School Gym Office Purple ION8 1 ​​Liter",
-        "brand": "Ion8",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Oryginalny bidon na wodę ION8®</h1>\n<ul><li><b>Szczelny</b> - idealny do plecaka, torby czy torebki</li><li><b>Potrójne zabezpieczenie </b>przed przypadkowym otwarciem</li><li>",
-        "category": "Sports"
-      },
-      {
-        "title": "FRP x ParkerPro 420 Chain, Clutch & Sprocket Kit - 5/8\" Bore",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "FRP x ParkerPro Mini Bike 10T Clutch, 60T 6-Hole Sprocket & 5ft #420 Chain Kitï¼ Upgrades your mini bike from a light-duty chain setup to a heavy-duty #420 chain system Less likel",
-        "category": "Sports"
-      },
-      {
-        "title": "Jagwire Brake Cable Armor Sport Pro Yellow Cgx 1M",
-        "brand": "Jagwire",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1> Pancerz linki HAMULCA JAGWIRE CGX zółty</h1> <p>Pancerz linki HAMULCA JAGWIRE CGX żółty</p> <p>Pancerz hamulca serii Sport posiada dużą odpornością na naprężenia, wyposażony w",
-        "category": "Sports"
-      },
-      {
-        "title": "Jagwire Sport semi-metallic pads for Sram Guide T",
-        "brand": "Jagwire",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Klocki Jagwire Mountain Sport zapewniają cichą, gładką pracę oraz dużą trwałość i siłę hamowania.</h1><p>Kompatybilne m.in. z hamulcami Avid X7, X8 oraz X0 w wersji Trail, a ta",
-        "category": "Sports"
-      },
-      {
-        "title": "Kamatsu Extra Sport Round Treble Hooks 10",
-        "brand": "Kamatsu",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Kamatsu Extra Sport Round Treble Hooks 10 Kamatsu Extra Sport Round Treble Hooks size 10 (7 pcs)</h1><p> </p> <p>Category: <b>Three-arm fishing treble hooks<",
-        "category": "Sports"
-      },
-      {
-        "title": "Suunto 3 Fitness Silicone Strap",
+        "title": "Baby Driver (blu-ray 4K)+(BLU-RAY)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Sklep \"RZAkcesoria\" ma do zaoferowania Państwu:</h1><h1>Pasek Silikonowy do:</h1><ul><li>Suunto 3 Fitness</li></ul><p>Kolor Paska: <b>POMARAŃCZOWY</b></p><p>Kolor Klamry: <b>CZ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Baby Driver [Blu-Ray 4K]+[Blu-Ray]</h1><h2>Baby Driver</h2><p><b>Kraj:</b> Wielka Brytania, USA</p><p><b>Rok produkcji:</b> 2017</p><p><b>Reżyseria:</b> Edgar Wright</p><p><b>S",
+        "category": "Babies"
       },
       {
-        "title": "Suunto 3 Fitness Silicone Strap",
-        "brand": "RZAkcesoria",
-        "advertiser": "Allegro.pl",
+        "title": "Babo Botanicals Sensitive Baby All Natural Healing Ointment 4Oz",
+        "brand": "Babo Botanicals",
+        "advertiser": "eCosmetics.com",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Sklep \"RZAkcesoria\" ma do zaoferowania Państwu:</h1><h1>Pasek Silikonowy do:</h1><ul><li>Suunto 3 Fitness</li></ul><p>Kolor Paska: <b>JASNY NIEBIESKI</b></p><p>Kolor Klamry: <b",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Ecosmetics Is An Authorized Retailer Of Babo Botanicals. Meet The Natural Treatment For Eczema And Irritated, Itchy Skin. Developed To Relieve Skin Rashes, Eczema And Cracked Or Ch",
+        "category": "Babies"
       },
       {
-        "title": "Suunto 3 Fitness Silicone Strap",
+        "title": "Baby's Gang Happy Song & Challenger Maxi CD",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Sklep \"RZAkcesoria\" ma do zaoferowania Państwu:</h1><h1>Pasek Silikonowy do:</h1><ul><li>Suunto 3 Fitness</li></ul><p>Kolor Paska: <b>GRANATOWO - BIAŁY</b></p><p>Kolor Klamry: ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Baby's Gang Happy Song & Challenger Maxi CD",
+        "category": "Babies"
       },
       {
-        "title": "Set of 2x Neoprene Dumbbells 1.5KG Fitness Aerobic",
-        "brand": "Movit",
+        "title": "50g Gazzal Baby Cotton 3444 pudrowy róż",
+        "brand": "Gazzal",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>ZESTAW 2x HANTLE NEOPRENOWE 1,5KG FITNESS AEROBIC</h1><p>Kod produktu: <b>2247</b></p><p>Wiemy jak wiele oczekuje się od sprzętu sportowego, dlatego proponujemy Państwu orygina",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<p>Mieszanka akrylu i bawełny - świetna na maskotki, kocyki i inne dziergadełka dla dzieci (i nie tylko!).</p><p>Motek: 50g/165m</p><p>Skład: 60% bawełna 40% akryl</p><p>Numer kolo",
+        "category": "Babies"
       },
       {
-        "title": "Professional Protection Gloves - Adults",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
+        "title": "Blissy Silk Pillowcase - Standard | Baby Blue",
+        "brand": "Blissy",
+        "advertiser": "eCosmetics.com",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Safeguard your hands with FRP's premium motorcycle gloves, engineered for optimal protection and control. These professional dirt bike gloves feature impact-resistant padding with ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Blissy's Silk Pillowcase - Standard Offers A Smooth, Hypoallergenic Surface Crafted From 22-Momme 100% Pure Mulberry Silk. This Premium Fabric Is Gentle On Your Skin And Hair, Reta",
+        "category": "Babies"
       },
       {
-        "title": "Patch Termo Y Sport patch Application 6 cm",
-        "brand": "bez marki",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>ŁATKA NASZYWKA TERMO&#xa0; APLIKACJA NAPRASOWANKA</b></p><p><b>Y - SPORT </b>o średnicy<b> 6&#xa0; cm</b></p><ul><li>Naszywka termoprzylepna</li><li>Kolorystyka : <b>JAK NA Z",
-        "category": "Sports"
-      },
-      {
-        "title": "FRP x ParkerPro 420 Chain, Clutch & Sprocket Kit - 3/4\" Bore",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "FRP x ParkerPro Mini Bike 10T Clutch, 60T 6-Hole Sprocket & 5ft #420 Chain Kitï¼ Upgrades your mini bike from a light-duty chain setup to a heavy-duty #420 chain system Less likel",
-        "category": "Sports"
-      },
-      {
-        "title": "Patch Thermo Patch Applique Sport Black 3x11",
+        "title": "Duży Tort z pieluch 60 sztuk Pampers Pemium Care baby shower 2",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>ŁATKA NASZYWKA TERMO&#xa0; APLIKACJA NAPRASOWANKA</b></p><p><b>SPORT GRANATOWY PODŁUŻNY </b>o rozmiarze<b> 3,0 x 11,0 cm</b></p><ul><li>Naszywka termoprzylepna</li><li>Kolory",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
+        "category": "Babies"
       },
       {
-        "title": "Patch Patch Thermo Applique Sport Black 5x17",
+        "title": "Gra Memo Baby Shark Clementoni 18100",
+        "brand": "Clementoni",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "Gra Memo Baby Shark Clementoni 18100",
+        "category": "Babies"
+      },
+      {
+        "title": "Podkłady Poporodowe Canpol Babies Oddychające Podpaski Na Noc 10 Szt.",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>ŁATKA NASZYWKA TERMO&#xa0; APLIKACJA NAPRASOWANKA</b></p><p><b>SPORT CZARNY PODŁUŻNY </b>o rozmiarze<b> 5,0 x 17,0 cm</b></p><ul><li>Naszywka termoprzylepna</li><li>Kolorysty",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Podkłady higieniczne oddychające podpaski poporodowe na noc&nbsp;Canpol Babies 10 szt.</h1><p><b>Oddychające podpaski poporodowe Canpol</b> są specjalnymi <b>wkładkami higienic",
+        "category": "Babies"
       },
       {
-        "title": "Nike Sports Shoulder Bag Fitness Training M",
-        "brand": "Nike",
+        "title": "Podkłady higieniczne Chłonne Protectiva Baby Care 60x60 cm Komfort 8 szt.",
+        "brand": "Incomed",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Podkłady higieniczne Protectiva Baby Care 60x60 cm 8 szt. Komfort i wygoda</h1><p><b>Zapewnij swojemu dziecku wygodę i bezpieczeństwo</b> podczas zmiany pieluszek, używając <b>",
+        "category": "Babies"
       },
       {
-        "title": "Reishi Mushrooms Powder Mushroom Superfoods Immunity Circulation GymBeam 100g",
-        "brand": "GymBeam",
+        "title": "Noodle & Boo Ultra-Safe Baby Laundry Detergent - 8Oz",
+        "brand": "Noodle & Boo",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "Ecosmetics Is An Authorized Retailer Of Noodle & Boo. Ultra-Safe Baby Laundry Detergent - For Baby's Laundry Plant-Based Formula With Strong Stain-Fighting Enzymes Naturally Remove",
+        "category": "Babies"
+      },
+      {
+        "title": "DMC Baby Happy Cotton bawełna Amigurumi 755 róż",
+        "brand": "DMC",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>BIO Reishi w proszku</b>&nbsp;jest wytwarzany z funkcjonalnego grzyba jadalnego Ganoderma lucidum, który od wieków jest częścią azjatyckich tradycji. Jest doskonałym dodatkie",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "DMC Baby Happy Cotton bawełna Amigurumi 755 róż",
+        "category": "Babies"
       },
       {
-        "title": "Sports don't exist",
+        "title": "L'erbolario Protective Paste For Babies 4.2Oz",
+        "brand": "L'Erbolario",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "L'erbolario Protective Paste For Babies 4.2Oz",
+        "category": "Babies"
+      },
+      {
+        "title": "DMC Baby Happy Cotton bawełna Amigurumi 772 beż",
+        "brand": "DMC",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "DMC Baby Happy Cotton bawełna Amigurumi 772 beż",
+        "category": "Babies"
+      },
+      {
+        "title": "Cd: LIL Wayne & Dj Smoke It's Weezy Baby",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Sport nie istnieje</h2>\n<p>ISBN : 9788328037298</p>\n<p>Wydawnictwo : W.A.B.</p>\n<ul><li><b>Autor:</b> Jan Sowa</li></ul> <p>Jak wielkie pieniądze zabijają sportową rywalizację ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Cd: LIL Wayne & Dj Smoke It's Weezy Baby",
+        "category": "Babies"
       },
       {
-        "title": "Pole dance go-go fitness pole",
+        "title": "Duży Tort z pieluch 60 sztuk Pampers Pemium Care baby shower 2",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>Rura Pole Dance obrotowa</b></p><p>Dane techniczne :</p><p><b>Maksymalna wysokość rury z uchwytami: 250 cm</b> (opcjonalnie wykonujemy rury do 303 cm)</p><p>Średnica rury: 50",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
+        "category": "Babies"
       },
       {
-        "title": "Pole dance go-go fitness pole",
-        "brand": "Audiolite",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p>Rura Pole Dance statyczna.</p><p>Dane techniczne :</p><p><b>Maksymalna wysokość rury z uchwytami: 250 cm </b>(opcjonalnie wykonujemy rury do 303 cm)</p><p>Średnica rury: 50 mm</",
-        "category": "Sports"
-      },
-      {
-        "title": "Pole dance go-go fitness pole",
+        "title": "Tkanina Flamingi baby na miętowym tle wz399",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p>Rura Pole Dance obrotowa</p><p>Dane techniczne :</p><p>Maksymalna wysokość rury z uchwytami: 303 cm</p><p>Średnica rury: 50 mm</p><p>Masa: około 5 kg</p><p>Materiał: stal chromo",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h2>Tkanina bawełniana</h2><h1>Flamingi baby na miętowym tle wz399</h1><h2>Cena za 0,5 mb - 1 zakupiona sztuka to tkanina w rozmiarach ( 50cm x 160cm)</h2><p>np.kupując 7 sztuk tka",
+        "category": "Babies"
       },
       {
-        "title": "Professional Riding Goggles - Adults",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
+        "title": "Nov Natural Organic Vegan Baby Nourishing Hydra Lotion For Kids 8.45Oz",
+        "brand": "NOV Natural Organic Vegan",
+        "advertiser": "eCosmetics.com",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Enhance your riding visibility with FRP's high-performance motorcycle goggles. These impact-resistant dirt bike goggles feature a wraparound design with a red frame that provides m",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Nov Natural Organic Vegan's Baby Nourishing Hydra Lotion For Kids Delivers Reliable, Daily Hydration For Delicate Baby And Child Skin, Helping It Feel Comfortably Soft And Look Cal",
+        "category": "Babies"
       },
       {
-        "title": "Siodło Selleroyal Respiro Athletic 45st. unisex",
-        "brand": "Selle Royal",
+        "title": "Poduszka ortopedyczna Baby Dream dziecięca",
+        "brand": "ARmedical",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Siodło SELLEROYAL RESPIRO SOFT ATHLETIC 45st. unisex</h2><p>POZYCJA ATLETYCZNA 45°</p>\n<p>Rowerzysta zazwyczaj siedzi na siodle z kręgosłupem pod kątem 45 stopni. Ta bardziej p",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
+        "category": "Babies"
       },
       {
-        "title": "Xqmax Sports steel darts covered with brass, set of 3 Max Sport",
+        "title": "Poduszka ortopedyczna Baby Dream dziecięca",
+        "brand": "ARmedical",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
+        "category": "Babies"
+      },
+      {
+        "title": "Poduszka ortopedyczna profilowana Baby Dream",
+        "brand": "ARmedical",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
+        "category": "Babies"
+      },
+      {
+        "title": "Poduszka ortopedyczna profilowana Baby Dream",
+        "brand": "ARmedical",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Poduszka ortopedyczna profilowana, dziecięca \"BABY DREAM\"</h1><h2>Przeznaczona dla dzieci w wieku od 2 do 6 lat.</h2><p>Dzięki unikalnej technologii wykonania poduszki ortopedy",
+        "category": "Babies"
+      },
+      {
+        "title": "Prelam Just A Spray Odor Eliminator - Baby Powder 1.85Oz",
+        "brand": "Prelam",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "Prelam's Just A Spray Odor Eliminator - Baby Powder Clears Bathroom Odors Quickly With 46 Spritzes, Forming A Light Deodorizing Layer On The Waters Surface To Neutralize Smells At ",
+        "category": "Babies"
+      },
+      {
+        "title": "Trefl Układanka Edukacyjna Smacznego 18m+ Baby",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>RZUTKI STALOWE firmy XQMAX SPORTS pokryte MOSIĄDZEM</b></p><ul><li>wymiary ok: <b>15 cm</b></li><li><b>3 szt</b></li><li>wysoka jakość</li><li>czarne lotki zlogo Xqmax</li><l",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Trefl Układanka Edukacyjna Smacznego 18m+ Poznaję</h1><p><b>Edukacyjna układanka, dzięki której podczas wesołej zabawy mały gracz odkrywa jak wyglądają poszczególne przekąski, ",
+        "category": "Babies"
       },
       {
-        "title": "Rag Top Gym Mordex training sweatshirt black L",
-        "brand": "Mordex",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p>Koszulka BLUZA treningowa firmy MORDEX</p><p><b>ROZMIAR: L</b></p><p>MATERIAŁ: 50% Bawełna + 50% Elana</p><p><b>KOLOR: CZARNA 01</b></p><p>Sportowa koszulka- BLUZA treningowa z ",
-        "category": "Sports"
-      },
-      {
-        "title": "Hip Band Fitness 3in1 Set of Exercise Elastic Bands",
-        "brand": "One Fitness",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Technical data</h2><ul><li><b>Part number:</b> HB001</li><li><b>Color:</b> Yellow, Blue, Gray</li><li><b>Material:</b> Polyester cotton latex yarn</li><",
-        "category": "Sports"
-      },
-      {
-        "title": "Nike Sports Shoulder Bag Fitness Training M",
-        "brand": "Nike",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate",
-        "category": "Sports"
-      },
-      {
-        "title": "Professional Riding Goggles - Kids",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "Enhance your riding visibility with FRP's high-performance motorcycle goggles. These impact-resistant dirt bike goggles feature a wraparound design with a red frame that provides m",
-        "category": "Sports"
-      },
-      {
-        "title": "Men's athletic training shorts Black Armor S",
-        "brand": "Extreme Hobby",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Spodenki męskie treningowe athletic BLACK ARMOUR S</h1>\n<p>Zaprojektowane z najwyższej jakości materiałów, trwałe oraz funkcjonalne sportowe spodenki typu Athletic. Stworzone d",
-        "category": "Sports"
-      },
-      {
-        "title": "Neoprene Slimming Blouse Fitness Sauna XL",
+        "title": "Karty Do Gry Star Wars Mandalorian Baby Yoda",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<p><b>BLUZKA WYSZCZUPLAJĄCA NEOPRENOWA FITNESS SAUNA XL</b></p><p><b>Rozmiar: XL</b></p><p><b>70% neopren, 15% poliester, 15% nylon.</b></p><ul><li><b>szerokość pod pachami: 43 cm<",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "Karty Do Gry Star Wars Mandalorian Baby Yoda",
+        "category": "Babies"
       },
       {
-        "title": "Siodło Selleroyal Respiro Athletic 45st. unisex",
-        "brand": "Selle Royal",
+        "title": "Kubek Star Wars Mandalorian The Child Baby Yoda 3D",
+        "brand": "Paladone",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h2>Siodło SELLEROYAL RESPIRO SOFT ATHLETIC 45st. unisex</h2><p>POZYCJA ATLETYCZNA 45°</p>\n<p>Rowerzysta zazwyczaj siedzi na siodle z kręgosłupem pod kątem 45 stopni. Ta bardziej p",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<p><b>✅ Licencjonowany gadżet dla każdego fana Gwiezdnych Wojen.</b></p> <h1>KUBEK 3D BABY YODA</h1><h2>Oficjalny produkt licencjonowany przez Star Wars™, wyprodukowany przez Palad",
+        "category": "Babies"
       },
       {
-        "title": "Mustad Classic Sport 35647BR anchor size 4 1 piece",
-        "brand": "Mustad",
+        "title": "Hozier: Wasteland, Baby! (pl) (CD)",
+        "brand": "Universal Music",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.4 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Hozier: Wasteland, Baby! (PL) [CD]</h1><h2>Wasteland, Baby!</h2><p><b>Seria:</b> Polska Cena</p><p><b>Wykonawca:</b> Hozier</p> <h2>Lista utworów</h2><ul><li>1. Nina Cried Powe",
+        "category": "Babies"
       },
       {
-        "title": "Mustad Classic Sport 35647BR anchor size 5 1 piece",
-        "brand": "Mustad",
+        "title": "Kałamarnice 7 cm „Baby Squid” Seacor Cormoran",
+        "brand": "Cormoran",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.5 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<p><b>Kałamarnice „Baby Squid” Seacor - Cormoran</b></p><p>3 kałamarnice w kolorach biały-błysk, perłowym i różowym. Długość 7 cm. Idealne na karmazyny, morszczuki i zębacze.</p><p",
+        "category": "Babies"
       },
       {
-        "title": "Mustad Classic Sport anchor 35647BR size 8 1 piece",
-        "brand": "Mustad",
+        "title": "Carotina Baby Tower",
+        "brand": "Lisciani",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.8 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h2>Trzy zabawy ćwiczące rozpoznawanie kształtów, oraz rozwijające zdolności manualne i refleks.</h2><p>Zabawa polega na stopniowym zwiększaniu jej wysokości zachowując ostrożność,",
+        "category": "Babies"
       },
       {
-        "title": "Mustad Classic Sport anchor 35647BR size 12 1 piece",
-        "brand": "Mustad",
+        "title": "Baby Anthyllis Pasta do zębów bez fluoru 75ml",
+        "brand": "Anthyllis",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Sports",
-        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.12 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona",
-        "category": "Sports"
+        "sourceCategory": "Babies",
+        "description": "<h1>Baby Anthyllis Pasta do zębów bez fluoru od pierwszego ząbka z aloesem i malwą truskawkowa 75 ml ECO</h1>\n<p><b>Certyfikat:</b></p>\n<p>ICEA 112 BC 033</p>\n<p><b>Właściwości:</b",
+        "category": "Babies"
+      },
+      {
+        "title": "Smacznego Baby pierwsza gra planszowa dla dzieci",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Smacznego Baby pierwsza gra planszowa dla dzieci</p><p>Opis produktu:</p>  <h1>Smacznego!</h1> <p>Edukacyjna układanka, dzięki której podczas wesołej zabawy mały gracz odkrywa, ",
+        "category": "Babies"
+      },
+      {
+        "title": "Igk Juicy Baby Fragrance Mist & Hair Taming Wand 2Pc",
+        "brand": "IGK",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "Igk Juicy Baby Fragrance Mist & Hair Taming Wand 2Pc",
+        "category": "Babies"
+      },
+      {
+        "title": "Panel bawełna XL: Baby dino",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Panel bawełna XL: Baby dino</h1>\n    <p>Cena: <b>29,50</b> zł za 1 szt. (75cm x 100cm)</p>\n    <p>Termin wysyłki: <b>24h</b></p>\n    <p>Przedmiotem aukcji jest panel bawełna XL",
+        "category": "Babies"
+      },
+      {
+        "title": "Baby holo Odblaskowa Tkanina drukowana Materiał",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Tkanina BABY HOLO kolekcja UNIQUE. Materiał wodoodporny. Tkanina odzieżowa - torebkowa, sprzedawana na metry.</h1><h2>BABY HOLO to nowoczesna tkanina z MEGA EFEKTEM WIZUALNYM. ",
+        "category": "Babies"
+      },
+      {
+        "title": "Babo Botanicals Sensitive Baby Fragrance-Free Bubble Bath & Wash 15Oz",
+        "brand": "Babo Botanicals",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "Ecosmetics Is An Authorized Retailer Of Babo Botanicals. Make Bath Time Fun With Plant-Based Bubbles With Sensitive Baby Fragrance-Free Bubble Bath & Wash. Gently Formulated For Ba",
+        "category": "Babies"
+      },
+      {
+        "title": "Ultradźwiękowa Ochrona Przed Kleszczami Dla Dzieci Tickless Kid Orange",
+        "brand": "Tickless",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>ULTRADŹWIĘKOWA OCHRONA PRZED KLESZCZAMI DLA DZIECI TICKLESS KID Orange</h1><h2>✅ Tickless Baby – Delikatna i Skuteczna Ochrona przed Kleszczami dla Najmłodszych</h2><p><b>Tickl",
+        "category": "Babies"
+      },
+      {
+        "title": "Just Dance 2016 PS3 Move Taniec Nowa",
+        "brand": "Ubisoft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>JUST DANCE 2016</h1><p>Producent: <b>UBISOFT</b></p><p>Wersja językowa gry: <b>Angielska</b></p><p>Pudełko, instrukcja: <b>EUROPEJSKA*</b></p><p>Wersja: <b>PAL</b></p><p>Grupa ",
+        "category": "Babies"
+      },
+      {
+        "title": "Masażer Do Głowy Grabki Do Wcierek Porost Włosów",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>RELAKSUJĄCO - ODPRĘŻAJĄCY MASAŻER DO GŁOWY</h1><p><b>Kolor: niebieski</b></p><p>Masażer głowy typu \"grabki\" skutecznie pomaga&nbsp;<b>rozluźnić zestresowane mięśnie, złagodzić ",
+        "category": "Babies"
+      },
+      {
+        "title": "Howlin' Wolf London.. mini lp 2x Shm CD Japan nowa",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>HOWLIN' WOLF - London Howlin' Wolf Sessions</h1> <h2>2 x SHM CD - Cardboard Sleeve - Mini lp - Deluxe Edition -&#xa0;Limited Release</h2> <p><b>Product Details:</b></p><ul><li>",
+        "category": "Babies"
+      },
+      {
+        "title": "Wishbone Ash Live Dates II 2LP Yellow Blue",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h2>WISHBONE ASH Live Dates II 2LP YELLOW + BLUE</h2>\n<p>kod: 3700477831837</p>\n<p>Rok: 2020</p> <p>LP - 1 -</p><ul><li>1. Doctor</li><li>2. Living Proof</li><li>3. Runaway</li><li",
+        "category": "Babies"
+      },
+      {
+        "title": "Leadaz Ov Da Nu Skool Volume 1 2xCD Nowa Reggae",
+        "brand": "Not On Label",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Numer produktu <b>01343/05166</b>/2018/02-8</p><h1>NA SPRZEDAŻ ORYGINALNA PŁYTA JAK W TYTULE - CD ALBUM</h1><p>Stan techniczny przedmiotu:</p><p><b>PŁYTY</b><b>:</b>&#xa0;NOWE</",
+        "category": "Babies"
+      },
+      {
+        "title": "Lp: Jimi Hendrix Jimi Plays Monterey 1986 Ex+",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Witam na mojej aukcji.</p><p>Mam do sprzedania płytę LP:</p><h1>Jimi Hendrix ‎– Jimi Plays Monterey</h1><p>Label: Polydor – 827 990-1</p><p>Format: Vinyl, LP, Album</p><p>Countr",
+        "category": "Babies"
+      },
+      {
+        "title": "Sam Smith: The Thrill Of It All (CD)",
+        "brand": "Universal",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Sam Smith: The Thrill Of It All [CD]</h1><p><b>Wykonawca:</b> Sam Smith</p><p><b>Rok wydania:</b> 2017</p> <h2>Lista utworów</h2><ul><li>1. Too Good At Goodbyes - Sam Smith</li",
+        "category": "Babies"
+      },
+      {
+        "title": "Usypianki Do Łóżeczka... kołysanki (3CD)",
+        "brand": "Agencja Artystyczna MTJ",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Usypianki do łóżeczka... do podusi... na dobry sen [BOX] [3CD]</h1><p><b>Wykonawca:</b> Various Artists</p><p><b>Wydawca:</b> MTJ</p> <h2>Lista utworów</h2><ul><li>CD1:</li><li",
+        "category": "Babies"
+      },
+      {
+        "title": "Anna Jantar: Best: Nic Nie Mioże Wiecznie Trwać (C",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Anna Jantar: Best: Nic nie mioże wiecznie trwać [CD]</h1><p><b>Wykonawca:</b> Anna Jantar</p> <h2>Lista utworów</h2><ul><li>1. Nic nie może wiecznie trwać - Anna Jantar</li><li",
+        "category": "Babies"
+      },
+      {
+        "title": "Elvis Presley: Christmas (deluxe Edition) (CD)",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Elvis Presley: Christmas (Deluxe) [CD]</h1><p><b>Wykonawca:</b> Elvis Presley</p> <h2>Lista utworów</h2><ul><li>1. Santa Claus Is Back In Town</li><li>2. White Christmas</li><l",
+        "category": "Babies"
+      },
+      {
+        "title": "Winyl John Hiatt Terms of My Surrender Folia",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>WINYL: HIATT, JOHN - Terms of My Surrender /LP/</h1><p><b>NR KATALOGOWY: NW5083</b></p><p><b>Wyd: NEW WEST RECORDS, 2014</b></p><p><b>Tracklist</b></p><ul><li>A1, Long Time Com",
+        "category": "Babies"
+      },
+      {
+        "title": "Wiosna lato jesień zima w moich rymach Wiersze",
+        "brand": "Nasza Księgarnia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Wiosna, lato, jesień, zima w moich rymach - Wanda Chotomska, Nasza Księgarnia</h1>\n<p>9788310133717</p>\n<p>Wydawnictwo Nasza Księgarnia</p> <p><b>Wiosna, lato, jesień, zima w m",
+        "category": "Babies"
+      },
+      {
+        "title": "Ariana Grande My Everything CD",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<p>Płyta CD&#xa0; -&#xa0; ARIANA GRANDE - MY EVERYTHING</p><p>1. Intro</p><p>2. Problem</p><p>3. One Last Time</p><p>4. Why Try</p><p>5. Break Free</p><p>6. Best Mistake</p><p>7. B",
+        "category": "Babies"
+      },
+      {
+        "title": "Duży Tort z pieluch 60 sztuk Pampers 3, 4",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
+        "category": "Babies"
+      },
+      {
+        "title": "Duży Tort z pieluch 60 sztuk Pampers 3, 4",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
+        "category": "Babies"
+      },
+      {
+        "title": "Ol'dirty Bastard: Return To The 36 Chambers [CD]",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Ol'Dirty Bastard: Return To The 36 Chambers [CD]</h1><h2>Ol'Dirty Bastard: Return To The 36 Chambers </h2><p><b>Wykonawca:</b> Ol' Dirty Bastard</p><p><b>Rok wydania:</b> 1995<",
+        "category": "Babies"
       }
     ]
   },
@@ -14505,13 +14505,13 @@
     "gamingConsoles": 178,
     "fashionClothing": 159,
     "tennisShoes": 45,
-    "fashionSneakers": 310,
+    "fashionSneakers": 313,
     "sportsFootwear": 226
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20888,
-    "withImages": 20888,
-    "withPositivePrices": 20888
+    "withTrackedHttpsLinks": 20896,
+    "withImages": 20896,
+    "withPositivePrices": 20896
   },
   "sources": [
     {
