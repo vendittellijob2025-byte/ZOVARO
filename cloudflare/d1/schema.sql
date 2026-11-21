@@ -35,3 +35,20 @@ CREATE TABLE IF NOT EXISTS cj_sync_state (
   state_value TEXT NOT NULL,
   updated_at TEXT NOT NULL
 );
+
+-- Signed conversion callbacks from non-CJ affiliate, lead and rental partners.
+CREATE TABLE IF NOT EXISTS partner_conversion_events (
+  event_id TEXT PRIMARY KEY,
+  partner_id TEXT NOT NULL,
+  referral_id TEXT NOT NULL,
+  status TEXT NOT NULL,
+  amount REAL,
+  currency TEXT,
+  partner_order_reference TEXT,
+  occurred_at TEXT NOT NULL,
+  received_at TEXT NOT NULL,
+  record_json TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_partner_events_partner_status ON partner_conversion_events(partner_id,status);
+CREATE INDEX IF NOT EXISTS idx_partner_events_referral ON partner_conversion_events(referral_id);
+CREATE INDEX IF NOT EXISTS idx_partner_events_occurred_at ON partner_conversion_events(occurred_at);
