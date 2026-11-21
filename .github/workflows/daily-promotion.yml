@@ -11,6 +11,7 @@ on:
       - fix/shop-gif-loop
       - fix/shop-video-runtime
       - fix/normalize-shop-images
+      - fix/daily-promotion-image-preflight-2026-11-21
     paths:
       - ".github/workflows/daily-promotion.yml"
       - "scripts/select-product.mjs"
@@ -46,8 +47,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Select 18 unique products
+      - name: Select 24 unique approved products
         run: node scripts/select-product.mjs
+
+      - name: Preflight and cache 24 approved product images
+        run: node scripts/preflight-product-images.mjs
 
       - name: Prepare three product batches
         run: node scripts/split-selected-products.mjs
