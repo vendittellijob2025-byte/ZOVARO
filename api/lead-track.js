@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { d1Query } from "../lib/cj-d1.js";
+import { d1Query, ensureClickSchema } from "../lib/cj-d1.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
@@ -79,6 +79,7 @@ export default async function handler(req, res) {
   // Redirect even if first-party analytics is temporarily unavailable: never block
   // a shopper from reaching the affiliate's own tracking URL.
   try {
+    await ensureClickSchema();
     await d1Query(
       "INSERT INTO outbound_click_events(event_id,partner_id,referral_id,item_id,source,campaign,destination_host,occurred_at,record_json) VALUES(?,?,?,?,?,?,?,?,?) ON CONFLICT(event_id) DO NOTHING",
       [event.event_id,event.partner_id,event.referral_id,event.item_id,event.source,event.campaign,event.destination_host,event.occurred_at,JSON.stringify(event)]
