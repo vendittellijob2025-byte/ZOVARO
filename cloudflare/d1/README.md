@@ -5,7 +5,7 @@ This is the private, idempotent commission ledger target for CJ reconciliation.
 ## One-time setup (Cloudflare Free plan only)
 1. In the Cloudflare dashboard, create a D1 database named `zovaro-commission-ledger` in the account already connected to ZOVARO.
 2. Open the database SQL console and apply `cloudflare/d1/schema.sql`.
-3. Create a Cloudflare API token scoped only to this account and this D1 database, with D1 read/write permission. Do not paste it into chat or commit it to Git.
+3. Create a Cloudflare API token with only the D1 Edit permission for the ZOVARO Cloudflare account. Cloudflare currently scopes this permission at account level, so it can manage D1 databases in that account, not only this one database. Do not grant unrelated permissions, paste the token into chat or commit it to Git.
 4. Add these Vercel Production (and Preview only if needed) environment variables:
    - `CLOUDFLARE_ACCOUNT_ID`
    - `CLOUDFLARE_D1_DATABASE_ID`
