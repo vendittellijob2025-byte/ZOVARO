@@ -263,7 +263,7 @@ function categoryLabel(value) {
 function card(p) {
   const old =
     p.oldPrice != null
-      ? `<del class="old">${formatMoney(
+      ? `<del class="old">${priceWithUsdMarkup(
           p.oldPrice,
           p.currency
         )}</del>`
