@@ -42,21 +42,24 @@ for(const channel of [tt,ig]){
     const [label,,caption]=videos[i];
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
     const dueAt=dueAtFor(slots[i]);
-    const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt);
-    if(already){
-      const expectedMediaUrl=media[i].url;
-      const currentMediaUrl=already.assets?.find(asset=>asset.source)?.source;
-      if(label.startsWith("ADVERTISERS")&&currentMediaUrl!==expectedMediaUrl){
-        const deleted=await gql('mutation { deletePost(input:{id:"'+already.id+'"}) { ... on DeletePostSuccess { id } ... on MutationError { message } } }',"remove outdated advertiser video "+channel.name);
+    const expectedMediaUrl=media[i].url;
+    if(label.startsWith("ADVERTISERS")){
+      const futureOutdated=existing.filter(p=>
+        p.channelId===channel.id &&
+        p.dueAt &&
+        new Date(p.dueAt).getTime()>=Date.now() &&
+        (String(p.text||"").toLowerCase().includes("promote your business") || String(p.text||"").toLowerCase().includes("#advertise")) &&
+        p.assets?.some(asset=>asset.source && asset.source!==expectedMediaUrl)
+      );
+      for(const outdated of futureOutdated){
+        const deleted=await gql('mutation { deletePost(input:{id:"'+outdated.id+'"}) { ... on DeletePostSuccess { id } ... on MutationError { message } } }',"remove outdated advertiser video "+channel.name);
         const deletion=deleted?.deletePost;
-        if(!deletion?.id)throw new Error("Could not remove outdated advertiser post "+already.id+": "+JSON.stringify(deletion));
-        console.log("REMOVED OUTDATED ADVERTISER VIDEO",channel.name,already.id);
-      }else{
-        console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);
-        results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});
-        continue;
+        if(!deletion?.id)throw new Error("Could not remove outdated advertiser post "+outdated.id+": "+JSON.stringify(deletion));
+        console.log("REMOVED OUTDATED ADVERTISER VIDEO",channel.name,outdated.id);
       }
     }
+    const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt&&p.assets?.some(asset=>asset.source===expectedMediaUrl));
+    if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
     const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
     const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
     try{
