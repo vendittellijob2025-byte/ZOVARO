@@ -39,7 +39,8 @@ Translation runs separately from CJ ingestion so a translation-service rate limi
 - CJ affiliate click URLs are preserved when a customer leaves ZOVARO for the merchant.
 - ZOVARO's Lead & Sales Control records outbound referrals independently from the merchant's own conversion reporting.
 - For CJ links, ZOVARO passes the same unique referral ID as the CJ `SID` parameter; the Commission Detail API can return it as `shopperId` for matching when CJ supplies it.
-- A private Vercel Cron imports CJ sale/lead commission records daily, initially backfilling 30 days and then using CJ's incremental commission cursor.
+- A GitHub Actions workflow imports all CJ commission action types daily into the private Cloudflare D1 ledger, initially backfilling 30 days and then using CJ's incremental commission cursor.
+- Marketplace submissions, TikTok OAuth/session metadata, partner conversion events and outbound affiliate clicks use Cloudflare D1 instead of Vercel Blob; static media remains on the existing GitHub Pages host.
 - A recorded click proves that a referral was sent; it does not prove a sale or commission. CJ commission records can be corrected, reversed or remain pending validation.
 
 ### Direct commercial partners
