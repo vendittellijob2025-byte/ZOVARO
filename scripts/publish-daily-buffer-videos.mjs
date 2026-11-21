@@ -17,7 +17,7 @@ const videos=[
 ["SHOP · Daily discoveries","data/tiktok-video.mp4","Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"],
 ["JOBS · Daily opportunities","zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4","Explore employer-published job openings on ZOVARO JOBS. https://zovaro.vercel.app/?view=jobs #ZOVARO #Jobs"],
 ["LUXURY · Daily discoveries","zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4","Discover luxury cars, yachts, private aviation, estates and watches. https://zovaro.vercel.app/ #ZOVARO #Luxury"],
-["ADVERTISERS · Promote your business",null,"Promote your business worldwide on ZOVARO: US$9.99/month or US$99/year. Details: https://zovaro.vercel.app/ #ZOVARO #Advertise","https://github.com/vendittellijob2025-byte/ZOVARO/releases/download/zovaro-social-20261116/08-ZOVARO-ADVERTISERS-DAILY.mp4"]
+["ADVERTISERS · Promote your business","zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4","Promote your business worldwide on ZOVARO: US$9.99/month or US$99/year. Details: https://zovaro.vercel.app/ #ZOVARO #Advertise"]
 ];
 async function gh(path,options={}){const r=await fetch("https://api.github.com"+path,{...options,headers:{Accept:"application/vnd.github+json",Authorization:"Bearer "+token,"X-GitHub-Api-Version":"2022-11-28",...(options.headers||{})},signal:AbortSignal.timeout(180000)});const d=r.status===204?null:await r.json().catch(()=>null);if(!r.ok)throw new Error("GitHub "+r.status+" "+path+": "+JSON.stringify(d));return d;}
 async function gql(query,label){const r=await fetch("https://api.buffer.com",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+bufferToken},body:JSON.stringify({query}),signal:AbortSignal.timeout(60000)});const d=await r.json().catch(()=>({}));if(!r.ok||d.errors?.length)throw new Error(label+": "+JSON.stringify(d.errors||d));return d.data;}
@@ -62,4 +62,4 @@ for(const channel of [tt,ig]){
 console.log(JSON.stringify({localDate:day,targetDate,timezone:"America/Bogota",slots,release:release.html_url,results},null,2));
 if(failures)process.exitCode=1;
 const scheduled=results.filter(x=>x.status==="scheduled"||x.status==="already_scheduled").length;
-console.log(JSON.stringify({targetDate,timezone:"America/Bogota",channels:[tt.name,ig.name],scheduled,failed:failures,generatedNewVideos:3,reusedAdvertiserVideo:1},null,2));
+console.log(JSON.stringify({targetDate,timezone:"America/Bogota",channels:[tt.name,ig.name],scheduled,failed:failures,generatedNewVideos:4,reusedAdvertiserVideo:0},null,2));
