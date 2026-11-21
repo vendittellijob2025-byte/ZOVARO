@@ -1,4 +1,4 @@
-import { d1Batch, d1Query, readSyncCursor, writeSyncCursor } from "./lib/cj-d1.js";
+import { d1Batch, d1Query, readSyncCursor, writeSyncCursor } from "../lib/cj-d1.js";
 
 const CJ_COMMISSION_API = "https://commissions.api.cj.com/query";
 const PUBLISHER_CID = "8068799";
