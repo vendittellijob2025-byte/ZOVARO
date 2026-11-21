@@ -1,0 +1,28 @@
+name: ZOVARO - CJ D1 Commission Reconciliation (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Import CJ commissions into private Cloudflare D1 ledger
+        env:
+          CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
+        run: |
+          if [ -z "$CJ_API_TOKEN" ]; then
+            echo "CJ_API_TOKEN GitHub Actions secret is missing."
+            exit 1
+          fi
+          curl --fail-with-body --silent --show-error \
+            --max-time 240 \
+            -X POST \
+            -H "Authorization: Bearer ${CJ_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{}' \
+            "https://zovaro.vercel.app/api/cj-commission-sync-d1"
