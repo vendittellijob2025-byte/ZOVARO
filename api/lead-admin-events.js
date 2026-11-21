@@ -72,13 +72,13 @@ export default async function handler(req, res) {
       : [];
     const blobValue = index => blobReads[index]?.status === "fulfilled" ? blobReads[index].value : [];
     const clicks = blobValue(0);
-    const updates = blobValue(1);
+    let updates = blobValue(1);
     let cjCommissions = blobValue(2);
     let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
     let cjLedgerSource = process.env.BLOB_STORE_ID ? "legacy_blob" : "unavailable";
     let cjLedgerTotals = null;
     if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
-      const [d1Records, d1State, d1Totals] = await Promise.all([
+      const [d1Records, d1State, d1Totals, d1PartnerRecords, d1PartnerTotals] = await Promise.all([
         d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
         d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"]),
         d1Query(`SELECT COUNT(*) AS total_records,
@@ -89,16 +89,23 @@ export default async function handler(req, res) {
           SUM(COALESCE(commission_amount_usd,0)) AS commission_amount_usd,
           SUM(CASE WHEN upper(COALESCE(validation_status,''))='PENDING' OR lower(COALESCE(action_status,''))='new' THEN COALESCE(commission_amount_usd,0) ELSE 0 END) AS pending_commission_amount_usd,
           SUM(CASE WHEN referral_id IS NOT NULL AND referral_id<>'' THEN 1 ELSE 0 END) AS records_with_referral_id
-          FROM cj_commissions`)
+          FROM cj_commissions`),
+        d1Query("SELECT record_json FROM partner_conversion_events ORDER BY occurred_at DESC LIMIT 100"),
+        d1Query("SELECT COUNT(*) AS total_records, SUM(CASE WHEN status='lead' THEN 1 ELSE 0 END) AS leads, SUM(CASE WHEN status='appointment' THEN 1 ELSE 0 END) AS appointments, SUM(CASE WHEN status='closed_won' THEN 1 ELSE 0 END) AS closed_won FROM partner_conversion_events")
       ]);
       const parsed = (d1Records.results || []).map(row => {
         try { return JSON.parse(row.record_json); } catch { return null; }
       }).filter(Boolean);
       cjCommissions = parsed;
+      updates = (d1PartnerRecords.results || []).map(row => {
+        try { return JSON.parse(row.record_json); } catch { return null; }
+      }).filter(Boolean);
       const stateMap = Object.fromEntries((d1State.results || []).map(row => [row.state_key, row.state_value]));
       cjState = { last_synced_at: stateMap.last_synced_at || null, max_commission_id: stateMap.max_commission_id || null };
       cjLedgerSource = "cloudflare_d1";
       cjLedgerTotals = d1Totals.results?.[0] || null;
+      const partnerTotals = d1PartnerTotals.results?.[0] || {};
+      var partnerLedgerTotals = partnerTotals;
     }
 
     const cjEvents = cjCommissions.map(record => ({
@@ -145,10 +152,10 @@ export default async function handler(req, res) {
       sample_limit_per_type: 100,
       counts: {
         clicks: clicks.length,
-        partner_updates: updates.length,
-        leads: updates.filter(event => event.status === "lead").length,
-        appointments: updates.filter(event => event.status === "appointment").length,
-        closed_won: closed.length,
+        partner_updates: Number(partnerLedgerTotals?.total_records ?? updates.length),
+        leads: Number(partnerLedgerTotals?.leads ?? updates.filter(event => event.status === "lead").length),
+        appointments: Number(partnerLedgerTotals?.appointments ?? updates.filter(event => event.status === "appointment").length),
+        closed_won: Number(partnerLedgerTotals?.closed_won ?? closed.length),
         cj_commission_records: Number(cjLedgerTotals?.total_records ?? cjCommissions.length),
         cj_sale_orders: Number(cjLedgerTotals?.sale_orders ?? cjSaleOrders.size),
         cj_lead_records: Number(cjLedgerTotals?.lead_records ?? cjCommissions.filter(record => record.event_type === "cj_lead").length),
