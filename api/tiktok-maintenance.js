@@ -1,4 +1,4 @@
-import { get, put } from "@vercel/blob";
+import { get, put } from "../lib/zovaro-store.js";
 
 async function readTokens() {
   const result = await get("tiktok/tokens.json", {
@@ -102,10 +102,6 @@ export default async function handler(req, res) {
   const cronSecret = process.env.CRON_SECRET;
   if (!cronSecret || req.headers.authorization !== "Bearer " + cronSecret) {
     return res.status(401).json({ error: "Non autorizzato" });
-  }
-
-  if (!process.env.BLOB_STORE_ID) {
-    return res.status(503).json({ error: "Archivio privato TikTok non configurato" });
   }
 
   try {
