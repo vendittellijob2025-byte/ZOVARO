@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 
 const PATH = "data/curated-jobs.json";
-const TODAY = new Date().toISOString().slice(0, 10);
+const VERIFIED_AT = new Date().toISOString();
+const TODAY = VERIFIED_AT.slice(0, 10);
 const cache = new Map();
 
 function normalize(value) {
@@ -60,6 +61,7 @@ for (const job of jobs) {
     if (pageText.includes(normalize(job.sourceTitle))) {
       job.status = "open";
       job.verifiedAt = TODAY;
+      job.lastVerifiedAt = VERIFIED_AT;
       job.statusReason = "";
       job.verificationNote = "Official employer source checked on " + TODAY + "; the role title is still present on the source page.";
       open++;
