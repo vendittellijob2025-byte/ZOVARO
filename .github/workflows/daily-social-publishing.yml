@@ -35,14 +35,15 @@ jobs:
           node scripts/create-promotion.mjs
           mkdir -p zovaro-shop-videos
           SELECTED_PRODUCTS_PATH=".zovaro-shop-batches/products-1.json" VIDEO_OUTPUT_PATH="data/tiktok-video.mp4" node scripts/create-tiktok-video.mjs
-      - name: Generate one JOB and one LUXURY video
+      - name: Generate JOB, LUXURY and ADVERTISERS videos
         run: node scripts/create-category-videos.mjs zovaro-social-videos
       - name: Verify exactly three generated videos
         run: |
           test -s data/tiktok-video.mp4
           test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
           test -s zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4
-          for FILE in data/tiktok-video.mp4 zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4 zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4; do
+          test -s zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4
+          for FILE in data/tiktok-video.mp4 zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4 zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4 zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4; do
             test -s "$FILE"
             ffprobe -v error -show_entries format=duration -of csv=p=0 "$FILE"
           done
