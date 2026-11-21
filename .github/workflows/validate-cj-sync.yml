@@ -143,6 +143,7 @@ jobs:
           '
 
       - name: Production read-only smoke tests
+        if: github.event_name == 'push'
         run: |
           set -euo pipefail
           BASE_URL="https://zovaro.vercel.app"
