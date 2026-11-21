@@ -3,7 +3,7 @@ name: ZOVARO - Commission Ledger Checks
 on:
   pull_request:
     paths:
-      - "api/cj-commission-sync-d1.js"
+      - "api/cj-commission-sync.js"
       - "lib/cj-d1.js"
       - "api/lead-admin-events.js"
       - "cloudflare/d1/**"
@@ -22,7 +22,7 @@ jobs:
           node-version: 22
       - name: Check JavaScript syntax
         run: |
-          node --check api/cj-commission-sync-d1.js
+          node --check api/cj-commission-sync.js
           node --check lib/cj-d1.js
           node --check api/lead-admin-events.js
       - name: Validate D1 schema with SQLite
