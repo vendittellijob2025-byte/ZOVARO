@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { d1Query } from "./lib/cj-d1.js";
+import { d1Query } from "../lib/cj-d1.js";
 
 function canonical(value) {
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
