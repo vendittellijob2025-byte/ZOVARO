@@ -14,7 +14,7 @@ This is the private, idempotent commission ledger target for CJ reconciliation.
 
 ## Deploy sequence
 - Merge the reviewed branch only after the schema and three environment variables exist.
-- Then point the CJ GitHub Actions workflow to `/api/cj-commission-sync-d1`.
+- The importer is deployed at the existing route `/api/cj-commission-sync` (the project stays within the Vercel Hobby function limit). Keep the existing scheduled workflow pointed at this route; use the manual D1 workflow for the first controlled backfill.
 - Run one controlled backfill. This endpoint re-reads the previous 30 days, writes each CJ page before advancing its cursor, and uses the CJ commission ID as the unique key so retries do not duplicate commissions.
 - Compare imported record counts and commission totals with CJ reports before enabling the scheduled workflow.
 
