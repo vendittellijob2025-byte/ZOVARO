@@ -2,11 +2,6 @@ name: ZOVARO - Restart clean Buffer queues
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/restart-clean-buffer-queues.yml"
-      - "scripts/publish-clean-buffer-queues.mjs"
 
 permissions:
   contents: read
