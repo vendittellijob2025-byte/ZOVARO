@@ -72,7 +72,7 @@ async function probeAndCache(product) {
 }
 
 const eligible = candidates.filter(p =>
-  p && p.id && p.joinedStatus !== false &&
+  p && p.id && p.joinedStatus === true &&
   typeof p.clickUrl === "string" && p.clickUrl.startsWith("https://") &&
   typeof p.imageLink === "string"
 );
