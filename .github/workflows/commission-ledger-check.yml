@@ -1,6 +1,9 @@
 name: ZOVARO - Commission Ledger Checks
 
 on:
+  push:
+    branches:
+      - fix/cj-commission-ledger-d1
   pull_request:
     paths:
       - "api/cj-commission-sync.js"
