@@ -30,7 +30,7 @@ const ig=channels.find(c=>c.service?.toLowerCase()==="instagram"&&c.name==="zova
 if(!tt||!ig)throw new Error("Expected ZOVARO TikTok and Instagram channels not found.");
 if(tt.isQueuePaused||ig.isQueuePaused)throw new Error("A ZOVARO Buffer queue is paused.");
 const channelIds=[tt.id,ig.id];
-const existingData=await gql('query { posts(first:100,input:{organizationId:"'+orgs[0].id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text dueAt channelId } } pageInfo { hasNextPage endCursor } } }',"existing scheduled posts");
+const existingData=await gql('query { posts(first:100,input:{organizationId:"'+orgs[0].id+'",filter:{channelIds:'+JSON.stringify(channelIds)+'}}) { edges { node { id text dueAt channelId assets { ... on VideoAsset { source } } } } pageInfo { hasNextPage endCursor } } }',"existing scheduled posts");
 const existing=existingData?.posts?.edges?.map(e=>e.node)||[];
 let release=await gh("/repos/"+owner+"/"+name+"/releases/tags/"+tag).catch(()=>null);
 if(!release)release=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({tag_name:tag,name:"ZOVARO daily social videos "+day,body:"Daily generated ZOVARO social media videos. Public media links for Buffer."})});
@@ -43,7 +43,20 @@ for(const channel of [tt,ig]){
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
     const dueAt=dueAtFor(slots[i]);
     const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt);
-    if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
+    if(already){
+      const expectedMediaUrl=media[i].url;
+      const currentMediaUrl=already.assets?.find(asset=>asset.source)?.source;
+      if(label.startsWith("ADVERTISERS")&&currentMediaUrl!==expectedMediaUrl){
+        const deleted=await gql('mutation { deletePost(input:{id:"'+already.id+'"}) { ... on DeletePostSuccess { id } ... on MutationError { message } } }',"remove outdated advertiser video "+channel.name);
+        const deletion=deleted?.deletePost;
+        if(!deletion?.id)throw new Error("Could not remove outdated advertiser post "+already.id+": "+JSON.stringify(deletion));
+        console.log("REMOVED OUTDATED ADVERTISER VIDEO",channel.name,already.id);
+      }else{
+        console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);
+        results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});
+        continue;
+      }
+    }
     const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
     const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
     try{
