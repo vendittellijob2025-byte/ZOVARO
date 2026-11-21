@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:02:30.345Z",
+  "generatedAt": "2026-11-21T13:00:30.661Z",
   "selectedProductCount": 20888,
   "inventoryProductCount": 201143,
   "uniqueAdvertiserCount": 24,
@@ -157,7 +157,7 @@
     },
     {
       "name": "Appliances",
-      "productCount": 8,
+      "productCount": 9,
       "unclassifiedProductCount": 1,
       "browseTree": [
         {
@@ -263,8 +263,8 @@
         {
           "name": "Floor Care",
           "path": "Floor Care",
-          "productCount": 3,
-          "directProductCount": 0,
+          "productCount": 4,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Vacuum Cleaners",
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 459,
-      "unclassifiedProductCount": 80,
+      "productCount": 460,
+      "unclassifiedProductCount": 81,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -5604,7 +5604,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 749,
+      "productCount": 752,
       "unclassifiedProductCount": 8,
       "browseTree": [
         {
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 508,
-          "directProductCount": 503,
+          "productCount": 511,
+          "directProductCount": 506,
           "children": [
             {
               "name": "Wall Art",
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 396,
+      "productCount": 399,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 111,
-          "directProductCount": 90,
+          "productCount": 114,
+          "directProductCount": 93,
           "children": [
             {
               "name": "Board Games",
@@ -10564,8 +10564,8 @@
     },
     {
       "name": "Travel",
-      "productCount": 109,
-      "unclassifiedProductCount": 54,
+      "productCount": 101,
+      "unclassifiedProductCount": 49,
       "browseTree": [
         {
           "name": "Luggage",
@@ -10685,14 +10685,14 @@
         {
           "name": "Maps & Guides",
           "path": "Maps & Guides",
-          "productCount": 53,
+          "productCount": 50,
           "directProductCount": 0,
           "children": [
             {
               "name": "Wall Maps",
               "path": "Maps & Guides > Wall Maps",
-              "productCount": 53,
-              "directProductCount": 53,
+              "productCount": 50,
+              "directProductCount": 50,
               "children": []
             },
             {
@@ -10866,9 +10866,9 @@
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 362,
     "emptyTaxonomyNodeCount": 1118,
-    "productsWithKnownSubcategory": 15336,
+    "productsWithKnownSubcategory": 15340,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5552,
+    "productsWithoutSubcategory": 5548,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10904,19 +10904,19 @@
       },
       {
         "category": "Babies",
-        "count": 80
+        "count": 81
       },
       {
         "category": "Arts, Crafts & Sewing",
         "count": 73
       },
       {
-        "category": "Travel",
+        "category": "Food & Grocery",
         "count": 54
       },
       {
-        "category": "Food & Grocery",
-        "count": 54
+        "category": "Travel",
+        "count": 49
       },
       {
         "category": "Pets",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5552,
-      "provisional": 15336
+      "needs_classification": 5548,
+      "provisional": 15340
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10979,7 +10979,7 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 503
+        "productCount": 506
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -11098,15 +11098,15 @@
         "productCount": 94
       },
       {
+        "path": "Toys & Games > Board Games & Puzzles",
+        "productCount": 93
+      },
+      {
         "path": "Electronics > Audio > Headphones",
         "productCount": 90
       },
       {
         "path": "Automotive > Rims & Tires > Wheels & Rims",
-        "productCount": 90
-      },
-      {
-        "path": "Toys & Games > Board Games & Puzzles",
         "productCount": 90
       },
       {
@@ -11166,16 +11166,16 @@
         "productCount": 56
       },
       {
-        "path": "Travel > Maps & Guides > Wall Maps",
-        "productCount": 53
-      },
-      {
         "path": "Fashion > Shoes",
         "productCount": 52
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
         "productCount": 51
+      },
+      {
+        "path": "Travel > Maps & Guides > Wall Maps",
+        "productCount": 50
       },
       {
         "path": "Food & Grocery > Beverages > Tea",
@@ -12746,7 +12746,7 @@
     ],
     "missingSubcategoryExamples": [
       {
-        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "title": "Abelssoft File Organizer 2025 | Organize your computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
@@ -13176,7 +13176,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Nowa taśma LCD Asus F541M 30PIN",
+        "title": "New Asus F541M 30PIN LCD ribbon cable",
         "brand": "ASUS",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13286,7 +13286,7 @@
         "category": "Travel"
       },
       {
-        "title": "Korfu i Wyspy Jońskie. #Travel&Style",
+        "title": "Corfu and the Ionian Islands. #Travel&Style",
         "brand": "Bezdroża",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13306,7 +13306,7 @@
         "category": "Travel"
       },
       {
-        "title": "Scriba Travel Gra Słowna Edukacyjna Alexander",
+        "title": "Scriba Travel Educational Word Game Alexander",
         "brand": "Alexander",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13316,7 +13316,7 @@
         "category": "Travel"
       },
       {
-        "title": "Pokrowiec Anaconda 3 Section Travel Rod System 134",
+        "title": "Anaconda 3 Section Travel Rod System 134 cover",
         "brand": "Anaconda",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13326,7 +13326,7 @@
         "category": "Travel"
       },
       {
-        "title": "Pokrowiec Anaconda 3 Section Travel Rod System 145",
+        "title": "Anaconda 3 Section Travel Rod System 145 cover",
         "brand": "Anaconda",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13336,7 +13336,7 @@
         "category": "Travel"
       },
       {
-        "title": "Scriba Travel Gra Słowna Edukacyjna Alexander",
+        "title": "Scriba Travel Educational Word Game Alexander",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13356,7 +13356,7 @@
         "category": "Travel"
       },
       {
-        "title": "Gra Słowna Scriba Podróżna Travel",
+        "title": "Scriba Travel Word Game",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13366,17 +13366,17 @@
         "category": "Travel"
       },
       {
-        "title": "Piosenki Maluszka. Travel Song. Płyta CD.",
+        "title": "Baby's songs. Travel Song. CD.",
         "brand": "Soliton",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
         "description": "<h1>Piosenki Maluszka. Travel Song. Płyta CD.</h1>\n<p>Autor: <b>Various Artists, praca zbiorowa</b></p><p>EAN: <b>5901549899504</b></p><p>Typ publikacji: <b>płyta CD</b></p><p>Stro",
-        "category": "Travel"
+        "category": "Babies"
       },
       {
-        "title": "Hotel Pokój nr 1. Emma Mars",
+        "title": "Hotel Room No. 1. Emma Mars",
         "brand": "WAB",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13386,7 +13386,7 @@
         "category": "Travel"
       },
       {
-        "title": "Odcień zieleni Holiday Tkanina Materiał drukowany",
+        "title": "Shade of green Holiday Fabric Printed material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13396,7 +13396,7 @@
         "category": "Travel"
       },
       {
-        "title": "Odcienie niebieskiego Holiday Tkanina drukowana",
+        "title": "Shades of blue Holiday Printed fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13406,7 +13406,7 @@
         "category": "Travel"
       },
       {
-        "title": "Odcień granatu Holiday Tkanina drukowana Materiał",
+        "title": "Holiday navy blue shade. Printed fabric. Material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13416,7 +13416,7 @@
         "category": "Travel"
       },
       {
-        "title": "Katalonia. #Travel&Style. Wydanie 1",
+        "title": "Catalonia. #Travel&Style. Edition 1",
         "brand": "Bezdroża",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13426,7 +13426,7 @@
         "category": "Travel"
       },
       {
-        "title": "Perfekcyjny ślub Małgorzata Rozenek-Majdan",
+        "title": "Perfect wedding Małgorzata Rozenek-Majdan",
         "brand": "Pascal",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13436,7 +13436,7 @@
         "category": "Travel"
       },
       {
-        "title": "Perfekcyjny ślub Małgorzata Rozenek-Majdan",
+        "title": "Perfect wedding Małgorzata Rozenek-Majdan",
         "brand": "Pascal",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13446,7 +13446,7 @@
         "category": "Travel"
       },
       {
-        "title": "Tepe Etui Case Futerał Na Szczoteczki Międzyzębowe",
+        "title": "Tepe Etui Case Interdental Brush Case",
         "brand": "TePe",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13456,7 +13456,7 @@
         "category": "Travel"
       },
       {
-        "title": "Finder #07 Namiętność Yamane Ayano",
+        "title": "Finder #07 The Passion of Yamane Ayano",
         "brand": "Kotori",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13486,7 +13486,7 @@
         "category": "Travel"
       },
       {
-        "title": "Rmf Polskie Przeboje 2020 [2CD] Sanah, Cleo",
+        "title": "Rmf Polish Hits 2020 [2CD] Sanah, Cleo",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13506,7 +13506,7 @@
         "category": "Travel"
       },
       {
-        "title": "Złota Kolekcja Jerzy 'duduś' Matuszkiewicz [2CD]",
+        "title": "Golden Collection Jerzy 'duduś' Matuszkiewicz [2CD]",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13516,7 +13516,7 @@
         "category": "Travel"
       },
       {
-        "title": "Złota Kolekcja Jerzy 'duduś' Matuszkiewicz (2CD)",
+        "title": "Golden Collection Jerzy 'duduś' Matuszkiewicz (2CD)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13536,7 +13536,7 @@
         "category": "Travel"
       },
       {
-        "title": "Eska Na Czasie Zima 2019 [2CD]",
+        "title": "Eska Na Czasie Winter 2019 [2CD]",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13546,7 +13546,7 @@
         "category": "Travel"
       },
       {
-        "title": "Lady Pank: Międzyzdroje (reedycja 2021) (CD)",
+        "title": "Lady Pank: Międzyzdroje (reissue 2021) (CD)",
         "brand": "Agencja Artystyczna MTJ",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13576,7 +13576,7 @@
         "category": "Travel"
       },
       {
-        "title": "Dobry uczynek Lucy Dillon",
+        "title": "Good deed by Lucy Dillon",
         "brand": "Prószyński i S-ka",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13586,7 +13586,7 @@
         "category": "Travel"
       },
       {
-        "title": "Dzika bestia Jorge Franco",
+        "title": "Dzika beast Jorge Franco",
         "brand": "Prószyński i S-ka",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13596,7 +13596,7 @@
         "category": "Travel"
       },
       {
-        "title": "Dysze typu orto do irygatora DIR501 Blaupunkt",
+        "title": "Ortho-type nozzles for the DIR501 Blaupunkt irrigator",
         "brand": "Blaupunkt",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13636,7 +13636,7 @@
         "category": "Travel"
       },
       {
-        "title": "W zasadzie tak. Jacek Fedorowicz",
+        "title": "Basically yes. Jacek Fedorowicz",
         "brand": "Wielka Litera",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13646,7 +13646,7 @@
         "category": "Travel"
       },
       {
-        "title": "V/a Bardowie i poeci Leonard Cohen",
+        "title": "V/a Bards and Poets by Leonard Cohen",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13656,37 +13656,7 @@
         "category": "Travel"
       },
       {
-        "title": "Gra Scriba Tavel Alexander słowna logiczna scrable",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<p><b>GRA SCRIBA TAVEL ALEXANDER słowna logiczna scrable</b></p>\n\n<p>Scriba Travel” to emocjonująca gra słowna, która jednocześnie jest znakomitym treningiem myślenia i koncentracj",
-        "category": "Travel"
-      },
-      {
-        "title": "Gra Scriba Tavel Alexander słowna logiczna scrable",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<p><b>GRA SCRIBA TAVEL ALEXANDER słowna logiczna scrable</b></p>\n\n<p>Scriba Travel” to emocjonująca gra słowna, która jednocześnie jest znakomitym treningiem myślenia i koncentracj",
-        "category": "Travel"
-      },
-      {
-        "title": "Gra Scriba Tavel Alexander słowna logiczna scrable",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<p><b>GRA SCRIBA TAVEL ALEXANDER słowna logiczna scrable</b></p>\n\n<p>Scriba Travel” to emocjonująca gra słowna, która jednocześnie jest znakomitym treningiem myślenia i koncentracj",
-        "category": "Travel"
-      },
-      {
-        "title": "Pozłacana klatka Lupar",
+        "title": "Gold plated Lupar cage",
         "brand": "Bellona",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13696,23 +13666,13 @@
         "category": "Travel"
       },
       {
-        "title": "Batman Szalona miłość",
+        "title": "Batman Crazy Love",
         "brand": "Egmont",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
         "description": "<h1>Batman Szalona miłość</h1><h1>Paul Dini</h1><p>Wyd. Egmont 2019</p><p>Oprawa: Twarda z obwolutą</p><p>Format: 18.0x27.5cm</p><p>Liczba stron: 208</p> <p>Najbardziej zwariowana ",
-        "category": "Travel"
-      },
-      {
-        "title": "T 11/1 Odkurzacz Na Sucho Karcher Biuro Hotel",
-        "brand": "Kärcher",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<h2>T 11/1 PROFESJONALNY ODKURZACZ NA SUCHO KARCHER</h2><p>Niska masa, wysoka moc ssąca, bardzo solidna konstrukcja: odkurzacz T&nbsp;11/1 Classic łączy wysokie oczekiwania użytkow",
         "category": "Travel"
       },
       {
@@ -14243,6 +14203,46 @@
         "googleProductCategory": "",
         "sourceCategory": "Sports",
         "description": "<h2>Siodło SELLEROYAL RESPIRO SOFT ATHLETIC 45st. unisex</h2><p>POZYCJA ATLETYCZNA 45°</p>\n<p>Rowerzysta zazwyczaj siedzi na siodle z kręgosłupem pod kątem 45 stopni. Ta bardziej p",
+        "category": "Sports"
+      },
+      {
+        "title": "Mustad Classic Sport 35647BR anchor size 4 1 piece",
+        "brand": "Mustad",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.4 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
+        "category": "Sports"
+      },
+      {
+        "title": "Mustad Classic Sport 35647BR anchor size 5 1 piece",
+        "brand": "Mustad",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.5 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
+        "category": "Sports"
+      },
+      {
+        "title": "Mustad Classic Sport anchor 35647BR size 8 1 piece",
+        "brand": "Mustad",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.8 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona ",
+        "category": "Sports"
+      },
+      {
+        "title": "Mustad Classic Sport anchor 35647BR size 12 1 piece",
+        "brand": "Mustad",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Sports",
+        "description": "<h1>Kotwica Mustad Classic Sport 35647BR rozm.12 1szt.</h1><p><b>Kotwica Mustad Classic Sport 35647BR</b></p><p>Klasyczna kotwica Aberdeen, nowa technologia ostrzenia. Przeznaczona",
         "category": "Sports"
       }
     ]
