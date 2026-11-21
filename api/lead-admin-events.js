@@ -1,5 +1,6 @@
 import crypto from "node:crypto";
 import { list, get } from "@vercel/blob";
+import { d1Query } from "./lib/cj-d1.js";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
@@ -58,20 +59,36 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: "Sessione amministratore assente o scaduta." });
   }
 
-  // The connected private Blob store uses Vercel OIDC.
-  // @vercel/blob resolves the request-scoped OIDC token together with BLOB_STORE_ID.
-  // Do not require a long-lived BLOB_READ_WRITE_TOKEN on this Vercel deployment.
-  if (!process.env.BLOB_STORE_ID) {
-    return res.status(503).json({ error: "Archivio eventi non configurato: il Blob Store non risulta collegato a questo ambiente." });
-  }
-
   try {
-    const [clicks, updates, cjCommissions, cjState] = await Promise.all([
-      collectLatest("lead-sales/events/clicks/", 100),
-      collectLatest("lead-sales/events/partner-updates/", 100),
-      collectLatest("cj-commissions/records/", 100),
-      readJson("cj-commissions/state.json").catch(() => null)
-    ]);
+    // Blob remains a best-effort legacy source during migration. A suspended
+    // Blob store must not prevent the private D1 CJ ledger from being viewed.
+    const blobReads = process.env.BLOB_STORE_ID
+      ? await Promise.allSettled([
+          collectLatest("lead-sales/events/clicks/", 100),
+          collectLatest("lead-sales/events/partner-updates/", 100),
+          collectLatest("cj-commissions/records/", 100),
+          readJson("cj-commissions/state.json")
+        ])
+      : [];
+    const blobValue = index => blobReads[index]?.status === "fulfilled" ? blobReads[index].value : [];
+    const clicks = blobValue(0);
+    const updates = blobValue(1);
+    let cjCommissions = blobValue(2);
+    let cjState = blobReads[3]?.status === "fulfilled" ? blobReads[3].value : null;
+    let cjLedgerSource = "legacy_blob";
+    if (process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_D1_DATABASE_ID && process.env.CLOUDFLARE_API_TOKEN) {
+      const [d1Records, d1State] = await Promise.all([
+        d1Query("SELECT record_json FROM cj_commissions ORDER BY COALESCE(posting_date,event_date) DESC LIMIT 100"),
+        d1Query("SELECT state_key,state_value FROM cj_sync_state WHERE state_key IN (?,?)", ["last_synced_at", "max_commission_id"])
+      ]);
+      const parsed = (d1Records.results || []).map(row => {
+        try { return JSON.parse(row.record_json); } catch { return null; }
+      }).filter(Boolean);
+      cjCommissions = parsed;
+      const stateMap = Object.fromEntries((d1State.results || []).map(row => [row.state_key, row.state_value]));
+      cjState = { last_synced_at: stateMap.last_synced_at || null, max_commission_id: stateMap.max_commission_id || null };
+      cjLedgerSource = "cloudflare_d1";
+    }
 
     const cjEvents = cjCommissions.map(record => ({
       schema: record.schema,
@@ -128,6 +145,7 @@ export default async function handler(req, res) {
       },
       reported_revenue_by_currency: revenueByCurrency,
       cj_summary: {
+        ledger_source: cjLedgerSource,
         last_synced_at: cjState?.last_synced_at || null,
         sale_amount_usd: sumUsd(cjCommissions, "sale_amount_usd"),
         commission_amount_usd: sumUsd(cjCommissions, "commission_amount_usd"),
