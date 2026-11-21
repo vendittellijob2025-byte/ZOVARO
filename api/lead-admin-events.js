@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 import { list, get } from "@vercel/blob";
-import { d1Query } from "./lib/cj-d1.js";
+import { d1Query } from "../lib/cj-d1.js";
 
 function readCookie(header, name) {
   const entry = String(header || "").split(";").map(part => part.trim()).find(part => part.startsWith(name + "="));
