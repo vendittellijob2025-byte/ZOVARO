@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-21T19:12:55.354Z",
-  "selectedProductCount": 20896,
-  "inventoryProductCount": 200002,
+  "generatedAt": "2026-11-22T06:43:14.822Z",
+  "selectedProductCount": 20895,
+  "inventoryProductCount": 201226,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1852,
+      "productCount": 1853,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1553,
-          "directProductCount": 902,
+          "productCount": 1554,
+          "directProductCount": 903,
           "children": [
             {
               "name": "Sewing Machines",
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 460,
-      "unclassifiedProductCount": 81,
+      "productCount": 451,
+      "unclassifiedProductCount": 64,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1383,8 +1383,8 @@
         {
           "name": "Diaper Changing",
           "path": "Diaper Changing",
-          "productCount": 6,
-          "directProductCount": 5,
+          "productCount": 13,
+          "directProductCount": 12,
           "children": [
             {
               "name": "Diapers",
@@ -1613,8 +1613,8 @@
         {
           "name": "Strollers & Accessories",
           "path": "Strollers & Accessories",
-          "productCount": 0,
-          "directProductCount": 0,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Strollers",
@@ -1831,7 +1831,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1813,
+      "productCount": 1812,
       "unclassifiedProductCount": 550,
       "browseTree": [
         {
@@ -2221,7 +2221,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 161,
+          "productCount": 160,
           "directProductCount": 0,
           "children": [
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 136,
-              "directProductCount": 136,
+              "productCount": 135,
+              "directProductCount": 135,
               "children": []
             },
             {
@@ -2329,7 +2329,7 @@
           "name": "Books",
           "path": "Books",
           "productCount": 371,
-          "directProductCount": 73,
+          "directProductCount": 74,
           "children": [
             {
               "name": "Fiction",
@@ -2376,8 +2376,8 @@
             {
               "name": "Education & Reference",
               "path": "Books > Education & Reference",
-              "productCount": 143,
-              "directProductCount": 143,
+              "productCount": 142,
+              "directProductCount": 142,
               "children": []
             },
             {
@@ -2640,8 +2640,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 412,
-      "unclassifiedProductCount": 47,
+      "productCount": 416,
+      "unclassifiedProductCount": 49,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 53,
+          "productCount": 55,
           "directProductCount": 23,
           "children": [
             {
@@ -2930,8 +2930,8 @@
             {
               "name": "Monitors",
               "path": "Computers > Monitors",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": [
                 {
                   "name": "Gaming Monitors",
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 11,
+              "productCount": 12,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 6,
-                  "directProductCount": 6,
+                  "productCount": 7,
+                  "directProductCount": 7,
                   "children": []
                 },
                 {
@@ -3726,7 +3726,7 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 980,
-          "directProductCount": 56,
+          "directProductCount": 54,
           "children": [
             {
               "name": "Sneakers",
@@ -3780,15 +3780,15 @@
             {
               "name": "Slippers",
               "path": "Shoes > Slippers",
-              "productCount": 84,
-              "directProductCount": 84,
+              "productCount": 83,
+              "directProductCount": 83,
               "children": []
             },
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 15,
-              "directProductCount": 15,
+              "productCount": 18,
+              "directProductCount": 18,
               "children": []
             }
           ]
@@ -4814,7 +4814,7 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1080,
+      "productCount": 1083,
       "unclassifiedProductCount": 321,
       "browseTree": [
         {
@@ -5289,14 +5289,14 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 173,
-          "directProductCount": 39,
+          "productCount": 175,
+          "directProductCount": 40,
           "children": [
             {
               "name": "Toothbrushes",
               "path": "Oral Hygiene > Toothbrushes",
-              "productCount": 103,
-              "directProductCount": 103,
+              "productCount": 104,
+              "directProductCount": 104,
               "children": []
             },
             {
@@ -5361,14 +5361,14 @@
         {
           "name": "Medical Devices & Equipment",
           "path": "Medical Devices & Equipment",
-          "productCount": 8,
+          "productCount": 9,
           "directProductCount": 0,
           "children": [
             {
               "name": "Diagnostic & Monitoring Devices",
               "path": "Medical Devices & Equipment > Diagnostic & Monitoring Devices",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -5604,7 +5604,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 752,
+      "productCount": 756,
       "unclassifiedProductCount": 8,
       "browseTree": [
         {
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 511,
-          "directProductCount": 506,
+          "productCount": 515,
+          "directProductCount": 510,
           "children": [
             {
               "name": "Wall Art",
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1141,
+      "unclassifiedProductCount": 1146,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 242,
-          "directProductCount": 242,
+          "productCount": 241,
+          "directProductCount": 241,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,7 +6147,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 416,
+          "productCount": 412,
           "directProductCount": 0,
           "children": [
             {
@@ -6160,22 +6160,22 @@
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 33,
-              "directProductCount": 33,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 117,
-              "directProductCount": 117,
+              "productCount": 116,
+              "directProductCount": 116,
               "children": []
             },
             {
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 50,
+      "productCount": 47,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 49,
+          "productCount": 46,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 48,
-              "directProductCount": 48,
+              "productCount": 45,
+              "directProductCount": 45,
               "children": []
             },
             {
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 399,
+      "productCount": 402,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 114,
-          "directProductCount": 93,
+          "productCount": 117,
+          "directProductCount": 96,
           "children": [
             {
               "name": "Board Games",
@@ -10564,7 +10564,7 @@
     },
     {
       "name": "Travel",
-      "productCount": 101,
+      "productCount": 97,
       "unclassifiedProductCount": 49,
       "browseTree": [
         {
@@ -10685,14 +10685,14 @@
         {
           "name": "Maps & Guides",
           "path": "Maps & Guides",
-          "productCount": 50,
+          "productCount": 46,
           "directProductCount": 0,
           "children": [
             {
               "name": "Wall Maps",
               "path": "Maps & Guides > Wall Maps",
-              "productCount": 50,
-              "directProductCount": 50,
+              "productCount": 46,
+              "directProductCount": 46,
               "children": []
             },
             {
@@ -10855,24 +10855,24 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1819,
+  "otherProductCount": 1820,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1819
+      "count": 1820
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
-    "usedTaxonomyNodeCount": 362,
-    "emptyTaxonomyNodeCount": 1118,
-    "productsWithKnownSubcategory": 15351,
+    "usedTaxonomyNodeCount": 363,
+    "emptyTaxonomyNodeCount": 1117,
+    "productsWithKnownSubcategory": 15359,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5545,
+    "productsWithoutSubcategory": 5536,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1141
+        "count": 1146
       },
       {
         "category": "Beauty",
@@ -10903,24 +10903,24 @@
         "count": 111
       },
       {
-        "category": "Babies",
-        "count": 81
-      },
-      {
         "category": "Arts, Crafts & Sewing",
         "count": 73
+      },
+      {
+        "category": "Babies",
+        "count": 64
       },
       {
         "category": "Food & Grocery",
         "count": 54
       },
       {
-        "category": "Travel",
+        "category": "Electronics",
         "count": 49
       },
       {
-        "category": "Electronics",
-        "count": 47
+        "category": "Travel",
+        "count": 49
       },
       {
         "category": "Pets",
@@ -10944,13 +10944,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5545,
-      "provisional": 15351
+      "needs_classification": 5536,
+      "provisional": 15359
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20896
+      "pendingReference": 20895
     },
     "mostUsedBrowsePaths": [
       {
@@ -10963,7 +10963,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 902
+        "productCount": 903
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10979,7 +10979,7 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 506
+        "productCount": 510
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 242
+        "productCount": 241
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11055,7 +11055,7 @@
       },
       {
         "path": "Books & Media > Books > Education & Reference",
-        "productCount": 143
+        "productCount": 142
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
@@ -11063,7 +11063,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 136
+        "productCount": 135
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 117
+        "productCount": 116
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11087,19 +11087,19 @@
       },
       {
         "path": "Health & Wellness > Oral Hygiene > Toothbrushes",
-        "productCount": 103
+        "productCount": 104
       },
       {
         "path": "Automotive > Vehicle Tools",
         "productCount": 102
       },
       {
-        "path": "Gaming > Consoles > PlayStation",
-        "productCount": 94
+        "path": "Toys & Games > Board Games & Puzzles",
+        "productCount": 96
       },
       {
-        "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 93
+        "path": "Gaming > Consoles > PlayStation",
+        "productCount": 94
       },
       {
         "path": "Electronics > Audio > Headphones",
@@ -11119,7 +11119,7 @@
       },
       {
         "path": "Fashion > Shoes > Slippers",
-        "productCount": 84
+        "productCount": 83
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
@@ -11139,7 +11139,7 @@
       },
       {
         "path": "Books & Media > Books",
-        "productCount": 73
+        "productCount": 74
       },
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
@@ -11162,32 +11162,32 @@
         "productCount": 56
       },
       {
-        "path": "Fashion > Shoes",
+        "path": "Gaming > Consoles > Xbox",
         "productCount": 56
       },
       {
-        "path": "Gaming > Consoles > Xbox",
-        "productCount": 56
+        "path": "Fashion > Shoes",
+        "productCount": 54
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
         "productCount": 51
       },
       {
-        "path": "Travel > Maps & Guides > Wall Maps",
-        "productCount": 50
-      },
-      {
         "path": "Food & Grocery > Beverages > Tea",
         "productCount": 50
       },
       {
-        "path": "Office & Technology > Software > Utilities",
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
         "productCount": 48
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
-        "productCount": 48
+        "path": "Travel > Maps & Guides > Wall Maps",
+        "productCount": 46
+      },
+      {
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 45
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
@@ -11210,11 +11210,11 @@
         "productCount": 41
       },
       {
-        "path": "Toys & Games > Model Kits",
-        "productCount": 39
+        "path": "Health & Wellness > Oral Hygiene",
+        "productCount": 40
       },
       {
-        "path": "Health & Wellness > Oral Hygiene",
+        "path": "Toys & Games > Model Kits",
         "productCount": 39
       },
       {
@@ -11238,11 +11238,11 @@
         "productCount": 33
       },
       {
-        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 33
+        "path": "Automotive > Rims & Tires > Car Tires",
+        "productCount": 32
       },
       {
-        "path": "Automotive > Rims & Tires > Car Tires",
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
         "productCount": 32
       },
       {
@@ -11258,6 +11258,10 @@
         "productCount": 28
       },
       {
+        "path": "Health & Wellness > Oral Hygiene > Mouthwash",
+        "productCount": 27
+      },
+      {
         "path": "Musical Instruments & Studio > Instrument Accessories > Strings & Reeds",
         "productCount": 27
       },
@@ -11267,10 +11271,6 @@
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
-        "productCount": 27
-      },
-      {
-        "path": "Health & Wellness > Oral Hygiene > Mouthwash",
         "productCount": 27
       },
       {
@@ -11318,15 +11318,19 @@
         "productCount": 21
       },
       {
-        "path": "Automotive > Car Parts > Lighting",
-        "productCount": 18
-      },
-      {
         "path": "Health & Wellness > Home Cleaning & Care > Disinfectants",
         "productCount": 18
       },
       {
         "path": "Health & Wellness > Nutrition > Sports Supplements > Pre-Workout",
+        "productCount": 18
+      },
+      {
+        "path": "Automotive > Car Parts > Lighting",
+        "productCount": 18
+      },
+      {
+        "path": "Fashion > Shoes > Kids' Shoes",
         "productCount": 18
       },
       {
@@ -11348,16 +11352,12 @@
       {
         "path": "Home & Living > Bedding & Bath",
         "productCount": 15
-      },
-      {
-        "path": "Books & Media > Music > CDs",
-        "productCount": 15
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1609
+        "productCount": 1610
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12429,6 +12429,51 @@
         "description": "<h1>Plaster miodu - Adam Szustak [KSIĄŻKA]</h1><p><b>Autor:</b> Adam Szustak</p><p><b>Rok wydania:</b> 2015</p> <h2>Opis</h2><p>Może czytasz to wieczorem, siedzisz gdzieś tam w swo"
       },
       {
+        "title": "Model F-16 Polski Jastrząb do sklejania+FARBY Klej",
+        "brand": "Mister Craft",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Arts, Crafts & Sewing",
+        "description": "<h1>Zestaw do sklejania: model samolotu</h1><h1>F-16 'JASTRZĄB'</h1><h1>z farbami i klejem</h1><ul><li><b>model plastikowy nowy, oryginalnie zapakowany w skali 1:72</b></li><li><b>"
+      },
+      {
+        "title": "Sznurek Linka bawełniana makramy 3mm 200m jasny",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Arts, Crafts & Sewing",
+        "description": "<p><b>Sznurek bawełniany miękki</b></p><p><b>3mm 200m, szpula</b></p><p><b>kolor złamana biel / ecru</b></p><p><b>do makramy czyli sztuki wiązania sznurków, bez użycia igieł, drutó"
+      },
+      {
+        "title": "Sznurek bawełniany do makramy naturalny 5mm x 100m",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Arts, Crafts & Sewing",
+        "description": "<p>Sznurek bawełniany do makramy naturalny 5mm x 100m</p><p>W pełni naturalny, bez poliestrowej nitki</p><p>Kolor: biały kremowy</p><p>Sznurek w pełni ekologiczny</p><p>Pojedynczo "
+      },
+      {
+        "title": "Przybornik do Szycia z Armii Niemieckiej Krawiecki",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Arts, Crafts & Sewing",
+        "description": "<p><b>Przybornik Do Szycia Wojskowy BW</b></p> <p>Oryginalny przybornik do szycia Bundeswehry. Dobre wojskowe wykonanie. Zestaw zawiera wszystkie niezbędne przybory do naprawy ubra"
+      },
+      {
+        "title": "Mam Na Imię Mruczuś Książeczka dla najmłodszych",
+        "brand": "Jafi",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Arts, Crafts & Sewing",
+        "description": "<p>Tytuł: Mam na imię Mruczuś</p>\n<p>Autor: Birek Wojciech</p>\n<p>Wydawnictwo: Jafi</p>\n<p>Język wydania: polski</p>\n<p>Język oryginału: polski</p>\n<p>Ilość stron: 10</p>\n<p>Numer "
+      },
+      {
         "title": "Kabina Prysznicowa Składana 90X90 Czarna Kratka Narożna Rea Molier Double",
         "brand": "Rea",
         "advertiser": "Allegro.pl",
@@ -12697,54 +12742,19 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p><b>TKANINA ŻORŻETA (KREPA) BŁYSK SUKIENKOWA 1/2 MB</b></p><p><b>(KOLOR MIĘTOWY)</b></p><p>Jest to elegancka tkanina sukienkowa, nakrapiany brokatem. Jest lekka, lejąca, przewiew"
-      },
-      {
-        "title": "Ecosmetics Gift Card - $250",
-        "brand": "eCosmetics",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The Gift That Keeps Giving! Send Your Loved Ones Some Love With An Ecosmetics Gift Card To Spend On Their Favorite Beauty Brands In Makeup , Skincare , Fragrances , Haircare , And "
-      },
-      {
-        "title": "[US Only] UNice Plus VIP (90 Days)",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "[US Only] UNice Plus VIP (90 Days)"
-      },
-      {
-        "title": "Wędka Ryobi Arctica cast 1,83 m 12-30g Pike (130g)",
-        "brand": "Ryobi",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>Wędka Ryobi ARCTICA cast 1,83 m 12-30g 1-część</h2><p><b>szczupak na lekko</b></p><p>Wędziska Arctica firmy Ryobi zostały ciekawie zaprojektowane od strony designerskiej. Te kr"
-      },
-      {
-        "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
-        "brand": "UNice",
-        "advertiser": "UNice",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
-      },
-      {
-        "title": "Dętka rowerowa 18 x 1.75 DV35 Romet",
-        "brand": "Romet",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Dętka rowerowa marki ROMET</p><p>Wymiary produktu: 18 x 1.75</p><p>Średnica: 18\"</p><p>Szerokość: 1.75</p><p>Zawór: DV35</p><p>Długość zaworu: 35 mm</p><p>Opis zaworu:&nbsp;<b>n"
       }
     ],
     "missingSubcategoryExamples": [
+      {
+        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
+        "category": "Electronics"
+      },
       {
         "title": "Tv Series Tarot, instr.pl",
         "brand": "Lo Scarabeo",
@@ -13176,7 +13186,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Gąbki Nakładki do Sennheiser PX100 PX200 MM100",
+        "title": "Sponges Covers for Sennheiser PX100 PX200 MM100",
         "brand": "moXomi",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13186,7 +13196,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Gąbki Poduszki Sennheiser do PX100 PX200 MM100",
+        "title": "Sennheiser Cushion Covers for PX100 PX200 MM100",
         "brand": "moXomi",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13196,7 +13206,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Oryginał Bateria Dell YRDD6 Inspiron 5482 5491 5493 5590 5593 2026",
+        "title": "Original Battery Dell YRDD6 Inspiron 5482 5491 5493 5590 5593 2026",
         "brand": "Dell",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13332,7 +13342,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Scriba Travel Educational Word Game Alexander",
+        "description": "Scriba Travel Gra Słowna Edukacyjna Alexander",
         "category": "Travel"
       },
       {
@@ -13382,7 +13392,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Scriba Travel Word Game",
+        "description": "Gra Słowna Scriba Podróżna Travel",
         "category": "Travel"
       },
       {
@@ -13392,7 +13402,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Hotel Room No. 1. Emma Mars",
+        "description": "Hotel Pokój nr 1. Emma Mars",
         "category": "Travel"
       },
       {
@@ -13686,7 +13696,7 @@
         "category": "Travel"
       },
       {
-        "title": "Mapa świata polityczna Plansza edukacyjna szkoła",
+        "title": "Political world map. School educational board",
         "brand": "Demart",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13694,6 +13704,86 @@
         "sourceCategory": "Travel",
         "description": "<h1>Mapa świata polityczna.</h1><h1>Plansza edukacyjna na ścianę i biurko</h1><p>Autor:&#xa0;praca zbiorowa</p><p>Wydawnictwo:&#xa0;Demart</p><p>Rok wydania:&#xa0;<b>2022</b></p><p",
         "category": "Travel"
+      },
+      {
+        "title": "Koło drewniane pełne kółko decupage podstawka 8cm",
+        "brand": "Damatex",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Koło drewniane pełne kółko decupage podstawka 8cm</h1><h1>Drewniane koła, kółka,&#xa0; podkładka pod kubek, ozdoba pełne, 8 cm do Decoupage Scrapki</h1><p>Jest to baza do wszel",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Plaster Miodu Adam Szustak Bestseller",
+        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Plaster miodu</h1><p>Może czytasz to wieczorem, siedzisz gdzieś tam w swoim pokoju, trzymasz w ręce kubek z herbatą, głucho wszędzie, ciemno wszędzie… A w tej ciemności przycho",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Zestaw Do Gry Karty Casino Niemiecki Dystrybutor",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Zestaw do Gry w Karty&#xa0;Casino</h1> <h1>Wysokiej jakości zestaw do gry,5 kości,kubek plus pełna talia kart,całość zapakowana w blister,zestaw dokładnie taki jak na zdjęciach",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Termos Stalowy 100% Szczelny pojemny bidon z kubkiem uniwersalny1L Kamille",
+        "brand": "Kamille",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Termos próżniowy KAMILLE 1,0 L ze stali nierdzewnej KM-2059</h1><h2>Dlaczego nasz kubek to doskonały wybór?</h2><p>✅&nbsp;<b>Materiał najwyższej jakości</b>&nbsp;- wykonany ze ",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Vango Magma Flask Termos Nowy 1 l czarny 1000ml",
+        "brand": "Vango",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p>Termos Magma Flask 1000ml marki Vango</p><p>Termos podróżny o objętości 1 l ma zaimplementowany kubek do picia i posiada plastikowy brzeg.</p><p>Posiada podwójną konstrukcję pró",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Podstawka korkowa Ja przyszedłem po to",
+        "brand": "Szaron",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Podstawka korkowa - Ja przyszedłem po to</b></p><p><b>Opis produktu:</b></p><p> </p><p>Podstawka korkowa pod kubek o wymiarach 10cm x 10cm.</p> <p>Podstawka zawiera tekst bib",
+        "category": "Home & Living"
+      },
+      {
+        "title": "10 Kubeczki 200ml jednorazowe przezroczyste pipeta",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<p><b>Kubki plastikowe jednorazowe przezroczyste</b></p><h1>10szt</h1><ul><li>Pojemność: 200ml</li><li>Kolor: transparentny</li><li>Gramatura: 2,3g kubek o zwiększonej twardości</l",
+        "category": "Home & Living"
+      },
+      {
+        "title": "Tusz Hp 653 DeskJet Plus 6075 6475 3YM75AE Czarny",
+        "brand": "HP",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>TUSZ HP 653 DeskJet Plus 6075 6475 3YM75AE CZARNY</h1><h2>Specyfikacja:</h2><ul><li><b>Kolor:</b> Czarny (Black)</li><li><b>Do użytku w:</b> Hewlett Packard</li><li><b>Wydajnoś",
+        "category": "Home & Living"
       },
       {
         "title": "Baby's songs. Travel Song. CD.",
@@ -13766,7 +13856,7 @@
         "category": "Babies"
       },
       {
-        "title": "50g Gazzal Baby Cotton 3444 pudrowy róż",
+        "title": "50g Gazzal Baby Cotton 3444 powder pink",
         "brand": "Gazzal",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13786,16 +13876,6 @@
         "category": "Babies"
       },
       {
-        "title": "Duży Tort z pieluch 60 sztuk Pampers Pemium Care baby shower 2",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
-        "category": "Babies"
-      },
-      {
         "title": "Gra Memo Baby Shark Clementoni 18100",
         "brand": "Clementoni",
         "advertiser": "Allegro.pl",
@@ -13806,7 +13886,7 @@
         "category": "Babies"
       },
       {
-        "title": "Podkłady Poporodowe Canpol Babies Oddychające Podpaski Na Noc 10 Szt.",
+        "title": "Canpol Babies Postpartum Pads Breathable Night Pads 10 pcs.",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13816,7 +13896,7 @@
         "category": "Babies"
       },
       {
-        "title": "Podkłady higieniczne Chłonne Protectiva Baby Care 60x60 cm Komfort 8 szt.",
+        "title": "Hygienic absorbent pads Protectiva Baby Care 60x60 cm Comfort 8 pcs.",
         "brand": "Incomed",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13836,13 +13916,13 @@
         "category": "Babies"
       },
       {
-        "title": "DMC Baby Happy Cotton bawełna Amigurumi 755 róż",
+        "title": "DMC Baby Happy Cotton Amigurumi cotton 755 pink",
         "brand": "DMC",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
-        "description": "DMC Baby Happy Cotton bawełna Amigurumi 755 róż",
+        "description": "DMC Baby Happy Cotton Amigurumi cotton 755 pink",
         "category": "Babies"
       },
       {
@@ -13856,13 +13936,13 @@
         "category": "Babies"
       },
       {
-        "title": "DMC Baby Happy Cotton bawełna Amigurumi 772 beż",
+        "title": "DMC Baby Happy Cotton Amigurumi cotton 772 beige",
         "brand": "DMC",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
-        "description": "DMC Baby Happy Cotton bawełna Amigurumi 772 beż",
+        "description": "DMC Baby Happy Cotton Amigurumi cotton 772 beige",
         "category": "Babies"
       },
       {
@@ -13876,17 +13956,7 @@
         "category": "Babies"
       },
       {
-        "title": "Duży Tort z pieluch 60 sztuk Pampers Pemium Care baby shower 2",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
-        "category": "Babies"
-      },
-      {
-        "title": "Tkanina Flamingi baby na miętowym tle wz399",
+        "title": "Baby flamingos fabric on a mint background wz399",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13906,7 +13976,7 @@
         "category": "Babies"
       },
       {
-        "title": "Poduszka ortopedyczna Baby Dream dziecięca",
+        "title": "Baby Dream orthopedic pillow",
         "brand": "ARmedical",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13916,7 +13986,7 @@
         "category": "Babies"
       },
       {
-        "title": "Poduszka ortopedyczna Baby Dream dziecięca",
+        "title": "Baby Dream orthopedic pillow",
         "brand": "ARmedical",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13926,7 +13996,7 @@
         "category": "Babies"
       },
       {
-        "title": "Poduszka ortopedyczna profilowana Baby Dream",
+        "title": "Baby Dream profiled orthopedic pillow",
         "brand": "ARmedical",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13936,7 +14006,7 @@
         "category": "Babies"
       },
       {
-        "title": "Poduszka ortopedyczna profilowana Baby Dream",
+        "title": "Baby Dream profiled orthopedic pillow",
         "brand": "ARmedical",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13953,16 +14023,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Babies",
         "description": "Prelam's Just A Spray Odor Eliminator - Baby Powder Clears Bathroom Odors Quickly With 46 Spritzes, Forming A Light Deodorizing Layer On The Waters Surface To Neutralize Smells At ",
-        "category": "Babies"
-      },
-      {
-        "title": "Trefl Układanka Edukacyjna Smacznego 18m+ Baby",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Trefl Układanka Edukacyjna Smacznego 18m+ Poznaję</h1><p><b>Edukacyjna układanka, dzięki której podczas wesołej zabawy mały gracz odkrywa jak wyglądają poszczególne przekąski, ",
         "category": "Babies"
       },
       {
@@ -14016,23 +14076,33 @@
         "category": "Babies"
       },
       {
-        "title": "Baby Anthyllis Pasta do zębów bez fluoru 75ml",
-        "brand": "Anthyllis",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Baby Anthyllis Pasta do zębów bez fluoru od pierwszego ząbka z aloesem i malwą truskawkowa 75 ml ECO</h1>\n<p><b>Certyfikat:</b></p>\n<p>ICEA 112 BC 033</p>\n<p><b>Właściwości:</b",
-        "category": "Babies"
-      },
-      {
-        "title": "Smacznego Baby pierwsza gra planszowa dla dzieci",
+        "title": "XL cotton panel: Baby dino",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
-        "description": "<p>Smacznego Baby pierwsza gra planszowa dla dzieci</p><p>Opis produktu:</p>  <h1>Smacznego!</h1> <p>Edukacyjna układanka, dzięki której podczas wesołej zabawy mały gracz odkrywa, ",
+        "description": "<h1>Panel bawełna XL: Baby dino</h1>\n    <p>Cena: <b>29,50</b> zł za 1 szt. (75cm x 100cm)</p>\n    <p>Termin wysyłki: <b>24h</b></p>\n    <p>Przedmiotem aukcji jest panel bawełna XL",
+        "category": "Babies"
+      },
+      {
+        "title": "Baby holo Reflective Printed Fabric Material",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>Tkanina BABY HOLO kolekcja UNIQUE. Materiał wodoodporny. Tkanina odzieżowa - torebkowa, sprzedawana na metry.</h1><h2>BABY HOLO to nowoczesna tkanina z MEGA EFEKTEM WIZUALNYM. ",
+        "category": "Babies"
+      },
+      {
+        "title": "Ultrasonic Tick Protection for Children Tickless Kid Orange",
+        "brand": "Tickless",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Babies",
+        "description": "<h1>ULTRADŹWIĘKOWA OCHRONA PRZED KLESZCZAMI DLA DZIECI TICKLESS KID Orange</h1><h2>✅ Tickless Baby – Delikatna i Skuteczna Ochrona przed Kleszczami dla Najmłodszych</h2><p><b>Tickl",
         "category": "Babies"
       },
       {
@@ -14046,23 +14116,23 @@
         "category": "Babies"
       },
       {
-        "title": "Panel bawełna XL: Baby dino",
-        "brand": "",
+        "title": "Just Dance 2016 PS3 Move Dance New",
+        "brand": "Ubisoft",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
-        "description": "<h1>Panel bawełna XL: Baby dino</h1>\n    <p>Cena: <b>29,50</b> zł za 1 szt. (75cm x 100cm)</p>\n    <p>Termin wysyłki: <b>24h</b></p>\n    <p>Przedmiotem aukcji jest panel bawełna XL",
+        "description": "<h1>JUST DANCE 2016</h1><p>Producent: <b>UBISOFT</b></p><p>Wersja językowa gry: <b>Angielska</b></p><p>Pudełko, instrukcja: <b>EUROPEJSKA*</b></p><p>Wersja: <b>PAL</b></p><p>Grupa ",
         "category": "Babies"
       },
       {
-        "title": "Baby holo Odblaskowa Tkanina drukowana Materiał",
+        "title": "Head massager, rake for hair growth lotions",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
-        "description": "<h1>Tkanina BABY HOLO kolekcja UNIQUE. Materiał wodoodporny. Tkanina odzieżowa - torebkowa, sprzedawana na metry.</h1><h2>BABY HOLO to nowoczesna tkanina z MEGA EFEKTEM WIZUALNYM. ",
+        "description": "<h1>RELAKSUJĄCO - ODPRĘŻAJĄCY MASAŻER DO GŁOWY</h1><p><b>Kolor: niebieski</b></p><p>Masażer głowy typu \"grabki\" skutecznie pomaga&nbsp;<b>rozluźnić zestresowane mięśnie, złagodzić ",
         "category": "Babies"
       },
       {
@@ -14073,36 +14143,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Babies",
         "description": "Ecosmetics Is An Authorized Retailer Of Babo Botanicals. Make Bath Time Fun With Plant-Based Bubbles With Sensitive Baby Fragrance-Free Bubble Bath & Wash. Gently Formulated For Ba",
-        "category": "Babies"
-      },
-      {
-        "title": "Ultradźwiękowa Ochrona Przed Kleszczami Dla Dzieci Tickless Kid Orange",
-        "brand": "Tickless",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>ULTRADŹWIĘKOWA OCHRONA PRZED KLESZCZAMI DLA DZIECI TICKLESS KID Orange</h1><h2>✅ Tickless Baby – Delikatna i Skuteczna Ochrona przed Kleszczami dla Najmłodszych</h2><p><b>Tickl",
-        "category": "Babies"
-      },
-      {
-        "title": "Just Dance 2016 PS3 Move Taniec Nowa",
-        "brand": "Ubisoft",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>JUST DANCE 2016</h1><p>Producent: <b>UBISOFT</b></p><p>Wersja językowa gry: <b>Angielska</b></p><p>Pudełko, instrukcja: <b>EUROPEJSKA*</b></p><p>Wersja: <b>PAL</b></p><p>Grupa ",
-        "category": "Babies"
-      },
-      {
-        "title": "Masażer Do Głowy Grabki Do Wcierek Porost Włosów",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>RELAKSUJĄCO - ODPRĘŻAJĄCY MASAŻER DO GŁOWY</h1><p><b>Kolor: niebieski</b></p><p>Masażer głowy typu \"grabki\" skutecznie pomaga&nbsp;<b>rozluźnić zestresowane mięśnie, złagodzić ",
         "category": "Babies"
       },
       {
@@ -14126,7 +14166,7 @@
         "category": "Babies"
       },
       {
-        "title": "Leadaz Ov Da Nu Skool Volume 1 2xCD Nowa Reggae",
+        "title": "Leadaz Of The Nu School Volume 1 2xCD Nowa Reggae",
         "brand": "Not On Label",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -14156,7 +14196,7 @@
         "category": "Babies"
       },
       {
-        "title": "Usypianki Do Łóżeczka... kołysanki (3CD)",
+        "title": "Sleeping in the Bed... lullabies (3CD)",
         "brand": "Agencja Artystyczna MTJ",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -14166,7 +14206,7 @@
         "category": "Babies"
       },
       {
-        "title": "Anna Jantar: Best: Nic Nie Mioże Wiecznie Trwać (C",
+        "title": "Anna Jantar: Best: Nothing Can Last Forever (C",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -14196,53 +14236,13 @@
         "category": "Babies"
       },
       {
-        "title": "Wiosna lato jesień zima w moich rymach Wiersze",
+        "title": "Spring summer autumn winter in my rhymes Poems",
         "brand": "Nasza Księgarnia",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Babies",
         "description": "<h1>Wiosna, lato, jesień, zima w moich rymach - Wanda Chotomska, Nasza Księgarnia</h1>\n<p>9788310133717</p>\n<p>Wydawnictwo Nasza Księgarnia</p> <p><b>Wiosna, lato, jesień, zima w m",
-        "category": "Babies"
-      },
-      {
-        "title": "Ariana Grande My Everything CD",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Płyta CD&#xa0; -&#xa0; ARIANA GRANDE - MY EVERYTHING</p><p>1. Intro</p><p>2. Problem</p><p>3. One Last Time</p><p>4. Why Try</p><p>5. Break Free</p><p>6. Best Mistake</p><p>7. B",
-        "category": "Babies"
-      },
-      {
-        "title": "Duży Tort z pieluch 60 sztuk Pampers 3, 4",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
-        "category": "Babies"
-      },
-      {
-        "title": "Duży Tort z pieluch 60 sztuk Pampers 3, 4",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Szukasz pomysłu na prezent dla Maluszka? Chcesz się wyróżnić spośród innych i jednocześnie sprawić praktyczny upominek ? Jesteś we właściwym czasie i miejscu :) Nasza koncepcja",
-        "category": "Babies"
-      },
-      {
-        "title": "Ol'dirty Bastard: Return To The 36 Chambers [CD]",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Ol'Dirty Bastard: Return To The 36 Chambers [CD]</h1><h2>Ol'Dirty Bastard: Return To The 36 Chambers </h2><p><b>Wykonawca:</b> Ol' Dirty Bastard</p><p><b>Rok wydania:</b> 1995<",
         "category": "Babies"
       }
     ]
@@ -14509,9 +14509,9 @@
     "sportsFootwear": 226
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20896,
-    "withImages": 20896,
-    "withPositivePrices": 20896
+    "withTrackedHttpsLinks": 20895,
+    "withImages": 20895,
+    "withPositivePrices": 20895
   },
   "sources": [
     {
