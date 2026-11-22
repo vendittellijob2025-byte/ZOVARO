@@ -34,7 +34,7 @@
       label:"Italiano", choose:"Benvenuto! Scegli prima la tua lingua, così potrò accoglierti correttamente.",
       heading:"Scegli la tua lingua", hint:"Seleziona una bandiera per continuare nella tua lingua.",
       welcome:"Ciao! Sono ZOVARO Worldwide. Cerchi un prodotto, un lavoro urgente o qualcosa di esclusivo, come un'opera d'arte o un bene di lusso? Raccontami cosa ti serve e ti aiuterò a esplorare le opportunità disponibili. Puoi chiudere il mio benvenuto e navigare liberamente nella Home Page.",
-      change:"Cambia lingua", reopen:"¿Necesitas una búsqueda con IA?", homeButton:"Inicio",
+      change:"Cambia lingua", reopen:"Ti serve una ricerca con IA?", homeButton:"Inicio",
       home:["Scopri meglio. Acquista con intelligenza. Scopri opportunità di lavoro.","Nuovo e usato","Trova ciò che ti serve in tutto il mondo: elettronica, moda, bellezza, profumi, cosmetici, auto, sport e molto altro.","Lavori urgenti e lavoratori","Trova l'opportunità adatta alle tue competenze oppure la persona giusta per la tua attività. Scopri lavori, professionisti e nuove opportunità su ZOVARO.","ZOVARO WORLDWIDE · COLLEZIONE PRIVATA","LUSSO E PRESTIGIO","Opportunità esclusive: immobili prestigiosi, supercar, aviazione privata, yacht, orologi, gioielli, arte e collezionismo."]
     },
     es: {
@@ -365,18 +365,21 @@
     if (event.key === "Escape" && !backdrop.hidden) closeWelcome();
   });
 
-  // Every fresh visit starts in English, regardless of the language saved
-  // during a previous visit. The visitor can choose another language below.
-  applyHomepageLanguage("en");
-  applyRequestLanguage("en");
-  const initialCopy = getCopy("en");
+  // Restore the visitor's saved language on every page load.
+  // English remains the default only for a first visit or an invalid saved value.
+  let initialLanguage = "en";
+  try {
+    const savedLanguage = localStorage.getItem(STORAGE_KEY) || "";
+    if (savedLanguage && copy[savedLanguage]) initialLanguage = savedLanguage;
+  } catch (_) {}
+  applyHomepageLanguage(initialLanguage);
+  applyRequestLanguage(initialLanguage);
+  const initialCopy = getCopy(initialLanguage);
   reopenLabel.textContent = initialCopy.reopen;
   if (homeButtonLabel) homeButtonLabel.textContent = initialCopy.homeButton || "Home";
   if (homeButton) homeButton.setAttribute("aria-label", initialCopy.homeButton || "Home");
-  document.documentElement.lang = "en";
-  document.documentElement.dir = "ltr";
-  // Every fresh visit opens with the primary English welcome. Visitors can
-  // then choose another language from the welcome panel. The separate audio
-  // control handles browsers that block speech until a user gesture.
-  showWelcome("en");
+  document.documentElement.lang = initialLanguage;
+  document.documentElement.dir = initialLanguage === "ar" ? "rtl" : "ltr";
+  // Keep the welcome panel in the visitor's chosen language.
+  showWelcome(initialLanguage);
 })();
