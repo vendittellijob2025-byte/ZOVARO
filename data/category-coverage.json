@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T06:43:14.822Z",
+  "generatedAt": "2026-11-22T12:51:47.703Z",
   "selectedProductCount": 20895,
   "inventoryProductCount": 201226,
   "uniqueAdvertiserCount": 24,
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1853,
+      "productCount": 1855,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -421,8 +421,8 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 226,
-          "directProductCount": 162,
+          "productCount": 228,
+          "directProductCount": 164,
           "children": [
             {
               "name": "Beads & Jewelry Making",
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 451,
-      "unclassifiedProductCount": 64,
+      "productCount": 452,
+      "unclassifiedProductCount": 65,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -5604,14 +5604,14 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 756,
+      "productCount": 760,
       "unclassifiedProductCount": 8,
       "browseTree": [
         {
           "name": "Furniture",
           "path": "Furniture",
-          "productCount": 32,
-          "directProductCount": 1,
+          "productCount": 33,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Living Room Furniture",
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 515,
-          "directProductCount": 510,
+          "productCount": 518,
+          "directProductCount": 513,
           "children": [
             {
               "name": "Wall Art",
@@ -10855,20 +10855,20 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1820,
+  "otherProductCount": 1813,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1820
+      "count": 1813
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 363,
     "emptyTaxonomyNodeCount": 1117,
-    "productsWithKnownSubcategory": 15359,
+    "productsWithKnownSubcategory": 15365,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5536,
+    "productsWithoutSubcategory": 5530,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10908,7 +10908,7 @@
       },
       {
         "category": "Babies",
-        "count": 64
+        "count": 65
       },
       {
         "category": "Food & Grocery",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5536,
-      "provisional": 15359
+      "needs_classification": 5530,
+      "provisional": 15365
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10979,7 +10979,7 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 510
+        "productCount": 513
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -11043,7 +11043,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
-        "productCount": 162
+        "productCount": 164
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
@@ -11357,7 +11357,7 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1610
+        "productCount": 1603
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11403,7 +11403,7 @@
         "description": "Compatible with soundcore Work AI Voice Recorder: Necklace only. The AI voice recorder is not included.\n\n\n\nPut It On, Not Pack It Away: The recorder lives in the necklace, so it's "
       },
       {
-        "title": "Termos Próżniowy Esbit Vacuum Flask 1L 2 kubki",
+        "title": "Esbit Vacuum Flask 1L 2 cups",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11412,7 +11412,7 @@
         "description": "<h1>TERMOS PRÓŻNIOWY ESBIT VACUUM FLASK 1L 2 kubki</h1><h2>✅&nbsp;TERMOS PRÓŻNIOWY ESBIT VACUUM 2 KUBKI KORKI 1 L</h2><p>✅ <b>Termos próżniowy Esbit Vacuum jest wykonany ze stali n"
       },
       {
-        "title": "Python Mniej Poważnie Lee Vaughan",
+        "title": "Python Less Seriously Lee Vaughan",
         "brand": "Wydawnictwo Naukowe PWN",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11448,16 +11448,7 @@
         "description": "<h1>Dream Theater: Original Album Series [BOX] [5CD]</h1><h2>Dream Theater: Original Album Series [Box]</h2><p><b>Seria:</b> Original Album Series</p><p><b>Wykonawca:</b> Dream The"
       },
       {
-        "title": "Zdrowe dania dla bobasów i brzdąców od 4 m-ca Kd",
-        "brand": "Egmont",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Zdrowe dania dla bobasów i brzdąców</h1>\n<h2>Zapewnij swojemu dziecku zdrowy start</h2>\n<p><b>Przepisy na zdrowe dania dla dzieci w wieku od 4 miesięcy do 3 lat!</b></p>\n<p>Iko"
-      },
-      {
-        "title": "Tusz Hp 653 Czarny 5 ml 3YM75AE",
+        "title": "Hp 653 Black Ink 5 ml 3YM75AE",
         "brand": "HP",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11466,7 +11457,7 @@
         "description": "<h2>Tusz HP 653 Czarny 5 ml 3YM75AE</h2><ul><li><b>Producent drukarki&#xA0;:</b>&#xA0;HP</li><li><b>Kolor:</b>&#xA0;Czarny</li><li><b>Pojemno&#x15B;&#x107;&#xA0;[ml]:</b>&#xA0;5</l"
       },
       {
-        "title": "Wykrojnik metalowy DPCraft Koła z falbanką",
+        "title": "DPCraft metal cutting die Circles with frill",
         "brand": "DpCraft",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11475,7 +11466,7 @@
         "description": "<h1>WYKROJNIK metalowy DPCraft - Koła z falbanką</h1>\n<p>Zestaw wykrojników \"Koła\"&#xa0;jest kompatybilny ze wszystkimi dostępnymi na rynku maszynkami tego typu. </p>\n<p>Wykrojniki"
       },
       {
-        "title": "Wykrojnik metalowy DPCraft Border ażurowy panel",
+        "title": "DPCraft Border metal die, openwork panel",
         "brand": "DpCraft",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11484,7 +11475,7 @@
         "description": "<h1>WYKROJNIK metalowy DPCraft - Border ażurowy panel</h1>\n<p>Wykrojnik \"Border\"&#xa0;jest kompatybilny ze wszystkimi dostępnymi na rynku maszynkami tnąco - wytłaczającymi. </p>\n<p"
       },
       {
-        "title": "Wykrojnik metalowy DPCraft Składane zaproszenie",
+        "title": "DPCraft metal cutting die Folded invitation",
         "brand": "DpCraft",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11493,58 +11484,13 @@
         "description": "<h1>WYKROJNIK metalowy DPCraft - Składane zaproszenie</h1>\n<p>Wykrojnik do&#xa0;wykonania koperty z ozdobnym zamknięciem oraz&#xa0;dopasowany do&#xa0;niego rozmiarem prostokątny wy"
       },
       {
-        "title": "SwissStop okładziny hamulcowe Disc 32 Rs Sram organiczne",
+        "title": "SwissStop brake pads Disc 32 Rs Sram organic",
         "brand": "SwissStop",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Home & Living",
         "description": "<h1>SwissStop okładziny hamulcowe Disc 32 RS Sram organiczne</h1><p><b>Okładziny hamulcowe SRAM Smooth-Control – cisza, kontrola i&nbsp;skuteczność</b></p><p>Okładziny hamulcowe SR"
-      },
-      {
-        "title": "Dziurkacz Ozdobny koło Duży 7,6 cm pianka papier",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p>Dziurkacz ozdobny z motywem \"KOŁO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w papierze i - NOWOŚĆ TYLKO W DPCRAFT - w piance: zwykłej, samoprzylepnej "
-      },
-      {
-        "title": "Dziurkacz Ozdobny jajko Duży 7,6 cm pianka papier",
-        "brand": "DpCraft",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p>Dziurkacz ozdobny z motywem \"JAJKO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w papierze i - NOWOŚĆ TYLKO W DPCRAFT - w piance: zwykłej, samoprzylepnej"
-      },
-      {
-        "title": "Dziurkacz Ozdobny koło 3,8 cm uniwersalny",
-        "brand": "DpCraft",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p>Super dziurkacz ozdobny z motywem \"KOŁO\" to doskonałe, wysokiej jakości narzędzie, pozwalające wycinać wzory w bardzo grubym papierze papierze - aż do 500g/m2!!!</p><p>Dziurkacz"
-      },
-      {
-        "title": "Koraliki drewniane DpCraft kolorowe, 100 szt.",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p><b>Koraliki drewniane - DpCraft - kolorowe, 100 szt.</b></p>\n<p>Koraliki z drewna w podstawowych kolorach oraz kilku kształtach i rozmiarach urozmaicą Twoje prace.</p>\n<p>W opak"
-      },
-      {
-        "title": "Koraliki drewniane DpCraft pastelowe, 80 szt.",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p><b>Koraliki drewniane - DpCraft - pastelowe, 80 szt.</b></p>\n<p>Pastelowe koraliki to fantastyczna baza, jak i dodatek do projektów rękodzielniczych. Zostały wykonane z drewna, "
       },
       {
         "title": "Dance+dance Rotation Vol. 4 (2CD)",
@@ -11556,7 +11502,7 @@
         "description": "<h1>Dance &amp; Dance Rotation vol. 4 [2CD]</h1><h2>Różni Wykonawcy: Dance &amp; Dance Rotation Vol. 4</h2><p><b>Wykonawca:</b> Smoothie, Roy Bee, Pakito, Xamayca Allstars, Kinderv"
       },
       {
-        "title": "Lew szary Tkanina tapicerska Materiał obiciowy meb",
+        "title": "Lion graphite Upholstery fabric Upholstery material me",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11565,7 +11511,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew grafit Tkanina tapicerska Materiał obiciowy me",
+        "title": "Red lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11574,7 +11520,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew czerwony Tkanina tapicerska Materiał obiciowy",
+        "title": "Black lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11583,7 +11529,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew czarny Tkanina tapicerska Materiał obiciowy",
+        "title": "Lion dark brown Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11592,7 +11538,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew ciemno brązowy Tkanina tapicerska Materiał obi",
+        "title": "Brown lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11601,7 +11547,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew brązowy Tkanina tapicerska Materiał obiciowy",
+        "title": "Green lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11610,7 +11556,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew zielony Tkanina tapicerska Materiał obiciowy",
+        "title": "Pink lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11619,7 +11565,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew różowy Tkanina tapicerska Materiał obiciowy",
+        "title": "Blue lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11628,7 +11574,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew błękitny Tkanina tapicerska Materiał obiciowy",
+        "title": "Beige lion Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11637,16 +11583,7 @@
         "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
       },
       {
-        "title": "Lew beżowy Tkanina tapicerska Materiał obiciowy",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Tkanina tapicerka LEW - LUX. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>LEW - LUX Niezwykle odporna na ścieranie oraz pilling tkanina. Przyjemna w doty"
-      },
-      {
-        "title": "Bling szary Tkanina tapicerska Materiał obiciowy",
+        "title": "Bling gray Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11655,7 +11592,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling grafit Tkanina tapicerska Materiał obiciowy",
+        "title": "Bling graphite Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11664,7 +11601,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling błękitny Tkanina tapicerska Materiał obiciow",
+        "title": "Blue bling Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11673,7 +11610,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling beżowy Tkanina tapicerska Materiał obiciowy",
+        "title": "Bling beige Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12742,11 +12679,74 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p><b>TKANINA ŻORŻETA (KREPA) BŁYSK SUKIENKOWA 1/2 MB</b></p><p><b>(KOLOR MIĘTOWY)</b></p><p>Jest to elegancka tkanina sukienkowa, nakrapiany brokatem. Jest lekka, lejąca, przewiew"
+      },
+      {
+        "title": "Ecosmetics Gift Card - $250",
+        "brand": "eCosmetics",
+        "advertiser": "eCosmetics.com",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The Gift That Keeps Giving! Send Your Loved Ones Some Love With An Ecosmetics Gift Card To Spend On Their Favorite Beauty Brands In Makeup , Skincare , Fragrances , Haircare , And "
+      },
+      {
+        "title": "[US Only] UNice Plus VIP (90 Days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] UNice Plus VIP (90 Days)"
+      },
+      {
+        "title": "Wędka Ryobi Arctica cast 1,83 m 12-30g Pike (130g)",
+        "brand": "Ryobi",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h2>Wędka Ryobi ARCTICA cast 1,83 m 12-30g 1-część</h2><p><b>szczupak na lekko</b></p><p>Wędziska Arctica firmy Ryobi zostały ciekawie zaprojektowane od strony designerskiej. Te kr"
+      },
+      {
+        "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
+      },
+      {
+        "title": "Dętka rowerowa 18 x 1.75 DV35 Romet",
+        "brand": "Romet",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Dętka rowerowa marki ROMET</p><p>Wymiary produktu: 18 x 1.75</p><p>Średnica: 18\"</p><p>Szerokość: 1.75</p><p>Zawór: DV35</p><p>Długość zaworu: 35 mm</p><p>Opis zaworu:&nbsp;<b>n"
+      },
+      {
+        "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
+      },
+      {
+        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R5 35215",
+        "brand": "Piko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
       }
     ],
     "missingSubcategoryExamples": [
       {
-        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "title": "Abelssoft File Organizer 2025 | Organize your computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
@@ -13706,6 +13706,16 @@
         "category": "Travel"
       },
       {
+        "title": "Healthy dishes for babies and toddlers from 4 months Kd",
+        "brand": "Egmont",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Home & Living",
+        "description": "<h1>Zdrowe dania dla bobasów i brzdąców</h1>\n<h2>Zapewnij swojemu dziecku zdrowy start</h2>\n<p><b>Przepisy na zdrowe dania dla dzieci w wieku od 4 miesięcy do 3 lat!</b></p>\n<p>Iko",
+        "category": "Babies"
+      },
+      {
         "title": "Koło drewniane pełne kółko decupage podstawka 8cm",
         "brand": "Damatex",
         "advertiser": "Allegro.pl",
@@ -14233,16 +14243,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Babies",
         "description": "<h1>WINYL: HIATT, JOHN - Terms of My Surrender /LP/</h1><p><b>NR KATALOGOWY: NW5083</b></p><p><b>Wyd: NEW WEST RECORDS, 2014</b></p><p><b>Tracklist</b></p><ul><li>A1, Long Time Com",
-        "category": "Babies"
-      },
-      {
-        "title": "Spring summer autumn winter in my rhymes Poems",
-        "brand": "Nasza Księgarnia",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Wiosna, lato, jesień, zima w moich rymach - Wanda Chotomska, Nasza Księgarnia</h1>\n<p>9788310133717</p>\n<p>Wydawnictwo Nasza Księgarnia</p> <p><b>Wiosna, lato, jesień, zima w m",
         "category": "Babies"
       }
     ]
