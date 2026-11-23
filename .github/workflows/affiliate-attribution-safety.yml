@@ -1,0 +1,59 @@
+name: Affiliate attribution safety
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app.js"
+      - "api/lead-track.js"
+      - "api/cj-commission-sync.js"
+      - "api/partner-postback.js"
+      - "api/lead-admin-events.js"
+      - "lib/cj-d1.js"
+      - "scripts/test-affiliate-attribution-safety.mjs"
+      - "scripts/test-cj-tracking-hosts.mjs"
+      - ".github/workflows/affiliate-attribution-safety.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "app.js"
+      - "api/lead-track.js"
+      - "api/cj-commission-sync.js"
+      - "api/partner-postback.js"
+      - "api/lead-admin-events.js"
+      - "lib/cj-d1.js"
+      - "scripts/test-affiliate-attribution-safety.mjs"
+      - "scripts/test-cj-tracking-hosts.mjs"
+      - ".github/workflows/affiliate-attribution-safety.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: affiliate-attribution-safety-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  attribution-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check api/lead-track.js
+          node --check api/cj-commission-sync.js
+          node --check api/partner-postback.js
+          node --check api/lead-admin-events.js
+          node --check lib/cj-d1.js
+      - name: Verify CJ host allowlists
+        run: node scripts/test-cj-tracking-hosts.mjs
+      - name: Verify end-to-end attribution safeguards
+        run: node scripts/test-affiliate-attribution-safety.mjs

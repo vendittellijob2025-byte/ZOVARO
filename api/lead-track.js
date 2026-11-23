@@ -75,9 +75,9 @@ export default async function handler(req, res) {
     occurred_at: new Date().toISOString()
   };
 
-  // Persist the click in the private Cloudflare D1 ledger, not the suspended Blob store.
-  // Redirect even if first-party analytics is temporarily unavailable: never block
-  // a shopper from reaching the affiliate's own tracking URL.
+  // Persist the click in the private Cloudflare D1 ledger before redirecting.
+  // If durable attribution storage is unavailable, fail closed: do not send
+  // the shopper to the affiliate without recording the referral first.
   try {
     await ensureClickSchema();
     await d1Query(
