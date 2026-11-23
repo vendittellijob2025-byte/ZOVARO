@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T07:32:20.182Z",
+  "generatedAt": "2026-11-23T14:01:03.480Z",
   "selectedProductCount": 20901,
   "inventoryProductCount": 201080,
   "uniqueAdvertiserCount": 24,
@@ -2322,14 +2322,14 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1806,
+      "productCount": 1807,
       "unclassifiedProductCount": 503,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 371,
-          "directProductCount": 75,
+          "productCount": 372,
+          "directProductCount": 76,
           "children": [
             {
               "name": "Fiction",
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 415,
+      "productCount": 416,
       "unclassifiedProductCount": 49,
       "browseTree": [
         {
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 52,
+          "productCount": 53,
           "directProductCount": 23,
           "children": [
             {
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 10,
+              "productCount": 11,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 5,
-                  "directProductCount": 5,
+                  "productCount": 6,
+                  "directProductCount": 6,
                   "children": []
                 },
                 {
@@ -5604,20 +5604,20 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 760,
-      "unclassifiedProductCount": 7,
+      "productCount": 759,
+      "unclassifiedProductCount": 6,
       "browseTree": [
         {
           "name": "Furniture",
           "path": "Furniture",
-          "productCount": 33,
+          "productCount": 32,
           "directProductCount": 2,
           "children": [
             {
               "name": "Living Room Furniture",
               "path": "Furniture > Living Room Furniture",
-              "productCount": 31,
-              "directProductCount": 31,
+              "productCount": 30,
+              "directProductCount": 30,
               "children": []
             },
             {
@@ -5653,8 +5653,8 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 180,
-          "directProductCount": 4,
+          "productCount": 181,
+          "directProductCount": 6,
           "children": [
             {
               "name": "Cookware",
@@ -5694,8 +5694,8 @@
             {
               "name": "Drinkware",
               "path": "Kitchen & Dining > Drinkware",
-              "productCount": 174,
-              "directProductCount": 174,
+              "productCount": 173,
+              "directProductCount": 173,
               "children": []
             },
             {
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 50,
+      "productCount": 49,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 49,
+          "productCount": 48,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 48,
-              "directProductCount": 48,
+              "productCount": 47,
+              "directProductCount": 47,
               "children": []
             },
             {
@@ -6536,7 +6536,7 @@
     },
     {
       "name": "Pets",
-      "productCount": 113,
+      "productCount": 114,
       "unclassifiedProductCount": 46,
       "browseTree": [
         {
@@ -6592,8 +6592,8 @@
         {
           "name": "Cats",
           "path": "Cats",
-          "productCount": 59,
-          "directProductCount": 59,
+          "productCount": 60,
+          "directProductCount": 60,
           "children": [
             {
               "name": "Cat Food",
@@ -8174,7 +8174,7 @@
     },
     {
       "name": "Sports",
-      "productCount": 1811,
+      "productCount": 1812,
       "unclassifiedProductCount": 355,
       "browseTree": [
         {
@@ -8665,14 +8665,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 357,
+          "productCount": 358,
           "directProductCount": 1,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 354,
-              "directProductCount": 354,
+              "productCount": 355,
+              "directProductCount": 355,
               "children": []
             },
             {
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 402,
+      "productCount": 403,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 117,
-          "directProductCount": 96,
+          "productCount": 118,
+          "directProductCount": 97,
           "children": [
             {
               "name": "Board Games",
@@ -10855,20 +10855,20 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1808,
+  "otherProductCount": 1805,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1808
+      "count": 1805
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 363,
     "emptyTaxonomyNodeCount": 1117,
-    "productsWithKnownSubcategory": 15371,
+    "productsWithKnownSubcategory": 15375,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5530,
+    "productsWithoutSubcategory": 5526,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10931,12 +10931,12 @@
         "count": 11
       },
       {
-        "category": "Home & Living",
+        "category": "Luxury & Prestige",
         "count": 7
       },
       {
-        "category": "Luxury & Prestige",
-        "count": 7
+        "category": "Home & Living",
+        "count": 6
       },
       {
         "category": "Appliances",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5530,
-      "provisional": 15371
+      "needs_classification": 5526,
+      "provisional": 15375
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10987,7 +10987,7 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 354
+        "productCount": 355
       },
       {
         "path": "Fashion > Shoes > Sneakers",
@@ -11039,7 +11039,7 @@
       },
       {
         "path": "Home & Living > Kitchen & Dining > Drinkware",
-        "productCount": 174
+        "productCount": 173
       },
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
@@ -11095,7 +11095,7 @@
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 96
+        "productCount": 97
       },
       {
         "path": "Gaming > Consoles > PlayStation",
@@ -11131,7 +11131,7 @@
       },
       {
         "path": "Books & Media > Books",
-        "productCount": 75
+        "productCount": 76
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
@@ -11146,12 +11146,12 @@
         "productCount": 68
       },
       {
-        "path": "TVs & Home Cinema > Televisions",
+        "path": "Pets > Cats",
         "productCount": 60
       },
       {
-        "path": "Pets > Cats",
-        "productCount": 59
+        "path": "TVs & Home Cinema > Televisions",
+        "productCount": 60
       },
       {
         "path": "Musical Instruments & Studio > Instruments > Wind Instruments",
@@ -11178,12 +11178,12 @@
         "productCount": 50
       },
       {
-        "path": "Office & Technology > Software > Utilities",
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
         "productCount": 48
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
-        "productCount": 48
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 47
       },
       {
         "path": "Travel > Maps & Guides > Wall Maps",
@@ -11247,7 +11247,7 @@
       },
       {
         "path": "Home & Living > Furniture > Living Room Furniture",
-        "productCount": 31
+        "productCount": 30
       },
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry > High Jewelry",
@@ -11357,7 +11357,7 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1598
+        "productCount": 1595
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12213,7 +12213,7 @@
         "description": "<h1>Wielki Ogarniacz Pracy, czyli jak robić i się nie narobić</h1>\n<h2>Pan Buk,  Pani Bukowa</h2>\n<p>Człowiek uczy się na błędach, zwłaszcza w pracy.  Popełniasz wciąż te same pomy"
       },
       {
-        "title": "Siostry z powstania Nieznane historie kobiet walcz",
+        "title": "Sisters from the uprising Unknown stories of women fight",
         "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12222,7 +12222,7 @@
         "description": "<h1>Siostry z powstania. Nieznane historie kobiet walczących o Warszawę</h1>\n<h2>Agata Puścikowska</h2>\n<p><b>&#xa0;</b></p>\n<p>Nieznane historie bohaterskich „Sióstr z powstania”<"
       },
       {
-        "title": "Termos Na Napoje Z Dwoma Kubkami Stalowy Esbit Sculptor Vacuum Flask 0,7L",
+        "title": "Thermos For Drinks With Two Cups Steel Esbit Sculptor Vacuum Flask 0.7L",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12231,7 +12231,7 @@
         "description": "<h2>TERMOS NA NAPOJE Z DWOMA KUBKAMI STALOWY ESBIT SCULPTOR VACUUM FLASK 0,7L</h2><h2>TERMOS ESBIT SCULPTOR VACUUM FLASK 0,7L</h2>\n<p>✅ Termos wykonany został ze <b>stali nierdzewn"
       },
       {
-        "title": "Termos Próżniowy 2 Kubki Esbit Vacuum Flask 0,7L Stalowy Oliwkowy 700ML",
+        "title": "Vacuum Thermos 2 Cups Esbit Vacuum Flask 0.7L Steel Olive 700ML",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12240,16 +12240,7 @@
         "description": "<h1>TERMOS PRÓŻNIOWY 2 KUBKI ESBIT VACUUM FLASK 0,7L STALOWY OLIWKOWY 700ML</h1><h2>TERMOS PRÓŻNIOWY ESBIT VACUUM FLASK 0,7L</h2><p>✅ <b>Oliwkowo-zielona wersja</b> jednego z najpo"
       },
       {
-        "title": "Gra Planszowa Edukacyjna Quiz Zwierzęta Big",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Quiz Zwierzęta BIG</h1>\n<h2>Alexander 1724</h2> <h1>Quiz Zwierzęta</h1>\n<p>Jakie zwierzę ma pomarańczowe zęby? Gdzie żyje wielbłąd dwugarbny? Który słoń (afrykański czy indyjsk"
-      },
-      {
-        "title": "Mistrz Słowa Aleksander 0343",
+        "title": "Master of the Word Aleksander 0343",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12258,7 +12249,7 @@
         "description": "<h1>MISTRZ SŁOWA</h1>\n<h1>ALEKSANDER 0343</h1> <p>Pasjonująca gra słowna dla 2-10 graczy. W trakcie swojej kolejki każdy z graczy stara się jak najszybciej ułożyć słowo z liter zna"
       },
       {
-        "title": "Zestaw 100 Gier Dla Całej Rodziny Bierki Warcaby",
+        "title": "A set of 100 games for the whole family: Checkers and Checkers",
         "brand": "Alexander",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12267,7 +12258,7 @@
         "description": "<h1>Zestaw 100 gier dla całej Rodziny</h1>\n<h2>Alexander 0376</h2> <h2>100 Gier</h2>\n<p>Zbiór aż stu atrakcyjnych, emocjonujących i różnorodnych gier.</p>\n<p>W tym bogatym zestawie"
       },
       {
-        "title": "Drewniane Kółko Koło ze sklejki Kółko 10cm 10szt",
+        "title": "Wooden Wheel Plywood Wheel 10cm Wheel 10pcs",
         "brand": "Fenwit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12276,16 +12267,7 @@
         "description": "<h2>Drewniane KÓŁKO KOŁO ze sklejki KÓŁKO 10cm 10szt</h2><p><b>Podstawki ze sklejki</b>&#xa0;pod szklanki to ostatnio najmodniejszy gadżet. Połączenie&#xa0;<b>rustykalnej dekoracji"
       },
       {
-        "title": "Termos z kubkiem turystyczny próżniowy Mil-Tec stal nierdzewna 1L olive",
-        "brand": "Mil-Tec",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Termos turystyczny próżniowy Mil-Tec ze stali nierdzewnej 1L olive</h1><h2>[14532000]</h2><h2>Parametry:</h2><ul><li>Model: Termos stalowy 1L z kubkiem</li><li>Marka: Mil-Tec, "
-      },
-      {
-        "title": "Termos Esbit Sculptor Vacuum Flask 1l Black na napoje czarno srebrny",
+        "title": "Esbit Sculptor Vacuum Flask 1l Black thermos for drinks, black and silver",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12294,7 +12276,7 @@
         "description": "<h2>Termos Esbit Sculptor Vacuum Flask 1l Black</h2><p>To doskonały termos do przechowywania gorących jak i zimnych płynów. Niezawodny w każdej sytuacji i w każdym miejscu.</p><p>N"
       },
       {
-        "title": "Termos Esbit Sculptor Vacuum Flask 1l Black Sleeve czarno srebrny na napoje",
+        "title": "Esbit Sculptor Vacuum Flask 1l Black Sleeve thermos, black and silver, for drinks",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12303,7 +12285,7 @@
         "description": "<h2>Termos Esbit Sculptor Vacuum Flask with Sleeve 1l Black z silikonowym kołnierzem</h2><p>To doskonały termos do przechowywania gorących jak i zimnych płynów. Niezawodny w każdej"
       },
       {
-        "title": "50 Gier Chińczyk Bierki Domino Warcaby I Inne",
+        "title": "50 Games Chinese Pickers, Dominoes, Checkers and Others",
         "brand": "Alexander",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12312,22 +12294,13 @@
         "description": "<h1>50 gier bierki, chińczyk, młynek, domino i inne gry</h1><p>Wydawca: Alexander</p><p>Rok wydania: 2014</p><p>Oprawa: Pudełko</p><p>Waga: 0,83 kg</p><p>Stan: Nowa</p><p>\"Świat 50"
       },
       {
-        "title": "Filipek i rodzeństwo",
+        "title": "Filipek and siblings",
         "brand": "Wydawnictwo Literatura",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Home & Living",
         "description": "<h1>Filipek i rodzeństwo</h1> <ul><li>Autor: Strękowska-Zaremba Małgorzata</li><li>Wydawnictwo: Literatura</li><li>Rok wydania: 2016</li><li>Ilość stron: 144</li><li>Format: 14.5x2"
-      },
-      {
-        "title": "Plaster Miodu Adam Szustak (książka)",
-        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Plaster miodu - Adam Szustak [KSIĄŻKA]</h1><p><b>Autor:</b> Adam Szustak</p><p><b>Rok wydania:</b> 2015</p> <h2>Opis</h2><p>Może czytasz to wieczorem, siedzisz gdzieś tam w swo"
       },
       {
         "title": "Model F-16 Polski Jastrząb do sklejania+FARBY Klej",
@@ -12727,6 +12700,33 @@
       },
       {
         "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "INNISFREE No-Sebum Moisture Powder",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Smooth and moist oil-blotting powder to control shine while leaving moisture NO-SEBUM MOISTURE POWDER NO SEBUM MOISTURE FOR InnIsFree Matte outside and moist inside for dry or oily"
+      },
+      {
+        "title": "[Value $210 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
         "productType": "",
@@ -13746,17 +13746,7 @@
         "category": "Home & Living"
       },
       {
-        "title": "Termos Stalowy 100% Szczelny pojemny bidon z kubkiem uniwersalny1L Kamille",
-        "brand": "Kamille",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Termos próżniowy KAMILLE 1,0 L ze stali nierdzewnej KM-2059</h1><h2>Dlaczego nasz kubek to doskonały wybór?</h2><p>✅&nbsp;<b>Materiał najwyższej jakości</b>&nbsp;- wykonany ze ",
-        "category": "Home & Living"
-      },
-      {
-        "title": "Vango Magma Flask Termos Nowy 1 l czarny 1000ml",
+        "title": "Vango Magma Flask Thermos New 1 l black 1000 ml",
         "brand": "Vango",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13766,7 +13756,7 @@
         "category": "Home & Living"
       },
       {
-        "title": "Podstawka korkowa Ja przyszedłem po to",
+        "title": "Cork stand This is what I came for",
         "brand": "Szaron",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13776,7 +13766,7 @@
         "category": "Home & Living"
       },
       {
-        "title": "10 Kubeczki 200ml jednorazowe przezroczyste pipeta",
+        "title": "10 Cups 200ml disposable transparent pipette",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13786,7 +13776,7 @@
         "category": "Home & Living"
       },
       {
-        "title": "Tusz Hp 653 DeskJet Plus 6075 6475 3YM75AE Czarny",
+        "title": "Hp 653 DeskJet Plus Ink 6075 6475 3YM75AE Black",
         "brand": "HP",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -14233,6 +14223,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Books & Media",
         "description": "<h1>Sapiens: A Brief History of Humankind. Harari, Yuval Noah</h1><h2>Noah Yuval Harari</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2015\n</li>\n<li>\nOprawa: Miękka\n",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Lift-the-flap Very First Questions And Answers W..",
+        "brand": "Usborne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Lift-the-flap Very First Questions and Answers What is the Moon?</h1><h2></h2> <ul>\n<li>\nWydawca: Usborne\n</li>\n<li>\nRok wydania: 2020\n</li>\n<li>\nOprawa: Twarda\n</li>\n<li>\nForm",
         "category": "Books & Media"
       },
       {
