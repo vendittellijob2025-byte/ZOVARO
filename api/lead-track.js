@@ -86,6 +86,13 @@ export default async function handler(req, res) {
     );
   } catch (error) {
     console.error("ZOVARO D1 outbound click storage error:", error);
+    // Strict attribution policy: never send a shopper to an affiliate unless
+    // ZOVARO has durably recorded the outbound click first.
+    res.setHeader("Cache-Control", "no-store");
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    return res.status(503).send(
+      "<!doctype html><html lang=\"it\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Collegamento temporaneamente non disponibile</title><body style=\"font-family:Arial,sans-serif;max-width:620px;margin:12vh auto;padding:24px;color:#172033\"><h1>Collegamento temporaneamente non disponibile</h1><p>ZOVARO non è riuscito a registrare il clic. Per proteggere il tracciamento, non ti abbiamo reindirizzato al partner.</p><p>Torna alla pagina del prodotto e riprova tra qualche minuto.</p></body></html>"
+    );
   }
 
   res.setHeader("Cache-Control", "no-store");

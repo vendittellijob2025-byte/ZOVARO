@@ -94,30 +94,40 @@ const CJ_TRACKING_HOSTS = new Set([
 
 function getProductClickUrl(product) {
   const originalUrl = String(product.clickUrl || product.destination || "").trim();
-  if (!originalUrl) return "#";
+  if (!originalUrl || originalUrl === "#") return "#";
 
-  const partnerId =
-    String(product.source || "").toUpperCase() === "CJ"
-      ? getCjPartnerId(product)
-      : "";
-
-  if (!partnerId) return originalUrl;
-
+  // Fail closed: every catalog outbound link must pass through ZOVARO's
+  // click ledger. Unknown/unconfigured partner hosts are rejected server-side.
   try {
     const destination = new URL(originalUrl);
-    if (destination.protocol !== "https:") return originalUrl;
-    if (!CJ_TRACKING_HOSTS.has(destination.hostname.toLowerCase())) return originalUrl;
+    if (destination.protocol !== "https:") return "#";
 
-    const trackingUrl = new URL(ZOVARO_TRACKING_API);
-    trackingUrl.searchParams.set("partner", partnerId);
+    const source = String(product.source || "").toUpperCase();
+    const isCj = source === "CJ";
+    const merchantName = String(product.merchant || product.advertiserName || "partner");
+    const merchantSlug = merchantName
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 32) || "partner";
+    const partnerId = isCj
+      ? getCjPartnerId(product)
+      : ("partner-" + merchantSlug).slice(0, 60);
 
-    // The same unique referral ID is recorded by ZOVARO and sent to CJ as
-    // its supported SID sub-ID so later commission records can be reconciled.
+    if (!partnerId) return "#";
+
     const referralId =
       "zv-" + Date.now().toString(36) + "-" +
       Math.random().toString(36).slice(2, 12);
 
-    destination.searchParams.set("SID", referralId);
+    // CJ supports SID as the publisher sub-ID. Other networks retain their
+    // original URL unchanged; ZOVARO still records the outbound referral.
+    if (isCj) destination.searchParams.set("SID", referralId);
+
+    const trackingUrl = new URL(ZOVARO_TRACKING_API);
+    trackingUrl.searchParams.set("partner", partnerId);
     trackingUrl.searchParams.set("ref", referralId);
     trackingUrl.searchParams.set(
       "item",
@@ -128,7 +138,7 @@ function getProductClickUrl(product) {
     trackingUrl.searchParams.set("to", destination.toString());
     return trackingUrl.toString();
   } catch {
-    return originalUrl;
+    return "#";
   }
 }
 
