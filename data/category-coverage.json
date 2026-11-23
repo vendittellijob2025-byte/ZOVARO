@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-22T19:35:16.472Z",
-  "selectedProductCount": 20902,
-  "inventoryProductCount": 199987,
+  "generatedAt": "2026-11-23T07:32:20.182Z",
+  "selectedProductCount": 20901,
+  "inventoryProductCount": 201080,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -2329,7 +2329,7 @@
           "name": "Books",
           "path": "Books",
           "productCount": 371,
-          "directProductCount": 74,
+          "directProductCount": 75,
           "children": [
             {
               "name": "Fiction",
@@ -2376,8 +2376,8 @@
             {
               "name": "Education & Reference",
               "path": "Books > Education & Reference",
-              "productCount": 142,
-              "directProductCount": 142,
+              "productCount": 141,
+              "directProductCount": 141,
               "children": []
             },
             {
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 418,
+      "productCount": 415,
       "unclassifiedProductCount": 49,
       "browseTree": [
         {
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 55,
+          "productCount": 52,
           "directProductCount": 23,
           "children": [
             {
@@ -2930,8 +2930,8 @@
             {
               "name": "Monitors",
               "path": "Computers > Monitors",
-              "productCount": 6,
-              "directProductCount": 6,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": [
                 {
                   "name": "Gaming Monitors",
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 12,
+              "productCount": 10,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 7,
-                  "directProductCount": 7,
+                  "productCount": 5,
+                  "directProductCount": 5,
                   "children": []
                 },
                 {
@@ -3726,13 +3726,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 980,
-          "directProductCount": 56,
+          "directProductCount": 54,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 313,
-              "directProductCount": 313,
+              "productCount": 316,
+              "directProductCount": 316,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 16,
-              "directProductCount": 16,
+              "productCount": 15,
+              "directProductCount": 15,
               "children": []
             }
           ]
@@ -3975,8 +3975,8 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 224,
-      "unclassifiedProductCount": 54,
+      "productCount": 226,
+      "unclassifiedProductCount": 56,
       "browseTree": [
         {
           "name": "Pantry Staples",
@@ -5605,7 +5605,7 @@
     {
       "name": "Home & Living",
       "productCount": 760,
-      "unclassifiedProductCount": 8,
+      "unclassifiedProductCount": 7,
       "browseTree": [
         {
           "name": "Furniture",
@@ -5653,7 +5653,7 @@
         {
           "name": "Kitchen & Dining",
           "path": "Kitchen & Dining",
-          "productCount": 181,
+          "productCount": 180,
           "directProductCount": 4,
           "children": [
             {
@@ -5694,8 +5694,8 @@
             {
               "name": "Drinkware",
               "path": "Kitchen & Dining > Drinkware",
-              "productCount": 175,
-              "directProductCount": 175,
+              "productCount": 174,
+              "directProductCount": 174,
               "children": []
             },
             {
@@ -5710,8 +5710,8 @@
         {
           "name": "Bedding & Bath",
           "path": "Bedding & Bath",
-          "productCount": 15,
-          "directProductCount": 15,
+          "productCount": 16,
+          "directProductCount": 16,
           "children": [
             {
               "name": "Sheets & Pillowcases",
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 518,
-          "directProductCount": 513,
+          "productCount": 519,
+          "directProductCount": 514,
           "children": [
             {
               "name": "Wall Art",
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1141,
+      "unclassifiedProductCount": 1149,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 243,
-          "directProductCount": 243,
+          "productCount": 240,
+          "directProductCount": 240,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,7 +6147,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 415,
+          "productCount": 410,
           "directProductCount": 0,
           "children": [
             {
@@ -6167,22 +6167,22 @@
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 33,
-              "directProductCount": 33,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 119,
-              "directProductCount": 119,
+              "productCount": 116,
+              "directProductCount": 116,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 9,
-              "directProductCount": 9,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             }
           ]
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 47,
+      "productCount": 50,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 46,
+          "productCount": 49,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 45,
-              "directProductCount": 45,
+              "productCount": 48,
+              "directProductCount": 48,
               "children": []
             },
             {
@@ -10564,8 +10564,8 @@
     },
     {
       "name": "Travel",
-      "productCount": 97,
-      "unclassifiedProductCount": 49,
+      "productCount": 98,
+      "unclassifiedProductCount": 50,
       "browseTree": [
         {
           "name": "Luggage",
@@ -10855,24 +10855,24 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1812,
+  "otherProductCount": 1808,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1812
+      "count": 1808
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 363,
     "emptyTaxonomyNodeCount": 1117,
-    "productsWithKnownSubcategory": 15378,
+    "productsWithKnownSubcategory": 15371,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5524,
+    "productsWithoutSubcategory": 5530,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1141
+        "count": 1149
       },
       {
         "category": "Beauty",
@@ -10912,14 +10912,14 @@
       },
       {
         "category": "Food & Grocery",
-        "count": 54
-      },
-      {
-        "category": "Electronics",
-        "count": 49
+        "count": 56
       },
       {
         "category": "Travel",
+        "count": 50
+      },
+      {
+        "category": "Electronics",
         "count": 49
       },
       {
@@ -10932,7 +10932,7 @@
       },
       {
         "category": "Home & Living",
-        "count": 8
+        "count": 7
       },
       {
         "category": "Luxury & Prestige",
@@ -10944,13 +10944,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5524,
-      "provisional": 15378
+      "needs_classification": 5530,
+      "provisional": 15371
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20902
+      "pendingReference": 20901
     },
     "mostUsedBrowsePaths": [
       {
@@ -10979,7 +10979,7 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 513
+        "productCount": 514
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -10991,7 +10991,7 @@
       },
       {
         "path": "Fashion > Shoes > Sneakers",
-        "productCount": 313
+        "productCount": 316
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 243
+        "productCount": 240
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11039,7 +11039,7 @@
       },
       {
         "path": "Home & Living > Kitchen & Dining > Drinkware",
-        "productCount": 175
+        "productCount": 174
       },
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
@@ -11055,7 +11055,7 @@
       },
       {
         "path": "Books & Media > Books > Education & Reference",
-        "productCount": 142
+        "productCount": 141
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 119
+        "productCount": 116
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11130,15 +11130,15 @@
         "productCount": 80
       },
       {
+        "path": "Books & Media > Books",
+        "productCount": 75
+      },
+      {
         "path": "Fashion > Clothing > T-Shirts & Tops",
         "productCount": 75
       },
       {
         "path": "Electronics > Audio",
-        "productCount": 74
-      },
-      {
-        "path": "Books & Media > Books",
         "productCount": 74
       },
       {
@@ -11162,12 +11162,12 @@
         "productCount": 56
       },
       {
-        "path": "Fashion > Shoes",
+        "path": "Gaming > Consoles > Xbox",
         "productCount": 56
       },
       {
-        "path": "Gaming > Consoles > Xbox",
-        "productCount": 56
+        "path": "Fashion > Shoes",
+        "productCount": 54
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
@@ -11178,16 +11178,16 @@
         "productCount": 50
       },
       {
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 48
+      },
+      {
         "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
         "productCount": 48
       },
       {
         "path": "Travel > Maps & Guides > Wall Maps",
         "productCount": 46
-      },
-      {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 45
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
@@ -11238,11 +11238,11 @@
         "productCount": 33
       },
       {
-        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 33
+        "path": "Automotive > Rims & Tires > Car Tires",
+        "productCount": 32
       },
       {
-        "path": "Automotive > Rims & Tires > Car Tires",
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
         "productCount": 32
       },
       {
@@ -11302,15 +11302,15 @@
         "productCount": 23
       },
       {
+        "path": "Books & Media > Books > Nonfiction",
+        "productCount": 21
+      },
+      {
         "path": "Babies > Hygiene & Wellness > Baby Skin Care",
         "productCount": 21
       },
       {
         "path": "Toys & Games > Dolls & Figures > Action Figures",
-        "productCount": 21
-      },
-      {
-        "path": "Books & Media > Books > Nonfiction",
         "productCount": 21
       },
       {
@@ -11342,22 +11342,22 @@
         "productCount": 16
       },
       {
+        "path": "Home & Living > Bedding & Bath",
+        "productCount": 16
+      },
+      {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
         "productCount": 16
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
-        "productCount": 16
-      },
-      {
-        "path": "Home & Living > Bedding & Bath",
+        "path": "Books & Media > Music > CDs",
         "productCount": 15
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1602
+        "productCount": 1598
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11619,7 +11619,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling czarny Tkanina tapicerska Materiał obiciowy",
+        "title": "Bling black Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11628,7 +11628,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling różowy Tkanina tapicerska Materiał obiciowy",
+        "title": "Bling pink Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11637,7 +11637,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Bling szmaragd Tkanina tapicerska Materiał obiciow",
+        "title": "Bling emerald Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11646,7 +11646,7 @@
         "description": "<h1>BLING gładki - Materiał tapicerski, Tkanina meblowa, obiciowa</h1><h2>Tkanina uniwersalna, idealna na meble, narzuty, zasłony, itp. Delikatny połysk tkaniny nadaje jej niesamow"
       },
       {
-        "title": "Alcala czerwona Tkanina tapicerska Materiał obicio",
+        "title": "Alcala red Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11655,7 +11655,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala czarna Tkanina tapicerska Materiał obiciowy",
+        "title": "Alcala black Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11664,7 +11664,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala szara Tkanina tapicerska Materiał obiciowy",
+        "title": "Alcala gray Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11673,7 +11673,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala grafit Tkanina tapicerska Materiał obiciowy",
+        "title": "Alcala graphite Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11682,7 +11682,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala beżowa Tkanina tapicerska Materiał obiciowy",
+        "title": "Alcala beige Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11691,7 +11691,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala zielona Tkanina tapicerska Materiał obiciow",
+        "title": "Alcala green Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11700,7 +11700,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala niebieska Tkanina tapicerska Materiał obici",
+        "title": "Alcala blue Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11709,7 +11709,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala brązowa Tkanina tapicerska Materiał obiciow",
+        "title": "Alcala brown Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11718,7 +11718,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala fioletowa Tkanina tapicerska Materiał obici",
+        "title": "Alcala purple Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11727,7 +11727,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "Alcala różowa Tkanina tapicerska Materiał obiciowy",
+        "title": "Alcala pink Upholstery fabric Upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11736,7 +11736,7 @@
         "description": "<h2>Tkanina obiciowa meblowa tapicerska. ALCALA Welur Zamsz Nubuk</h2><p>1szt = 0,5mb o szerokości 1,46m</p><p>decydując się na więcej sztuk ucinamy ALCALE w jednym kawałku.</p><p>"
       },
       {
-        "title": "38kol Eko skóra Skaj Tkanina obiciowa Materiał Tap",
+        "title": "38kol Eco leather Skai Upholstery fabric Tap material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11745,7 +11745,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft szary Eko skóra Skaj Tkanina obiciowa Materia",
+        "title": "Soft gray Eco leather Skai Upholstery fabric Materia",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11754,7 +11754,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft biały Eko skóra Skaj Tkanina obiciowa Materia",
+        "title": "Soft white Eco leather Skai Upholstery fabric Materia",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11763,7 +11763,7 @@
         "description": "<h1>Ekoskóra SOFT&#xa0;gładka. Tkanina obiciowa. Materiał tapicerski.</h1><h2>Soft - ekoskóra niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft grafitowy Eko skóra Skaj Tkanina Materiał obi",
+        "title": "Soft graphite Eco leather Skaj Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11772,7 +11772,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft złoty Eko skóra Skaj Tkanina Materiał obiciow",
+        "title": "Soft gold Eco leather Skai Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11781,7 +11781,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft czarny Eko skóra Skaj Tkanina obiciowa Materi",
+        "title": "Soft black Eco-leather Materi upholstery fabric",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11790,7 +11790,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft jasno złoty Eko skóra Skaj Tkanina Materiał o",
+        "title": "Soft light gold Eco leather Skai Fabric Material o",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11799,7 +11799,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft ciemno złoty Eko skóra Skaj Tkanina Materiał",
+        "title": "Soft dark gold Eco leather Skaj Fabric Material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11808,7 +11808,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft pudrowy róż Eko skóra Skaj Tkanina Materiał",
+        "title": "Soft powder pink Eco leather Imitation leather Fabric Material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11817,7 +11817,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft różowy Eko skóra Skaj Tkanina Materiał Obicio",
+        "title": "Soft pink Eco leather Skai Fabric Material Obicio",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11826,7 +11826,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft niebieski Eko skóra Skaj Tkanina Materiał Obi",
+        "title": "Soft blue Eco leather Skai Fabric Obi material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11835,7 +11835,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft granatowy Eko skóra Skaj Tkanina Materiał Obi",
+        "title": "Soft navy blue Eco leather Skai Fabric Obi material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11844,7 +11844,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft zielony metalik Eko skóra Skaj Tkanina Materi",
+        "title": "Soft green metallic Eco leather Skaj Fabric Materi",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11853,7 +11853,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft granat metalik Eko skóra Skaj Tkanina Materia",
+        "title": "Soft navy blue metallic Eco leather Skaj Fabric Materia",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11862,7 +11862,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft brązowa Eko skóra Skaj Tkanina Materiał Obici",
+        "title": "Soft brown Eco leather Skai Fabric Material Upholstery",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11871,7 +11871,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft ciemno brązowa Eko skóra Skaj Tkanina Materia",
+        "title": "Soft dark brown Eco leather Skai Fabric Materia",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11880,7 +11880,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft beżowy Eko skóra Skaj Tkanina Materiał Obicio",
+        "title": "Soft beige Eco leather Skai Fabric Material Obicio",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11889,7 +11889,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft perła Eko skóra Skaj Tkanina Materiał Obiciow",
+        "title": "Soft pearl Eco leather Skai Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11898,7 +11898,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Soft khaki Eko skóra Skaj Tkanina Materiał Obiciow",
+        "title": "Soft khaki Eco leather Skaj Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11907,7 +11907,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Wawa czarna Tkanina tapicerska Materiał obiciowy",
+        "title": "Wawa black Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11916,7 +11916,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa khaki Tkanina tapicerska Materiał obiciowy",
+        "title": "Wawa khaki Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11925,7 +11925,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa beżowa Tkanina tapicerska Materiał obiciowy",
+        "title": "Wawa beige Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11934,7 +11934,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa brązowa Tkanina tapicerska Materiał obiciowy",
+        "title": "Wawa brown Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11943,7 +11943,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa zielona Tkanina tapicerska Materiał obiciowy",
+        "title": "Wawa green Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11952,7 +11952,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa butelkowa zieleń Tkanina tapicerska Materiał",
+        "title": "Wawa bottle green Upholstery fabric Material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11961,7 +11961,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa niebieska Tkanina tapicerska Materiał Obiciow",
+        "title": "Wawa blue Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11970,7 +11970,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa granatowa Tkanina tapicerska Materiał Obiciow",
+        "title": "Wawa navy blue Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11979,7 +11979,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa czerwona Tkanina tapicerska Materiał Obiciowa",
+        "title": "Wawa red Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11988,7 +11988,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa grafitowa Tkanina tapicerska Materiał Obiciow",
+        "title": "Wawa graphite Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11997,7 +11997,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa szara Tkanina tapicerska Materiał Obiciowy",
+        "title": "Wawa gray Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12006,7 +12006,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa gołębi Tkanina tapicerska Materiał Obiciowy",
+        "title": "Wawa pigeons Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12015,7 +12015,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa musztardowa Tkanina tapicerska Materiał Obici",
+        "title": "Wawa mustard Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12024,7 +12024,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wawa pudrowy róż Tkanina tapicerska Materiał Obici",
+        "title": "Wawa powder pink Upholstery fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12033,7 +12033,7 @@
         "description": "<h1>Tkanina WAWA. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>WAWA tkanina jest przyjemna, delikatna w dotyku a jednocześnie bardzo odporna na ścieranie ora"
       },
       {
-        "title": "Wykrojnik baloniki 7 cm x 9 cm",
+        "title": "Balloon die, 7 cm x 9 cm",
         "brand": "DpCraft",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12042,16 +12042,7 @@
         "description": "<p><b>Wykrojnik - baloniki 7 cm x 9 cm</b></p>\n<p>Wykrojnik \"Baloniki\" jest dedykowany maszynce tnąco-wytłaczającej dpCraft, ale&#xa0;także jest kompatybilny z wszystkimi dostępnym"
       },
       {
-        "title": "Poduszka ortopedyczna profilowana, dziecięca",
-        "brand": "ARmedical",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Poduszka ortopedyczna profilowana, dla dzieci.</h1><h2>Przeznaczona dla dzieci w wieku od 2 do 6 lat.</h2><p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopa"
-      },
-      {
-        "title": "Soft czerwony Eko skóra Skaj Tkanina Materiał obic",
+        "title": "Soft red Eco leather Skai Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12060,7 +12051,7 @@
         "description": "<h1>CENTRUM TKANIN</h1><h2>SOFT eko skóra lub 2. WAWA tkanina tapicerska już od 0,5mb.</h2><h2>Cana 10zł brutto dotyczy 1szt = 0,5mb</h2><h2>Decydując się np. na 20szt otrzymujemy "
       },
       {
-        "title": "Soft srebrny Eko skóra Skaj Tkanina Materiał obici",
+        "title": "Soft silver Eco leather Skai Fabric Upholstery material",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12069,7 +12060,7 @@
         "description": "<h1>Ekoskóra SOFT. Tkanina obiciowa. Materiał tapicerski sprzedawany na metry.</h1><h2>Soft - Niezwykle wytrzymała a jednocześnie miękka w dotyku. Bardzo efektowna, zadowoli nawet "
       },
       {
-        "title": "Sznurek Bawełniany biało- czerwony 2mm 50m",
+        "title": "Cotton string, white and red, 2mm, 50m",
         "brand": "Grzanpol",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12078,16 +12069,7 @@
         "description": "<h2>SZNUREK BAWEŁNIANY biało- czerwony 2mm 50m</h2>\n<p>Sznurek bawełniany to niewątpliwie niezbędny element w wielu projektach kreatywnych, takich jak własna biżuteria, akcesoria d"
       },
       {
-        "title": "Tasiemki ozdobne, satynowe Brights, 6 szt.",
-        "brand": "DpCraft",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p><b>Tasiemki ozdobne, satynowe - Brights, 6 szt.</b></p>\n<p>Uniwersalne tasiemki satynowe w żywych, nasyconych kolorach.</p>\n<p>Będą doskonałym dodatkiem do zdobienia kartek okol"
-      },
-      {
-        "title": "Tusze GT51 52 XL Do Drukarki Hp Ink Tank 315 410 415 Smart Tank 510 515 589",
+        "title": "GT51 52 XL Ink Cartridges For Hp Ink Tank 315 410 415 Smart Tank 510 515 589 Printers",
         "brand": "4INK",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12096,7 +12078,7 @@
         "description": "<h1>✅ 8x Tusz do Drukarki HP - GT51 XL / GT52 XL / GT53 XL</h1><p><b>Certyfikaty ISO 9001 - ISO 14001 / Jakość Premium /</b> <b>Pojemność XL</b></p><p><b>✅ 8x TUSZ GT-51 XL / GT-52"
       },
       {
-        "title": "Dywan Tkany Skóra Owcza Ciemny Grafit Handmade",
+        "title": "Carpet Woven Sheepskin Dark Graphite Handmade",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12105,7 +12087,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Dywan Skóra Owcza Tkana Narzuta Jasny Brąz",
+        "title": "Sheepskin Rug Woven Bedspread Light Brown",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12114,7 +12096,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Skóra Owcza Komplet Narzut Tkanych Ciemny Grafit",
+        "title": "Sheepskin Set of Woven Bedspreads Dark Graphite",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12123,7 +12105,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Narzuty na Wypocznek Skóra Owcza Tkana Jasny Brąz",
+        "title": "Sheepskin Woven Leisure Bedspreads Light Brown",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12132,7 +12114,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Krzesełko Baranek Stojak Skóra Owcza Naturalna",
+        "title": "Lamb Chair Stand, Natural Sheep Leather",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12141,7 +12123,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Miś Niedźwiadek Skóra Owcza Naturalna Dekoracja",
+        "title": "Teddy Bear Sheepskin Natural Decoration",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12150,7 +12132,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także rzete"
       },
       {
-        "title": "Baranek Na Biegunach Bujak Skóra Owcza Naturalna",
+        "title": "Rocking Lamb Rocking Rocker, Natural Sheep Leather",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12159,7 +12141,7 @@
         "description": "<p><b>Jesteśmy garbarnią produkującą skóry dekoracyjne naturalne, zajmujemy&nbsp; się wyprawą skór od roku 1989 przez te wszystkie lata nasze rzemiosło cieszy się zaufaniem a także"
       },
       {
-        "title": "Tusz Hp 653 Czarny 5 ml 3YM75AE",
+        "title": "Hp 653 Black Ink 5 ml 3YM75AE",
         "brand": "HP",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12168,16 +12150,7 @@
         "description": "<h2>Tusz HP 653 Czarny 5 ml 3YM75AE</h2><ul><li><b>Producent drukarki&#xA0;:</b>&#xA0;HP</li><li><b>Kolor:</b>&#xA0;Czarny</li><li><b>Pojemno&#x15B;&#x107;&#xA0;[ml]:</b>&#xA0;5</l"
       },
       {
-        "title": "Wakacyjne Piosenki cz. 4 100 popularnych piosenek",
-        "brand": "Beseder",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<p>WAKACYJNE PIOSENKI cz. 4 100 popularnych piosenek</p><p> Śpiewnik zawiera 100 popularnych piosenek z zapisem nutowym i harmonizacją. </p><p> wybór i opracowanie: Krzysztof Nowak"
-      },
-      {
-        "title": "Naturalne wody owocowe. Susan Marque",
+        "title": "Natural fruit waters. Susan Marque",
         "brand": "Vital",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12186,7 +12159,7 @@
         "description": "<p>Naturalne wody owocowe. Susan Marque</p> <h1>\"Naturalne wody owocowe. Jak prawidłowo wykonać energetyzujące, oczyszczające i antyoksydacyjne izotoniki\" Susan Marque</h1> \n<p>Tyt"
       },
       {
-        "title": "Naturalne wody owocowe. Susan Marque",
+        "title": "Natural fruit waters. Susan Marque",
         "brand": "Vital",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12204,7 +12177,7 @@
         "description": "<p>Numer produktu 00824/2018/01/2019-05</p><h1>NA SPRZEDAŻ ORYGINALNA PŁYTA CD JAK W TYTULE</h1><p>Wszystkie parametry wydania oraz utwory, widoczne są na dużych fotkach .</p><p>St"
       },
       {
-        "title": "Termos Na Napoje Z Dwoma Kubkami Esbit Vacuum Flask 1L Długo Trzyma Ciepło",
+        "title": "Thermos for Drinks with Two Cups Esbit Vacuum Flask 1L Keeps Warm for a Long Time",
         "brand": "Esbit",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12213,16 +12186,7 @@
         "description": "<h1>TERMOS NA NAPOJE Z DWOMA KUBKAMI ESBIT VACUUM FLASK 1L DŁUGO TRZYMA CIEPŁO</h1><h2>TERMOS ESBIT SCULPTOR VACUUM FLASK 1L</h2><p>✅ Termos wykonany został ze <b>stali nierdzewnej"
       },
       {
-        "title": "Plaster miodu Adam Szustak Op",
-        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Plaster miodu</h1>\n<h2>Adam Szustak OP</h2>\n<p><b>Bóg każdego dnia chce osłodzić ludzkie cierpienia przykładając do naszych ran PLASTER MIODU</b></p>\n<p>Może czytasz to wieczor"
-      },
-      {
-        "title": "Stalowy Bidon Butelka Czerwona Duża Lekkai Stal Nierdzewna ION8 1,2 Litr",
+        "title": "Steel Water Bottle Red Large Lightweight Stainless Steel ION8 1.2 Liter",
         "brand": "Ion8",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12231,7 +12195,7 @@
         "description": "<h1>Oryginalny stalowy bidon na wodę ION8®</h1>\n<ul><li><b>Posiada Atest PZH</b></li><li><b>stal nierdzewna</b><b> 304</b></li><li><b>Szczelny</b> - idealny do plecaka, torby czy t"
       },
       {
-        "title": "Anioł do wynajęcia Magdalena Kordel",
+        "title": "Angel for rent Magdalena Kordel",
         "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12240,7 +12204,7 @@
         "description": "<h1>Anioł do wynajęcia</h1>\n<h2>Magdalena Kordel</h2>\n<p><b>Daj się porwać niezwykłej magii tej opowieści.</b></p>\n<p><b>Uwierz w cuda i rozejrzyj się dookoła – może i ty zostanies"
       },
       {
-        "title": "Wielki Ogarniacz Pracy czyli jak robić i się nie n",
+        "title": "The Great Master of Work, or what to do and what not to do",
         "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12742,6 +12706,42 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
+      },
+      {
+        "title": "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
+      },
+      {
+        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R7 35217",
+        "brand": "Piko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
+      },
+      {
+        "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
+        "brand": "UNice",
+        "advertiser": "UNice",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       }
     ],
     "missingSubcategoryExamples": [
@@ -12752,7 +12752,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Automatically sorts images, documents, videos & more into predefined folders. This means you always have the certainty that all files can be found at any time.",
+        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
         "category": "Electronics"
       },
       {
@@ -13352,7 +13352,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Scriba Travel Educational Word Game Alexander",
+        "description": "Scriba Travel Gra Słowna Edukacyjna Alexander",
         "category": "Travel"
       },
       {
@@ -13402,7 +13402,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Scriba Travel Word Game",
+        "description": "Gra Słowna Scriba Podróżna Travel",
         "category": "Travel"
       },
       {
@@ -13412,7 +13412,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Travel",
-        "description": "Hotel Room No. 1. Emma Mars",
+        "description": "Hotel Pokój nr 1. Emma Mars",
         "category": "Travel"
       },
       {
@@ -13716,7 +13716,17 @@
         "category": "Travel"
       },
       {
-        "title": "Koło drewniane pełne kółko decupage podstawka 8cm",
+        "title": "Holiday Songs part 4,100 popular songs",
+        "brand": "Beseder",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Travel",
+        "description": "<p>WAKACYJNE PIOSENKI cz. 4 100 popularnych piosenek</p><p> Śpiewnik zawiera 100 popularnych piosenek z zapisem nutowym i harmonizacją. </p><p> wybór i opracowanie: Krzysztof Nowak",
+        "category": "Travel"
+      },
+      {
+        "title": "Wooden circle full circle decupage base 8cm",
         "brand": "Damatex",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13726,17 +13736,7 @@
         "category": "Home & Living"
       },
       {
-        "title": "Plaster Miodu Adam Szustak Bestseller",
-        "brand": "Znak Społeczny Instytut Wydawniczy Sp. z o. o.",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Home & Living",
-        "description": "<h1>Plaster miodu</h1><p>Może czytasz to wieczorem, siedzisz gdzieś tam w swoim pokoju, trzymasz w ręce kubek z herbatą, głucho wszędzie, ciemno wszędzie… A w tej ciemności przycho",
-        "category": "Home & Living"
-      },
-      {
-        "title": "Zestaw Do Gry Karty Casino Niemiecki Dystrybutor",
+        "title": "Casino Playing Card Set German Distributor",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13796,454 +13796,454 @@
         "category": "Home & Living"
       },
       {
-        "title": "Healthy dishes for babies and toddlers from 4 months Kd",
-        "brand": "Egmont",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Zdrowe dania dla bobasów i brzdąców</h1>\n<h2>Zapewnij swojemu dziecku zdrowy start</h2>\n<p><b>Przepisy na zdrowe dania dla dzieci w wieku od 4 miesięcy do 3 lat!</b></p>\n<p>Iko",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby's songs. Travel Song. CD.",
-        "brand": "Soliton",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Piosenki Maluszka. Travel Song. Płyta CD.</h1>\n<p>Autor: <b>Various Artists, praca zbiorowa</b></p><p>EAN: <b>5901549899504</b></p><p>Typ publikacji: <b>płyta CD</b></p><p>Stro",
-        "category": "Babies"
-      },
-      {
-        "title": "AsH Burn Baby Burn Scd DVD Limited Edit Nowa",
-        "brand": "Not On Label",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Numer produktu 00353/2018/01/2019-05</p>\n<h1>NA SPRZEDAŻ PŁYTA CD JAK W TYTULE</h1>\n<p>Wszystkie parametry wydania oraz utwory, widoczne są na dużych fotkach .</p>\n<p>Stan techn",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby's Gang Challenger 2016 Album 12'' Italo",
+        "title": "Korona Królów sezon 1 Box (1-84)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Baby's Gang Challenger 2016 Album 12'' Italo",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial historyczny</p><p><b>Reżyseria:</b> Piotr Fiedziukiewicz, Jerzy Krysiak, Wojciech Pacyna, Jacek Sołtysiak</p><p><b>Scenariusz:</b> Ewa Bulanda, Ewelina Ch",
+        "category": "Books & Media"
       },
       {
-        "title": "Baby's Gang Challenger (Deluxe Edition) 2016 CD",
+        "title": "Korona Królów s.1 cz. 1 (1-24)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Baby's Gang Challenger (Deluxe Edition) 2016 CD",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial historyczny</p><p><b>Reżyseria:</b> Wojciech Pacyna, Jacek Sołtysiak, Jerzy Krysiak, Piotr Fiedziukiewicz</p><p><b>Scenariusz:</b> Ilona Łepkowska, Darius",
+        "category": "Books & Media"
       },
       {
-        "title": "Babo Botanicals Sensitive Baby All Natural Healing Ointment 4Oz",
-        "brand": "Babo Botanicals",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Ecosmetics Is An Authorized Retailer Of Babo Botanicals. Meet The Natural Treatment For Eczema And Irritated, Itchy Skin. Developed To Relieve Skin Rashes, Eczema And Cracked Or Ch",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby Driver (blu-ray 4K)+(BLU-RAY)",
+        "title": "Korona Królów s.2 cz. 1 (85-109)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Baby Driver [Blu-Ray 4K]+[Blu-Ray]</h1><h2>Baby Driver</h2><p><b>Kraj:</b> Wielka Brytania, USA</p><p><b>Rok produkcji:</b> 2017</p><p><b>Reżyseria:</b> Edgar Wright</p><p><b>S",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial polski</p><p><b>Reżyseria:</b> Wojciech Pacyna, Jacek Sołtysiak, Piotr Fiedziukiewicz</p><p><b>Scenariusz:</b> Anna Krasuska, Teresa Czepiec, Konrad Sobie",
+        "category": "Books & Media"
       },
       {
-        "title": "Baby's Gang Happy Song & Challenger Maxi CD",
+        "title": "Korona Królów Sezon 1 Odcinki 1-84 (box) (11DVD)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Baby's Gang Happy Song & Challenger Maxi CD",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Korona Królów Sezon 1 odcinki 1-84 [BOX] [11DVD]</h1><h2>Korona królów</h2><p><b>Kraj:</b> Polska</p><p><b>Rok produkcji:</b> 2018</p><p><b>Reżyseria:</b> Wojciech Pacyna, Jace",
+        "category": "Books & Media"
       },
       {
-        "title": "Blissy Silk Pillowcase - Standard | Baby Blue",
-        "brand": "Blissy",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Blissy's Silk Pillowcase - Standard Offers A Smooth, Hypoallergenic Surface Crafted From 22-Momme 100% Pure Mulberry Silk. This Premium Fabric Is Gentle On Your Skin And Hair, Reta",
-        "category": "Babies"
-      },
-      {
-        "title": "50g Gazzal Baby Cotton 3444 powder pink",
-        "brand": "Gazzal",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Mieszanka akrylu i bawełny - świetna na maskotki, kocyki i inne dziergadełka dla dzieci (i nie tylko!).</p><p>Motek: 50g/165m</p><p>Skład: 60% bawełna 40% akryl</p><p>Numer kolo",
-        "category": "Babies"
-      },
-      {
-        "title": "Gra Memo Baby Shark Clementoni 18100",
-        "brand": "Clementoni",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Gra Memo Baby Shark Clementoni 18100",
-        "category": "Babies"
-      },
-      {
-        "title": "Canpol Babies Postpartum Pads Breathable Night Pads 10 pcs.",
+        "title": "Addams Family The Complete Seasons 1-3 (9DVD)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Podkłady higieniczne oddychające podpaski poporodowe na noc&nbsp;Canpol Babies 10 szt.</h1><p><b>Oddychające podpaski poporodowe Canpol</b> są specjalnymi <b>wkładkami higienic",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>The Addams Family The Complete Seasons 1-3 (Rodzina Addamsów Sezon 1-3) [9DVD]</h1><h2>The Addams Family</h2><p><b>Kraj:</b> USA</p><p><b>Rok produkcji:</b> 1964</p><p><b>Reżys",
+        "category": "Books & Media"
       },
       {
-        "title": "Noodle & Boo Ultra-Safe Baby Laundry Detergent - 8Oz",
-        "brand": "Noodle & Boo",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Ecosmetics Is An Authorized Retailer Of Noodle & Boo. Ultra-Safe Baby Laundry Detergent - For Baby's Laundry Plant-Based Formula With Strong Stain-Fighting Enzymes Naturally Remove",
-        "category": "Babies"
-      },
-      {
-        "title": "Hygienic absorbent pads Protectiva Baby Care 60x60 cm Comfort 8 pcs.",
-        "brand": "Incomed",
+        "title": "Chemia Lo 2 To jest chemia Podr Zr 2021 Ne",
+        "brand": "Nowa Era",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Podkłady higieniczne Protectiva Baby Care 60x60 cm 8 szt. Komfort i wygoda</h1><p><b>Zapewnij swojemu dziecku wygodę i bezpieczeństwo</b> podczas zmiany pieluszek, używając <b>",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Chemia LO 2 To jest chemia Podr. ZR w.2021 NE</h1> <p><b>Autor:</b> Maria Litwin, Szarota Styka-Wlazło, Joanna Szymońska</p>\n<p><b>Wydawca:</b> Nowa Era</p>\n<p><b>Oprawa:</b> b",
+        "category": "Books & Media"
       },
       {
-        "title": "L'erbolario Protective Paste For Babies 4.2Oz",
-        "brand": "L'Erbolario",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "L'erbolario Protective Paste For Babies 4.2Oz",
-        "category": "Babies"
-      },
-      {
-        "title": "DMC Baby Happy Cotton Amigurumi cotton 755 pink",
-        "brand": "DMC",
+        "title": "Repetytorium Ósmoklasisty. Język Angielski. Ksią..",
+        "brand": "Macmillan",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "DMC Baby Happy Cotton bawełna Amigurumi 755 róż",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Repetytorium Ósmoklasisty. Język angielski. Książka nauczyciela + CD + Teacher’s Digital Pack. Cz.1</h1><h2>Malcolm Mann, Steve Taylore-Knowles</h2> <ul>\n<li>\nWydawca: Macmilla",
+        "category": "Books & Media"
       },
       {
-        "title": "DMC Baby Happy Cotton Amigurumi cotton 772 beige",
-        "brand": "DMC",
+        "title": "C# 8.0 w pigułce",
+        "brand": "Helion",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "DMC Baby Happy Cotton bawełna Amigurumi 772 beż",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>C# 8.0 w pigułce</h1> <ul><li>Autor: Albahari Joseph, Johannsen Eric</li><li>Wydawnictwo: Helion</li><li>Rok wydania: 2021</li><li>Ilość stron: 1016</li><li>Oprawa: Twarda</li>",
+        "category": "Books & Media"
       },
       {
-        "title": "Cd: LIL Wayne & Dj Smoke It's Weezy Baby",
+        "title": "Mity greckie dla dzieci",
+        "brand": "Ibis",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Mity greckie dla dzieci</h1>\n<p>Autor: <b>Ulanowski&#xa0;Krzysztof</b></p><p>EAN: <b>9788365952585</b></p><p>Strony: <b>55</b></p><p>Oprawa: <b>twarda</b></p><p>Wydawca: <b>Boo",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Activate B2 (fce) ćwiczenia z kluczem",
+        "brand": "Pearson",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Activate B2. Ćwiczenia z Kluczem + CD</h1> <p><b>Autor:</b> Mary Stephens</p>\n<p><b>ISBN:</b>&#xa0;9781408270516</p>\n<p><b>Wydawnictwo:</b> Pearson</p>\n<p><b>Rok wydania:</b> 2",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Wojciech Cejrowski Boso Przez Świat: Hiszpania",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Cd: LIL Wayne & Dj Smoke It's Weezy Baby",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Boso Przez Świat: Hiszpania I... - Wojciech Cejrowski [DVD]</h1><h2>Boso przez Świat: Hiszpania i Portugalia</h2><p><b>Seria:</b> Boso Przez Świat</p><p><b>Kraj:</b> Polska</p>",
+        "category": "Books & Media"
       },
       {
-        "title": "Nov Natural Organic Vegan Baby Nourishing Hydra Lotion For Kids 8.45Oz",
-        "brand": "NOV Natural Organic Vegan",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Nov Natural Organic Vegan's Baby Nourishing Hydra Lotion For Kids Delivers Reliable, Daily Hydration For Delicate Baby And Child Skin, Helping It Feel Comfortably Soft And Look Cal",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby flamingos fabric on a mint background wz399",
+        "title": "Wojciech Cejrowski Boso Przez Świat: H",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h2>Tkanina bawełniana</h2><h1>Flamingi baby na miętowym tle wz399</h1><h2>Cena za 0,5 mb - 1 zakupiona sztuka to tkanina w rozmiarach ( 50cm x 160cm)</h2><p>np.kupując 7 sztuk tka",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Boso Przez Świat: Hiszpania I... - Wojciech Cejrowski [DVD]</h1><h2>Boso przez Świat: Hiszpania i Portugalia</h2><p><b>Seria:</b> Boso Przez Świat</p><p><b>Kraj:</b> Polska</p>",
+        "category": "Books & Media"
       },
       {
-        "title": "Baby Dream orthopedic pillow",
-        "brand": "ARmedical",
+        "title": "Symulator Budowy Mostów folia Pc Pl nowa box",
+        "brand": "ToxSickLabs",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>KACEK</h1><h1>Dołącz do naszych zadowolonych klientów</h1><h1>Sprzedajemy od 2000 roku na Allegro. Pewny sprzedawca.</h1> <h1>Symulator Budowy Mostów</h1><p>Wersja językowa: po",
+        "category": "Books & Media"
       },
       {
-        "title": "Baby Dream orthopedic pillow",
-        "brand": "ARmedical",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby Dream profiled orthopedic pillow",
-        "brand": "ARmedical",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Dzięki unikalnej technologii wykonania poduszki ortopedycznej, dopasowuje się ona idealnie do&nbsp;kształtów ciała dziecka, nie&nbsp;zależnie od&nbsp;tego czy&nbsp;dziecko śpi n",
-        "category": "Babies"
-      },
-      {
-        "title": "Baby Dream profiled orthopedic pillow",
-        "brand": "ARmedical",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Poduszka ortopedyczna profilowana, dziecięca \"BABY DREAM\"</h1><h2>Przeznaczona dla dzieci w wieku od 2 do 6 lat.</h2><p>Dzięki unikalnej technologii wykonania poduszki ortopedy",
-        "category": "Babies"
-      },
-      {
-        "title": "Prelam Just A Spray Odor Eliminator - Baby Powder 1.85Oz",
-        "brand": "Prelam",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Prelam's Just A Spray Odor Eliminator - Baby Powder Clears Bathroom Odors Quickly With 46 Spritzes, Forming A Light Deodorizing Layer On The Waters Surface To Neutralize Smells At ",
-        "category": "Babies"
-      },
-      {
-        "title": "Karty Do Gry Star Wars Mandalorian Baby Yoda",
+        "title": "Ojciec Mateusz Seria 23 (box) (4DVD)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Karty Do Gry Star Wars Mandalorian Baby Yoda",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Ojciec Mateusz seria 23 [BOX] [4DVD] </h1><h2>Ojciec Mateusz Seria 23</h2><p><b>Kraj:</b> Polska, Włochy, Włochy</p><p><b>Rok produkcji:</b> 2008, 2016</p><p><b>Reżyseria:</b> ",
+        "category": "Books & Media"
       },
       {
-        "title": "Kubek Star Wars Mandalorian The Child Baby Yoda 3D",
-        "brand": "Paladone",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p><b>✅ Licencjonowany gadżet dla każdego fana Gwiezdnych Wojen.</b></p> <h1>KUBEK 3D BABY YODA</h1><h2>Oficjalny produkt licencjonowany przez Star Wars™, wyprodukowany przez Palad",
-        "category": "Babies"
-      },
-      {
-        "title": "Hozier: Wasteland, Baby! (pl) (CD)",
-        "brand": "Universal Music",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Hozier: Wasteland, Baby! (PL) [CD]</h1><h2>Wasteland, Baby!</h2><p><b>Seria:</b> Polska Cena</p><p><b>Wykonawca:</b> Hozier</p> <h2>Lista utworów</h2><ul><li>1. Nina Cried Powe",
-        "category": "Babies"
-      },
-      {
-        "title": "Kałamarnice 7 cm „Baby Squid” Seacor Cormoran",
-        "brand": "Cormoran",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p><b>Kałamarnice „Baby Squid” Seacor - Cormoran</b></p><p>3 kałamarnice w kolorach biały-błysk, perłowym i różowym. Długość 7 cm. Idealne na karmazyny, morszczuki i zębacze.</p><p",
-        "category": "Babies"
-      },
-      {
-        "title": "Carotina Baby Tower",
-        "brand": "Lisciani",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h2>Trzy zabawy ćwiczące rozpoznawanie kształtów, oraz rozwijające zdolności manualne i refleks.</h2><p>Zabawa polega na stopniowym zwiększaniu jej wysokości zachowując ostrożność,",
-        "category": "Babies"
-      },
-      {
-        "title": "XL cotton panel: Baby dino",
+        "title": "Pitbull Nowe Porządki Kobiety Mafii 2 Botoks 3DVD",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Panel bawełna XL: Baby dino</h1>\n    <p>Cena: <b>29,50</b> zł za 1 szt. (75cm x 100cm)</p>\n    <p>Termin wysyłki: <b>24h</b></p>\n    <p>Przedmiotem aukcji jest panel bawełna XL",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p>Do zaproponowania mamy dla Państwa</p><p><b>Zestaw:</b></p><ol><li><b>PITBULL NOWE PORZĄDKI [DVD]</b></li><li><b>KOBIETY MAFII 2 [DVD]</b></li><li><b>BOTOKS [DVD]</b></li></ol><",
+        "category": "Books & Media"
       },
       {
-        "title": "Baby holo Reflective Printed Fabric Material",
+        "title": "Historia i społeczeństwo Ojczysty Panteon WSiP",
+        "brand": "WSIP Wydawnictwa Szkolne i Pedagogiczne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Historia i społeczeństwo. Ojczysty Panteon i ojczyste spory. Podręcznik. Liceum i technikum.</h1><p>Autor: <b>Markowicz&#xa0;Marcin, Pytlińska&#xa0;Olga, Wyroda&#xa0;Agata</b><",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Historia i społeczeństwo Ojczysty Panteon WSiP",
+        "brand": "WSIP Wydawnictwa Szkolne i Pedagogiczne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Historia i społeczeństwo. Ojczysty Panteon i ojczyste spory. Podręcznik. Liceum i technikum.</h1><p>Autor: <b>Markowicz&#xa0;Marcin, Pytlińska&#xa0;Olga, Wyroda&#xa0;Agata</b><",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Historia i społeczeństwo Ojczysty Panteon WSiP",
+        "brand": "WSIP Wydawnictwa Szkolne i Pedagogiczne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Historia i społeczeństwo. Ojczysty Panteon i ojczyste spory. Podręcznik. Liceum i technikum.</h1><p>Autor: <b>Markowicz&#xa0;Marcin, Pytlińska&#xa0;Olga, Wyroda&#xa0;Agata</b><",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Wyprawy Na Księżyc. Alan Dyer /nowa/",
+        "brand": "AWM Agencja Wydawnicza Jerzy Mostowski",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>WYPRAWY NA KSIĘŻYC</h1>\n<h1>ALAN DYER</h1>\n<p>Oprawa:&#xa0;Twarda</p>\n<p>Format:&#xa0;26.0x30.0cm</p>\n<p>Liczba stron:&#xa0;80</p>\n<p>Rok wydania:&#xa0;2011</p> <p>Prezentujemy",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Gimme Some Lovin' Live in Austin Winwood, Stev",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Tkanina BABY HOLO kolekcja UNIQUE. Materiał wodoodporny. Tkanina odzieżowa - torebkowa, sprzedawana na metry.</h1><h2>BABY HOLO to nowoczesna tkanina z MEGA EFEKTEM WIZUALNYM. ",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p>DVD tracks:</p><p>1. Pearly Queen</p><p>2. I'm A Man</p><p>3. Silvia (Who Is She?)</p><p>4. Cigano (For The Gypsoes)</p><p>5. Dear Mr. Fantasy</p><p>6.  Why Can´t We Live Togeth",
+        "category": "Books & Media"
       },
       {
-        "title": "Igk Juicy Baby Fragrance Mist & Hair Taming Wand 2Pc",
-        "brand": "IGK",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Igk Juicy Baby Fragrance Mist & Hair Taming Wand 2Pc",
-        "category": "Babies"
-      },
-      {
-        "title": "Ultrasonic Tick Protection for Children Tickless Kid Orange",
-        "brand": "Tickless",
+        "title": "Dungeons & Dragons Zstąpienie do Avernusa",
+        "brand": "Rebel",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>ULTRADŹWIĘKOWA OCHRONA PRZED KLESZCZAMI DLA DZIECI TICKLESS KID Orange</h1><h2>✅ Tickless Baby – Delikatna i Skuteczna Ochrona przed Kleszczami dla Najmłodszych</h2><p><b>Tickl",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Wykuj swój los w piekielnym ogniu!</b></p><p>Witajcie we Wrotach Baldura, mieście ambicji, korupcji i zbrodni. Stawiacie ledwie pierwsze kroki na ścieżce poszukiwaczy przygód",
+        "category": "Books & Media"
       },
       {
-        "title": "Just Dance 2016 PS3 Move Dance New",
-        "brand": "Ubisoft",
+        "title": "Miasto, które nie istniało",
+        "brand": "Amber",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>JUST DANCE 2016</h1><p>Producent: <b>UBISOFT</b></p><p>Wersja językowa gry: <b>Angielska</b></p><p>Pudełko, instrukcja: <b>EUROPEJSKA*</b></p><p>Wersja: <b>PAL</b></p><p>Grupa ",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p>ZDJĘCIE ILUSTRACYJNE (JD)</p><p>Miasto, które nie istniało</p><p>9788324172177</p><p>Autor: Owen matthews</p><p>Wydawnictwo: Amber</p><p>Rok wydania: 2020</p><p>Oprawa: broszuro",
+        "category": "Books & Media"
       },
       {
-        "title": "Babo Botanicals Sensitive Baby Fragrance-Free Bubble Bath & Wash 15Oz",
-        "brand": "Babo Botanicals",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "Ecosmetics Is An Authorized Retailer Of Babo Botanicals. Make Bath Time Fun With Plant-Based Bubbles With Sensitive Baby Fragrance-Free Bubble Bath & Wash. Gently Formulated For Ba",
-        "category": "Babies"
-      },
-      {
-        "title": "Head massager, rake for hair growth lotions",
+        "title": "Rodzinka.pl sezony 11-16 Box",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>RELAKSUJĄCO - ODPRĘŻAJĄCY MASAŻER DO GŁOWY</h1><p><b>Kolor: niebieski</b></p><p>Masażer głowy typu \"grabki\" skutecznie pomaga&nbsp;<b>rozluźnić zestresowane mięśnie, złagodzić ",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial polski</p><p><b>Reżyseria:</b> Patrick Yoka</p><p><b>Scenariusz:</b> Patrick Yoka, Karol Klementewicz</p><p><b>Zdjęcia:</b> Marcin Figurski</p><p><b>Dźwię",
+        "category": "Books & Media"
       },
       {
-        "title": "Howlin' Wolf London.. mini lp 2x Shm CD Japan nowa",
+        "title": "Korona Królów s.1 cz. 2 (25-48)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>HOWLIN' WOLF - London Howlin' Wolf Sessions</h1> <h2>2 x SHM CD - Cardboard Sleeve - Mini lp - Deluxe Edition -&#xa0;Limited Release</h2> <p><b>Product Details:</b></p><ul><li>",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial historyczny</p><p><b>Reżyseria:</b> Wojciech Pacyna, Jacek Sołtysiak, Jerzy Krysiak</p><p><b>Scenariusz:</b> Jan Piotr Szafraniec, Agnieszka Olejnik, Małg",
+        "category": "Books & Media"
       },
       {
-        "title": "Wishbone Ash Live Dates II 2LP Yellow Blue",
+        "title": "Korona Królów s.1 cz. 3 (49-84)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h2>WISHBONE ASH Live Dates II 2LP YELLOW + BLUE</h2>\n<p>kod: 3700477831837</p>\n<p>Rok: 2020</p> <p>LP - 1 -</p><ul><li>1. Doctor</li><li>2. Living Proof</li><li>3. Runaway</li><li",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial historyczny</p><p><b>Reżyseria:</b> odc. 49 i 61 Wojciech Pacyna, Jacek Sołtysiak, Jerzy Krysiak; odc. 50-60 i 62-84 Wojciech Pacyna, Jacek Sołtysiak, Jer",
+        "category": "Books & Media"
       },
       {
-        "title": "Leadaz Of The Nu School Volume 1 2xCD Nowa Reggae",
-        "brand": "Not On Label",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Numer produktu <b>01343/05166</b>/2018/02-8</p><h1>NA SPRZEDAŻ ORYGINALNA PŁYTA JAK W TYTULE - CD ALBUM</h1><p>Stan techniczny przedmiotu:</p><p><b>PŁYTY</b><b>:</b>&#xa0;NOWE</",
-        "category": "Babies"
-      },
-      {
-        "title": "Lp: Jimi Hendrix Jimi Plays Monterey 1986 Ex+",
+        "title": "Korona Królów s. 2 cz. 3 (137-163)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<p>Witam na mojej aukcji.</p><p>Mam do sprzedania płytę LP:</p><h1>Jimi Hendrix ‎– Jimi Plays Monterey</h1><p>Label: Polydor – 827 990-1</p><p>Format: Vinyl, LP, Album</p><p>Countr",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial</p>\n<p><b>Reżyseria:</b> Wojciech Pacyna, Jacek Sołtysiak, Szymon Nowak</p>\n<p><b>Scenariusz:</b> Jan Piotr Szafraniec, Teresa Czepiec, Marta Hryniak, Mar",
+        "category": "Books & Media"
       },
       {
-        "title": "Sam Smith: The Thrill Of It All (CD)",
-        "brand": "Universal",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Sam Smith: The Thrill Of It All [CD]</h1><p><b>Wykonawca:</b> Sam Smith</p><p><b>Rok wydania:</b> 2017</p> <h2>Lista utworów</h2><ul><li>1. Too Good At Goodbyes - Sam Smith</li",
-        "category": "Babies"
-      },
-      {
-        "title": "Sleeping in the Bed... lullabies (3CD)",
-        "brand": "Agencja Artystyczna MTJ",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Usypianki do łóżeczka... do podusi... na dobry sen [BOX] [3CD]</h1><p><b>Wykonawca:</b> Various Artists</p><p><b>Wydawca:</b> MTJ</p> <h2>Lista utworów</h2><ul><li>CD1:</li><li",
-        "category": "Babies"
-      },
-      {
-        "title": "Anna Jantar: Best: Nothing Can Last Forever (C",
+        "title": "Korona Królów s.2 cz. 4 (164-190)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Anna Jantar: Best: Nic nie mioże wiecznie trwać [CD]</h1><p><b>Wykonawca:</b> Anna Jantar</p> <h2>Lista utworów</h2><ul><li>1. Nic nie może wiecznie trwać - Anna Jantar</li><li",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial polski</p><p><b>Reżyseria:</b> Wojciech Pacyna, Jacek Sołtysiak, Szymon Nowak</p><p><b>Scenariusz:</b> Anna Stańko, Joanna Ślesicka, Marta Hryniak</p><p><",
+        "category": "Books & Media"
       },
       {
-        "title": "Elvis Presley: Christmas (deluxe Edition) (CD)",
+        "title": "Malliavin's calculus and applications in stochasti",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Babies",
-        "description": "<h1>Elvis Presley: Christmas (Deluxe) [CD]</h1><p><b>Wykonawca:</b> Elvis Presley</p> <h2>Lista utworów</h2><ul><li>1. Santa Claus Is Back In Town</li><li>2. White Christmas</li><l",
-        "category": "Babies"
+        "sourceCategory": "Books & Media",
+        "description": "<p>About the book:</p><p>Malliavin's calculus alias the stochastic calculus of variations nowadays finds numerous applications in stochastic analysis and finance, ranging from enha",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Analytical and Probabilistic Methods in the Geomet",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<p>About the book:</p><p>The study of finite-dimensional Banach spaces and high-dimensional convex bodies has become a natural counterpart and complement to the classical functiona",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Topics in Equisingularity Theory",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<p>About the book:</p><p>This book is an introduction to equisingularity theory through a specific problem, namely the famous Zariski multiplicity conjecture. This conjecture says ",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Tatry Polskie I Słowackie Przewodnik Mapa 2 w 1",
+        "brand": "ExpressMap",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h2>Przewodnik po Tatach Polskich i Słowackich z laminowaną, składaną mapą w zestawie wydawnictwa ExpressMap.</h2><p><b>Przewodnik posiada bogatą treść turystyczną - m. in:</b></p>",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Aesthetics of Law",
+        "brand": "Wydawnictwo Uniwersytetu Gdańskiego",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Aesthetics of Law</h1><p>Wydawnictwo Uniwersytetu Gdańskiego</p><p>Autorzy: Kamil Zeidler</p><p><b>cena: 79,90 zł</b></p><p>The book is devoted to the search for the fifth bran",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Positive Astrology Cards Krystal Savoy",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<p>Karty w języku angielskim</p>\n<p>The Positive Astrology Cards unlock the ancient wisdom of the stars.</p>\n<p>For beginners or experienced astrologers, the detailed guidebook and",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Ojciec Mateusz. Sezon 23 [4DVD]",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<p><b>Gatunek:</b> serial sensacyjny</p><p><b>Reżyseria:</b> Filip Zylber, Wojciech Nowak</p><p><b>Scenariusz:</b> Michał Kalicki, Grzegorz Łoszewski, Beata Deskur, Agnieszka Błotn",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Rosyjski samouczek z kryminałem i ćwiczeniami",
+        "brand": "Edgard",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Rosyjski samouczek z kryminałem i ćwiczeniami</h1>\n<p>Autor: <b>praca zbiorowa</b></p><p>EAN: <b>9788377889916</b></p><p>Strony: <b>272</b></p><p>Oprawa: <b>zintegrowana</b></p",
+        "category": "Books & Media"
+      },
+      {
+        "title": "English File 4rd Intermediate Podr+Online Practice",
+        "brand": "Oxford University Press",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<p>English File Fourth Edition Intermediate Student's Book with Online Practice</p>",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Skarpetka na tropie,czyli kto ukradł złoty guzik?",
+        "brand": "Poradnia K",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Skarpetka na tropie, czyli kto ukradł złoty guzik?</h1><h1>Porcja zagadek, kolorowanek, śmiechu i zabawy.</h1><ul><li><b>Autor: De&#xa0;Latour&#xa0;Daniel, Bednarek&#xa0;Justyn",
+        "category": "Books & Media"
+      },
+      {
+        "title": "The Hobbit Tolkien J.r.r.",
+        "brand": "Harper Collins Polska",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Hobbit: or There and Back Again (exp. ed) black</h1><h2>J.R.R. Tolkien</h2> <ul>\n<li>\nWydawca: Harper Collins\n</li>\n<li>\nRok wydania: 2006\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>",
+        "category": "Books & Media"
+      },
+      {
+        "title": "The Hobbit Tolkien J.r.r.",
+        "brand": "Harper Collins Polska",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Hobbit: or There and Back Again (exp. ed) black</h1><h2>J.R.R. Tolkien</h2> <ul>\n<li>\nWydawca: Harper Collins\n</li>\n<li>\nRok wydania: 2006\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Fahrenheit 451 Ray Bradbury",
+        "brand": "HarperCollins Publishers UK",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Fahrenheit 451</h1><h2>Ray Bradbury</h2> <ul>\n<li>\nWydawca: Harper Collins\n</li>\n<li>\nRok wydania: 2008\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>The hauntingly prophetic class",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Fahrenheit 451 Ray Bradbury",
+        "brand": "HarperCollins Publishers UK",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Fahrenheit 451</h1><h2>Ray Bradbury</h2> <ul>\n<li>\nWydawca: Harper Collins\n</li>\n<li>\nRok wydania: 2008\n</li>\n<li>\nOprawa: Miękka\n</li>\n</ul>\n <p>The hauntingly prophetic class",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Peep Inside Space Anna Milbourne",
+        "brand": "Usborne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Peep inside Space</h1><h2>Anna Milbourne</h2> <ul>\n<li>\nWydawca: Usborne\n</li>\n<li>\nRok wydania: 2021\n</li>\n<li>\nOprawa: Kartonowa\n</li>\n<li>\nFormat: 16.5x19.5cm\n</li>\n<li>\nIlo",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Sapiens Noah Yuval Harari",
+        "brand": "Vintage",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Sapiens: A Brief History of Humankind. Harari, Yuval Noah</h1><h2>Noah Yuval Harari</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2015\n</li>\n<li>\nOprawa: Miękka\n",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Sapiens Noah Yuval Harari",
+        "brand": "Vintage",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Sapiens: A Brief History of Humankind. Harari, Yuval Noah</h1><h2>Noah Yuval Harari</h2> <ul>\n<li>\nWydawca: Random House\n</li>\n<li>\nRok wydania: 2015\n</li>\n<li>\nOprawa: Miękka\n",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Lift-the-flap Very First Questions And Answers W..",
+        "brand": "Usborne",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Books & Media",
+        "description": "<h1>Lift-the-flap Very First Questions and Answers What is the Moon?</h1><h2></h2> <ul>\n<li>\nWydawca: Usborne\n</li>\n<li>\nRok wydania: 2020\n</li>\n<li>\nOprawa: Twarda\n</li>\n<li>\nForm",
+        "category": "Books & Media"
       }
     ]
   },
@@ -14505,13 +14505,13 @@
     "gamingConsoles": 178,
     "fashionClothing": 159,
     "tennisShoes": 45,
-    "fashionSneakers": 313,
+    "fashionSneakers": 316,
     "sportsFootwear": 226
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20902,
-    "withImages": 20902,
-    "withPositivePrices": 20902
+    "withTrackedHttpsLinks": 20901,
+    "withImages": 20901,
+    "withPositivePrices": 20901
   },
   "sources": [
     {
