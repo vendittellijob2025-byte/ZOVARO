@@ -107,7 +107,7 @@ function getProductClickUrl(product) {
     const merchantName = String(product.merchant || product.advertiserName || "partner");
     const merchantSlug = merchantName
       .normalize("NFKD")
-      .replace(/[\\u0300-\\u036f]/g, "")
+      .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "")
