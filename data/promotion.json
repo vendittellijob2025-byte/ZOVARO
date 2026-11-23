@@ -1,18 +1,18 @@
 {
-  "createdAt": "2026-11-22T16:14:47.388Z",
-  "productId": "40008713601214",
+  "createdAt": "2026-11-23T20:09:59.896Z",
+  "productId": "42495862571198",
   "advertiser": "Rexing",
   "brand": "Rexing USA",
-  "category": "Sports",
-  "title": "Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video",
-  "description": "Rexing USA — Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video",
-  "price": 259.99,
-  "salePrice": 129.99,
+  "category": "Electronics",
+  "title": "Rexing TL1 Time-Lapse Camera 1920×1080 Full HD",
+  "description": "2.4” LCD | 1920×1080 Full HD Video | 110° Wide-Angle Lens | 6 Month Battery Life | 2W White LED | Loop Recording | Storage up to 512GB For Photography | Construction | Nature Obser",
+  "price": 289.99,
+  "salePrice": 145,
   "currency": "USD",
   "discountPercentage": 50,
-  "priceText": "129.99 USD",
-  "imageUrl": "https://cdn.shopify.com/s/files/1/0556/5536/6846/files/H6-Main.webp?v=1686082652",
-  "trackingUrl": "https://www.tkqlhce.com/click-101881140-17183529?url=https%3A%2F%2Frexing.com%2Fproducts%2Frexing-woodlens-h6-dual-camera-trail-cam%3Fvariant%3D40008713601214&cjsku=40008713601214",
+  "priceText": "145 USD",
+  "imageUrl": "https://cdn.shopify.com/s/files/1/0556/5536/6846/products/MAIN1_3dbe34e1-6f2f-48bf-9447-ea84ba72ffde.jpg?v=1674673315",
+  "trackingUrl": "https://www.kqzyfj.com/click-101881140-17183529?url=https%3A%2F%2Frexing.com%2Fproducts%2Frexing-tl1-time-lapse-camera-1920-1080-full-hd%3Fvariant%3D42495862571198&cjsku=42495862571198",
   "zovaro": {
     "name": "ZOVARO",
     "websiteUrl": "https://zovaro.vercel.app/",
@@ -20,22 +20,22 @@
   },
   "content": {
     "hook": "Discover this Rexing USA deal with 50% OFF.",
-    "headline": "Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video",
+    "headline": "Rexing TL1 Time-Lapse Camera 1920×1080 Full HD",
     "callToAction": "VIEW DEAL",
-    "caption": "Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video — 129.99 USD — 50% OFF. Rexing USA — Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Sports",
-    "productDescription": "Rexing USA — Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video",
+    "caption": "Rexing TL1 Time-Lapse Camera 1920×1080 Full HD — 145 USD — 50% OFF. 2.4” LCD | 1920×1080 Full HD Video | 110° Wide-Angle Lens | 6 Month Battery Life | 2W White LED | Loop Recording | Storage up to 512GB For Photography | Construction | Nature Obser Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Electronics",
+    "productDescription": "2.4” LCD | 1920×1080 Full HD Video | 110° Wide-Angle Lens | 6 Month Battery Life | 2W White LED | Loop Recording | Storage up to 512GB For Photography | Construction | Nature Obser",
     "zovaroDescription": "Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market.",
     "websiteUrl": "https://zovaro.vercel.app/",
     "hashtags": [
       "#ZOVARO",
       "#Shopping",
       "#Deals",
-      "#Sports"
+      "#Electronics"
     ]
   },
   "tiktok": {
-    "caption": "Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video — 129.99 USD — 50% OFF. Rexing USA — Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Sports",
-    "productDescription": "Rexing USA — Rexing Woodlens H6 Dual Camera Trail Cam 4K+FHD Ultra HD Video",
+    "caption": "Rexing TL1 Time-Lapse Camera 1920×1080 Full HD — 145 USD — 50% OFF. 2.4” LCD | 1920×1080 Full HD Video | 110° Wide-Angle Lens | 6 Month Battery Life | 2W White LED | Loop Recording | Storage up to 512GB For Photography | Construction | Nature Obser Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market. Discover more on ZOVARO: https://zovaro.vercel.app/ #ZOVARO #Shopping #Deals #Electronics",
+    "productDescription": "2.4” LCD | 1920×1080 Full HD Video | 110° Wide-Angle Lens | 6 Month Battery Life | 2W White LED | Loop Recording | Storage up to 512GB For Photography | Construction | Nature Obser",
     "zovaroDescription": "Discover ZOVARO — a global product discovery platform bringing together thousands of products, deals and discoveries from retailers and brands around the world. ZOVARO is rapidly expanding its presence in the global market.",
     "websiteUrl": "https://zovaro.vercel.app/",
     "callToAction": "Discover more on ZOVARO",
@@ -43,7 +43,7 @@
       "#ZOVARO",
       "#Shopping",
       "#Deals",
-      "#Sports"
+      "#Electronics"
     ]
   }
 }
