@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T09:51:51.129Z",
+  "generatedAt": "2026-11-24T15:16:52.796Z",
   "selectedProductCount": 20928,
   "inventoryProductCount": 193746,
   "uniqueAdvertiserCount": 24,
@@ -379,8 +379,8 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1867,
-      "unclassifiedProductCount": 73,
+      "productCount": 1873,
+      "unclassifiedProductCount": 74,
       "browseTree": [
         {
           "name": "Art Supplies",
@@ -421,8 +421,8 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 226,
-          "directProductCount": 162,
+          "productCount": 231,
+          "directProductCount": 167,
           "children": [
             {
               "name": "Beads & Jewelry Making",
@@ -2322,14 +2322,14 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1805,
-      "unclassifiedProductCount": 503,
+      "productCount": 1811,
+      "unclassifiedProductCount": 505,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 371,
-          "directProductCount": 76,
+          "productCount": 375,
+          "directProductCount": 80,
           "children": [
             {
               "name": "Fiction",
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 421,
+      "productCount": 424,
       "unclassifiedProductCount": 54,
       "browseTree": [
         {
@@ -2824,8 +2824,8 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 53,
-          "directProductCount": 23,
+          "productCount": 54,
+          "directProductCount": 24,
           "children": [
             {
               "name": "Laptops",
@@ -3096,8 +3096,8 @@
         {
           "name": "Audio",
           "path": "Audio",
-          "productCount": 166,
-          "directProductCount": 74,
+          "productCount": 168,
+          "directProductCount": 76,
           "children": [
             {
               "name": "Headphones",
@@ -3477,7 +3477,7 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1758,
+      "productCount": 1760,
       "unclassifiedProductCount": 223,
       "browseTree": [
         {
@@ -3561,8 +3561,8 @@
         {
           "name": "Women's Clothing",
           "path": "Women's Clothing",
-          "productCount": 11,
-          "directProductCount": 7,
+          "productCount": 12,
+          "directProductCount": 8,
           "children": [
             {
               "name": "Dresses",
@@ -3725,8 +3725,8 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 979,
-          "directProductCount": 55,
+          "productCount": 980,
+          "directProductCount": 56,
           "children": [
             {
               "name": "Sneakers",
@@ -4520,7 +4520,7 @@
     },
     {
       "name": "Garden",
-      "productCount": 8,
+      "productCount": 9,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -4569,8 +4569,8 @@
         {
           "name": "Lawn Care",
           "path": "Lawn Care",
-          "productCount": 7,
-          "directProductCount": 0,
+          "productCount": 8,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Lawn Mowers",
@@ -4814,7 +4814,7 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1085,
+      "productCount": 1087,
       "unclassifiedProductCount": 322,
       "browseTree": [
         {
@@ -5361,14 +5361,14 @@
         {
           "name": "Medical Devices & Equipment",
           "path": "Medical Devices & Equipment",
-          "productCount": 10,
+          "productCount": 12,
           "directProductCount": 0,
           "children": [
             {
               "name": "Diagnostic & Monitoring Devices",
               "path": "Medical Devices & Equipment > Diagnostic & Monitoring Devices",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 7,
+              "directProductCount": 7,
               "children": []
             },
             {
@@ -5604,14 +5604,14 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 764,
+      "productCount": 766,
       "unclassifiedProductCount": 6,
       "browseTree": [
         {
           "name": "Furniture",
           "path": "Furniture",
-          "productCount": 34,
-          "directProductCount": 4,
+          "productCount": 36,
+          "directProductCount": 6,
           "children": [
             {
               "name": "Living Room Furniture",
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 404,
+      "productCount": 406,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 119,
-          "directProductCount": 97,
+          "productCount": 121,
+          "directProductCount": 99,
           "children": [
             {
               "name": "Board Games",
@@ -10564,14 +10564,14 @@
     },
     {
       "name": "Travel",
-      "productCount": 97,
+      "productCount": 98,
       "unclassifiedProductCount": 50,
       "browseTree": [
         {
           "name": "Luggage",
           "path": "Luggage",
-          "productCount": 0,
-          "directProductCount": 0,
+          "productCount": 1,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Suitcases",
@@ -10855,20 +10855,20 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1810,
+  "otherProductCount": 1785,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1810
+      "count": 1785
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
-    "usedTaxonomyNodeCount": 358,
-    "emptyTaxonomyNodeCount": 1122,
-    "productsWithKnownSubcategory": 15398,
+    "usedTaxonomyNodeCount": 359,
+    "emptyTaxonomyNodeCount": 1121,
+    "productsWithKnownSubcategory": 15420,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5530,
+    "productsWithoutSubcategory": 5508,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10880,7 +10880,7 @@
       },
       {
         "category": "Books & Media",
-        "count": 503
+        "count": 505
       },
       {
         "category": "Sports",
@@ -10904,7 +10904,7 @@
       },
       {
         "category": "Arts, Crafts & Sewing",
-        "count": 73
+        "count": 74
       },
       {
         "category": "Babies",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5530,
-      "provisional": 15398
+      "needs_classification": 5508,
+      "provisional": 15420
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -11043,7 +11043,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
-        "productCount": 162
+        "productCount": 167
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
@@ -11095,7 +11095,7 @@
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 97
+        "productCount": 99
       },
       {
         "path": "Gaming > Consoles > PlayStation",
@@ -11126,20 +11126,20 @@
         "productCount": 81
       },
       {
+        "path": "Books & Media > Books",
+        "productCount": 80
+      },
+      {
         "path": "Toys & Games > Building & Construction",
         "productCount": 80
       },
       {
-        "path": "Books & Media > Books",
+        "path": "Electronics > Audio",
         "productCount": 76
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
         "productCount": 75
-      },
-      {
-        "path": "Electronics > Audio",
-        "productCount": 74
       },
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
@@ -11158,16 +11158,16 @@
         "productCount": 57
       },
       {
+        "path": "Fashion > Shoes",
+        "productCount": 56
+      },
+      {
         "path": "Fashion > Shoes > Boots",
         "productCount": 56
       },
       {
         "path": "Gaming > Consoles > Xbox",
         "productCount": 56
-      },
-      {
-        "path": "Fashion > Shoes",
-        "productCount": 55
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
@@ -11282,16 +11282,16 @@
         "productCount": 25
       },
       {
+        "path": "Electronics > Computers",
+        "productCount": 24
+      },
+      {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
         "productCount": 24
       },
       {
         "path": "Beauty > Skincare > Moisturizers",
         "productCount": 24
-      },
-      {
-        "path": "Electronics > Computers",
-        "productCount": 23
       },
       {
         "path": "Electronics > Phones & Tablets > Smartphones > Samsung Galaxy",
@@ -11357,7 +11357,7 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1600
+        "productCount": 1575
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12726,15 +12726,6 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Pulsometr Pulsoksymetr Napalcowy Medyczny Oximeter",
-        "brand": "Pulse",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>PULSOMETR / PULSOKSYMETR NAPALCOWY</h1><p><b>PULSOMETR NAPALCOWY&nbsp;</b>polecany jest w szczególności dla astmatyków, anemików, osób z zaburzeniami oddychania oraz z problema"
-      },
-      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12742,6 +12733,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Mikado Jaws Classic Jig Bn head 3g 6 3pcs.",
+        "brand": "Mikado",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>WITAM NA MOJEJ AUKCJI</b></p>\n<p><b>PRZEDMIOTEM SĄ REWELACYJNE GŁÓWKI JIG HEADS</b></p>\n<p><b>FIRMY MIKADO</b></p>\n<p><b>GŁÓWKI JAWS</b></p>\n<p>Jaws to seria najwyższej jakoś"
       }
     ],
     "missingSubcategoryExamples": [
@@ -13446,14 +13446,24 @@
         "category": "Sports"
       },
       {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "I color without going beyond the line. Coloring books",
+        "brand": "Siedmioróg",
+        "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
+        "description": "<h1>Koloruję, nie przechodząc za linię. Pierwsze malowanki</h1>\n<p>Autor: <b>praca zbiorowa</b></p><p>EAN: <b>9788366116986</b></p><p>Strony: <b>32</b></p><p>Oprawa: <b>broszurowa<",
+        "category": "Books & Media"
+      },
+      {
+        "title": "9 of Nine Worlds Rick Riordan Gallery Books",
+        "brand": "Galeria Książki",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>9 z dziewięciu światów. Magnus Chase i Bogowie Asgardu</h1>\n<p>Autor: <b>Rick Riordan</b></p><p>EAN: <b>9788365534989</b></p><p>Strony: <b>176</b></p><p>Oprawa: <b>twarda</b></",
+        "category": "Books & Media"
       },
       {
         "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
@@ -13513,6 +13523,26 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Toho Round Opaque Terra Cotta beads 11/0-46L",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>WITAMY W SKLEPIE WERA_ART</h1> <p><b>TOHO BEADS® - oryginalne, japońskie koraliki.</b></p><p>Firma TOHO profesjonalną jakością swoich produktów, podbiła serca twórców biżuterii",
         "category": "Arts, Crafts & Sewing"
       },
       {
@@ -14214,36 +14244,6 @@
         "sourceCategory": "Other",
         "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
         "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Koszulka Męska Patriotyczna Orzeł Herb Polski Wot",
-        "brand": "Patria Nostra",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Fashion",
-        "description": "<p>Koszulka męska Haft Orzeł - Jeans | XL</p><p>_____________________________</p><h2>Kolor: jeans (stonowany granatowy melanż)</h2><h2>Dzianina: 100% bawełna czesana 210 g/m2</h2><",
-        "category": "Fashion"
-      },
-      {
-        "title": "Koszulka Męska Patriotyczna Orzeł Herb Polski Wot",
-        "brand": "Patria Nostra",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Fashion",
-        "description": "<p>Koszulka męska Haft Orzeł - Jeans | S</p><p>_____________________________</p><h2>Kolor: jeans (stonowany granatowy melanż)</h2><h2>Dzianina: 100% bawełna czesana 210 g/m2</h2><h",
-        "category": "Fashion"
       }
     ]
   },
@@ -14503,7 +14503,7 @@
     "smartphones": 61,
     "playstationConsoles": 95,
     "gamingConsoles": 179,
-    "fashionClothing": 159,
+    "fashionClothing": 160,
     "tennisShoes": 45,
     "fashionSneakers": 313,
     "sportsFootwear": 227
