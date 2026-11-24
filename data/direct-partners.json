@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T01:37:16Z",
+  "updatedAt": "2026-11-23T19:40:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -67,7 +67,10 @@
     "eBay Partner Network official recheck 2026-11-20: current Network Agreement page lists 14 participating eBay sites including Italy; qualifying Buy It Now transactions use a 24-hour attribution window and last-click rules. The public EPN guide states 1%–6% depending on category/site and gives 2.5% as an auto-parts example; account-specific rates in the Partner Portal override the public card. Public pages reviewed did not establish the account-specific payout schedule or threshold. Browse API requires an application access token through client-credentials OAuth; itemAffiliateWebUrl is returned only when the marketplace participates and the seller enables affiliate tracking via X-EBAY-C-ENDUSERCTX. No approved EPN account, campaign ID, developer OAuth credentials or eBay-specific Vercel environment variable was verified. The current EPN agreement prohibits using eBay Data to train/benchmark or exposing it to LLM/generative AI without prior written approval and strict contractual safeguards; do not pass eBay data to ZOVARO AI classification before written approval. No EPN integration or account action performed.",
     "CJ and catalog audit 2026-11-20: latest Sync CJ Products run 44808339696 processed 236,811 products across 32 joined advertisers; 24 had positive feeds and 8 had none; 198,793 unique products passed validation with zero advertiser-ID mismatches. It selected 20,881 products for the public storefront and excluded 1,053 on confirmed image-quality failures. The job failed at git push because the remote main branch had advanced (non-fast-forward); no products from this attempt were published. The public catalog JSON remains generated 2026-11-20T07:10:02.921Z and returns HTTP 200 with 20,872 product records, 32 advertisers and 24 feeds. All 20,872 public records have HTTPS price/currency/image/link fields and CJ-style click URL formats; 4 duplicate product keys remain, 15,318 classifications are provisional, all 20,872 still await Amazon reference mapping, and 1,814 products are in Other. Live click tests and attribution tests remain zero. Apex Gaming PCs advertiser 7772585 was deactivated by CJ on 2026-11-19; stop using its links until CJ confirms reactivation. Vercel runtime errors show BlobStoreSuspendedError on CJ commission reconciliation and Blob 403 on TikTok maintenance; no storage reactivation or paid action was performed.",
     "eBay EPN official terms rechecked 2026-11-20: the published Global Rate Card lists Business & Industrial 2.5% (USD 225 cap); Collectibles 3% (USD 550); Electronics 2% (USD 550), Computers/Tablets/Networking 1.5% (USD 550); Fashion incl. Health & Beauty and Jewelry & Watches 4% (USD 550); Home & Garden incl. Food, Appliances, Baby and Pet Supplies 3% (USD 550); Lifestyle incl. Musical Instruments and Sports 3% (USD 550); Media 3% (USD 550); eBay Motors 4% (USD 100); Vehicle Parts & Accessories 3% (USD 550); Real Estate 1% (USD 100); All Other 4% (USD 550). Specific rates in the Partner Portal override the public card. Public Network Agreement lists 14 participating eBay sites including Italy. Payments are monthly for positive prior-month balances only when the balance exceeds USD 10 or applicable bank fees, whichever is greater; weekly payout is not available in the published standard terms. Buy It Now attribution uses a qualifying click within 24 hours before purchase; auctions have a 24-hour click-to-bid and 10-day bid-to-win rule, with separate Best Offer conditions. Browse API requires OAuth client-credentials access and a 10-digit EPN campaign ID in X-EBAY-C-ENDUSERCTX to return itemAffiliateWebUrl. No authenticated EPN account, campaign ID, OAuth app credentials, Buy API approval or payout settings are verified; no API/tracking test was performed. EPN acceptance is required before promotion. EPN data must not be passed to ZOVARO AI/LLM workflows without prior written approval and contract.",
-    "Additional eBay EPN AI/privacy restriction verified against the current official Network Agreement on 2026-11-20: EPN Data may not be used to train, pre-train, fine-tune, adapt, benchmark, test, validate or otherwise improve an autonomous/adaptive machine-based system. It may not be input to or exposed to a foundation model, LLM or generative AI service without EPN prior written approval and a written provider contract prohibiting training, non-transient retention and disclosure, requiring environmental segregation and prompt deletion. EPN Transaction Data is limited to attribution, performance analysis and promotional-method optimization, not audience segmentation/retargeting. Tracking code requires an accurate privacy notice and applicable consent before activation."
+    "Additional eBay EPN AI/privacy restriction verified against the current official Network Agreement on 2026-11-20: EPN Data may not be used to train, pre-train, fine-tune, adapt, benchmark, test, validate or otherwise improve an autonomous/adaptive machine-based system. It may not be input to or exposed to a foundation model, LLM or generative AI service without EPN prior written approval and a written provider contract prohibiting training, non-transient retention and disclosure, requiring environmental segregation and prompt deletion. EPN Transaction Data is limited to attribution, performance analysis and promotional-method optimization, not audience segmentation/retargeting. Tracking code requires an accurate privacy notice and applicable consent before activation.",
+    "2026-11-23 AIS update: Enable Banking reply from Nana asks whether the AIS API is intended for internal company efficiency or for services to external users. No price, MPS compatibility, personal-account eligibility, API scope, refresh cadence, consent duration, TPP/KYB or GDPR terms were supplied in that reply. ZOVARO's intended use remains read-only internal reconciliation of the owner's own MPS account, not an AIS service for external users. No further email sent, no account connected and no credentials/OTP requested. CBI Globe/Nexi: no new reply found in the checked period.",
+    "2026-11-23 CJ sync audit: workflow run 45292002540 succeeded and published commit dd0e7b3 to main. It received 238,151 CJ products, found 191,710 valid-format CJ tracking links, validated 193,406 full-inventory products, marked 191,890 active/eligible and selected 20,908 for the public catalog. 363 products were reclassified; 285 category tests passed; 0 mismatches and 0 invalid subcategory paths. 5,534 selected products remain unclassified, including 1,803 in Other. Coverage is 29/31; Food Delivery & Restaurant Orders and Real Estate remain empty. No live click or attribution tests were performed. Main workflow still writes directly to main; PR #34 has a review-only alternative and remains draft.",
+    "2026-11-23 eBay EPN check: official network agreement (published 2026-09-24) requires EPN acceptance before promotional content/methods may be used. Browse API affiliate URLs require OAuth plus the 10-digit EPN affiliateCampaignId in X-EBAY-C-ENDUSERCTX. No EPN portal access, account approval, campaign ID or OAuth credentials verified. EPN Data must not be sent to an LLM/generative AI system without prior written EPN approval and the required written AI-provider safeguards. No application, API integration or product import performed."
   ],
   "prospects": [
     {
@@ -7449,7 +7452,22 @@
         "status": "application instructions; not approval",
         "summary": "iHerb advised applying through its official affiliate campaign, default 5%, 7-day cookie, product feeds available, territories where iHerb delivers, 30-day approval period and commission paid within 60 days after approval."
       },
-      "nextAction": "Use a free eligible network only; Awin is on hold. Confirm Partnerize publisher registration is free, then apply and wait for formal approval."
+      "nextAction": "Do not submit an application yet. Resolve the 45-versus-60-day payout discrepancy, clarify the CSS restriction against the public eligibility wording, and confirm any network onboarding fees. Weekly bank transfer is not confirmed.",
+      "latestResponse": {
+        "receivedAt": "2026-11-23T22:40:01Z",
+        "source": "Gmail reply from iHerb Affiliate Team",
+        "status": "terms clarification; not an approval and no application submitted",
+        "commission": "No new approved ZOVARO rate. Previous contact email stated 5% default; public page advertises up to 25%, not a guaranteed rate for ZOVARO.",
+        "attribution": "Public programme page: last affiliate click; 7-day cookie unless overwritten by another affiliate or Rewards link/code.",
+        "deepLinking": "Public programme page confirms deep links to any product or page.",
+        "payout": "Email states approximately 60 days from month-end; official page states approximately 45 days after month-end. Conflict unresolved.",
+        "minimumPayout": "USD 35 stated in email; not independently shown on the public page reviewed.",
+        "payoutCurrencyAndMethods": "Email: Partnerize USD, Awin EUR; any available payment method, with fees dependent on the bank/provider.",
+        "weeklyBankTransfer": "Not confirmed.",
+        "restrictions": "Email says no CSS activity and no paid ads using the iHerb brand name. Public page simultaneously welcomes shopping-comparison publishers; clarify whether CSS means a specific Google CSS model or all comparison-shopping activity before applying.",
+        "feed": "Feed access described as available to approved publishers; ZOVARO has no feed credentials or access yet.",
+        "approval": "Not approved; no tracking link, feed access, product import, publication or attribution test."
+      }
     },
     {
       "id": "owc-macsales-cj",
@@ -7755,20 +7773,25 @@
   ],
   "cjAudit": {
     "lastAttempt": {
-      "runId": 44808339696,
-      "runUrl": "https://github.com/vendittellijob2025-byte/ZOVARO/actions/runs/44808339696",
-      "checkedAt": "2026-11-20T20:10:18Z",
-      "status": "failed_before_commit",
-      "failure": "Feed processing and validation completed, but the workflow's push to main was rejected as non-fast-forward. No catalog changes from this run were published.",
-      "activeJoinedAdvertisers": 32,
-      "advertisersWithPositiveFeed": 24,
-      "advertisersWithoutPositiveFeed": 8,
-      "productsReceived": 236811,
-      "productsPassingValidationBeforeDeduplication": 233801,
-      "uniqueProductsPassingValidation": 198793,
-      "advertiserMismatchCount": 0,
-      "productsExcludedFromPublicStorefrontByConfirmedImageQualityFailures": 1053,
-      "candidateProductsSelectedForPublicStorefront": 20881,
+      "runId": 45292002540,
+      "runUrl": "https://github.com/vendittellijob2025-byte/ZOVARO/actions/runs/45292002540",
+      "checkedAt": "2026-11-23T23:52:21Z",
+      "status": "success_published_to_main",
+      "mainCommitSha": "dd0e7b3b42dae6edba87b75c46a684b8b01250cf",
+      "productsReceivedFromCJ": 238151,
+      "productsWithValidCJTrackingLinks": 191710,
+      "previousCatalogProductsPreserved": 20901,
+      "validatedProductsInFullCJInventory": 193406,
+      "activeProductsEligibleForPublicStorefront": 191890,
+      "productsSelectedForPublicStorefront": 20908,
+      "reclassifiedProducts": 363,
+      "confidentImageRootOverrides": 87,
+      "productCategoryChecksPassed": 285,
+      "categoryMismatches": 0,
+      "invalidSubcategoryPaths": 0,
+      "unclassifiedProducts": 5534,
+      "otherProductCount": 1803,
+      "uniqueAdvertisersInPublicCatalog": 24,
       "categoryCoverage": {
         "categoryCount": 31,
         "nonEmptyCategoryCount": 29,
@@ -7776,16 +7799,15 @@
           "Food Delivery & Restaurant Orders",
           "Real Estate"
         ],
-        "otherProductCount": 1818,
         "taxonomyNodeCount": 1480,
-        "usedTaxonomyNodeCount": 362,
-        "productsWithKnownSubcategory": 15328,
+        "usedTaxonomyNodeCount": 363,
+        "productsWithKnownSubcategory": 15374,
         "productsWithInvalidSubcategory": 0
       },
       "liveClickTests": 0,
       "attributionTests": 0,
-      "currentPublicCatalogRecords": 20872,
-      "currentPublicCatalogGeneratedAt": "2026-11-20T07:10:02.921Z"
+      "workflowBehavior": "The main-branch workflow published the validated catalog directly to main. Draft PR #34 contains a review-PR version of the workflow but is not merged.",
+      "advertiserSnapshot": "Per-advertiser statuses remain from the previous detailed audit; this run log did not provide a new per-advertiser state table."
     },
     "advertisers": [
       {
@@ -8413,61 +8435,30 @@
       }
     ],
     "publicCatalogSnapshot": {
-      "checkedAt": "2026-11-21T00:59:52Z",
-      "url": "https://zovaro.vercel.app/data/catalog.json",
-      "httpStatus": 200,
-      "generatedAt": "2026-11-20T07:10:02.921Z",
-      "productCount": 20872,
-      "inventoryProductCount": 201466,
-      "rowsReceived": 238099,
-      "advertiserCount": 32,
-      "advertisersWithProductFeeds": 24,
-      "productsWithValidTrackingLinks": 199863,
-      "publicClickUrlFormatValidCount": 20872,
+      "generatedAt": "2026-11-23T23:52:20.698Z",
+      "catalogRecords": 20908,
+      "uniqueAdvertisers": 24,
+      "categoryCount": 31,
+      "nonEmptyCategoryCount": 29,
+      "emptyCategories": [
+        "Food Delivery & Restaurant Orders",
+        "Real Estate"
+      ],
+      "otherProductCount": 1803,
+      "unclassifiedProducts": 5534,
+      "taxonomyNodeCount": 1480,
+      "usedTaxonomyNodeCount": 363,
+      "productsWithKnownSubcategory": 15374,
+      "productsWithInvalidSubcategory": 0,
       "liveClickTests": 0,
-      "attributionTests": 0,
-      "quality": {
-        "missingPrice": 0,
-        "missingCurrency": 0,
-        "missingImage": 0,
-        "missingAffiliateUrl": 0,
-        "duplicateProductKeys": 4,
-        "provisionalClassifications": 15318,
-        "pendingAmazonReference": 20872,
-        "otherCategoryCount": 1814
-      },
-      "categoryCounts": {
-        "Electronics": 402,
-        "Travel": 109,
-        "Office & Technology": 49,
-        "Sports": 1809,
-        "Automotive": 1846,
-        "Books & Media": 1806,
-        "Security & Safety": 16,
-        "Musical Instruments & Studio": 421,
-        "Other": 1814,
-        "Toys & Games": 396,
-        "Business, Wholesale & Bulk Supply": 3,
-        "Home & Living": 748,
-        "Fashion": 1761,
-        "Beauty": 1813,
-        "Health & Wellness": 1073,
-        "Arts, Crafts & Sewing": 1851,
-        "Babies": 459,
-        "Tools & DIY": 117,
-        "Industrial & Scientific": 1800,
-        "Luxury & Prestige": 1720,
-        "Accessible & Adaptive Living": 113,
-        "Food & Grocery": 224,
-        "Energy, Solar & Electric Mobility": 10,
-        "Garden": 8,
-        "Appliances": 8,
-        "Gaming": 180,
-        "TVs & Home Cinema": 200,
-        "Refurbished, Pre-Owned & Outlet": 2,
-        "Pets": 113,
-        "Repair & Circular Economy": 1
-      }
+      "attributionTests": 0
+    },
+    "previousAdvertiserSnapshot": {
+      "checkedAt": "2026-11-20T20:10:18Z",
+      "activeJoinedAdvertisers": 32,
+      "advertisersWithPositiveFeed": 24,
+      "advertisersWithoutPositiveFeed": 8,
+      "note": "Previous detailed per-advertiser snapshot; not refreshed by the latest network-level sync log."
     }
   },
   "directPartnerAudit": [
