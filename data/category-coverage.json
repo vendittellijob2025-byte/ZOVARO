@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-23T23:52:20.687Z",
-  "selectedProductCount": 20908,
-  "inventoryProductCount": 193406,
+  "generatedAt": "2026-11-24T09:51:51.129Z",
+  "selectedProductCount": 20928,
+  "inventoryProductCount": 193746,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1862,
+      "productCount": 1867,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1563,
-          "directProductCount": 911,
+          "productCount": 1568,
+          "directProductCount": 917,
           "children": [
             {
               "name": "Sewing Machines",
@@ -507,8 +507,8 @@
             {
               "name": "Yarn & Knitting",
               "path": "Sewing & Textiles > Yarn & Knitting",
-              "productCount": 635,
-              "directProductCount": 635,
+              "productCount": 634,
+              "directProductCount": 634,
               "children": []
             },
             {
@@ -531,7 +531,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1845,
+      "productCount": 1843,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -580,8 +580,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1258,
-          "directProductCount": 1238,
+          "productCount": 1255,
+          "directProductCount": 1235,
           "children": [
             {
               "name": "Interior Accessories",
@@ -1047,7 +1047,7 @@
         {
           "name": "Car Parts",
           "path": "Car Parts",
-          "productCount": 174,
+          "productCount": 175,
           "directProductCount": 0,
           "children": [
             {
@@ -1067,8 +1067,8 @@
             {
               "name": "Engine & Engine Parts",
               "path": "Car Parts > Engine & Engine Parts",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": []
             },
             {
@@ -1831,8 +1831,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1813,
-      "unclassifiedProductCount": 550,
+      "productCount": 1814,
+      "unclassifiedProductCount": 545,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1916,7 +1916,7 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 394,
+          "productCount": 393,
           "directProductCount": 7,
           "children": [
             {
@@ -1943,8 +1943,8 @@
             {
               "name": "Hair Care Products",
               "path": "Hair Care > Hair Care Products",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -1980,7 +1980,7 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 164,
+          "productCount": 161,
           "directProductCount": 38,
           "children": [
             {
@@ -2049,8 +2049,8 @@
             {
               "name": "Moisturizers",
               "path": "Skincare > Moisturizers",
-              "productCount": 27,
-              "directProductCount": 27,
+              "productCount": 24,
+              "directProductCount": 24,
               "children": []
             },
             {
@@ -2072,8 +2072,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 541,
-          "directProductCount": 541,
+          "productCount": 550,
+          "directProductCount": 550,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2221,7 +2221,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 161,
+          "productCount": 162,
           "directProductCount": 0,
           "children": [
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 136,
-              "directProductCount": 136,
+              "productCount": 137,
+              "directProductCount": 137,
               "children": []
             },
             {
@@ -2322,7 +2322,7 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1806,
+      "productCount": 1805,
       "unclassifiedProductCount": 503,
       "browseTree": [
         {
@@ -2392,14 +2392,14 @@
         {
           "name": "Music",
           "path": "Music",
-          "productCount": 60,
+          "productCount": 59,
           "directProductCount": 44,
           "children": [
             {
               "name": "CDs",
               "path": "Music > CDs",
-              "productCount": 15,
-              "directProductCount": 15,
+              "productCount": 14,
+              "directProductCount": 14,
               "children": []
             },
             {
@@ -2525,13 +2525,13 @@
     },
     {
       "name": "Business, Wholesale & Bulk Supply",
-      "productCount": 3,
+      "productCount": 1,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Wholesale Products",
           "path": "Wholesale Products",
-          "productCount": 1,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
@@ -2558,8 +2558,8 @@
             {
               "name": "Wholesale Home & Garden",
               "path": "Wholesale Products > Wholesale Home & Garden",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -2567,7 +2567,7 @@
         {
           "name": "Packaging & Shipping Supplies",
           "path": "Packaging & Shipping Supplies",
-          "productCount": 2,
+          "productCount": 1,
           "directProductCount": 0,
           "children": [
             {
@@ -2580,8 +2580,8 @@
             {
               "name": "Labels & Printers",
               "path": "Packaging & Shipping Supplies > Labels & Printers",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -3478,12 +3478,12 @@
     {
       "name": "Fashion",
       "productCount": 1758,
-      "unclassifiedProductCount": 224,
+      "unclassifiedProductCount": 223,
       "browseTree": [
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 149,
+          "productCount": 148,
           "directProductCount": 0,
           "children": [
             {
@@ -3510,8 +3510,8 @@
             {
               "name": "Jeans & Trousers",
               "path": "Clothing > Jeans & Trousers",
-              "productCount": 27,
-              "directProductCount": 27,
+              "productCount": 28,
+              "directProductCount": 28,
               "children": []
             },
             {
@@ -3552,8 +3552,8 @@
             {
               "name": "Socks",
               "path": "Clothing > Socks",
-              "productCount": 34,
-              "directProductCount": 34,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             }
           ]
@@ -3561,8 +3561,8 @@
         {
           "name": "Women's Clothing",
           "path": "Women's Clothing",
-          "productCount": 10,
-          "directProductCount": 6,
+          "productCount": 11,
+          "directProductCount": 7,
           "children": [
             {
               "name": "Dresses",
@@ -3726,13 +3726,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 979,
-          "directProductCount": 52,
+          "directProductCount": 55,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 316,
-              "directProductCount": 316,
+              "productCount": 313,
+              "directProductCount": 313,
               "children": []
             },
             {
@@ -3773,8 +3773,8 @@
             {
               "name": "Formal Shoes",
               "path": "Shoes > Formal Shoes",
-              "productCount": 152,
-              "directProductCount": 152,
+              "productCount": 151,
+              "directProductCount": 151,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 17,
-              "directProductCount": 17,
+              "productCount": 18,
+              "directProductCount": 18,
               "children": []
             }
           ]
@@ -3910,7 +3910,7 @@
         {
           "name": "Accessories",
           "path": "Accessories",
-          "productCount": 371,
+          "productCount": 372,
           "directProductCount": 4,
           "children": [
             {
@@ -3958,8 +3958,8 @@
             {
               "name": "Wigs & Hair Extensions",
               "path": "Accessories > Wigs & Hair Extensions",
-              "productCount": 311,
-              "directProductCount": 311,
+              "productCount": 312,
+              "directProductCount": 312,
               "children": []
             },
             {
@@ -4377,20 +4377,20 @@
     },
     {
       "name": "Gaming",
-      "productCount": 180,
+      "productCount": 181,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Consoles",
           "path": "Consoles",
-          "productCount": 178,
+          "productCount": 179,
           "directProductCount": 0,
           "children": [
             {
               "name": "PlayStation",
               "path": "Consoles > PlayStation",
-              "productCount": 94,
-              "directProductCount": 94,
+              "productCount": 95,
+              "directProductCount": 95,
               "children": []
             },
             {
@@ -4814,8 +4814,8 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1083,
-      "unclassifiedProductCount": 321,
+      "productCount": 1085,
+      "unclassifiedProductCount": 322,
       "browseTree": [
         {
           "name": "Nutrition",
@@ -5361,14 +5361,14 @@
         {
           "name": "Medical Devices & Equipment",
           "path": "Medical Devices & Equipment",
-          "productCount": 9,
+          "productCount": 10,
           "directProductCount": 0,
           "children": [
             {
               "name": "Diagnostic & Monitoring Devices",
               "path": "Medical Devices & Equipment > Diagnostic & Monitoring Devices",
-              "productCount": 4,
-              "directProductCount": 4,
+              "productCount": 5,
+              "directProductCount": 5,
               "children": []
             },
             {
@@ -5604,14 +5604,14 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 759,
+      "productCount": 764,
       "unclassifiedProductCount": 6,
       "browseTree": [
         {
           "name": "Furniture",
           "path": "Furniture",
-          "productCount": 32,
-          "directProductCount": 2,
+          "productCount": 34,
+          "directProductCount": 4,
           "children": [
             {
               "name": "Living Room Furniture",
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 519,
-          "directProductCount": 514,
+          "productCount": 522,
+          "directProductCount": 517,
           "children": [
             {
               "name": "Wall Art",
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1154,
+      "unclassifiedProductCount": 1147,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 236,
-          "directProductCount": 236,
+          "productCount": 243,
+          "directProductCount": 243,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6153,8 +6153,8 @@
             {
               "name": "3D Printer Filament",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Filament",
-              "productCount": 253,
-              "directProductCount": 253,
+              "productCount": 255,
+              "directProductCount": 255,
               "children": []
             },
             {
@@ -6167,22 +6167,22 @@
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 31,
-              "directProductCount": 31,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 115,
-              "directProductCount": 115,
+              "productCount": 113,
+              "directProductCount": 113,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 9,
-              "directProductCount": 9,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             }
           ]
@@ -6191,14 +6191,14 @@
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 422,
+      "productCount": 423,
       "unclassifiedProductCount": 11,
       "browseTree": [
         {
           "name": "Instruments",
           "path": "Instruments",
-          "productCount": 352,
-          "directProductCount": 271,
+          "productCount": 353,
+          "directProductCount": 272,
           "children": [
             {
               "name": "Guitars & Basses",
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 49,
+      "productCount": 50,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 48,
+          "productCount": 49,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 47,
-              "directProductCount": 47,
+              "productCount": 48,
+              "directProductCount": 48,
               "children": []
             },
             {
@@ -6536,14 +6536,14 @@
     },
     {
       "name": "Pets",
-      "productCount": 114,
+      "productCount": 115,
       "unclassifiedProductCount": 46,
       "browseTree": [
         {
           "name": "Dogs",
           "path": "Dogs",
-          "productCount": 7,
-          "directProductCount": 7,
+          "productCount": 8,
+          "directProductCount": 8,
           "children": [
             {
               "name": "Dog Food",
@@ -7312,7 +7312,7 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1722,
+      "productCount": 1723,
       "unclassifiedProductCount": 7,
       "browseTree": [
         {
@@ -7587,8 +7587,8 @@
         {
           "name": "Luxury Watches & Jewelry",
           "path": "Luxury Watches & Jewelry",
-          "productCount": 1686,
-          "directProductCount": 1658,
+          "productCount": 1687,
+          "directProductCount": 1659,
           "children": [
             {
               "name": "Rolex",
@@ -8175,7 +8175,7 @@
     {
       "name": "Sports",
       "productCount": 1811,
-      "unclassifiedProductCount": 355,
+      "unclassifiedProductCount": 356,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8665,14 +8665,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 358,
+          "productCount": 359,
           "directProductCount": 1,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 355,
-              "directProductCount": 355,
+              "productCount": 356,
+              "directProductCount": 356,
               "children": []
             },
             {
@@ -9519,7 +9519,7 @@
         {
           "name": "Fishing",
           "path": "Fishing",
-          "productCount": 44,
+          "productCount": 42,
           "directProductCount": 0,
           "children": [
             {
@@ -9539,8 +9539,8 @@
             {
               "name": "Lines & Hooks",
               "path": "Fishing > Lines & Hooks",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 403,
+      "productCount": 404,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,14 +10397,14 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 118,
+          "productCount": 119,
           "directProductCount": 97,
           "children": [
             {
               "name": "Board Games",
               "path": "Board Games & Puzzles > Board Games",
-              "productCount": 14,
-              "directProductCount": 14,
+              "productCount": 15,
+              "directProductCount": 15,
               "children": []
             },
             {
@@ -10564,7 +10564,7 @@
     },
     {
       "name": "Travel",
-      "productCount": 98,
+      "productCount": 97,
       "unclassifiedProductCount": 50,
       "browseTree": [
         {
@@ -10656,14 +10656,14 @@
         {
           "name": "Outdoor & Adventure Travel",
           "path": "Outdoor & Adventure Travel",
-          "productCount": 1,
+          "productCount": 0,
           "directProductCount": 0,
           "children": [
             {
               "name": "Camping Gear",
               "path": "Outdoor & Adventure Travel > Camping Gear",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
@@ -10855,28 +10855,28 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1803,
+  "otherProductCount": 1810,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1803
+      "count": 1810
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
-    "usedTaxonomyNodeCount": 363,
-    "emptyTaxonomyNodeCount": 1117,
-    "productsWithKnownSubcategory": 15374,
+    "usedTaxonomyNodeCount": 358,
+    "emptyTaxonomyNodeCount": 1122,
+    "productsWithKnownSubcategory": 15398,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5534,
+    "productsWithoutSubcategory": 5530,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1154
+        "count": 1147
       },
       {
         "category": "Beauty",
-        "count": 550
+        "count": 545
       },
       {
         "category": "Books & Media",
@@ -10884,15 +10884,15 @@
       },
       {
         "category": "Sports",
-        "count": 355
+        "count": 356
       },
       {
         "category": "Health & Wellness",
-        "count": 321
+        "count": 322
       },
       {
         "category": "Fashion",
-        "count": 224
+        "count": 223
       },
       {
         "category": "Toys & Games",
@@ -10944,26 +10944,26 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5534,
-      "provisional": 15374
+      "needs_classification": 5530,
+      "provisional": 15398
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20908
+      "pendingReference": 20928
     },
     "mostUsedBrowsePaths": [
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry",
-        "productCount": 1658
+        "productCount": 1659
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1238
+        "productCount": 1235
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 911
+        "productCount": 917
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10971,15 +10971,15 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles > Yarn & Knitting",
-        "productCount": 635
+        "productCount": 634
       },
       {
         "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 541
+        "productCount": 550
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 514
+        "productCount": 517
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -10987,15 +10987,15 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 355
+        "productCount": 356
       },
       {
         "path": "Fashion > Shoes > Sneakers",
-        "productCount": 316
+        "productCount": 313
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
-        "productCount": 311
+        "productCount": 312
       },
       {
         "path": "Sports > Padel",
@@ -11003,7 +11003,7 @@
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
-        "productCount": 271
+        "productCount": 272
       },
       {
         "path": "Health & Wellness > Wellness > Alternative Therapies > Essential Oils",
@@ -11011,7 +11011,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Filament",
-        "productCount": 253
+        "productCount": 255
       },
       {
         "path": "Fashion > Shoes > Sandals",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 236
+        "productCount": 243
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11047,7 +11047,7 @@
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
-        "productCount": 152
+        "productCount": 151
       },
       {
         "path": "Sports > Sports Apparel > Sports Clothing",
@@ -11063,7 +11063,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 136
+        "productCount": 137
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 115
+        "productCount": 113
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11099,7 +11099,7 @@
       },
       {
         "path": "Gaming > Consoles > PlayStation",
-        "productCount": 94
+        "productCount": 95
       },
       {
         "path": "Automotive > Rims & Tires > Wheels & Rims",
@@ -11167,7 +11167,7 @@
       },
       {
         "path": "Fashion > Shoes",
-        "productCount": 52
+        "productCount": 55
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
@@ -11178,12 +11178,12 @@
         "productCount": 50
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "path": "Office & Technology > Software > Utilities",
         "productCount": 48
       },
       {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 47
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "productCount": 48
       },
       {
         "path": "Travel > Maps & Guides > Wall Maps",
@@ -11222,20 +11222,20 @@
         "productCount": 38
       },
       {
-        "path": "Automotive > Car Parts > Steering & Suspension",
-        "productCount": 38
-      },
-      {
         "path": "Beauty > Skincare",
         "productCount": 38
       },
       {
-        "path": "Fashion > Clothing > Socks",
-        "productCount": 34
+        "path": "Automotive > Car Parts > Steering & Suspension",
+        "productCount": 38
       },
       {
         "path": "Sports > Padel > Padel Bags",
         "productCount": 33
+      },
+      {
+        "path": "Fashion > Clothing > Socks",
+        "productCount": 32
       },
       {
         "path": "Automotive > Rims & Tires > Car Tires",
@@ -11243,11 +11243,15 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 31
+        "productCount": 32
       },
       {
         "path": "Home & Living > Furniture > Living Room Furniture",
         "productCount": 30
+      },
+      {
+        "path": "Fashion > Clothing > Jeans & Trousers",
+        "productCount": 28
       },
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry > High Jewelry",
@@ -11270,14 +11274,6 @@
         "productCount": 27
       },
       {
-        "path": "Beauty > Skincare > Moisturizers",
-        "productCount": 27
-      },
-      {
-        "path": "Fashion > Clothing > Jeans & Trousers",
-        "productCount": 27
-      },
-      {
         "path": "Automotive > Motorcycles, Accessories & Parts",
         "productCount": 26
       },
@@ -11287,6 +11283,10 @@
       },
       {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
+        "productCount": 24
+      },
+      {
+        "path": "Beauty > Skincare > Moisturizers",
         "productCount": 24
       },
       {
@@ -11306,6 +11306,10 @@
         "productCount": 21
       },
       {
+        "path": "Musical Instruments & Studio > Instruments > Strings",
+        "productCount": 21
+      },
+      {
         "path": "Books & Media > Books > Nonfiction",
         "productCount": 21
       },
@@ -11314,11 +11318,7 @@
         "productCount": 21
       },
       {
-        "path": "Musical Instruments & Studio > Instruments > Strings",
-        "productCount": 21
-      },
-      {
-        "path": "Automotive > Car Parts > Lighting",
+        "path": "Fashion > Shoes > Kids' Shoes",
         "productCount": 18
       },
       {
@@ -11330,6 +11330,10 @@
         "productCount": 18
       },
       {
+        "path": "Automotive > Car Parts > Lighting",
+        "productCount": 18
+      },
+      {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles > Needles & Notions",
         "productCount": 17
       },
@@ -11338,26 +11342,22 @@
         "productCount": 17
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
-        "productCount": 17
-      },
-      {
         "path": "Electronics > Wearable Technology > Wearable Accessories",
         "productCount": 16
       },
       {
-        "path": "Home & Living > Bedding & Bath",
+        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
         "productCount": 16
       },
       {
-        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
+        "path": "Home & Living > Bedding & Bath",
         "productCount": 16
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1593
+        "productCount": 1600
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11421,6 +11421,15 @@
         "description": "UNICE $99 Surprise Box -- Valued $330"
       },
       {
+        "title": "Universal History 19th Century Andrzej Chwalba",
+        "brand": "Wydawnictwo Naukowe PWN",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Historia powszechna Wiek XIX</h1><h2>Andrzej Chwalba</h2> <ul>\n<li>\nWydawca: Wydawnictwo Naukowe PWN\n</li>\n<li>\nRok wydania: 2023\n</li>\n<li>\nOprawa: Miękka\n</li>\n<li>\nFormat: 1"
+      },
+      {
         "title": "Color #613 Blonde 1 Bundle Deal for All Hair Textures",
         "brand": "ISEE HAIR",
         "advertiser": "RSE- ISEE Hair, BGMgirl and WigFever",
@@ -11466,13 +11475,13 @@
         "description": "$15 OFF for first 2 orders&Extra 2% OFF each order&72-Hrs delivery&30 Days no reason return and free return label&Points redeem hair"
       },
       {
-        "title": "Historia Powszechna Wiek XIX Andrzej Chwalba",
-        "brand": "Wydawnictwo Naukowe PWN",
+        "title": "Wampire Knight Matsuri 1-5",
+        "brand": "Waneko",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Historia powszechna Wiek XIX</h1><h2>Andrzej Chwalba</h2> <ul>\n<li>\nWydawca: Wydawnictwo Naukowe PWN\n</li>\n<li>\nRok wydania: 2023\n</li>\n<li>\nOprawa: Miękka\n</li>\n<li>\nFormat: 1"
+        "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ&#xa0; pt.:</h1><h1>WAMPIRE KNIGHT</h1><h1>1-5</h1><h1>-----</h1><p>MANGA</p><h1>.</h1><h1>AUTOR:</h1><h1>MATSURI HINO,</h1><h1>ALEKSANDRA WATANUKI<"
       },
       {
         "title": "INNISFREE Special Care Mask-Foot",
@@ -11520,13 +11529,13 @@
         "description": "[US Only] $100 OFF Coupon (over $200 and valid in 30 days)"
       },
       {
-        "title": "Szydełko z rączką Pony Easy Grip metalowe 1,25 mm",
-        "brand": "Pony",
+        "title": "Wędka Ryobi Arctica cast 1,83 m 12-30g Pike (130g)",
+        "brand": "Ryobi",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Szydełko z rączką PONY EASY GRIP metalowe 1,25 mm</h1> <h1>SZYDEŁKO METALOWE ERGONOMICZNE PONY EASY GRIP 1,25 MM 14 CM</h1>\n<h2>O produkcie:</h2>\n<p>Firma&#xa0;<b>Pony</b>&#xa0"
+        "description": "<h2>Wędka Ryobi ARCTICA cast 1,83 m 12-30g 1-część</h2><p><b>szczupak na lekko</b></p><p>Wędziska Arctica firmy Ryobi zostały ciekawie zaprojektowane od strony designerskiej. Te kr"
       },
       {
         "title": "soundcore Work Adjustable Wearable Bracelet for soundcore Work AI Voice Recorder",
@@ -11556,13 +11565,13 @@
         "description": "[US Only] $50 OFF Coupon (over $100 and valid in 30 days)"
       },
       {
-        "title": "Wampire Knight Matsuri Hino Manga Watanuki 1-5",
-        "brand": "Waneko",
+        "title": "1:22.5 Curved track 15 degrees, scale G Piko G-R5 35215",
+        "brand": "Piko",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>OFERUJĘ DO SPRZEDAŻY KSIĄŻKĘ&#xa0; pt.:</h1><h1>WAMPIRE KNIGHT</h1><h1>1-5</h1><h1>-----</h1><p>MANGA</p><h1>.</h1><h1>AUTOR:</h1><h1>MATSURI HINO,</h1><h1>ALEKSANDRA WATANUKI<"
+        "description": "<p>G-scale model curve track with a radius of 1.24 meters and a width of 45 mm by PIKO No. G-R1</p><p>35215.</p>"
       },
       {
         "title": "PowerConf S3 Speakerphone",
@@ -11592,13 +11601,13 @@
         "description": "[US Only] UNice Plus VIP (90 Days)"
       },
       {
-        "title": "Tkanina Żorżeta Błysk Sukienkowa 1/2 Mb",
-        "brand": "",
+        "title": "1:22.5 Arc net 15 st. scale G Pico G-R7 35217",
+        "brand": "Piko",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p><b>TKANINA ŻORŻETA (KREPA) BŁYSK SUKIENKOWA 1/2 MB</b></p><p><b>(KOLOR MIĘTOWY)</b></p><p>Jest to elegancka tkanina sukienkowa, nakrapiany brokatem. Jest lekka, lejąca, przewiew"
+        "description": "<p>G scale model curve track with a radius of 1.565m and a width of 45mm by PIKO No. G-R7 35217.</p>"
       },
       {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
@@ -11610,15 +11619,6 @@
         "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
       },
       {
-        "title": "Wędka Ryobi Arctica cast 1,83 m 12-30g Pike (130g)",
-        "brand": "Ryobi",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>Wędka Ryobi ARCTICA cast 1,83 m 12-30g 1-część</h2><p><b>szczupak na lekko</b></p><p>Wędziska Arctica firmy Ryobi zostały ciekawie zaprojektowane od strony designerskiej. Te kr"
-      },
-      {
         "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11626,15 +11626,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
-      },
-      {
-        "title": "Dętka rowerowa 18 x 1.75 DV35 Romet",
-        "brand": "Romet",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Dętka rowerowa marki ROMET</p><p>Wymiary produktu: 18 x 1.75</p><p>Średnica: 18\"</p><p>Szerokość: 1.75</p><p>Zawór: DV35</p><p>Długość zaworu: 35 mm</p><p>Opis zaworu:&nbsp;<b>n"
       },
       {
         "title": "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer",
@@ -11646,13 +11637,13 @@
         "description": "UNICE Gift Card Usage Rules&1. The Gift Card amount will be added to your UNICE account wallet balance within 24 hours after we receive your order. The wallet balance is bound to t"
       },
       {
-        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R5 35215",
-        "brand": "Piko",
+        "title": "Universal Mil-Tec cleaning rod cleaning kit in a 24-in-1 box",
+        "brand": "Mil-Tec",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
+        "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
       },
       {
         "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
@@ -11673,13 +11664,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "1:22,5 Tor łukowy 15 st. skala G Piko G-R7 35217",
-        "brand": "Piko",
+        "title": "Mil-Tec handgun maintenance cleaning kit",
+        "brand": "Mil-Tec",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
+        "description": "<h1>Zestaw do czyszczenia broni krótkiej Mil-Tec (16171340)</h1><p>Zestaw do dbania o broń krótką od Mil-Tec, przeznaczony dla kalibrów .40, .45, .357, .38, .22 oraz 9 mm. Sprawna "
       },
       {
         "title": "INNISFREE No-Sebum Moisture Powder",
@@ -11709,6 +11700,15 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
+        "title": "Swiss Bayonet M57 SG510 Swiss Army Demobil",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY [91549210]</h1> <p><b>Parametry:</b></p><ul><li>Model: Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY</li><li>Marka: Mil-Tec, N"
+      },
+      {
         "title": "Black Cushion SPF34 PA++ 02_RYAN",
         "brand": "B.READY",
         "advertiser": "Amore Mall",
@@ -11736,6 +11736,15 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
+        "title": "The Coming of Night by Nelson Demille",
+        "brand": "Buchmann",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
+      },
+      {
         "title": "[Value $525 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11752,6 +11761,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Filling a gift box with photos",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>Aukcja dotyczy wypełnienia najmniejszego pudełeczka w pudełku ze zdjęciami.</b></p><h1>Aukcja nie zawiera żadnego pudełka,</h1><h2>jest jedynie uzupełnieniem kompletu: pudełk"
       },
       {
         "title": "LABO-H Scalp Strengthening Clinic Scaler Hair Loss Care 208G",
@@ -11781,6 +11799,15 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
+        "title": "Merino Brubeck Active Wool Winter Hat S/m",
+        "brand": "Brubeck",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Czapka&nbsp;MERINO&nbsp;BRUBECK ACTIVE WOOL</h1>\n<h2>Rozmiar S/M</h2>\n<p>obwód głowy: 52-57</p>\n<p>Czapka z serii BRUBECK ACTIVE WOOL wykonana z wełny owiec merynosów to doskon"
+      },
+      {
         "title": "INNISFREE Retinol Cica Repair Ampoule 30ML",
         "brand": "innisfree",
         "advertiser": "Amore Mall",
@@ -11806,6 +11833,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Erko WHP1 hydraulic cutting machine in a cassette",
+        "brand": "Erko",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Wycinarka hydrauliczna WHP 1&nbsp;firmy Erko</h1>\n\n<h2>Wycinarka hydrauliczna do wycinania otworów okrągłych, kwadratowych i prostokątnych:</h2>\n\n<ul>\n\t<li>maksymalna grubość b"
       },
       {
         "title": "AYUNCHE Airy Veil Curl Volume Fixer 150ml",
@@ -11835,331 +11871,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "IOPE UV Shield Sunstick",
-        "brand": "IOPE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "An anti-oxidant waterproof sunstick that flawlessly protects the skin against strong UV rays, fine dust, and blue light."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Primera Nia Cica Soothing Glow Cream 30ml",
-        "brand": "Primera",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Primera nia cica soothing glow cream improve skin barrier and dull skin at once. Removed any disadvantages of derma cream which is slowly absorbed into skin.  Improves inner skin g"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "B. READY Cicaffeine Trouble Reset Cleansing Foam 150g",
-        "brand": "B.READY",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "CicaffeineTM\r\n\r\nBeta-Sitosterol, a next-generation CICA ingredient that soothes skin and bolsters its natural power, is blended with rich Caffeine extracted from skin-firming Green"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Olejek zapachowy 12ml Pomarańcza I Cynamon",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - POMARAŃCZA I CYNAMON </h1><h1>OLEJEK ZAPACHOWY POMARAŃCZA I CYNAMON 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zde"
-      },
-      {
-        "title": "Soft Finish Loose Powder 15g",
-        "brand": "HERA",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The spherical silicone powder and fixing powder keep sebum under complete control to keep your skin smooth, soft, and matte for longer."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Uniwersalny zestaw do czyszczenia broni wycior Mil-Tec w pudełku 24 w 1",
-        "brand": "Mil-Tec",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
-      },
-      {
-        "title": "AYUNCHE Enrich Bonding Mask 100ml",
-        "brand": "AYUNCHE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Intensive damage care mask with hair bonding technology."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Zestaw do czyszczenia konserwowania broni krótkiej pistoletu Mil-Tec",
-        "brand": "Mil-Tec",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Zestaw do czyszczenia broni krótkiej Mil-Tec (16171340)</h1><p>Zestaw do dbania o broń krótką od Mil-Tec, przeznaczony dla kalibrów .40, .45, .357, .38, .22 oraz 9 mm. Sprawna "
-      },
-      {
-        "title": "Mamonde Flora Glow Rose Smoothing Cream 50ml",
-        "brand": "MAMONDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Szwajcarski Bagnet M57 SG510 Demobil Swiss Army",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY [91549210]</h1> <p><b>Parametry:</b></p><ul><li>Model: Szwajcarski BAGNET M57 SG510 DEMOBIL SWISS ARMY</li><li>Marka: Mil-Tec, N"
-      },
-      {
-        "title": "AYUNCHE Airy Veil Curl Cream 150ml",
-        "brand": "AYUNCHE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Gra Ravensburger Moja Pierwsza La Cucaracha",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gra Ravensburger Moja Pierwsza La Cucaracha"
-      },
-      {
-        "title": "INNISFREE Jeju Super Volcanic pore Mask 100ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Powerful pore clean mask. Jeju Volcanic Pine Spear™, which has strong sebum adsorption, and a formula containing AHA intensively cares for various pore problems."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Nadejście nocy Nelson Demille",
-        "brand": "Buchmann",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
-      },
-      {
-        "title": "INNISFREE No sebum Mineral Pact 8.5G",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>Aukcja dotyczy wypełnienia najmniejszego pudełeczka w pudełku ze zdjęciami.</b></p><h1>Aukcja nie zawiera żadnego pudełka,</h1><h2>jest jedynie uzupełnieniem kompletu: pudełk"
-      },
-      {
-        "title": "HOLITUAL Radiance Resurfacing Peel 12ea",
-        "brand": "HOLITUAL",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Zimowa Czapka Merino Brubeck Active Wool S/m",
-        "brand": "Brubeck",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Czapka&nbsp;MERINO&nbsp;BRUBECK ACTIVE WOOL</h1>\n<h2>Rozmiar S/M</h2>\n<p>obwód głowy: 52-57</p>\n<p>Czapka z serii BRUBECK ACTIVE WOOL wykonana z wełny owiec merynosów to doskon"
-      },
-      {
-        "title": "INNISFREE Retinol Green Tea PDRN Skinbooster Ampoule 25ML",
-        "brand": "innisfree",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Nożyczki Medyczne Do Szwów Nici Spencer 9cm W-wa",
-        "brand": "Gama",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Nożyczki Spencer 9cm</h1>\n<h1>Stal Nierdzewna!!! Stainless Steel!!!</h1>\n<p>   Nożyczki Spencer 9cm. Wykonane ze stali nierdzewnej wysokiej jakości. Niejałowe. Można Sterylizow"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Erko Wycinarka hydrauliczna WHP1 w kasecie",
-        "brand": "Erko",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Wycinarka hydrauliczna WHP 1&nbsp;firmy Erko</h1>\n\n<h2>Wycinarka hydrauliczna do wycinania otworów okrągłych, kwadratowych i prostokątnych:</h2>\n\n<ul>\n\t<li>maksymalna grubość b"
-      },
-      {
-        "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
-        "brand": "mise-en-scence",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Makita Młot Udarowy HR5202C",
+        "title": "Makita Impact Hammer HR5202C",
         "brand": "Makita",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12168,13 +11880,13 @@
         "description": "<p><b>MAKITA MŁOT UDAROWY HR5202C</b></p><ul><li>Młot przeznaczony do wiercenia z udarem i kucia (2 tryby pracy).</li><li>Wyposażony w przesuwny uchwyt szybkoblokujący.</li><li>Pos"
       },
       {
-        "title": "INNISFREE Black tea treatment essence 75ML",
-        "brand": "innisfree",
+        "title": "IOPE UV Shield Sunstick",
+        "brand": "IOPE",
         "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+        "description": "An anti-oxidant waterproof sunstick that flawlessly protects the skin against strong UV rays, fine dust, and blue light."
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12195,15 +11907,6 @@
         "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]"
       },
       {
-        "title": "HANYUL Chestnut Shell Hydrating Mask 100ml",
-        "brand": "HANYUL",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "A wash-off mask with “Chestnut Shell PHA™” from grinded shell of chestnut from Buyeo area"
-      },
-      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12213,7 +11916,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_12 oz.",
+        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_12 oz.",
         "brand": "Benlee rocky marciano",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12222,13 +11925,13 @@
         "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
       },
       {
-        "title": "Laneige Cica Sleeping Mask",
-        "brand": "LANEIGE",
+        "title": "Primera Nia Cica Soothing Glow Cream 30ml",
+        "brand": "Primera",
         "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
+        "description": "Primera nia cica soothing glow cream improve skin barrier and dull skin at once. Removed any disadvantages of derma cream which is slowly absorbed into skin.  Improves inner skin g"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12240,7 +11943,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Skórzane Rękawice Bokserskie Benlee Fighter Sparingowe Treningowe_8 oz.",
+        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_8 oz.",
         "brand": "Benlee rocky marciano",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12249,22 +11952,13 @@
         "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "B. READY Cicaffeine Trouble Reset Cleansing Foam 150g",
+        "brand": "B.READY",
+        "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Kapodaster Gitary Akustycznej Klasycznej Niebieski",
-        "brand": "E-trade",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h2>Kapodaster niebieski do gitary akustycznej, klasycznej</h2> <p>kod: KAP01N</p> <ul><li><b>kolor: </b>niebieski,</li><li><b>trwałe materiały</b><b>,</b></li><li><b>prosty w użyc"
+        "description": "CicaffeineTM\r\n\r\nBeta-Sitosterol, a next-generation CICA ingredient that soothes skin and bolsters its natural power, is blended with rich Caffeine extracted from skin-firming Green"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12276,13 +11970,22 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Wypełnienie pudełka prezentowego ze zdjęciami",
+        "title": "Filling a gift box with photos",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>Aukcja dotyczy <b>wypełnienia</b> najmniejszego pudełeczka w pudełku ze zdjęciami. <b>Cena nie zawiera żadnego pudełka</b>, jest to cena za uzupełnienie najmniejszego pudełeczka"
+      },
+      {
+        "title": "Soft Finish Loose Powder 15g",
+        "brand": "HERA",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The spherical silicone powder and fixing powder keep sebum under complete control to keep your skin smooth, soft, and matte for longer."
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12303,6 +12006,15 @@
         "description": "<p>Do wyboru macie Państwo popularne krętliki baryłkowe, rolowane, a także najmocniejsze – krętliki łożyskowane. Wszystkie, w zależności od wielkości (22 – 4 0) nadają się do delik"
       },
       {
+        "title": "AYUNCHE Enrich Bonding Mask 100ml",
+        "brand": "AYUNCHE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Intensive damage care mask with hair bonding technology."
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12312,7 +12024,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Bankrut. Gra rodzinna. Nasza księgarnia",
+        "title": "Bankrupt. Family game. Our bookstore",
         "brand": "Nasza Księgarnia",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12321,6 +12033,15 @@
         "description": "<p>NEGOCJACJE, KRZYKI I GWAR JAK NA TARGU!</p><p>W tej grze nie czekasz na swoją kolejkę, wszyscy grają równocześnie!</p><p>Gracze wcielają się w rolę kupców handlujących towarami "
       },
       {
+        "title": "Mamonde Flora Glow Rose Smoothing Cream 50ml",
+        "brand": "MAMONDE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Skin-smoothing cream for seamlessly radiant skin"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12330,7 +12051,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Dywan Juliet loft idustrialny beżowy szary 200x300 w stylu loftowym beton",
+        "title": "Juliet loft and industrial carpet beige gray 200x300 in loft style concrete",
         "brand": "dywanypers",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12339,6 +12060,15 @@
         "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
       },
       {
+        "title": "AYUNCHE Airy Veil Curl Cream 150ml",
+        "brand": "AYUNCHE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12348,7 +12078,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Dywan Juliet loft idustrialny beżowy szary 160x230 w stylu loftowym beton",
+        "title": "Juliet loft and industrial carpet beige gray 160x230 in loft style concrete",
         "brand": "dywanypers",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12357,6 +12087,15 @@
         "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
       },
       {
+        "title": "INNISFREE Jeju Super Volcanic pore Mask 100ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Powerful pore clean mask. Jeju Volcanic Pine Spear™, which has strong sebum adsorption, and a formula containing AHA intensively cares for various pore problems."
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12366,7 +12105,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4511C",
+        "title": "Makita Rotary Hammer Sds-max HR4511C",
         "brand": "Makita",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12375,22 +12114,13 @@
         "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4511C</b></p><ul><li>TECHNOLOGIA ANTYWIBRACYJNA AVT</li><li>2 tryby pracy: wiercenie z udarem i kucie</li><li>16 - pozycyjne przestawia"
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "INNISFREE No sebum Mineral Pact 8.5G",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Spodnie męskie bojówki wojskowe militarne Pentagon Bdu 2.0 Black 44",
-        "brand": "Pentagon",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Spodnie wojskowe Pentagon BDU 2.0 - Black 34/34 (K05001-2.0-01 44)</h1><ul><li><b>Styl odzieży:</b> Militarny</li><li><b>Kolor/kamuflaż:</b> Czarny</li><li><b>Typ materiału:</b"
+        "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12402,25 +12132,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Impregnat do butów skór 200ml Protector Skuteczny",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Protector Impregnat Kaps 200ml No PFC Fluor Free</p>\n<h2>Impregnat Kaps Protector 200ml No PFC Fluor Free</h2>\n<p>Impregnat Kaps Protector to produkt nowej generacji, o doskonał"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Maska Maseczka Ochronna Filtrująca FFP2 N95 Przeciwpyłowa Do Oprysków",
+        "title": "FFP2 N95 Anti-dust Protective Filtering Mask For Spraying",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12429,6 +12141,15 @@
         "description": "<h1>MASECZKA FILTRUJĄCA 3D MASK KN95 Z FILTREM N95 (FFP2)</h1><h1>DODATKOWA OCHRONA W CZASIE ZABIEGÓW CHEMICZNYCH NA KLESZCZE, MUCHY, KOMARY, MESZKI</h1><ul><li><b>wytrzymała skład"
       },
       {
+        "title": "HOLITUAL Radiance Resurfacing Peel 12ea",
+        "brand": "HOLITUAL",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12438,7 +12159,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Erko Wycinak ręczny fi 22,5 (kompletny, w kasecie)",
+        "title": "Erko Manual cutter fi 22.5 (complete, in a cassette)",
         "brand": "Erko",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12447,22 +12168,13 @@
         "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "INNISFREE Retinol Green Tea PDRN Skinbooster Ampoule 25ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Fiddes Wosk do drewna mebli antyków Supreme Wax Jacobean jakobiański 5L"
+        "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12474,7 +12186,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Poduszka rozgrzewająca Beurer Hk Comfort 100W",
+        "title": "Beurer Hk Comfort 100W heating pad",
         "brand": "Beurer",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12492,49 +12204,22 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Olejek zapachowy 12ml Tiramisu",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - TIRAMISU </h1><h1>OLEJEK ZAPACHOWY TIRAMISU 12 ML</h1><p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość jest "
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Olejek zapachowy 12ml Truskawka",
-        "brand": "Naturalne Aromaty",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Olejek zapachowy 12ml - TRUSKAWKA </h1><h1>OLEJEK ZAPACHOWY TRUSKAWKA 12 ML</h1> <p><b>Olejek zapachowy </b>jest mieszaniną wielu składników ,z których zdecydowana większość je"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Filtr gąbkowy Cpap Prisma Line (2 sztuki)",
+        "title": "Cpap Prisma Line sponge filter (2 pieces)",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
+        "description": "<p>Sponge filter designed for Loewenstein CPAP machines from the Prisma series. The package contains 2 filters.</p>"
+      },
+      {
+        "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
+        "brand": "mise-en-scence",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12546,7 +12231,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Makita Młot Udarowo-obrotowy Sds-max HR4501C",
+        "title": "Makita Rotary Hammer Sds-max HR4501C",
         "brand": "Makita",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12555,22 +12240,13 @@
         "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4501C</b></p>\n<ul>\n<li>2 tryby pracy: wiercenie z udarem i kucie</li>\n<li>16 - pozycyjne przestawianie dłuta</li>\n<li>Ślizgowy uchwyt t"
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "INNISFREE Black tea treatment essence 75ML",
+        "brand": "innisfree",
+        "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dzwoneczki Metalowe Ozdobne Dekoracyjne Złote Srebrne Święta 2cm 10szt.",
-        "brand": "Aliga",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>10 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
+        "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12582,7 +12258,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Chusteczki Higieniczne bezzapachowe Velvet Nature 3W 10 pudełek x 90 sztuk",
+        "title": "Velvet Nature 3W unscented tissues 10 boxes x 90 pieces",
         "brand": "Velvet",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12591,22 +12267,13 @@
         "description": "<p><b>Nasze nowe chusteczki Velvet Nature to ukłon w stronę osób, które chcą być bliżej natury oraz pragną być bardziej eko. Velvet Nature zastąpiły jedną z wcześniejszych serii – "
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "title": "HANYUL Chestnut Shell Hydrating Mask 100ml",
+        "brand": "HANYUL",
+        "advertiser": "Amore Mall",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Haft Diamentowy Diamond Painting Mozaika 35x35 cm",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>HAFT DIAMENTOWY, DIAMOND PAINTING</h1>\n<p><b>Haft diamentowy, Diamond painting, mozaika diamentowa</b> - wszystkie te nazwy dotyczą jednej techniki rękodzieła, polegającej na w"
+        "description": "A wash-off mask with “Chestnut Shell PHA™” from grinded shell of chestnut from Buyeo area"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12618,7 +12285,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Pedał Nożny Przycisk Przełącznik 220V 10A No Nc 1m",
+        "title": "Foot Pedal Button Switch 220V 10A No Nc 1m",
         "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12627,6 +12294,15 @@
         "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
       },
       {
+        "title": "Laneige Cica Sleeping Mask",
+        "brand": "LANEIGE",
+        "advertiser": "Amore Mall",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12636,7 +12312,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Obliczenia kwantowe dla każdego",
+        "title": "Quantum computing for everyone",
         "brand": "Wydawnictwo Naukowe PWN",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12654,31 +12330,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "10 Harmonijek kontrastowych dla Maluchów",
+        "title": "10 Contrast Harmonicas for Toddlers",
         "brand": "Literat",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Zestaw 7 kontrastowych harmonijek + 3 książeczek rozkładanych z kolorowymi obrazkami</h1> <p><b>Seria niewielkich książeczek sztywnostronicowych w formie harmonijki – skierowan"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Dzwoneczki Metal Ozdobne Złote Srebrne 1,3cm 12szt",
-        "brand": "Aliga",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>DZWONECZKI OZDOBNE</h1><h1>ZŁOTE I SREBRNE</h1><h1>12 szt.</h1><p>Złote i srebrne metalowe dzwoneczki idealne do dekoracji choinki, stroików i wianków świątecznych.</p><p>Rewel"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12708,7 +12366,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Uwaga! Koncentruję Się 4 Ćwiczenia Na Koncentrację",
+        "title": "Attention! I Concentrate 4 Concentration Exercises",
         "brand": "Harmonia",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12742,6 +12400,348 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "A collection of mathematical analysis tasks",
+        "brand": "Wydawnictwo Naukowe PWN",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Zbiór zadań z analizy matematycznej</h1>\n<ul><li><b>Autor:</b> Stanisław Wędrychowicz, Józef Banaś</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 533</li><li><b>f"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Idea for anniversaries. Paper anniversary",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<ul><li><b>Zbliża się ważna okazja a Ty szukasz prezentu ?</b></li><li><b>Twój spokój zaburza ciągłe myślenie co kupić na rocznice żonie ?</b></li><li><b>A może wykorzystałaś już w"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]",
+        "brand": "Abu Garcia",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "CD Your name Tgd",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "CD Your name Tgd"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Children's dreams at night, Reta Saunders",
+        "brand": "Wydawnictwo Dawida",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Children's dreams at night, Reta Saunders"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Sprocket locking ring",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Ring securing the sprocket in bicycles with rear hub or torpedo gears.</p>"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "CD Old Tapes Reading crisis",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "CD Old Tapes Reading crisis"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Mate.O/TU Pentecost Live",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Mate.O/TU Pentecost Live"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings",
+        "brand": "Ameet",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Classic Playing Cards for Rummy Poker, 2 decks",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p>Klasyczne karty do gry papierowe,</p><p>wymiary: 8x5,2 cm</p><p>Zapakowane w plastikowe etui.</p><p>Karty pokryte plastikiem, ale oczywiście przy tej cenie, nie są to karty plas"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "ribbon Satin ribbon 38 mm 32 m Green",
+        "brand": "JUGA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "ribbon Satin ribbon 38 mm 32 m Green"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Decoration Set mix of mini confetti + glitter",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Decoration Set mix of mini confetti + glitter"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "ribbon Satin ribbon 38 mm 32 m Burgundy",
+        "brand": "JUGA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Satin ribbon</h1><p>Width 38 mm</p><p>Length 32 m</p><p>Color burgundy 8056</p>"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "ribbon Satin ribbon 38 mm 32 m White",
+        "brand": "JUGA",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "ribbon Satin ribbon 38 mm 32 m White"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Carp sinker Anaconda Crank BOMB-70.0 g",
+        "brand": "Anaconda",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>CIĘŻAREK KARPIOWY ANACONDA CRANK BOMB</h1> <p>Numer katalogowy: <b>2655070</b></p><p><b>!! WAGA WYBRANEGO MODELU W TYTULE AUKCJI !!</b></p>  <p>Ciężarki Przelotowe Crank Bomb z"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Select Profcare Warming Cream With Camphor 250ml",
+        "brand": "Select",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>KREM ROZGRZEWAJĄCY Z KAMFORĄ SELECT PROFCARE</h1><p>Stosuje się typowo przed rozgrzewką w celu&nbsp;zmiękczenia sztywności w mięśniach. Krem rozgrzewający&nbsp;wytworzony jest "
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Yamaha 6EE-G3160-00 Column Tilt Pin",
+        "brand": "Yamaha",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Sworzeń Szpilka Nachylenia Kolumny YAMAHA 6EE-G3160-00</h1><p>Oryginalny sworzeń Yamaha w zestawie ze sprężyną 90502-08M05.</p><p>PASUJE: Czterosuwowy: F6CMH (6EE)</p><p>Kod pr"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Archenemy Nicol Bolas Scheme Cards",
+        "brand": "Hasbro",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Archenemy Nicol Bolas Scheme Cards"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Pulsometr Pulsoksymetr Napalcowy Medyczny Oximeter",
+        "brand": "Pulse",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>PULSOMETR / PULSOKSYMETR NAPALCOWY</h1><p><b>PULSOMETR NAPALCOWY&nbsp;</b>polecany jest w szczególności dla astmatyków, anemików, osób z zaburzeniami oddychania oraz z problema"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       }
     ],
     "missingSubcategoryExamples": [
@@ -12753,16 +12753,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "The Photographic Negative Cotton T-Shirt By Givenchy Reinterprets Archival Imagery Through Refined Graphic Design. Crafted From Lightweight Cotton Poplin, It Presents A Clean Silho",
-        "category": "Electronics"
-      },
-      {
-        "title": "Abelssoft File Organizer 2025 | Organize your computer",
-        "brand": "Abelssoft",
-        "advertiser": "Abelssoft Int",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "Automatically sorts images, documents, videos & more into predefined folders. This means you always have the certainty that all files can be found at any time.",
         "category": "Electronics"
       },
       {
@@ -13222,7 +13212,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<p><b>At today's auction I would like to offer you a pair of sponges (2 pieces) for headphones!!</b></p><p><b>Specification:</b></p><ul><li><b>made of soft foam giving an idea",
+        "description": "<p><b>Na dzisiejszej aukcji chciałbym Państwu zaoferować parę gąbek (2 sztuki) do słuchawek !!</b></p><p><b>Specyfikacja:</b></p><ul><li><b>wykonanie z miękkiej pianki dającej idea",
         "category": "Electronics"
       },
       {
@@ -13232,7 +13222,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<p><b>At today's auction I would like to offer you a pair of sponges (2 pieces) for Creative JAM headphones!!</b></p><p><b>Specification:</b></p><ul><li><b>made of soft foam",
+        "description": "<p><b>Na dzisiejszej aukcji chciałbym Państwu zaoferować parę gąbek (2 sztuki) do słuchawek Creative JAM!!</b></p><p><b>Specyfikacja:</b></p><ul><li><b>wykonanie z miękkiej pianki ",
         "category": "Electronics"
       },
       {
@@ -13263,6 +13253,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Home & Living",
         "description": "<h2>HP 653 Black Ink 5 ml 3YM75AE</h2><ul><li><b>Printer manufacturer:</b> HP</li><li><b>Color:</b> Black</li><li><b>Capacity [ml]:</b> 5</l",
+        "category": "Electronics"
+      },
+      {
+        "title": "Tweezers Pęseta Electronics Esd 110mm Delicate",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<p>Oferuję Państwu delikatną pęsetę do pracy przy urządzeniach elektronicznych i innych precyzyjnych robót.</p><p>Długość pęsety 110mm.</p><p>Pęseta ma ostre zwężające się końcówki",
         "category": "Electronics"
       },
       {
@@ -14206,44 +14206,44 @@
         "category": "Books & Media"
       },
       {
-        "title": "Rexing Hard Travel Case Replacement",
-        "brand": "Rexing USA",
-        "advertiser": "Rexing",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "Rexing Hard Travel Case Replacement for REXING | CreativeXP | GTHUNDER | JStoon | Coolife Night Vision Binoculars Made of Premium Hard EVA Case Protects and stores your Outdoor Bin",
-        "category": "Travel"
-      },
-      {
-        "title": "BRUNO MARC Men s Comfortable Flip Flops",
-        "brand": "BRUNO MARC",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "Enjoy your summer vacation with these stylish men’s flip flops. Designed for beach days and poolside lounging, they offer an anti-slip sole for grip, cushioning footbed for cloud-l",
-        "category": "Travel"
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Zippered travel organizer for cables and chargers",
-        "brand": "Blue Collection",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Koszulka Męska Patriotyczna Orzeł Herb Polski Wot",
+        "brand": "Patria Nostra",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "<p>Firma <b>Gifts24</b> zaprasza na swoją aukcję z gadżetami &nbsp;dla domu &nbsp;. Posiadamy specjalnie wybraną grupę produktów do użytku dla domu w kuchni, garażu czy też w wolny",
-        "category": "Travel"
+        "sourceCategory": "Fashion",
+        "description": "<p>Koszulka męska Haft Orzeł - Jeans | XL</p><p>_____________________________</p><h2>Kolor: jeans (stonowany granatowy melanż)</h2><h2>Dzianina: 100% bawełna czesana 210 g/m2</h2><",
+        "category": "Fashion"
       },
       {
-        "title": "Innersense Mini Travel Hydration Trio Set For Dry Damaged Hair 3Pc",
-        "brand": "Innersense",
-        "advertiser": "eCosmetics.com",
+        "title": "Koszulka Męska Patriotyczna Orzeł Herb Polski Wot",
+        "brand": "Patria Nostra",
+        "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Travel",
-        "description": "Ecosmetics Is An Authorized Retailer Of Innersense. Indulge Your Skin And Hair With The Sumptuous Hydration Provided By Innersenses Travel Trio - Hydrate Collection. Crafted With A",
-        "category": "Travel"
+        "sourceCategory": "Fashion",
+        "description": "<p>Koszulka męska Haft Orzeł - Jeans | S</p><p>_____________________________</p><h2>Kolor: jeans (stonowany granatowy melanż)</h2><h2>Dzianina: 100% bawełna czesana 210 g/m2</h2><h",
+        "category": "Fashion"
       }
     ]
   },
@@ -14263,6 +14263,15 @@
         }
       ],
       "examples": [
+        {
+          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Fashion",
+          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
+        },
         {
           "title": "Nike Gym Red/cucumber Calm/tour Yellow Lebron 8 Empire Jade - 5.5",
           "brand": "Nike",
@@ -14289,15 +14298,6 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
-        },
-        {
-          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
-          "brand": "Nike",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Fashion",
-          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
         }
       ]
     },
@@ -14308,23 +14308,14 @@
       "byCategory": [
         {
           "category": "Sports",
-          "count": 5
+          "count": 6
         },
         {
           "category": "Other",
-          "count": 4
+          "count": 3
         }
       ],
       "examples": [
-        {
-          "title": "Adidas Wałek roller do ćwiczeń piankowy z wypustkami z uchwytami składany",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Other",
-          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
-        },
         {
           "title": "Adidas biustonosz sportowy drst volley M",
           "brand": "adidas",
@@ -14351,6 +14342,15 @@
           "googleProductCategory": "",
           "sourceCategory": "Other",
           "description": "<p><b>NOWY , ORYGINALNY</b></p><p><b>ALL ME 3-STRIPES MESH BRA</b></p><p><b>LEKKOWSPIERAJĄCY BIUSTONOSZ SPORTOWY DO PŁYNNYCH TRENINGÓW.</b></p><p>Oddychaj głęboko i rozciągaj się n"
+        },
+        {
+          "title": "Adidas Foam exercise roller with studs and handles, foldable",
+          "brand": "adidas",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Sports",
+          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
         },
         {
           "title": "Adidas Sport Fight Polo T-shirt, size XL",
@@ -14501,17 +14501,17 @@
   "focusedProductCoverage": {
     "televisions": 60,
     "smartphones": 61,
-    "playstationConsoles": 94,
-    "gamingConsoles": 178,
+    "playstationConsoles": 95,
+    "gamingConsoles": 179,
     "fashionClothing": 159,
     "tennisShoes": 45,
-    "fashionSneakers": 316,
+    "fashionSneakers": 313,
     "sportsFootwear": 227
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20908,
-    "withImages": 20908,
-    "withPositivePrices": 20908
+    "withTrackedHttpsLinks": 20928,
+    "withImages": 20928,
+    "withPositivePrices": 20928
   },
   "sources": [
     {
