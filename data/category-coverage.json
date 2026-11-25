@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-24T22:25:09.858Z",
-  "selectedProductCount": 20945,
-  "inventoryProductCount": 193209,
+  "generatedAt": "2026-11-25T08:29:17.536Z",
+  "selectedProductCount": 20962,
+  "inventoryProductCount": 193751,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -157,14 +157,14 @@
     },
     {
       "name": "Appliances",
-      "productCount": 9,
+      "productCount": 10,
       "unclassifiedProductCount": 1,
       "browseTree": [
         {
           "name": "Kitchen Appliances",
           "path": "Kitchen Appliances",
-          "productCount": 4,
-          "directProductCount": 2,
+          "productCount": 5,
+          "directProductCount": 3,
           "children": [
             {
               "name": "Coffee Machines",
@@ -421,8 +421,8 @@
         {
           "name": "Crafts & Creative DIY",
           "path": "Crafts & Creative DIY",
-          "productCount": 228,
-          "directProductCount": 164,
+          "productCount": 231,
+          "directProductCount": 167,
           "children": [
             {
               "name": "Beads & Jewelry Making",
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1565,
-          "directProductCount": 914,
+          "productCount": 1562,
+          "directProductCount": 911,
           "children": [
             {
               "name": "Sewing Machines",
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 453,
-      "unclassifiedProductCount": 65,
+      "productCount": 454,
+      "unclassifiedProductCount": 66,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1831,7 +1831,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1814,
+      "productCount": 1812,
       "unclassifiedProductCount": 547,
       "browseTree": [
         {
@@ -2221,7 +2221,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 162,
+          "productCount": 160,
           "directProductCount": 0,
           "children": [
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 137,
-              "directProductCount": 137,
+              "productCount": 135,
+              "directProductCount": 135,
               "children": []
             },
             {
@@ -2323,13 +2323,13 @@
     {
       "name": "Books & Media",
       "productCount": 1805,
-      "unclassifiedProductCount": 503,
+      "unclassifiedProductCount": 500,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 371,
-          "directProductCount": 80,
+          "productCount": 374,
+          "directProductCount": 83,
           "children": [
             {
               "name": "Fiction",
@@ -2641,7 +2641,7 @@
     {
       "name": "Electronics",
       "productCount": 427,
-      "unclassifiedProductCount": 57,
+      "unclassifiedProductCount": 56,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -3096,8 +3096,8 @@
         {
           "name": "Audio",
           "path": "Audio",
-          "productCount": 168,
-          "directProductCount": 76,
+          "productCount": 169,
+          "directProductCount": 77,
           "children": [
             {
               "name": "Headphones",
@@ -3483,7 +3483,7 @@
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 146,
+          "productCount": 141,
           "directProductCount": 0,
           "children": [
             {
@@ -3524,8 +3524,8 @@
             {
               "name": "Jackets & Coats",
               "path": "Clothing > Jackets & Coats",
-              "productCount": 3,
-              "directProductCount": 3,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -3552,8 +3552,8 @@
             {
               "name": "Socks",
               "path": "Clothing > Socks",
-              "productCount": 30,
-              "directProductCount": 30,
+              "productCount": 24,
+              "directProductCount": 24,
               "children": []
             }
           ]
@@ -3725,14 +3725,14 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 980,
-          "directProductCount": 54,
+          "productCount": 981,
+          "directProductCount": 60,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 318,
-              "directProductCount": 318,
+              "productCount": 308,
+              "directProductCount": 308,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 17,
-              "directProductCount": 17,
+              "productCount": 22,
+              "directProductCount": 22,
               "children": []
             }
           ]
@@ -3796,8 +3796,8 @@
         {
           "name": "Bags & Luggage",
           "path": "Bags & Luggage",
-          "productCount": 15,
-          "directProductCount": 13,
+          "productCount": 16,
+          "directProductCount": 14,
           "children": [
             {
               "name": "Handbags",
@@ -3860,8 +3860,8 @@
         {
           "name": "Jewelry",
           "path": "Jewelry",
-          "productCount": 10,
-          "directProductCount": 3,
+          "productCount": 13,
+          "directProductCount": 6,
           "children": [
             {
               "name": "Necklaces",
@@ -3975,7 +3975,7 @@
     },
     {
       "name": "Food & Grocery",
-      "productCount": 226,
+      "productCount": 227,
       "unclassifiedProductCount": 56,
       "browseTree": [
         {
@@ -4060,8 +4060,8 @@
         {
           "name": "Beverages",
           "path": "Beverages",
-          "productCount": 50,
-          "directProductCount": 0,
+          "productCount": 51,
+          "directProductCount": 1,
           "children": [
             {
               "name": "Coffee",
@@ -4520,14 +4520,14 @@
     },
     {
       "name": "Garden",
-      "productCount": 9,
+      "productCount": 11,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Gardening",
           "path": "Gardening",
-          "productCount": 1,
-          "directProductCount": 1,
+          "productCount": 3,
+          "directProductCount": 3,
           "children": [
             {
               "name": "Seeds & Bulbs",
@@ -4814,13 +4814,13 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1087,
-      "unclassifiedProductCount": 321,
+      "productCount": 1090,
+      "unclassifiedProductCount": 322,
       "browseTree": [
         {
           "name": "Nutrition",
           "path": "Nutrition",
-          "productCount": 276,
+          "productCount": 277,
           "directProductCount": 0,
           "children": [
             {
@@ -4890,8 +4890,8 @@
             {
               "name": "Vitamins, Minerals & Supplements",
               "path": "Nutrition > Vitamins, Minerals & Supplements",
-              "productCount": 228,
-              "directProductCount": 132,
+              "productCount": 229,
+              "directProductCount": 133,
               "children": [
                 {
                   "name": "Multivitamins",
@@ -5127,7 +5127,7 @@
         {
           "name": "Wellness",
           "path": "Wellness",
-          "productCount": 273,
+          "productCount": 274,
           "directProductCount": 0,
           "children": [
             {
@@ -5177,8 +5177,8 @@
             {
               "name": "Sleep & Relaxation",
               "path": "Wellness > Sleep & Relaxation",
-              "productCount": 2,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 1,
               "children": [
                 {
                   "name": "Sleep Masks",
@@ -5192,8 +5192,8 @@
             {
               "name": "Sleep & Relaxation",
               "path": "Wellness > Sleep & Relaxation",
-              "productCount": 2,
-              "directProductCount": 0,
+              "productCount": 3,
+              "directProductCount": 1,
               "children": []
             }
           ]
@@ -5604,7 +5604,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 770,
+      "productCount": 777,
       "unclassifiedProductCount": 6,
       "browseTree": [
         {
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 522,
-          "directProductCount": 517,
+          "productCount": 529,
+          "directProductCount": 524,
           "children": [
             {
               "name": "Wall Art",
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1150,
+      "unclassifiedProductCount": 1148,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 237,
-          "directProductCount": 237,
+          "productCount": 235,
+          "directProductCount": 235,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,7 +6147,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 412,
+          "productCount": 416,
           "directProductCount": 0,
           "children": [
             {
@@ -6160,29 +6160,29 @@
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 33,
-              "directProductCount": 33,
+              "productCount": 34,
+              "directProductCount": 34,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 116,
-              "directProductCount": 116,
+              "productCount": 118,
+              "directProductCount": 118,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 8,
-              "directProductCount": 8,
+              "productCount": 10,
+              "directProductCount": 10,
               "children": []
             }
           ]
@@ -8174,20 +8174,20 @@
     },
     {
       "name": "Sports",
-      "productCount": 1811,
-      "unclassifiedProductCount": 356,
+      "productCount": 1814,
+      "unclassifiedProductCount": 357,
       "browseTree": [
         {
           "name": "Sports Apparel",
           "path": "Sports Apparel",
-          "productCount": 379,
+          "productCount": 380,
           "directProductCount": 0,
           "children": [
             {
               "name": "Sports Clothing",
               "path": "Sports Apparel > Sports Clothing",
-              "productCount": 149,
-              "directProductCount": 149,
+              "productCount": 150,
+              "directProductCount": 150,
               "children": []
             },
             {
@@ -8665,14 +8665,14 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 359,
-          "directProductCount": 1,
+          "productCount": 363,
+          "directProductCount": 3,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 356,
-              "directProductCount": 356,
+              "productCount": 358,
+              "directProductCount": 358,
               "children": []
             },
             {
@@ -9519,7 +9519,7 @@
         {
           "name": "Fishing",
           "path": "Fishing",
-          "productCount": 42,
+          "productCount": 39,
           "directProductCount": 0,
           "children": [
             {
@@ -9539,22 +9539,22 @@
             {
               "name": "Lines & Hooks",
               "path": "Fishing > Lines & Hooks",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             },
             {
               "name": "Fishing Tackle",
               "path": "Fishing > Fishing Tackle",
-              "productCount": 40,
-              "directProductCount": 40,
+              "productCount": 39,
+              "directProductCount": 39,
               "children": []
             },
             {
               "name": "Baits & Lures",
               "path": "Fishing > Baits & Lures",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 0,
+              "directProductCount": 0,
               "children": []
             }
           ]
@@ -9989,7 +9989,7 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 117,
+      "productCount": 118,
       "unclassifiedProductCount": 111,
       "browseTree": [
         {
@@ -10038,8 +10038,8 @@
         {
           "name": "Hand Tools",
           "path": "Hand Tools",
-          "productCount": 1,
-          "directProductCount": 1,
+          "productCount": 2,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Screwdrivers",
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 406,
+      "productCount": 407,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 121,
-          "directProductCount": 99,
+          "productCount": 122,
+          "directProductCount": 100,
           "children": [
             {
               "name": "Board Games",
@@ -10855,24 +10855,24 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1811,
+  "otherProductCount": 1810,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1811
+      "count": 1810
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
-    "usedTaxonomyNodeCount": 359,
-    "emptyTaxonomyNodeCount": 1121,
-    "productsWithKnownSubcategory": 15407,
+    "usedTaxonomyNodeCount": 357,
+    "emptyTaxonomyNodeCount": 1123,
+    "productsWithKnownSubcategory": 15428,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5538,
+    "productsWithoutSubcategory": 5534,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1150
+        "count": 1148
       },
       {
         "category": "Beauty",
@@ -10880,15 +10880,15 @@
       },
       {
         "category": "Books & Media",
-        "count": 503
+        "count": 500
       },
       {
         "category": "Sports",
-        "count": 356
+        "count": 357
       },
       {
         "category": "Health & Wellness",
-        "count": 321
+        "count": 322
       },
       {
         "category": "Fashion",
@@ -10908,11 +10908,11 @@
       },
       {
         "category": "Babies",
-        "count": 65
+        "count": 66
       },
       {
         "category": "Electronics",
-        "count": 57
+        "count": 56
       },
       {
         "category": "Food & Grocery",
@@ -10944,13 +10944,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5538,
-      "provisional": 15407
+      "needs_classification": 5534,
+      "provisional": 15428
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20945
+      "pendingReference": 20962
     },
     "mostUsedBrowsePaths": [
       {
@@ -10963,7 +10963,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 914
+        "productCount": 911
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10979,7 +10979,7 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 517
+        "productCount": 524
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
@@ -10987,15 +10987,15 @@
       },
       {
         "path": "Sports > Cycling > Bicycles",
-        "productCount": 356
-      },
-      {
-        "path": "Fashion > Shoes > Sneakers",
-        "productCount": 318
+        "productCount": 358
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
         "productCount": 312
+      },
+      {
+        "path": "Fashion > Shoes > Sneakers",
+        "productCount": 308
       },
       {
         "path": "Sports > Padel",
@@ -11018,11 +11018,11 @@
         "productCount": 251
       },
       {
-        "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 237
+        "path": "Babies > Baby Clothing > Baby Sleepwear",
+        "productCount": 235
       },
       {
-        "path": "Babies > Baby Clothing > Baby Sleepwear",
+        "path": "Industrial & Scientific > Industrial Machinery",
         "productCount": 235
       },
       {
@@ -11043,7 +11043,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY",
-        "productCount": 164
+        "productCount": 167
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
@@ -11051,23 +11051,23 @@
       },
       {
         "path": "Sports > Sports Apparel > Sports Clothing",
-        "productCount": 149
+        "productCount": 150
       },
       {
         "path": "TVs & Home Cinema > Home Cinema",
         "productCount": 140
       },
       {
-        "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 137
-      },
-      {
         "path": "Books & Media > Books > Education & Reference",
         "productCount": 136
       },
       {
+        "path": "Beauty > Makeup > Face Makeup",
+        "productCount": 135
+      },
+      {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements",
-        "productCount": 132
+        "productCount": 133
       },
       {
         "path": "Books & Media > Books > Children's Books",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 116
+        "productCount": 118
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11095,7 +11095,7 @@
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 99
+        "productCount": 100
       },
       {
         "path": "Gaming > Consoles > PlayStation",
@@ -11118,16 +11118,16 @@
         "productCount": 86
       },
       {
-        "path": "Fashion > Shoes > Slippers",
-        "productCount": 81
+        "path": "Books & Media > Books",
+        "productCount": 83
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
         "productCount": 81
       },
       {
-        "path": "Books & Media > Books",
-        "productCount": 80
+        "path": "Fashion > Shoes > Slippers",
+        "productCount": 81
       },
       {
         "path": "Toys & Games > Building & Construction",
@@ -11135,7 +11135,7 @@
       },
       {
         "path": "Electronics > Audio",
-        "productCount": 76
+        "productCount": 77
       },
       {
         "path": "Fashion > Clothing > T-Shirts & Tops",
@@ -11144,6 +11144,10 @@
       {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
         "productCount": 68
+      },
+      {
+        "path": "Fashion > Shoes",
+        "productCount": 60
       },
       {
         "path": "Pets > Cats",
@@ -11164,10 +11168,6 @@
       {
         "path": "Gaming > Consoles > Xbox",
         "productCount": 56
-      },
-      {
-        "path": "Fashion > Shoes",
-        "productCount": 54
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
@@ -11211,7 +11211,7 @@
       },
       {
         "path": "Sports > Fishing > Fishing Tackle",
-        "productCount": 40
+        "productCount": 39
       },
       {
         "path": "Toys & Games > Model Kits",
@@ -11235,7 +11235,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 33
+        "productCount": 34
       },
       {
         "path": "Sports > Padel > Padel Bags",
@@ -11244,10 +11244,6 @@
       {
         "path": "Automotive > Rims & Tires > Car Tires",
         "productCount": 32
-      },
-      {
-        "path": "Fashion > Clothing > Socks",
-        "productCount": 30
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
@@ -11286,11 +11282,15 @@
         "productCount": 24
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
+        "path": "Beauty > Skincare > Moisturizers",
         "productCount": 24
       },
       {
-        "path": "Beauty > Skincare > Moisturizers",
+        "path": "Fashion > Clothing > Socks",
+        "productCount": 24
+      },
+      {
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
         "productCount": 24
       },
       {
@@ -11302,6 +11302,14 @@
         "productCount": 23
       },
       {
+        "path": "Fashion > Shoes > Kids' Shoes",
+        "productCount": 22
+      },
+      {
+        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
+        "productCount": 21
+      },
+      {
         "path": "Books & Media > Books > Nonfiction",
         "productCount": 21
       },
@@ -11311,10 +11319,6 @@
       },
       {
         "path": "Musical Instruments & Studio > Instruments > Strings",
-        "productCount": 21
-      },
-      {
-        "path": "Babies > Hygiene & Wellness > Baby Skin Care",
         "productCount": 21
       },
       {
@@ -11330,15 +11334,11 @@
         "productCount": 18
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
-        "productCount": 17
-      },
-      {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles > Needles & Notions",
         "productCount": 17
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
         "productCount": 17
       },
       {
@@ -11346,18 +11346,18 @@
         "productCount": 16
       },
       {
-        "path": "Home & Living > Bedding & Bath",
+        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
         "productCount": 16
       },
       {
-        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
+        "path": "Home & Living > Bedding & Bath",
         "productCount": 16
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1601
+        "productCount": 1600
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11571,7 +11571,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
+        "description": "<p>G-scale model curve track with a radius of 1.24 meters and a width of 45 mm by PIKO No. G-R1</p><p>35215.</p>"
       },
       {
         "title": "PowerConf S3 Speakerphone",
@@ -11607,7 +11607,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
+        "description": "<p>G scale model curve track with a radius of 1.565m and a width of 45mm by PIKO No. G-R7 35217.</p>"
       },
       {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
@@ -12039,7 +12039,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
+        "description": "Skin-smoothing cream for seamlessly radiant skin"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12210,7 +12210,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
+        "description": "<p>Sponge filter designed for Loewenstein CPAP machines from the Prisma series. The package contains 2 filters.</p>"
       },
       {
         "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
@@ -12444,7 +12444,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7,5cm ]"
+        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12462,7 +12462,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "CD Twoje imię Tgd"
+        "description": "CD Your name Tgd"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12480,7 +12480,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Sny dzieci nocną porą Recie Saunders"
+        "description": "Children's dreams at night, Reta Saunders"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12498,7 +12498,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Pierścień zabezpieczający zębatkę w rowerach z biegami w tylnej piaście lub torpedo.</p>"
+        "description": "<p>Ring securing the sprocket in bicycles with rear hub or torpedo gears.</p>"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12516,7 +12516,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "CD Stare Taśmy Kryzys czytelnictwa"
+        "description": "CD Old Tapes Reading crisis"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12534,7 +12534,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Mate.O/TU Pentecoste Live"
+        "description": "Mate.O/TU Pentecost Live"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12552,7 +12552,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Tmnt Wojownicze Żółwie Ninja. Donatello. Początki"
+        "description": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12588,7 +12588,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "wstążka Tasiemka satynowa 38 mm 32 m Zielony"
+        "description": "ribbon Satin ribbon 38 mm 32 m Green"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12606,7 +12606,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Zestaw Do Dekoracji mix mini konfetti+brokat"
+        "description": "Decoration Set mix of mini confetti + glitter"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12624,7 +12624,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Tasiemka satynowa</h1><p>Szerokość 38 mm</p><p>Długość 32 m</p><p>Kolor BORDO 8056</p>"
+        "description": "<h1>Satin ribbon</h1><p>Width 38 mm</p><p>Length 32 m</p><p>Color burgundy 8056</p>"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12642,7 +12642,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "wstążka Tasiemka satynowa 38 mm 32 m Biały"
+        "description": "ribbon Satin ribbon 38 mm 32 m White"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12766,13 +12766,13 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "title": "Abelssoft File Organizer 2025 | Organize your computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
+        "description": "Automatically sorts images, documents, videos & more into predefined folders. This means you always have the certainty that all files can be found at any time.",
         "category": "Electronics"
       },
       {
@@ -13276,17 +13276,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Kabel przewód głośnikowy 2x4mm Czysta Miedź Ofc",
-        "brand": "Bitner",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Electronics",
-        "description": "<h1>Profesjonalny kabel głośnikowy o przekroju 2x4mm² z czystej miedzi OFC.</h1>\n<h1>BITNER BiTsound LP0054 - 2x4mm² </h1>\n<h2>Najważniejsze cechy:</h2>\n<ul><li>Przewodnikiem są <b",
-        "category": "Electronics"
-      },
-      {
-        "title": "Kabel Przewód 2RCA 2 Rca Cinch Prolink Exclusive 1,8m",
+        "title": "Cable 2RCA cable 2 Rca Cinch Prolink Exclusive 1.8m",
         "brand": "Pro-Link",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13434,16 +13424,6 @@
         "sourceCategory": "Other",
         "description": "The FRP FX125 is a 125cc air-cooled dirt bike with a real 4-speed manual clutch, built in two wheel sizes so it fits the rider â a 14â³/12â³ small-wheel build for younger or sh",
         "category": "Sports"
-      },
-      {
-        "title": "EUTDE Play Multi Eyes Milkyberry",
-        "brand": "ETUDE",
-        "advertiser": "Amore Mall",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Sweet and Sour Milky Shades' Mix & Match Inspired by Winter Strawberries All-In-One Versatile Eyeshadow Palette PLAY MULTI EYES # Milky Berry Fresh Strawberry Colors in an Eye Shad",
-        "category": "Beauty"
       },
       {
         "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - White / 14ââ/12ââ / Pro",
@@ -14176,6 +14156,36 @@
         "category": "Arts, Crafts & Sewing"
       },
       {
+        "title": "Cormoran Profiline Red Worms 4",
+        "brand": "Cormoran",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>READY-READY RIGS CORMORAN PROFILINE - RED WORMS HOOK SIZE 4</h1><p>Ready-to-use leaders designed for fishing with red worms. Extended hooks in color br",
+        "category": "Sports"
+      },
+      {
+        "title": "Ready-made Cormoran Profiline Carp Leaders Złote 4",
+        "brand": "Cormoran",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>READY-READY RIGS CORMORAN PROFILINE - CARP GOLD 4</h1><p>Ready-to-use leaders with a strong gold hook with a spade. Designed for traditional carp fishing. Perfect for after",
+        "category": "Sports"
+      },
+      {
+        "title": "Ready-made Cormoran Profiline Carp Leaders Złote 8",
+        "brand": "Cormoran",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>READY-READY RIGS CORMORAN PROFILINE - CARP GOLD 8</h1><p>Ready-to-use leaders with a strong gold hook with a spade. Designed for traditional carp fishing. Perfect for after",
+        "category": "Sports"
+      },
+      {
         "title": "Akcesoria Do Wyrobu Świec Sojowych zestaw do tworzenia świec zapachowych",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -14226,24 +14236,14 @@
         "category": "Books & Media"
       },
       {
-        "title": "Medical Scissors for Sutures Sutures Spencer 9cm W-wa",
-        "brand": "Gama",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Health & Wellness",
-        "description": "<h1>Nożyczki Spencer 9cm</h1>\n<h1>Stal Nierdzewna!!! Stainless Steel!!!</h1>\n<p>   Nożyczki Spencer 9cm. Wykonane ze stali nierdzewnej wysokiej jakości. Niejałowe. Można Sterylizow",
-        "category": "Health & Wellness"
-      },
-      {
-        "title": "Codeage Grass Fed Beef Liver Capsules 180Ct",
-        "brand": "Codeage",
+        "title": "Nutrafol +Defense Dht Support Nutraceutical 60Ct",
+        "brand": "Nutrafol",
         "advertiser": "eCosmetics.com",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Health & Wellness",
-        "description": "Pure Nourishment Codeage Grass-Fed Beef Liver Delivers 1,500 Mg Of Pasture-Raised Beef Liver Per Serving, Utilizing A Freeze-Dried, Non-Defatted, And Desiccated Process To Optimall",
-        "category": "Health & Wellness"
+        "sourceCategory": "Beauty",
+        "description": "Nutrafol +Defense Dht Support Nutraceutical Capsule Is A Daily Supplement Formulated To Support Healthy Hair Growth And Help Maintain Stronger, Fuller-Looking Hair. Its Blend Of Bo",
+        "category": "Beauty"
       }
     ]
   },
@@ -14503,15 +14503,15 @@
     "smartphones": 61,
     "playstationConsoles": 95,
     "gamingConsoles": 179,
-    "fashionClothing": 158,
+    "fashionClothing": 153,
     "tennisShoes": 45,
-    "fashionSneakers": 318,
+    "fashionSneakers": 308,
     "sportsFootwear": 227
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20945,
-    "withImages": 20945,
-    "withPositivePrices": 20945
+    "withTrackedHttpsLinks": 20962,
+    "withImages": 20962,
+    "withPositivePrices": 20962
   },
   "sources": [
     {
