@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T08:29:17.536Z",
+  "generatedAt": "2026-11-25T14:56:27.929Z",
   "selectedProductCount": 20962,
   "inventoryProductCount": 193751,
   "uniqueAdvertiserCount": 24,
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1866,
+      "productCount": 1867,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1562,
-          "directProductCount": 911,
+          "productCount": 1563,
+          "directProductCount": 912,
           "children": [
             {
               "name": "Sewing Machines",
@@ -2322,14 +2322,14 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1805,
-      "unclassifiedProductCount": 500,
+      "productCount": 1808,
+      "unclassifiedProductCount": 501,
       "browseTree": [
         {
           "name": "Books",
           "path": "Books",
-          "productCount": 374,
-          "directProductCount": 83,
+          "productCount": 376,
+          "directProductCount": 85,
           "children": [
             {
               "name": "Fiction",
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 427,
+      "productCount": 429,
       "unclassifiedProductCount": 56,
       "browseTree": [
         {
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 54,
+          "productCount": 56,
           "directProductCount": 24,
           "children": [
             {
@@ -2930,8 +2930,8 @@
             {
               "name": "Monitors",
               "path": "Computers > Monitors",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": [
                 {
                   "name": "Gaming Monitors",
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 11,
+              "productCount": 12,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 6,
-                  "directProductCount": 6,
+                  "productCount": 7,
+                  "directProductCount": 7,
                   "children": []
                 },
                 {
@@ -3477,13 +3477,13 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1758,
+      "productCount": 1762,
       "unclassifiedProductCount": 223,
       "browseTree": [
         {
           "name": "Clothing",
           "path": "Clothing",
-          "productCount": 141,
+          "productCount": 142,
           "directProductCount": 0,
           "children": [
             {
@@ -3552,8 +3552,8 @@
             {
               "name": "Socks",
               "path": "Clothing > Socks",
-              "productCount": 24,
-              "directProductCount": 24,
+              "productCount": 25,
+              "directProductCount": 25,
               "children": []
             }
           ]
@@ -3725,8 +3725,8 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 981,
-          "directProductCount": 60,
+          "productCount": 983,
+          "directProductCount": 62,
           "children": [
             {
               "name": "Sneakers",
@@ -3796,8 +3796,8 @@
         {
           "name": "Bags & Luggage",
           "path": "Bags & Luggage",
-          "productCount": 16,
-          "directProductCount": 14,
+          "productCount": 17,
+          "directProductCount": 15,
           "children": [
             {
               "name": "Handbags",
@@ -4814,8 +4814,8 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1090,
-      "unclassifiedProductCount": 322,
+      "productCount": 1095,
+      "unclassifiedProductCount": 323,
       "browseTree": [
         {
           "name": "Nutrition",
@@ -5289,14 +5289,14 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 175,
+          "productCount": 179,
           "directProductCount": 40,
           "children": [
             {
               "name": "Toothbrushes",
               "path": "Oral Hygiene > Toothbrushes",
-              "productCount": 104,
-              "directProductCount": 104,
+              "productCount": 108,
+              "directProductCount": 108,
               "children": []
             },
             {
@@ -5604,7 +5604,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 777,
+      "productCount": 783,
       "unclassifiedProductCount": 6,
       "browseTree": [
         {
@@ -5710,8 +5710,8 @@
         {
           "name": "Bedding & Bath",
           "path": "Bedding & Bath",
-          "productCount": 16,
-          "directProductCount": 16,
+          "productCount": 21,
+          "directProductCount": 21,
           "children": [
             {
               "name": "Sheets & Pillowcases",
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 529,
-          "directProductCount": 524,
+          "productCount": 530,
+          "directProductCount": 525,
           "children": [
             {
               "name": "Wall Art",
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 49,
+      "productCount": 47,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 48,
+          "productCount": 46,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 47,
-              "directProductCount": 47,
+              "productCount": 45,
+              "directProductCount": 45,
               "children": []
             },
             {
@@ -6536,7 +6536,7 @@
     },
     {
       "name": "Pets",
-      "productCount": 115,
+      "productCount": 116,
       "unclassifiedProductCount": 46,
       "browseTree": [
         {
@@ -6592,8 +6592,8 @@
         {
           "name": "Cats",
           "path": "Cats",
-          "productCount": 60,
-          "directProductCount": 60,
+          "productCount": 61,
+          "directProductCount": 61,
           "children": [
             {
               "name": "Cat Food",
@@ -8174,7 +8174,7 @@
     },
     {
       "name": "Sports",
-      "productCount": 1814,
+      "productCount": 1819,
       "unclassifiedProductCount": 357,
       "browseTree": [
         {
@@ -8665,21 +8665,21 @@
         {
           "name": "Cycling",
           "path": "Cycling",
-          "productCount": 363,
+          "productCount": 367,
           "directProductCount": 3,
           "children": [
             {
               "name": "Bicycles",
               "path": "Cycling > Bicycles",
-              "productCount": 358,
-              "directProductCount": 358,
+              "productCount": 361,
+              "directProductCount": 361,
               "children": []
             },
             {
               "name": "Bike Components",
               "path": "Cycling > Bike Components",
-              "productCount": 0,
-              "directProductCount": 0,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
@@ -9519,7 +9519,7 @@
         {
           "name": "Fishing",
           "path": "Fishing",
-          "productCount": 39,
+          "productCount": 40,
           "directProductCount": 0,
           "children": [
             {
@@ -9546,8 +9546,8 @@
             {
               "name": "Fishing Tackle",
               "path": "Fishing > Fishing Tackle",
-              "productCount": 39,
-              "directProductCount": 39,
+              "productCount": 40,
+              "directProductCount": 40,
               "children": []
             },
             {
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 407,
+      "productCount": 409,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10397,8 +10397,8 @@
         {
           "name": "Board Games & Puzzles",
           "path": "Board Games & Puzzles",
-          "productCount": 122,
-          "directProductCount": 100,
+          "productCount": 124,
+          "directProductCount": 102,
           "children": [
             {
               "name": "Board Games",
@@ -10855,20 +10855,20 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1810,
+  "otherProductCount": 1783,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1810
+      "count": 1783
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
-    "usedTaxonomyNodeCount": 357,
-    "emptyTaxonomyNodeCount": 1123,
-    "productsWithKnownSubcategory": 15428,
+    "usedTaxonomyNodeCount": 358,
+    "emptyTaxonomyNodeCount": 1122,
+    "productsWithKnownSubcategory": 15453,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5534,
+    "productsWithoutSubcategory": 5509,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10880,7 +10880,7 @@
       },
       {
         "category": "Books & Media",
-        "count": 500
+        "count": 501
       },
       {
         "category": "Sports",
@@ -10888,7 +10888,7 @@
       },
       {
         "category": "Health & Wellness",
-        "count": 322
+        "count": 323
       },
       {
         "category": "Fashion",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5534,
-      "provisional": 15428
+      "needs_classification": 5509,
+      "provisional": 15453
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10963,7 +10963,7 @@
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 911
+        "productCount": 912
       },
       {
         "path": "Books & Media > Movies & TV",
@@ -10979,15 +10979,15 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 524
+        "productCount": 525
+      },
+      {
+        "path": "Sports > Cycling > Bicycles",
+        "productCount": 361
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
         "productCount": 361
-      },
-      {
-        "path": "Sports > Cycling > Bicycles",
-        "productCount": 358
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
@@ -11082,12 +11082,12 @@
         "productCount": 112
       },
       {
-        "path": "Food & Grocery > Pantry Staples > Pasta & Rice",
-        "productCount": 107
+        "path": "Health & Wellness > Oral Hygiene > Toothbrushes",
+        "productCount": 108
       },
       {
-        "path": "Health & Wellness > Oral Hygiene > Toothbrushes",
-        "productCount": 104
+        "path": "Food & Grocery > Pantry Staples > Pasta & Rice",
+        "productCount": 107
       },
       {
         "path": "Automotive > Vehicle Tools",
@@ -11095,7 +11095,7 @@
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
-        "productCount": 100
+        "productCount": 102
       },
       {
         "path": "Gaming > Consoles > PlayStation",
@@ -11119,7 +11119,7 @@
       },
       {
         "path": "Books & Media > Books",
-        "productCount": 83
+        "productCount": 85
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
@@ -11147,11 +11147,11 @@
       },
       {
         "path": "Fashion > Shoes",
-        "productCount": 60
+        "productCount": 62
       },
       {
         "path": "Pets > Cats",
-        "productCount": 60
+        "productCount": 61
       },
       {
         "path": "TVs & Home Cinema > Televisions",
@@ -11182,12 +11182,12 @@
         "productCount": 48
       },
       {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 47
-      },
-      {
         "path": "Travel > Maps & Guides > Wall Maps",
         "productCount": 46
+      },
+      {
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 45
       },
       {
         "path": "Sports > Tennis > Tennis Shoes",
@@ -11206,12 +11206,12 @@
         "productCount": 41
       },
       {
-        "path": "Health & Wellness > Oral Hygiene",
+        "path": "Sports > Fishing > Fishing Tackle",
         "productCount": 40
       },
       {
-        "path": "Sports > Fishing > Fishing Tackle",
-        "productCount": 39
+        "path": "Health & Wellness > Oral Hygiene",
+        "productCount": 40
       },
       {
         "path": "Toys & Games > Model Kits",
@@ -11274,6 +11274,10 @@
         "productCount": 26
       },
       {
+        "path": "Fashion > Clothing > Socks",
+        "productCount": 25
+      },
+      {
         "path": "Musical Instruments & Studio > Instrument Accessories > Guitar Accessories > Guitar Straps",
         "productCount": 25
       },
@@ -11283,10 +11287,6 @@
       },
       {
         "path": "Beauty > Skincare > Moisturizers",
-        "productCount": 24
-      },
-      {
-        "path": "Fashion > Clothing > Socks",
         "productCount": 24
       },
       {
@@ -11304,6 +11304,10 @@
       {
         "path": "Fashion > Shoes > Kids' Shoes",
         "productCount": 22
+      },
+      {
+        "path": "Home & Living > Bedding & Bath",
+        "productCount": 21
       },
       {
         "path": "Babies > Hygiene & Wellness > Baby Skin Care",
@@ -11348,16 +11352,12 @@
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
         "productCount": 16
-      },
-      {
-        "path": "Home & Living > Bedding & Bath",
-        "productCount": 16
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1600
+        "productCount": 1573
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -14186,6 +14186,26 @@
         "category": "Sports"
       },
       {
+        "title": "28 mm circular knife, precise cutting, set of 4 guides",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>DW-SC028A-PK</h1><h2>Nóż krążkowy 28 mm, z zestawem 4 prowadników (używany w technice chenille)</h2> <p>Kompaktowy nóż, do rozcinania tkanin w dekoracyjnej technice Chenille. W",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Mumio Shilajit Altaiskie Balsam Gór 60 tablets",
+        "brand": "Farm-Produkt",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>⭐⭐⭐MUMIO SHILAJIT AŁTAJSKIE - BALSAM GÓR - ORYGINALNE ROSJA - GWARANCJA NAJWYŻSZEJ JAKOŚCI⭐⭐⭐</h1><h2>➡️NAJWAŻNIEJSZE WŁAŚCIWOŚCI</h2>\n<p><b>✅</b><b>Mumio Oczyszczone Shilajit ",
+        "category": "Health & Wellness"
+      },
+      {
         "title": "Akcesoria Do Wyrobu Świec Sojowych zestaw do tworzenia świec zapachowych",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -14224,26 +14244,6 @@
         "sourceCategory": "Other",
         "description": "<h1>Lynyrd Skynyrd: Pronounced 'Leh-'nerd 'Skin-'nerd &amp; Second Helping - Live From Jacksonville At The Florida Theatre [Blu-Ray]</h1><p><b>Wykonawca:</b> Lynyrd Skynyrd</p><p><",
         "category": "Books & Media"
-      },
-      {
-        "title": "Isle Of Dogs Fantastic Mr. Fox (wyspa Psów Fan",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Isle of Dogs / Fantastic Mr. Fox (Wyspa psów / Fantastyczny Pan Lis) [2DVD]</h1><h2>Isle of Dogs</h2><p><b>Kraj:</b> Niemcy, Japonia, USA, Wielka Brytania</p><p><b>Rok produkcj",
-        "category": "Books & Media"
-      },
-      {
-        "title": "Nutrafol +Defense Dht Support Nutraceutical 60Ct",
-        "brand": "Nutrafol",
-        "advertiser": "eCosmetics.com",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Beauty",
-        "description": "Nutrafol +Defense Dht Support Nutraceutical Capsule Is A Daily Supplement Formulated To Support Healthy Hair Growth And Help Maintain Stronger, Fuller-Looking Hair. Its Blend Of Bo",
-        "category": "Beauty"
       }
     ]
   },
@@ -14503,7 +14503,7 @@
     "smartphones": 61,
     "playstationConsoles": 95,
     "gamingConsoles": 179,
-    "fashionClothing": 153,
+    "fashionClothing": 154,
     "tennisShoes": 45,
     "fashionSneakers": 308,
     "sportsFootwear": 227
