@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T19:40:00-05:00",
+  "updatedAt": "2026-11-24T19:51:53-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -70,7 +70,8 @@
     "Additional eBay EPN AI/privacy restriction verified against the current official Network Agreement on 2026-11-20: EPN Data may not be used to train, pre-train, fine-tune, adapt, benchmark, test, validate or otherwise improve an autonomous/adaptive machine-based system. It may not be input to or exposed to a foundation model, LLM or generative AI service without EPN prior written approval and a written provider contract prohibiting training, non-transient retention and disclosure, requiring environmental segregation and prompt deletion. EPN Transaction Data is limited to attribution, performance analysis and promotional-method optimization, not audience segmentation/retargeting. Tracking code requires an accurate privacy notice and applicable consent before activation.",
     "2026-11-23 AIS update: Enable Banking reply from Nana asks whether the AIS API is intended for internal company efficiency or for services to external users. No price, MPS compatibility, personal-account eligibility, API scope, refresh cadence, consent duration, TPP/KYB or GDPR terms were supplied in that reply. ZOVARO's intended use remains read-only internal reconciliation of the owner's own MPS account, not an AIS service for external users. No further email sent, no account connected and no credentials/OTP requested. CBI Globe/Nexi: no new reply found in the checked period.",
     "2026-11-23 CJ sync audit: workflow run 45292002540 succeeded and published commit dd0e7b3 to main. It received 238,151 CJ products, found 191,710 valid-format CJ tracking links, validated 193,406 full-inventory products, marked 191,890 active/eligible and selected 20,908 for the public catalog. 363 products were reclassified; 285 category tests passed; 0 mismatches and 0 invalid subcategory paths. 5,534 selected products remain unclassified, including 1,803 in Other. Coverage is 29/31; Food Delivery & Restaurant Orders and Real Estate remain empty. No live click or attribution tests were performed. Main workflow still writes directly to main; PR #34 has a review-only alternative and remains draft.",
-    "2026-11-23 eBay EPN check: official network agreement (published 2026-09-24) requires EPN acceptance before promotional content/methods may be used. Browse API affiliate URLs require OAuth plus the 10-digit EPN affiliateCampaignId in X-EBAY-C-ENDUSERCTX. No EPN portal access, account approval, campaign ID or OAuth credentials verified. EPN Data must not be sent to an LLM/generative AI system without prior written EPN approval and the required written AI-provider safeguards. No application, API integration or product import performed."
+    "2026-11-23 eBay EPN check: official network agreement (published 2026-09-24) requires EPN acceptance before promotional content/methods may be used. Browse API affiliate URLs require OAuth plus the 10-digit EPN affiliateCampaignId in X-EBAY-C-ENDUSERCTX. No EPN portal access, account approval, campaign ID or OAuth credentials verified. EPN Data must not be sent to an LLM/generative AI system without prior written EPN approval and the required written AI-provider safeguards. No application, API integration or product import performed.",
+    "2026-11-24 CJ email audit: four advertiser programme welcome/acceptance notices received for Parts Geek (Automotive), Artemis - Amazon Marketplace (multi-category; classification pending), Best Wig Outlet (Beauty / Wigs) and ABC Wigs (Beauty / Wigs). These establish advertiser/network acceptance only. No new feed/API access, product import/publication, live click test or attribution test was completed. Parts Geek's welcome email included CJ text links but they were not independently tested; the other emails did not provide tested links. Verify territory-specific CJ action terms, permissions and feed availability before promotion. No outreach email was sent in this run."
   ],
   "prospects": [
     {
@@ -7769,6 +7770,152 @@
       "restrictions": "Generic non-branded keywords only; trademark, domain and misspelling bidding/use prohibited.",
       "outreachSummary": "Follow-up to the CJ welcome notice asking to confirm international publisher eligibility, link activation, feed, assets, reporting and payout.",
       "nextAction": "Verify allowed territories, tracking link, asset rights and account reporting; do not use branded search terms."
+    },
+    {
+      "id": "cj-parts-geek",
+      "name": "Parts Geek",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Automotive",
+      "subcategory": "Car Parts / Auto Accessories",
+      "networkStatus": "Advertiser acceptance confirmed by CJ email on 2026-11-24",
+      "approvedAt": "2026-11-24T19:35:04Z",
+      "territories": [
+        "Not specified in acceptance email; verify in CJ account"
+      ],
+      "commission": "Not stated in acceptance email; verify the advertiser's current CJ terms",
+      "cookie": "Not stated in acceptance email; verify the advertiser's current CJ terms",
+      "restrictions": [
+        "No PPC use of the Parts Geek display URL",
+        "No browser extensions",
+        "No bidding on Parts Geek trademark/domain variants"
+      ],
+      "contactEvidence": {
+        "source": "Gmail",
+        "threadId": "1a20f0e05095369a",
+        "messageId": "1a20f0e05095369a",
+        "sender": "noreply@cj.com",
+        "receivedAt": "2026-11-24T19:35:04Z",
+        "subject": "Welcome to the Parts Geek Affiliate Program!"
+      },
+      "integration": {
+        "affiliateLink": "CJ text links were included in the welcome email; not independently click-tested",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "not verified for this advertiser",
+        "productsImported": 0,
+        "productsPublished": 0,
+        "clickTested": false,
+        "attributionTested": false
+      },
+      "nextAction": "Verify campaign terms, territories, feed/API access and deep links in CJ; test an outbound click before importing or publishing products."
+    },
+    {
+      "id": "cj-artemis-amazon-marketplace",
+      "name": "Artemis - Amazon Marketplace Affiliate Program",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Unclassified — multi-category marketplace; map only after feed/catalogue inspection",
+      "networkStatus": "Welcome/acceptance email received from CJ advertiser on 2026-11-24",
+      "approvedAt": "2026-11-24T18:55:10Z",
+      "territories": [
+        "Not specified in acceptance email; verify in CJ account"
+      ],
+      "commission": "Advertiser email states an average of approximately 15%; individual CJ situations range 0.5%-40% and must be checked per action",
+      "cookie": "14-day referral window stated in advertiser email",
+      "restrictions": [
+        "Loyalty, cashback and incentive promotion are not supported"
+      ],
+      "contactEvidence": {
+        "source": "Gmail",
+        "threadId": "1a20ee97c9af08b5",
+        "messageId": "1a20ee97c9af08b5",
+        "sender": "noreply@cj.com",
+        "receivedAt": "2026-11-24T18:55:10Z",
+        "subject": "Welcome to the Artemis - Amazon Marketplace Affiliate Program!"
+      },
+      "integration": {
+        "affiliateLink": "Not generated; email describes CJ Links & Products workflow",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "CJ account payout process stated; advertiser-specific reporting not tested",
+        "productsImported": 0,
+        "productsPublished": 0,
+        "clickTested": false,
+        "attributionTested": false
+      },
+      "nextAction": "Inspect actual product inventory and CJ campaign terms; classify each product into ZOVARO's 31 categories only after feed access and identity review."
+    },
+    {
+      "id": "cj-best-wig-outlet",
+      "name": "Best Wig Outlet",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Beauty",
+      "subcategory": "Hair Care / Wigs & Hair Extensions",
+      "networkStatus": "Advertiser welcome/acceptance email received on 2026-11-24",
+      "approvedAt": "2026-11-24T19:55:10Z",
+      "territories": [
+        "Not specified in acceptance email; verify in CJ account"
+      ],
+      "commission": "10% stated in advertiser email; verify current CJ action terms",
+      "cookie": "45 days stated in advertiser email; verify current CJ action terms",
+      "contactEvidence": {
+        "source": "Gmail",
+        "threadId": "1a20f206a4f5f653",
+        "messageId": "1a20f206a4f5f653",
+        "sender": "noreply@cj.com",
+        "receivedAt": "2026-11-24T19:55:10Z",
+        "subject": "Welcome Onboard with BestWigOutlet.com | Affiliate Program"
+      },
+      "integration": {
+        "affiliateLink": "Not yet generated; email directs publisher to CJ Links section",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "not verified for this advertiser",
+        "productsImported": 0,
+        "productsPublished": 0,
+        "clickTested": false,
+        "attributionTested": false
+      },
+      "nextAction": "Verify advertiser identity, territories, current terms, product feed and approved imagery in CJ before importing or publishing."
+    },
+    {
+      "id": "cj-abc-wigs",
+      "name": "ABC Wigs",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Beauty",
+      "subcategory": "Hair Care / Wigs & Hair Extensions",
+      "networkStatus": "Advertiser welcome/acceptance email received on 2026-11-24",
+      "approvedAt": "2026-11-24T19:50:20Z",
+      "territories": [
+        "Not specified in acceptance email; verify in CJ account"
+      ],
+      "commission": "10% stated in advertiser email; verify current CJ action terms",
+      "cookie": "45 days stated in advertiser email; verify current CJ action terms",
+      "restrictions": [
+        "No bidding on the advertiser's trademark, domain name or misspellings/variations"
+      ],
+      "contactEvidence": {
+        "source": "Gmail",
+        "threadId": "1a20f1bfb6d685eb",
+        "messageId": "1a20f1bfb6d685eb",
+        "sender": "noreply@cj.com",
+        "receivedAt": "2026-11-24T19:50:20Z",
+        "subject": "Welcome Onboard with ABC Wigs| Affiliate Program"
+      },
+      "integration": {
+        "affiliateLink": "Not yet generated",
+        "productFeed": "not verified",
+        "imagePermission": "not verified",
+        "conversionReporting": "not verified for this advertiser",
+        "productsImported": 0,
+        "productsPublished": 0,
+        "clickTested": false,
+        "attributionTested": false
+      },
+      "nextAction": "Verify advertiser identity and current campaign terms in CJ; generate and test a tracked link before importing or publishing."
     }
   ],
   "cjAudit": {
