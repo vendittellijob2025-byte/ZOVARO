@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-26T14:26:56.168Z",
-  "selectedProductCount": 20996,
-  "inventoryProductCount": 193857,
-  "uniqueAdvertiserCount": 24,
+  "generatedAt": "2026-11-26T21:31:16.290Z",
+  "selectedProductCount": 21042,
+  "inventoryProductCount": 199414,
+  "uniqueAdvertiserCount": 25,
   "categories": [
     {
       "name": "Accessible & Adaptive Living",
@@ -379,7 +379,7 @@
     },
     {
       "name": "Arts, Crafts & Sewing",
-      "productCount": 1866,
+      "productCount": 1867,
       "unclassifiedProductCount": 73,
       "browseTree": [
         {
@@ -487,8 +487,8 @@
         {
           "name": "Sewing & Textiles",
           "path": "Sewing & Textiles",
-          "productCount": 1563,
-          "directProductCount": 912,
+          "productCount": 1564,
+          "directProductCount": 913,
           "children": [
             {
               "name": "Sewing Machines",
@@ -531,7 +531,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1844,
+      "productCount": 1843,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -580,8 +580,8 @@
         {
           "name": "Car Accessories",
           "path": "Car Accessories",
-          "productCount": 1255,
-          "directProductCount": 1235,
+          "productCount": 1253,
+          "directProductCount": 1233,
           "children": [
             {
               "name": "Interior Accessories",
@@ -760,8 +760,8 @@
         {
           "name": "Vehicle Tools",
           "path": "Vehicle Tools",
-          "productCount": 104,
-          "directProductCount": 102,
+          "productCount": 105,
+          "directProductCount": 103,
           "children": [
             {
               "name": "Diagnostic Tools",
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 456,
-      "unclassifiedProductCount": 68,
+      "productCount": 460,
+      "unclassifiedProductCount": 71,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1534,14 +1534,14 @@
         {
           "name": "Hygiene & Wellness",
           "path": "Hygiene & Wellness",
-          "productCount": 52,
+          "productCount": 53,
           "directProductCount": 0,
           "children": [
             {
               "name": "Baby Bath",
               "path": "Hygiene & Wellness > Baby Bath",
-              "productCount": 10,
-              "directProductCount": 10,
+              "productCount": 11,
+              "directProductCount": 11,
               "children": []
             },
             {
@@ -1831,8 +1831,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1818,
-      "unclassifiedProductCount": 547,
+      "productCount": 1812,
+      "unclassifiedProductCount": 491,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1916,7 +1916,7 @@
         {
           "name": "Hair Care",
           "path": "Hair Care",
-          "productCount": 391,
+          "productCount": 352,
           "directProductCount": 5,
           "children": [
             {
@@ -1936,8 +1936,8 @@
             {
               "name": "Hair Color",
               "path": "Hair Care > Hair Color",
-              "productCount": 6,
-              "directProductCount": 6,
+              "productCount": 4,
+              "directProductCount": 4,
               "children": []
             },
             {
@@ -1957,8 +1957,8 @@
             {
               "name": "Hair Styling Tools",
               "path": "Hair Care > Hair Styling Tools",
-              "productCount": 15,
-              "directProductCount": 15,
+              "productCount": 11,
+              "directProductCount": 11,
               "children": []
             },
             {
@@ -1971,8 +1971,8 @@
             {
               "name": "Wigs & Hair Extensions",
               "path": "Hair Care > Wigs & Hair Extensions",
-              "productCount": 361,
-              "directProductCount": 361,
+              "productCount": 328,
+              "directProductCount": 328,
               "children": []
             }
           ]
@@ -1980,7 +1980,7 @@
         {
           "name": "Skincare",
           "path": "Skincare",
-          "productCount": 161,
+          "productCount": 159,
           "directProductCount": 38,
           "children": [
             {
@@ -2049,15 +2049,15 @@
             {
               "name": "Moisturizers",
               "path": "Skincare > Moisturizers",
-              "productCount": 24,
-              "directProductCount": 24,
+              "productCount": 23,
+              "directProductCount": 23,
               "children": []
             },
             {
               "name": "Serums & Essences",
               "path": "Skincare > Serums & Essences",
-              "productCount": 81,
-              "directProductCount": 81,
+              "productCount": 80,
+              "directProductCount": 80,
               "children": []
             },
             {
@@ -2072,8 +2072,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 555,
-          "directProductCount": 555,
+          "productCount": 662,
+          "directProductCount": 662,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2221,7 +2221,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 161,
+          "productCount": 145,
           "directProductCount": 0,
           "children": [
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 136,
-              "directProductCount": 136,
+              "productCount": 120,
+              "directProductCount": 120,
               "children": []
             },
             {
@@ -2322,8 +2322,8 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1806,
-      "unclassifiedProductCount": 501,
+      "productCount": 1801,
+      "unclassifiedProductCount": 496,
       "browseTree": [
         {
           "name": "Books",
@@ -2640,8 +2640,8 @@
     },
     {
       "name": "Electronics",
-      "productCount": 431,
-      "unclassifiedProductCount": 59,
+      "productCount": 434,
+      "unclassifiedProductCount": 61,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 55,
+          "productCount": 56,
           "directProductCount": 24,
           "children": [
             {
@@ -2930,8 +2930,8 @@
             {
               "name": "Monitors",
               "path": "Computers > Monitors",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": [
                 {
                   "name": "Gaming Monitors",
@@ -3477,8 +3477,8 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1764,
-      "unclassifiedProductCount": 218,
+      "productCount": 1758,
+      "unclassifiedProductCount": 210,
       "browseTree": [
         {
           "name": "Clothing",
@@ -3725,14 +3725,14 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 988,
-          "directProductCount": 68,
+          "productCount": 987,
+          "directProductCount": 66,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 314,
-              "directProductCount": 314,
+              "productCount": 316,
+              "directProductCount": 316,
               "children": []
             },
             {
@@ -3745,8 +3745,8 @@
             {
               "name": "Boots",
               "path": "Shoes > Boots",
-              "productCount": 56,
-              "directProductCount": 56,
+              "productCount": 60,
+              "directProductCount": 60,
               "children": []
             },
             {
@@ -3773,22 +3773,22 @@
             {
               "name": "Formal Shoes",
               "path": "Shoes > Formal Shoes",
-              "productCount": 151,
-              "directProductCount": 151,
+              "productCount": 150,
+              "directProductCount": 150,
               "children": []
             },
             {
               "name": "Slippers",
               "path": "Shoes > Slippers",
-              "productCount": 80,
-              "directProductCount": 80,
+              "productCount": 78,
+              "directProductCount": 78,
               "children": []
             },
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 16,
-              "directProductCount": 16,
+              "productCount": 14,
+              "directProductCount": 14,
               "children": []
             }
           ]
@@ -3910,7 +3910,7 @@
         {
           "name": "Accessories",
           "path": "Accessories",
-          "productCount": 374,
+          "productCount": 377,
           "directProductCount": 4,
           "children": [
             {
@@ -3951,8 +3951,8 @@
             {
               "name": "Hair Accessories",
               "path": "Accessories > Hair Accessories",
-              "productCount": 51,
-              "directProductCount": 51,
+              "productCount": 54,
+              "directProductCount": 54,
               "children": []
             },
             {
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1154,
+      "unclassifiedProductCount": 1145,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 236,
-          "directProductCount": 236,
+          "productCount": 237,
+          "directProductCount": 237,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,42 +6147,42 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 409,
+          "productCount": 417,
           "directProductCount": 0,
           "children": [
             {
               "name": "3D Printer Filament",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Filament",
-              "productCount": 254,
-              "directProductCount": 254,
+              "productCount": 255,
+              "directProductCount": 255,
               "children": []
             },
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 2,
+              "directProductCount": 2,
               "children": []
             },
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 30,
-              "directProductCount": 30,
+              "productCount": 33,
+              "directProductCount": 33,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 114,
-              "directProductCount": 114,
+              "productCount": 116,
+              "directProductCount": 116,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 10,
-              "directProductCount": 10,
+              "productCount": 11,
+              "directProductCount": 11,
               "children": []
             }
           ]
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 50,
+      "productCount": 49,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 49,
+          "productCount": 48,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 48,
-              "directProductCount": 48,
+              "productCount": 47,
+              "directProductCount": 47,
               "children": []
             },
             {
@@ -6946,14 +6946,14 @@
     },
     {
       "name": "Refurbished, Pre-Owned & Outlet",
-      "productCount": 2,
+      "productCount": 3,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
           "name": "Certified Refurbished Electronics",
           "path": "Certified Refurbished Electronics",
-          "productCount": 2,
-          "directProductCount": 2,
+          "productCount": 3,
+          "directProductCount": 3,
           "children": [
             {
               "name": "Refurbished Smartphones",
@@ -7312,13 +7312,13 @@
     },
     {
       "name": "Luxury & Prestige",
-      "productCount": 1723,
-      "unclassifiedProductCount": 7,
+      "productCount": 1752,
+      "unclassifiedProductCount": 14,
       "browseTree": [
         {
           "name": "Luxury Cars & Hypercars",
           "path": "Luxury Cars & Hypercars",
-          "productCount": 8,
+          "productCount": 10,
           "directProductCount": 0,
           "children": [
             {
@@ -7408,8 +7408,8 @@
             {
               "name": "Hummer & Luxury 4x4",
               "path": "Luxury Cars & Hypercars > Hummer & Luxury 4x4",
-              "productCount": 1,
-              "directProductCount": 1,
+              "productCount": 3,
+              "directProductCount": 3,
               "children": []
             },
             {
@@ -7587,8 +7587,8 @@
         {
           "name": "Luxury Watches & Jewelry",
           "path": "Luxury Watches & Jewelry",
-          "productCount": 1687,
-          "directProductCount": 1659,
+          "productCount": 1707,
+          "directProductCount": 1679,
           "children": [
             {
               "name": "Rolex",
@@ -8174,8 +8174,8 @@
     },
     {
       "name": "Sports",
-      "productCount": 1811,
-      "unclassifiedProductCount": 357,
+      "productCount": 1813,
+      "unclassifiedProductCount": 361,
       "browseTree": [
         {
           "name": "Sports Apparel",
@@ -8593,8 +8593,8 @@
         {
           "name": "Camping & Outdoor",
           "path": "Camping & Outdoor",
-          "productCount": 1,
-          "directProductCount": 0,
+          "productCount": 3,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Tents & Shelters",
@@ -9134,8 +9134,8 @@
         {
           "name": "Golf",
           "path": "Golf",
-          "productCount": 9,
-          "directProductCount": 9,
+          "productCount": 8,
+          "directProductCount": 8,
           "children": [
             {
               "name": "Golf Clubs",
@@ -9359,8 +9359,8 @@
         {
           "name": "Padel",
           "path": "Padel",
-          "productCount": 347,
-          "directProductCount": 280,
+          "productCount": 345,
+          "directProductCount": 278,
           "children": [
             {
               "name": "Padel Rackets",
@@ -9880,7 +9880,7 @@
         {
           "name": "Tennis",
           "path": "Tennis",
-          "productCount": 45,
+          "productCount": 44,
           "directProductCount": 0,
           "children": [
             {
@@ -9914,8 +9914,8 @@
             {
               "name": "Tennis Shoes",
               "path": "Tennis > Tennis Shoes",
-              "productCount": 45,
-              "directProductCount": 45,
+              "productCount": 44,
+              "directProductCount": 44,
               "children": []
             }
           ]
@@ -9989,8 +9989,8 @@
     },
     {
       "name": "Tools & DIY",
-      "productCount": 118,
-      "unclassifiedProductCount": 111,
+      "productCount": 117,
+      "unclassifiedProductCount": 110,
       "browseTree": [
         {
           "name": "Power Tools",
@@ -10855,36 +10855,36 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1791,
+  "otherProductCount": 1817,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1791
+      "count": 1817
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 358,
     "emptyTaxonomyNodeCount": 1122,
-    "productsWithKnownSubcategory": 15471,
+    "productsWithKnownSubcategory": 15554,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5525,
+    "productsWithoutSubcategory": 5488,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1154
-      },
-      {
-        "category": "Beauty",
-        "count": 547
+        "count": 1145
       },
       {
         "category": "Books & Media",
-        "count": 501
+        "count": 496
+      },
+      {
+        "category": "Beauty",
+        "count": 491
       },
       {
         "category": "Sports",
-        "count": 357
+        "count": 361
       },
       {
         "category": "Health & Wellness",
@@ -10892,7 +10892,7 @@
       },
       {
         "category": "Fashion",
-        "count": 218
+        "count": 210
       },
       {
         "category": "Toys & Games",
@@ -10900,7 +10900,7 @@
       },
       {
         "category": "Tools & DIY",
-        "count": 111
+        "count": 110
       },
       {
         "category": "Arts, Crafts & Sewing",
@@ -10908,11 +10908,11 @@
       },
       {
         "category": "Babies",
-        "count": 68
+        "count": 71
       },
       {
         "category": "Electronics",
-        "count": 59
+        "count": 61
       },
       {
         "category": "Food & Grocery",
@@ -10927,12 +10927,12 @@
         "count": 46
       },
       {
-        "category": "Musical Instruments & Studio",
-        "count": 11
+        "category": "Luxury & Prestige",
+        "count": 14
       },
       {
-        "category": "Luxury & Prestige",
-        "count": 7
+        "category": "Musical Instruments & Studio",
+        "count": 11
       },
       {
         "category": "Home & Living",
@@ -10944,62 +10944,62 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5525,
-      "provisional": 15471
+      "needs_classification": 5488,
+      "provisional": 15554
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20996
+      "pendingReference": 21042
     },
     "mostUsedBrowsePaths": [
       {
         "path": "Luxury & Prestige > Luxury Watches & Jewelry",
-        "productCount": 1659
+        "productCount": 1679
       },
       {
         "path": "Automotive > Car Accessories",
-        "productCount": 1235
+        "productCount": 1233
       },
       {
         "path": "Arts, Crafts & Sewing > Sewing & Textiles",
-        "productCount": 912
+        "productCount": 913
       },
       {
         "path": "Books & Media > Movies & TV",
         "productCount": 667
       },
       {
-        "path": "Arts, Crafts & Sewing > Sewing & Textiles > Yarn & Knitting",
-        "productCount": 634
+        "path": "Beauty > Fragrances & Perfumes",
+        "productCount": 662
       },
       {
-        "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 555
+        "path": "Arts, Crafts & Sewing > Sewing & Textiles > Yarn & Knitting",
+        "productCount": 634
       },
       {
         "path": "Home & Living > Home Décor",
         "productCount": 528
       },
       {
-        "path": "Beauty > Hair Care > Wigs & Hair Extensions",
+        "path": "Sports > Cycling > Bicycles",
         "productCount": 361
       },
       {
-        "path": "Sports > Cycling > Bicycles",
-        "productCount": 361
+        "path": "Beauty > Hair Care > Wigs & Hair Extensions",
+        "productCount": 328
+      },
+      {
+        "path": "Fashion > Shoes > Sneakers",
+        "productCount": 316
       },
       {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
         "productCount": 314
       },
       {
-        "path": "Fashion > Shoes > Sneakers",
-        "productCount": 314
-      },
-      {
         "path": "Sports > Padel",
-        "productCount": 280
+        "productCount": 278
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
@@ -11011,7 +11011,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Filament",
-        "productCount": 254
+        "productCount": 255
       },
       {
         "path": "Fashion > Shoes > Sandals",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 236
+        "productCount": 237
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11047,7 +11047,7 @@
       },
       {
         "path": "Fashion > Shoes > Formal Shoes",
-        "productCount": 151
+        "productCount": 150
       },
       {
         "path": "Sports > Sports Apparel > Sports Clothing",
@@ -11056,10 +11056,6 @@
       {
         "path": "TVs & Home Cinema > Home Cinema",
         "productCount": 140
-      },
-      {
-        "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 136
       },
       {
         "path": "Books & Media > Books > Education & Reference",
@@ -11074,8 +11070,12 @@
         "productCount": 129
       },
       {
+        "path": "Beauty > Makeup > Face Makeup",
+        "productCount": 120
+      },
+      {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 114
+        "productCount": 116
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11091,7 +11091,7 @@
       },
       {
         "path": "Automotive > Vehicle Tools",
-        "productCount": 102
+        "productCount": 103
       },
       {
         "path": "Toys & Games > Board Games & Puzzles",
@@ -11123,15 +11123,15 @@
       },
       {
         "path": "Beauty > Skincare > Serums & Essences",
-        "productCount": 81
-      },
-      {
-        "path": "Fashion > Shoes > Slippers",
         "productCount": 80
       },
       {
         "path": "Toys & Games > Building & Construction",
         "productCount": 80
+      },
+      {
+        "path": "Fashion > Shoes > Slippers",
+        "productCount": 78
       },
       {
         "path": "Electronics > Audio",
@@ -11142,16 +11142,20 @@
         "productCount": 75
       },
       {
-        "path": "Fashion > Shoes",
-        "productCount": 68
-      },
-      {
         "path": "Babies > Baby Clothing > Baby Bodysuits",
         "productCount": 68
       },
       {
+        "path": "Fashion > Shoes",
+        "productCount": 66
+      },
+      {
         "path": "Pets > Cats",
         "productCount": 61
+      },
+      {
+        "path": "Fashion > Shoes > Boots",
+        "productCount": 60
       },
       {
         "path": "TVs & Home Cinema > Televisions",
@@ -11162,36 +11166,28 @@
         "productCount": 57
       },
       {
-        "path": "Fashion > Shoes > Boots",
-        "productCount": 56
-      },
-      {
         "path": "Gaming > Consoles > Xbox",
         "productCount": 56
       },
       {
         "path": "Fashion > Accessories > Hair Accessories",
-        "productCount": 51
+        "productCount": 54
       },
       {
         "path": "Food & Grocery > Beverages > Tea",
         "productCount": 50
       },
       {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 48
-      },
-      {
         "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
         "productCount": 48
       },
       {
-        "path": "Travel > Maps & Guides > Wall Maps",
-        "productCount": 46
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 47
       },
       {
-        "path": "Sports > Tennis > Tennis Shoes",
-        "productCount": 45
+        "path": "Travel > Maps & Guides > Wall Maps",
+        "productCount": 46
       },
       {
         "path": "Fashion > Shoes > Heels",
@@ -11202,11 +11198,15 @@
         "productCount": 44
       },
       {
-        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Paper Crafts > Scrapbooking",
-        "productCount": 40
+        "path": "Sports > Tennis > Tennis Shoes",
+        "productCount": 44
       },
       {
         "path": "Health & Wellness > Oral Hygiene",
+        "productCount": 40
+      },
+      {
+        "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Paper Crafts > Scrapbooking",
         "productCount": 40
       },
       {
@@ -11238,12 +11238,12 @@
         "productCount": 33
       },
       {
-        "path": "Sports > Fishing > Fishing Tackle",
-        "productCount": 32
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
+        "productCount": 33
       },
       {
-        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 30
+        "path": "Sports > Fishing > Fishing Tackle",
+        "productCount": 32
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
@@ -11262,11 +11262,11 @@
         "productCount": 27
       },
       {
-        "path": "Health & Wellness > Oral Hygiene > Mouthwash",
+        "path": "Musical Instruments & Studio > Instrument Accessories > Strings & Reeds",
         "productCount": 27
       },
       {
-        "path": "Musical Instruments & Studio > Instrument Accessories > Strings & Reeds",
+        "path": "Health & Wellness > Oral Hygiene > Mouthwash",
         "productCount": 27
       },
       {
@@ -11286,15 +11286,15 @@
         "productCount": 24
       },
       {
-        "path": "Beauty > Skincare > Moisturizers",
-        "productCount": 24
-      },
-      {
         "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
         "productCount": 24
       },
       {
         "path": "Electronics > Phones & Tablets > Smartphones > Samsung Galaxy",
+        "productCount": 23
+      },
+      {
+        "path": "Beauty > Skincare > Moisturizers",
         "productCount": 23
       },
       {
@@ -11306,6 +11306,10 @@
         "productCount": 22
       },
       {
+        "path": "Musical Instruments & Studio > Instruments > Strings",
+        "productCount": 21
+      },
+      {
         "path": "Books & Media > Books > Nonfiction",
         "productCount": 21
       },
@@ -11315,10 +11319,6 @@
       },
       {
         "path": "Babies > Hygiene & Wellness > Baby Skin Care",
-        "productCount": 21
-      },
-      {
-        "path": "Musical Instruments & Studio > Instruments > Strings",
         "productCount": 21
       },
       {
@@ -11334,11 +11334,11 @@
         "productCount": 18
       },
       {
-        "path": "Arts, Crafts & Sewing > Sewing & Textiles > Needles & Notions",
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
         "productCount": 17
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Probiotics",
+        "path": "Arts, Crafts & Sewing > Sewing & Textiles > Needles & Notions",
         "productCount": 17
       },
       {
@@ -11350,18 +11350,22 @@
         "productCount": 16
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
-        "productCount": 16
+        "path": "Fashion > Bags & Luggage",
+        "productCount": 15
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1580
+        "productCount": 892
+      },
+      {
+        "advertiser": "Sobelia",
+        "productCount": 713
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productCount": 161
+        "productCount": 162
       },
       {
         "advertiser": "Amore Mall",
@@ -11393,6 +11397,15 @@
       }
     ],
     "otherExamples": [
+      {
+        "title": "Cool Water Game - Davidoff Desodorante 75 ml",
+        "brand": "Davidoff",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Davidoff Cool Water Game y mucho más en Sobelia"
+      },
       {
         "title": "Rexing Installation Service",
         "brand": "Rexing",
@@ -11446,6 +11459,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Shopping for someone else but not sure what to give them? Give them the gift of choice with a gift card. Gift cards are delivered by email and contain instructions to redeem them a"
+      },
+      {
+        "title": "Angel - Thierry Mugler Gel de ducha 200 ml",
+        "brand": "Thierry Mugler",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gel de ducha 200 ml : Thierry Mugler Angel y mucho más en Sobelia"
       },
       {
         "title": "Rexing Installation Service",
@@ -11502,6 +11524,15 @@
         "description": "Shopping for someone else but not sure what to give them? Give them the gift of choice with a gift card. Gift cards are delivered by email and contain instructions to redeem them a"
       },
       {
+        "title": "Rumeur - Lanvin Gel de ducha 150 ml",
+        "brand": "Lanvin",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gel de ducha 150 ml : Lanvin Rumeur y mucho más en Sobelia"
+      },
+      {
         "title": "Rexing Installation Service",
         "brand": "Rexing",
         "advertiser": "Rexing",
@@ -11547,6 +11578,15 @@
         "description": "Compatible with soundcore Work AI Voice Recorder: Bracelet only. The AI voice recorder is not included.\n\n\n\n\nPut It On, Not Pack It Away: The recorder lives in the bracelet, so it's"
       },
       {
+        "title": "White Diamonds - Elizabeth Taylor Cajas de regalo 100 ML",
+        "brand": "Elizabeth Taylor",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 100 ML : Elizabeth Taylor White Diamonds - Perfumes y colonias para mujer de marca Elizabeth Taylor y mucho más en Sobelia"
+      },
+      {
         "title": "Ecosmetics Gift Card - $100",
         "brand": "eCosmetics",
         "advertiser": "eCosmetics.com",
@@ -11571,7 +11611,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>G-scale model curve track with a radius of 1.24 meters and a width of 45 mm by PIKO No. G-R1</p><p>35215.</p>"
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
       },
       {
         "title": "PowerConf S3 Speakerphone",
@@ -11581,6 +11621,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Smart Voice Enhancement: Real-time voice optimization and background noise reduction is conducted by the customized DSP algorithm to ensure you always sound crystal-clear to the ot"
+      },
+      {
+        "title": "For Her - Narciso Rodriguez Cajas de regalo 50 ml",
+        "brand": "Narciso Rodriguez",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 50 ml : Narciso Rodriguez For Her - Perfumes y colonias para mujer de marca Narciso Rodriguez y mucho más en Sobelia"
       },
       {
         "title": "Ecosmetics Gift Card - $250",
@@ -11607,7 +11656,16 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>G scale model curve track with a radius of 1.565m and a width of 45mm by PIKO No. G-R7 35217.</p>"
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
+      },
+      {
+        "title": "Inspire - Christina Aguilera Gel de ducha 200 ml",
+        "brand": "Christina Aguilera",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gel de ducha 200 ml : Christina Aguilera Inspire y mucho más en Sobelia"
       },
       {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
@@ -11619,6 +11677,15 @@
         "description": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)"
       },
       {
+        "title": "Inspire - Christina Aguilera Aceite, loción y crema corporales 200 ml",
+        "brand": "Christina Aguilera",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Aceite, loción y crema corporales 200 ml : Christina Aguilera Inspire y mucho más en Sobelia"
+      },
+      {
         "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11626,6 +11693,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)"
+      },
+      {
+        "title": "Light Blue Pour Homme - Dolce & Gabbana Gaveæsker 125 ml",
+        "brand": "Dolce & Gabbana",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Light Blue Pour Homme"
       },
       {
         "title": "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer",
@@ -11643,7 +11719,16 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Uniwersalny zestaw do czyszczenia broni Mil-Tec (16171100)</h1><p>Uniwersalny zestaw Mil-Tec do czyszczenia broni jest profesjonalnym narzędziem, które sprawdzi się zarówno prz"
+        "description": "<h1>Mil-Tec universal gun cleaning kit (16171100)</h1><p>The Mil-Tec universal gun cleaning kit is a professional tool that will work well both in"
+      },
+      {
+        "title": "Jo Malone - Jo Malone Cajas de regalo 60 ml",
+        "brand": "Jo Malone",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 60 ml : Jo Malone Jo Malone - Perfumes y colonias para mujer de marca Jo Malone y mucho más en Sobelia"
       },
       {
         "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
@@ -11682,6 +11767,15 @@
         "description": "Smooth and moist oil-blotting powder to control shine while leaving moisture NO-SEBUM MOISTURE POWDER NO SEBUM MOISTURE FOR InnIsFree Matte outside and moist inside for dry or oily"
       },
       {
+        "title": "L'Eau Bleue d'Issey Pour Homme - Issey Miyake Agua dulce 75 ML",
+        "brand": "Issey Miyake",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Agua dulce 75 ML : Issey Miyake L'Eau Bleue d'Issey Pour Homme - Perfumes y colonias para hombre de marca Issey Miyake y mucho más en Sobelia"
+      },
+      {
         "title": "[Value $210 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11718,6 +11812,15 @@
         "description": "Thin and Lightweight Fitting\r\n\r\nB.READY BLUE CUSHION provides a thin and lightweight fitting that gives you the confidence to showcase skin as light and delicate as your own."
       },
       {
+        "title": "Fahrenheit - Christian Dior Desodorante 75 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Christian Dior Fahrenheit y mucho más en Sobelia"
+      },
+      {
         "title": "[Value $103 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11743,6 +11846,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
+      },
+      {
+        "title": "Fancy - Jessica Simpson Cajas de regalo 100 ML",
+        "brand": "Jessica Simpson",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 100 ML : Jessica Simpson Fancy - Perfumes y colonias para mujer de marca Jessica Simpson y mucho más en Sobelia"
       },
       {
         "title": "[Value $525 Gift Card] UNice Women's Day Special Offer",
@@ -11781,6 +11893,15 @@
         "description": "A vegan, sea salt scaler that gently exfoliates the scalp, leaving it feeling squeaky clean."
       },
       {
+        "title": "Le Male - Jean Paul Gaultier Cajas de regalo 125 ml",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 125 ml : Jean Paul Gaultier Le Male - Perfumes y colonias para hombre de marca Jean Paul Gaultier y mucho más en Sobelia"
+      },
+      {
         "title": "[Value $740 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11815,6 +11936,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
+      },
+      {
+        "title": "Fantasy - Britney Spears Cajas de regalo 100 ML",
+        "brand": "Britney Spears",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 100 ML : Britney Spears Fantasy - Perfumes y colonias para mujer de marca Britney Spears y mucho más en Sobelia"
       },
       {
         "title": "[Value $950 Gift Card] UNice Women's Day Special Offer",
@@ -11853,6 +11983,15 @@
         "description": "Volume fixer that helps fix hair softly without clumping."
       },
       {
+        "title": "Maja - Maja Jabón 150 ml",
+        "brand": "Maja",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Jabón 150 ml : Maja Maja y mucho más en Sobelia"
+      },
+      {
         "title": "[Value $1100 Gift Card] UNice Women's Day Special Offer",
         "brand": "UNice",
         "advertiser": "UNice",
@@ -11889,6 +12028,15 @@
         "description": "An anti-oxidant waterproof sunstick that flawlessly protects the skin against strong UV rays, fine dust, and blue light."
       },
       {
+        "title": "Armani Code - Giorgio Armani Desodorante 75 g",
+        "brand": "Giorgio Armani",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 g : Giorgio Armani Armani Code y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11914,6 +12062,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Primera nia cica soothing glow cream improve skin barrier and dull skin at once. Removed any disadvantages of derma cream which is slowly absorbed into skin.  Improves inner skin g"
+      },
+      {
+        "title": "Bright Crystal - Versace Cajas de regalo 95 ml",
+        "brand": "Versace",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 95 ml : Versace Bright Crystal - Perfumes y colonias para mujer de marca Versace y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -11943,6 +12100,15 @@
         "description": "CicaffeineTM\r\n\r\nBeta-Sitosterol, a next-generation CICA ingredient that soothes skin and bolsters its natural power, is blended with rich Caffeine extracted from skin-firming Green"
       },
       {
+        "title": "Calèche - Hermès Silk parfume spray 100 ml",
+        "brand": "Hermès",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Calèche"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11968,6 +12134,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "The spherical silicone powder and fixing powder keep sebum under complete control to keep your skin smooth, soft, and matte for longer."
+      },
+      {
+        "title": "Ck Be - Calvin Klein Desodorante 75 g",
+        "brand": "Calvin Klein",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 g : Calvin Klein Ck Be y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -11997,6 +12172,15 @@
         "description": "Intensive damage care mask with hair bonding technology."
       },
       {
+        "title": "Eau Sauvage Savon - Christian Dior Jabón 150 g",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Jabón 150 g : Christian Dior Eau Sauvage Savon y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12021,7 +12205,16 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
+        "description": "Skin-smoothing cream for seamlessly radiant skin"
+      },
+      {
+        "title": "Miss Dior - Christian Dior Loción corporal 200 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Loción corporal 200 ml : Christian Dior Miss Dior y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12051,6 +12244,15 @@
         "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
       },
       {
+        "title": "Eau Fraîche - Elizabeth Arden Spray de fragancia 100 ml",
+        "brand": "Elizabeth Arden",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Spray de fragancia 100 ml : Elizabeth Arden Eau Fraîche - Perfumes y colonias para mujer de marca Elizabeth Arden y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12076,6 +12278,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Powerful pore clean mask. Jeju Volcanic Pine Spear™, which has strong sebum adsorption, and a formula containing AHA intensively cares for various pore problems."
+      },
+      {
+        "title": "Angel Voile celeste - Thierry Mugler Body milk 200 ml",
+        "brand": "Thierry Mugler",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Angel Voile celeste"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12105,6 +12316,15 @@
         "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
       },
       {
+        "title": "Chloé - Chloé Aceite, loción y crema corporales 200 ml",
+        "brand": "Chloé",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Aceite, loción y crema corporales 200 ml : Chloé Chloé y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12130,6 +12350,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
+      },
+      {
+        "title": "Youth Dew - Estée Lauder Crema corporal perfumada 200 ml",
+        "brand": "Estée Lauder",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Crema corporal perfumada 200 ml : Estée Lauder Youth Dew y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12159,6 +12388,15 @@
         "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
       },
       {
+        "title": "Youth Dew - Estée Lauder Aceite de baño 60 ml",
+        "brand": "Estée Lauder",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Aceite de baño 60 ml : Estée Lauder Youth Dew y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12175,6 +12413,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
+      },
+      {
+        "title": "Sweet Tooth - Sabrina Carpenter Spray para el cuerpo 236 ml",
+        "brand": "Sabrina Carpenter",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Spray para el cuerpo 236 ml : Sabrina Carpenter Sweet Tooth y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12204,6 +12451,15 @@
         "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
       },
       {
+        "title": "Sweet Tooth Caramel Dream - Sabrina Carpenter Spray para el cuerpo 236 ml",
+        "brand": "Sabrina Carpenter",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Spray para el cuerpo 236 ml : Sabrina Carpenter Sweet Tooth Caramel Dream y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12219,7 +12475,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Sponge filter designed for Loewenstein CPAP machines from the Prisma series. The package contains 2 filters.</p>"
+        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
       },
       {
         "title": "INNISFREE Black tea treatment essence 75ML",
@@ -12229,6 +12485,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Ck One - Calvin Klein Cajas de regalo 200 ML",
+        "brand": "Calvin Klein",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 200 ML : Calvin Klein Ck One y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12258,6 +12523,15 @@
         "description": "A wash-off mask with “Chestnut Shell PHA™” from grinded shell of chestnut from Buyeo area"
       },
       {
+        "title": "Mambo Mix - Liz Claiborne Cajas de regalo 100 ml",
+        "brand": "Liz Claiborne",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 100 ml : Liz Claiborne Mambo Mix - Perfumes y colonias para mujer de marca Liz Claiborne y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12285,6 +12559,15 @@
         "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
       },
       {
+        "title": "Youth Dew - Estée Lauder Polvo y talco 200 g",
+        "brand": "Estée Lauder",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Polvo y talco 200 g : Estée Lauder Youth Dew y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12301,6 +12584,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
+      },
+      {
+        "title": "Jean Nate - Revlon Hidratante y nutritivo 887 ml",
+        "brand": "Revlon",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Hidratante y nutritivo 887 ml : Revlon Jean Nate y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12321,6 +12613,15 @@
         "description": "<h1>Obliczenia kwantowe dla każdego</h1>\n<ul><li><b>Autor:</b> Bernhardt Chris</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 202</li><li><b>format:</b> 16.5x23.5cm</"
       },
       {
+        "title": "Calvin Klein Man Variety - Calvin Klein Cajas de regalo 15 ML",
+        "brand": "Calvin Klein",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Cajas de regalo 15 ML : Calvin Klein Calvin Klein Man Variety - Perfumes y colonias para hombre de marca Calvin Klein y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12337,6 +12638,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Zestaw 7 kontrastowych harmonijek + 3 książeczek rozkładanych z kolorowymi obrazkami</h1> <p><b>Seria niewielkich książeczek sztywnostronicowych w formie harmonijki – skierowan"
+      },
+      {
+        "title": "Classique - Jean Paul Gaultier Aceite, loción y crema corporales 200 ml",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Aceite, loción y crema corporales 200 ml : Jean Paul Gaultier Classique y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12357,6 +12667,15 @@
         "description": "<h1>Ultra PRO Playmat</h1><p>to świetna mata wykonana z solidnego materiału do gier karcianych np. Magic the Gathering.</p><p>Produkt jest nowy, nieużywany. Strukturą przypomina po"
       },
       {
+        "title": "Aromatics Elixir - Clinique Gel corporal espumoso 200 ml",
+        "brand": "Clinique",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gel corporal espumoso 200 ml : Clinique Aromatics Elixir y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12373,6 +12692,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Uwaga! Koncentruję się! Część 4. Ćwiczenia na koncentrację i spostrzegawczość dla uczniów liceum i technikum, Praca zbiorowa, Wydawnictwo Harmonia</h1> <p><b>Numer katalogowy:&"
+      },
+      {
+        "title": "Aromatics Elixir Baume douceur pour le corps - Clinique Aceite, loción y crema corporales 200 ml",
+        "brand": "Clinique",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Aceite, loción y crema corporales 200 ml : Clinique Aromatics Elixir Baume douceur pour le corps y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12393,6 +12721,15 @@
         "description": "<p>Lojalność, odwaga i prawda. Disney przedstawia historię Mulan, nieustraszonej, młodej kobiety, która ryzykuje wszystko w imię miłości do rodziny i swojego kraju, i staje się naj"
       },
       {
+        "title": "Fahrenheit - Christian Dior Desodorante 150 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 150 ml : Christian Dior Fahrenheit y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12409,339 +12746,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Zbiór zadań z analizy matematycznej</h1>\n<ul><li><b>Autor:</b> Stanisław Wędrychowicz, Józef Banaś</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 533</li><li><b>f"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Idea for anniversaries. Paper anniversary",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<ul><li><b>Zbliża się ważna okazja a Ty szukasz prezentu ?</b></li><li><b>Twój spokój zaburza ciągłe myślenie co kupić na rocznice żonie ?</b></li><li><b>A może wykorzystałaś już w"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]",
-        "brand": "Abu Garcia",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "CD Your name Tgd",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "CD Your name Tgd"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Children's dreams at night, Reta Saunders",
-        "brand": "Wydawnictwo Dawida",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Children's dreams at night, Reta Saunders"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Sprocket locking ring",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Ring securing the sprocket in bicycles with rear hub or torpedo gears.</p>"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "CD Old Tapes Reading crisis",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "CD Old Tapes Reading crisis"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Mate.O/TU Pentecost Live",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Mate.O/TU Pentecost Live"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings",
-        "brand": "Ameet",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Classic Playing Cards for Rummy Poker, 2 decks",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p>Klasyczne karty do gry papierowe,</p><p>wymiary: 8x5,2 cm</p><p>Zapakowane w plastikowe etui.</p><p>Karty pokryte plastikiem, ale oczywiście przy tej cenie, nie są to karty plas"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "ribbon Satin ribbon 38 mm 32 m Green",
-        "brand": "JUGA",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "ribbon Satin ribbon 38 mm 32 m Green"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Decoration Set mix of mini confetti + glitter",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Decoration Set mix of mini confetti + glitter"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "ribbon Satin ribbon 38 mm 32 m Burgundy",
-        "brand": "JUGA",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Satin ribbon</h1><p>Width 38 mm</p><p>Length 32 m</p><p>Color burgundy 8056</p>"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "ribbon Satin ribbon 38 mm 32 m White",
-        "brand": "JUGA",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "ribbon Satin ribbon 38 mm 32 m White"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Carp sinker Anaconda Crank BOMB-70.0 g",
-        "brand": "Anaconda",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>CIĘŻAREK KARPIOWY ANACONDA CRANK BOMB</h1> <p>Numer katalogowy: <b>2655070</b></p><p><b>!! WAGA WYBRANEGO MODELU W TYTULE AUKCJI !!</b></p>  <p>Ciężarki Przelotowe Crank Bomb z"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Select Profcare Warming Cream With Camphor 250ml",
-        "brand": "Select",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>KREM ROZGRZEWAJĄCY Z KAMFORĄ SELECT PROFCARE</h1><p>Stosuje się typowo przed rozgrzewką w celu&nbsp;zmiękczenia sztywności w mięśniach. Krem rozgrzewający&nbsp;wytworzony jest "
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Yamaha 6EE-G3160-00 Column Tilt Pin",
-        "brand": "Yamaha",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Sworzeń Szpilka Nachylenia Kolumny YAMAHA 6EE-G3160-00</h1><p>Oryginalny sworzeń Yamaha w zestawie ze sprężyną 90502-08M05.</p><p>PASUJE: Czterosuwowy: F6CMH (6EE)</p><p>Kod pr"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Archenemy Nicol Bolas Scheme Cards",
-        "brand": "Hasbro",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Archenemy Nicol Bolas Scheme Cards"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Mikado Jaws Classic Jig Bn head 3g 6 3pcs.",
-        "brand": "Mikado",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>WITAM NA MOJEJ AUKCJI</b></p>\n<p><b>PRZEDMIOTEM SĄ REWELACYJNE GŁÓWKI JIG HEADS</b></p>\n<p><b>FIRMY MIKADO</b></p>\n<p><b>GŁÓWKI JAWS</b></p>\n<p>Jaws to seria najwyższej jakoś"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       }
     ],
     "missingSubcategoryExamples": [
@@ -12763,6 +12767,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "Givenchy Black Hoodie Photographic Negative Fleece",
+        "category": "Electronics"
+      },
+      {
+        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
         "category": "Electronics"
       },
       {
@@ -13132,7 +13146,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>Taśma na rzep do organizacji kabli NAKAMICHI HQ Premium</h1><h2>1 sztuka (rolka) - aż 5 metrów długości!</h2><h2>Taśma rzepowa Nakamichi do organizacji kabli. Obowiązkowa rzecz",
+        "description": "<h1>NAKAMICHI HQ Premium Velcro tape for cable management</h1><h2>1 piece (roll) - up to 5 meters long!</h2><h2>Nakamichi Velcro tape for cable management. A must-have",
         "category": "Electronics"
       },
       {
@@ -13232,7 +13246,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h1>⭐⭐⭐⭐⭐ Nowa Bateria do Laptopa Dell ORYGINALNA OD AUTORYZOWANEGO PARTNERA DELL</h1><h2>⭐⭐⭐⭐⭐ Bateria DELL TYPE YRDD6 11.4V 42Wh 3C Latitude Vostro Inspiron</h2><p>Najwyższa jako",
+        "description": "<h1>⭐⭐⭐⭐⭐ New Dell Laptop Battery ORIGINAL FROM AUTHORIZED DELL PARTNER</h1><h2>⭐⭐⭐⭐⭐ Battery DELL TYPE YRDD6 11.4V 42Wh 3C Latitude Vostro Inspiron</h2><p>Highest quality",
         "category": "Electronics"
       },
       {
@@ -13292,7 +13306,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h2>Radio przenośne LTC Retro Sona BT AUX microSD USB</h2><h1>LTC Sona czarne LXLTC2028C (71153)</h1><ul><li>Nowoczesne rozwiązania w obudowie retro</li><li>Tuner wbudowany w urząd",
+        "description": "<h2>LTC Retro Sona BT AUX microSD USB portable radio</h2><h1>LTC Sona black LXLTC2028C (71153)</h1><ul><li>Modern solutions in a retro housing</li><li>Tuner built into the office",
         "category": "Electronics"
       },
       {
@@ -13302,7 +13316,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
-        "description": "<h2>Radio przenośne LTC Retro Nida BT USB MP3 SD</h2><h1>LTC Retro LXLTC2027 (71152)</h1><ul><li>Kompaktowy radioodbiornik nawiązujący stylistyką do urządzeń retro</li><li>Tuner wb",
+        "description": "<h2>LTC Retro Nida BT Portable Radio USB MP3 SD</h2><h1>LTC Retro LXLTC2027 (71152)</h1><ul><li>Compact radio with a retro style</li><li>WB tuner",
         "category": "Electronics"
       },
       {
@@ -13313,6 +13327,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "<h1>PIONEER MVH-S120UB następca modelu MVH-S100UB</h1><p>Odtwarzacz nowej generacji o rozmiarze 1 DIN z funkcją RDS, złączem USB i wejściem Aux.</p><h2>Poczuj moc.</h2><p>Zaprojekt",
+        "category": "Electronics"
+      },
+      {
+        "title": "Nakamichi Wtyk głośnikowy bananowy kątowy Hq 4 szt",
+        "brand": "Nakamichi",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "<h1>Wtyki bananowe kątowe Nakamichi HQ Premium Copper Alloy 24k Gold</h1><h1>4 sztuki (2 pary) - 2 szt. czerwonych i 2 szt. czarnych znaczników.</h1><p>Konstrukcja wtyku bananowego",
         "category": "Electronics"
       },
       {
@@ -14196,54 +14220,34 @@
         "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Dimensions of life. Julian Barnes. World of Books.",
-        "brand": "Świat Książki",
-        "advertiser": "Allegro.pl",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Wymiary życia.</h1>\n<p>Autor: <b>Barnes&#xa0;Julian&#xa0;P.</b></p><p>EAN: <b>9788381393430</b></p><p>Strony: <b>160</b></p><p>Oprawa: <b>twarda</b></p><p>Wydawca: <b>Świat Ksi",
-        "category": "Books & Media"
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Animals in the countryside. Toddler painting",
-        "brand": "Wydawnictwo Skrzat",
-        "advertiser": "Allegro.pl",
+        "title": "Nutrafol +Defense Dht Support Nutraceutical 60Ct",
+        "brand": "Nutrafol",
+        "advertiser": "eCosmetics.com",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Maluszkowe malowanie.</h1><h1>Zwierzęta na wsi</h1><ul><li><b>Autor: Praca&#xa0;Zbiorowa</b></li><li><b>EAN: 9788379158300</b></li><li><b>Strony: 16</b></li><li><b>Oprawa: bros",
-        "category": "Babies"
+        "sourceCategory": "Beauty",
+        "description": "Nutrafol +Defense Dht Support Nutraceutical Capsule Is A Daily Supplement Formulated To Support Healthy Hair Growth And Help Maintain Stronger, Fuller-Looking Hair. Its Blend Of Bo",
+        "category": "Beauty"
       },
       {
-        "title": "Akcesoria Do Wyrobu Świec Sojowych zestaw do tworzenia świec zapachowych",
-        "brand": "",
-        "advertiser": "Allegro.pl",
+        "title": "LUNA™ 4 body Peach Perfect",
+        "brand": "FOREO",
+        "advertiser": "Foreo",
         "productType": "",
         "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Zestaw do robienia świec sojowych zapachowych w pudełku prezentowym.</h1><p>Ten zestaw DIY (do it yourself - zrób to sam) pozwala na samodzielne wykonanie&#xa0;<b>niepowtarzaln",
-        "category": "Tools & DIY"
-      },
-      {
-        "title": "English File 4ed.Intermediate podręcz.+Online Prac",
-        "brand": "Oxford University Press",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>English File. 4th edition. Intermediate. Student's Book + Online Practice</h1> <p><b>Autor:</b> Christina Latham-Koenig, Clive Oxenden, Jerry Lambert</p>\n<p><b>ISBN:</b>&#xa0;9",
-        "category": "Books & Media"
-      },
-      {
-        "title": "English File 4ed.Elementary podręcz.+Online Practi",
-        "brand": "Oxford University Press",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>English File 4dycja Elementary podręcznik + Online Practice</h1> <ul><li><b>Wydanie</b>: 2019</li><li><b>Autor</b>: Christina Latham-Koenig, Clive Oxenden, Jerry Lambert, Paul ",
-        "category": "Books & Media"
+        "sourceCategory": "Beauty",
+        "description": "It's time for a firmer and smoother you, with the ultimate body cleansing device. Cleanse, massage and exfoliate skin while boosting circulation and relaxing muscle tension points.",
+        "category": "Beauty"
       }
     ]
   },
@@ -14263,6 +14267,15 @@
         }
       ],
       "examples": [
+        {
+          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
+          "brand": "Nike",
+          "advertiser": "Allegro.pl",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Fashion",
+          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
+        },
         {
           "title": "Nike Gym Red/cucumber Calm/tour Yellow Lebron 8 Empire Jade - 5.5",
           "brand": "Nike",
@@ -14289,113 +14302,117 @@
           "googleProductCategory": "",
           "sourceCategory": "Sports",
           "description": "<h1>Dane techniczne:</h1>\n<ul><li>wymiary (wysokość / szerokość / głębokość): ok. 31 cm / 62 cm / 31 cm</li><li>kolor: granatowy</li><li><b>odpinany pas</b> naramienny</li><li>mate"
-        },
-        {
-          "title": "Koszulka Męska Sportowa Treningowa Tshirt Nike",
-          "brand": "Nike",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Fashion",
-          "description": "<p>Koszulka męska Dry Park VII SS Nike to idealny wybór dla aktywnych mężczyzn poszukujących komfortu i wydajności podczas treningów i aktywności sportowych. Wykonana w 100% z poli"
         }
       ]
     },
     "Adidas": {
-      "productCount": 9,
+      "productCount": 17,
       "footwearProductCount": 0,
       "tennisShoeCount": 0,
       "byCategory": [
         {
           "category": "Sports",
-          "count": 6
+          "count": 8
         },
         {
           "category": "Other",
-          "count": 3
+          "count": 7
+        },
+        {
+          "category": "Beauty",
+          "count": 2
         }
       ],
       "examples": [
         {
-          "title": "Adidas biustonosz sportowy drst volley M",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
+          "title": "Adidas Fruity Rhythm - Adidas Desodorante 150 ml",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
           "sourceCategory": "Other",
-          "description": "Adidas biustonosz sportowy drst volley M"
+          "description": "Desodorante 150 ml : Adidas Adidas Fruity Rhythm y mucho más en Sobelia"
         },
         {
-          "title": "Adidas biustonosz sportowy Stronger For It R Xs",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
+          "title": "Moves - Adidas Gaveæsker 30 ML",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
           "sourceCategory": "Other",
-          "description": "Adidas biustonosz sportowy Stronger For It R Xs"
+          "description": "Moves"
         },
         {
-          "title": "Adidas biustonosz sportowy All Me 3-STRIPES R Xs",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
+          "title": "Adidas Dynamic Pulse - Adidas Desodorante 150 ml",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
           "sourceCategory": "Other",
-          "description": "<p><b>NOWY , ORYGINALNY</b></p><p><b>ALL ME 3-STRIPES MESH BRA</b></p><p><b>LEKKOWSPIERAJĄCY BIUSTONOSZ SPORTOWY DO PŁYNNYCH TRENINGÓW.</b></p><p>Oddychaj głęboko i rozciągaj się n"
+          "description": "Desodorante 150 ml : Adidas Adidas Dynamic Pulse y mucho más en Sobelia"
         },
         {
-          "title": "Adidas Foam exercise roller with studs and handles, foldable",
-          "brand": "adidas",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "<p><b>Piankowy wałek do ćwiczeń </b>marki <b>adidas </b>rozwija siłę korpusu i wspomaga regenerację. Przyda się każdemu, kto chce uchronić się przed kontuzją lub przeciążeniem. Wał"
-        },
-        {
-          "title": "Adidas Sport Fight Polo T-shirt, size XL",
-          "brand": "",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina.</p><p>Z przodu na piersi japoński haft.</p><p><b"
-        },
-        {
-          "title": "Adidas Sport Fight Longsleeve Zen Climalite M",
-          "brand": "",
-          "advertiser": "Allegro.pl",
-          "productType": "",
-          "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "<p><b>Ekskluzywna kolekcja odzieży adidas – sztuki walki</b></p><p>Koszulka dla mężczyzn lub kobiet.</p><p>Miękka, wygodna tkanina. Płaski szew dla wysokiego komfortu. Dynamiczny c"
-        },
-        {
-          "title": "Special Pack Adidas Zentix Black Orange 2026 - Adidas",
+          "title": "Active Start - Adidas Brusegel 400 ml",
           "brand": "Adidas",
-          "advertiser": "Padel Iberico ES",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "SPECIAL PACK ADIDAS ZENTIX BLACK ORANGE 2026 - This is a new pack in our padel store, with a racket that stands out for its balance and ease of adaptation, ideal for beginner to in"
+          "sourceCategory": "Other",
+          "description": "Active Start"
         },
         {
-          "title": "Adidas Zentix Black Orange 2026 - Adidas",
+          "title": "Ice Dive - Adidas Gel de ducha 400 ml",
           "brand": "Adidas",
-          "advertiser": "Padel Iberico ES",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
-          "sourceCategory": "Sports",
-          "description": "ADIDAS ZENTIX BLACK ORANGE 2026 - Pala de pádel de temporada 2026. Fabricada con un formato redondo, para conseguir el control deseando en todo momento. INTRODUCCIÓN DE LA PALA\n\nLa"
+          "sourceCategory": "Other",
+          "description": "Gel de ducha 400 ml : Adidas Ice Dive y mucho más en Sobelia"
         },
         {
-          "title": "Special Pack Adidas Hmx Pro Black Green 2026 - Adidas",
+          "title": "Uefa Champions League - Adidas Brusegel 400 ml",
           "brand": "Adidas",
-          "advertiser": "Padel Iberico ES",
+          "advertiser": "Sobelia",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "Uefa Champions League"
+        },
+        {
+          "title": "Victory League - Adidas Desodorante 150 ml",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Other",
+          "description": "Desodorante 150 ml : Adidas Victory League y mucho más en Sobelia"
+        },
+        {
+          "title": "Adidas Fruity Rhythm - Adidas Eau de Toilette Spray 50 ML",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Beauty",
+          "description": "Eau de Toilette Spray 50 ML : Adidas Adidas Fruity Rhythm - Perfumes y colonias para mujer de marca Adidas y mucho más en Sobelia"
+        },
+        {
+          "title": "Adidas Pure Lightness - Adidas Eau de Toilette Spray 50 ML",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
+          "productType": "",
+          "googleProductCategory": "",
+          "sourceCategory": "Beauty",
+          "description": "Eau de Toilette Spray 50 ML : Adidas Adidas Pure Lightness - Perfumes y colonias para mujer de marca Adidas y mucho más en Sobelia"
+        },
+        {
+          "title": "Hydra Sport - Adidas Brusegel 400 ml",
+          "brand": "Adidas",
+          "advertiser": "Sobelia",
           "productType": "",
           "googleProductCategory": "",
           "sourceCategory": "Sports",
-          "description": "SPECIAL PACK ADIDAS HMX PRO BLACK GREEN 2026 - Una pala muy equilibrada, con un tacto cómodo y una gran facilidad de manejo.  Además de la pala, este pack incorpora un paletero de "
+          "description": "Hydra Sport"
         }
       ]
     },
@@ -14504,14 +14521,14 @@
     "playstationConsoles": 95,
     "gamingConsoles": 179,
     "fashionClothing": 154,
-    "tennisShoes": 45,
-    "fashionSneakers": 314,
+    "tennisShoes": 44,
+    "fashionSneakers": 316,
     "sportsFootwear": 227
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20996,
-    "withImages": 20996,
-    "withPositivePrices": 20996
+    "withTrackedHttpsLinks": 21042,
+    "withImages": 21042,
+    "withPositivePrices": 21042
   },
   "sources": [
     {
