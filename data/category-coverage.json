@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-25T21:41:34.692Z",
-  "selectedProductCount": 20987,
-  "inventoryProductCount": 193604,
+  "generatedAt": "2026-11-26T08:12:41.909Z",
+  "selectedProductCount": 20996,
+  "inventoryProductCount": 193857,
   "uniqueAdvertiserCount": 24,
   "categories": [
     {
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 454,
-      "unclassifiedProductCount": 66,
+      "productCount": 455,
+      "unclassifiedProductCount": 67,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1831,7 +1831,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1814,
+      "productCount": 1813,
       "unclassifiedProductCount": 547,
       "browseTree": [
         {
@@ -2221,7 +2221,7 @@
         {
           "name": "Makeup",
           "path": "Makeup",
-          "productCount": 162,
+          "productCount": 161,
           "directProductCount": 0,
           "children": [
             {
@@ -2298,8 +2298,8 @@
             {
               "name": "Face Makeup",
               "path": "Makeup > Face Makeup",
-              "productCount": 137,
-              "directProductCount": 137,
+              "productCount": 136,
+              "directProductCount": 136,
               "children": []
             },
             {
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 431,
+      "productCount": 430,
       "unclassifiedProductCount": 59,
       "browseTree": [
         {
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 55,
+          "productCount": 54,
           "directProductCount": 24,
           "children": [
             {
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 12,
+              "productCount": 11,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 7,
-                  "directProductCount": 7,
+                  "productCount": 6,
+                  "directProductCount": 6,
                   "children": []
                 },
                 {
@@ -3726,13 +3726,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 982,
-          "directProductCount": 61,
+          "directProductCount": 62,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 311,
-              "directProductCount": 311,
+              "productCount": 314,
+              "directProductCount": 314,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 20,
-              "directProductCount": 20,
+              "productCount": 16,
+              "directProductCount": 16,
               "children": []
             }
           ]
@@ -4814,8 +4814,8 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1097,
-      "unclassifiedProductCount": 324,
+      "productCount": 1102,
+      "unclassifiedProductCount": 325,
       "browseTree": [
         {
           "name": "Nutrition",
@@ -5127,7 +5127,7 @@
         {
           "name": "Wellness",
           "path": "Wellness",
-          "productCount": 275,
+          "productCount": 279,
           "directProductCount": 0,
           "children": [
             {
@@ -5162,14 +5162,14 @@
             {
               "name": "Alternative Therapies",
               "path": "Wellness > Alternative Therapies",
-              "productCount": 264,
+              "productCount": 268,
               "directProductCount": 0,
               "children": [
                 {
                   "name": "Essential Oils",
                   "path": "Wellness > Alternative Therapies > Essential Oils",
-                  "productCount": 264,
-                  "directProductCount": 264,
+                  "productCount": 268,
+                  "directProductCount": 268,
                   "children": []
                 }
               ]
@@ -5604,7 +5604,7 @@
     },
     {
       "name": "Home & Living",
-      "productCount": 785,
+      "productCount": 788,
       "unclassifiedProductCount": 6,
       "browseTree": [
         {
@@ -5767,8 +5767,8 @@
         {
           "name": "Home Décor",
           "path": "Home Décor",
-          "productCount": 530,
-          "directProductCount": 525,
+          "productCount": 533,
+          "directProductCount": 528,
           "children": [
             {
               "name": "Wall Art",
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1148,
+      "unclassifiedProductCount": 1154,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 235,
-          "directProductCount": 235,
+          "productCount": 236,
+          "directProductCount": 236,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,7 +6147,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 416,
+          "productCount": 409,
           "directProductCount": 0,
           "children": [
             {
@@ -6160,22 +6160,22 @@
             {
               "name": "3D Printing Materials",
               "path": "3D Printing & Additive Manufacturing > 3D Printing Materials",
-              "productCount": 2,
-              "directProductCount": 2,
+              "productCount": 1,
+              "directProductCount": 1,
               "children": []
             },
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 34,
-              "directProductCount": 34,
+              "productCount": 30,
+              "directProductCount": 30,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 116,
-              "directProductCount": 116,
+              "productCount": 114,
+              "directProductCount": 114,
               "children": []
             },
             {
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 49,
+      "productCount": 50,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 48,
+          "productCount": 49,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 47,
-              "directProductCount": 47,
+              "productCount": 48,
+              "directProductCount": 48,
               "children": []
             },
             {
@@ -10855,11 +10855,11 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1813,
+  "otherProductCount": 1814,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1813
+      "count": 1814
     }
   ],
   "categoryQuality": {
@@ -10868,11 +10868,11 @@
     "emptyTaxonomyNodeCount": 1122,
     "productsWithKnownSubcategory": 15450,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5537,
+    "productsWithoutSubcategory": 5546,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1148
+        "count": 1154
       },
       {
         "category": "Beauty",
@@ -10888,7 +10888,7 @@
       },
       {
         "category": "Health & Wellness",
-        "count": 324
+        "count": 325
       },
       {
         "category": "Fashion",
@@ -10908,7 +10908,7 @@
       },
       {
         "category": "Babies",
-        "count": 66
+        "count": 67
       },
       {
         "category": "Electronics",
@@ -10944,13 +10944,13 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5537,
+      "needs_classification": 5546,
       "provisional": 15450
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
       "productsWithBrowseNodeId": 0,
-      "pendingReference": 20987
+      "pendingReference": 20996
     },
     "mostUsedBrowsePaths": [
       {
@@ -10979,14 +10979,14 @@
       },
       {
         "path": "Home & Living > Home Décor",
-        "productCount": 525
-      },
-      {
-        "path": "Sports > Cycling > Bicycles",
-        "productCount": 361
+        "productCount": 528
       },
       {
         "path": "Beauty > Hair Care > Wigs & Hair Extensions",
+        "productCount": 361
+      },
+      {
+        "path": "Sports > Cycling > Bicycles",
         "productCount": 361
       },
       {
@@ -10995,7 +10995,7 @@
       },
       {
         "path": "Fashion > Shoes > Sneakers",
-        "productCount": 311
+        "productCount": 314
       },
       {
         "path": "Sports > Padel",
@@ -11007,7 +11007,7 @@
       },
       {
         "path": "Health & Wellness > Wellness > Alternative Therapies > Essential Oils",
-        "productCount": 264
+        "productCount": 268
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Filament",
@@ -11019,7 +11019,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 235
+        "productCount": 236
       },
       {
         "path": "Babies > Baby Clothing > Baby Sleepwear",
@@ -11059,7 +11059,7 @@
       },
       {
         "path": "Beauty > Makeup > Face Makeup",
-        "productCount": 137
+        "productCount": 136
       },
       {
         "path": "Books & Media > Books > Education & Reference",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 116
+        "productCount": 114
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11146,11 +11146,11 @@
         "productCount": 68
       },
       {
-        "path": "Pets > Cats",
-        "productCount": 61
+        "path": "Fashion > Shoes",
+        "productCount": 62
       },
       {
-        "path": "Fashion > Shoes",
+        "path": "Pets > Cats",
         "productCount": 61
       },
       {
@@ -11178,12 +11178,12 @@
         "productCount": 50
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "path": "Office & Technology > Software > Utilities",
         "productCount": 48
       },
       {
-        "path": "Office & Technology > Software > Utilities",
-        "productCount": 47
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
+        "productCount": 48
       },
       {
         "path": "Travel > Maps & Guides > Wall Maps",
@@ -11230,10 +11230,6 @@
         "productCount": 34
       },
       {
-        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 34
-      },
-      {
         "path": "Sports > Padel > Padel Bags",
         "productCount": 33
       },
@@ -11244,6 +11240,10 @@
       {
         "path": "Automotive > Rims & Tires > Car Tires",
         "productCount": 32
+      },
+      {
+        "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
+        "productCount": 30
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
@@ -11286,11 +11286,11 @@
         "productCount": 24
       },
       {
-        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
+        "path": "Beauty > Skincare > Moisturizers",
         "productCount": 24
       },
       {
-        "path": "Beauty > Skincare > Moisturizers",
+        "path": "Health & Wellness > Nutrition > Vitamins, Minerals & Supplements > Vitamin C",
         "productCount": 24
       },
       {
@@ -11322,10 +11322,6 @@
         "productCount": 21
       },
       {
-        "path": "Fashion > Shoes > Kids' Shoes",
-        "productCount": 20
-      },
-      {
         "path": "Health & Wellness > Home Cleaning & Care > Disinfectants",
         "productCount": 18
       },
@@ -11352,12 +11348,16 @@
       {
         "path": "Arts, Crafts & Sewing > Crafts & Creative DIY > Beads & Jewelry Making > Bead Kits",
         "productCount": 16
+      },
+      {
+        "path": "Fashion > Shoes > Kids' Shoes",
+        "productCount": 16
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1602
+        "productCount": 1603
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11571,7 +11571,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
+        "description": "<p>G-scale model curve track with a radius of 1.24 meters and a width of 45 mm by PIKO No. G-R1</p><p>35215.</p>"
       },
       {
         "title": "PowerConf S3 Speakerphone",
@@ -11607,7 +11607,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
+        "description": "<p>G scale model curve track with a radius of 1.565m and a width of 45mm by PIKO No. G-R7 35217.</p>"
       },
       {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
@@ -11907,24 +11907,6 @@
         "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 9cm ]"
       },
       {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_12 oz.",
-        "brand": "Benlee rocky marciano",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
-      },
-      {
         "title": "Primera Nia Cica Soothing Glow Cream 30ml",
         "brand": "Primera",
         "advertiser": "Amore Mall",
@@ -11943,7 +11925,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_8 oz.",
+        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_12 oz.",
         "brand": "Benlee rocky marciano",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -11970,13 +11952,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Filling a gift box with photos",
-        "brand": "",
+        "title": "Benlee Fighter Leather Boxing Gloves Sparring Training_8 oz.",
+        "brand": "Benlee rocky marciano",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Aukcja dotyczy <b>wypełnienia</b> najmniejszego pudełeczka w pudełku ze zdjęciami. <b>Cena nie zawiera żadnego pudełka</b>, jest to cena za uzupełnienie najmniejszego pudełeczka"
+        "description": "<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skórzane rękawice BENLEE „FIGHTER” czarne</b></p>\n<h1>⭐ Najważniejsze zalety</h1>\n<p>✔ <b>Skóra naturalna ("
       },
       {
         "title": "Soft Finish Loose Powder 15g",
@@ -11997,13 +11979,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Kamatsu Krętlik Barrel Swivel K211 18",
-        "brand": "Kamatsu",
+        "title": "Filling a gift box with photos",
+        "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Do wyboru macie Państwo popularne krętliki baryłkowe, rolowane, a także najmocniejsze – krętliki łożyskowane. Wszystkie, w zależności od wielkości (22 – 4 0) nadają się do delik"
+        "description": "<p>Aukcja dotyczy <b>wypełnienia</b> najmniejszego pudełeczka w pudełku ze zdjęciami. <b>Cena nie zawiera żadnego pudełka</b>, jest to cena za uzupełnienie najmniejszego pudełeczka"
       },
       {
         "title": "AYUNCHE Enrich Bonding Mask 100ml",
@@ -12024,13 +12006,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Bankrupt. Family game. Our bookstore",
-        "brand": "Nasza Księgarnia",
+        "title": "Kamatsu Krętlik Barrel Swivel K211 18",
+        "brand": "Kamatsu",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>NEGOCJACJE, KRZYKI I GWAR JAK NA TARGU!</p><p>W tej grze nie czekasz na swoją kolejkę, wszyscy grają równocześnie!</p><p>Gracze wcielają się w rolę kupców handlujących towarami "
+        "description": "<p>Do wyboru macie Państwo popularne krętliki baryłkowe, rolowane, a także najmocniejsze – krętliki łożyskowane. Wszystkie, w zależności od wielkości (22 – 4 0) nadają się do delik"
       },
       {
         "title": "Mamonde Flora Glow Rose Smoothing Cream 50ml",
@@ -12039,7 +12021,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Skin-smoothing cream for seamlessly radiant skin"
+        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12051,13 +12033,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Juliet loft and industrial carpet beige gray 200x300 in loft style concrete",
-        "brand": "dywanypers",
+        "title": "Bankrupt. Family game. Our bookstore",
+        "brand": "Nasza Księgarnia",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
+        "description": "<p>NEGOCJACJE, KRZYKI I GWAR JAK NA TARGU!</p><p>W tej grze nie czekasz na swoją kolejkę, wszyscy grają równocześnie!</p><p>Gracze wcielają się w rolę kupców handlujących towarami "
       },
       {
         "title": "AYUNCHE Airy Veil Curl Cream 150ml",
@@ -12078,7 +12060,7 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Juliet loft and industrial carpet beige gray 160x230 in loft style concrete",
+        "title": "Juliet loft and industrial carpet beige gray 200x300 in loft style concrete",
         "brand": "dywanypers",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -12105,13 +12087,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Makita Rotary Hammer Sds-max HR4511C",
-        "brand": "Makita",
+        "title": "Juliet loft and industrial carpet beige gray 160x230 in loft style concrete",
+        "brand": "dywanypers",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4511C</b></p><ul><li>TECHNOLOGIA ANTYWIBRACYJNA AVT</li><li>2 tryby pracy: wiercenie z udarem i kucie</li><li>16 - pozycyjne przestawia"
+        "description": "<h1>DYWAN JULIET 3D 8479B</h1><p>Bardzo praktyczny dywan pod względem utrzymania w czystości który posiada delikatne ok. 2cm frędzle i dwupoziomową strukturę runa.</p><ul><li>Rozmi"
       },
       {
         "title": "INNISFREE No sebum Mineral Pact 8.5G",
@@ -12132,13 +12114,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "FFP2 N95 Anti-dust Protective Filtering Mask For Spraying",
-        "brand": "",
+        "title": "Makita Rotary Hammer Sds-max HR4511C",
+        "brand": "Makita",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>MASECZKA FILTRUJĄCA 3D MASK KN95 Z FILTREM N95 (FFP2)</h1><h1>DODATKOWA OCHRONA W CZASIE ZABIEGÓW CHEMICZNYCH NA KLESZCZE, MUCHY, KOMARY, MESZKI</h1><ul><li><b>wytrzymała skład"
+        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4511C</b></p><ul><li>TECHNOLOGIA ANTYWIBRACYJNA AVT</li><li>2 tryby pracy: wiercenie z udarem i kucie</li><li>16 - pozycyjne przestawia"
       },
       {
         "title": "HOLITUAL Radiance Resurfacing Peel 12ea",
@@ -12159,13 +12141,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Erko Manual cutter fi 22.5 (complete, in a cassette)",
-        "brand": "Erko",
+        "title": "FFP2 N95 Anti-dust Protective Filtering Mask For Spraying",
+        "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
+        "description": "<h1>MASECZKA FILTRUJĄCA 3D MASK KN95 Z FILTREM N95 (FFP2)</h1><h1>DODATKOWA OCHRONA W CZASIE ZABIEGÓW CHEMICZNYCH NA KLESZCZE, MUCHY, KOMARY, MESZKI</h1><ul><li><b>wytrzymała skład"
       },
       {
         "title": "INNISFREE Retinol Green Tea PDRN Skinbooster Ampoule 25ML",
@@ -12186,13 +12168,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Beurer Hk Comfort 100W heating pad",
-        "brand": "Beurer",
+        "title": "Erko Manual cutter fi 22.5 (complete, in a cassette)",
+        "brand": "Erko",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1><h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1>\n<p>Opis produktu</p>\n<ul>\n<li>Bardzo miękka powierzchnia</li>\n<li>Z oddychającego"
+        "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12204,13 +12186,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Cpap Prisma Line sponge filter (2 pieces)",
-        "brand": "",
+        "title": "Beurer Hk Comfort 100W heating pad",
+        "brand": "Beurer",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
+        "description": "<h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1><h1>BEURER Poduszka rozgrzewająca HK COMFORT</h1>\n<p>Opis produktu</p>\n<ul>\n<li>Bardzo miękka powierzchnia</li>\n<li>Z oddychającego"
       },
       {
         "title": "mise en sc?ne Salon10 Protein Treatment (for extremely damaged hair) 250ML",
@@ -12231,13 +12213,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Makita Rotary Hammer Sds-max HR4501C",
-        "brand": "Makita",
+        "title": "Cpap Prisma Line sponge filter (2 pieces)",
+        "brand": "",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4501C</b></p>\n<ul>\n<li>2 tryby pracy: wiercenie z udarem i kucie</li>\n<li>16 - pozycyjne przestawianie dłuta</li>\n<li>Ślizgowy uchwyt t"
+        "description": "<p>Sponge filter designed for Loewenstein CPAP machines from the Prisma series. The package contains 2 filters.</p>"
       },
       {
         "title": "INNISFREE Black tea treatment essence 75ML",
@@ -12258,13 +12240,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Velvet Nature 3W unscented tissues 10 boxes x 90 pieces",
-        "brand": "Velvet",
+        "title": "Makita Rotary Hammer Sds-max HR4501C",
+        "brand": "Makita",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p><b>Nasze nowe chusteczki Velvet Nature to ukłon w stronę osób, które chcą być bliżej natury oraz pragną być bardziej eko. Velvet Nature zastąpiły jedną z wcześniejszych serii – "
+        "description": "<p><b>MAKITA MŁOT UDAROWO-OBROTOWY SDS-MAX HR4501C</b></p>\n<ul>\n<li>2 tryby pracy: wiercenie z udarem i kucie</li>\n<li>16 - pozycyjne przestawianie dłuta</li>\n<li>Ślizgowy uchwyt t"
       },
       {
         "title": "HANYUL Chestnut Shell Hydrating Mask 100ml",
@@ -12285,13 +12267,13 @@
         "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
       },
       {
-        "title": "Foot Pedal Button Switch 220V 10A No Nc 1m",
-        "brand": "",
+        "title": "Velvet Nature 3W unscented tissues 10 boxes x 90 pieces",
+        "brand": "Velvet",
         "advertiser": "Allegro.pl",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
+        "description": "<p><b>Nasze nowe chusteczki Velvet Nature to ukłon w stronę osób, które chcą być bliżej natury oraz pragną być bardziej eko. Velvet Nature zastąpiły jedną z wcześniejszych serii – "
       },
       {
         "title": "Laneige Cica Sleeping Mask",
@@ -12301,6 +12283,24 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Overnight Barrier Care for Extremely Sensitive and Dry Skin Customer Testimonials on Calming Effects #SkinSoothing: \"After applying a generous amount to my face at night, I wake up"
+      },
+      {
+        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
+      },
+      {
+        "title": "Foot Pedal Button Switch 220V 10A No Nc 1m",
+        "brand": "",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<p><b>ALUMINIOWY, LAKIEROWANY PEDAŁ NOŻNY</b></p><p>FS-2 - STYK PRZEŁĄCZNY 220V / 10A</p><p><b>.</b></p><p><b>Aluminiowy, solidnie wykonany i polakierowany przełącznik NO/NC w post"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12444,7 +12444,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7,5cm ]"
+        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12462,7 +12462,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "CD Twoje imię Tgd"
+        "description": "CD Your name Tgd"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12480,7 +12480,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Sny dzieci nocną porą Recie Saunders"
+        "description": "Children's dreams at night, Reta Saunders"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12498,7 +12498,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Pierścień zabezpieczający zębatkę w rowerach z biegami w tylnej piaście lub torpedo.</p>"
+        "description": "<p>Ring securing the sprocket in bicycles with rear hub or torpedo gears.</p>"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12516,7 +12516,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "CD Stare Taśmy Kryzys czytelnictwa"
+        "description": "CD Old Tapes Reading crisis"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12534,7 +12534,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Mate.O/TU Pentecoste Live"
+        "description": "Mate.O/TU Pentecost Live"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12552,7 +12552,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Tmnt Wojownicze Żółwie Ninja. Donatello. Początki"
+        "description": "Tmnt Teenage Mutant Ninja Turtles. Donatello. Beginnings"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12588,7 +12588,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "wstążka Tasiemka satynowa 38 mm 32 m Zielony"
+        "description": "ribbon Satin ribbon 38 mm 32 m Green"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12606,7 +12606,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Zestaw Do Dekoracji mix mini konfetti+brokat"
+        "description": "Decoration Set mix of mini confetti + glitter"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12624,7 +12624,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<h1>Tasiemka satynowa</h1><p>Szerokość 38 mm</p><p>Długość 32 m</p><p>Kolor BORDO 8056</p>"
+        "description": "<h1>Satin ribbon</h1><p>Width 38 mm</p><p>Length 32 m</p><p>Color burgundy 8056</p>"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12642,7 +12642,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "wstążka Tasiemka satynowa 38 mm 32 m Biały"
+        "description": "ribbon Satin ribbon 38 mm 32 m White"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -13276,7 +13276,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Karta Pamięci 64GB microSD Goodram adapter",
+        "title": "Memory Card 64GB microSD Goodram adapter",
         "brand": "Goodram",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13286,7 +13286,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Radio przenośne Ltc Retro Sona Bt Aux microSD Usb",
+        "title": "Portable radio Ltc Retro Sona Bt Aux microSD Usb",
         "brand": "LTC",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13296,7 +13296,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Radio przenośne Ltc Retro Nida Bt Usb MP3 Sd",
+        "title": "Portable Radio Ltc Retro Nida Bt Usb MP3 Sd",
         "brand": "LTC",
         "advertiser": "Allegro.pl",
         "productType": "",
@@ -13446,16 +13446,6 @@
         "category": "Beauty"
       },
       {
-        "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - Red / 17ââ/14ââ / Basic",
-        "brand": "FRP",
-        "advertiser": "FRP Moto  Affiliate",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "The FRP FX125 is a 125cc air-cooled dirt bike with a real 4-speed manual clutch, built in two wheel sizes so it fits the rider â a 14â³/12â³ small-wheel build for younger or sh",
-        "category": "Sports"
-      },
-      {
         "title": "EUTDE Play Multi Eyes Milkyberry",
         "brand": "ETUDE",
         "advertiser": "Amore Mall",
@@ -13464,6 +13454,16 @@
         "sourceCategory": "Other",
         "description": "Sweet and Sour Milky Shades' Mix & Match Inspired by Winter Strawberries All-In-One Versatile Eyeshadow Palette PLAY MULTI EYES # Milky Berry Fresh Strawberry Colors in an Eye Shad",
         "category": "Beauty"
+      },
+      {
+        "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - Red / 17ââ/14ââ / Basic",
+        "brand": "FRP",
+        "advertiser": "FRP Moto  Affiliate",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "The FRP FX125 is a 125cc air-cooled dirt bike with a real 4-speed manual clutch, built in two wheel sizes so it fits the rider â a 14â³/12â³ small-wheel build for younger or sh",
+        "category": "Sports"
       },
       {
         "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - White / 14ââ/12ââ / Pro",
@@ -14505,13 +14505,13 @@
     "gamingConsoles": 179,
     "fashionClothing": 154,
     "tennisShoes": 45,
-    "fashionSneakers": 311,
+    "fashionSneakers": 314,
     "sportsFootwear": 227
   },
   "productCompleteness": {
-    "withTrackedHttpsLinks": 20987,
-    "withImages": 20987,
-    "withPositivePrices": 20987
+    "withTrackedHttpsLinks": 20996,
+    "withImages": 20996,
+    "withPositivePrices": 20996
   },
   "sources": [
     {
