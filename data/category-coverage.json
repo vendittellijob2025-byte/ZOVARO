@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T08:12:41.909Z",
+  "generatedAt": "2026-11-26T14:26:56.168Z",
   "selectedProductCount": 20996,
   "inventoryProductCount": 193857,
   "uniqueAdvertiserCount": 24,
@@ -157,7 +157,7 @@
     },
     {
       "name": "Appliances",
-      "productCount": 10,
+      "productCount": 11,
       "unclassifiedProductCount": 1,
       "browseTree": [
         {
@@ -263,8 +263,8 @@
         {
           "name": "Floor Care",
           "path": "Floor Care",
-          "productCount": 4,
-          "directProductCount": 1,
+          "productCount": 5,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Vacuum Cleaners",
@@ -531,7 +531,7 @@
     },
     {
       "name": "Automotive",
-      "productCount": 1843,
+      "productCount": 1844,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -796,14 +796,14 @@
         {
           "name": "Rims & Tires",
           "path": "Rims & Tires",
-          "productCount": 122,
+          "productCount": 123,
           "directProductCount": 0,
           "children": [
             {
               "name": "Car Tires",
               "path": "Rims & Tires > Car Tires",
-              "productCount": 32,
-              "directProductCount": 32,
+              "productCount": 33,
+              "directProductCount": 33,
               "children": []
             },
             {
@@ -1219,8 +1219,8 @@
     },
     {
       "name": "Babies",
-      "productCount": 455,
-      "unclassifiedProductCount": 67,
+      "productCount": 456,
+      "unclassifiedProductCount": 68,
       "browseTree": [
         {
           "name": "Baby Clothing",
@@ -1831,7 +1831,7 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1813,
+      "productCount": 1818,
       "unclassifiedProductCount": 547,
       "browseTree": [
         {
@@ -2072,8 +2072,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 550,
-          "directProductCount": 550,
+          "productCount": 555,
+          "directProductCount": 555,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2322,8 +2322,8 @@
     },
     {
       "name": "Books & Media",
-      "productCount": 1805,
-      "unclassifiedProductCount": 500,
+      "productCount": 1806,
+      "unclassifiedProductCount": 501,
       "browseTree": [
         {
           "name": "Books",
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 430,
+      "productCount": 431,
       "unclassifiedProductCount": 59,
       "browseTree": [
         {
@@ -2824,14 +2824,14 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 54,
+          "productCount": 55,
           "directProductCount": 24,
           "children": [
             {
               "name": "Laptops",
               "path": "Computers > Laptops",
-              "productCount": 5,
-              "directProductCount": 5,
+              "productCount": 6,
+              "directProductCount": 6,
               "children": [
                 {
                   "name": "Apple MacBook",
@@ -3477,7 +3477,7 @@
     },
     {
       "name": "Fashion",
-      "productCount": 1758,
+      "productCount": 1764,
       "unclassifiedProductCount": 218,
       "browseTree": [
         {
@@ -3725,8 +3725,8 @@
         {
           "name": "Shoes",
           "path": "Shoes",
-          "productCount": 982,
-          "directProductCount": 62,
+          "productCount": 988,
+          "directProductCount": 68,
           "children": [
             {
               "name": "Sneakers",
@@ -4814,7 +4814,7 @@
     },
     {
       "name": "Health & Wellness",
-      "productCount": 1102,
+      "productCount": 1105,
       "unclassifiedProductCount": 325,
       "browseTree": [
         {
@@ -5289,14 +5289,14 @@
         {
           "name": "Oral Hygiene",
           "path": "Oral Hygiene",
-          "productCount": 179,
+          "productCount": 181,
           "directProductCount": 40,
           "children": [
             {
               "name": "Toothbrushes",
               "path": "Oral Hygiene > Toothbrushes",
-              "productCount": 108,
-              "directProductCount": 108,
+              "productCount": 110,
+              "directProductCount": 110,
               "children": []
             },
             {
@@ -5361,14 +5361,14 @@
         {
           "name": "Medical Devices & Equipment",
           "path": "Medical Devices & Equipment",
-          "productCount": 12,
+          "productCount": 13,
           "directProductCount": 0,
           "children": [
             {
               "name": "Diagnostic & Monitoring Devices",
               "path": "Medical Devices & Equipment > Diagnostic & Monitoring Devices",
-              "productCount": 7,
-              "directProductCount": 7,
+              "productCount": 8,
+              "directProductCount": 8,
               "children": []
             },
             {
@@ -6191,14 +6191,14 @@
     },
     {
       "name": "Musical Instruments & Studio",
-      "productCount": 423,
+      "productCount": 426,
       "unclassifiedProductCount": 11,
       "browseTree": [
         {
           "name": "Instruments",
           "path": "Instruments",
-          "productCount": 353,
-          "directProductCount": 272,
+          "productCount": 356,
+          "directProductCount": 275,
           "children": [
             {
               "name": "Guitars & Basses",
@@ -10333,7 +10333,7 @@
     },
     {
       "name": "Toys & Games",
-      "productCount": 410,
+      "productCount": 411,
       "unclassifiedProductCount": 144,
       "browseTree": [
         {
@@ -10368,8 +10368,8 @@
         {
           "name": "Dolls & Figures",
           "path": "Dolls & Figures",
-          "productCount": 22,
-          "directProductCount": 1,
+          "productCount": 23,
+          "directProductCount": 2,
           "children": [
             {
               "name": "Dolls",
@@ -10855,20 +10855,20 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1814,
+  "otherProductCount": 1791,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1814
+      "count": 1791
     }
   ],
   "categoryQuality": {
     "taxonomyNodeCount": 1480,
     "usedTaxonomyNodeCount": 358,
     "emptyTaxonomyNodeCount": 1122,
-    "productsWithKnownSubcategory": 15450,
+    "productsWithKnownSubcategory": 15471,
     "productsWithInvalidSubcategory": 0,
-    "productsWithoutSubcategory": 5546,
+    "productsWithoutSubcategory": 5525,
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
@@ -10880,7 +10880,7 @@
       },
       {
         "category": "Books & Media",
-        "count": 500
+        "count": 501
       },
       {
         "category": "Sports",
@@ -10908,7 +10908,7 @@
       },
       {
         "category": "Babies",
-        "count": 67
+        "count": 68
       },
       {
         "category": "Electronics",
@@ -10944,8 +10944,8 @@
       }
     ],
     "classificationStatusCounts": {
-      "needs_classification": 5546,
-      "provisional": 15450
+      "needs_classification": 5525,
+      "provisional": 15471
     },
     "amazonReference": {
       "productsWithBrowsePath": 0,
@@ -10975,7 +10975,7 @@
       },
       {
         "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 550
+        "productCount": 555
       },
       {
         "path": "Home & Living > Home Décor",
@@ -11003,7 +11003,7 @@
       },
       {
         "path": "Musical Instruments & Studio > Instruments",
-        "productCount": 272
+        "productCount": 275
       },
       {
         "path": "Health & Wellness > Wellness > Alternative Therapies > Essential Oils",
@@ -11083,7 +11083,7 @@
       },
       {
         "path": "Health & Wellness > Oral Hygiene > Toothbrushes",
-        "productCount": 108
+        "productCount": 110
       },
       {
         "path": "Food & Grocery > Pantry Staples > Pasta & Rice",
@@ -11142,12 +11142,12 @@
         "productCount": 75
       },
       {
-        "path": "Babies > Baby Clothing > Baby Bodysuits",
+        "path": "Fashion > Shoes",
         "productCount": 68
       },
       {
-        "path": "Fashion > Shoes",
-        "productCount": 62
+        "path": "Babies > Baby Clothing > Baby Bodysuits",
+        "productCount": 68
       },
       {
         "path": "Pets > Cats",
@@ -11230,15 +11230,15 @@
         "productCount": 34
       },
       {
+        "path": "Automotive > Rims & Tires > Car Tires",
+        "productCount": 33
+      },
+      {
         "path": "Sports > Padel > Padel Bags",
         "productCount": 33
       },
       {
         "path": "Sports > Fishing > Fishing Tackle",
-        "productCount": 32
-      },
-      {
-        "path": "Automotive > Rims & Tires > Car Tires",
         "productCount": 32
       },
       {
@@ -11357,7 +11357,7 @@
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 1603
+        "productCount": 1580
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -14196,6 +14196,26 @@
         "category": "Arts, Crafts & Sewing"
       },
       {
+        "title": "Dimensions of life. Julian Barnes. World of Books.",
+        "brand": "Świat Książki",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Wymiary życia.</h1>\n<p>Autor: <b>Barnes&#xa0;Julian&#xa0;P.</b></p><p>EAN: <b>9788381393430</b></p><p>Strony: <b>160</b></p><p>Oprawa: <b>twarda</b></p><p>Wydawca: <b>Świat Ksi",
+        "category": "Books & Media"
+      },
+      {
+        "title": "Animals in the countryside. Toddler painting",
+        "brand": "Wydawnictwo Skrzat",
+        "advertiser": "Allegro.pl",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "<h1>Maluszkowe malowanie.</h1><h1>Zwierzęta na wsi</h1><ul><li><b>Autor: Praca&#xa0;Zbiorowa</b></li><li><b>EAN: 9788379158300</b></li><li><b>Strony: 16</b></li><li><b>Oprawa: bros",
+        "category": "Babies"
+      },
+      {
         "title": "Akcesoria Do Wyrobu Świec Sojowych zestaw do tworzenia świec zapachowych",
         "brand": "",
         "advertiser": "Allegro.pl",
@@ -14223,26 +14243,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>English File 4dycja Elementary podręcznik + Online Practice</h1> <ul><li><b>Wydanie</b>: 2019</li><li><b>Autor</b>: Christina Latham-Koenig, Clive Oxenden, Jerry Lambert, Paul ",
-        "category": "Books & Media"
-      },
-      {
-        "title": "Lynyrd Skynyrd: Pronounced 'leh-'nerd 'skin-'nerd+",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Lynyrd Skynyrd: Pronounced 'Leh-'nerd 'Skin-'nerd &amp; Second Helping - Live From Jacksonville At The Florida Theatre [Blu-Ray]</h1><p><b>Wykonawca:</b> Lynyrd Skynyrd</p><p><",
-        "category": "Books & Media"
-      },
-      {
-        "title": "Isle Of Dogs Fantastic Mr. Fox (wyspa Psów Fan",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<h1>Isle of Dogs / Fantastic Mr. Fox (Wyspa psów / Fantastyczny Pan Lis) [2DVD]</h1><h2>Isle of Dogs</h2><p><b>Kraj:</b> Niemcy, Japonia, USA, Wielka Brytania</p><p><b>Rok produkcj",
         "category": "Books & Media"
       }
     ]
@@ -14415,7 +14415,7 @@
       ],
       "examples": [
         {
-          "title": "Top Stanik Reebok Dwustronny CrossFit r. Xs",
+          "title": "Reebok Reversible CrossFit Top Bra, size Xs",
           "brand": "Reebok",
           "advertiser": "Allegro.pl",
           "productType": "",
