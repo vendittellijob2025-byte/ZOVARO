@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T19:51:53-05:00",
+  "updatedAt": "2026-11-25T19:18:25-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -71,7 +71,8 @@
     "2026-11-23 AIS update: Enable Banking reply from Nana asks whether the AIS API is intended for internal company efficiency or for services to external users. No price, MPS compatibility, personal-account eligibility, API scope, refresh cadence, consent duration, TPP/KYB or GDPR terms were supplied in that reply. ZOVARO's intended use remains read-only internal reconciliation of the owner's own MPS account, not an AIS service for external users. No further email sent, no account connected and no credentials/OTP requested. CBI Globe/Nexi: no new reply found in the checked period.",
     "2026-11-23 CJ sync audit: workflow run 45292002540 succeeded and published commit dd0e7b3 to main. It received 238,151 CJ products, found 191,710 valid-format CJ tracking links, validated 193,406 full-inventory products, marked 191,890 active/eligible and selected 20,908 for the public catalog. 363 products were reclassified; 285 category tests passed; 0 mismatches and 0 invalid subcategory paths. 5,534 selected products remain unclassified, including 1,803 in Other. Coverage is 29/31; Food Delivery & Restaurant Orders and Real Estate remain empty. No live click or attribution tests were performed. Main workflow still writes directly to main; PR #34 has a review-only alternative and remains draft.",
     "2026-11-23 eBay EPN check: official network agreement (published 2026-09-24) requires EPN acceptance before promotional content/methods may be used. Browse API affiliate URLs require OAuth plus the 10-digit EPN affiliateCampaignId in X-EBAY-C-ENDUSERCTX. No EPN portal access, account approval, campaign ID or OAuth credentials verified. EPN Data must not be sent to an LLM/generative AI system without prior written EPN approval and the required written AI-provider safeguards. No application, API integration or product import performed.",
-    "2026-11-24 CJ email audit: four advertiser programme welcome/acceptance notices received for Parts Geek (Automotive), Artemis - Amazon Marketplace (multi-category; classification pending), Best Wig Outlet (Beauty / Wigs) and ABC Wigs (Beauty / Wigs). These establish advertiser/network acceptance only. No new feed/API access, product import/publication, live click test or attribution test was completed. Parts Geek's welcome email included CJ text links but they were not independently tested; the other emails did not provide tested links. Verify territory-specific CJ action terms, permissions and feed availability before promotion. No outreach email was sent in this run."
+    "2026-11-24 CJ email audit: four advertiser programme welcome/acceptance notices received for Parts Geek (Automotive), Artemis - Amazon Marketplace (multi-category; classification pending), Best Wig Outlet (Beauty / Wigs) and ABC Wigs (Beauty / Wigs). These establish advertiser/network acceptance only. No new feed/API access, product import/publication, live click test or attribution test was completed. Parts Geek's welcome email included CJ text links but they were not independently tested; the other emails did not provide tested links. Verify territory-specific CJ action terms, permissions and feed availability before promotion. No outreach email was sent in this run.",
+    "2026-11-25 daily audit: Sobelia explicitly approved by CJ email, but its 50,000-record feed sample contained no valid CJ click URLs and imported 0 products. Parts Geek acceptance is explicit but no product feed was returned. ABC Wigs, Best Wig Outlet and Artemis welcome emails are not counted as network approval until CJ Account Manager status is confirmed; ABC Wigs and Best Wig Outlet returned no product feed, while Artemis records failed image validation. No tracking click or attribution test was performed. No new direct-company prospects were verified and no outbound emails were sent in this run; no mass outreach was attempted."
   ],
   "prospects": [
     {
@@ -7806,18 +7807,20 @@
         "productsImported": 0,
         "productsPublished": 0,
         "clickTested": false,
-        "attributionTested": false
+        "attributionTested": false,
+        "feedApiStatus": "No product feed returned by the 2026-11-25 CJ sync; 0 products imported",
+        "trackingLinkStatus": "CJ text link supplied in acceptance email; not independently click-tested",
+        "effectivelyPromotable": false
       },
       "nextAction": "Verify campaign terms, territories, feed/API access and deep links in CJ; test an outbound click before importing or publishing products."
     },
     {
       "id": "cj-artemis-amazon-marketplace",
       "name": "Artemis - Amazon Marketplace Affiliate Program",
-      "status": "approved_on_network",
+      "status": "welcome_received_approval_unverified",
       "programType": "CJ Affiliate advertiser programme",
       "category": "Unclassified — multi-category marketplace; map only after feed/catalogue inspection",
-      "networkStatus": "Welcome/acceptance email received from CJ advertiser on 2026-11-24",
-      "approvedAt": "2026-11-24T18:55:10Z",
+      "networkStatus": "Advertiser welcome email received; explicit acceptance and CJ account approval not independently verified. Do not count as approved until CJ Account Manager confirms.",
       "territories": [
         "Not specified in acceptance email; verify in CJ account"
       ],
@@ -7842,19 +7845,23 @@
         "productsImported": 0,
         "productsPublished": 0,
         "clickTested": false,
-        "attributionTested": false
+        "attributionTested": false,
+        "trackingLinkStatus": "not tested",
+        "feedApiStatus": "CJ sync received 50,000 records; all 50,000 failed image validation; 0 valid products and 0 imported",
+        "effectivelyPromotable": false
       },
-      "nextAction": "Inspect actual product inventory and CJ campaign terms; classify each product into ZOVARO's 31 categories only after feed access and identity review."
+      "nextAction": "Confirm advertiser approval and current terms in CJ Account Manager; obtain authorised, usable feed and tracking links; independently test a click before any import or publication.",
+      "approvalStatus": "not_verified",
+      "welcomeReceivedAt": "2026-11-24T18:55:10Z"
     },
     {
       "id": "cj-best-wig-outlet",
       "name": "Best Wig Outlet",
-      "status": "approved_on_network",
+      "status": "welcome_received_approval_unverified",
       "programType": "CJ Affiliate advertiser programme",
       "category": "Beauty",
       "subcategory": "Hair Care / Wigs & Hair Extensions",
-      "networkStatus": "Advertiser welcome/acceptance email received on 2026-11-24",
-      "approvedAt": "2026-11-24T19:55:10Z",
+      "networkStatus": "Advertiser welcome email received; explicit acceptance and CJ account approval not independently verified. Do not count as approved until CJ Account Manager confirms.",
       "territories": [
         "Not specified in acceptance email; verify in CJ account"
       ],
@@ -7876,19 +7883,23 @@
         "productsImported": 0,
         "productsPublished": 0,
         "clickTested": false,
-        "attributionTested": false
+        "attributionTested": false,
+        "trackingLinkStatus": "not tested",
+        "feedApiStatus": "No product feed returned by the 2026-11-25 CJ sync",
+        "effectivelyPromotable": false
       },
-      "nextAction": "Verify advertiser identity, territories, current terms, product feed and approved imagery in CJ before importing or publishing."
+      "nextAction": "Confirm advertiser approval and current terms in CJ Account Manager; obtain authorised, usable feed and tracking links; independently test a click before any import or publication.",
+      "approvalStatus": "not_verified",
+      "welcomeReceivedAt": "2026-11-24T19:55:10Z"
     },
     {
       "id": "cj-abc-wigs",
       "name": "ABC Wigs",
-      "status": "approved_on_network",
+      "status": "welcome_received_approval_unverified",
       "programType": "CJ Affiliate advertiser programme",
       "category": "Beauty",
       "subcategory": "Hair Care / Wigs & Hair Extensions",
-      "networkStatus": "Advertiser welcome/acceptance email received on 2026-11-24",
-      "approvedAt": "2026-11-24T19:50:20Z",
+      "networkStatus": "Advertiser welcome email received; explicit acceptance and CJ account approval not independently verified. Do not count as approved until CJ Account Manager confirms.",
       "territories": [
         "Not specified in acceptance email; verify in CJ account"
       ],
@@ -7913,9 +7924,56 @@
         "productsImported": 0,
         "productsPublished": 0,
         "clickTested": false,
-        "attributionTested": false
+        "attributionTested": false,
+        "trackingLinkStatus": "not tested",
+        "feedApiStatus": "No product feed returned by the 2026-11-25 CJ sync",
+        "effectivelyPromotable": false
       },
-      "nextAction": "Verify advertiser identity and current campaign terms in CJ; generate and test a tracked link before importing or publishing."
+      "nextAction": "Confirm advertiser approval and current terms in CJ Account Manager; obtain authorised, usable feed and tracking links; independently test a click before any import or publication.",
+      "approvalStatus": "not_verified",
+      "welcomeReceivedAt": "2026-11-24T19:50:20Z"
+    },
+    {
+      "id": "cj-sobelia",
+      "name": "Sobelia",
+      "status": "approved_on_network",
+      "programType": "CJ Affiliate advertiser programme",
+      "category": "Beauty",
+      "subcategory": "Fragrance / Perfumes",
+      "networkStatus": "Explicit CJ advertiser email says ZOVARO has been approved to join the Sobelia programme on 2026-11-25",
+      "approvalStatus": "confirmed_by_CJ_email",
+      "approvedAt": "2026-11-25T20:25:09Z",
+      "territories": [
+        "Not specified in welcome email; verify in CJ Account Manager"
+      ],
+      "commission": "Not stated in welcome email; verify current CJ action terms",
+      "cookie": "Not stated in welcome email; verify current CJ action terms",
+      "contact": {
+        "email": "swapnil@advertisepurple.com",
+        "source": "CJ advertiser welcome email; not independently verified as a public contact"
+      },
+      "contactEvidence": {
+        "source": "Gmail",
+        "threadId": "1a2146239f56d623",
+        "messageId": "1a2146239f56d623",
+        "sender": "noreply@cj.com",
+        "receivedAt": "2026-11-25T20:25:09Z",
+        "subject": "Welcome to the Sobelia affiliate program !",
+        "evidence": "Email explicitly states approval to join; no commission rate or cookie supplied."
+      },
+      "integration": {
+        "affiliateLink": "CJ text-link code included in welcome email; not independently click-tested",
+        "trackingLinkStatus": "not tested",
+        "feedApiStatus": "2026-11-25 CJ sync received 50,000 records (import cap); 0 passed validation because no valid CJ click URL was present; 0 imported; 9 missing image URLs also reported",
+        "imagePermission": "Creatives described as available in CJ; exact image and brand-use licence not independently checked",
+        "conversionReporting": "not verified",
+        "productsImported": 0,
+        "productsPublished": 0,
+        "clickTested": false,
+        "attributionTested": false,
+        "effectivelyPromotable": false
+      },
+      "nextAction": "Do not publish or promote yet. Verify current commission, cookie, territories and creative licence in CJ; resolve missing click URLs in the feed and test an authorised tracking link before import."
     }
   ],
   "cjAudit": {
