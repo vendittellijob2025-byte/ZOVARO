@@ -43,6 +43,103 @@ function formatMoney(value, currency = "USD") {
   return `${symbol}${number.toFixed(2)}`;
 }
 
+// Show the seller's original price and an indicative USD equivalent.
+// Rates are fetched on demand and cached for six hours; the seller's
+// checkout currency and actual charged amount are never changed.
+const ZOVARO_FX_CACHE_KEY = "zovaroFxUsdRatesV1";
+const ZOVARO_FX_CACHE_TTL = 6 * 60 * 60 * 1000;
+const zovaroFxRates = new Map();
+
+function priceWithUsdMarkup(value, currency = "USD") {
+  const amount = Number(value);
+  const code = String(currency || "USD").toUpperCase();
+  if (!Number.isFinite(amount)) return "";
+  const original = formatMoney(amount, code);
+  if (code === "USD") return original;
+  return `${esc(original)} <span class="zovaro-usd-equivalent" data-usd-price="${esc(String(amount))}" data-usd-currency="${esc(code)}" aria-label="Approximate price in US dollars"></span>`;
+}
+
+function readFxCache() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(ZOVARO_FX_CACHE_KEY) || "{}");
+    if (saved && saved.savedAt && Date.now() - saved.savedAt < ZOVARO_FX_CACHE_TTL && saved.rates) {
+      Object.entries(saved.rates).forEach(([code, rate]) => {
+        if (Number.isFinite(Number(rate)) && Number(rate) > 0) zovaroFxRates.set(code, Number(rate));
+      });
+    }
+  } catch (_) {}
+}
+
+async function getUsdRate(currency) {
+  const code = String(currency || "").toUpperCase();
+  if (!code || code === "USD") return 1;
+  if (zovaroFxRates.has(code)) return zovaroFxRates.get(code);
+  let rate = null;
+  try {
+    const response = await fetch("https://api.frankfurter.dev/v2/rate/" + encodeURIComponent(code.toLowerCase()) + "/usd");
+    if (response.ok) {
+      const data = await response.json();
+      const value = Number(data.rate);
+      if (Number.isFinite(value) && value > 0) rate = value;
+    }
+  } catch (_) {}
+  // Frankfurter covers ECB reference currencies; use the free open.er-api
+  // endpoint for additional currencies such as COP when needed.
+  if (!rate) {
+    try {
+      const response = await fetch("https://open.er-api.com/v6/latest/" + encodeURIComponent(code));
+      if (response.ok) {
+        const data = await response.json();
+        const value = Number(data?.rates?.USD);
+        if (data?.result === "success" && Number.isFinite(value) && value > 0) rate = value;
+      }
+    } catch (_) {}
+  }
+  if (rate) {
+    zovaroFxRates.set(code, rate);
+    try {
+      localStorage.setItem(ZOVARO_FX_CACHE_KEY, JSON.stringify({
+        savedAt: Date.now(),
+        rates: Object.fromEntries(zovaroFxRates)
+      }));
+    } catch (_) {}
+  }
+  return rate;
+}
+
+async function refreshUsdPriceLabels(root = document) {
+  const labels = [];
+  if (root?.matches?.("[data-usd-price]")) labels.push(root);
+  if (root?.querySelectorAll) labels.push(...root.querySelectorAll("[data-usd-price]"));
+  await Promise.all(labels.map(async label => {
+    if (label.dataset.usdReady === "true" || label.dataset.usdLoading === "true") return;
+    const amount = Number(label.dataset.usdPrice);
+    const currency = String(label.dataset.usdCurrency || "").toUpperCase();
+    if (!Number.isFinite(amount) || !currency || currency === "USD") return;
+    label.dataset.usdLoading = "true";
+    const rate = await getUsdRate(currency);
+    label.dataset.usdLoading = "false";
+    if (!rate || !label.isConnected) return;
+    const usd = amount * rate;
+    label.textContent = "(≈ " + new Intl.NumberFormat("en-US", {
+      style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2
+    }).format(usd) + ")";
+    label.title = "Approximate USD equivalent using a recent reference exchange rate. The seller charges in " + currency + ".";
+    label.dataset.usdReady = "true";
+  }));
+}
+
+readFxCache();
+const zovaroUsdPriceObserver = new MutationObserver(records => {
+  for (const record of records) {
+    record.addedNodes.forEach(node => {
+      if (node.nodeType === 1) refreshUsdPriceLabels(node);
+    });
+  }
+});
+if (document.body) zovaroUsdPriceObserver.observe(document.body, { childList: true, subtree: true });
+
+
 const ZOVARO_TRACKING_API = "https://zovaro.vercel.app/api/lead-track";
 
 // Joined CJ advertisers with valid CJ tracking destinations are routed
@@ -176,7 +273,7 @@ function categoryLabel(value) {
 function card(p) {
   const old =
     p.oldPrice != null
-      ? `<del class="old">${formatMoney(
+      ? `<del class="old">${priceWithUsdMarkup(
           p.oldPrice,
           p.currency
         )}</del>`
@@ -226,7 +323,7 @@ function card(p) {
         <div class="price-row">
 
           <span class="price">
-            ${formatMoney(p.price, p.currency)}
+            ${priceWithUsdMarkup(p.price, p.currency)}
           </span>
 
           ${old}
@@ -703,15 +800,15 @@ function openProduct(id) {
   $("#modalMerchant").textContent =
     p.merchant || "";
 
-  $("#modalPrice").textContent =
-    formatMoney(
+  $("#modalPrice").innerHTML =
+    priceWithUsdMarkup(
       p.price,
       p.currency
     );
 
-  $("#modalOldPrice").textContent =
+  $("#modalOldPrice").innerHTML =
     p.oldPrice != null
-      ? formatMoney(
+      ? priceWithUsdMarkup(
           p.oldPrice,
           p.currency
         )
