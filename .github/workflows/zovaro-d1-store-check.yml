@@ -16,6 +16,7 @@ on:
       - "api/tiktok-*.js"
       - "api/cj-commission-sync.js"
       - "cloudflare/d1/schema.sql"
+      - "scripts/test-attribution-simulation.py"
       - ".github/workflows/zovaro-d1-store-check.yml"
 
 permissions:
@@ -54,6 +55,8 @@ jobs:
           assert expected <= actual, f"Missing D1 tables: {expected - actual}"
           print("D1 schema valid:", ", ".join(sorted(expected)))
           PY
+      - name: Run isolated click-to-sale attribution simulation
+        run: python scripts/test-attribution-simulation.py
       - name: Verify no application route imports Vercel Blob
         run: |
           if grep -R -n '@vercel/blob' api lib; then
