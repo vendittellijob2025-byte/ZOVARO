@@ -43,15 +43,18 @@ for (const org of organizations) {
   found.push(...(data?.channels ?? []).map(channel => ({ ...channel, organizationId: org.id })));
 }
 
+const normalize = value => String(value ?? "").toLowerCase().replace(/^@/, "").trim();
 const instagram = found.filter(c => c.service?.toLowerCase() === "instagram");
 const tiktok = found.filter(c => c.service?.toLowerCase() === "tiktok");
+const targetInstagram = instagram.filter(c => [c.name, c.displayName].some(v => normalize(v).includes("zovaroworldwide")));
+const targetTikTok = tiktok.filter(c => [c.name, c.displayName].some(v => normalize(v).includes("zovaro")));
 console.log(JSON.stringify({
   organizationsFound: organizations.length,
   channels: found.map(({id,name,displayName,service,isQueuePaused}) => ({id,name,displayName,service,isQueuePaused})),
-  zovaroInstagramCandidates: instagram.length,
-  zovaroTikTokCandidates: tiktok.length,
+  targetInstagram: targetInstagram.map(({id,name,displayName,isQueuePaused}) => ({id,name,displayName,isQueuePaused})),
+  targetTikTok: targetTikTok.map(({id,name,displayName,isQueuePaused}) => ({id,name,displayName,isQueuePaused})),
 }, null, 2));
 
-if (!instagram.length || !tiktok.length) {
-  throw new Error("Both Instagram and TikTok channels must be connected before scheduling ZOVARO videos.");
+if (targetInstagram.length !== 1 || targetTikTok.length !== 1) {
+  throw new Error("Expected exactly one Instagram @zovaroworldwide channel and one TikTok @zovaro channel. Check the connected Buffer channels before enabling publishing.");
 }
