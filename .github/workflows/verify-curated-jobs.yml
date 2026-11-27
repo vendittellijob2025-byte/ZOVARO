@@ -37,7 +37,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: zovaro-curated-jobs-verification
+  group: zovaro-jobs-daily-feed-updates
   cancel-in-progress: false
 
 jobs:
@@ -82,3 +82,4 @@ jobs:
             Review every status change and removal before merging. Temporary network failures
             must remain unverified rather than being treated as expired vacancies.
           base: main
+          draft: true
