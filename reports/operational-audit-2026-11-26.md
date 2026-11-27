@@ -86,7 +86,7 @@ Report catalogo generato il 26 novembre 21:31 UTC: 21.042 prodotti selezionati, 
 
 ## Azioni richieste all'utente
 
-1. Verificare/abilitare l'esecuzione dei check GitHub Actions per le pull request: i check su PR #35 sono `action_required`; non sono stati modificati permessi di sicurezza.
+1. I check GitHub Actions di PR #35 sono ora riusciti (`verify`, `verify-buffer` e Vercel Preview Comments). Se futuri check tornano `action_required`, verificare la policy di approvazione dei workflow senza modificare altri permessi di sicurezza.
 2. Revisionare PR #51 per bloccare i push automatici di catalogo e JOBS su `main`; nessuna merge è stata eseguita.
 3. Prima di considerare promuovibili Sobelia, Best Wig Outlet, ABC Wigs, Parts Geek, Artemis o ALL Accor+, verificare in CJ termini attivi, territori, link, feed/creatività e attribuzione.
 4. Per AIS, attendere le risposte ufficiali senza collegare il conto o inviare ulteriori dati.
