@@ -2976,5 +2976,62 @@ document
 
 <script src="assistant.js"></script>
 
+
+
+<style>
+.zv-advertiser{max-width:1120px;margin:42px auto;padding:clamp(22px,4vw,42px);border:1px solid rgba(53,190,255,.32);border-radius:24px;background:linear-gradient(145deg,#071a31,#0b2948);color:#f4f9ff;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.zv-advertiser .zv-ad-kicker{color:#61d8ff;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.zv-advertiser h2{margin:10px 0;color:#fff;font-size:clamp(25px,4vw,38px);line-height:1.12}
+.zv-advertiser .zv-ad-copy{max-width:780px;color:#c4d6e8;line-height:1.65}
+.zv-ad-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.zv-ad-plan{padding:20px;border:1px solid rgba(99,204,255,.35);border-radius:16px;background:rgba(1,12,27,.58)}
+.zv-ad-plan strong{display:block;color:#75e0ff;font-size:clamp(26px,4vw,36px)}
+.zv-ad-plan span{display:block;margin-top:5px;color:#d3e3f1;font-size:13px}
+.zv-ad-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.zv-ad-form label{display:block;color:#d8e8f5;font-size:12px;font-weight:700}
+.zv-ad-form input,.zv-ad-form select,.zv-ad-form textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid rgba(103,167,215,.4);border-radius:10px;background:#061426;color:#fff;font:inherit}
+.zv-ad-form textarea{min-height:100px;resize:vertical}.zv-ad-wide{grid-column:1/-1}
+.zv-ad-submit{min-height:48px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffcf64,#39c9ff);color:#071426;font-weight:900;cursor:pointer}
+.zv-ad-foot{margin:12px auto 0;max-width:760px;color:#9bb2c9;text-align:center;font-size:11px;line-height:1.55}
+@media(max-width:600px){.zv-ad-plans,.zv-ad-form{grid-template-columns:1fr}.zv-ad-wide{grid-column:auto}}
+</style>
+<section class="zv-advertiser" id="advertiserService" aria-labelledby="zvAdTitle">
+  <span class="zv-ad-kicker">ZOVARO WORLDWIDE · ADVERTISING SERVICE</span>
+  <h2 id="zvAdTitle">Promote your business worldwide.</h2>
+  <p class="zv-ad-copy">Promote products, services, shops, restaurants, professional activities, property sales and rentals through ZOVARO Worldwide. Choose a monthly or annual advertising plan and send us your request. We will review the content, campaign details and publication arrangements with you.</p>
+  <div class="zv-ad-plans" aria-label="Advertising prices">
+    <div class="zv-ad-plan"><strong>US$9.99</strong><span>Per month · monthly plan</span></div>
+    <div class="zv-ad-plan"><strong>US$99.00</strong><span>12 months · paid once</span></div>
+  </div>
+  <form class="zv-ad-form" id="zvAdvertiserForm">
+    <label>Business / contact name<input name="business" required maxlength="140" autocomplete="organization"></label>
+    <label>Email address<input name="email" type="email" required autocomplete="email"></label>
+    <label>Country<input name="country" required maxlength="80" autocomplete="country-name"></label>
+    <label>Website or social profile<input name="website" type="url" maxlength="240" placeholder="https://"></label>
+    <label>What do you want to promote?<select name="category" required><option value="">Select a category</option><option>Products / online shop</option><option>Services / professionals</option><option>Restaurant / food delivery</option><option>Business / local activity</option><option>Property / rentals / sales</option><option>Vehicles / luxury / charter</option><option>Jobs / recruitment</option><option>Other</option></select></label>
+    <label>Preferred plan<select name="plan" required><option value="US$9.99 per month">US$9.99 per month</option><option value="US$99 for 12 months, paid once">US$99 for 12 months · paid once</option></select></label>
+    <label class="zv-ad-wide">Describe what you want to advertise<textarea name="description" required maxlength="1800" placeholder="Describe your business, products or services, target countries and campaign goals."></textarea></label>
+    <button class="zv-ad-submit zv-ad-wide" type="submit">REQUEST ADVERTISING SERVICE</button>
+  </form>
+  <p class="zv-ad-foot">Submitting this request does not activate a paid campaign or charge you. It opens an email addressed to ZOVARO for review and confirmation. ZOVARO is an advertising and discovery intermediary; third-party sellers remain responsible for their products, orders and customer service.</p>
+  <p class="zv-ad-foot" id="zvAdStatus" role="status" aria-live="polite"></p>
+</section>
+<script>
+(function(){
+  const form=document.getElementById("zvAdvertiserForm");
+  if(!form)return;
+  form.addEventListener("submit",event=>{
+    event.preventDefault();
+    const data=new FormData(form);
+    const fields=[["Business / contact","business"],["Email","email"],["Country","country"],["Website / social","website"],["Category","category"],["Plan","plan"],["Description","description"]];
+    const body=fields.map(([label,key])=>label+": "+(data.get(key)||"—")).join("\\n\\n");
+    const subject="ZOVARO Worldwide - Advertising service request";
+    const url="mailto:vendittellijob2025@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    document.getElementById("zvAdStatus").textContent="Your email app will open with the request ready to send. The request is not submitted until you press Send.";
+    window.location.href=url;
+  });
+})();
+</script>
+
 </body>
 </html>

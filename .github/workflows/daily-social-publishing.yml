@@ -44,7 +44,7 @@ jobs:
           SELECTED_PRODUCTS_PATH=".zovaro-shop-batches/products-1.json" VIDEO_OUTPUT_PATH="data/tiktok-video.mp4" node scripts/create-tiktok-video.mjs
       - name: Generate JOB, LUXURY and ADVERTISERS videos
         run: node scripts/create-category-videos.mjs zovaro-social-videos
-      - name: Verify exactly three generated videos
+      - name: Verify four publishable daily videos
         run: |
           test -s data/tiktok-video.mp4
           test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
