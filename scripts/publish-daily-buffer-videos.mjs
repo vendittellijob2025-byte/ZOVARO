@@ -43,19 +43,20 @@ for(const channel of [tt,ig]){
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
     const dueAt=dueAtFor(slots[i]);
     const expectedMediaUrl=media[i].url;
+    // Never delete or clear an existing Buffer post/queue. If an advertiser
+    // post already occupies this exact slot, preserve it rather than creating
+    // a duplicate or destructively replacing a scheduled publication.
     if(label.startsWith("ADVERTISERS")){
-      const futureOutdated=existing.filter(p=>
+      const occupied=existing.find(p=>
         p.channelId===channel.id &&
-        p.dueAt &&
-        new Date(p.dueAt).getTime()>=Date.now() &&
-        (String(p.text||"").toLowerCase().includes("promote your business") || String(p.text||"").toLowerCase().includes("#advertise")) &&
-        p.assets?.some(asset=>asset.source && asset.source!==expectedMediaUrl)
+        p.dueAt===dueAt &&
+        (String(p.text||"").toLowerCase().includes("promote your business") ||
+         String(p.text||"").toLowerCase().includes("#advertise"))
       );
-      for(const outdated of futureOutdated){
-        const deleted=await gql('mutation { deletePost(input:{id:"'+outdated.id+'"}) { ... on DeletePostSuccess { id } ... on MutationError { message } } }',"remove outdated advertiser video "+channel.name);
-        const deletion=deleted?.deletePost;
-        if(!deletion?.id)throw new Error("Could not remove outdated advertiser post "+outdated.id+": "+JSON.stringify(deletion));
-        console.log("REMOVED OUTDATED ADVERTISER VIDEO",channel.name,outdated.id);
+      if(occupied){
+        console.log("PRESERVED EXISTING ADVERTISER SLOT",channel.name,occupied.id,dueAt);
+        results.push({channel:channel.name,label,status:"existing_slot_preserved",id:occupied.id,dueAt});
+        continue;
       }
     }
     const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt&&p.assets?.some(asset=>asset.source===expectedMediaUrl));
