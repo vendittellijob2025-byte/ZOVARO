@@ -59,7 +59,9 @@ jobs:
       - name: Publish validated catalogue update to main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CJ_API_TOKEN: ${{ secrets.CJ_API_TOKEN }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/catalog.json data/translation-cache.json data/category-coverage.json
@@ -68,4 +70,26 @@ jobs:
             exit 0
           fi
           git commit -m "chore: publish validated CJ catalogue update"
+
+          # Another workflow may update main while CJ feeds are being fetched.
+          # Never force-push a stale catalogue over that newer commit.
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+
+          echo "main advanced during catalogue sync; rebuilding against latest main."
+          git fetch origin main
+          git reset --hard origin/main
+          node scripts/sync-cj-advertisers.mjs
+          node scripts/reclassify-catalog-categories.mjs
+          node scripts/validate-product-category-rules.mjs
+          node scripts/test-product-category.mjs
+          node scripts/audit-category-quality.mjs
+          node scripts/report-category-coverage.mjs
+          git add data/catalog.json data/translation-cache.json data/category-coverage.json
+          if git diff --cached --quiet; then
+            echo "Latest main already contains the validated catalogue state."
+            exit 0
+          fi
+          git commit -m "chore: publish rebased validated CJ catalogue update"
           git push origin HEAD:main
