@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T19:18:25-05:00",
+  "updatedAt": "2026-11-26T19:43:15-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -7357,7 +7357,44 @@
         "conversionReporting": "CJ reporting after link verification"
       },
       "nextAction": "Confirm APAC membership purchase eligibility from ZOVARO target countries, exact link and permitted assets. Do not describe this as commission on all Accor hotel reservations.",
-      "approvalEvidence": "CJ welcome email 2026-11-17"
+      "approvalEvidence": "CJ welcome email 2026-11-17",
+      "latestUpdateAt": "2026-11-26T06:54:35Z",
+      "latestUpdate": "CJ notified ZOVARO of a pending ALL Accor+ Explorer terms schedule. Existing Accor Plus Default 8% website-purchase terms remain active until 2026-11-26 23:30 PST. A 10% website-purchase campaign is scheduled from 2026-11-26 23:30 PST to 2026-12-15 10:30 PST, followed by 8% ongoing from 2026-12-15 10:30 PST. No acceptance action was performed; at the 2026-11-26 19:43 Colombia check the 10% schedule had not yet reached its stated activation time. Publisher/customer eligibility by territory and tracking remain unverified.",
+      "termsSchedule": {
+        "evidence": {
+          "source": "Gmail CJ advertiser terms notification",
+          "threadId": "1a216a27b55adf3d",
+          "messageId": "1a216a27b55adf3d",
+          "receivedAt": "2026-11-26T06:54:35Z"
+        },
+        "current": {
+          "name": "Accor Plus Default",
+          "commission": "8%",
+          "basis": "Website Purchase",
+          "endsAt": "2026-11-26T23:30:00-08:00",
+          "statusAtCheck": "active"
+        },
+        "pending": {
+          "name": "Accor Plus Campaign",
+          "commission": "10%",
+          "basis": "Website Purchase",
+          "startsAt": "2026-11-26T23:30:00-08:00",
+          "endsAt": "2026-12-15T10:30:00-08:00",
+          "autoActivationNotice": true,
+          "statusAtCheck": "pending; not accepted by ZOVARO"
+        },
+        "ongoing": {
+          "name": "Accor Plus Default",
+          "commission": "8%",
+          "basis": "Website Purchase",
+          "startsAt": "2026-12-15T10:30:00-08:00",
+          "statusAtCheck": "scheduled"
+        },
+        "cookie": "30 days recorded in the existing register; not restated in this new terms email",
+        "territories": "APAC membership benefits; publisher/customer eligibility still requires confirmation",
+        "tracking": "Deep link not verified; no click or attribution test",
+        "feed": "Membership offer only; not a hotel inventory feed"
+      }
     },
     {
       "id": "fragrance-outlet-cj",
