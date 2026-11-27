@@ -29,10 +29,6 @@ const openJobs = jobs.filter(job => {
     Date.now() - verifiedTime <= 7 * 86400000;
 });
 const rotate = (items,count,offset=0) => Array.from({length:Math.min(count,items.length)},(_,i)=>items[(offset+i)%items.length]);
-const selectedJobs = rotate(openJobs,3,openJobs.length ? day%openJobs.length : 0);
-if (selectedJobs.length < 3) {
-  throw new Error("Three distinct employer-verified job listings from the last seven days are required; found "+selectedJobs.length+".");
-}
 const remote = guides.categories.find(x=>x.name==="Remote & Work From Home")?.roles || [];
 const remoteRoles = rotate(remote,3,day%Math.max(1,remote.length));
 const trades = guides.categories.find(x=>x.name==="Construction & Skilled Trades")?.roles || [];
@@ -40,6 +36,21 @@ const manufacturing = guides.categories.find(x=>x.name==="Manufacturing & Produc
 const transport = guides.categories.find(x=>x.name==="Transport & Logistics")?.roles || [];
 const industryPool = [...trades,...manufacturing,...transport];
 const industryRoles = rotate(industryPool,4,day%Math.max(1,industryPool.length));
+const guidePool = [...remoteRoles,...rotate(industryPool,Math.max(0,3-remoteRoles.length),day%Math.max(1,industryPool.length))];
+const guideJobs = guidePool.map(role=>({
+  title:role.title,
+  company:"ZOVARO CAREER GUIDE",
+  location:"Worldwide · check country and employer requirements",
+  jobType:"Career guide · not a confirmed vacancy",
+  requirements:role.skills||[],
+  applicationUrl:"https://zovaro.vercel.app/?view=jobs",
+  isGuideFallback:true
+}));
+const verifiedSelection = rotate(openJobs,Math.min(3,openJobs.length),openJobs.length ? day%openJobs.length : 0);
+const selectedJobs = [...verifiedSelection,...guideJobs.slice(0,Math.max(0,3-verifiedSelection.length))];
+if (selectedJobs.length < 3) {
+  throw new Error("Not enough career-guide material to create a truthful JOBS video.");
+}
 
 function wrap(value,max=30){
   const text=String(value||"").replace(/\s+/g," ").trim();
@@ -104,6 +115,15 @@ function jobScenesFor(job) {
 }
 function jobCaption(job) {
   const requirements = (job.requirements || []).slice(0,4).map(item=>"- "+item).join(" ");
+  if (job.isGuideFallback) {
+    return [
+      "Career guide: "+job.title+".",
+      jobLocation(job)+".",
+      "This is an occupation overview, not a confirmed vacancy or job offer.",
+      requirements,
+      "Explore current employer-verified openings on ZOVARO JOBS: "+job.applicationUrl
+    ].filter(Boolean).join(" ");
+  }
   return [
     job.title+" at "+job.company+".",
     jobLocation(job)+".",
