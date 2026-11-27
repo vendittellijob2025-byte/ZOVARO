@@ -470,7 +470,6 @@ const expectedRootOrder = [
   "Toys & Games",
   "Books & Media",
   "Food & Grocery",
-  "Food Delivery & Restaurant Orders",
   "Pets",
   "Garden",
   "Tools & DIY",
@@ -486,6 +485,7 @@ const expectedRootOrder = [
   "Business, Wholesale & Bulk Supply",
   "Repair & Circular Economy",
   "Accessible & Adaptive Living",
+  "Food Delivery & Restaurant Orders",
   "Real Estate"
 ];
 assert.deepEqual(
