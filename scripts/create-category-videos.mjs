@@ -20,14 +20,20 @@ const temp = path.join(OUTPUT,".temp");
 await fs.mkdir(temp,{recursive:true});
 
 const day = Math.floor(Date.now()/86400000);
-const openJobs = jobs.filter(job => {
+const eligiblePreviouslyVerifiedJobs = jobs.filter(job => {
   const verifiedTime = new Date(job.lastVerifiedAt || job.verifiedAt).getTime();
   return job.status === "open" &&
     job.verifiedAt &&
     /^https:\/\//i.test(job.applicationUrl || "") &&
     Number.isFinite(verifiedTime) &&
-    Date.now() - verifiedTime <= 7 * 86400000;
+    verifiedTime <= Date.now();
 });
+const openJobs = eligiblePreviouslyVerifiedJobs.filter(job =>
+  Date.now() - new Date(job.lastVerifiedAt || job.verifiedAt).getTime() <= 7 * 86400000
+);
+const olderPreviouslyVerifiedJobs = eligiblePreviouslyVerifiedJobs
+  .filter(job => Date.now() - new Date(job.lastVerifiedAt || job.verifiedAt).getTime() > 7 * 86400000)
+  .sort((a,b) => new Date(b.lastVerifiedAt || b.verifiedAt) - new Date(a.lastVerifiedAt || a.verifiedAt));
 const rotate = (items,count,offset=0) => Array.from({length:Math.min(count,items.length)},(_,i)=>items[(offset+i)%items.length]);
 const remote = guides.categories.find(x=>x.name==="Remote & Work From Home")?.roles || [];
 const remoteRoles = rotate(remote,3,day%Math.max(1,remote.length));
@@ -46,8 +52,14 @@ const guideJobs = guidePool.map(role=>({
   applicationUrl:"https://zovaro.vercel.app/?view=jobs",
   isGuideFallback:true
 }));
-const verifiedSelection = rotate(openJobs,Math.min(3,openJobs.length),openJobs.length ? day%openJobs.length : 0);
-const selectedJobs = [...verifiedSelection,...guideJobs.slice(0,Math.max(0,3-verifiedSelection.length))];
+const recentSelection = rotate(openJobs,Math.min(3,openJobs.length),openJobs.length ? day%openJobs.length : 0);
+const olderSelection = rotate(
+  olderPreviouslyVerifiedJobs,
+  Math.max(0,3-recentSelection.length),
+  olderPreviouslyVerifiedJobs.length ? day%olderPreviouslyVerifiedJobs.length : 0
+).map(job => ({...job, needsAvailabilityRecheck:true}));
+const realJobSelection = [...recentSelection,...olderSelection];
+const selectedJobs = [...realJobSelection,...guideJobs.slice(0,Math.max(0,3-realJobSelection.length))];
 if (selectedJobs.length < 3) {
   throw new Error("Not enough career-guide material to create a truthful JOBS video.");
 }
@@ -107,10 +119,15 @@ function jobLocation(job) {
 function jobScenesFor(job) {
   const companyLine = [job.company, job.jobType].filter(Boolean).join(" · ");
   const requirements = (job.requirements || []).slice(0,2).map(value=>wrap(value,22)).join(" · ");
+  const statusTitle = job.isGuideFallback
+    ? "CAREER GUIDE · NOT A VACANCY"
+    : job.needsAvailabilityRecheck
+      ? "PREVIOUSLY VERIFIED · RECHECK"
+      : "RECENTLY VERIFIED OPENING";
   return [
-    {title:"REAL EMPLOYER OPENING",subtitle:wrap(companyLine,55),titleSize:44,subtitleSize:28},
+    {title:statusTitle,subtitle:wrap(companyLine,55),titleSize:40,subtitleSize:28},
     {title:wrap(job.title,40),subtitle:wrap(jobLocation(job),55),titleSize:42,subtitleSize:28},
-    {title:"KEY REQUIREMENTS",subtitle:wrap(requirements,55),titleSize:42,subtitleSize:27}
+    {title:"CHECK CURRENT AVAILABILITY",subtitle:wrap(requirements,55),titleSize:38,subtitleSize:27}
   ];
 }
 function jobCaption(job) {
@@ -129,7 +146,9 @@ function jobCaption(job) {
     jobLocation(job)+".",
     job.jobType || "See employer terms.",
     requirements,
-    "Apply through the employer's official page: "+job.applicationUrl,
+    job.needsAvailabilityRecheck
+      ? "This vacancy was previously verified by ZOVARO and is being republished from its archive because there are not enough newly verified listings. Its current availability has NOT been reconfirmed. Check the employer's official page before applying: "+job.applicationUrl
+      : "Apply through the employer's official page: "+job.applicationUrl,
     "Availability and eligibility can change; verify directly with the employer."
   ].filter(Boolean).join(" ");
 }
