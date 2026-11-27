@@ -455,6 +455,44 @@ assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Snap Bodysuit", a
 assert.equal(subcategoryFor("Babies", { title: "Organic Cotton Jogger Pants", advertiserName: "Kaiya Baby" }), "Baby Clothing");
 
 const categoryTree = JSON.parse(await fs.readFile(new URL("../data/category-tree.json", import.meta.url), "utf8"));
+const expectedRootOrder = [
+  "Electronics",
+  "Beauty",
+  "Fashion",
+  "Home & Living",
+  "Automotive",
+  "Sports",
+  "Luxury & Prestige",
+  "Appliances",
+  "TVs & Home Cinema",
+  "Gaming",
+  "Babies",
+  "Toys & Games",
+  "Books & Media",
+  "Food & Grocery",
+  "Food Delivery & Restaurant Orders",
+  "Pets",
+  "Garden",
+  "Tools & DIY",
+  "Health & Wellness",
+  "Travel",
+  "Musical Instruments & Studio",
+  "Office & Technology",
+  "Industrial & Scientific",
+  "Arts, Crafts & Sewing",
+  "Security & Safety",
+  "Energy, Solar & Electric Mobility",
+  "Refurbished, Pre-Owned & Outlet",
+  "Business, Wholesale & Bulk Supply",
+  "Repair & Circular Economy",
+  "Accessible & Adaptive Living",
+  "Real Estate"
+];
+assert.deepEqual(
+  categoryTree.categories.map(category => category.name),
+  expectedRootOrder,
+  "Shop category navigation must keep the approved shopper-first order."
+);
 function treeHasPath(categoryName, path) {
   const root = categoryTree.categories.find(item => item.name === categoryName);
   if (!root) return false;
