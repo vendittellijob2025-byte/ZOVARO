@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T19:43:15-05:00",
+  "updatedAt": "2026-11-26T21:43:00-05:00",
   "partners": [],
   "products": [],
   "notes": [
@@ -7999,18 +7999,20 @@
         "evidence": "Email explicitly states approval to join; no commission rate or cookie supplied."
       },
       "integration": {
-        "affiliateLink": "CJ text-link code included in welcome email; not independently click-tested",
-        "trackingLinkStatus": "not tested",
-        "feedApiStatus": "2026-11-25 CJ sync received 50,000 records (import cap); 0 passed validation because no valid CJ click URL was present; 0 imported; 9 missing image URLs also reported",
+        "affiliateLink": "CJ feed click URLs passed catalogue validation on 2026-11-26; individual affiliate click not tested",
+        "trackingLinkStatus": "feed click URL validation passed; individual click and attribution tests pending",
+        "feedApiStatus": "2026-11-26 CJ sync: 50,000 records received (per-advertiser cap); 49,991 passed validation; 6,164 imported; 43,827 duplicate keys; 9 missing image URLs; partial capped sync",
         "imagePermission": "Creatives described as available in CJ; exact image and brand-use licence not independently checked",
         "conversionReporting": "not verified",
-        "productsImported": 0,
+        "productsImported": 6164,
         "productsPublished": 0,
         "clickTested": false,
         "attributionTested": false,
         "effectivelyPromotable": false
       },
-      "nextAction": "Do not publish or promote yet. Verify current commission, cookie, territories and creative licence in CJ; resolve missing click URLs in the feed and test an authorised tracking link before import."
+      "nextAction": "Do not publish or promote yet. Verify current commission, cookie, territories and creative licence in CJ; resolve missing click URLs in the feed and test an authorised tracking link before import.",
+      "latestUpdateAt": "2026-11-26T21:30:58Z",
+      "latestUpdate": "The 2026-11-26 CJ sync now validates the feed click URLs and imports 6,164 products from the 50,000-record cap. 49,991 records passed validation, 43,827 were duplicate product keys and 9 lacked image URLs. Individual click/attribution, territory, commission/cookie and exact creative licence remain unverified; do not mark effectively promotable yet."
     }
   ],
   "cjAudit": {
