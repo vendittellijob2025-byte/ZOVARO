@@ -44,6 +44,8 @@ const cases = [
   ["Rolex Submariner", "Luxury & Prestige"],
   ["Original Oil Painting by Collector", "Luxury & Prestige"],
   ["Bentley Cologne for Men by Bentley Eau de Toilette Spray", "Beauty"],
+  ["Givenchy Black Hoodie Photographic Negative Fleece", "Fashion"],
+  ["Givenchy Photographic Negative Cotton T-Shirt", "Fashion"],
   ["Model Maisto Bugatti Chiron Sport 1:24", "Toys & Games"],
   ["Le Mans '66 (Ford vs Ferrari) DVD", "Books & Media"],
   ["Electronic Throttle Body fits for Chevy Hummer Buick GMC Isuzu Vehicles", "Automotive"],
