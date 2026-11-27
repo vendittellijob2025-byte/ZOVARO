@@ -61,6 +61,7 @@ on:
     branches:
       - main
     paths:
+      - ".github/workflows/cj-products.yml"
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
       - "scripts/create-tiktok-video.mjs"
