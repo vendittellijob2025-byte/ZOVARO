@@ -24,9 +24,10 @@ const products =
    VALID PRODUCTS
    ========================================================= */
 
-const today = new Intl.DateTimeFormat("en-CA", {
+const dateParts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
   timeZone: "America/Bogota", year: "numeric", month: "2-digit", day: "2-digit"
-}).format(new Date());
+}).formatToParts(new Date()).map(part => [part.type, part.value]));
+const today = dateParts.year + "-" + dateParts.month + "-" + dateParts.day;
 const HISTORY_PATH = "data/social-product-history.json";
 let historyRecords = [];
 try {
