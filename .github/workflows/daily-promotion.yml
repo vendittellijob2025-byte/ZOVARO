@@ -1,23 +1,9 @@
 name: ZOVARO - Daily Promotion
 
 on:
+  # Retained for manual diagnostics only. The daily-social-publishing workflow
+  # is the single scheduled producer of the SHOP video sent to Buffer.
   workflow_dispatch:
-  schedule:
-    - cron: "17 8 * * *"
-  push:
-    branches:
-      - main
-      - feature/global-jobs-portal
-      - fix/shop-gif-loop
-      - fix/shop-video-runtime
-      - fix/normalize-shop-images
-    paths:
-      - ".github/workflows/daily-promotion.yml"
-      - "scripts/select-product.mjs"
-      - "scripts/split-selected-products.mjs"
-      - "scripts/create-promotion.mjs"
-      - "scripts/create-tiktok-video.mjs"
-      - "data/selected-products.json"
 
 permissions:
   contents: write
