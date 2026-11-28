@@ -1,15 +1,9 @@
 name: ZOVARO - Daily JOBS and LUXURY video generation
 
 on:
+  # Manual diagnostic workflow only. The main daily-social-publishing workflow
+  # is the single owner of daily generation and Buffer scheduling.
   workflow_dispatch:
-  schedule:
-    - cron: "30 7 * * *"
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/daily-category-videos.yml"
-      - "scripts/create-category-videos.mjs"
 
 permissions:
   contents: read
@@ -36,14 +30,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg fonts-dejavu-core
 
-      - name: Generate three JOB videos and LUXURY when approved audio is present
+      - name: Generate the fixed daily JOBS, LUXURY and advertiser creatives
         run: node scripts/create-category-videos.mjs zovaro-social-videos
 
       - name: Verify generated videos
         run: |
           test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
-          test -s zovaro-social-videos/ZOVARO-REMOTE-CAREERS.mp4
-          test -s zovaro-social-videos/ZOVARO-INDUSTRY-CAREERS.mp4
+          test -s zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4
+          test -s zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4
           for FILE in zovaro-social-videos/*.mp4; do
             test -s "$FILE"
             ffprobe -v error -show_entries format=duration -of csv=p=0 "$FILE"
