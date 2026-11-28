@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T07:44:25.432Z",
+  "generatedAt": "2026-11-28T13:36:04.551Z",
   "selectedProductCount": 21052,
   "inventoryProductCount": 199941,
   "uniqueAdvertiserCount": 25,
@@ -1831,8 +1831,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1823,
-      "unclassifiedProductCount": 516,
+      "productCount": 1825,
+      "unclassifiedProductCount": 518,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -2640,7 +2640,7 @@
     },
     {
       "name": "Electronics",
-      "productCount": 436,
+      "productCount": 438,
       "unclassifiedProductCount": 60,
       "browseTree": [
         {
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 54,
+          "productCount": 56,
           "directProductCount": 24,
           "children": [
             {
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 10,
+              "productCount": 12,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 5,
-                  "directProductCount": 5,
+                  "productCount": 7,
+                  "directProductCount": 7,
                   "children": []
                 },
                 {
@@ -6371,7 +6371,7 @@
     },
     {
       "name": "Office & Technology",
-      "productCount": 50,
+      "productCount": 48,
       "unclassifiedProductCount": 0,
       "browseTree": [
         {
@@ -6420,7 +6420,7 @@
         {
           "name": "Software",
           "path": "Software",
-          "productCount": 49,
+          "productCount": 47,
           "directProductCount": 0,
           "children": [
             {
@@ -6440,8 +6440,8 @@
             {
               "name": "Utilities",
               "path": "Software > Utilities",
-              "productCount": 48,
-              "directProductCount": 48,
+              "productCount": 46,
+              "directProductCount": 46,
               "children": []
             },
             {
@@ -10855,11 +10855,11 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1809,
+  "otherProductCount": 1807,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1809
+      "count": 1807
     }
   ],
   "categoryQuality": {
@@ -10876,7 +10876,7 @@
       },
       {
         "category": "Beauty",
-        "count": 516
+        "count": 518
       },
       {
         "category": "Books & Media",
@@ -11178,12 +11178,12 @@
         "productCount": 50
       },
       {
-        "path": "Office & Technology > Software > Utilities",
+        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
         "productCount": 48
       },
       {
-        "path": "Automotive > Motorcycles, Accessories & Parts > ATV & Powersports",
-        "productCount": 48
+        "path": "Office & Technology > Software > Utilities",
+        "productCount": 46
       },
       {
         "path": "Beauty > Bath & Body",
@@ -11361,7 +11361,7 @@
       },
       {
         "advertiser": "Sobelia",
-        "productCount": 618
+        "productCount": 616
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12760,7 +12760,7 @@
         "category": "Electronics"
       },
       {
-        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "title": "Abelssoft File Organizer 2025 | Organize your computer",
         "brand": "Abelssoft",
         "advertiser": "Abelssoft Int",
         "productType": "",
