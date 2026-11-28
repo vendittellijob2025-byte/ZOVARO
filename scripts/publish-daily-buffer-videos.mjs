@@ -17,6 +17,7 @@ const localHour = Number(new Intl.DateTimeFormat("en-GB", {
 const targetDate = bogotaDate(localHour < 8 ? 0 : 1);
 const slots=["08:00","12:00","17:00","21:00"];
 const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
+// Keep one release and its exact video URLs per local publishing day.
 const tag="zovaro-social-"+day;
 const videos=[
 ["SHOP · Daily discoveries","data/tiktok-video.mp4","Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"],
