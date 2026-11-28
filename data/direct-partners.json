@@ -8797,10 +8797,21 @@
         "United Kingdom",
         "United States"
       ],
-      "publicRateCard": "Business & Industrial 2.5% (cap USD 225); Collectibles 3% (cap USD 550); Electronics 2% (cap USD 550); Computers/Tablets/Networking 1.5% (cap USD 550); Fashion incl. Health & Beauty and Jewelry & Watches 4% (cap USD 550); Home & Garden incl. Food, Appliances, Baby and Pet Supplies 3% (cap USD 550); Lifestyle incl. Musical Instruments and Sports 3% (cap USD 550); Media 3% (cap USD 550); eBay Motors 4% (cap USD 100); Vehicle Parts & Accessories 3% (cap USD 550); Real Estate 1% (cap USD 100); All Other 4% (cap USD 550). Account-specific Partner Portal terms override the public rate card.",
-      "publicPayout": "Monthly payment of positive balance for prior-month transactions only when account balance exceeds USD 10 or applicable bank fees, whichever is greater. No weekly payout.",
-      "publicAttribution": "Buy It Now: qualifying click within 24 hours before purchase. Auctions: click, bid within 24 hours, win within 10 days; separate Best Offer rules apply.",
-      "apiRequirements": "Browse API requires OAuth client-credentials application token and X-EBAY-C-ENDUSERCTX with a 10-digit affiliateCampaignId to return itemAffiliateWebUrl; marketplace ID required outside US. No campaign ID or OAuth app credentials verified."
+      "publicRateCard": "Current public EPN guidance describes commissions of 1%–6% of item sale price depending on category and eBay site/region; the global rate card is by region and sub-category, with caps and exclusions. The exact account-specific rate must be read in the authenticated Partner Portal.",
+      "publicPayout": "Network Agreement published 2026-09-24: monthly payment for previous-month transactions when positive balance exceeds USD 10 (or equivalent) or applicable bank fees, whichever is greater. A separate public program-update page describes a transition to payment on the 10th for the month before the previous month; payout calendar therefore needs confirmation in the account-specific Partner Portal. No weekly payout is stated.",
+      "publicAttribution": "24-hour cookie with last-click attribution. Buy It Now qualifying purchase within 24 hours; auctions require a bid within 24 hours and win within 10 days; qualifying Best Offer must be submitted within 24 hours.",
+      "apiRequirements": "Browse API affiliate URL requires OAuth application access token and X-EBAY-C-ENDUSERCTX with a 10-digit affiliateCampaignId; affiliateReferenceId is optional. Developer Program credentials are app-specific client_id/client_secret. The Network Agreement separately defines the Buy API Program as requiring an approved EPN Program and a separate agreement. No campaign ID, OAuth app or Buy API approval verified.",
+      "lastCheckedAt": "2026-11-28T00:47:24Z",
+      "publicProgramNote": "The 2027 eBay Partner Program for software/service providers supporting eBay sellers is separate from the EPN affiliate program.",
+      "aiDataRestriction": "The 2026-09-24 Network Agreement prohibits using EPN Data to train, pre-train, fine-tune, adapt, benchmark, test, validate or improve AI systems, and prohibits exposing EPN Data to a foundation model/LLM/generative AI service without EPN prior written approval and a written AI-provider contract prohibiting training, non-transient retention and disclosure, requiring data segregation and prompt deletion.",
+      "publicSources": [
+        "https://partnernetwork.ebay.com/page/network-agreement",
+        "https://partnernetwork.ebay.com/our-program/rate-card",
+        "https://partnernetwork.ebay.com/solutions/step-1-understanding-cookies-commissions-and-getting-paid",
+        "https://developer.ebay.com/api-docs/buy/api-browse.html",
+        "https://developer.ebay.com/develop/guides/sell/authorization",
+        "https://developer.ebay.com/api-docs/static/oauth-token-types.html"
+      ]
     }
   ],
   "lastOperationalAudit": {
