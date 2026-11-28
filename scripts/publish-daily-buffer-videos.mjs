@@ -39,8 +39,41 @@ const existingData=await gql('query { posts(first:100,input:{organizationId:"'+o
 const existing=existingData?.posts?.edges?.map(e=>e.node)||[];
 let release=await gh("/repos/"+owner+"/"+name+"/releases/tags/"+tag).catch(()=>null);
 if(!release)release=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({tag_name:tag,name:"ZOVARO daily social videos "+day,body:"Daily generated ZOVARO social media videos. Public media links for Buffer."})});
+// The advertiser creative is a permanent, versioned release asset. This
+// guarantees that every day's post uses the exact same approved video file.
+let fixedAdvertiserRelease=await gh("/repos/"+owner+"/"+name+"/releases/tags/zovaro-advertisers-fixed-v1").catch(()=>null);
+if(!fixedAdvertiserRelease){
+  fixedAdvertiserRelease=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+    tag_name:"zovaro-advertisers-fixed-v1",
+    name:"ZOVARO fixed advertiser subscription video v1",
+    body:"Permanent approved advertiser creative: US$99/year (12 months paid once) and US$9.99/month. Reused unchanged for every daily publication."
+  })});
+}
+const fixedAssets=await gh("/repos/"+owner+"/"+name+"/releases/"+fixedAdvertiserRelease.id+"/assets");
+let fixedAdvertiserAsset=(fixedAssets||[]).find(asset=>asset.name==="ZOVARO-ADVERTISERS-FIXED.mp4");
 const media=[];
-for(let i=0;i<videos.length;i++){const [label,file,,existingUrl]=videos[i];if(existingUrl){media.push({label,url:existingUrl});continue;}const filename="daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();const bytes=await fs.readFile(file);const r=await fetch("https://uploads.github.com/repos/"+owner+"/"+name+"/releases/"+release.id+"/assets?name="+encodeURIComponent(filename),{method:"POST",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json","Content-Type":"video/mp4"},body:bytes,signal:AbortSignal.timeout(240000)});const asset=await r.json().catch(()=>({}));if(!r.ok)throw new Error("Release upload failed: "+JSON.stringify(asset));media.push({label,url:asset.browser_download_url});}
+for(let i=0;i<videos.length;i++){
+  const [label,file,,existingUrl]=videos[i];
+  if(existingUrl){media.push({label,url:existingUrl});continue;}
+  if(i===3&&fixedAdvertiserAsset){
+    media.push({label,url:fixedAdvertiserAsset.browser_download_url});
+    console.log("REUSING PERMANENT ADVERTISER VIDEO",fixedAdvertiserAsset.id,fixedAdvertiserAsset.browser_download_url);
+    continue;
+  }
+  const uploadRelease=i===3?fixedAdvertiserRelease:release;
+  const filename=i===3?"ZOVARO-ADVERTISERS-FIXED.mp4":"daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();
+  const bytes=await fs.readFile(file);
+  const r=await fetch("https://uploads.github.com/repos/"+owner+"/"+name+"/releases/"+uploadRelease.id+"/assets?name="+encodeURIComponent(filename),{
+    method:"POST",
+    headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json","Content-Type":"video/mp4"},
+    body:bytes,
+    signal:AbortSignal.timeout(240000)
+  });
+  const asset=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error("Release upload failed: "+JSON.stringify(asset));
+  media.push({label,url:asset.browser_download_url});
+  if(i===3)console.log("CREATED PERMANENT ADVERTISER VIDEO",asset.id,asset.browser_download_url);
+}
 const results=[];let failures=0;
 for(const channel of [tt,ig]){
   for(let i=0;i<videos.length;i++){
