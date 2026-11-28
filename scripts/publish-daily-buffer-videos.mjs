@@ -9,7 +9,12 @@ function bogotaDate(offsetDays=0){
   return d.toISOString().slice(0,10);
 }
 const day=bogotaDate().replaceAll("-","");
-const targetDate=bogotaDate(1);
+const localHour = Number(new Intl.DateTimeFormat("en-GB", {
+  timeZone:"America/Bogota", hour:"2-digit", hourCycle:"h23"
+}).format(new Date()));
+// Daily automation runs at 06:00 Colombia: use today's slots. A manual
+// rerun after 08:00 schedules the next complete day's set instead.
+const targetDate = bogotaDate(localHour < 8 ? 0 : 1);
 const slots=["08:00","12:00","17:00","21:00"];
 const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
 const tag="zovaro-social-"+day+"-"+(process.env.GITHUB_RUN_ID||"manual")+"-"+(process.env.GITHUB_RUN_ATTEMPT||"1");
@@ -43,23 +48,25 @@ for(const channel of [tt,ig]){
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
     const dueAt=dueAtFor(slots[i]);
     const expectedMediaUrl=media[i].url;
-    // Never delete or clear an existing Buffer post/queue. If an advertiser
-    // post already occupies this exact slot, preserve it rather than creating
-    // a duplicate or destructively replacing a scheduled publication.
-    if(label.startsWith("ADVERTISERS")){
-      const occupied=existing.find(p=>
-        p.channelId===channel.id &&
-        p.dueAt===dueAt &&
-        (String(p.text||"").toLowerCase().includes("promote your business") ||
-         String(p.text||"").toLowerCase().includes("#advertise"))
-      );
-      if(occupied){
-        console.log("PRESERVED EXISTING ADVERTISER SLOT",channel.name,occupied.id,dueAt);
-        results.push({channel:channel.name,label,status:"existing_slot_preserved",id:occupied.id,dueAt});
-        continue;
-      }
+    // Reuse only an exact match of caption, slot and video. A stale post
+    // occupying the slot is reported as a conflict, never silently retained.
+    const already=existing.find(p=>
+      p.channelId===channel.id && p.text===text && p.dueAt===dueAt &&
+      p.assets?.some(asset=>asset.source===expectedMediaUrl)
+    );
+    if(already){
+      console.log("ALREADY SCHEDULED EXACT MATCH",channel.name,label,already.id,dueAt);
+      results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});
+      continue;
     }
-    const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt&&p.assets?.some(asset=>asset.source===expectedMediaUrl));
+    const occupied=existing.find(p=>p.channelId===channel.id&&p.dueAt===dueAt);
+    if(occupied){
+      failures++;
+      console.error("SLOT CONFLICT — NOT OVERWRITING",channel.name,label,occupied.id,dueAt);
+      results.push({channel:channel.name,label,status:"slot_conflict",id:occupied.id,dueAt});
+      continue;
+    }
+
     if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
     const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
     const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
@@ -79,4 +86,12 @@ for(const channel of [tt,ig]){
 console.log(JSON.stringify({localDate:day,targetDate,timezone:"America/Bogota",slots,release:release.html_url,results},null,2));
 if(failures)process.exitCode=1;
 const scheduled=results.filter(x=>x.status==="scheduled"||x.status==="already_scheduled").length;
-console.log(JSON.stringify({targetDate,timezone:"America/Bogota",channels:[tt.name,ig.name],scheduled,failed:failures,generatedNewVideos:4,reusedAdvertiserVideo:0},null,2));
+console.log(JSON.stringify({
+  targetDate, timezone:"America/Bogota", channels:[tt.name,ig.name],
+  scheduled, failed:failures,
+  dailyCreativeRule:"new SHOP + new JOBS + new LUXURY; same fixed ADVERTISERS creative"
+},null,2));
+if (scheduled !== 8 || results.length !== 8) {
+  console.error("INCOMPLETE DAILY SCHEDULE: expected exactly 8 confirmed Buffer posts.");
+  process.exitCode = 1;
+}
