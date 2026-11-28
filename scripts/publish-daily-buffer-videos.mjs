@@ -9,7 +9,12 @@ function bogotaDate(offsetDays=0){
   return d.toISOString().slice(0,10);
 }
 const day=bogotaDate().replaceAll("-","");
-const targetDate=bogotaDate(1);
+const localHour = Number(new Intl.DateTimeFormat("en-GB", {
+  timeZone:"America/Bogota", hour:"2-digit", hourCycle:"h23"
+}).format(new Date()));
+// Daily automation runs at 06:00 Colombia: use today's slots. A manual
+// rerun after 08:00 schedules the next complete day's set instead.
+const targetDate = bogotaDate(localHour < 8 ? 0 : 1);
 const slots=["08:00","12:00","17:00","21:00"];
 const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
 const tag="zovaro-social-"+day+"-"+(process.env.GITHUB_RUN_ID||"manual")+"-"+(process.env.GITHUB_RUN_ATTEMPT||"1");
@@ -34,8 +39,41 @@ const existingData=await gql('query { posts(first:100,input:{organizationId:"'+o
 const existing=existingData?.posts?.edges?.map(e=>e.node)||[];
 let release=await gh("/repos/"+owner+"/"+name+"/releases/tags/"+tag).catch(()=>null);
 if(!release)release=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({tag_name:tag,name:"ZOVARO daily social videos "+day,body:"Daily generated ZOVARO social media videos. Public media links for Buffer."})});
+// The advertiser creative is a permanent, versioned release asset. This
+// guarantees that every day's post uses the exact same approved video file.
+let fixedAdvertiserRelease=await gh("/repos/"+owner+"/"+name+"/releases/tags/zovaro-advertisers-fixed-v1").catch(()=>null);
+if(!fixedAdvertiserRelease){
+  fixedAdvertiserRelease=await gh("/repos/"+owner+"/"+name+"/releases",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+    tag_name:"zovaro-advertisers-fixed-v1",
+    name:"ZOVARO fixed advertiser subscription video v1",
+    body:"Permanent approved advertiser creative: US$99/year (12 months paid once) and US$9.99/month. Reused unchanged for every daily publication."
+  })});
+}
+const fixedAssets=await gh("/repos/"+owner+"/"+name+"/releases/"+fixedAdvertiserRelease.id+"/assets");
+let fixedAdvertiserAsset=(fixedAssets||[]).find(asset=>asset.name==="ZOVARO-ADVERTISERS-FIXED.mp4");
 const media=[];
-for(let i=0;i<videos.length;i++){const [label,file,,existingUrl]=videos[i];if(existingUrl){media.push({label,url:existingUrl});continue;}const filename="daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();const bytes=await fs.readFile(file);const r=await fetch("https://uploads.github.com/repos/"+owner+"/"+name+"/releases/"+release.id+"/assets?name="+encodeURIComponent(filename),{method:"POST",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json","Content-Type":"video/mp4"},body:bytes,signal:AbortSignal.timeout(240000)});const asset=await r.json().catch(()=>({}));if(!r.ok)throw new Error("Release upload failed: "+JSON.stringify(asset));media.push({label,url:asset.browser_download_url});}
+for(let i=0;i<videos.length;i++){
+  const [label,file,,existingUrl]=videos[i];
+  if(existingUrl){media.push({label,url:existingUrl});continue;}
+  if(i===3&&fixedAdvertiserAsset){
+    media.push({label,url:fixedAdvertiserAsset.browser_download_url});
+    console.log("REUSING PERMANENT ADVERTISER VIDEO",fixedAdvertiserAsset.id,fixedAdvertiserAsset.browser_download_url);
+    continue;
+  }
+  const uploadRelease=i===3?fixedAdvertiserRelease:release;
+  const filename=i===3?"ZOVARO-ADVERTISERS-FIXED.mp4":"daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();
+  const bytes=await fs.readFile(file);
+  const r=await fetch("https://uploads.github.com/repos/"+owner+"/"+name+"/releases/"+uploadRelease.id+"/assets?name="+encodeURIComponent(filename),{
+    method:"POST",
+    headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json","Content-Type":"video/mp4"},
+    body:bytes,
+    signal:AbortSignal.timeout(240000)
+  });
+  const asset=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error("Release upload failed: "+JSON.stringify(asset));
+  media.push({label,url:asset.browser_download_url});
+  if(i===3)console.log("CREATED PERMANENT ADVERTISER VIDEO",asset.id,asset.browser_download_url);
+}
 const results=[];let failures=0;
 for(const channel of [tt,ig]){
   for(let i=0;i<videos.length;i++){
@@ -43,24 +81,25 @@ for(const channel of [tt,ig]){
     const text=channel.service.toLowerCase()==="tiktok"?caption.slice(0,150):caption;
     const dueAt=dueAtFor(slots[i]);
     const expectedMediaUrl=media[i].url;
-    // Never delete or clear an existing Buffer post/queue. If an advertiser
-    // post already occupies this exact slot, preserve it rather than creating
-    // a duplicate or destructively replacing a scheduled publication.
-    if(label.startsWith("ADVERTISERS")){
-      const occupied=existing.find(p=>
-        p.channelId===channel.id &&
-        p.dueAt===dueAt &&
-        (String(p.text||"").toLowerCase().includes("promote your business") ||
-         String(p.text||"").toLowerCase().includes("#advertise"))
-      );
-      if(occupied){
-        console.log("PRESERVED EXISTING ADVERTISER SLOT",channel.name,occupied.id,dueAt);
-        results.push({channel:channel.name,label,status:"existing_slot_preserved",id:occupied.id,dueAt});
-        continue;
-      }
+    // Reuse only an exact match of caption, slot and video. A stale post
+    // occupying the slot is reported as a conflict, never silently retained.
+    const already=existing.find(p=>
+      p.channelId===channel.id && p.text===text && p.dueAt===dueAt &&
+      p.assets?.some(asset=>asset.source===expectedMediaUrl)
+    );
+    if(already){
+      console.log("ALREADY SCHEDULED EXACT MATCH",channel.name,label,already.id,dueAt);
+      results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});
+      continue;
     }
-    const already=existing.find(p=>p.channelId===channel.id&&p.text===text&&p.dueAt===dueAt&&p.assets?.some(asset=>asset.source===expectedMediaUrl));
-    if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
+    const occupied=existing.find(p=>p.channelId===channel.id&&p.dueAt===dueAt);
+    if(occupied){
+      failures++;
+      console.error("SLOT CONFLICT — NOT OVERWRITING",channel.name,label,occupied.id,dueAt);
+      results.push({channel:channel.name,label,status:"slot_conflict",id:occupied.id,dueAt});
+      continue;
+    }
+
     const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
     const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
     try{
@@ -79,4 +118,12 @@ for(const channel of [tt,ig]){
 console.log(JSON.stringify({localDate:day,targetDate,timezone:"America/Bogota",slots,release:release.html_url,results},null,2));
 if(failures)process.exitCode=1;
 const scheduled=results.filter(x=>x.status==="scheduled"||x.status==="already_scheduled").length;
-console.log(JSON.stringify({targetDate,timezone:"America/Bogota",channels:[tt.name,ig.name],scheduled,failed:failures,generatedNewVideos:4,reusedAdvertiserVideo:0},null,2));
+console.log(JSON.stringify({
+  targetDate, timezone:"America/Bogota", channels:[tt.name,ig.name],
+  scheduled, failed:failures,
+  dailyCreativeRule:"new SHOP + new JOBS + new LUXURY; same fixed ADVERTISERS creative"
+},null,2));
+if (scheduled !== 8 || results.length !== 8) {
+  console.error("INCOMPLETE DAILY SCHEDULE: expected exactly 8 confirmed Buffer posts.");
+  process.exitCode = 1;
+}
