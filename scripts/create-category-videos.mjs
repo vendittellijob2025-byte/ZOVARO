@@ -167,7 +167,7 @@ const luxuryScenes=[
 ];
 
 const results=[];
-const jobVideoNames=["ZOVARO-JOBS-DAILY","ZOVARO-REMOTE-CAREERS","ZOVARO-INDUSTRY-CAREERS"];
+const jobVideoNames=["ZOVARO-JOBS-DAILY"];
 for (let index=0; index<jobVideoNames.length; index++) {
   const job=selectedJobs[index];
   results.push(await makeVideo({
@@ -200,12 +200,12 @@ results.push(await makeVideo({
   music:MUSIC_DEFAULT,
   scenes:[
     {title:"ADVERTISE ON ZOVARO",subtitle:"Promote your business worldwide."},
-    {title:"US$9.99 / MONTH",subtitle:"Monthly advertising plan."},
-    {title:"US$99 / YEAR",subtitle:"One payment for 12 months."}
+    {title:"US$99 / YEAR",subtitle:"One payment for 12 months."},
+    {title:"US$9.99 / MONTH",subtitle:"Monthly advertising plan."}
   ],
-  caption:"Promote your business, products or services worldwide on ZOVARO. US$9.99 per month or US$99 for 12 months paid once. Contact ZOVARO for details: https://zovaro.vercel.app/",
+  caption:"Promote your business, products or services worldwide on ZOVARO. US$99 per year (12 months paid once) or US$9.99 per month. Contact ZOVARO for details: https://zovaro.vercel.app/",
   hashtags:["#ZOVARO","#Advertise","#BusinessPromotion","#GlobalVisibility"],
-  footer:"US$9.99 / MONTH  ·  US$99 / YEAR"
+  footer:"US$99 / YEAR  ·  US$9.99 / MONTH"
 }));
 
 await fs.rm(temp,{recursive:true,force:true});
