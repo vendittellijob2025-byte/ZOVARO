@@ -67,7 +67,6 @@ for(const channel of [tt,ig]){
       continue;
     }
 
-    if(already){console.log("ALREADY SCHEDULED",channel.name,label,already.id,dueAt);results.push({channel:channel.name,label,status:"already_scheduled",id:already.id,dueAt});continue;}
     const instagramMetadata=channel.service.toLowerCase()==="instagram"?",metadata:{instagram:{type:reel,shouldShareToFeed:true}}":"";
     const query="mutation { createPost(input:{text:"+JSON.stringify(text)+",channelId:"+JSON.stringify(channel.id)+",schedulingType:automatic,mode:customScheduled,dueAt:"+JSON.stringify(dueAt)+instagramMetadata+",assets:[{video:{url:"+JSON.stringify(media[i].url)+",metadata:{thumbnailOffset:2000}}}]}) { ... on PostActionSuccess { post { id dueAt } } ... on MutationError { message } } }";
     try{
