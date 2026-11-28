@@ -6,7 +6,6 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/daily-social-publishing.yml"
       - "scripts/create-category-videos.mjs"
       - "scripts/select-product.mjs"
       - "scripts/publish-daily-buffer-videos.mjs"
