@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/workflows/daily-social-publishing.yml"
       - "scripts/create-category-videos.mjs"
+      - "scripts/select-product.mjs"
       - "scripts/publish-daily-buffer-videos.mjs"
   schedule:
     - cron: "0 11 * * *"
@@ -33,7 +34,7 @@ jobs:
       - name: Install FFmpeg
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          sudo apt-get install -y ffmpeg fonts-dejavu-core tesseract-ocr
       - name: Generate one SHOP video
         run: |
           node scripts/select-product.mjs
@@ -44,19 +45,39 @@ jobs:
           SELECTED_PRODUCTS_PATH=".zovaro-shop-batches/products-1.json" VIDEO_OUTPUT_PATH="data/tiktok-video.mp4" node scripts/create-tiktok-video.mjs
       - name: Generate JOB, LUXURY and ADVERTISERS videos
         run: node scripts/create-category-videos.mjs zovaro-social-videos
-      - name: Verify four publishable daily videos
+      - name: Verify four daily creatives and advertiser prices
         run: |
-          test -s data/tiktok-video.mp4
-          test -s zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
-          test -s zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4
-          test -s zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4
-          for FILE in data/tiktok-video.mp4 zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4 zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4 zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4; do
+          set -euo pipefail
+          SHOP=data/tiktok-video.mp4
+          JOBS=zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4
+          LUXURY=zovaro-social-videos/ZOVARO-LUXURY-DAILY.mp4
+          ADS=zovaro-social-videos/ZOVARO-ADVERTISERS-DAILY.mp4
+          for FILE in "$SHOP" "$JOBS" "$LUXURY" "$ADS"; do
             test -s "$FILE"
-            ffprobe -v error -show_entries format=duration -of csv=p=0 "$FILE"
+            DURATION=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$FILE")
+            awk -v d="$DURATION" 'BEGIN { if (d < 38 || d > 42) exit 1 }'
           done
-      - name: Publish four videos to Buffer queues
+          CORE_HASHES=$(sha256sum "$SHOP" "$JOBS" "$LUXURY" | awk '{print $1}' | sort -u | wc -l)
+          test "$CORE_HASHES" -eq 3
+          ffmpeg -y -ss 16 -i "$ADS" -frames:v 1 /tmp/zovaro-annual.png -loglevel error
+          ffmpeg -y -ss 28 -i "$ADS" -frames:v 1 /tmp/zovaro-monthly.png -loglevel error
+          tesseract /tmp/zovaro-annual.png stdout 2>/dev/null | tr '[:lower:]' '[:upper:]' > /tmp/zovaro-annual.txt
+          tesseract /tmp/zovaro-monthly.png stdout 2>/dev/null | tr '[:lower:]' '[:upper:]' > /tmp/zovaro-monthly.txt
+          grep -Eq '99.*YEAR|YEAR.*99' /tmp/zovaro-annual.txt
+          grep -Eq '9[.,]99.*MONTH|MONTH.*9[.,]99' /tmp/zovaro-monthly.txt
+          echo "PASS: 3 distinct daily category videos; advertiser video displays US$99/year then US$9.99/month."
+      - name: Publish exactly eight posts to Buffer
         env:
           BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/publish-daily-buffer-videos.mjs
+      - name: Save successful SHOP product rotation history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/social-product-history.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: record daily ZOVARO product rotation"
+            git push
+          fi
