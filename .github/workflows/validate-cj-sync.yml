@@ -61,6 +61,13 @@ on:
     branches:
       - main
     paths:
+      - "lib/product-category.js"
+      - "scripts/test-product-category.mjs"
+      - "scripts/validate-product-category-rules.mjs"
+      - "scripts/reclassify-catalog-categories.mjs"
+      - "scripts/audit-category-quality.mjs"
+      - "lib/category-taxonomy.js"
+      - "data/category-tree.json"
       - "scripts/sync-cj-advertisers.mjs"
       - "scripts/translate-to-english.mjs"
       - "scripts/create-tiktok-video.mjs"
