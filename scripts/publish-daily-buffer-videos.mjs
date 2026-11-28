@@ -17,7 +17,7 @@ const localHour = Number(new Intl.DateTimeFormat("en-GB", {
 const targetDate = bogotaDate(localHour < 8 ? 0 : 1);
 const slots=["08:00","12:00","17:00","21:00"];
 const dueAtFor=(time)=>new Date(targetDate+"T"+time+":00-05:00").toISOString();
-const tag="zovaro-social-"+day+"-"+(process.env.GITHUB_RUN_ID||"manual")+"-"+(process.env.GITHUB_RUN_ATTEMPT||"1");
+const tag="zovaro-social-"+day;
 const videos=[
 ["SHOP · Daily discoveries","data/tiktok-video.mp4","Discover today's products and offers on ZOVARO Worldwide. https://zovaro.vercel.app/ #ZOVARO #Shopping"],
 ["JOBS · Daily opportunities","zovaro-social-videos/ZOVARO-JOBS-DAILY.mp4","Explore employer-published job openings on ZOVARO JOBS. https://zovaro.vercel.app/?view=jobs #ZOVARO #Jobs"],
@@ -51,10 +51,20 @@ if(!fixedAdvertiserRelease){
 }
 const fixedAssets=await gh("/repos/"+owner+"/"+name+"/releases/"+fixedAdvertiserRelease.id+"/assets");
 let fixedAdvertiserAsset=(fixedAssets||[]).find(asset=>asset.name==="ZOVARO-ADVERTISERS-FIXED.mp4");
+const dailyAssets=await gh("/repos/"+owner+"/"+name+"/releases/"+release.id+"/assets");
 const media=[];
 for(let i=0;i<videos.length;i++){
   const [label,file,,existingUrl]=videos[i];
   if(existingUrl){media.push({label,url:existingUrl});continue;}
+  if(i<3){
+    const dailyFilename="daily-"+String(i+1).padStart(2,"0")+"-"+file.split("/").pop();
+    const previousAsset=(dailyAssets||[]).find(asset=>asset.name===dailyFilename);
+    if(previousAsset){
+      media.push({label,url:previousAsset.browser_download_url});
+      console.log("REUSING SAME-DAY VIDEO ASSET",label,previousAsset.id);
+      continue;
+    }
+  }
   if(i===3&&fixedAdvertiserAsset){
     media.push({label,url:fixedAdvertiserAsset.browser_download_url});
     console.log("REUSING PERMANENT ADVERTISER VIDEO",fixedAdvertiserAsset.id,fixedAdvertiserAsset.browser_download_url);
