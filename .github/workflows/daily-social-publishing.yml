@@ -2,6 +2,13 @@ name: ZOVARO - Generate 4 and publish 4 daily social videos
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/create-category-videos.mjs"
+      - "scripts/select-product.mjs"
+      - "scripts/publish-daily-buffer-videos.mjs"
   schedule:
     - cron: "0 11 * * *"
 
@@ -57,7 +64,7 @@ jobs:
           tesseract /tmp/zovaro-monthly.png stdout 2>/dev/null | tr '[:lower:]' '[:upper:]' > /tmp/zovaro-monthly.txt
           grep -Eq '99.*YEAR|YEAR.*99' /tmp/zovaro-annual.txt
           grep -Eq '9[.,]99.*MONTH|MONTH.*9[.,]99' /tmp/zovaro-monthly.txt
-          echo "PASS: 3 distinct daily category videos; advertiser video displays US$99/year then US$9.99/month."
+          echo "PASS: 3 distinct daily category videos; advertiser video displays US\\$99/year then US\\$9.99/month."
       - name: Publish exactly eight posts to Buffer
         env:
           BUFFER_API_TOKEN: ${{ secrets.BUFFER_API_TOKEN }}
