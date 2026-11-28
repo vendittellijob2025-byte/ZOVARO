@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-27T21:15:50.536Z",
+  "generatedAt": "2026-11-28T07:44:25.432Z",
   "selectedProductCount": 21052,
-  "inventoryProductCount": 200154,
+  "inventoryProductCount": 199941,
   "uniqueAdvertiserCount": 25,
   "categories": [
     {
@@ -1831,8 +1831,8 @@
     },
     {
       "name": "Beauty",
-      "productCount": 1847,
-      "unclassifiedProductCount": 539,
+      "productCount": 1823,
+      "unclassifiedProductCount": 516,
       "browseTree": [
         {
           "name": "Beauty Accessories & Tools",
@@ -1866,8 +1866,8 @@
         {
           "name": "Bath & Body",
           "path": "Bath & Body",
-          "productCount": 39,
-          "directProductCount": 38,
+          "productCount": 47,
+          "directProductCount": 46,
           "children": [
             {
               "name": "Body Wash & Shower Gel",
@@ -2072,8 +2072,8 @@
         {
           "name": "Fragrances & Perfumes",
           "path": "Fragrances & Perfumes",
-          "productCount": 596,
-          "directProductCount": 596,
+          "productCount": 587,
+          "directProductCount": 587,
           "children": [
             {
               "name": "Women's Fragrance",
@@ -2641,7 +2641,7 @@
     {
       "name": "Electronics",
       "productCount": 436,
-      "unclassifiedProductCount": 59,
+      "unclassifiedProductCount": 60,
       "browseTree": [
         {
           "name": "Phones & Tablets",
@@ -2824,7 +2824,7 @@
         {
           "name": "Computers",
           "path": "Computers",
-          "productCount": 55,
+          "productCount": 54,
           "directProductCount": 24,
           "children": [
             {
@@ -2966,7 +2966,7 @@
             {
               "name": "Computer Components",
               "path": "Computers > Computer Components",
-              "productCount": 11,
+              "productCount": 10,
               "directProductCount": 0,
               "children": [
                 {
@@ -3000,8 +3000,8 @@
                 {
                   "name": "SSD & Hard Drives",
                   "path": "Computers > Computer Components > SSD & Hard Drives",
-                  "productCount": 6,
-                  "directProductCount": 6,
+                  "productCount": 5,
+                  "directProductCount": 5,
                   "children": []
                 },
                 {
@@ -3726,13 +3726,13 @@
           "name": "Shoes",
           "path": "Shoes",
           "productCount": 986,
-          "directProductCount": 65,
+          "directProductCount": 62,
           "children": [
             {
               "name": "Sneakers",
               "path": "Shoes > Sneakers",
-              "productCount": 317,
-              "directProductCount": 317,
+              "productCount": 315,
+              "directProductCount": 315,
               "children": []
             },
             {
@@ -3787,8 +3787,8 @@
             {
               "name": "Kids' Shoes",
               "path": "Shoes > Kids' Shoes",
-              "productCount": 13,
-              "directProductCount": 13,
+              "productCount": 18,
+              "directProductCount": 18,
               "children": []
             }
           ]
@@ -5984,13 +5984,13 @@
     {
       "name": "Industrial & Scientific",
       "productCount": 1800,
-      "unclassifiedProductCount": 1156,
+      "unclassifiedProductCount": 1154,
       "browseTree": [
         {
           "name": "Industrial Machinery",
           "path": "Industrial Machinery",
-          "productCount": 234,
-          "directProductCount": 234,
+          "productCount": 231,
+          "directProductCount": 231,
           "children": [
             {
               "name": "Manufacturing Equipment",
@@ -6147,7 +6147,7 @@
         {
           "name": "3D Printing & Additive Manufacturing",
           "path": "3D Printing & Additive Manufacturing",
-          "productCount": 409,
+          "productCount": 414,
           "directProductCount": 0,
           "children": [
             {
@@ -6167,22 +6167,22 @@
             {
               "name": "Laser Engraving Equipment",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-              "productCount": 30,
-              "directProductCount": 30,
+              "productCount": 32,
+              "directProductCount": 32,
               "children": []
             },
             {
               "name": "3D Printer Accessories",
               "path": "3D Printing & Additive Manufacturing > 3D Printer Accessories",
-              "productCount": 114,
-              "directProductCount": 114,
+              "productCount": 116,
+              "directProductCount": 116,
               "children": []
             },
             {
               "name": "Laser Engraving Materials",
               "path": "3D Printing & Additive Manufacturing > Laser Engraving Materials",
-              "productCount": 11,
-              "directProductCount": 11,
+              "productCount": 12,
+              "directProductCount": 12,
               "children": []
             }
           ]
@@ -10855,11 +10855,11 @@
     "Food Delivery & Restaurant Orders",
     "Real Estate"
   ],
-  "otherProductCount": 1785,
+  "otherProductCount": 1809,
   "unknownCategories": [
     {
       "name": "Other",
-      "count": 1785
+      "count": 1809
     }
   ],
   "categoryQuality": {
@@ -10872,11 +10872,11 @@
     "unclassifiedByCategory": [
       {
         "category": "Industrial & Scientific",
-        "count": 1156
+        "count": 1154
       },
       {
         "category": "Beauty",
-        "count": 539
+        "count": 516
       },
       {
         "category": "Books & Media",
@@ -10912,7 +10912,7 @@
       },
       {
         "category": "Electronics",
-        "count": 59
+        "count": 60
       },
       {
         "category": "Food & Grocery",
@@ -10975,7 +10975,7 @@
       },
       {
         "path": "Beauty > Fragrances & Perfumes",
-        "productCount": 596
+        "productCount": 587
       },
       {
         "path": "Home & Living > Home Décor",
@@ -10990,12 +10990,12 @@
         "productCount": 328
       },
       {
-        "path": "Fashion > Shoes > Sneakers",
-        "productCount": 317
-      },
-      {
         "path": "Fashion > Accessories > Wigs & Hair Extensions",
         "productCount": 316
+      },
+      {
+        "path": "Fashion > Shoes > Sneakers",
+        "productCount": 315
       },
       {
         "path": "Sports > Padel",
@@ -11023,7 +11023,7 @@
       },
       {
         "path": "Industrial & Scientific > Industrial Machinery",
-        "productCount": 234
+        "productCount": 231
       },
       {
         "path": "Sports > Sports Apparel > Sports Footwear",
@@ -11075,7 +11075,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > 3D Printer Accessories",
-        "productCount": 114
+        "productCount": 116
       },
       {
         "path": "Accessible & Adaptive Living > Mobility & Independence",
@@ -11147,7 +11147,7 @@
       },
       {
         "path": "Fashion > Shoes",
-        "productCount": 65
+        "productCount": 62
       },
       {
         "path": "Pets > Cats",
@@ -11186,6 +11186,10 @@
         "productCount": 48
       },
       {
+        "path": "Beauty > Bath & Body",
+        "productCount": 46
+      },
+      {
         "path": "Travel > Maps & Guides > Wall Maps",
         "productCount": 46
       },
@@ -11218,10 +11222,6 @@
         "productCount": 39
       },
       {
-        "path": "Beauty > Bath & Body",
-        "productCount": 38
-      },
-      {
         "path": "Beauty > Skincare",
         "productCount": 38
       },
@@ -11247,7 +11247,7 @@
       },
       {
         "path": "Industrial & Scientific > 3D Printing & Additive Manufacturing > Laser Engraving Equipment",
-        "productCount": 30
+        "productCount": 32
       },
       {
         "path": "Fashion > Clothing > Jeans & Trousers",
@@ -11326,6 +11326,10 @@
         "productCount": 21
       },
       {
+        "path": "Fashion > Shoes > Kids' Shoes",
+        "productCount": 18
+      },
+      {
         "path": "Health & Wellness > Home Cleaning & Care > Disinfectants",
         "productCount": 18
       },
@@ -11348,20 +11352,16 @@
       {
         "path": "Electronics > Wearable Technology > Wearable Accessories",
         "productCount": 16
-      },
-      {
-        "path": "Security & Safety > Home & Business Security > Access Control",
-        "productCount": 16
       }
     ],
     "otherByAdvertiser": [
       {
         "advertiser": "Allegro.pl",
-        "productCount": 966
+        "productCount": 979
       },
       {
         "advertiser": "Sobelia",
-        "productCount": 607
+        "productCount": 618
       },
       {
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -11397,6 +11397,15 @@
       }
     ],
     "otherExamples": [
+      {
+        "title": "Cool Water Game - Davidoff Desodorante 75 ml",
+        "brand": "Davidoff",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Davidoff Cool Water Game y mucho más en Sobelia"
+      },
       {
         "title": "Rexing Installation Service",
         "brand": "Rexing",
@@ -11458,7 +11467,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 100 ML: Elizabeth Taylor White Diamonds - Elizabeth Taylor brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 100 ML : Elizabeth Taylor White Diamonds - Perfumes y colonias para mujer de marca Elizabeth Taylor y mucho más en Sobelia"
       },
       {
         "title": "Rexing Installation Service",
@@ -11521,7 +11530,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 50 ml: Narciso Rodriguez For Her - Narciso Rodriguez brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 50 ml : Narciso Rodriguez For Her - Perfumes y colonias para mujer de marca Narciso Rodriguez y mucho más en Sobelia"
       },
       {
         "title": "Rexing Installation Service",
@@ -11575,7 +11584,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 200 ml: Christina Aguilera Inspire and much more at Sobelia"
+        "description": "Aceite, loción y crema corporales 200 ml : Christina Aguilera Inspire y mucho más en Sobelia"
       },
       {
         "title": "Ecosmetics Gift Card - $100",
@@ -11602,7 +11611,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>G-scale model curve track with a radius of 1.24 meters and a width of 45 mm by PIKO No. G-R1</p><p>35215.</p>"
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,24metra i szerokości 45mm firmy PIKO Nr G-R1</p><p>35215.</p>"
       },
       {
         "title": "PowerConf S3 Speakerphone",
@@ -11647,7 +11656,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>G scale model curve track with a radius of 1.565m and a width of 45mm by PIKO No. G-R7 35217.</p>"
+        "description": "<p>Modelowy tor łukowy w skali G o promieniu 1,565m i szerokości 45mm firmy PIKO Nr G-R7 35217.</p>"
       },
       {
         "title": "Jo Malone - Jo Malone Gift Boxes 60 ml",
@@ -11656,7 +11665,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 60 ml: Jo Malone Jo Malone - Jo Malone brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 60 ml : Jo Malone Jo Malone - Perfumes y colonias para mujer de marca Jo Malone y mucho más en Sobelia"
       },
       {
         "title": "[US Only] $10 OFF Coupon (No-threshold and valid in 30 days)",
@@ -11674,7 +11683,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Fresh water 75 ML : Issey Miyake L'Eau Bleue d'Issey Pour Homme - Perfumes and colognes for men from the Issey Miyake brand and much more at Sobelia"
+        "description": "Agua dulce 75 ML : Issey Miyake L'Eau Bleue d'Issey Pour Homme - Perfumes y colonias para hombre de marca Issey Miyake y mucho más en Sobelia"
       },
       {
         "title": "[US Only] $30 OFF Coupon (over $50 and valid in 30 days)",
@@ -11692,7 +11701,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 100 ML: Jessica Simpson Fancy - Perfumes and colognes for women from the Jessica Simpson brand and much more at Sobelia"
+        "description": "Cajas de regalo 100 ML : Jessica Simpson Fancy - Perfumes y colonias para mujer de marca Jessica Simpson y mucho más en Sobelia"
       },
       {
         "title": "Best Seller [Value $315 Gift Card] UNice Women's Day Special Offer",
@@ -11719,7 +11728,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 125 ml: Jean Paul Gaultier Le Male - Jean Paul Gaultier brand perfumes and colognes for men and much more at Sobelia"
+        "description": "Cajas de regalo 125 ml : Jean Paul Gaultier Le Male - Perfumes y colonias para hombre de marca Jean Paul Gaultier y mucho más en Sobelia"
       },
       {
         "title": "[Value $635 Gift Card] UNice Women's Day Special Offer",
@@ -11764,7 +11773,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 100 ML: Britney Spears Fantasy - Britney Spears brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 100 ML : Britney Spears Fantasy - Perfumes y colonias para mujer de marca Britney Spears y mucho más en Sobelia"
       },
       {
         "title": "[Value $210 Gift Card] UNice Women's Day Special Offer",
@@ -11809,7 +11818,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 95 ml: Versace Bright Crystal - Versace brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 95 ml : Versace Bright Crystal - Perfumes y colonias para mujer de marca Versace y mucho más en Sobelia"
       },
       {
         "title": "[Value $103 Gift Card] UNice Women's Day Special Offer",
@@ -11837,6 +11846,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<p>17 lipca 1996 roku o godzinie 20.31 boeing 747 linii TWA runął do oceanu u wybrzeży Long Island. Zginęło 230 osób. Jako oficjalną przyczynę katastrofy podano przypadkową eksploz"
+      },
+      {
+        "title": "Ck Be - Calvin Klein Desodorante 75 g",
+        "brand": "Calvin Klein",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 g : Calvin Klein Ck Be y mucho más en Sobelia"
       },
       {
         "title": "[Value $525 Gift Card] UNice Women's Day Special Offer",
@@ -11873,6 +11891,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "A vegan, sea salt scaler that gently exfoliates the scalp, leaving it feeling squeaky clean."
+      },
+      {
+        "title": "Eau Sauvage Savon - Christian Dior Jabón 150 g",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Jabón 150 g : Christian Dior Eau Sauvage Savon y mucho más en Sobelia"
       },
       {
         "title": "[Value $740 Gift Card] UNice Women's Day Special Offer",
@@ -11917,7 +11944,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Angel Celestial Veils"
+        "description": "Angel Voile celeste"
       },
       {
         "title": "[Value $950 Gift Card] UNice Women's Day Special Offer",
@@ -11962,7 +11989,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 200 ml: Chloé Chloé and much more at Sobelia"
+        "description": "Aceite, loción y crema corporales 200 ml : Chloé Chloé y mucho más en Sobelia"
       },
       {
         "title": "[Value $1100 Gift Card] UNice Women's Day Special Offer",
@@ -12007,7 +12034,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Bath oil 60 ml: Estée Lauder Youth Dew and much more at Sobelia"
+        "description": "Aceite de baño 60 ml : Estée Lauder Youth Dew y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12043,7 +12070,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 200 ML: Calvin Klein Ck One and much more at Sobelia"
+        "description": "Cajas de regalo 200 ML : Calvin Klein Ck One y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12079,7 +12106,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 100 ml: Liz Claiborne Mambo Mix - Perfumes and colognes for women from the Liz Claiborne brand and much more at Sobelia"
+        "description": "Cajas de regalo 100 ml : Liz Claiborne Mambo Mix - Perfumes y colonias para mujer de marca Liz Claiborne y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12115,7 +12142,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Powder and talcum powder 200 g: Estée Lauder Youth Dew and much more at Sobelia"
+        "description": "Polvo y talco 200 g : Estée Lauder Youth Dew y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12151,7 +12178,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 15 ML: Calvin Klein Calvin Klein Man Variety - Calvin Klein brand perfumes and colognes for men and much more at Sobelia"
+        "description": "Cajas de regalo 15 ML : Calvin Klein Calvin Klein Man Variety - Perfumes y colonias para hombre de marca Calvin Klein y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12178,7 +12205,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Skin-smoothing cream&nbsp;for seamlessly radiant skin"
+        "description": "Skin-smoothing cream for seamlessly radiant skin"
       },
       {
         "title": "Classique - Jean Paul Gaultier Body oil, lotion and cream 200 ml",
@@ -12187,7 +12214,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 200 ml: Jean Paul Gaultier Classique and much more at Sobelia"
+        "description": "Aceite, loción y crema corporales 200 ml : Jean Paul Gaultier Classique y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12215,6 +12242,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Curl cream that create a wavy hairstyle with natural and gorgeous ridges with a light finish.\r\nNatural Wavy Hair , Anti-Frizz,  Heat Protection curl cream. Enhancing hair elasticit"
+      },
+      {
+        "title": "Aromatics Elixir - Clinique Foaming Body Gel 200 ml",
+        "brand": "Clinique",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Gel corporal espumoso 200 ml : Clinique Aromatics Elixir y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12250,7 +12286,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 200 ml : Clinique Aromatics Elixir Baume douceur pour le corps and much more at Sobelia"
+        "description": "Aceite, loción y crema corporales 200 ml : Clinique Aromatics Elixir Baume douceur pour le corps y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12280,6 +12316,15 @@
         "description": "It's a daily item that's perfect for oily skin without worrying about powder flying"
       },
       {
+        "title": "Cashmere Mist - Donna Karan Deodorante 50 g",
+        "brand": "Donna Karan",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 50 g : Donna Karan Cashmere Mist y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12305,6 +12350,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Professional 2-step peeling pad offering instant glow and smoothness to the skin."
+      },
+      {
+        "title": "Dior Homme - Christian Dior Desodorante 150 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 150 ml : Christian Dior Dior Homme y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12334,6 +12388,15 @@
         "description": "Ampoule containing retinol and cica takes care of dead skin cells, pores, and blemishes from the beginning of the skin trouble"
       },
       {
+        "title": "Eau Sauvage - Christian Dior Desodorante 150 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 150 ml : Christian Dior Eau Sauvage y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12350,6 +12413,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Wycinak ręczny fi 22,5 (kompletny, w kasecie)&nbsp;WO_22,5-K-K8&nbsp;firmy Erko</h1>\n\n<h2>Średnica otworu: 22,5 mm.</h2>\n\n<h2>W skład zestawu wchodzi:</h2>\n\n<ul>\n\t<li>pokrętło<"
+      },
+      {
+        "title": "Eau Sauvage - Christian Dior Desodorante 75 ml",
+        "brand": "Christian Dior",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Christian Dior Eau Sauvage y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12379,6 +12451,15 @@
         "description": "Enjoy 10 effects of salon care in just 10 seconds! \r\nSalon10's exclusive Hair Nourishing Protein Complex with 30,000 ppm, silky smooth hair in 10 seconds."
       },
       {
+        "title": "Le Male - Jean Paul Gaultier Desodorante 75 ml",
+        "brand": "Jean Paul Gaultier",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Jean Paul Gaultier Le Male y mucho más en Sobelia"
+      },
+      {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
         "brand": "DREAM PAIRS",
         "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
@@ -12394,7 +12475,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "<p>Sponge filter designed for Loewenstein CPAP machines from the Prisma series. The package contains 2 filters.</p>"
+        "description": "<p>Filtr gąbkowy przeznaczony do aparatów CPAP marki Loewenstein z serii Prisma. Opakowanie zawiera 2 filtry.</p>"
       },
       {
         "title": "INNISFREE Black tea treatment essence 75ML",
@@ -12404,6 +12485,15 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "Skin texture that is smoother due to the effect of turning over dead skin cells, which improves dull and rough skin texture due to tired skin conditions and accumulated dead skin c"
+      },
+      {
+        "title": "Yep! Men - Yep! Deodorants 75 ml",
+        "brand": "Joop!",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Desodorante 75 ml : Joop! Joop! Homme y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12439,7 +12529,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Land of Hermes"
+        "description": "Terre d'Hermès"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12475,7 +12565,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 150 ml: Lacoste Love Of Pink and much more at Sobelia"
+        "description": "Aceite, loción y crema corporales 150 ml : Lacoste Love Of Pink y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12529,7 +12619,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 44 ML: Davidoff Cool Water - Davidoff brand perfumes and colognes for men and much more at Sobelia"
+        "description": "Cajas de regalo 44 ML : Davidoff Cool Water - Perfumes y colonias para hombre de marca Davidoff y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12583,7 +12673,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 8 ML: Versace Versace Pour Homme - Versace brand perfumes and colognes for men and much more at Sobelia"
+        "description": "Cajas de regalo 8 ML : Versace Versace Pour Homme - Perfumes y colonias para hombre de marca Versace y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12610,7 +12700,7 @@
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Gift boxes 8 ml: Versace Bright Crystal - Versace brand perfumes and colognes for women and much more at Sobelia"
+        "description": "Cajas de regalo 8 ml : Versace Bright Crystal - Perfumes y colonias para mujer de marca Versace y mucho más en Sobelia"
       },
       {
         "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
@@ -12656,96 +12746,6 @@
         "googleProductCategory": "",
         "sourceCategory": "Other",
         "description": "<h1>Zbiór zadań z analizy matematycznej</h1>\n<ul><li><b>Autor:</b> Stanisław Wędrychowicz, Józef Banaś</li><li><b>Dostawca:</b> Azymut</li><li><b>liczba stron:</b> 533</li><li><b>f"
-      },
-      {
-        "title": "Aqua Fiorentina - Creed Spray Millesime 75 ml",
-        "brand": "Creed",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Millesime Spray 75 ml: Creed Aqua Fiorentina - Creed brand perfumes and colognes for women and much more at Sobelia"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Idea for anniversaries. Paper anniversary",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "<ul><li><b>Zbliża się ważna okazja a Ty szukasz prezentu ?</b></li><li><b>Twój spokój zaburza ciągłe myślenie co kupić na rocznice żonie ?</b></li><li><b>A może wykorzystałaś już w"
-      },
-      {
-        "title": "Carlos Santana - Carlos Santana Body oil, lotion and cream 200 ml",
-        "brand": "Carlos Santana",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Body oil, lotion and cream 200 ml: Carlos Santana Carlos Santana and much more at Sobelia"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]",
-        "brand": "Abu Garcia",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Abu Garcia Guma Svartzonker McPerch Shad [ 7.5cm ]"
-      },
-      {
-        "title": "Angel Innocent - Thierry Mugler Gift Boxes 50 ML",
-        "brand": "Thierry Mugler",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift boxes 50 ML: Thierry Mugler Angel Innocent - Thierry Mugler brand perfumes and colognes for women and much more at Sobelia"
-      },
-      {
-        "title": "DREAM PAIRS Dreamy Destiny Stiletto Rhinestone Strap Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shine in style with these Dream Pairs women's rhinestone strap pumps. A shimmering bow is designed to turn heads and sparkle all day long. A TPR sole provides superior traction &am"
-      },
-      {
-        "title": "CD Your name Tgd",
-        "brand": "",
-        "advertiser": "Allegro.pl",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "CD Your name Tgd"
-      },
-      {
-        "title": "Cuba Gold - Fragluxe Gift Boxes 100 ML",
-        "brand": "Fragluxe",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Gift boxes 100 ML: Fragluxe Cuba Gold - Perfumes and colognes for men from the Fragluxe brand and much more at Sobelia"
       }
     ],
     "missingSubcategoryExamples": [
@@ -12757,6 +12757,16 @@
         "googleProductCategory": "",
         "sourceCategory": "Electronics",
         "description": "The Photographic Negative Cotton T-Shirt By Givenchy Reinterprets Archival Imagery Through Refined Graphic Design. Crafted From Lightweight Cotton Poplin, It Presents A Clean Silho",
+        "category": "Electronics"
+      },
+      {
+        "title": "Abelssoft File Organizer 2025 | Schaffe Ordnung auf Deinem Computer",
+        "brand": "Abelssoft",
+        "advertiser": "Abelssoft Int",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Electronics",
+        "description": "Sortiert Bilder, Dokumente, Videos & mehr automatisch in vordefinierte Ordner. Dadurch hast Du immer die Gewissheit, dass alle Dateien jederzeit aufzufinden sind.",
         "category": "Electronics"
       },
       {
@@ -13320,16 +13330,6 @@
         "category": "Electronics"
       },
       {
-        "title": "Cool Water Game - Davidoff Desodorante 75 ml",
-        "brand": "Davidoff",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Davidoff Cool Water Game and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
         "title": "soundcore C40i Desert Bronze",
         "brand": "Soundcore",
         "advertiser": "Soundcore",
@@ -13400,26 +13400,6 @@
         "category": "Beauty"
       },
       {
-        "title": "Ck Be - Calvin Klein Desodorante 75 g",
-        "brand": "Calvin Klein",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 g: Calvin Klein Ck Be and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Eau Sauvage Savon - Christian Dior Jabón 150 g",
-        "brand": "Christian Dior",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Soap 150 g: Christian Dior Eau Sauvage Savon and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
         "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - White / 17ââ/14ââ / Basic",
         "brand": "FRP",
         "advertiser": "FRP Moto  Affiliate",
@@ -13450,46 +13430,6 @@
         "category": "Sports"
       },
       {
-        "title": "Aromatics Elixir - Clinique Foaming Body Gel 200 ml",
-        "brand": "Clinique",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Foaming body wash 200 ml: Clinique Aromatics Elixir and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Cashmere Mist - Donna Karan Deodorante 50 g",
-        "brand": "Donna Karan",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 50 g: Donna Karan Cashmere Mist and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Dior Homme - Christian Dior Desodorante 150 ml",
-        "brand": "Christian Dior",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Christian Dior Dior Homme and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Eau Sauvage - Christian Dior Desodorante 150 ml",
-        "brand": "Christian Dior",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Christian Dior Eau Sauvage and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
         "title": "125cc Dirt Bikes for Youth, Teens & Adults | FRP FX125 Manual Clutch - White / 14ââ/12ââ / Basic",
         "brand": "FRP",
         "advertiser": "FRP Moto  Affiliate",
@@ -13500,26 +13440,6 @@
         "category": "Sports"
       },
       {
-        "title": "Eau Sauvage - Christian Dior Desodorante 75 ml",
-        "brand": "Christian Dior",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Christian Dior Eau Sauvage and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Le Male - Jean Paul Gaultier Desodorante 75 ml",
-        "brand": "Jean Paul Gaultier",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Jean Paul Gaultier Le Male and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
         "title": "FRP x ParkerPro Wheelie Bar",
         "brand": "FRP",
         "advertiser": "FRP Moto  Affiliate",
@@ -13528,16 +13448,6 @@
         "sourceCategory": "Other",
         "description": "Buying a Mini Bike to Learn Wheelies? Start With Fitment, Not Just Power A wheelie bar usually means the rider is not just replacing a part. They want to learn wheelies, avoid loop",
         "category": "Sports"
-      },
-      {
-        "title": "Yep! Men - Yep! Deodorants 75 ml",
-        "brand": "Joop!",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Joop! Hoop! Homme and much more at Sobelia",
-        "category": "Beauty"
       },
       {
         "title": "Laneige Water Sleeping Mask",
@@ -13600,533 +13510,553 @@
         "category": "Sports"
       },
       {
-        "title": "Zirh Ikon - Zirh International Desodorante 75 ml",
-        "brand": "Zirh International",
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Green Tea - Elizabeth Arden Gel de ducha 200 ml",
+        "brand": "Elizabeth Arden",
         "advertiser": "Sobelia",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Zirh International Zirh Ikon and much more at Sobelia",
+        "description": "Shower gel 200 ml: Elizabeth Arden Green Tea and much more at Sobelia",
         "category": "Beauty"
       },
       {
-        "title": "All Soft - Redken Champú 300 ml",
-        "brand": "Redken",
-        "advertiser": "Sobelia",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shampoo 300 ml: Redken All Soft and much more at Sobelia",
-        "category": "Beauty"
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Adidas Fruity Rhythm - Adidas Desodorante 150 ml",
-        "brand": "Adidas",
-        "advertiser": "Sobelia",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Adidas Adidas Fruity Rhythm and much more at Sobelia",
-        "category": "Beauty"
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Specifique Bain Riche Dermo-Calm - Kerastase Champú 1000 ml",
-        "brand": "Kerastase",
-        "advertiser": "Sobelia",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shampoo 1000 ml : Kerastase Specifique Bain Riche Dermo-Calm and much more at Sobelia",
-        "category": "Beauty"
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Deo Pure Roll-on - Biotherm Desodorante 75 ml",
-        "brand": "Biotherm",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Biotherm Deo Pure Roll-on and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Deo Pure Stick - Biotherm Desodorante 40 ml",
-        "brand": "Biotherm",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 40 ml: Biotherm Deo Pure Stick and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "L'Homme - Yves Saint Laurent Desodorante 75 g",
-        "brand": "Yves Saint Laurent",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 g: Yves Saint Laurent L'Homme and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Ck Free - Calvin Klein Desodorante 75 g",
-        "brand": "Calvin Klein",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 g: Calvin Klein Ck Free and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Polo Blue - Ralph Lauren Desodorante 75 ml",
-        "brand": "Ralph Lauren",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Ralph Lauren Polo Blue and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Boss Bottled - Hugo Boss Gel de ducha 150 ml",
+        "title": "Boss Bottled - Hugo Boss Desodorante 150 ml",
         "brand": "Hugo Boss",
         "advertiser": "Sobelia",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Shower gel 150 ml: Hugo Boss Boss Bottled and much more at Sobelia",
+        "description": "Deodorant 150 ml: Hugo Boss Boss Bottled and much more at Sobelia",
         "category": "Beauty"
       },
       {
-        "title": "Sweet Courreges Sweet scented milk - Courrèges Loción corporal 200 ml",
-        "brand": "Courrèges",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Obsession - Calvin Klein Desodorante 75 g",
+        "brand": "Calvin Klein",
         "advertiser": "Sobelia",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Body lotion 200 ml: Courrèges Sweet Courreges Sweet scented milk and much more in Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Air - Clean Gel de ducha 177 ml",
-        "brand": "Clean",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Shower gel 177 ml: Clean Air and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Man - Jimmy Choo Desodorante 75 ml",
-        "brand": "Jimmy Choo",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 ml: Jimmy Choo Man and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Legend - Mont Blanc Desodorante 75 g",
-        "brand": "Mont Blanc",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 75 g: Mont Blanc Legend and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Perry Ellis 18 - Perry Ellis Desodorante 200 ml",
-        "brand": "Perry Ellis",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 200 ml: Perry Ellis Perry Ellis 18 and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Perry Ellis 360 Red - Perry Ellis Desodorante 200 ml",
-        "brand": "Perry Ellis",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 200 ml: Perry Ellis Perry Ellis 360 Red and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "Lily Of The Valley - Woods Of Windsor Jabón 350 ml",
-        "brand": "Woods Of Windsor",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Soap 350 ml: Woods Of Windsor Lily Of The Valley and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "DREAM PAIRS Crisscross Rhinestone Straps Pumps",
-        "brand": "DREAM PAIRS",
-        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Exude Charm: Adorned with sparkling rhinestones and crisscross straps, these rhinestone pumps, complemented with a pointed toe, add a touch of exquisite luxury to your look. Not on",
-        "category": "Arts, Crafts & Sewing"
-      },
-      {
-        "title": "True Rose - Woods Of Windsor Jabón 350 ml",
-        "brand": "Woods Of Windsor",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Soap 350 ml: Woods Of Windsor True Rose and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Yardley - Yardley London Jabón 100 g",
-        "brand": "Yardley London",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Soap 100 g: Yardley London Yardley and much more at Sobelia",
-        "category": "Beauty"
-      },
-      {
-        "title": "Lady Million - Paco Rabanne Desodorant 150 ml",
-        "brand": "Paco Rabanne",
-        "advertiser": "Sobelia",
-        "productType": "",
-        "googleProductCategory": "",
-        "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Paco Rabanne Lady Million and much more at Sobelia",
+        "description": "Deodorant 75 g: Calvin Klein Obsession and much more at Sobelia",
         "category": "Beauty"
       },
       {
@@ -14210,13 +14140,43 @@
         "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Trace Me - Ducati Deodorizer 150 ml",
-        "brand": "Ducati",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Bod Man Body Heat Sexy X2 - Parfums De Cœur Desodorante 120 ml",
+        "brand": "Parfums De Cœur",
         "advertiser": "Sobelia",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Ducati Trace Me and much more at Sobelia",
+        "description": "Deodorant 120 ml : Parfums De Cœur Bod Man Body Heat Sexy X2 and much more at Sobelia",
         "category": "Beauty"
       },
       {
@@ -14230,14 +14190,14 @@
         "category": "Arts, Crafts & Sewing"
       },
       {
-        "title": "Jovan Black Musk - Jovan Desodorante 150 ml",
-        "brand": "Jovan",
-        "advertiser": "Sobelia",
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
         "productType": "",
         "googleProductCategory": "",
         "sourceCategory": "Other",
-        "description": "Deodorant 150 ml: Jovan Jovan Black Musk and much more at Sobelia",
-        "category": "Beauty"
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
       },
       {
         "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
@@ -14248,6 +14208,46 @@
         "sourceCategory": "Other",
         "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
         "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "DREAM PAIRS Rhinestone Pointed Toe Slingback Pumps",
+        "brand": "DREAM PAIRS",
+        "advertiser": "Dream Pairs, Bruno Marc, Nortiv 8 & Allswift Shoes",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Add some luxury flair to your wardrobe with these women’s slingback pumps. These women’s pointed toe pumps feature a glitter/satin upper and an ankle strap studded with rhinestones",
+        "category": "Arts, Crafts & Sewing"
+      },
+      {
+        "title": "Chloé - Chloé Desodorante 100 ml",
+        "brand": "Chloé",
+        "advertiser": "Sobelia",
+        "productType": "",
+        "googleProductCategory": "",
+        "sourceCategory": "Other",
+        "description": "Deodorant 100 ml: Chloé Chloé and much more at Sobelia",
+        "category": "Beauty"
       }
     ]
   },
@@ -14311,16 +14311,12 @@
       "tennisShoeCount": 0,
       "byCategory": [
         {
-          "category": "Sports",
+          "category": "Other",
           "count": 8
         },
         {
-          "category": "Other",
-          "count": 7
-        },
-        {
-          "category": "Beauty",
-          "count": 1
+          "category": "Sports",
+          "count": 8
         }
       ],
       "examples": [
@@ -14331,7 +14327,7 @@
           "productType": "",
           "googleProductCategory": "",
           "sourceCategory": "Other",
-          "description": "Deodorant 150 ml: Adidas Adidas Fruity Rhythm and much more at Sobelia"
+          "description": "Desodorante 150 ml : Adidas Adidas Fruity Rhythm y mucho más en Sobelia"
         },
         {
           "title": "Moves - Adidas Gift Boxes 30 ML",
@@ -14522,7 +14518,7 @@
     "gamingConsoles": 179,
     "fashionClothing": 153,
     "tennisShoes": 44,
-    "fashionSneakers": 317,
+    "fashionSneakers": 315,
     "sportsFootwear": 227
   },
   "productCompleteness": {
