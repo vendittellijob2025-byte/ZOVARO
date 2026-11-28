@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { shouldSkipSync, getJobicyWaitMs, JOBICY_MIN_SYNC_INTERVAL_MS } from "../lib/job-feed-policy.js";
 
 const JOBICY_URL = "https://jobicy.com/api/jobs";
 const JOBICY_STATUS_URL = "https://jobicy.com/api/jobs/status";
@@ -6,7 +7,7 @@ const REMOTE_OK_URL = "https://remoteok.com/api";
 const OUTPUT = "data/remote-jobs.json";
 const MAX_JOBICY_PAGES = 5;
 const MAX_JOBICY_JOBS = 500;
-const REFRESH_GUARD_MS = 55 * 60 * 1000;
+const REFRESH_GUARD_MS = JOBICY_MIN_SYNC_INTERVAL_MS;
 const now = new Date();
 const nowIso = now.toISOString();
 
@@ -272,6 +273,14 @@ async function fetchJson(url) {
   if (!response.ok) throw new Error("HTTP " + response.status + " from " + new URL(url).hostname);
   return response.json();
 }
+
+let lastJobicyRequestAt = 0;
+async function fetchJobicyJson(url) {
+  const waitMs = getJobicyWaitMs(lastJobicyRequestAt, Date.now());
+  if (waitMs > 0) await new Promise(resolve => setTimeout(resolve, waitMs));
+  lastJobicyRequestAt = Date.now();
+  return fetchJson(url);
+}
 function chunk(values,size) {
   const out=[];
   for(let i=0;i<values.length;i+=size)out.push(values.slice(i,i+size));
@@ -283,9 +292,8 @@ function readPrevious() {
 }
 
 const previous = readPrevious();
-const lastSync = Date.parse(previous.syncedAt || "");
-if (Number.isFinite(lastSync) && Date.now() - lastSync < REFRESH_GUARD_MS && process.env.FORCE_SYNC !== "1") {
-  console.log("Skipping: public job feeds were synchronized less than 55 minutes ago.");
+if (shouldSkipSync(previous.syncedAt, Date.now(), REFRESH_GUARD_MS)) {
+  console.log("Skipping: public job feeds were synchronized less than 60 minutes ago.");
   process.exit(0);
 }
 
@@ -296,7 +304,7 @@ async function fetchJobicy() {
   do {
     const params=new URLSearchParams({count:"100"});
     if(cursor)params.set("cursor",cursor);
-    const data=await fetchJson(JOBICY_URL+"?"+params.toString());
+    const data=await fetchJobicyJson(JOBICY_URL+"?"+params.toString());
     if(data.success===false)throw new Error(data.error || "Jobicy API reported failure");
     if(!Array.isArray(data.jobs))throw new Error("Unexpected Jobicy response: jobs array missing");
     jobs.push(...data.jobs);
@@ -312,7 +320,7 @@ async function preserveActiveOlderJobicy(freshJobs) {
   for(const batch of chunk(previousJobicy,100)){
     try{
       const params=new URLSearchParams({ids:batch.map(job=>String(job.sourceId)).join(",")});
-      const status=await fetchJson(JOBICY_STATUS_URL+"?"+params.toString());
+      const status=await fetchJobicyJson(JOBICY_STATUS_URL+"?"+params.toString());
       const statuses=new Map((status.jobs||[]).map(item=>[String(item.id),String(item.status||"").toLowerCase()]));
       for(const old of batch){
         if(statuses.get(String(old.sourceId))==="active")active.push({...old,lastVerifiedAt:nowIso,status:"open"});

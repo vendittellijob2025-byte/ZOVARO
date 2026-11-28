@@ -2,6 +2,7 @@
   "type": "module",
   "dependencies": {},
   "scripts": {
-    "test:search": "node scripts/test-search-relevance.mjs"
+    "test:search": "node scripts/test-search-relevance.mjs",
+    "test:job-feed-policy": "node scripts/test-job-feed-policy.mjs"
   }
 }

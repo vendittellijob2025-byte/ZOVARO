@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import "./test-job-feed-policy.mjs";
 
 const PATH = "data/curated-jobs.json";
 const TODAY = new Date().toISOString().slice(0, 10);
