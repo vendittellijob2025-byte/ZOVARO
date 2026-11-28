@@ -79,5 +79,11 @@ jobs:
           git add data/social-product-history.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: record daily ZOVARO product rotation"
-            git push
+            HISTORY_COMMIT="$(git rev-parse HEAD)"
+            # Other scheduled ZOVARO workflows may update catalog artifacts
+            # concurrently. Rebase only the history commit onto the newest main.
+            git fetch origin main
+            git reset --hard origin/main
+            git cherry-pick "$HISTORY_COMMIT"
+            git push origin main
           fi
