@@ -24,7 +24,26 @@ const products =
    VALID PRODUCTS
    ========================================================= */
 
-const validProducts =
+const today = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/Bogota", year: "numeric", month: "2-digit", day: "2-digit"
+}).format(new Date());
+const HISTORY_PATH = "data/social-product-history.json";
+let historyRecords = [];
+try {
+  const parsed = JSON.parse(await fs.readFile(HISTORY_PATH, "utf8"));
+  if (Array.isArray(parsed)) historyRecords = parsed;
+} catch {}
+const cutoff = Date.parse(today + "T00:00:00-05:00") - 30 * 86400000;
+const lastUsed = new Map();
+for (const record of historyRecords) {
+  const dateMs = Date.parse(String(record.date || "") + "T00:00:00-05:00");
+  if (!Number.isFinite(dateMs) || dateMs < cutoff) continue;
+  for (const id of record.productIds || []) {
+    const key = String(id);
+    if (!lastUsed.has(key) || dateMs > lastUsed.get(key)) lastUsed.set(key, dateMs);
+  }
+}
+const allValidProducts =
   products.filter(product => {
 
     return (
@@ -42,6 +61,15 @@ const validProducts =
 
   });
 
+const freshProducts = allValidProducts.filter(product => !lastUsed.has(String(product.id)));
+const previouslyUsedProducts = allValidProducts
+  .filter(product => lastUsed.has(String(product.id)))
+  .sort((a,b) => (lastUsed.get(String(a.id)) || 0) - (lastUsed.get(String(b.id)) || 0));
+// Avoid re-promoting any product from the previous 30 days whenever the
+// eligible catalog contains enough fresh items for the daily video.
+const validProducts = freshProducts.length >= DAILY_PRODUCT_TARGET
+  ? freshProducts
+  : [...freshProducts, ...previouslyUsedProducts];
 
 if (!validProducts.length) {
   throw new Error(
@@ -92,11 +120,6 @@ const hasDiscount = product => {
 /* =========================================================
    DAILY DETERMINISTIC SEED
    ========================================================= */
-
-const today =
-  new Date()
-    .toISOString()
-    .slice(0, 10);
 
 let hash = 0;
 
@@ -516,6 +539,18 @@ await fs.writeFile(
   "utf8"
 
 );
+
+
+// Record the daily selection; the workflow commits this file only after
+// Buffer confirms the full eight-post schedule.
+const nextHistory = [
+  ...historyRecords,
+  { date: today, productIds: selectedData.map(item => String(item.productId)) }
+].filter(record => {
+  const dateMs = Date.parse(String(record.date || "") + "T00:00:00-05:00");
+  return Number.isFinite(dateMs) && dateMs >= cutoff;
+});
+await fs.writeFile(HISTORY_PATH, JSON.stringify(nextHistory, null, 2) + "\n", "utf8");
 
 
 /* =========================================================
