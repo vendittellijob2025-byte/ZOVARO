@@ -2,13 +2,6 @@ name: ZOVARO - Generate 4 and publish 4 daily social videos
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "scripts/create-category-videos.mjs"
-      - "scripts/select-product.mjs"
-      - "scripts/publish-daily-buffer-videos.mjs"
   schedule:
     - cron: "0 11 * * *"
 
